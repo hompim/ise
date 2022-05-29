@@ -3,7 +3,11 @@ module.exports = {
         './resources/**/*.{blade.php,js}',
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                poppins: "'Poppins', sans-serif",
+            }
+        },
     },
     plugins: [],
 }
