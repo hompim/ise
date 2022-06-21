@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ISE! 2022</title>
 
-    <link rel="icon" href="{{ asset('images/coming-soon/icon-ise-2022.png') }}">
+    <link rel="icon" href="{{ asset('images/logo-only.png') }}">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
 </head>
 
@@ -31,7 +31,7 @@
             </h2>
         </div>
         <a href="https://www.instagram.com/is_expo/"
-            class="absolute flex px-2 py-1 space-x-4 text-base font-semibold text-blue-900 transition bg-blue-100 rounded-lg md:text-lg bottom-40 md:bottom-48 font-poppins hover:scale-105 hover:bg-purple-200">
+            class="absolute flex px-2 py-1 space-x-4 text-base font-semibold text-blue-900 transition bg-blue-100 rounded-lg md:text-lg bottom-40 md:bottom-48 font-poppins hover:scale-105 hover:bg-purple-50">
             <img src="{{ asset('images/coming-soon/instagram.svg') }}" alt="instagram" />
             <span class="flex items-center">Instagram ISE!</span>
             <img src="{{ asset('images/coming-soon/chevron-right.svg') }}" alt="chevron-right" />
