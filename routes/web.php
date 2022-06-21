@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/design', function () {
+    return view('design-system');
+});
+
+///Landing page Route
 Route::get('/', function () {
     return view('coming-soon');
 });
 
-Route::get('/design', function () {
-    return view('design-system');
-});
+
+
+//Route Dashboard -> Dashboard.php
+Route::prefix('dashboard')->group(__DIR__ . '/dashboard.php');
