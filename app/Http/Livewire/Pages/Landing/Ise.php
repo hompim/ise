@@ -8,6 +8,6 @@ class Ise extends Component
 {
     public function render()
     {
-        return view('livewire.pages.landing.ise');
+        return view('livewire.pages.landing.ise')->layout('layouts.landing');
     }
 }
