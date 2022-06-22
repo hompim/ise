@@ -26,7 +26,7 @@
     <div class="relative left-0 right-0 justify-center mx-auto mt-40 text-center max-w-fit scroll-mt-36  mb-20"
         id="isometric-city">
         <div class="absolute bottom-48 right-40 group" data-aos="fade-up" data-aos-easing="linear"
-            data-aos-duration="750">
+            data-aos-duration="750" data-aos-once="true">
             <div
                 class="pl-2 transition duration-1000 ease-linear border-l-2 opacity-0 group-hover:duration-300 group-hover:opacity-100 group-hover:ease-linear border-l-purple-300">
                 <h4 class="text-2xl font-medium text-white text-start font-poppins">IT Convention Zone</h4>
@@ -43,7 +43,7 @@
             </a>
         </div>
         <div class="absolute left-40 bottom-72 group" data-aos="fade-up" data-aos-easing="linear"
-            data-aos-duration="750">
+            data-aos-duration="750" data-aos-once="true">
             <div
                 class="pr-2 transition duration-1000 ease-linear border-r-2 opacity-0 group-hover:duration-300 group-hover:opacity-100 group-hover:ease-linear border-r-pink-300">
                 <h4 class="text-2xl font-medium text-white text-end font-poppins">Competition Zone</h4>
