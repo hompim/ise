@@ -1,6 +1,6 @@
 <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
     <div class="c-sidebar-brand" style="background: #FFFFFF;">
-        <a href="{{route('ise-landing')}}"><img src="{{asset('img/global/logo_tulisan_kanan.png')}}"
+        <a href="{{route('ise')}}"><img src="{{asset('img/global/logo_tulisan_kanan.png')}}"
                                                 class="c-sidebar-brand-full px-4 py-2"/></a>
     </div>
     <ul class="c-sidebar-nav ps ps--active-y" style="background: #FFFFFF; padding-top: 0.8rem;">
@@ -35,16 +35,16 @@
                 </li>
             @endif
         @endforeach
-        <li class="c-sidebar-nav-item @if(Route::current()->getName()=='bantuan')c-active @endif">
+        {{-- <li class="c-sidebar-nav-item @if(Route::current()->getName()=='bantuan')c-active @endif">
             <a class="c-sidebar-nav-link" href="{{route('bantuan')}}">
                 <i class="far fa-question-circle c-sidebar-nav-icon"></i> Bantuan
             </a>
-        </li>
-        <li class="c-sidebar-nav-item @if(Route::current()->getName()=='ganti-password')c-active @endif">
+        </li> --}}
+        {{-- <li class="c-sidebar-nav-item @if(Route::current()->getName()=='ganti-password')c-active @endif">
             <a class="c-sidebar-nav-link" href="{{route('ganti-password')}}">
                 <i class="c-sidebar-nav-icon cil-lock-locked"></i> Ganti Password
             </a>
-        </li>
+        </li> --}}
         <li class="c-sidebar-nav-item">
             <a class="c-sidebar-nav-link flex flex-row items-center logout hover:text-white" href="{{route('logout')}}"
                onclick="event.preventDefault();
