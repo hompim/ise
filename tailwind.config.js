@@ -3,6 +3,7 @@ const { colors } = require("laravel-mix/src/Log");
 module.exports = {
     content: [
         './resources/**/*.{blade.php,js}',
+        './node_modules/flowbite/**/*.js'
     ],
     theme: {
         extend: {
@@ -32,5 +33,7 @@ module.exports = {
             }
         },
     },
-    plugins: [],
+    plugins: [
+        require('flowbite/plugin')
+    ],
 }
