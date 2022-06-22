@@ -8,6 +8,6 @@ class Index extends Component
 {
     public function render()
     {
-        return view('livewire.pages.bionix.admin.verifikasi-pembayaran.index');
+        return view('livewire.pages.bionix.admin.verifikasi-pembayaran.index')->layout('layouts.dashboard');
     }
 }
