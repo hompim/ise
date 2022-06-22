@@ -7,9 +7,26 @@ module.exports = {
     ],
     theme: {
         extend: {
+            animation: {
+                tilt: "tilt 10s infinite linear",
+            },
+            keyframes: {
+                tilt: {
+                    "0%, 50%, 100%": {
+                        transform: "rotate(0deg)",
+                    },
+                    "25%": {
+                        transform: "rotate(1deg)",
+                    },
+                    "75%": {
+                        transform: "rotate(-1deg)",
+                    },
+
+                },
+            },
             width: {
                 '350px': '350px',
-                '600px' : '600px'
+                '600px': '600px'
             },
             height: {
                 '420px': '420px'
@@ -19,8 +36,8 @@ module.exports = {
             },
             colors: {
                 black: '#121316',
-                liteBlack : '#191A1E',
-                liteGray : '#B5B3BC',
+                liteBlack: '#191A1E',
+                liteGray: '#B5B3BC',
                 pink: {
                     50: '#F7E9FC',
                     75: '#DFA4F4',

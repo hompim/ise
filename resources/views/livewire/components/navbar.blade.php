@@ -1,5 +1,5 @@
-<nav
-    class="flex flex-row justify-between text-center mt-4 w-fit bg-[#191A1E] rounded-full fixed z-[9999] mx-auto left-0 right-0">
+<nav class="flex flex-row justify-between text-center mt-4 w-fit bg-[#191A1E] rounded-full fixed z-[9999] mx-auto left-0 right-0"
+    @if (Route::current()->getName() == 'ise') data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="2500" @endif>
     <ul class="flex flex-row items-center px-6 py-2 space-x-8 font-semibold text-white font-poppins">
         <a href="/">
             <li
@@ -25,11 +25,11 @@
     </ul>
     <ul
         class="flex flex-row items-center space-x-8 sm:justify-center bg-[#191A1E]  rounded-full py-2 px-6  font-poppins font-semibold">
-        <a href="/login"
+        <a href="/dashboard/login"
             class=" transition duration-150 ease-linear px-8 py-2 border border-[#6B6F75] text-[#6B6F75] hover:text-white rounded-full bg-gradient-to-r hover:from-pink-300 hover:to-purple-300">
             <li>Log in</li>
         </a>
-        <a href="/signup"
+        <a href="/dashboard/register"
             class="transition duration-150 ease-linear px-8 py-2 border border-[#6B6F75] text-[#6B6F75] hover:text-white rounded-full bg-gradient-to-r hover:from-pink-300 hover:to-purple-300">
             <li>Sign up</li>
         </a>
