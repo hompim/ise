@@ -58,4 +58,86 @@
         </div>
         <img src="{{ asset('images/isometric-city.svg') }}" alt="isometric-city">
     </div>
+
+    {{--Competetion Zone--}}
+    <div class="px-32 ">
+        <h2 class="font-poppins font-bold text-6xl text-left text-transparent  bg-gradient-to-r from-pink-75 to-pink-300 bg-clip-text mb-6">Competition <span class="block mt-3 text-white">Zone</span></h2>
+        <div class="flex justify-between space-x-8">
+            <div class="text-white text-left w-[350px] h-[420px] pl-6 pr-8 pt-12 bg-liteBlack rounded-3xl">
+                <p class="font-poppins text-lg font-medium text-liteGray mb-9 ">
+                    Zona Competition merupakan ajang kompetisi inovasi bisnis dan IT yang diselenggarakan 
+                    untuk siswa/siswi tingkat SMA/SMK sederajat dan mahasiswa. 
+                    Terdapat dua kategori kompetisi, yaitu BIONIX Student Level dan BIONIX College Level.
+                </p>
+                <a class="font-poppins font-semibold text-2xl" href="">Learn More <img class="inline pl-5" src="{{asset('images/chevron-left.svg')}}" alt=""></a> 
+            </div> 
+            <div class="swiper mySwiper w-[700px]">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide flex justify-center">
+                    <img class="w-[600px] rounded-3xl h-[420px]" src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                  </div>
+                  <div class="swiper-slide flex justify-center">
+                    <img class="w-[600px] rounded-3xl  h-[420px]" src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  </div>
+                  <div class="swiper-slide flex justify-center"> 
+                    <img class="w-[600px] rounded-3xl h-[420px]" src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                  </div>
+                </div>
+                <div class="swiper-button-next -mr-5 bg-liteBlack rounded-full p-6"></div>
+                <div class="swiper-button-prev -ml-5 bg-liteBlack rounded-full p-6"></div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+    {{--IT Convention Zone--}}
+    <div class="px-32 mt-24">
+        <h2 class="font-poppins font-bold text-6xl text-right text-transparent  bg-gradient-to-r from-pink-75 to-pink-300 bg-clip-text mb-6">IT Convention <span class="block mt-3 text-white">Zone</span></h2>
+        <div class="flex justify-between space-x-8">
+            <div class="swiper mySwiper w-[700px]">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide flex justify-center">
+                    <img class="w-[600px] rounded-3xl h-[420px]" src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                  </div>
+                  <div class="swiper-slide flex justify-center">
+                    <img class="w-[600px] rounded-3xl  h-[420px]" src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  </div>
+                  <div class="swiper-slide flex justify-center"> 
+                    <img class="w-[600px] rounded-3xl h-[420px]" src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                  </div>
+                </div>
+                <div class="swiper-button-next -mr-5 bg-liteBlack rounded-full p-6"></div>
+                <div class="swiper-button-prev -ml-5 bg-liteBlack rounded-full p-6"></div>
+            </div>
+            <div class="text-white text-left w-[350px] h-[420px] pl-6 pr-8 pt-12 bg-liteBlack rounded-3xl">
+                <p class="font-poppins text-lg font-medium text-liteGray mb-9 ">
+                    Zona IT Convention menghadirkan rangkaian acara yang bermanfaat luas dengan memamerkan dunia IT serta melakukan edukasi kepada masyarakat terkait isu-isu seputar IT saat ini. Pada zona ini terdapat beberapa acara, yaitu Academy, E-Hall of IS, dan juga Grand Talk Show.
+                </p>
+                <a class="font-poppins font-semibold text-2xl" href="">Learn More <img class="inline pl-5" src="{{asset('images/chevron-left.svg')}}" alt=""></a> 
+            </div> 
+        </div>
+        
+    </div>
+
+    {{--IS Class--}}
+    <div class="mt-36 px-56">
+        <h1 class="font-poppins font-bold text-7xl text-white">What’s New ?</h1>
+        <div class="flex flex-col justify-center items-center bg-liteBlack px-28">
+            <h3 style=
+            "background: linear-gradient(273.74deg, #E11BAA 14.81%, #FFFFFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;" 
+            class="font-poppins font-bold text-6xl">
+            IS Class
+            </h3>
+            <img src="{{asset('images/is-class.svg')}}" alt="">
+            <p class="font-poppins text-lg font-medium text-liteGray">IS Class merupakan sebuah wadah untuk memperkenalkan suasana pembelajaran di Sistem Informasi ITS untuk siswa/i SMA/SMK/sederajat yang ingin mengetahui departemen Sistem Informasi ITS lebih lanjut</p>
+            <a class="font-poppins font-semibold text-2xl text-white" href="">Learn More <img class="inline pl-5" src="{{asset('images/chevron-left.svg')}}" alt=""></a> 
+        </div>
+    </div>
+
 </div>

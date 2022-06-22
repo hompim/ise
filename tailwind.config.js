@@ -6,11 +6,20 @@ module.exports = {
     ],
     theme: {
         extend: {
+            width: {
+                '350px': '350px',
+                '600px' : '600px'
+            },
+            height: {
+                '420px': '420px'
+            },
             fontFamily: {
                 poppins: "'Poppins', sans-serif",
             },
             colors: {
                 black: '#121316',
+                liteBlack : '#191A1E',
+                liteGray : '#B5B3BC',
                 pink: {
                     50: '#F7E9FC',
                     75: '#DFA4F4',

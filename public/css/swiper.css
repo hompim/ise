@@ -1,0 +1,17 @@
+.swiper-slide {
+filter: blur(10px);
+}
+
+.swiper-slide-active {
+filter: blur(0px);
+}
+
+.swiper-button-next::after {
+    color: #fff;
+    font-size: 21.5px !important;
+}
+
+.swiper-button-prev::after {
+    color: #fff;
+    font-size: 21.5px !important;
+}
