@@ -45,7 +45,7 @@
             data-aos-duration="750">
             <div
                 class="pr-2 transition duration-1000 ease-linear border-r-2 opacity-0 group-hover:duration-300 group-hover:opacity-100 group-hover:ease-linear border-r-pink-300">
-                <h4 class="text-2xl font-medium text-white text-end font-poppins">IT Convention Zone</h4>
+                <h4 class="text-2xl font-medium text-white text-end font-poppins">Competition Zone</h4>
                 <ul class="text-[#B5B3BC] text-end">
                     <li>BIONIX Student Level</li>
                     <li>Startup College Level</li>

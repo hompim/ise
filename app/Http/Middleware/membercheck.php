@@ -19,7 +19,7 @@ class membercheck
     {
         switch (Auth::user()->userable_type) {
             case 'App\Models\Admin':
-                if (Auth::user()->userable->admin_type == "ICON Admin") {
+                if (Auth::user()->userable->admin_type == "Icon Admin") {
                     return redirect(route('academy.admin.home.index'));
                 } else {
                     return redirect(route('bionix.admin.beranda.index'));

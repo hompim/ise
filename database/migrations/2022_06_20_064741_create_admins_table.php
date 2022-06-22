@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
+            $table->enum('admin_type', ['Bionix Admin', 'Icon Admin']);
             $table->timestamps();
         });
     }
