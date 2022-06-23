@@ -17,10 +17,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->enum('jenjang',['SMA','Mahasiswa','Umum']);
-            $table->unsignedBigInteger('academy_id')->nullable();
-            $table->string('academy_type')->nullable();
-            $table->unsignedBigInteger('bionix_id')->nullable();
-            $table->string('bionix_type')->nullable();
+            $table->nullableMorphs('academy');
+            $table->nullableMorphs('bionix');
             $table->unsignedBigInteger('roadshow_school_id')->nullable();
         });
     }

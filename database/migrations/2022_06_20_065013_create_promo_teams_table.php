@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('promo_teams', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('promo_id');
-            $table->morphs('teamable');
+            $table->nullableMorphs('teamable');
             $table->timestamps();
         });
     }

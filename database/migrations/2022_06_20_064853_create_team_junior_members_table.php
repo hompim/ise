@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('class',[10,11,12]);
             $table->string('whatsapp');
             $table->string('identity_card_path')->nullable();
+            $table->unsignedBigInteger('team_id');
             $table->timestamps();
         });
     }
