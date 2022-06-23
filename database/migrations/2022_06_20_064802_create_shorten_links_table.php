@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('shorten_links', function (Blueprint $table) {
             $table->id();
+            $table->string('destination');
+            $table->text('description');
+            $table->string('shorten_link')->unique()->collation('utf8_bin');
             $table->timestamps();
         });
     }

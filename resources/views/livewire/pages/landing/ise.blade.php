@@ -261,7 +261,7 @@
     {{-- timeline end --}}
 
     {{-- sponsor --}}
-    <div class="container pb-24">
+    <div class=" pb-24">
         <h1 class="mb-24 font-bold text-white font-poppins text-7xl">Meet our sponsor</h1>
         <div class="grid grid-rows-3 gap-4 mx-32">
             <div class="grid grid-cols-2 gap-4">
@@ -300,6 +300,24 @@
                 </div>
 
             </div>
+        </div>
+    </div>
+
+
+
+    {{--Sign up and Register--}}
+    <div class="mx-32 mt-24 pb-24">
+        <div class="rounded-md bg-liteBlack px-52 py-12">
+            <h1 class="font-poppins font-bold text-white text-6xl">Join us and <span class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">get</span>  a lot of <br> advantages.</h1>
+            <div class="relative left-0 right-0 px-16 justify-center mx-auto mt-24 text-center max-w-fit group">
+            <div class="absolute inset-0 ">
+                <a href="#"
+                    class="relative px-6 py-4 font-semibold text-center text-white transition duration-1000 rounded-full opacity-75 bg-gradient-to-r from-pink-300 to-purple-300 blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Sign Up</a>
+            </div>
+            <a href="#isometric-city"
+                class=" relative px-14 py-4 font-semibold text-center text-white rounded-full bg-gradient-to-r from-pink-300 to-purple-300 font-poppins ">Sign Up</a>
+            </div>
+    
         </div>
     </div>
 </div>
