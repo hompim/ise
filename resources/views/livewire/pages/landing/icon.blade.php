@@ -19,7 +19,7 @@
         <div x-data="{tab: 'bsl'}" class="text-white flex-row justify-center items-center  ">
             <div x-show="tab === 'bsl'" class="flex justify-center">
                 <div class="w-3/4 flex-col mt-32 text-center p-4">
-                    <div class="px-[100px] pt-[119px]">
+                    <div class="px-[100px] pt-[119px] mb-[77px]">
                         <h1 class="font-bold text-2xl font-poppins">About This Zone</h1>
                         <p class="mt-10 text-lg font-poppins">IT Convention merupakan salah satu zona dari ISE! (Information Systems
                         Expo) yang bertujuan menghadirkan rangkaian acara yang
@@ -80,11 +80,11 @@
                     </div>
                     <!--Let's See The Inside-->
                     <div>
-                    <h1 class="font-bold text-2xl mt-52 font-poppins">Let's See The Inside</h1>
+                    <h1 class="font-bold text-4xl mt-52 font-poppins">Let's See The Inside</h1>
                     </div>
                     <!--Frame picture-->
                     <div>
-                    <img class="justify-center w-[826px] h-[818px] " src="{{ asset('images/frame.svg') }}" alt="">
+                    <img class="mt-10 justify-center w-[826px] h-[818px] " src="{{ asset('images/frame.svg') }}" alt="">
                     </div>
                     <!--Startup academy slide-->
                     <div class="bg-[#191A1E] mt-[71px] w-[752px] h-[446px] rounded-2xl justify-center pt-[49px]">
@@ -101,7 +101,12 @@
                     </div>
                     <!--timeline-->
                     <img class="justify-center mt-40 mb-11 w-[685px] h-[20px] " src="{{ asset('images/timeline.svg') }}" alt="">
-
+                    <div>
+                        <p>3 September 2022</p>
+                        <p>3 September 2022</p>
+                        <p>3 September 2022</p>
+                    </div>
+                    
             </div> <!--nutup bsl -->
             </div>
 
