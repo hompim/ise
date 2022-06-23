@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Pages\Bionix\Admin\DaftarPeserta\Datatable;
+namespace App\Http\Livewire;
 
 use App\Models\Bionix\City;
 use App\Models\Bionix\TeamJuniorData;
@@ -11,11 +11,11 @@ use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 use Mediconesystems\LivewireDatatables\NumberColumn;
 
 
-class Index extends LivewireDatatable
+class Tes extends LivewireDatatable
 {
     public $exportable = true;
     public $withUbahStatus = true;
-    public $enum;
+    public $radioName;
     public $status = [];
     public $statusValue = '';
 
@@ -41,10 +41,10 @@ class Index extends LivewireDatatable
         parent::mount();
         if ($this->model == 'App\Models\Bionix\TeamJuniorData') {
             $this->status = ['Penyisihan 1', 'Penyisihan 2', 'Semifinal', 'Final'];
-            $this->enum = 'student';
+            $this->radioName = 'student';
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             $this->status = ['Penyisihan', 'Semifinal', 'Final'];
-            $this->enum = 'college';
+            $this->radioName = 'college';
         }
         $this->statusValue = $this->status[0];
     }
@@ -58,10 +58,7 @@ class Index extends LivewireDatatable
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             $this->status = ['Penyisihan', 'Semifinal', 'Final'];
             $this->statusValue = $this->status[0];
-            return TeamSeniorData::query()
-                ->leftJoin('team_senior_members as leader', 'leader.id', 'team_senior_data.leader_id')
-                ->leftJoin('team_senior_members as member1', 'member1.id', 'team_senior_data.member1_id')
-                ->leftJoin('team_senior_members as member2', 'member2.id', 'team_senior_data.member2_id');
+            return TeamSeniorData::query();
         }
         return null;
     }
@@ -87,14 +84,14 @@ class Index extends LivewireDatatable
                     "Sekolah (guru, dll)",
                     "Teman/keluarga",
                     "Website/Aplikasi Sejuta Cita"]),
-                Column::name('city.region')->label('Region')->filterable($this->cities->distinct()->pluck('region')),
-                Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->cities->pluck('name')),
+                Column::name('city.region')->label('Region')->filterable($this->city->distinct()->pluck('region')),
+                Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->city->pluck('name')),
                 Column::name('school_name')->label('Nama Sekolah')->searchable(),
                 Column::name('competition_round')->filterable(['Penyisihan 1', 'Penyisihan 2', 'Semifinal', 'Final'])->label('Babak'),
-                Column::name('leader_group.name')->label('Nama Ketua')->searchable(),
-                Column::name('leader_group.email')->label('Email Ketua')->searchable(),
-                Column::name('member_group.name')->label('Nama Member')->searchable(),
-                Column::name('member_group.Email')->label('Email Member')->searchable(),
+                // Column::name('leader_group.name')->label('Nama Ketua')->searchable(),
+                // Column::name('leader_group.email')->label('Email Ketua')->searchable(),
+                // Column::name('member_group.name')->label('Nama Member')->searchable(),
+                // Column::name('member_group.Email')->label('Email Member')->searchable(),
                 Column::name('profile_verif_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('payment_verif_status')->label('Status Pembayaran')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::raw('date_format(team_junior_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(team_junior_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
@@ -120,15 +117,15 @@ class Index extends LivewireDatatable
                     "Sekolah (guru, dll)",
                     "Teman/keluarga",
                     "Website/Aplikasi Sejuta Cita"]),
-                Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->cities->pluck('name')),
+                Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->city->pluck('name')),
                 Column::name('university_name')->label('Nama Universitas'),
                 Column::name('competition_round')->filterable(['Penyisihan', 'Semifinal', 'Final'])->label('Babak'),
-                Column::name('leader.name')->label('Nama Ketua')->searchable(),
-                Column::name('leader.email')->label('Email Ketua')->searchable(),
-                Column::name('member1.name')->label('Nama Member 1')->searchable(),
-                Column::name('member1.email')->label('Email Member 1')->searchable(),
-                Column::name('member2.name')->label('Nama Member 2')->searchable(),
-                Column::name('member2.email')->label('Email Member 2')->searchable(),
+                // Column::name('leader.name')->label('Nama Ketua')->searchable(),
+                // Column::name('leader.email')->label('Email Ketua')->searchable(),
+                // Column::name('member1.name')->label('Nama Member 1')->searchable(),
+                // Column::name('member1.email')->label('Email Member 1')->searchable(),
+                // Column::name('member2.name')->label('Nama Member 2')->searchable(),
+                // Column::name('member2.email')->label('Email Member 2')->searchable(),
                 Column::name('profile_verif_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('payment_verif_status')->label('Status Pembayaran')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::raw('date_format(team_senior_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(team_junior_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
@@ -140,4 +137,35 @@ class Index extends LivewireDatatable
         return $column;
     }
 
+    public function getCityProperty()
+    {
+        return City::query();
+    }
+
+    public function saveStatus()
+    {
+        foreach ($this->selected as $selected) {
+            if ($this->model == 'App\Models\Bionix\TeamJuniorData') {
+                TeamJuniorData::find($selected)->update(
+                    [
+                        'competition_round' => $this->statusValue
+                    ]);
+            } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
+                if ($this->statusValue == "Semifinal") {
+                    TeamSeniorData::find($selected)->update(
+                        [
+                            'competition_round' => $this->statusValue,
+                            'payment_batch_2' => (date('Y-m-d') >= date('Y-m-d', strtotime('2021-9-23')))
+                        ]);
+                } else {
+                    TeamSeniorData::find($selected)->update(
+                        [
+                            'competition_round' => $this->statusValue
+                        ]);
+                }
+
+            }
+        }
+        $this->emit('refreshLivewireDatatable');
+    }
 }
