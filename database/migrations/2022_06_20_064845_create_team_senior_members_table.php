@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('major');
             $table->string('whatsapp');
             $table->string('identity_card_path')->nullable();
-            $table->string('link_twibbon');
+            $table->unsignedBigInteger('team_id');
             $table->timestamps();
         });
     }
