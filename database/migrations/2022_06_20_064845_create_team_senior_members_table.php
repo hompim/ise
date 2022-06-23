@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('team_senior_members', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->unsignedSmallInteger('year');
+            $table->string('major');
+            $table->string('whatsapp');
+            $table->string('identity_card_path')->nullable();
+            $table->string('link_twibbon');
             $table->timestamps();
         });
     }
