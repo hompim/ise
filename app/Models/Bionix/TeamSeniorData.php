@@ -18,7 +18,7 @@ class TeamSeniorData extends Model
     }
 
     public function city(){
-        return $this->hasOne(City::class);
+        return $this->belongsTo(City::class);
     }
 
     public function profile_verified_by(){
@@ -28,7 +28,6 @@ class TeamSeniorData extends Model
     public function payment_verified_by(){
         return $this->hasOne(Admin::class, 'payment_verified_by');
     }
-
 
     public function promo(){
         return $this->morphOne(PromoTeam::class, 'teamable');

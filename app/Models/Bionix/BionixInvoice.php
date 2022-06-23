@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class BionixInvoice extends Model
 {
     use HasFactory;
+
 }
