@@ -1285,6 +1285,36 @@ input:checked + .toggle-bg {
 .mt-52 {
   margin-top: 13rem;
 }
+.mb-11 {
+  margin-bottom: 2.75rem;
+}
+.ml-10 {
+  margin-left: 2.5rem;
+}
+.ml-\[334px\] {
+  margin-left: 334px;
+}
+.mb-\[30px\] {
+  margin-bottom: 30px;
+}
+.mt-\[30px\] {
+  margin-top: 30px;
+}
+.ml-\[80\.5px\] {
+  margin-left: 80.5px;
+}
+.mr-\[80\.5px\] {
+  margin-right: 80.5px;
+}
+.mt-\[71px\] {
+  margin-top: 71px;
+}
+.mt-\[124px\] {
+  margin-top: 124px;
+}
+.mt-\[193px\] {
+  margin-top: 193px;
+}
 .block {
   display: block;
 }
@@ -1378,6 +1408,18 @@ input:checked + .toggle-bg {
 .h-\[446px\] {
   height: 446px;
 }
+.h-\[20px\] {
+  height: 20px;
+}
+.h-\[94px\] {
+  height: 94px;
+}
+.h-\[50px\] {
+  height: 50px;
+}
+.h-\[593px\] {
+  height: 593px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1467,6 +1509,18 @@ input:checked + .toggle-bg {
 .w-\[752px\] {
   width: 752px;
 }
+.w-\[685px\] {
+  width: 685px;
+}
+.w-\[94px\] {
+  width: 94px;
+}
+.w-\[577px\] {
+  width: 577px;
+}
+.w-\[1017px\] {
+  width: 1017px;
+}
 .min-w-full {
   min-width: 100%;
 }
@@ -1480,6 +1534,14 @@ input:checked + .toggle-bg {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+}
+.max-w-max {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.max-w-full {
+  max-width: 100%;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1644,6 +1706,12 @@ input:checked + .toggle-bg {
 .flex-wrap {
   flex-wrap: wrap;
 }
+.place-content-center {
+  place-content: center;
+}
+.place-items-center {
+  place-items: center;
+}
 .items-start {
   align-items: flex-start;
 }
@@ -1664,6 +1732,9 @@ input:checked + .toggle-bg {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-items-center {
+  justify-items: center;
 }
 .gap-2 {
   gap: 0.5rem;
@@ -2436,6 +2507,15 @@ input:checked + .toggle-bg {
 .pb-7 {
   padding-bottom: 1.75rem;
 }
+.pt-\[19px\] {
+  padding-top: 19px;
+}
+.pt-\[12px\] {
+  padding-top: 12px;
+}
+.pt-\[49px\] {
+  padding-top: 49px;
+}
 .text-left {
   text-align: left;
 }
@@ -2444,6 +2524,9 @@ input:checked + .toggle-bg {
 }
 .text-right {
   text-align: right;
+}
+.text-justify {
+  text-align: justify;
 }
 .text-start {
   text-align: start;

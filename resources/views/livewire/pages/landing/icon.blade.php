@@ -11,7 +11,7 @@
             <button class="px-6 py-3 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full mt-24 relative xl:blur font-bold">Let's Explore</button>
             <button class="px-6 py-3 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full mt-[284px] absolute font-bold">Let's Explore</button>
         </div>
-        <div class="flex justify-center flex-1">
+        <div class="flex justify-center flex-1 max-w-full">
             <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full" >
         </div>
         
@@ -84,14 +84,23 @@
                     </div>
                     <!--Frame picture-->
                     <div>
-                    <img class="justify-center w-[752px] h-[446px] " src="{{ asset('images/frame.svg') }}" alt="">
+                    <img class="justify-center w-[826px] h-[818px] " src="{{ asset('images/frame.svg') }}" alt="">
                     </div>
                     <!--Startup academy slide-->
-                    
+                    <div class="bg-[#191A1E] mt-[71px] w-[752px] h-[446px] rounded-2xl justify-center pt-[49px]">
+                        <div class="rounded">
+                            <img src="./images/startup-academy.svg" alt="" class="w-[94px] h-[94px] ml-[334px]">
+                            <p class="mt-[30px] font-bold font-poppins text-2xl">Startup Academy</p>
+                            <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-lg font-poppins">Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi sebagai the next founder of startup.</p>
+                            <button class=  "mt-[30px] w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full mt-10 font-poppins">Lebih Lanjut</button>
+                        </div>
+                    </div>
                     <!--Mark calendar-->
                     <div class="text-6xl text-white font-bold mt-36 ml-12 md:w-[950px] md:mx-auto mb-12 ">
                     Mark your calender and follow the <a class="bg-gradient-to-r from-pink-300 to-purple-300 text-transparent bg-clip-text">excitement</a> 
                     </div>
+                    <!--timeline-->
+                    <img class="justify-center mt-40 mb-11 w-[685px] h-[20px] " src="{{ asset('images/timeline.svg') }}" alt="">
 
             </div> <!--nutup bsl -->
             </div>

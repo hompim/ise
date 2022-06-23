@@ -25,23 +25,22 @@
     <div class="text-white text-center flex flex-col">
         <h1 class="mt-8 font-bold">Verifikasi Email Kamu</h1
     </div>
-    <div class="text-white mt-6 md:mx-16 mx-6  ">
+    <div class="text-white mt-6 md:mx-16 mx-6 text-justify ">
     Halo, Future Catalyst! Data registrasi kamu telah berhasil kami terima. Verifikasi email kamu dengan mengklik tombol atau tautan dibawah ini:
     </div>
     <div class="flex justify-center">
 <button class="w-64 py-2 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full mt-4 text-white item-center mb-4">Verifikasi Email</button>
 </div>
-<div class="text-white mx-6 md:mx-16 ">
+<div class="text-white mx-6 md:mx-16 text-justify">
 Jika kamu tidak membuat akun, tidak perlu melanjutkan proses verifikasi.
 </div>
-<div class="text-white md:mx-16 mx-6 flex flex-col ">
-    <h1>Salam, </h1>
-    <h1 class="text-bold">ISE! 2022</h1>
-
+<div class="text-white md:mx-16 mx-6 flex flex-col">
+    <h1 class="text-left">Salam, </h1>
+    <h1 class="text-left font-bold" >ISE! 2022</h1>
     <div class="relative flex py-5 items-center">
         <div class="flex-grow border-t border-zinc-800  "></div>
     </div>
-<div class="mx-1 justify-center">
+<div class="mx-1 justify-center text-justify">
     Jika memiliki isu dengan tombol “Izinkan” diatas, klik link dibawah ini: <a href="" class= "text-blue-600 underline">http://blablabla.com<a> 
     </div>
 
