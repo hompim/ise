@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/free.min.css">
     <link rel="stylesheet" href="https://pagecdn.io/lib/font-awesome/5.10.0-11/css/all.min.css"
           integrity="sha256-p9TTWD+813MlLaxMXMbTA7wN/ArzGyW/L7c5+KkjOkM=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CoreUI CSS -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@coreui/coreui@3.4.0/dist/css/coreui.min.css"
@@ -57,7 +58,7 @@
         </script>
     @endif
 </head>
-<body class="font-sans antialiased c-app">
+<body class="font-sans antialiased c-app" >
 <div class="w-full h-full fixed block top-0 left-0 bg-white opacity-75 z-50" wire:loading.delay>
   <span class="text-green-500 opacity-75 top-1/2 my-0 mx-auto block relative w-0 h-0" style="
     top: 50%;
@@ -70,7 +71,7 @@
     @livewire('components.header')
 
     <!-- Page Content -->
-    <main class="c-main container-fluid">
+    <main class="c-main container-fluid" style="background-color: #121316">
         {{ $slot }}
     </main>
 </div>
