@@ -19,6 +19,9 @@ use App\Http\Livewire\Pages\Landing\Bionix;
 Route::get('/design', function () {
     return view('design-system');
 });
+Route::get('/design2', function () {
+    return view('livewire.pages.verification-email');
+});
 
 ///Landing page Route
 Route::get('/', Ise::class)->name('ise');
