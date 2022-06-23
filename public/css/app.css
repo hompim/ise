@@ -1282,6 +1282,9 @@ input:checked + .toggle-bg {
 .mb-24 {
   margin-bottom: 6rem;
 }
+.mt-52 {
+  margin-top: 13rem;
+}
 .block {
   display: block;
 }
@@ -1366,6 +1369,15 @@ input:checked + .toggle-bg {
 .h-96 {
   height: 24rem;
 }
+.h-\[430px\] {
+  height: 430px;
+}
+.h-\[818px\] {
+  height: 818px;
+}
+.h-\[446px\] {
+  height: 446px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1445,6 +1457,15 @@ input:checked + .toggle-bg {
 }
 .w-1\/2 {
   width: 50%;
+}
+.w-\[645px\] {
+  width: 645px;
+}
+.w-\[826px\] {
+  width: 826px;
+}
+.w-\[752px\] {
+  width: 752px;
 }
 .min-w-full {
   min-width: 100%;
