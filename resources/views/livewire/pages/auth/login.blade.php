@@ -59,7 +59,7 @@
                     </div>
                     <label for="password" class="block">
                         <span class="block mb-2 font-medium text-white">Password</span>
-                        <input type="password" id="password" placeholder="Enter your password" minlength="5"
+                        <input type="password" name="password" id="password" placeholder="Enter your password" minlength="5"
                             class="p-2 rounded-md w-full bg-transparent focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
                             @visibility.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
                         {{-- <p class="text-xs m-1 text-pink-700 invisible peer-invalid:visible">less than 5 characters</p> --}}

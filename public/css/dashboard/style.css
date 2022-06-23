@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
+
+.c-sidebar .c-sidebar-nav-dropdown-toggle,
+.c-sidebar .c-sidebar-nav-link,
+.c-sidebar .c-sidebar-nav-dropdown-toggle .c-sidebar-nav-icon,
+.c-sidebar .c-sidebar-nav-link .c-sidebar-nav-icon,
+.c-sidebar .c-sidebar-nav-dropdown.c-show .c-sidebar-nav-dropdown-toggle,
+.c-sidebar .c-sidebar-nav-dropdown.c-show .c-sidebar-nav-link{
+    color: #8D8A86;
+    font-weight:600;
+}
+
+.c-sidebar .c-sidebar-nav-dropdown.c-show .c-sidebar-nav-dropdown-toggle:hover,
+.c-sidebar .c-sidebar-nav-dropdown.c-show .c-sidebar-nav-link:hover,
+.c-sidebar .c-sidebar-nav-dropdown.c-show .c-sidebar-nav-link.c-active{
+    color: white;
+}
+.c-sidebar-nav-link.logout, .cil-account-logout.c-sidebar-nav-icon.logout{
+    color: white;
+}
+.c-sidebar-nav-item {
+    padding: 4px 16px;
+}
+
+.c-sidebar .c-active.c-sidebar-nav-dropdown-toggle,
+.c-sidebar .c-sidebar-nav-link.c-active,
+.c-sidebar .c-sidebar-nav-dropdown-toggle:hover,
+.c-sidebar .c-sidebar-nav-link:hover {
+    color: #fff;
+    background: linear-gradient(to right, #B221E5,#5B1BE1 );
+    border-radius: 20px;
+}
+
+.c-sidebar .c-sidebar-nav-dropdown.c-show {
+    background: white;
+}
+
+.c-header-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2.25' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")!important;
+}
+
+hr{
+   border: 0.1em solid rgb(165, 165, 162);
+}

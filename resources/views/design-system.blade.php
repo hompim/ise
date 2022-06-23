@@ -42,20 +42,20 @@
             <div class="w-24 h-6 font-bold text-center text-white bg-purple-300 rounded font-poppins">Main</div>
             <div class="w-24 h-6 bg-purple-400 rounded"></div>
             <div class="w-24 h-6 bg-purple-500 rounded"></div>
+            {{-- text colors --}}
         </div>
-        {{-- text colors --}}
         <h2 class="my-4 text-3xl font-bold font-poppins">Text</h2>
-        <div class="flex flex-row w-full px-4 space-x-2">
-            <div class="w-24 h-6 bg-white border rounded"></div>
-            <div class="w-24 h-6 bg-gray-400 border rounded"></div>
-            <div class="w-24 h-6 bg-black border rounded"></div>
-        </div>
-        <h2 class="my-4 text-3xl font-bold font-poppins">Background</h2>
-        <div class="flex flex-row w-full px-4 space-x-2">
-            <div class="w-24 h-6 bg-black border rounded"></div>
-        </div>
-
+        <div class="w-24 h-6 bg-white border rounded"></div>
+        <div class="w-24 h-6 bg-gray-400 border rounded"></div>
+        <div class="w-24 h-6 bg-black border rounded"></div>
     </div>
+    <h2 class="my-4 text-3xl font-bold font-poppins">Background</h2>
+    <div class="flex flex-row w-full px-4 space-x-2">
+        <div class="w-24 h-6 bg-black border rounded"></div>
+    </div>
+
+</div>
+<div class="flex flex-row w-full px-4 space-x-2">
 </body>
 
 </html>
