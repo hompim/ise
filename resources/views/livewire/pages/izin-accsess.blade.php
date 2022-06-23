@@ -46,7 +46,7 @@
     Jika memiliki isu dengan tombol “Izinkan” diatas, klik link dibawah ini: <a href="" class= "text-blue-600 underline">http://blablabla.com<a> 
     </div>
 
-    
+
 
     <div class="flex justify-center my-4 mx-1">
         Ada pertanyaan? Silakan hubungi kami
