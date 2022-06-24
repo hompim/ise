@@ -34,6 +34,8 @@ return new class extends Migration
             $table->enum('payment_verif_status', ['Belum Unggah','Belum Bayar', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Belum Bayar');
             $table->unsignedTinyInteger('payment_verified_by')->nullable();
             $table->text('payment_verif_comment')->nullable();
+            $table->unsignedBigInteger('leader_id');
+            $table->unsignedBigInteger('member_id');
             $table->timestamps();
         });
     }

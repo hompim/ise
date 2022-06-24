@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('school_name');
             $table->dateTime('start_dp');
             $table->dateTime('end_dp');
-
             $table->timestamps();
         });
     }
