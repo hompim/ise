@@ -54,11 +54,16 @@ class Index extends LivewireDatatable
         if ($this->model == 'App\Models\Bionix\TeamJuniorData') {
             $this->status = ['Penyisihan 1', 'Penyisihan 2', 'Semifinal', 'Final'];
             $this->statusValue = $this->status[0];
-            return TeamJuniorData::query();
+            return TeamJuniorData::query()
+                ->leftJoin('team_junior_members as leader_group', 'leader_group.id', 'team_junior_data.leader_id')
+                ->leftJoin('team_junior_members as member_group', 'member_group.id', 'team_junior_data.member_id');
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             $this->status = ['Penyisihan', 'Semifinal', 'Final'];
             $this->statusValue = $this->status[0];
-            return TeamSeniorData::query();
+            return TeamSeniorData::query()
+                ->leftJoin('team_senior_members as leader', 'leader.id', 'team_senior_data.leader_id')
+                ->leftJoin('team_senior_members as member1', 'member1.id', 'team_senior_data.member1_id')
+                ->leftJoin('team_senior_members as member2', 'member2.id', 'team_senior_data.member2_id');
         }
         return null;
     }
@@ -88,10 +93,10 @@ class Index extends LivewireDatatable
                 Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->cities->pluck('name')),
                 Column::name('school_name')->label('Nama Sekolah')->searchable(),
                 Column::name('competition_round')->filterable(['Penyisihan 1', 'Penyisihan 2', 'Semifinal', 'Final'])->label('Babak'),
-                Column::name('member.name')->label('Nama Ketua')->searchable(),
-                Column::name('member.email')->label('Email Ketua')->searchable(),
-                // Column::name('member_group.name')->label('Nama Member')->searchable(),
-                // Column::name('member_group.Email')->label('Email Member')->searchable(),
+                Column::name('leader_group.name')->label('Nama Ketua')->searchable(),
+                Column::name('leader_group.email')->label('Email Ketua')->searchable(),
+                Column::name('member_group.name')->label('Nama Member')->searchable(),
+                Column::name('member_group.Email')->label('Email Member')->searchable(),
                 Column::name('profile_verif_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('payment_verif_status')->label('Status Pembayaran')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::raw('date_format(team_junior_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(team_junior_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
@@ -120,12 +125,12 @@ class Index extends LivewireDatatable
                 Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->cities->pluck('name')),
                 Column::name('university_name')->label('Nama Universitas'),
                 Column::name('competition_round')->filterable(['Penyisihan', 'Semifinal', 'Final'])->label('Babak'),
-                // Column::name('leader.name')->label('Nama Ketua')->searchable(),
-                // Column::name('leader.email')->label('Email Ketua')->searchable(),
-                // Column::name('member1.name')->label('Nama Member 1')->searchable(),
-                // Column::name('member1.email')->label('Email Member 1')->searchable(),
-                // Column::name('member2.name')->label('Nama Member 2')->searchable(),
-                // Column::name('member2.email')->label('Email Member 2')->searchable(),
+                Column::name('leader.name')->label('Nama Ketua')->searchable(),
+                Column::name('leader.email')->label('Email Ketua')->searchable(),
+                Column::name('member1.name')->label('Nama Member 1')->searchable(),
+                Column::name('member1.email')->label('Email Member 1')->searchable(),
+                Column::name('member2.name')->label('Nama Member 2')->searchable(),
+                Column::name('member2.email')->label('Email Member 2')->searchable(),
                 Column::name('profile_verif_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('payment_verif_status')->label('Status Pembayaran')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::raw('date_format(team_senior_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(team_junior_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
