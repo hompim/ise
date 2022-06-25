@@ -147,7 +147,8 @@
                         <!-- input + button -->
                         <input placeholder="Type here" 
                         class="mt-[32px] w-[743px] h-[54px] font-medium text-[24px] pl-[33px] font-poppins rounded-2xl text-start">
-                        <button class=  "mt-[32px] w-[146px] h-[54px] text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-144px] font-poppins text-white absolute">Send</button>
+                        <button class= "mt-[32px] w-[146px] h-[54px] text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-144px] xl:blur font-poppins text-white ">Send</button>
+                        <button class= "mt-[32px] w-[146px] h-[54px] text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-144px] absolute font-poppins text-white ">Send</button>
                     </div>
     </div>
 </div>
