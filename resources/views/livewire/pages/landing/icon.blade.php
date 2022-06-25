@@ -31,36 +31,33 @@
                         <a class="font-bold">Grand Talkshow,</a>  dan 
                         <a class="font-bold">E-Hall of IS.</a> </p>
                     </div>
-                    <div class="mySwiperIcon">
-                    <div class="mySwiper swiper w-[700px] h-[430px] mt-14 font-poppins ">
-                    <div class="swiper-wrapper w-[750px]">
-                    <!--1 -->
-                    <div class="swiper-slide z-50  border-none flex flex-row justify-center font-poppins ">
-                        <img class=" rounded-t-lg bg-[#5B1BE1] w-[545px] relative xl:blur " src="./images/rectangle-icon.svg" />
-                        <img class=" rounded-t-lg w-[545px] absolute" src="./images/rectangle-icon.svg" />
-                    </div>
-                    <!--1 -->
-                    </div>
-                    <div class="swiper-slide z-50 border-none flex flex-row justify-center font-poppins  ">
-                            <img class=" rounded-t-lg  w-[545px]" src="./images/rectangle-icon.svg" />
+                    <!-- about this -->
+                    <div class="swiper mySwiper w-[700px]">
+                    <div class="swiper-wrapper cursor-grab">
+                        <div class="flex justify-center swiper-slide">
+                            <img class="w-[600px] rounded-3xl h-[420px]"
+                                src="./images/rectangle-icon.svg" />
                         </div>
-                    <!--1 -->
-                    <div class="swiper-slide z-50  border-none flex flex-row justify-center font-poppins ">
-                        <img class=" rounded-t-lg w-[545px] " src="./images/rectangle-icon.svg" />
+                        <div class="flex justify-center swiper-slide">
+                            <img class="w-[600px] rounded-3xl  h-[420px]"
+                                src="./images/rectangle-icon.svg" />
+                        </div>
+                        <div class="flex justify-center swiper-slide">
+                            <img class="w-[600px] rounded-3xl h-[420px]"
+                                src="./images/rectangle-icon.svg" />
+                        </div>
                     </div>
-                    
                     </div>
-                    
-                    </div>
+                    <!-- coba coba -->
 </div> 
                     </div>
                     
                     <!--Let's See The Inside-->
                     <div>
-                    <h1 class="font-bold text-4xl mt-52 font-poppins text-center">Let's See The Inside</h1>
+                    <h1 class="font-bold text-4xl mt-[201px] font-poppins text-center">Let's See The Inside</h1>
                     </div>
                     <!--Frame picture-->
-                    <div class="flex justify-center">
+                    <div class="flex justify-center mb-[71px]">
                     <img class="mt-10 justify-center w-[826px] h-[818px] " src="{{ asset('images/frame.svg') }}" alt="">
                         <!--Icon kecil city-->
                         <div>
@@ -71,15 +68,27 @@
                             
                         </div>
                     </div>
-                    <!--Startup academy slide-->
-                    <div class="bg-[#191A1E] mx-auto mt-[71px] w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px] ">
-                    <div class="rounded ">
-                        <img src="./images/startup-academy.svg" alt="" class="w-[94px] h-[94px] ml-[334px]">
-                        <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Startup Academy</p>
-                        <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-lg font-poppins">Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi sebagai the next founder of startup.</p>
-                        <button class=  "mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih Lanjut</button>
+                    <!-- Startup academy slide  -->
+                    <div class="swiper mySwiper w-[700px]">
+                    <div class="swiper-wrapper cursor-grab">
+                        <div class="flex justify-center swiper-slide">
+                            <!-- 1 -->
+                            <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
+                            <div>
+                                <img src="./images/startup-academy.svg" alt="" class="w-[94px] h-[94px] mb-[-12px] mx-auto">
+                                <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Startup Academy</p>
+                                <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center font-medium text-[18px] font-poppins">Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi sebagai the next founder of startup.</p>
+                                <button class=  "mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih Lanjut</button>
+                            </div>
+                            </div>
+                            <!-- 1 -->
                         </div>
                     </div>
+                    <div class="p-6 -mr-5 absolute rounded-full swiper-button-next bg-liteBlack"></div>
+                    <div class="p-6 -ml-5 absolute rounded-full swiper-button-prev bg-liteBlack"></div>
+                    </div>
+                    <!--Startup academy slide -->
+                    
                     <!-- timeline -->
                     <!-- mark kalender -->
                     <div class="mt-36">
