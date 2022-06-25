@@ -57,13 +57,13 @@
                     <h1 class="font-bold text-4xl mt-[201px] font-poppins text-center">Let's See The Inside</h1>
                     </div>
                     <!--Frame picture-->
-                    <div class="flex justify-center mb-[71px]">
+                    <div class="flex justify-center mb-[71px] mt-[146px]">
                     <img class="mt-10 justify-center w-[826px] h-[818px] " src="{{ asset('images/frame.svg') }}" alt="">
                         <!--Icon kecil city-->
                         <div>
                             <div class="group">
                                 <div class="opacity-0 group-hover:opacity-100">
-                                    <p class=" absolute mt-[70px] ml-[-480px]">Startup Academy</p>
+                                    <p class=" absolute border-l-4 border-[#5B1BE1]  font-poppins font-semibold text-[20px] mt-[22px] ml-[-480px]">Startup Academy</p>
                                 </div>
                                 <a  class="transition duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 absolute mt-[115px] ml-[-480px]" ><img src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></a>
                             </div>
@@ -80,7 +80,7 @@
                         <!--slide 1-->
                         <div class="flex justify-center swiper-slide">
                         
-                            <div class="bg-[#191A1E] mx-auto sm:w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
+                            <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
                             <div>
                                 <img src="./images/startup-academy.svg" alt="" class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
                                 <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Startup Academy</p>
