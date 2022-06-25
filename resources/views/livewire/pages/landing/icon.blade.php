@@ -52,7 +52,7 @@
                     </div>
                     
                     </div>
-</div>
+</div> 
                     </div>
                     
                     <!--Let's See The Inside-->
@@ -72,18 +72,72 @@
                         </div>
                     </div>
                     <!--Startup academy slide-->
-                    <div class="bg-[#191A1E] mx-0 mt-[71px] w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px] ">
+                    <div class="bg-[#191A1E] mx-auto mt-[71px] w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px] ">
                     <div class="rounded ">
-                            <img src="./images/startup-academy.svg" alt="" class="w-[94px] h-[94px] ml-[334px]">
-                            <p class="mt-[30px] font-bold font-poppins text-2xl">Startup Academy</p>
-                            <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-lg font-poppins">Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi sebagai the next founder of startup.</p>
-                            <button class=  "mt-[30px] w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full mt-10 font-poppins">Lebih Lanjut</button>
+                        <img src="./images/startup-academy.svg" alt="" class="w-[94px] h-[94px] ml-[334px]">
+                        <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Startup Academy</p>
+                        <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-lg font-poppins">Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi sebagai the next founder of startup.</p>
+                        <button class=  "mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih Lanjut</button>
                         </div>
                     </div>
+                    <!-- timeline -->
+                    <!-- mark kalender -->
+                    <div class="mt-36">
+                        <h1 class="mb-24 font-bold text-white font-poppins text-7xl text-center">Mark your calender and <br> follow the <span
+                                class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
+                        </h1>
+                        <!-- timeline -->
+                        <div class="container mx-auto">
+                            <ol class="items-center justify-center md:flex">
+                                <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun 2022</time>
+                                <div class="flex items-center justify-center overflow-hidden">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
+                                    </div>
+                                    <div class="hidden sm:flex w-[300px] absolute right-0 h-2 bg-[#333333]">
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
+                                        Student Level</h3>
+                                </div>
+                                </li>
+                                <!-- 2 -->
+                                <li class="relative mb-6 sm:mb-0">
+                                    <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
+                                    <div class="relative flex items-center">
+                                        <div
+                                            class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                        </div>
+                                        <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <h3 class="text-lg font-semibold text-white font-poppins pb-7">Virtual Tour</h3>
+                                    </div>
+                                </li>
+                                <li class="relative mb-6 sm:mb-0">
+                                    <time class="block mb-2 text-lg font-medium text-white font-poppins">Nov 2022</time>
+                                    <div class="relative flex items-center">
+                                        <div
+                                            class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                        </div>
+                                        <div class="hidden sm:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <h3 class="text-lg font-semibold text-white font-poppins pb-7">Grand Talkshow</h3>
+                                    </div>
+                                </li>
+                            </ol>
+
+                        </div>
+                    </div>
+                    <!-- batas -->
             </div> <!--nutup bsl -->
             </div>
-
-        </div>
+            </div>
 </div>
-
+<div class="bg-black pt-[308px] pb-[138px]">
+    <img src="{{ asset('images/rectangle-footer-icon.svg') }}" class="w-auto h-[20px] absolute" > 
+</div>
 <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
