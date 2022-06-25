@@ -72,8 +72,9 @@
                     <!-- Startup academy slide  -->
                     <div class="swiper mySwiper w-[700px]">
                     <div class="swiper-wrapper cursor-grab">
+                        <!--slide 1-->
                         <div class="flex justify-center swiper-slide">
-                            <!-- 1 -->
+                        
                             <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
                             <div>
                                 <img src="./images/startup-academy.svg" alt="" class="w-[94px] h-[94px] mb-[-12px] mx-auto">
@@ -82,8 +83,48 @@
                                 <button class=  "mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih Lanjut</button>
                             </div>
                             </div>
-                            <!-- 1 -->
+                        
                         </div>
+                        <!-- 2 -->
+                        <div class="flex justify-center swiper-slide">
+                        
+                            <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
+                            <div>
+                                <img src="./images/data-science-slide.svg" alt="" class="w-[94px] h-[94px] mb-[-12px] mx-auto">
+                                <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Data Science Academy</p>
+                                <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">Data Science Academy hadir untuk menjadi langkah awal atau katalis karier peserta sebagai seorang data scientist.</p>
+                                <button class=  "mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih Lanjut</button>
+                            </div>
+                            </div>
+                        
+                        </div>
+                        <!-- 3 -->
+                        <div class="flex justify-center swiper-slide">
+                        
+                            <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
+                            <div>
+                                <img src="./images/hall-is-slide.svg" alt="" class="w-[94px] h-[94px] mb-[-12px] mx-auto">
+                                <p class="mt-[30px] text-center font-bold font-poppins text-2xl">E-Hall of IS</p>
+                                <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar porttitor.</p>
+                                <button class=  "mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih Lanjut</button>
+                            </div>
+                            </div>
+                        
+                        </div>
+                        <!-- 4 -->
+                        <div class="flex justify-center swiper-slide">
+                        
+                            <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
+                            <div>
+                                <img src="./images/grand-talkshow-slide.svg" alt="" class="w-[94px] h-[94px] mb-[-12px] mx-auto">
+                                <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Grand Talkshow</p>
+                                <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar porttitor.</p>
+                                <button class=  "mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih Lanjut</button>
+                            </div>
+                            </div>
+                        
+                        </div>
+                    <!-- button arrow-->
                     </div>
                     <div class="p-6 -mr-5 absolute rounded-full swiper-button-next bg-liteBlack"></div>
                     <div class="p-6 -ml-5 absolute rounded-full swiper-button-prev bg-liteBlack"></div>
