@@ -1,6 +1,23 @@
-<nav class="flex flex-row justify-between text-center mt-4 w-fit bg-[#191A1E] rounded-full fixed z-[9999] mx-auto left-0 right-0 shadow-lg shadow-liteBlack"
-    @if (Route::current()->getName() == 'ise') data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="2500" data-aos-one="true" @endif>
-    <ul class="flex flex-row items-center px-6 py-2 space-x-8 font-semibold text-white font-poppins">
+<nav class="flex flex-wrap max-w-screen-xl justify-between text-center lg:mt-4 lg:w-fit bg-[#191A1E] lg:rounded-full fixed z-[9999] mx-auto left-0 right-0 shadow-lg shadow-liteBlack"
+    @if (Route::current()->getName() == 'ise') data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="2500" data-aos-one="true" @endif
+    x-data="{ open: false }">
+
+    <div class="flex items-center pl-12 lg:!hidden">
+        <button x-on:click="open = !open" class="flex items-center space-x-2 text-purple-200 focus:outline-none">
+            <div class="relative flex items-center justify-center w-6">
+                <span x-bind:class="open ? 'translate-y-0 rotate-45' : '-translate-y-2'"
+                    class="absolute w-full h-[2px] transition transform bg-current"></span>
+
+                <span x-bind:class="open ? 'opacity-0 translate-x-3' : 'opacity-100'"
+                    class="absolute w-full h-[2px] transition transform bg-current"></span>
+
+                <span x-bind:class="open ? 'translate-y-0 -rotate-45' : 'translate-y-2'"
+                    class="absolute w-full h-[2px] transition transform bg-current"></span>
+            </div>
+        </button>
+    </div>
+    <ul class="flex flex-col px-6 py-8 mt-[3.25em] space-y-4 font-semibold text-white lg:!space-y-0 lg:mt-0 text-start lg:items-center lg:space-x-8 lg:flex-row font-poppins absolute lg:translate-x-0 bg-liteBlack lg:static transform transition duration-300 rounded-br-lg lg:rounded-full lg:!py-2"
+        :class="{ 'translate-x-0': open, '-translate-x-72': !open }">
         <a href="/">
             <li
                 class="@if (Route::current()->getName() == 'ise') text-transparent  from-pink-300 to-purple-300 bg-clip-text
@@ -26,7 +43,7 @@
 
     {{-- sebelum login --}}
     <ul
-        class="flex flex-row items-center space-x-4 sm:justify-center bg-[#191A1E]  rounded-full py-2 px-6  font-poppins font-semibold">
+        class="!hidden  flex-row items-center space-x-4 sm:justify-center bg-[#191A1E]  rounded-full py-3 lg:py-2 px-6  font-poppins font-semibold">
         <a href="/dashboard/login"
             class=" transition duration-150 ease-linear px-8 py-2 border border-[#6B6F75] text-[#6B6F75] hover:text-white rounded-full bg-gradient-to-r hover:from-pink-300 hover:to-purple-300">
             <li>Log in</li>
@@ -40,7 +57,7 @@
 
     {{-- setelah login (masih di hidden) --}}
     <ul
-        class="hidden flex-row items-center space-x-8 sm:justify-center bg-[#191A1E]  rounded-full py-2 px-6  font-poppins font-semibold">
+        class="flex-row items-center space-x-8 sm:justify-center bg-[#191A1E]  rounded-full py-3 lg:py-2 px-6  font-poppins font-semibold">
         <button type="button"
             class="py-2 px-6 text-[#6B6F75] flex flex-row space-x-4 bg-gradient-to-r hover:text-transparent  hover:from-pink-300 hover:to-purple-300 hover:bg-clip-text">
             <svg width="16" height="19" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">

@@ -1,90 +1,84 @@
 <footer class="bg-[#191A1E] flex flex-col px-16 pt-16 divide-y divide-[#2F2F2F]">
-    <div class="flex flex-row justify-center px-48 pb-12 space-x-24">
-        <div>
-            <img src="{{ asset('images/white-logo.png') }}" alt="logo-ise" class="w-24">
-        </div>
-        <div>
-            <dl>
-                <dt class="pb-4 text-xl font-semibold text-white font-poppins">About Us</dt>
-                <a href="#">
-                    <dd
-                        class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                        ISE!</dd>
-                </a>
-                <a href="#">
-                    <dd
-                        class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                        BIONIX</dd>
-                </a>
-                <a href="#">
-                    <dd
-                        class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                        ICON</dd>
-                </a>
-            </dl>
-        </div>
-        <div>
-            <dl>
-                <dt class="pb-4 text-xl font-semibold text-white font-poppins">Competition Zone</dt>
-                <a href="#">
-                    <dd
-                        class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                        BIONIX College
-                        Level
-                    </dd>
-                </a>
-                <a href="#">
-                    <dd
-                        class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                        BIONIX Student
-                        Level
-                    </dd>
-                </a>
-            </dl>
-        </div>
-        <div>
-            <dl>
-                <dt class="pb-4 text-xl font-semibold text-white font-poppins">IT Convention Zone</dt>
-                <a href="#">
-                    <dd
-                        class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                        Data Science
-                        Academy
-                    </dd>
-                </a>
-                <a href="#">
-                    <dd
-                        class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                        Startup Academy
-                    </dd>
-                </a>
-                <a href="#">
-                    <dd
-                        class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                        E-Hall of
-                        Information System</dd>
-                </a>
-                <a href="#">
-                    <dd
-                        class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                        Grand Talkshow
-                        ISE!
-                        2022</dd>
-                </a>
-            </dl>
-        </div>
+    <div
+        class="flex flex-col justify-center px-4 pb-12 space-y-4 lg:!space-y-0 space-x-0 lg:space-x-24 lg:px-48 lg:flex-row">
+        <img src="{{ asset('images/white-logo.png') }}" alt="logo-ise"
+            class="w-[200px] h-auto mx-auto lg:!mx-0 transform-gpu transition duration-300 hover:scale-105">
+        <dl class="text-center lg:!text-start">
+            <dt class="pb-4 text-xl font-semibold text-white font-poppins">About Us</dt>
+            <a href="#">
+                <dd
+                    class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
+                    ISE!</dd>
+            </a>
+            <a href="#">
+                <dd
+                    class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
+                    BIONIX</dd>
+            </a>
+            <a href="#">
+                <dd
+                    class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
+                    ICON</dd>
+            </a>
+        </dl>
+        <dl class="text-center lg:!text-start">
+            <dt class="pb-4 text-xl font-semibold text-white font-poppins">Competition Zone</dt>
+            <a href="#">
+                <dd
+                    class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
+                    BIONIX College
+                    Level
+                </dd>
+            </a>
+            <a href="#">
+                <dd
+                    class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
+                    BIONIX Student
+                    Level
+                </dd>
+            </a>
+        </dl>
+        <dl class="text-center lg:!text-start">
+            <dt class="pb-4 text-xl font-semibold text-white font-poppins">IT Convention Zone</dt>
+            <a href="#">
+                <dd
+                    class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
+                    Data Science
+                    Academy
+                </dd>
+            </a>
+            <a href="#">
+                <dd
+                    class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
+                    Startup Academy
+                </dd>
+            </a>
+            <a href="#">
+                <dd
+                    class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
+                    E-Hall of
+                    Information System</dd>
+            </a>
+            <a href="#">
+                <dd
+                    class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
+                    Grand Talkshow
+                    ISE!
+                    2022</dd>
+            </a>
+        </dl>
     </div>
 
-    <div class="flex flex-row justify-between py-4">
+    <div class="flex flex-col-reverse justify-between py-4 lg:flex-row">
         {{-- copyright ise! 2022 --}}
-        <div>
+        <div class="py-8 lg:py-0">
             <p class="text-center text-white font-poppins">
                 <img src="{{ asset('images/copyright.svg') }}" alt="copyright" class="inline ">
                 2022 ISE!
             </p>
         </div>
 
-        <div class="flex flex-row space-x-6">
+        <div class="flex flex-row justify-center space-x-6">
             <a href="https://ise-its.com" target="_blank">
                 <svg class="transition duration-300 ease-linear fill-white hover:fill-pink-300" width="20"
                     height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

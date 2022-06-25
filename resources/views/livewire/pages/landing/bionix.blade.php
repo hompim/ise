@@ -23,11 +23,12 @@
                 <button href="#" @click.prevent="tab = 'bcl'" class="px-3 py-2 bg-[#1F1F1F] rounded-full text-base"  >BIONIX College Level</button>
             </div>
 
+            <!-- BSL Start -->
             <div x-show="tab === 'bsl'" class="flex justify-center">
                 <div class="w-3/4 flex-col mt-32 text-center p-4">
                     <div class="px-[100px] pt-[119px]">
                         <h1 class="font-bold text-2xl font-poppins">Bionix Student Level</h1>
-                        <p class="mt-10 text-lg font-poppins">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ex, culpa nihil fuga sequi ab. Iusto accusamus eos minima libero, soluta culpa quidem quam corrupti iure quae ratione earum in ipsam. Possimus consequatur ea omnis, maiores quas minus aspernatur cumque maxime sint debitis veniam provident dolores molestiae quia rerum nostrum ex officiis corrupti voluptatem porro? Cum, blanditiis! Iusto ex omnis maiores quae magnam eaque, aut alias, ab, deleniti exercitationem consequatur.</p>
+                        <p class="mt-10 text-lg font-poppins  text-[#B5B3BC]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ex, culpa nihil fuga sequi ab. Iusto accusamus eos minima libero, soluta culpa quidem quam corrupti iure quae ratione earum in ipsam. Possimus consequatur ea omnis, maiores quas minus aspernatur cumque maxime sint debitis veniam provident dolores molestiae quia rerum nostrum ex officiis corrupti voluptatem porro? Cum, blanditiis! Iusto ex omnis maiores quae magnam eaque, aut alias, ab, deleniti exercitationem consequatur.</p>
                     </div>
                     <h1 class="text-white font-poppins font-bold text-[64px] mt-[211px]">IS Class</h1>
                     <div class="swiper mySwiper w-[980px] mt-14 font-poppins ">
@@ -138,22 +139,110 @@
                 </div>
 
                 <div class="font-poppins relative">
-                    <img class="ml-44 w-3/4" src="{{ asset('images/trophy.svg') }}" alt="">
-                    <h1 class="text-2xl ml-6 absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Total Prizes</h1>
-                    <h1 class="text-3xl ml-6 mt-4 absolute top-3/4 left-1/2 transform -translate-x-1/2 font-bold ">Up to Rp 10.000.000</h1>
+                    <img class="ml-32 w-3/4" src="{{ asset('images/trophy.svg') }}" alt="">
+                    <h1 class="text-2xl absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Total Prizes</h1>
+                    <h1 class="text-3xl mt-4 absolute top-3/4 left-1/2 transform -translate-x-1/2 font-bold ">Up to Rp 10.000.000</h1>
                 </div>
 
-                <div class="text-6xl text-white font-bold ml-12 mt-36 md:w-[950px] md:mx-auto mb-12 ">
-                Mark your calender and follow the <a class="bg-gradient-to-r from-pink-300 to-purple-300 text-transparent bg-clip-text">excitement</a> 
+                    <!-- Timeline Start -->
+                    <div class="my-36">
+                    <h1 class="mb-24 font-bold text-white font-poppins text-7xl">Mark your calender and <br> follow the <span
+                            class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
+                    </h1>
+                    <div class="container mx-auto">
+                        <ol class="items-center justify-center md:flex">
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun 2022</time>
+                                <div class="flex items-center justify-center overflow-hidden">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
+                                    </div>
+                                    <div class="hidden sm:flex w-1/2 absolute right-0 h-2 bg-[#333333]">
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
+                                        Student Level</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun 2022</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">IS Class</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jul 2022</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins">ICON <br> Academy</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
+                                        College Level</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">Virtual Tour</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block mb-2 text-lg font-medium text-white font-poppins">Nov 2022</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">Grand Talkshow</h3>
+                                </div>
+                            </li>
+                        </ol>
+
+                    </div>
+                    <!-- Timeline End -->
                 </div>
 
                 </div>
-            </div>
+            </div> 
+            <!-- BSL End -->
 
+            <!-- BCL Start -->
             <div x-show="tab === 'bcl'" class="flex justify-center">
             <div class="w-3/4 flex-col mt-32 text-center p-4 font-poppins">
-                <h1 class="text-2xl text-bold ">Bionix College Level</h1>
-                <p class="text-lg mt-2  text-[#B5B3BC] text-center md:px-[246px]">Hadir dengan konsep startup business plan yang akan mengasah skill kreativitas dan problem solving mahasiswa Indonesia dalam mengatasi permasalahan yang ada melalui sebuah ide bisnis kreatif di bidang startup dengan memanfaatkan kemajuan teknologi</p>
+                <div class="px-[100px] pt-[119px]">
+                    <h1 class="text-2xl font-bold ">Bionix College Level</h1>
+                    <p class="text-lg mt-10  text-[#B5B3BC] text-center">Hadir dengan konsep startup business plan yang akan mengasah skill kreativitas dan problem solving mahasiswa Indonesia dalam mengatasi permasalahan yang ada melalui sebuah ide bisnis kreatif di bidang startup dengan memanfaatkan kemajuan teknologi</p>
+                </div>
                 <div class="flex flex-row justify-center space-x-4 mt-12 font-poppins">
                     <button class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center  justify-center"><svg class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.5034 13.8623L15.4998 18.8506L20.4961 13.8623" stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -209,16 +298,100 @@
                 </div>
 
                 <div class="font-poppins relative ">
-                    <img class="ml-44 w-3/4" src="{{ asset('images/trophy.svg') }}" alt="">
-                    <h1 class="text-2xl ml-6 absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Total Prizes</h1>
-                    <h1 class="text-3xl ml-6 mt-4 absolute top-3/4 left-1/2 transform -translate-x-1/2 font-bold ">Up to Rp 10.000.000</h1>
+                    <img class="ml-32 w-3/4" src="{{ asset('images/trophy.svg') }}" alt="">
+                    <h1 class="text-2xl absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Total Prizes</h1>
+                    <h1 class="text-3xl mt-4 absolute top-3/4 left-1/2 transform -translate-x-1/2 font-bold ">Up to Rp 10.000.000</h1>
                 </div>
+                
+                <!-- Timeline Start -->
+                <div class="my-36">
+                    <h1 class="mb-24 font-bold text-white font-poppins text-7xl">Mark your calender and <br> follow the <span
+                            class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
+                    </h1>
+                    <div class="container mx-auto">
+                        <ol class="items-center justify-center md:flex">
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun 2022</time>
+                                <div class="flex items-center justify-center overflow-hidden">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
+                                    </div>
+                                    <div class="hidden sm:flex w-1/2 absolute right-0 h-2 bg-[#333333]">
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
+                                        Student Level</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun 2022</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">IS Class</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jul 2022</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins">ICON <br> Academy</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
+                                        College Level</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">Virtual Tour</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block mb-2 text-lg font-medium text-white font-poppins">Nov 2022</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">Grand Talkshow</h3>
+                                </div>
+                            </li>
+                        </ol>
 
-                <div class="text-6xl text-white font-bold mt-36 ml-12 md:w-[950px] md:mx-auto mb-12 ">
-                Mark your calender and follow the <a class="bg-gradient-to-r from-pink-300 to-purple-300 text-transparent bg-clip-text">excitement</a> 
+                    </div>
                 </div>
+                <!-- Timeline End -->
 
-            </div> <!--nutup bsl -->
+            </div> <!--nutup BCL -->
             </div>
 
         </div>
