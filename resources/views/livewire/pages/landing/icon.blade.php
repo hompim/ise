@@ -137,7 +137,18 @@
             </div>
             </div>
 </div>
-<div class="bg-black pt-[308px] pb-[138px]">
-    <img src="{{ asset('images/rectangle-footer-icon.svg') }}" class="w-auto h-[20px] absolute" > 
+<!-- feedback event -->
+<div class="bg-black pt-[210px] pb-[138px]">
+    <img src="{{ asset('images/rectangle-footer-icon.svg') }}" class="w-auto h-[20px] absolute mt-[90px]" >
+    <!-- feedback input -->
+    <div class="bg-[#191A1E] mx-auto w-[866px] h-[189px] rounded-2xl flex justify-center relative">
+                    <div class="rounded ">
+                        <p class="mt-[22px] text-[26px] text-center text-white font-bold font-poppins">What do you want to say about our event?</p>
+                        <!-- input + button -->
+                        <input placeholder="Type here" 
+                        class="mt-[32px] w-[743px] h-[54px] font-medium text-[24px] pl-[33px] font-poppins rounded-2xl text-start">
+                        <button class=  "mt-[32px] w-[146px] h-[54px] text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-144px] font-poppins text-white absolute">Send</button>
+                    </div>
+    </div>
 </div>
 <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
