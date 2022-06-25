@@ -9,7 +9,7 @@
             <h1 class="text-7xl text-center lg:text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">IT Convention</h1>
             <h1 class="text-7xl text-center lg:text-left font-bold">Zone</h1>
             <button class="px-6 py-3 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full mt-[140px] relative xl:blur font-bold">Let's Explore</button>
-            <button class="px-6 py-3 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full mt-[284px] absolute font-bold">Let's Explore</button>
+            <button class="px-6 py-3 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full mt-[284px] absolute font-semibold">Let's Explore</button>
         </div>
         <div class="flex justify-center flex-1 w-[691px] h[553px]">
             <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full" >
@@ -21,15 +21,16 @@
                 <div class="w-3/4 flex-col mt-32 text-center p-4">
                     <div class="px-[100px] mt[124px] mb-[77px]">
                         <h1 class="font-bold text-2xl font-poppins">About This Zone</h1>
-                        <p class="mt-10 text-lg font-poppins">IT Convention merupakan salah satu zona dari ISE! (Information Systems
+                        <p class="mt-10 text-lg text-[#B5B3BC] font-poppins">
+                        <a class="font-semiboldbold text-white">IT Convention</a> merupakan salah satu zona dari ISE! (Information Systems
                         Expo) yang bertujuan menghadirkan rangkaian acara yang
                         bermanfaat dengan memamerkan dunia IT serta melakukan edukasi
                         kepada masyarakat terkait isu-isu seputar IT saat ini. Terdapat
                         beberapa acara 
                         yang dihadirkan, yakni 
-                        <a class="font-bold">Academy, </a> 
-                        <a class="font-bold">Grand Talkshow,</a>  dan 
-                        <a class="font-bold">E-Hall of IS.</a> </p>
+                        <a class="font-semiboldbold text-white">Academy, </a> 
+                        <a class="font-semiboldbold text-white">Grand Talkshow,</a>  dan 
+                        <a class="font-semiboldbold text-white">E-Hall of IS.</a> </p>
                     </div>
                     <!-- about this -->
                     <div class="swiper mySwiper w-[700px]">
@@ -77,7 +78,7 @@
                             <div>
                                 <img src="./images/startup-academy.svg" alt="" class="w-[94px] h-[94px] mb-[-12px] mx-auto">
                                 <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Startup Academy</p>
-                                <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center font-medium text-[18px] font-poppins">Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi sebagai the next founder of startup.</p>
+                                <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi sebagai the next founder of startup.</p>
                                 <button class=  "mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih Lanjut</button>
                             </div>
                             </div>
@@ -108,8 +109,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
-                                        Student Level</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">E-Hall of IS</h3>
                                 </div>
                                 </li>
                                 <!-- 2 -->
