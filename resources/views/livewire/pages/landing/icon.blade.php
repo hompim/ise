@@ -1,10 +1,9 @@
-
 <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
 <script src="//unpkg.com/alpinejs" defer></script>
 <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
  
-<div class="bg-black pl-[130px] font-poppins">
-    <div class="flex flex-col-reverse lg:flex-row  items-center pt-[202px]">
+<div class="bg-black font-poppins">
+    <div class="flex flex-col-reverse pl-[130px] lg:flex-row  items-center pt-[202px]">
         <div class="flex flex-1 flex-col items-start text-white">
             <h1 class="text-7xl text-center lg:text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">IT Convention</h1>
             <h1 class="text-7xl text-center lg:text-left font-bold">Zone</h1>
@@ -62,7 +61,13 @@
                     <img class="mt-10 justify-center w-[826px] h-[818px] " src="{{ asset('images/frame.svg') }}" alt="">
                         <!--Icon kecil city-->
                         <div>
-                            <button type="button" class="w-[57px] h[72px] absolute mt-[115px] ml-[-480px]" ><img src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></button>
+                            <div class="group">
+                                <div class="opacity-0 group-hover:opacity-100">
+                                    <p class=" absolute mt-[70px] ml-[-480px]">Startup Academy</p>
+                                </div>
+                                <a  class="transition duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 absolute mt-[115px] ml-[-480px]" ><img src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></a>
+                            </div>
+                            
                             <button type="button" class="w-[57px] h[72px] absolute mt-[410px] ml-[-168px]" ><img src="{{ asset('images/data-science-icon.svg') }}" alt=""></button>
                             <button type="button" class="w-[57px] h[72px] absolute mt-[340px] ml-[-780px]" ><img src="{{ asset('images/grand-is.svg') }}" alt=""></button>
                             <button type="button" class="w-[57px] h[72px] absolute mt-[460px] ml-[-520px]" ><img src="{{ asset('images/hall-is.svg') }}" alt=""></button>
@@ -70,14 +75,14 @@
                         </div>
                     </div>
                     <!-- Startup academy slide  -->
-                    <div class="swiper mySwiper w-[700px]">
-                    <div class="swiper-wrapper cursor-grab">
+                    <div class="swiper mySwiper ">
+                    <div class="swiper-wrapper sm:w-[700px] cursor-grab">
                         <!--slide 1-->
                         <div class="flex justify-center swiper-slide">
                         
-                            <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
+                            <div class="bg-[#191A1E] mx-auto sm:w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
                             <div>
-                                <img src="./images/startup-academy.svg" alt="" class="w-[94px] h-[94px] mb-[-12px] mx-auto">
+                                <img src="./images/startup-academy.svg" alt="" class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
                                 <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Startup Academy</p>
                                 <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi sebagai the next founder of startup.</p>
                                 <button class=  "mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih Lanjut</button>
@@ -90,7 +95,7 @@
                         
                             <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
                             <div>
-                                <img src="./images/data-science-slide.svg" alt="" class="w-[94px] h-[94px] mb-[-12px] mx-auto">
+                                <img src="./images/data-science-slide.svg" alt="" class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
                                 <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Data Science Academy</p>
                                 <p class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">Data Science Academy hadir untuk menjadi langkah awal atau katalis karier peserta sebagai seorang data scientist.</p>
                                 <button class=  "mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih Lanjut</button>
@@ -126,8 +131,8 @@
                         </div>
                     <!-- button arrow-->
                     </div>
-                    <div class="p-6 -mr-5 absolute rounded-full swiper-button-next bg-liteBlack"></div>
-                    <div class="p-6 -ml-5 absolute rounded-full swiper-button-prev bg-liteBlack"></div>
+                    <div class=" rounded-full mr-20 swiper-button-next bg-liteBlack"></div>
+                    <div class=" rounded-full swiper-button-prev bg-liteBlack"></div>
                     </div>
                     <!--Startup academy slide -->
                     
@@ -138,25 +143,25 @@
                                 class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
                         </h1>
                         <!-- timeline -->
-                        <div class="container mx-auto">
-                            <ol class="items-center justify-center md:flex">
+                        {{-- <div class=" mx-auto">
+                            <ol class="items-center justify-center  md:flex " >
                                 <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun 2022</time>
-                                <div class="flex items-center justify-center overflow-hidden">
+                                <div class="flex items-center w-[500px] justify-center overflow-hidden">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
                                     </div>
-                                    <div class="hidden sm:flex w-[300px] absolute right-0 h-2 bg-[#333333]">
+                                    <div class="hidden sm:flex w-1/2 absolute right-0 h-2 bg-[#333333]">
                                     </div>
                                 </div>
                                 <div class="mt-3">
+                                    <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun 2022</time>
                                     <h3 class="text-lg font-semibold text-white font-poppins">E-Hall of IS</h3>
                                 </div>
                                 </li>
                                 <!-- 2 -->
                                 <li class="relative mb-6 sm:mb-0">
                                     <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
-                                    <div class="relative flex items-center">
+                                    <div class="relative flex items-center w-[500px]">
                                         <div
                                             class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                         </div>
@@ -168,7 +173,7 @@
                                 </li>
                                 <li class="relative mb-6 sm:mb-0">
                                     <time class="block mb-2 text-lg font-medium text-white font-poppins">Nov 2022</time>
-                                    <div class="relative flex items-center">
+                                    <div class="relative flex items-center w-[500px]">
                                         <div
                                             class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                         </div>
@@ -181,7 +186,58 @@
                             </ol>
 
                         </div>
+                    </div> --}}
+                       {{-- timeline --}}
+    <div class="my">
+        <div class="container mx-auto">
+            <ol class="items-center justify-center md:flex text-center">
+                <li class="relative mb-6 sm:mb-0 w-[400px]">
+                   
+                    <div class="flex items-center justify-center overflow-hidden">
+                        <div
+                            class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
+                        </div>
+                        <div class="hidden sm:flex w-1/2 absolute right-0 h-2 bg-[#333333]">
+                        </div>
                     </div>
+                    <div class="mt-3">
+                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun 2022</time>
+                        <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
+                            Student Level</h3>
+                    </div>
+                </li>
+
+                <li class="relative mb-6 sm:mb-0 w-[400px]">
+                    
+                    <div class="relative flex items-center">
+                        <div
+                            class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                        </div>
+                        <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                    </div>
+                    <div class="mt-3">
+                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
+                        <h3 class="text-lg font-semibold text-white font-poppins pb-7">Virtual Tour</h3>
+                    </div>
+                </li>
+                <li class="relative mb-6 sm:mb-0 w-[400px]">
+                    
+                    <div class="relative flex items-center">
+                        <div
+                            class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                        </div>
+                        <div class="hidden sm:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
+                    </div>
+                    <div class="mt-3">
+                        <time class="block mb-2 text-lg font-medium text-white font-poppins">Nov 2022</time>
+                        <h3 class="text-lg font-semibold text-white font-poppins pb-7">Grand Talkshow</h3>
+                    </div>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+    {{-- timeline end --}}
                     <!-- batas -->
             </div> <!--nutup bsl -->
             </div>
