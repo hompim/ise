@@ -3,11 +3,11 @@
     <div class="card rounded-xl p-2" style="background-color: #191a1e; border:0">
         <div class="card-body">
             <div class="flex">
-                <button wire:click="$emit('openModal', 'pages.admin.shorten-link.components.modal-add',{{json_encode(['type'=>'add'])}})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full self-center">
+                <button wire:click="$emit('openModal', 'pages.admin.shorten-link.components.modal-add',{{json_encode(['type'=>'add'])}})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-4 rounded-full self-center">
                     Add
                 </button>
             </div>
-            <livewire:pages.bionix.admin.pengumuman.datatable.index />
+            <livewire:pages.admin.shorten-link.datatable.index />
             @livewire('livewire-ui-modal')
         </div>
     </div>
