@@ -11,7 +11,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
                             </div>
-                            <input wire:model.debounce.500ms="search" style="background-color: #191a1f;" class="placeholder-white text-white block w-full py-3 pl-10 text-sm placeholder:text-white border-gray-700 bg-slate-600 leading-4 rounded-md shadow-sm focus:border-pink-100 focus:ring focus:ring-blue-200 focus:ring-opacity-50 focus:outline-none" placeholder="{{__('Search in')}} {{ $this->searchableColumns()->map->label->join(', ') }}" type="text" />
+                            <input wire:model.debounce.500ms="search" style="background-color: #374151;border:0" class="placeholder-gray-300 text-white block w-full py-3 pl-10 text-sm placeholder:text-gray-300  leading-4 rounded-md shadow-sm focus:border-black focus:ring focus:ring-blue-200 focus:ring-opacity-50 focus:outline-none"  placeholder="{{__('Search in')}} {{ $this->searchableColumns()->map->label->join(', ') }}" type="text" />
                             <div class="absolute inset-y-0 right-0 flex items-center pr-2">
                                 <button wire:click="$set('search', null)" class="text-gray-300 hover:text-red-600 focus:outline-none">
                                     <x-icons.x-circle class="w-5 h-5 stroke-current" />
@@ -30,7 +30,7 @@
                 <x-icons.cog wire:loading class="text-white h-9 w-9 animate-spin" />
 
                 @if($this->activeFilters)
-                    <button wire:click="clearAllFilters" class="flex items-center px-3 text-xs font-medium tracking-wider text-whites border-gray-800 uppercase bg-black space-x-2 rounded-md leading-4 hover:bg-red-200 focus:outline-none"><span>{{ __('Reset') }}</span>
+                    <button wire:click="clearAllFilters" class="flex items-center px-3 text-xs font-medium tracking-wider text-red-500 uppercase space-x-2 rounded-md leading-4 hover:bg-red-500 focus:outline-none" style="background-color: #FECACA"><span>{{ __('Reset') }}</span>
                         <x-icons.x-circle class="m-2" />
                     </button>
                 @endif
@@ -65,7 +65,7 @@
                     <div x-data="{ init() {
                         window.livewire.on('startDownload', link => window.open(link, '_blank'))
                         } }" x-init="init">
-                        <button wire:click="export" class="flex items-center px-3 text-xs font-medium tracking-wider text-green-500 uppercase bg-black border border-green-400 space-x-2 rounded-md leading-4 hover:bg-green-200 focus:outline-none"><span>{{ __('Export') }}</span>
+                        <button wire:click="export" class="flex items-center px-3 text-xs font-medium tracking-wider text-green-500 uppercase border  space-x-2 rounded-md leading-4 hover:bg-green-200 focus:outline-none" style="background-color: #A5F3CF"><span>{{ __('Export') }}</span>
                             <x-icons.excel class="m-2" /></button>
                     </div>
                 @endif
@@ -97,18 +97,18 @@
             </div>
         @endif
 
-        <div wire:loading.class="opacity-50" class="rounded-lg @unless($complex || $this->hidePagination) rounded-b-none @endunless shadow-lg bg-black max-w-screen overflow-x-scroll border-2 @if($this->activeFilters) border-blue-500 @else border-transparent @endif @if($complex) rounded-b-none border-b-0 @endif">
+        <div wire:loading.class="opacity-50" class="rounded-lg @unless($complex || $this->hidePagination) rounded-b-none @endunless shadow-lg max-w-screen overflow-x-scroll border-2 @if($this->activeFilters) border-blue-500 @else border-transparent @endif @if($complex) rounded-b-none border-b-0 @endif" style="background-color: #1F2937">
             <div>
                 <div class="table min-w-full align-middle">
                     @unless($this->hideHeader)
-                        <div class="table-row divide-x divide-gray-200">
+                        <div class="table-row divide-x divide-gray-500">
                             @foreach($this->columns as $index => $column)
                                 @if($hideable === 'inline')
                                     @include('datatables::header-inline-hide', ['column' => $column, 'sort' => $sort])
                                 @elseif($column['type'] === 'checkbox')
                                     @unless($column['hidden'])
-                                        <div class="flex justify-center table-cell w-32 h-12 px-6 py-4 overflow-hidden text-xs font-medium tracking-wider text-left text-red-500 uppercase align-top border-b border-gray-200 bg-gray-50 leading-4 focus:outline-none">
-                                            <div class="px-3 py-1 rounded @if(count($selected)) bg-orange-400 @else bg-black @endif text-white text-center">
+                                        <div class="flex justify-center table-cell w-32 h-12 px-6 py-4 overflow-hidden text-xs font-medium tracking-wider text-left text-red-500 uppercase align-top border-b-0 border-gray-200 eading-4 focus:outline-none" style="background-color: #1F2937">
+                                            <div class="px-3 py-1 rounded @if(count($selected)) bg-black @else @endif text-white text-center" style="background-color: #1F2937">
                                                 {{ count($selected) }}
                                             </div>
                                         </div>
@@ -119,11 +119,11 @@
                             @endforeach
                         </div>
                     @endunless
-                    <div class="table-row bg-blue-100 divide-x divide-blue-200">
+                    <div class="table-row bg-blue-100 divide-x divide-gray-200">
                         @foreach($this->columns as $index => $column)
                             @if($column['hidden'])
                                 @if($hideable === 'inline')
-                                    <div class="table-cell w-5 overflow-hidden align-top bg-blue-100"></div>
+                                    <div class="table-cell w-5 overflow-hidden align-top bg-gray-500"></div>
                                 @endif
                             @elseif($column['type'] === 'checkbox')
                                 @include('datatables::filters.checkbox')

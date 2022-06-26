@@ -8,6 +8,11 @@ class Index extends Component
 {
     public function render()
     {
-        return view('livewire.pages.admin.shorten-link.index');
+        return view('livewire.pages.admin.shorten-link.index')->layout('layouts.dashboard');
     }
+
+    public static function modalMaxWidth(): string
+{
+    return 'xl';
+}
 }
