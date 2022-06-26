@@ -16,3 +16,25 @@
     border-radius: 12px;
     background-color: #5b1be1;
 }
+
+@layer components {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    h7,
+    p,
+    a,
+    button {
+        @apply font-poppins;
+    }
+    select {
+        @apply cursor-pointer;
+    }
+
+    .btn {
+        @apply px-6 py-4 font-semibold text-center text-white rounded-full bg-gradient-to-r from-pink-300 to-purple-300 font-poppins;
+    }
+}

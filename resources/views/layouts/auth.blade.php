@@ -14,15 +14,15 @@
 
 <body>
 
-    <div class=" min-h-screen flex items-center justify-center py-12 px-10 bg-black">
+    <div class="flex items-center justify-center min-h-screen px-10 py-12 bg-black ">
         <div
             class="max-w-4xl w-full bg-[#191a1e] rounded-lg overflow-hidden  grid grid-cols-1 md:grid-cols-2 space-y-8">
             <div class="bg-[#141414]">
-                <h1 class="text-white font-poppins text-3xl font-bold px-6 pt-4">Information<br>Systems Expo</h1>
+                <h1 class="px-6 pt-4 text-3xl font-bold text-white font-poppins">Information<br>Systems Expo</h1>
                 <h1
-                    class="text-transparent bg-gradient-to-r from-pink-300 px-6 to-purple-300 bg-clip-text font-poppins text-3xl font-bold">
+                    class="px-6 text-3xl font-bold text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text font-poppins">
                     2022</h1>
-                <div class="relative left-0 right-0 justify-center mx-auto mt-36 text-center max-w-2xl hidden lg:block"
+                <div class="relative left-0 right-0 justify-center hidden max-w-2xl mx-auto text-center mt-36 lg:block"
                     id="isometric-city">
                     <div class="absolute bottom-20 right-1 group">
                         <div
@@ -37,7 +37,7 @@
                         </div>
                         <a href="/icon">
                             <img src="{{ asset('images/icon-city.svg') }}" alt="isometric-city"
-                                class="transition duration-1000 transform group-hover:scale-105 group-hover:duration-300 w-32 text-end justify-end items-end">
+                                class="items-end justify-end w-32 transition duration-1000 transform group-hover:scale-105 group-hover:duration-300 text-end">
                         </a>
                     </div>
                     <div class="absolute left-2 bottom-32 group">
@@ -49,9 +49,9 @@
                                 <li>Startup College Level</li>
                             </ul>
                         </div>
-                        <a href="/icon" class="flex text-end justify-end items-end">
+                        <a href="/icon" class="flex items-end justify-end text-end">
                             <img src="{{ asset('images/bionix-city.svg') }}" alt="isometric-city"
-                                class="transition duration-1000 transform group-hover:scale-105 group-hover:duration-300 w-24">
+                                class="w-24 transition duration-1000 transform group-hover:scale-105 group-hover:duration-300">
                         </a>
                     </div>
                     <img src="{{ asset('images/isometric-city.svg') }}" alt="isometric-city">

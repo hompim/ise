@@ -43,7 +43,7 @@
 
     {{-- sebelum login --}}
     <ul
-        class="!hidden  flex-row items-center space-x-4 sm:justify-center bg-[#191A1E]  rounded-full py-3 lg:py-2 px-6  font-poppins font-semibold">
+        class="flex flex-row items-center space-x-4 sm:justify-center bg-[#191A1E]  rounded-full py-3 lg:py-2 px-6  font-poppins font-semibold">
         <a href="/dashboard/login"
             class=" transition duration-150 ease-linear px-8 py-2 border border-[#6B6F75] text-[#6B6F75] hover:text-white rounded-full bg-gradient-to-r hover:from-pink-300 hover:to-purple-300">
             <li>Log in</li>
@@ -57,7 +57,7 @@
 
     {{-- setelah login (masih di hidden) --}}
     <ul
-        class="flex-row items-center space-x-8 sm:justify-center bg-[#191A1E]  rounded-full py-3 lg:py-2 px-6  font-poppins font-semibold">
+        class="!hidden flex-row items-center space-x-8 sm:justify-center bg-[#191A1E]  rounded-full py-3 lg:py-2 px-6  font-poppins font-semibold">
         <button type="button"
             class="py-2 px-6 text-[#6B6F75] flex flex-row space-x-4 bg-gradient-to-r hover:text-transparent  hover:from-pink-300 hover:to-purple-300 hover:bg-clip-text">
             <svg width="16" height="19" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">

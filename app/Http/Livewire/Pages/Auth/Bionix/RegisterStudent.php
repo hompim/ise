@@ -8,6 +8,6 @@ class RegisterStudent extends Component
 {
     public function render()
     {
-        return view('livewire.pages.auth.bionix.register-student');
+        return view('livewire.pages.auth.bionix.register-student')->layout('layouts.auth-bionix');
     }
 }

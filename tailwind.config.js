@@ -27,13 +27,6 @@ module.exports = {
                     },
                 },
             },
-            width: {
-                "350px": "350px",
-                "600px": "600px",
-            },
-            height: {
-                "420px": "420px",
-            },
             fontFamily: {
                 poppins: "'Poppins', sans-serif",
             },

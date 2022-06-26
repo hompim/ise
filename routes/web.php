@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Pages\Landing\Ise;
 use App\Http\Livewire\Pages\Landing\Icon;
 use App\Http\Livewire\Pages\Landing\Bionix;
+use App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege;
+use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +17,6 @@ use App\Http\Livewire\Pages\Landing\Bionix;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/design', function () {
-    return view('design-system');
-});
-Route::get('/design2', function () {
-    return view('livewire.pages.verification-email');
-});
 
 ///Landing page Route
 Route::get('/', Ise::class)->name('ise');
