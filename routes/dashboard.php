@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Pages\Bionix\Peserta\Beranda;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +17,7 @@ Route::middleware('guest')->group(function () {
 //Authenticate User
 Route::middleware('auth')->group(function () {
     Route::get('/email/verify', \App\Http\Livewire\Pages\Auth\EmailVerification::class)->name('verification.notice'); //For Email Verification
-    Route::get('/')->middleware('membercheck')->name('dashboard.index');
+    Route::get('/', Beranda::class)->middleware('membercheck')->name('dashboard.index');
 
     Route::middleware('verified')->group(function () {
        // Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
