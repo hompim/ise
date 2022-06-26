@@ -8,7 +8,6 @@ module.exports = {
         "./storage/framework/views/*.php",
     ],
 
-
     theme: {
         extend: {
             animation: {
