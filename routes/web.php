@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Pages\Landing\Ise;
 use App\Http\Livewire\Pages\Landing\Icon;
 use App\Http\Livewire\Pages\Landing\Bionix;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,16 @@ Route::get('/icon', Icon::class)->name('icon');
 Route::get('/coming-soon', function () {
     return view('coming-soon');
 });
+
+Route::get('/{shorten_link}', function ($shorten_link) {
+    $destination = \App\Models\ShortenLink::where('shorten_link', $shorten_link)->first();
+    if ($destination) {
+        $destination = $destination->destination;
+        return Redirect::to(strpos($destination, 'http') !== false ? $destination : 'http://' . $destination);
+    }
+    return abort(404);
+});
+
 
 //Route Dashboard -> Dashboard.php
 Route::prefix('dashboard')->group(__DIR__ . '/dashboard.php');
