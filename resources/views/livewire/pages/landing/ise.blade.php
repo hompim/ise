@@ -99,7 +99,7 @@
                     College Level.
                 </p>
                 <a class="text-2xl font-semibold transition duration-300 opacity-75 font-poppins hover:opacity-100"
-                    href="#">Learn More
+                    href="/bionix">Learn More
                     <img class="inline pl-5" src="{{ asset('images/chevron-left.svg') }}" alt=""></a>
             </div>
             <div class="swiper mySwiper w-[24rem] lg:w-[700px]">

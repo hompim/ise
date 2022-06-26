@@ -5,17 +5,17 @@
             class="w-[125px] h-auto mx-auto lg:!mx-0 transform-gpu transition duration-300 hover:scale-105">
         <dl class="text-center lg:!text-start">
             <dt class="pb-4 text-xl font-semibold text-white font-poppins">About Us</dt>
-            <a href="#">
+            <a href="/">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     ISE!</dd>
             </a>
-            <a href="#">
+            <a href="/bionix">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     BIONIX</dd>
             </a>
-            <a href="#">
+            <a href="/icon">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     ICON</dd>
@@ -23,14 +23,14 @@
         </dl>
         <dl class="text-center lg:!text-start">
             <dt class="pb-4 text-xl font-semibold text-white font-poppins">Competition Zone</dt>
-            <a href="#">
+            <a href="/bionix">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     BIONIX College
                     Level
                 </dd>
             </a>
-            <a href="#">
+            <a href="/bionix">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     BIONIX Student
@@ -40,26 +40,26 @@
         </dl>
         <dl class="text-center lg:!text-start">
             <dt class="pb-4 text-xl font-semibold text-white font-poppins">IT Convention Zone</dt>
-            <a href="#">
+            <a href="/icon">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     Data Science
                     Academy
                 </dd>
             </a>
-            <a href="#">
+            <a href="/icon#">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     Startup Academy
                 </dd>
             </a>
-            <a href="#">
+            <a href="/icon">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     E-Hall of
                     Information System</dd>
             </a>
-            <a href="#">
+            <a href="/icon">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     Grand Talkshow
