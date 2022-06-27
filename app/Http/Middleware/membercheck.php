@@ -26,7 +26,7 @@ class membercheck
                 }
                 break;
             case 'App\Models\Member':
-                return redirect(route('peserta.choose-dashboard'));
+                return redirect(route('peserta.dashboard.choose'));
             default:
                 abort(404);
                 break;
