@@ -26,16 +26,16 @@
 
         <div class="flex justify-center gap-4 pt-12">
             <button :class="{ 'text-white bg-liteBlack': tab === 'bsl', 'text-[#6B6F75]': tab === 'bcl' }"
-                @click.prevent="tab = 'bsl'" class="px-6 py-4 rounded-full text-base ">BIONIX Student Level</button>
+                @click.prevent="tab = 'bsl'" class="px-6 py-4 text-base rounded-full ">BIONIX Student Level</button>
             <button :class="{ 'text-white bg-liteBlack': tab === 'bcl', 'text-[#6B6F75]': tab === 'bsl' }"
-                @click.prevent="tab = 'bcl'" class="px-6 py-4 rounded-full text-base">BIONIX College
+                @click.prevent="tab = 'bcl'" class="px-6 py-4 text-base rounded-full">BIONIX College
                 Level</button>
         </div>
 
         <!-- BSL Start -->
         <div x-show="tab === 'bsl'" class="flex justify-center">
             <div class="flex-col w-full p-4 mt-8 text-center">
-                <div class="px-[100px] pt-[119px]">
+                <div class="px-[100px] pt-24">
                     <h1 class="text-2xl font-bold font-poppins">Bionix Student Level</h1>
                     <p class="mt-10 text-lg font-poppins  text-[#B5B3BC] mx-48">Olimpiade bisnis dan IT untuk siswa/i
                         SMA/SMK
@@ -47,10 +47,12 @@
                 <h1 class="text-white font-poppins font-bold text-[64px] mt-[211px]">IS Class</h1>
                 <div class="swiper mySwiper w-[980px] mt-14 font-poppins ">
                     <div class="swiper-wrapper">
-                        <div class="flex-col justify-center px-24 swiper-slide font-poppins">
-                            <img class="w-[980px] rounded-t-lg h-[355px] "
-                                src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                            <div class="bg-liteBlack rounded-b-lg text-center w-[789px] h-[305px]">
+                        <div class="flex-col justify-center swiper-slide font-poppins">
+                            <div class="overflow-hidden h-[24rem]">
+                                <img class="object-cover rounded-t-lg"
+                                    src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" />
+                            </div>
+                            <div class="bg-liteBlack rounded-b-lg text-center h-[305px]">
                                 <p class="items-center px-24 pt-10 text-lg text-center font-poppins">Konsep terbaru dari
                                     BIONIX Student Level yang ditujukan untuk memberikan pengalaman seputar keilmuan,
                                     kehidupan perkuliahan, dan keprofesian dari Departemen Sistem Informasi ITS dalam
@@ -61,14 +63,13 @@
                                     class="px-10 py-2 mt-10 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 font-poppins">Register</button>
                             </div>
                         </div>
-                        <div class="grid grid-cols-8 gap-4 px-24 swiper-slide">
+                        <div class="grid grid-cols-8 gap-4 swiper-slide">
                             <div class="bg-liteBlack h-[330px] rounded-2xl col-span-5 px-6 py-8 text-start">
                                 <div class="flex flex-row ">
                                     <div class="flex flex-col">
                                         <h1 class="text-2xl font-bold text-white font-poppins ">Info & Facts</h1>
-                                        <p class="text-2xl text-liteGray font-poppins">Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Ullam hic consequuntur sit harum, eius aliquid
-                                            aut assumenda repellendus deleniti soluta!</p>
+                                        <p class="text-2xl text-liteGray font-poppins">Kesempatan memperoleh info dan
+                                            fakta menarik tentang Departemen Sistem Informasi ITS</p>
                                     </div>
                                     <img class="mt-20 w-52" src="{{ asset('images/sit-laptop.png') }}" alt="">
                                 </div>
@@ -100,8 +101,8 @@
                                 <div class="flex flex-row">
                                     <div class="flex flex-col">
                                         <h1 class="text-2xl font-bold text-black font-poppins">Course Material</h1>
-                                        <p class="text-2xl text-[#555555] font-poppins">Lorem quuntur assumenda
-                                            repellendus deleniti soluta!</p>
+                                        <p class="text-2xl text-[#555555] font-poppins">Materi perkuliahan dasar
+                                            Departemen Sistem Informasi ITS</p>
                                     </div>
                                     <img class="mt-24 w-60 " src="{{ asset('images/js-phone-thumbs.svg') }}"
                                         alt="phone thumbs">
@@ -116,11 +117,13 @@
                 <h1 class="text-white font-poppins font-bold text-[64px] mt-[100px]">Competition</h1>
                 <div class="swiper mySwiper w-[980px] mt-14 font-poppins">
                     <div class="swiper-wrapper">
-                        <div class="flex-col justify-center px-24 swiper-slide font-poppins ">
-                            <img class="w-[980px] rounded-t-lg h-[355px]"
-                                src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                            <div class="bg-liteBlack rounded-b-lg text-center w-[789px] h-[305px]">
-                                <p class="items-center px-24 pt-10 text-lg text-center">Lorem ipsum dolor, sit amet
+                        <div class="flex-col justify-center swiper-slide font-poppins ">
+                            <div class="h-[24rem] overflow-hidden">
+                                <img class="object-cover w-full rounded-t-lg"
+                                    src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+                            </div>
+                            <div class="bg-liteBlack rounded-b-lg text-center w-full h-[305px]">
+                                <p class="items-center pt-10 text-lg text-center">Lorem ipsum dolor, sit amet
                                     consectetur adipisicing elit. Cupiditate, sunt? Lorem ipsum dolor sit, amet
                                     consectetur adipisicing elit. Culpa reiciendis, exercitationem modi, laudantium
                                     labore amet quasi explicabo earum odit deserunt repellat mollitia distinctio
@@ -129,7 +132,7 @@
                                     class="px-10 py-2 mt-10 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
                             </div>
                         </div>
-                        <div class="grid grid-cols-8 gap-4 px-24 swiper-slide">
+                        <div class="grid grid-cols-8 gap-4 swiper-slide">
                             <div class="bg-liteBlack h-[330px] rounded-2xl col-span-5 px-6 py-8 text-start">
                                 <div class="flex flex-row">
                                     <div class="flex flex-col">
@@ -297,8 +300,8 @@
 
         <!-- BCL Start -->
         <div x-show="tab === 'bcl'" class="flex justify-center">
-            <div class="flex-col w-3/4 p-4 mt-32 text-center font-poppins">
-                <div class="px-[100px] pt-[119px]">
+            <div class="flex-col w-3/4 p-4 text-center font-poppins">
+                <div class="px-[100px] pt-24">
                     <h1 class="text-2xl font-bold ">Bionix College Level</h1>
                     <p class="text-lg mt-10  text-[#B5B3BC] text-center">Hadir dengan konsep startup business plan yang
                         akan mengasah skill kreativitas dan problem solving mahasiswa Indonesia dalam mengatasi

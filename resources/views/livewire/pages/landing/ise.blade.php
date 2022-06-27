@@ -66,7 +66,7 @@
             data-aos-duration="750" data-aos-once="true">
             <div
                 class="pr-2 mb-12 transition duration-1000 ease-linear border-r-2 opacity-0 group-hover:duration-300 lg:group-hover:opacity-100 group-hover:ease-linear border-r-pink-300">
-                <h4 class="text-2xl font-medium text-white text-center font-poppins">
+                <h4 class="text-2xl font-medium text-center text-white font-poppins">
                     Competition
                     Zone</h4>
                 <ul class="text-[#B5B3BC] text-end lg:block hidden">
@@ -105,20 +105,18 @@
             <div class="swiper mySwiper w-[24rem] lg:w-[700px]">
                 <div class="swiper-wrapper cursor-grab">
                     <div class="flex justify-center swiper-slide">
-                        <img class="w-[600px] rounded-3xl h-[420px]"
-                            src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        <img class="rounded-3xl h-[420px]"
+                            src="{{ asset('images/dokumentasi/BIONIX 2020 2.png') }}" />
                     </div>
                     <div class="flex justify-center swiper-slide">
-                        <img class="w-[600px] rounded-3xl  h-[420px]"
-                            src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        <img class="rounded-3xl  h-[420px]" src="{{ asset('images/dokumentasi/BIONIX 2020.png') }}" />
                     </div>
                     <div class="flex justify-center swiper-slide">
-                        <img class="w-[600px] rounded-3xl h-[420px]"
-                            src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        <img class="rounded-3xl h-[420px]" src="{{ asset('images/dokumentasi/BIONIX 2021.jpeg') }}" />
                     </div>
                 </div>
-                <div class="p-6 -mr-5 rounded-full swiper-button-next bg-liteBlack"></div>
-                <div class="p-6 -ml-5 rounded-full swiper-button-prev bg-liteBlack"></div>
+                <div class="p-6 rounded-full swiper-button-next bg-liteBlack"></div>
+                <div class="p-6 rounded-full swiper-button-prev bg-liteBlack"></div>
             </div>
 
         </div>
@@ -135,20 +133,19 @@
             <div class="swiper mySwiper w-[24rem] lg:w-[700px] lg:!ml-0">
                 <div class="swiper-wrapper cursor-grab">
                     <div class="flex justify-center swiper-slide">
-                        <img class="w-[600px] rounded-3xl h-[420px]"
-                            src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        <img class=" rounded-3xl h-[420px]"
+                            src="{{ asset('images\dokumentasi\ICON 2019(2).jpg') }}" />
                     </div>
                     <div class="flex justify-center swiper-slide">
-                        <img class="w-[600px] rounded-3xl  h-[420px]"
-                            src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        <img class=" rounded-3xl h-[420px]" src="{{ asset('images\dokumentasi\ICON 2019.jpg') }}" />
                     </div>
                     <div class="flex justify-center swiper-slide">
-                        <img class="w-[600px] rounded-3xl h-[420px]"
-                            src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        <img class=" rounded-3xl h-[420px]"
+                            src="{{ asset('images\dokumentasi\ICON 2021(1).png') }}" />
                     </div>
                 </div>
-                <div class="p-6 -mr-5 rounded-full swiper-button-next bg-liteBlack"></div>
-                <div class="p-6 -ml-5 rounded-full swiper-button-prev bg-liteBlack"></div>
+                <div class="p-6 rounded-full swiper-button-next bg-liteBlack"></div>
+                <div class="p-6 rounded-full swiper-button-prev bg-liteBlack"></div>
             </div>
             <div class="text-white text-left w-[350px] h-fit pl-6 pr-8 py-12 bg-liteBlack rounded-3xl mt-8">
                 <p class="text-lg font-medium font-poppins text-liteGray mb-9 ">
@@ -185,8 +182,8 @@
                     informasi seputar keilmuan dan keprofesian, serta rasakan langsung dunia perkuliahan bersama
                     dosen-dosen terbaik di bidangnya.</p>
                 <a class="pt-6 text-2xl font-semibold text-white transition duration-300 opacity-75 font-poppins hover:opacity-100 "
-                    href="/bionix">Learn More <img class="inline pl-5" src="{{ asset('images/chevron-left.svg') }}"
-                        alt=""></a>
+                    href="/bionix">Learn More <img class="inline pl-5"
+                        src="{{ asset('images/chevron-left.svg') }}" alt=""></a>
             </div>
         </div>
     </div>
