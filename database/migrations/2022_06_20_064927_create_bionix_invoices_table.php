@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('bionix_invoices', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->string('bank_name')->nullable();
+            $table->string('account_name')->nullable();
+            $table->string('account_no')->nullable();
+            $table->unsignedInteger('nominal');
+            $table->enum('status',['Pending','Terverifikasi']);
             $table->timestamps();
         });
     }

@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('team_junior_members', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->enum('class',[10,11,12]);
+            $table->string('whatsapp');
+            $table->string('identity_card_path')->nullable();
             $table->timestamps();
         });
     }

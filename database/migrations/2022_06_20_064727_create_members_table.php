@@ -16,6 +16,10 @@ return new class extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->enum('jenjang',['SMA','Mahasiswa','Umum']);
+            $table->nullableMorphs('academy');
+            $table->nullableMorphs('bionix');
+            $table->unsignedBigInteger('roadshow_school_id')->nullable();
         });
     }
 

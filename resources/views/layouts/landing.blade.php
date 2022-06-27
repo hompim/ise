@@ -23,6 +23,8 @@
 
     @livewire('components.footer')
 
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
@@ -56,6 +58,38 @@
                 slideShadows: true,
             },
         });
+    </script>
+    <script>
+        // const swiper = new Swiper(".mySwiperIcon .swiper", {
+        //     //
+        //     // on: {
+        //     //     init: function () {
+        //     //     const index_currentSlide = this.realIndex;
+        //     //     const currentSlide = this.slides[index_currentSlide];
+        //     //     currentSlide.classList.remove("blur-md");
+        //     //     currentSlide.classList.add("blur-none");
+        //     //     }
+        //     // },
+        //     effect: "coverflow",
+        //     centeredSlides: true,
+        //     spaceBetween: -300,
+        //     loop: true,
+        //     slidesPerView: "auto",
+        //     navigation: {
+        //         nextEl: ".swiper-button-next",
+        //         prevEl: ".swiper-button-prev",
+        //     },
+        //     autoplay: {
+        //         delay: 750,
+        //     },
+        //     coverflowEffect: {
+        //         rotate: 0,
+        //         stretch: 0,
+        //         depth: 100,
+        //         modifier: 2,
+        //         slideShadows: false,
+        //     },
+        // });
     </script>
     <!-- Aos JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

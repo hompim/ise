@@ -63,7 +63,8 @@ class Sidebar extends Component
                         'route-name' => 'admin.shorten-link'
                     ],
                     [
-                        'type' => 'divider'
+                        'type' => 'divider',
+                        'tag' =>'class=my-3'
                     ]
                 );
             }

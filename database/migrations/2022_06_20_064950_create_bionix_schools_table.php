@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('bionix_schools', function (Blueprint $table) {
             $table->id();
+            $table->string('school_name');
+            $table->dateTime('start_dp');
+            $table->dateTime('end_dp');
             $table->timestamps();
         });
     }
