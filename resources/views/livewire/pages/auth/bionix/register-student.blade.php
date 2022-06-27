@@ -26,12 +26,33 @@
         </div>
     </div>
     <div class="flex justify-center">
-        <form action="#" class="flex flex-col justify-center w-full mx-20 mb-8 space-y-8 ">
+        <form action="#" class="flex flex-col justify-center w-full mx-20 mb-8 space-y-8 "
+            wire:submit.prevent="akunSubmit" method="POST">
+            @csrf
+            @if ($errors->any())
+                <div class="mx-5 md:mx-24 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+                    role="alert">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if (!empty($errorMessage))
+                <div class="mx-5 md:mx-24 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+                    role="alert">
+                    <ul>
+                        <li>{{ $errorMessage }}</li>
+                    </ul>
+                </div>
+            @endif
+            <input type="hidden" name="peserta_type" value="junior" />
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nama Tim</label>
                 <input id="name" name="name" type="text" required
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nama tim kamu">
+                    placeholder="Masukkan nama tim kamu" wire:model.defer="team_name" name="team_name">
             </div>
             <div class="flex flex-col space-y-2 font-medium font-poppins">
                 <label for="asal-sekolah" class="text-white">Asal Sekolahmu</label>
@@ -48,20 +69,28 @@
                 <label for="asal-domisili" class="text-white">Asal provinsi/kota/kabupaten
                     sekolahmu</label>
                 <select id="asal-domisili" required
-                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
-                    <option class="bg-liteBlack" disabled selected value="">Pilih asal
-                        provinsi/kota/kabupaten
-                        sekolah
-                        kamu</option>
-                    <option value="1" class="bg-liteBlack ">sma 1</option>
+                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white"
+                    name="school_city">
+                    <?php $curr_reg = 0; ?>
+                    @foreach ($cities as $city)
+                        @if ($curr_reg != $city->region)
+                            @if ($curr_reg != 0)
+                                </optgroup>
+                            @endif
+                            <?php $curr_reg = $city->region; ?>
+                        @endif
+                        {{-- <option class="bg-liteBlack" disabled selected value="">Pilih asal
+                            provinsi/kota/kabupaten
+                            sekolah
+                            kamu</option> --}}
+                        <option value="{{ $city->id }}" class="bg-liteBlack ">{{ $city->name }}</option>
 
                 </select>
             </div>
             <div class="flex-flex-col">
                 <h3 class="text-xl font-semibold text-white font-poppins">Region</h3>
                 <h4 class="text-lg font-semibold text-[#6B7280] font-poppins">Kamu berada di <span
-                        class="text-pink-300">Region
-                        1</span></h4>
+                        class="text-pink-300">{{ $region }}</span></h4>
             </div>
             <div class="relative left-0 right-0 justify-center mx-auto mt-24 text-center max-w-fit group">
                 <div class="absolute inset-0 ">
