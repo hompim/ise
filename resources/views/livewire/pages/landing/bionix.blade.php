@@ -207,15 +207,15 @@
                             class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
                     </h1>
                     <div class="container mx-auto">
-                        <ol class="items-center justify-center md:flex">
+                        <ol class="items-center justify-center lg:flex">
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">16 Jul - 14
+                                <time class="block px-6 mb-2 text-lg font-medium text-white font-poppins">16 Jul - 14
                                     Agu</time>
                                 <div class="flex items-center justify-center overflow-hidden">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
                                     </div>
-                                    <div class="hidden sm:flex w-1/2 absolute right-0 h-2 bg-[#333333]">
+                                    <div class="hidden lg:flex w-1/2 absolute right-0 h-2 bg-[#333333]">
                                     </div>
                                 </div>
                                 <div class="mt-3">
@@ -224,40 +224,40 @@
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">27 - 28
+                                <time class="block px-6 mb-2 text-lg font-medium text-white font-poppins">27 - 28
                                     Agu</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                     </div>
-                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                    <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="text-lg font-semibold text-white font-poppins pb-7">IS Class</h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">16 Jul - 11
+                                <time class="block px-6 mb-2 text-lg font-medium text-white font-poppins">16 Jul - 11
                                     Sep
                                 </time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                     </div>
-                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                    <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="text-lg font-semibold text-white font-poppins">Open Regis <br> BSL</h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">3 & 12
+                                <time class="block px-6 mb-2 text-lg font-medium text-white font-poppins">3 & 12
                                     Sep</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                     </div>
-                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                    <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="text-lg font-semibold text-white font-poppins">Tryout <br>
@@ -265,13 +265,13 @@
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">17 & 24
+                                <time class="block px-6 mb-2 text-lg font-medium text-white font-poppins">17 & 24
                                     Sep</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                     </div>
-                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                    <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="text-lg font-semibold text-white font-poppins">Penyisihan <br> 1 &
@@ -279,25 +279,26 @@
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">01 Oct - 20
+                                <time class="block px-6 mb-2 text-lg font-medium text-white font-poppins">01 Oct - 20
                                     Oct</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                     </div>
-                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                    <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="text-lg font-semibold text-white font-poppins pb-7">Semifinal</h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block mb-2 text-lg font-medium text-white font-poppins">12 Nov</time>
+                                <time class="block mb-2 text-lg font-medium text-white font-poppins">12 Nov 2022
+                                </time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                     </div>
-                                    <div class="hidden sm:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
+                                    <div class="hidden lg:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="text-lg font-semibold text-white font-poppins">Final & <br>
@@ -409,7 +410,7 @@
                             class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
                     </h1>
                     <div class="container mx-auto">
-                        <ol class="items-center justify-center md:flex">
+                        <ol class="items-center justify-center lg:flex">
                             <li class="relative mb-6 sm:mb-0">
                                 <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">21 Aug - 21
                                     Sep</time>
@@ -417,7 +418,7 @@
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
                                     </div>
-                                    <div class="hidden sm:flex w-1/2 absolute right-0 h-2 bg-[#333333]">
+                                    <div class="hidden lg:flex w-1/2 absolute right-0 h-2 bg-[#333333]">
                                     </div>
                                 </div>
                                 <div class="mt-3">
@@ -432,7 +433,7 @@
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                     </div>
-                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                    <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="text-lg font-semibold text-white font-poppins">Semifinal</h3>
@@ -445,7 +446,7 @@
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                     </div>
-                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                    <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="text-lg font-semibold text-white font-poppins">Mentoring</h3>
@@ -458,7 +459,7 @@
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                     </div>
-                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                    <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="text-lg font-semibold text-white font-poppins">Final</h3>
@@ -470,7 +471,7 @@
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
                                     </div>
-                                    <div class="hidden sm:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
+                                    <div class="hidden lg:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
                                     <h3 class="text-lg font-semibold text-white font-poppins">Awarding</h3>
