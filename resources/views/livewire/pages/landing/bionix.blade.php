@@ -1,6 +1,6 @@
 <div class="bg-black font-poppins">
-    <div class="flex flex-col-reverse lg:flex-row items-start pt-[202px]">
-        <div class="flex flex-col items-start flex-1 ml-24 text-white">
+    <div class="flex flex-col-reverse lg:flex-row items-start pt-[202px] pl-[130px]">
+        <div class="flex flex-col items-start flex-1 text-white mt-36">
             <h1
                 class="lg:text-7xl text-center lg:!text-left font-bold bg-gradient-to-t bg-clip-text text-transparent from-pink-300 to-[#E499FF]">
                 Competition <br>
@@ -59,8 +59,23 @@
                                     bentuk simulasi perkuliahan dengan beberapa materi sesuai dengan kurikulum dan
                                     disampaikan oleh dosen Sistem Informasi ITS selama masa belajar mengajar
                                     berlangsung.</p>
-                                <button
-                                    class="px-10 py-2 mt-10 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 font-poppins">Register</button>
+                                <div class="flex flex-row justify-center mt-12 space-x-4 font-poppins">
+                                    <button
+                                        class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center  justify-center"><svg
+                                            class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.5034 13.8623L15.4998 18.8506L20.4961 13.8623" stroke="#B221E5"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M15.5 5.54492V18.847" stroke="#B221E5" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M26.92 16.9502V25.5015C26.92 25.7535 26.8198 25.9952 26.6413 26.1734C26.4628 26.3516 26.2208 26.4517 25.9684 26.4517H5.03128C4.77887 26.4517 4.53681 26.3516 4.35833 26.1734C4.17986 25.9952 4.07959 25.7535 4.07959 25.5015V16.9502"
+                                                stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Download Guidebook</button>
+                                    <button
+                                        class="px-16 py-1 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                </div>
                             </div>
                         </div>
                         <div class="grid grid-cols-8 gap-4 swiper-slide">
@@ -123,23 +138,36 @@
                                     src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
                             </div>
                             <div class="bg-liteBlack rounded-b-lg text-center w-full h-[305px]">
-                                <p class="items-center pt-10 text-lg text-center">Lorem ipsum dolor, sit amet
-                                    consectetur adipisicing elit. Cupiditate, sunt? Lorem ipsum dolor sit, amet
-                                    consectetur adipisicing elit. Culpa reiciendis, exercitationem modi, laudantium
-                                    labore amet quasi explicabo earum odit deserunt repellat mollitia distinctio
-                                    incidunt vero.</p>
-                                <button
-                                    class="px-10 py-2 mt-10 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                <p class="items-center px-24 pt-10 text-lg text-center">Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang 
+                                    terbagi dalam beberapa region di Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi 
+                                    informasi, pemrograman, logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan, 
+                                    Final Presentasi Bisnis, dan terakhir Awarding Night.</p>
+                                    <div class="flex flex-row justify-center mt-12 space-x-4 font-poppins">
+                                    <button
+                                        class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center  justify-center"><svg
+                                            class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.5034 13.8623L15.4998 18.8506L20.4961 13.8623" stroke="#B221E5"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M15.5 5.54492V18.847" stroke="#B221E5" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M26.92 16.9502V25.5015C26.92 25.7535 26.8198 25.9952 26.6413 26.1734C26.4628 26.3516 26.2208 26.4517 25.9684 26.4517H5.03128C4.77887 26.4517 4.53681 26.3516 4.35833 26.1734C4.17986 25.9952 4.07959 25.7535 4.07959 25.5015V16.9502"
+                                                stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Download Guidebook</button>
+                                    <button
+                                        class="px-16 py-1 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                </div>
                             </div>
                         </div>
                         <div class="grid grid-cols-8 gap-4 swiper-slide">
                             <div class="bg-liteBlack h-[330px] rounded-2xl col-span-5 px-6 py-8 text-start">
                                 <div class="flex flex-row">
                                     <div class="flex flex-col">
-                                        <h1 class="text-2xl font-bold text-white font-poppins">Info & Facts</h1>
-                                        <p class="text-2xl text-liteGray font-poppins">Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Ullam hic consequuntur sit harum, eius aliquid
-                                            aut assumenda repellendus deleniti soluta!</p>
+                                        <h1 class="text-2xl font-bold text-white font-poppins">Free Pass</h1>
+                                        <p class="text-2xl text-liteGray font-poppins">Dapatkan Free Pass Departemen 
+                                        Sistem Informasi ITS</p>
                                     </div>
                                     <img class="w-48 mt-32" src="{{ asset('images/mail-star.svg') }}" alt="mail star">
                                 </div>
@@ -147,9 +175,9 @@
                             <div
                                 class="bg-gradient-to-r from-purple-100 to-purple-400 h-[330px] rounded-lg col-span-3 px-6 py-8 text-start">
                                 <div class="flex flex-col">
-                                    <h1 class="text-2xl font-bold text-white font-poppins">Certificate</h1>
-                                    <p class="text-2xl text-[#EAEAEA] font-poppins">Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit.</p>
+                                    <h1 class="text-2xl font-bold text-white font-poppins">E-Certificate</h1>
+                                    <p class="text-2xl text-[#EAEAEA] font-poppins">Daftar dan dapatkan
+                                    e-certificate</p>
                                     <img class="w-32 mt-8 ml-14" src="{{ asset('images/sertif.svg') }}"
                                         alt="purple certificate">
                                 </div>
@@ -158,9 +186,9 @@
                                 class="bg-gradient-to-r from-liteGray to-white h-[330px]  rounded-lg col-span-3 px-6 py-8 text-start">
                                 <div class="flex flex-row">
                                     <div class="flex flex-col">
-                                        <h1 class="text-2xl font-bold text-black font-poppins">Discount</h1>
-                                        <p class="text-2xl text-[#555555] font-poppins">Lorem quuntur assumenda
-                                            repellendus deleniti soluta!</p>
+                                        <h1 class="text-2xl font-bold text-black font-poppins">1 Try Out Pack</h1>
+                                        <p class="text-2xl text-[#555555] font-poppins">Dapatkan 
+                                        1 paket TRY OUT bagi peserta yang mendaftar saat roadshow</p>
                                     </div>
                                     <img class="mt-32 -mr-8 w-52" src="{{ asset('images/love-folder.svg') }}"
                                         alt="love folder">
@@ -170,9 +198,9 @@
                                 class="bg-gradient-to-r from-[#BBBAF7] to-[#E9F4FC]  h-[330px] rounded-lg col-span-5 px-6 py-8 text-start">
                                 <div class="flex flex-row">
                                     <div class="flex flex-col">
-                                        <h1 class="text-2xl font-bold text-black font-poppins">Course Material</h1>
-                                        <p class="text-2xl text-[#555555] font-poppins">Lorem quuntur assumenda
-                                            repellendus deleniti soluta!</p>
+                                        <h1 class="text-2xl font-bold text-black font-poppins">2 Try Out Packs</h1>
+                                        <p class="text-2xl text-[#555555] font-poppins">Kesempatan memperoleh
+                                        2 paket Try Out Olimpiade beserta pembahasan</p>
                                     </div>
                                     <img class="mt-20 mr-4 w-52" src="{{ asset('images/thumbs-folder.svg') }}"
                                         alt="thumbs folder">
