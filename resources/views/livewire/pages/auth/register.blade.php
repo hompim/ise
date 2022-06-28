@@ -1,10 +1,10 @@
 <div>
-    <form class="mt-8 space-y-6 mx-10 mb-12 text-lg" action="/register" method="POST">
-        <h2 class="text-4xl text-white font-poppins font-bold">Sign Up</h2>
+    <form class="mx-10 mt-8 mb-12 space-y-6 text-lg" action="/register" method="POST">
+        <h2 class="text-4xl font-bold text-white font-poppins">Sign Up</h2>
         @csrf
         @if ($errors->any())
             @foreach ($errors->all() as $error)
-                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                <div class="relative px-4 py-3 text-red-700 bg-red-100 border border-red-400 rounded" role="alert">
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -15,22 +15,22 @@
         @endif
         <div class="rounded-md shadow-sm ">
 
-            <div class="mb-2 space-y-2 flex flex-col text-white font-poppins font-medium">
+            <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" required
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Enter your name">
             </div>
-            <div class="mb-2 space-y-2 flex flex-col text-white font-poppins font-medium">
+            <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
                 <label for="email-address">Email address</label>
                 <input id="email-address" name="email" type="email" required
-                    class="p-2 rounded-md bg-transparent focus:border-pink-200 focus:ring-pink-200  autofill:bg-transparent"
+                    class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                     placeholder="Enter your email">
             </div>
-            <div class="mb-2 space-y-2 flex flex-col text-white font-poppins font-medium">
+            <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
                 <div class="relative" x-data="{ isVisible: false }">
-                    <div class="absolute flex right-4 mt-4 items-center ml-2 h-full">
-                        <button type="button" class="px-1 block focus:outline-none"
+                    <div class="absolute flex items-center h-full mt-4 ml-2 right-4">
+                        <button type="button" class="block px-1 focus:outline-none"
                             @click="$dispatch('visibility'); isVisible = !isVisible;">
                             <div x-show="isVisible">
                                 <svg class="w-6 h-6 stroke-[#6B7280] hover:stroke-pink-200" fill="none"
@@ -55,17 +55,18 @@
                     <label for="password" class="block">
                         <span class="block mb-2 font-medium text-white">Password</span>
                         <input type="password" id="password" placeholder="Enter your password" minlength="5"
-                            class="p-2 rounded-md w-full bg-transparent focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
+                            name="password"
+                            class="w-full p-2 bg-transparent rounded-md focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
                             @visibility.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
-                        {{-- <p class="text-xs m-1 text-pink-700 invisible peer-invalid:visible">less than 5 characters</p> --}}
+                        {{-- <p class="invisible m-1 text-xs text-pink-700 peer-invalid:visible">less than 5 characters</p> --}}
                     </label>
 
                 </div>
             </div>
-            <div class="mb-2 space-y-2 flex flex-col text-white font-poppins font-medium">
+            <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
                 <div class="relative" x-data="{ isVisible: false }">
-                    <div class="absolute flex right-4 mt-4 items-center ml-2 h-full">
-                        <button type="button" class="px-1 block focus:outline-none"
+                    <div class="absolute flex items-center h-full mt-4 ml-2 right-4">
+                        <button type="button" class="block px-1 focus:outline-none"
                             @click="$dispatch('visibility'); isVisible = !isVisible;">
                             <div x-show="isVisible">
                                 <svg class="w-6 h-6 stroke-[#6B7280] hover:stroke-pink-200" fill="none"
@@ -90,9 +91,10 @@
                     <label for="password" class="block">
                         <span class="block mb-2 font-medium text-white">Repeat Password</span>
                         <input type="password" id="password" placeholder="Enter your password" minlength="5"
-                            class="p-2 rounded-md w-full bg-transparent focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
+                            name="password_confirmation"
+                            class="w-full p-2 bg-transparent rounded-md focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
                             @visibility.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
-                        {{-- <p class="text-xs m-1 text-pink-700 invisible peer-invalid:visible">less than 5 characters</p> --}}
+                        {{-- <p class="invisible m-1 text-xs text-pink-700 peer-invalid:visible">less than 5 characters</p> --}}
                     </label>
 
                 </div>
@@ -102,13 +104,13 @@
         <div class="grid items-center justify-between grid-cols-1 md:grid-cols-2">
             <div class="flex items-center">
                 <input id="remember_me" name="remember" type="checkbox"
-                    class="h-4 w-4 text-pink-200 focus:ring-pink-200 rounded  cursor-pointer">
+                    class="w-4 h-4 text-pink-200 rounded cursor-pointer focus:ring-pink-200">
                 <label for="remember_me" class="ml-2 block text-sm text-[#B5B3BC] font-poppins font-medium">
                     Remember me
                 </label>
             </div>
 
-            <div class="text-sm md:text-right mt-4 md:mt-0">
+            <div class="mt-4 text-sm md:text-right md:mt-0">
                 <a href="{{ route('forgot-password') }}"
                     class=" text-[#B5B3BC]  hover:opacity-100 opacity-75 font-poppins font-medium transition duration-300">
                     Forgot your password?
@@ -116,12 +118,12 @@
             </div>
         </div>
         <button type="submit"
-            class="items-center group relative w-full hover:shadow-lg flex justify-center py-2 px-4 text-white rounded-full bg-gradient-to-r from-pink-300 to-purple-300 font-poppins font-semibold opacity-75 hover:opacity-100 transition duration-300">
+            class="relative flex items-center justify-center w-full px-4 py-2 font-semibold text-white transition duration-300 rounded-full opacity-75 group hover:shadow-lg bg-gradient-to-r from-pink-300 to-purple-300 font-poppins hover:opacity-100">
             Sign Up
         </button>
         <p class="text-center text-[#B5B3BC]  text-base font-poppins font-medium">Don't have an account? <a
-                href="{{ route('register') }}"
-                class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text opacity-75 hover:opacity-100 font-bold transition duration-300">Login
+                href="{{ route('login') }}"
+                class="font-bold text-transparent transition duration-300 opacity-75 bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text hover:opacity-100">Login
                 here</a></p>
     </form>
 </div>

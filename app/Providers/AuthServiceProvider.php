@@ -42,7 +42,7 @@ class AuthServiceProvider extends ServiceProvider
                 ->greeting('Reset Password Kamu')
                 ->subject('Reset Password Kamu')
                 ->line('Halo, Jika kamu lupa dengan password akun ISE mu, maka kamu dapat meresetnya dengan mengklik tombol atau tautan di bawah ini: ')
-                ->action('Reset Password', route('password.reset',['token'=>$tokenReset,'email'=>$user->email]))
+                ->action('Reset Password', route('password-reset',['token'=>$tokenReset,'email'=>$user->email]))
                 ->line('Jika kamu tidak merasa melakukan tindakan reset password, maka abaikan email ini.');
         });
     }

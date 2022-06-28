@@ -23,6 +23,8 @@
 
     @livewire('components.footer')
 
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
@@ -58,9 +60,8 @@
         });
     </script>
     <script>
-
         // const swiper = new Swiper(".mySwiperIcon .swiper", {
-        //     // 
+        //     //
         //     // on: {
         //     //     init: function () {
         //     //     const index_currentSlide = this.realIndex;

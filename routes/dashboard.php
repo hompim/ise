@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Pages\Bionix\Admin\Beranda\Index;
+use App\Http\Livewire\Pages\Bionix\Peserta\Beranda;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,8 +17,22 @@ Route::middleware('guest')->group(function () {
 
 //Authenticate User
 Route::middleware('auth')->group(function () {
-    Route::get('/email/verify', \App\Http\Livewire\Pages\Auth\EmailVerification::class)->name('verification.notice'); //For Email Verification
-    Route::get('/')->middleware('membercheck')->name('dashboard.index');
+    Route::get('/email/verify', function(){
+        return view('livewire.pages.auth.email-verif');
+    })->name('verification.notice'); //For Email Verification
+    Route::get('/', function () {
+        if (Auth::user()) {
+            if (Auth::user()->userable_type == 'App\Models\Admin') {
+                if (Auth::user()->userable->admin_type == "ICON Admin") {
+                    return redirect(route('academy.admin.home.index'));
+                } else {
+                    return redirect(route('bionix.admin.beranda.index'));
+                }
+            } else {
+                return redirect(route('peserta.dashboard.choose'));
+            }
+        }
+    })->name('dashboard.index');
 
     Route::middleware('verified')->group(function () {
        // Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
@@ -27,7 +43,7 @@ Route::middleware('auth')->group(function () {
 
             //Bionix
             Route::group(['prefix' => 'bionix', 'middleware' => 'usertype:bionix_admin'], function () {
-                Route::get('/', App\Http\Livewire\Pages\Bionix\Admin\Beranda\Index::class)->name('bionix.admin.beranda.index');
+                Route::get('/', Index::class)->name('bionix.admin.beranda.index');
                 Route::get('/daftar-peserta', App\Http\Livewire\Pages\Bionix\Admin\DaftarPeserta\Index::class)->name('bionix.admin.daftar-peserta.index');
                 Route::get('/pengumuman', App\Http\Livewire\Pages\Bionix\Admin\Pengumuman\Index::class)->name('bionix.admin.pengumuman.index');
                 Route::group(['prefix' => 'verifikasi'], function () {
@@ -47,7 +63,7 @@ Route::middleware('auth')->group(function () {
                     Route::middleware(['usertype:Mahasiswa'])->group(function () {
                         Route::get('register/college', \App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege::class)->middleware(['accessdate:true,01-01-2021 00:00:00,01-09-2021 23:59:59'])->name('register-college');
                     });
-                    Route::middleware('usertype:Siswa SMA')->group(function () {
+                    Route::middleware('usertype:SMA')->group(function () {
                         Route::get('register/student', \App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent::class)->name('register-student');
                     });
                 });
