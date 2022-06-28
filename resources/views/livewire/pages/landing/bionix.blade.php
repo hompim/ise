@@ -59,8 +59,23 @@
                                     bentuk simulasi perkuliahan dengan beberapa materi sesuai dengan kurikulum dan
                                     disampaikan oleh dosen Sistem Informasi ITS selama masa belajar mengajar
                                     berlangsung.</p>
-                                <button
-                                    class="px-10 py-2 mt-10 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 font-poppins">Register</button>
+                                <div class="flex flex-row justify-center mt-12 space-x-4 font-poppins">
+                                    <button
+                                        class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center  justify-center"><svg
+                                            class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.5034 13.8623L15.4998 18.8506L20.4961 13.8623" stroke="#B221E5"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M15.5 5.54492V18.847" stroke="#B221E5" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M26.92 16.9502V25.5015C26.92 25.7535 26.8198 25.9952 26.6413 26.1734C26.4628 26.3516 26.2208 26.4517 25.9684 26.4517H5.03128C4.77887 26.4517 4.53681 26.3516 4.35833 26.1734C4.17986 25.9952 4.07959 25.7535 4.07959 25.5015V16.9502"
+                                                stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Download Guidebook</button>
+                                    <button
+                                        class="px-16 py-1 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                </div>
                             </div>
                         </div>
                         <div class="grid grid-cols-8 gap-4 swiper-slide">
@@ -127,8 +142,23 @@
                                     terbagi dalam beberapa region di Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi 
                                     informasi, pemrograman, logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan, 
                                     Final Presentasi Bisnis, dan terakhir Awarding Night.</p>
-                                <button
-                                    class="px-10 py-2 mt-10 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                    <div class="flex flex-row justify-center mt-12 space-x-4 font-poppins">
+                                    <button
+                                        class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center  justify-center"><svg
+                                            class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.5034 13.8623L15.4998 18.8506L20.4961 13.8623" stroke="#B221E5"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M15.5 5.54492V18.847" stroke="#B221E5" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M26.92 16.9502V25.5015C26.92 25.7535 26.8198 25.9952 26.6413 26.1734C26.4628 26.3516 26.2208 26.4517 25.9684 26.4517H5.03128C4.77887 26.4517 4.53681 26.3516 4.35833 26.1734C4.17986 25.9952 4.07959 25.7535 4.07959 25.5015V16.9502"
+                                                stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        Download Guidebook</button>
+                                    <button
+                                        class="px-16 py-1 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                </div>
                             </div>
                         </div>
                         <div class="grid grid-cols-8 gap-4 swiper-slide">
