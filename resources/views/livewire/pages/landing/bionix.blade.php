@@ -347,7 +347,7 @@
                     </a> that you can get.
                 </div>
 
-                <div class="left-0 right-0 mx-auto w-[980px] mt-36  grid grid-cols-6 gap-4">
+                <div class="mx-auto w-[980px] mt-36  grid grid-cols-6 gap-4">
                     <div class="bg-gradient-to-r from-purple-75 to-purple-300 h-[330px] rounded-2xl col-span-2  ">
                         <div class="flex flex-col mx-4 text-2xl text-left pr-18">
 
@@ -387,8 +387,17 @@
                         </div>
                     </div>
 
+                
+
 
                 </div>
+
+                <div class="text-6xl text-white font-bold mt-36 md:w-[537px] md:mx-auto ">
+                    Join and earn <a
+                        class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text"> fantastic
+                    </a> prizes
+                </div>
+                
                 <div class="relative font-poppins">
                     <img class="left-0 right-0 mx-auto" src="{{ asset('images/trophy.svg') }}" alt="">
                     <h1 class="absolute text-2xl transform -translate-x-1/2 -translate-y-1/2 top-3/4 left-1/2">Total
