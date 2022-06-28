@@ -11,7 +11,7 @@
         <input type="submit" value="Submit">
     </form> --}}
     <form class="mt-8 space-y-6 mx-10 mb-12 text-lg" action="/forgot-password" method="POST">
-        <h2 class="text-4xl text-white font-poppins font-bold">Login</h2>
+        <h2 class="text-4xl text-white font-poppins font-bold">Forgot Password</h2>
         @csrf
         @if ($errors->any())
             @foreach ($errors->all() as $error)
@@ -24,6 +24,13 @@
                 </div>
             @endforeach
         @endif
+        @if(session('status'))
+        <div
+            class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative"
+            role="alert">
+            {{session('status')}}
+        </div>
+    @endif
         <div class="rounded-md shadow-sm -space-y-px">
 
             <div class="mb-2 space-y-2 flex flex-col text-white font-poppins font-medium">
@@ -64,12 +71,8 @@
         </div>
         <button type="submit"
             class="items-center group relative w-full hover:shadow-lg flex justify-center py-2 px-4 text-white rounded-full bg-gradient-to-r from-pink-300 to-purple-300 font-poppins font-semibold opacity-75 hover:opacity-100 transition duration-300">
-            Login
+            Submit
         </button>
-        <p class="text-center text-[#B5B3BC]  text-base font-poppins font-medium">Don't have an account? <a
-                href="{{ route('register') }}"
-                class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text opacity-75 hover:opacity-100 font-bold transition duration-300">Sign
-                up here</a></p>
     </form>
 
 </div>
