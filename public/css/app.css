@@ -1302,11 +1302,8 @@ input:checked + .toggle-bg {
 .mb-\[71px\] {
   margin-bottom: 71px;
 }
-.mt-\[146px\] {
-  margin-top: 146px;
-}
-.mt-\[22px\] {
-  margin-top: 22px;
+.mt-\[70px\] {
+  margin-top: 70px;
 }
 .ml-\[-480px\] {
   margin-left: -480px;
@@ -1353,6 +1350,9 @@ input:checked + .toggle-bg {
 .mt-\[90px\] {
   margin-top: 90px;
 }
+.mt-\[22px\] {
+  margin-top: 22px;
+}
 .mt-\[32px\] {
   margin-top: 32px;
 }
@@ -1391,6 +1391,9 @@ input:checked + .toggle-bg {
 }
 .-mt-px {
   margin-top: -1px;
+}
+.mt-\[60px\] {
+  margin-top: 60px;
 }
 .block {
   display: block;
@@ -2125,11 +2128,11 @@ input:checked + .toggle-bg {
 .border-t {
   border-top-width: 1px;
 }
-.border-l-4 {
-  border-left-width: 4px;
-}
 .border-t-4 {
   border-top-width: 4px;
+}
+.border-l-4 {
+  border-left-width: 4px;
 }
 .border-r {
   border-right-width: 1px;
@@ -2181,10 +2184,6 @@ input:checked + .toggle-bg {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
-.border-\[\#5B1BE1\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(91 27 225 / var(--tw-border-opacity));
-}
 .border-red-500 {
   --tw-border-opacity: 1;
   border-color: rgb(240 82 82 / var(--tw-border-opacity));
@@ -2212,6 +2211,10 @@ input:checked + .toggle-bg {
 .border-r-pink-300 {
   --tw-border-opacity: 1;
   border-right-color: rgb(178 33 229 / var(--tw-border-opacity));
+}
+.border-l-\[\#5B1BE1\] {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(91 27 225 / var(--tw-border-opacity));
 }
 .bg-blue-100 {
   --tw-bg-opacity: 1;
@@ -2783,6 +2786,9 @@ input:checked + .toggle-bg {
 .pt-8 {
   padding-top: 2rem;
 }
+.pl-\[20px\] {
+  padding-left: 20px;
+}
 .text-left {
   text-align: left;
 }
@@ -2806,9 +2812,6 @@ input:checked + .toggle-bg {
 }
 .align-middle {
   vertical-align: middle;
-}
-.align-bottom {
-  vertical-align: bottom;
 }
 .font-poppins {
   font-family: 'Poppins', sans-serif;
@@ -2862,9 +2865,6 @@ input:checked + .toggle-bg {
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
-}
-.text-\[20px\] {
-  font-size: 20px;
 }
 .text-\[26px\] {
   font-size: 26px;
