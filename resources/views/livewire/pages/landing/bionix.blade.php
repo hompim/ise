@@ -209,8 +209,8 @@
                     <div class="container mx-auto">
                         <ol class="items-center justify-center md:flex">
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun
-                                    2022</time>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">16 Jul - 14
+                                    Agu</time>
                                 <div class="flex items-center justify-center overflow-hidden">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
@@ -219,13 +219,13 @@
                                     </div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
-                                        Student Level</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">Open Regis <br>
+                                        IS Class</h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun
-                                    2022</time>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">27 - 28
+                                    Agu</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -237,8 +237,9 @@
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jul
-                                    2022</time>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">16 Jul - 11
+                                    Sep
+                                </time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -246,12 +247,12 @@
                                     <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins">ICON <br> Academy</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">Open Regis <br> BSL</h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep
-                                    2022</time>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">3 & 12
+                                    Sep</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -259,13 +260,13 @@
                                     <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
-                                        College Level</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">Tryout <br>
+                                        1 & 2</h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep
-                                    2022</time>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">17 & 24
+                                    Sep</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -273,11 +274,25 @@
                                     <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">Virtual Tour</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">Penyisihan <br> 1 &
+                                        2</h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block mb-2 text-lg font-medium text-white font-poppins">Nov 2022</time>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">01 Oct - 20
+                                    Oct</time>
+                                <div class="relative flex items-center">
+                                    <div
+                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                    </div>
+                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                                </div>
+                                <div class="mt-3">
+                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">Semifinal</h3>
+                                </div>
+                            </li>
+                            <li class="relative mb-6 sm:mb-0">
+                                <time class="block mb-2 text-lg font-medium text-white font-poppins">12 Nov</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -285,7 +300,8 @@
                                     <div class="hidden sm:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">Grand Talkshow</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">Final & <br>
+                                        Awarding</h3>
                                 </div>
                             </li>
                         </ol>
@@ -395,8 +411,8 @@
                     <div class="container mx-auto">
                         <ol class="items-center justify-center md:flex">
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun
-                                    2022</time>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">21 Aug - 21
+                                    Sep</time>
                                 <div class="flex items-center justify-center overflow-hidden">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
@@ -405,13 +421,13 @@
                                     </div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
-                                        Student Level</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">Pendaftaran
+                                    </h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun
-                                    2022</time>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">21 Sep - 10
+                                    Oct</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -419,12 +435,12 @@
                                     <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">IS Class</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">Semifinal</h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jul
-                                    2022</time>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">22 Oct - 10
+                                    Nov</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -432,12 +448,12 @@
                                     <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins">ICON <br> Academy</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">Mentoring</h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep
-                                    2022</time>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">13 Nov
+                                </time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -445,25 +461,11 @@
                                     <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
-                                        College Level</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">Final</h3>
                                 </div>
                             </li>
                             <li class="relative mb-6 sm:mb-0">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep
-                                    2022</time>
-                                <div class="relative flex items-center">
-                                    <div
-                                        class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
-                                    </div>
-                                    <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
-                                </div>
-                                <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">Virtual Tour</h3>
-                                </div>
-                            </li>
-                            <li class="relative mb-6 sm:mb-0">
-                                <time class="block mb-2 text-lg font-medium text-white font-poppins">Nov 2022</time>
+                                <time class="block mb-2 text-lg font-medium text-white font-poppins">19 Nov</time>
                                 <div class="relative flex items-center">
                                     <div
                                         class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -471,7 +473,7 @@
                                     <div class="hidden sm:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
                                 </div>
                                 <div class="mt-3">
-                                    <h3 class="text-lg font-semibold text-white font-poppins pb-7">Grand Talkshow</h3>
+                                    <h3 class="text-lg font-semibold text-white font-poppins">Awarding</h3>
                                 </div>
                             </li>
                         </ol>

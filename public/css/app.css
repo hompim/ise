@@ -1066,6 +1066,10 @@ select {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+.mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -1122,10 +1126,6 @@ select {
     margin-top: 9rem;
     margin-bottom: 9rem;
 }
-.mx-4 {
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
 .mx-32 {
     margin-left: 8rem;
     margin-right: 8rem;
@@ -1149,6 +1149,9 @@ select {
 .mx-20 {
     margin-left: 5rem;
     margin-right: 5rem;
+}
+.mb-4 {
+    margin-bottom: 1rem;
 }
 .mt-36 {
     margin-top: 9rem;
@@ -1227,9 +1230,6 @@ select {
 }
 .mt-12 {
     margin-top: 3rem;
-}
-.mb-4 {
-    margin-bottom: 1rem;
 }
 .-mb-0\.5 {
     margin-bottom: -0.125rem;
@@ -1572,6 +1572,11 @@ select {
 .w-\[26em\] {
     width: 26em;
 }
+.w-fit {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
 .w-32 {
     width: 8rem;
 }
@@ -1685,11 +1690,6 @@ select {
 }
 .w-\[789px\] {
     width: 789px;
-}
-.w-fit {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
 }
 .min-w-full {
     min-width: 100%;
@@ -1975,6 +1975,11 @@ select {
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1989,11 +1994,6 @@ select {
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
     margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-x-6 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
@@ -2376,6 +2376,10 @@ select {
     --tw-bg-opacity: 1;
     background-color: rgb(20 20 20 / var(--tw-bg-opacity));
 }
+.bg-\[\#25D366\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(37 211 102 / var(--tw-bg-opacity));
+}
 .bg-\[\#191a1e\] {
     --tw-bg-opacity: 1;
     background-color: rgb(25 26 30 / var(--tw-bg-opacity));
@@ -2454,10 +2458,6 @@ select {
     --tw-bg-opacity: 1;
     background-color: rgb(38 26 69 / var(--tw-bg-opacity));
 }
-.\!bg-white {
-    --tw-bg-opacity: 1 !important;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
-}
 .bg-green-500 {
     --tw-bg-opacity: 1;
     background-color: rgb(14 159 110 / var(--tw-bg-opacity));
@@ -2488,10 +2488,6 @@ select {
 .bg-\[\#1F1F1F\] {
     --tw-bg-opacity: 1;
     background-color: rgb(31 31 31 / var(--tw-bg-opacity));
-}
-.bg-\[\#25D366\] {
-    --tw-bg-opacity: 1;
-    background-color: rgb(37 211 102 / var(--tw-bg-opacity));
 }
 .bg-opacity-20 {
     --tw-bg-opacity: 0.2;
@@ -2811,6 +2807,9 @@ select {
 }
 .pt-\[63px\] {
     padding-top: 63px;
+}
+.pr-12 {
+    padding-right: 3rem;
 }
 .pl-\[130px\] {
     padding-left: 130px;
@@ -3678,6 +3677,11 @@ select {
     --tw-ring-color: rgb(191 71 233 / var(--tw-ring-opacity)) !important;
 }
 
+.focus\:ring-purple-200:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(119 66 230 / var(--tw-ring-opacity));
+}
+
 .focus\:ring-indigo-500:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(104 117 245 / var(--tw-ring-opacity));
@@ -3691,11 +3695,6 @@ select {
 .focus\:ring-blue-300:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(164 202 254 / var(--tw-ring-opacity));
-}
-
-.focus\:ring-purple-200:focus {
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(119 66 230 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-opacity-50:focus {
@@ -4257,14 +4256,14 @@ select {
         bottom: 20rem;
     }
 
-    .lg\:\!mx-0 {
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-    }
-
     .lg\:mx-0 {
         margin-left: 0px;
         margin-right: 0px;
+    }
+
+    .lg\:\!mx-0 {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
     }
 
     .lg\:mx-auto {
@@ -4282,6 +4281,10 @@ select {
         margin-right: 5rem;
     }
 
+    .lg\:mb-0 {
+        margin-bottom: 0px;
+    }
+
     .lg\:mt-4 {
         margin-top: 1rem;
     }
@@ -4292,10 +4295,6 @@ select {
 
     .lg\:\!ml-0 {
         margin-left: 0px !important;
-    }
-
-    .lg\:mb-0 {
-        margin-bottom: 0px;
     }
 
     .lg\:mr-4 {

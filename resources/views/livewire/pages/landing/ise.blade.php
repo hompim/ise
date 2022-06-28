@@ -190,7 +190,7 @@
 
     {{-- timeline --}}
     <div class="my-36">
-        <h1 class="mx-12 mb-24 text-4xl font-bold text-white font-poppins lg:text-7xl lg:mx-0">Mark your calender and
+        <h1 class="mx-12 mb-24 text-4xl font-bold text-white font-poppins lg:text-7xl lg:mx-0">Mark your calendar and
             <br> follow the
             <span
                 class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
@@ -257,7 +257,7 @@
                         <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                     </div>
                     <div class="mt-3">
-                        <h3 class="text-lg font-semibold text-white font-poppins pb-7">Virtual Tour</h3>
+                        <h3 class="text-lg font-semibold text-white font-poppins pb-7">E-hall of IS</h3>
                     </div>
                 </li>
                 <li class="relative mb-6 sm:mb-0">
