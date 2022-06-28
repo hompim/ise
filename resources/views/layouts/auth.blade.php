@@ -49,7 +49,7 @@
                                 <li>Startup College Level</li>
                             </ul>
                         </div>
-                        <a href="/icon" class="flex items-end justify-end text-end">
+                        <a href="/bionix" class="flex items-end justify-end text-end">
                             <img src="{{ asset('images/bionix-city.svg') }}" alt="isometric-city"
                                 class="w-24 transition duration-1000 transform group-hover:scale-105 group-hover:duration-300">
                         </a>

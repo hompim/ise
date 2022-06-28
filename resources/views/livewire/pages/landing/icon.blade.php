@@ -206,7 +206,7 @@
                                         <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                                     </div>
                                     <div class="mt-3">
-                                        <h3 class="text-lg font-semibold text-white font-poppins pb-7">Virtual Tour</h3>
+                                        <h3 class="text-lg font-semibold text-white font-poppins pb-7">E-hall of IS</h3>
                                     </div>
                                 </li>
                                 <li class="relative mb-6 sm:mb-0">
@@ -239,10 +239,9 @@
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun
-                                    2022</time>
-                                <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
-                                    Student Level</h3>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">03
+                                    Sep</time>
+                                <h3 class="text-lg font-semibold text-white font-poppins pb-7">E-hall of IS
                             </div>
                         </li>
 
@@ -255,9 +254,10 @@
                                 <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                             </div>
                             <div class="mt-3">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep
-                                    2022</time>
-                                <h3 class="text-lg font-semibold text-white font-poppins pb-7">Virtual Tour</h3>
+                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">10 - 18 Sep
+                                </time>
+                                <h3 class="text-lg font-semibold text-white font-poppins">Startup Academy & <br>
+                                    Data Science Academy</h3>
                             </div>
                         </li>
                         <li class="relative mb-6 sm:mb-0 w-[400px]">
@@ -269,7 +269,7 @@
                                 <div class="hidden sm:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
                             </div>
                             <div class="mt-3">
-                                <time class="block mb-2 text-lg font-medium text-white font-poppins">Nov 2022</time>
+                                <time class="block mb-2 text-lg font-medium text-white font-poppins">19 Nov</time>
                                 <h3 class="text-lg font-semibold text-white font-poppins pb-7">Grand Talkshow</h3>
                             </div>
                         </li>
