@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ISE! 2022</title>
+    <title>@yield('title')</title>
 
     <link rel="icon" href="{{ asset('images/logo-only.png') }}">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -17,14 +17,17 @@
 </head>
 <div class="flex flex-col-reverse lg:flex-row items-center bg-black h-screen md:px-72 mx:0">
     <div class="flex flex-1 flex-col items-center lg:items-start text-white font-poppins">
-        <h1 class="text-8xl text-center lg:text-left">Oops!</h1>
-        <p class="text-4xl text-center lg:text-left mt-4">The page you're looking for is still under construction</p>
-        <button class="px-3 py-2 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full xl:mt-4 mt-6 md:mt-4 relative blur">Go Back Home</button>
-        <button class="px-3 py-2 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full xl:mt-52 mt-64 md:mt-72   xl:flex  absolute">Go Back Home</button>
+        <h1 class="text-8xl text-center lg:text-left">@yield('code')</h1>
+        <p class="text-4xl text-center lg:text-left mt-4">@yield('message')</p>
+        <a href="{{ app('router')->has('home') ? route('home') : url('/') }}">
+            <button class="text-white font-bold uppercase tracking-wide py-3 px-8 hover:shadow-md rounded-lg mt-8" style="background: linear-gradient(270.02deg, #4CCCED 0%, #507EC5 64.04%, #1F4D95 99.96%); font-family: 'Hind';">
+                {{ __('Back To Home') }}
+            </button>
+        </a>
     </div>
     <div class="flex justify-center flex-1">
         <img src="{{ asset('images/error.svg') }}" class="w-full h:full" >
     </div>
 
-    
+
 </div>
