@@ -4422,11 +4422,6 @@ select {
         padding-right: 2.5rem;
     }
 
-    .lg\:px-24 {
-        padding-left: 6rem;
-        padding-right: 6rem;
-    }
-
     .lg\:py-0 {
         padding-top: 0px;
         padding-bottom: 0px;
@@ -4487,11 +4482,6 @@ select {
         padding-right: 12rem;
     }
 
-    .lg\:px-12 {
-        padding-left: 3rem;
-        padding-right: 3rem;
-    }
-
     .lg\:text-left {
         text-align: left;
     }
@@ -4541,15 +4531,21 @@ select {
         line-height: 1.75rem !important;
     }
 
-    .group:hover .lg\:group-hover\:scale-\[1\.8\] {
-        --tw-scale-x: 1.8;
-        --tw-scale-y: 1.8;
-        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    .group:hover .lg\:group-hover\:\!scale-\[1\.8\] {
+        --tw-scale-x: 1.8 !important;
+        --tw-scale-y: 1.8 !important;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
     }
 
     .group:hover .lg\:group-hover\:scale-\[1\.55\] {
         --tw-scale-x: 1.55;
         --tw-scale-y: 1.55;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    .group:hover .lg\:group-hover\:scale-\[1\.8\] {
+        --tw-scale-x: 1.8;
+        --tw-scale-y: 1.8;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
 
