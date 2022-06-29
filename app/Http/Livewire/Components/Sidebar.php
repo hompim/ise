@@ -78,6 +78,38 @@ class Sidebar extends Component
                 'type' => 'divider',
                 'tag' =>'class=my-3'
             ]);
+
+            if(Auth::user()->userable->bionix_id){
+                array_push(
+                    $this->menu,
+                    [
+                        'type' => 'title',
+                        'title' => 'BIONIX'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-home',
+                        'title' => 'Beranda',
+                        'route-name' => 'bionix.admin.beranda.index'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-group',
+                        'title' => 'Identitas Tim',
+                        'route-name' => 'bionix.peserta.identitas-tim'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-bullhorn',
+                        'title' => 'Pembayaran',
+                        'route-name' => 'bionix.admin.daftar-peserta.index'
+                    ],
+                    [
+                        'type' => 'divider',
+                        'tag' =>'class=my-3'
+                    ]
+                );
+            }
         }
 
     }
