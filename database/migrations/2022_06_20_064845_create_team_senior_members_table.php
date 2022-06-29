@@ -20,6 +20,8 @@ return new class extends Migration
             $table->unsignedSmallInteger('year');
             $table->string('major');
             $table->string('whatsapp');
+            $table->string('twibbon')->nullable();
+            $table->string('instragram')->nullable();
             $table->string('identity_card_path')->nullable();
             $table->timestamps();
         });

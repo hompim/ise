@@ -64,11 +64,11 @@
                 </div>
             </div>
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
-                <div class="relative" x-data="{ isVisible: false }">
+                <div class="relative" x-data="{ isVisible2: false }">
                     <div class="absolute flex items-center h-full mt-4 ml-2 right-4">
                         <button type="button" class="block px-1 focus:outline-none"
-                            @click="$dispatch('visibility'); isVisible = !isVisible;">
-                            <div x-show="isVisible">
+                            @click="$dispatch('visibility2'); isVisible2 = !isVisible2;">
+                            <div x-show="isVisible2">
                                 <svg class="w-6 h-6 stroke-[#6B7280] hover:stroke-pink-200" fill="none"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -78,7 +78,7 @@
                                     </path>
                                 </svg>
                             </div>
-                            <div x-show="!isVisible">
+                            <div x-show="!isVisible2">
                                 <svg class="w-6 h-6 stroke-[#6B7280] hover:stroke-pink-200" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -93,10 +93,20 @@
                         <input type="password" id="password" placeholder="Enter your password" minlength="5"
                             name="password_confirmation"
                             class="w-full p-2 bg-transparent rounded-md focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
-                            @visibility.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
+                            @visibility2.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
                         {{-- <p class="invisible m-1 text-xs text-pink-700 peer-invalid:visible">less than 5 characters</p> --}}
                     </label>
-
+                </div>
+                <div>
+                    <label for="jenjang" class="block">
+                        <span class="block mb-2 font-medium text-white">Jenjang</span>
+                        <select name="jenjang" id="" class="w-full p-2 bg-transparent rounded-md focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200">
+                            <option value=""></option>
+                            <option value="Mahasiswa" class="">Mahasiswa</option>
+                            <option value="SMA" >Siswa SMA</option>
+                            <option value="Umum">Umum</option>
+                        </select>
+                    </label>
                 </div>
             </div>
         </div>

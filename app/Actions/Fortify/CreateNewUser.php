@@ -2,6 +2,7 @@
 
 namespace App\Actions\Fortify;
 
+use App\Models\Member;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -31,13 +32,18 @@ class CreateNewUser implements CreatesNewUsers
             ],
             'password' => $this->passwordRules(),
             'password_confirmation' => ['required', 'same:password'],
+            'jenjang' => ['required']
         ])->validate();
+
+        $member =  Member::created([
+            'jenjang' => $input['jenjang']
+        ]);
 
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
-            'userable_id' => null,
+            'userable_id' => $member->id,
             'userable_type' => "App\Models\Member",
         ]);
     }

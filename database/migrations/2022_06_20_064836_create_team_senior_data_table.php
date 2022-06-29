@@ -23,6 +23,8 @@ return new class extends Migration
                 "Sekolah (guru, dll)",
                 "Teman/keluarga"]);
             $table->string('university_name');
+            $table->string('judul_ide_bisnis')->nullable();
+            $table->string('bmc_file_path')->nullable();
             $table->unsignedInteger('city_id');
             $table->enum('competition_round', ['Penyisihan', 'Semifinal', 'Final'])->default('Penyisihan');
             $table->enum('profile_verif_status', ['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Belum Unggah');

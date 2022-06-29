@@ -22,7 +22,14 @@ use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
 Route::get('/', Ise::class)->name('ise');
 Route::get('/bionix', Bionix::class)->name('bionix');
 Route::get('/icon', Icon::class)->name('icon');
+<<<<<<< HEAD
 Route::get('/daftarbsl', RegisterStudent::class)->name('bsl');
+Route::get('/daftarbcl', RegisterCollege::class)->name('bcl');
+
+
+=======
+//Route::get('/daftarbsl', RegisterStudent::class)->name('bsl');
+>>>>>>> 79f7296e531c59ac658cb4b24b4d6d8090d382b1
 
 // Coming Soon Route
 Route::get('/coming-soon', function () {

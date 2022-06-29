@@ -57,7 +57,7 @@
                 {{-- <img src="{{ asset('images/icon-city.svg') }}" alt="isometric-city"
                     class="transition duration-1000 transform group-hover:scale-105 group-hover:duration-300"> --}}
                 <div
-                    class="transition duration-1000 transform lg:!scale-[1.7] lg:group-hover:scale-[1.8] group-hover:duration-300">
+                    class="transition duration-1000 transform lg:!scale-[1.7] lg:group-hover:!scale-[1.8] group-hover:duration-300">
                     @livewire('components.icon-city')
                 </div>
             </a>
@@ -71,14 +71,14 @@
                     Zone</h4>
                 <ul class="text-[#B5B3BC] text-end lg:block hidden">
                     <li>BIONIX Student Level</li>
-                    <li>Startup College Level</li>
+                    <li>BIONIX College Level</li>
                 </ul>
             </div>
             <a href="#bionix">
                 {{-- <img src="{{ asset('images/bionix-city-animated.svg') }}" alt="isometric-city"
                     class="transition duration-1000 transform group-hover:scale-105 group-hover:duration-300"> --}}
                 <div
-                    class="transition duration-1000 transform scale-75 lg:scale-[1.5] lg:group-hover:scale-[1.55] group-hover:duration-300">
+                    class="transition duration-1000 transform scale-75 lg:!scale-[1.5] lg:group-hover:!scale-[1.55] group-hover:duration-300">
                     @livewire('components.bionix-city')
                 </div>
             </a>
