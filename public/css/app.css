@@ -4380,6 +4380,14 @@ select {
         padding-right: 3.5rem;
     }
 
+<<<<<<< HEAD
+=======
+    .lg\:px-48 {
+        padding-left: 12rem;
+        padding-right: 12rem;
+    }
+
+>>>>>>> 79f7296e531c59ac658cb4b24b4d6d8090d382b1
     .lg\:text-left {
         text-align: left;
     }
@@ -4421,10 +4429,10 @@ select {
         line-height: 1.75rem !important;
     }
 
-    .group:hover .lg\:group-hover\:scale-\[1\.8\] {
-        --tw-scale-x: 1.8;
-        --tw-scale-y: 1.8;
-        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    .group:hover .lg\:group-hover\:\!scale-\[1\.8\] {
+        --tw-scale-x: 1.8 !important;
+        --tw-scale-y: 1.8 !important;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
     }
 
     .group:hover .lg\:group-hover\:scale-\[1\.55\] {
@@ -4433,6 +4441,21 @@ select {
         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
 
+<<<<<<< HEAD
+=======
+    .group:hover .lg\:group-hover\:scale-\[1\.8\] {
+        --tw-scale-x: 1.8;
+        --tw-scale-y: 1.8;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+
+    .group:hover .lg\:group-hover\:\!scale-\[1\.55\] {
+        --tw-scale-x: 1.55 !important;
+        --tw-scale-y: 1.55 !important;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+    }
+
+>>>>>>> 79f7296e531c59ac658cb4b24b4d6d8090d382b1
     .group:hover .lg\:group-hover\:opacity-100 {
         opacity: 1;
     }

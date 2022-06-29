@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Bionix\BionixSchool;
+use App\Models\Icon\IconWebinarKickOff;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -26,5 +27,9 @@ class Member extends Model
 
     public function academy(){
         return $this->morphTo();
+    }
+
+    public function webinar(){
+        return $this->hasOne(IconWebinarKickOff::class);
     }
 }

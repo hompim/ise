@@ -29,6 +29,8 @@ class bionixcheck
             } elseif ($type == 'unregistered') {
                 if (!Auth::user()->userable->bionix_id) {
                     return $next($request);
+                }else{
+                    return redirect(route('bionix.peserta.homepage'));
                 }
             }
         }

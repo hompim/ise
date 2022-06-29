@@ -68,6 +68,16 @@ class Sidebar extends Component
                     ]
                 );
             }
+        }else{
+            array_push($this->menu, [
+                'type' => 'menu',
+                'icon' => 'far fa-calendar-alt',
+                'title' => 'Events',
+                'route-name' => 'peserta.dashboard.choose'
+            ], [
+                'type' => 'divider',
+                'tag' =>'class=my-3'
+            ]);
         }
 
     }

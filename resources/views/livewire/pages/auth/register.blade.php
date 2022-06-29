@@ -96,7 +96,17 @@
                             @visibility2.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
                         {{-- <p class="invisible m-1 text-xs text-pink-700 peer-invalid:visible">less than 5 characters</p> --}}
                     </label>
-
+                </div>
+                <div>
+                    <label for="jenjang" class="block">
+                        <span class="block mb-2 font-medium text-white">Jenjang</span>
+                        <select name="jenjang" id="" class="w-full p-2 bg-transparent rounded-md focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200">
+                            <option value=""></option>
+                            <option value="Mahasiswa" class="">Mahasiswa</option>
+                            <option value="SMA" >Siswa SMA</option>
+                            <option value="Umum">Umum</option>
+                        </select>
+                    </label>
                 </div>
             </div>
         </div>
