@@ -23,6 +23,9 @@ Route::get('/', Ise::class)->name('ise');
 Route::get('/bionix', Bionix::class)->name('bionix');
 Route::get('/icon', Icon::class)->name('icon');
 Route::get('/daftarbsl', RegisterStudent::class)->name('bsl');
+Route::get('/daftarbcl', RegisterCollege::class)->name('bcl');
+
+
 
 // Coming Soon Route
 Route::get('/coming-soon', function () {
