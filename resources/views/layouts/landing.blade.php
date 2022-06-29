@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ISE! 2022</title>
-
+    <!-- linknya -->
     <link rel="icon" href="{{ asset('images/logo-only.png') }}">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <!-- Link Swiper's CSS -->
