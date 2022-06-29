@@ -1,8 +1,8 @@
 <footer class="bg-[#191A1E] flex flex-col px-16 pt-16 divide-y divide-[#2F2F2F]">
-    <div
-        class="flex flex-col justify-center px-4 pb-12 space-y-4 lg:!space-y-0 space-x-0 lg:space-x-24 lg:px-48 lg:flex-row">
-        <img src="{{ asset('images/white-logo.png') }}" alt="logo-ise"
-            class="w-[125px] h-auto mx-auto lg:!mx-0 transform-gpu transition duration-300 hover:scale-105">
+    <div class="flex flex-col justify-center px-4 pb-12 space-y-4 lg:!space-y-0 space-x-0 lg:space-x-24 lg:flex-row">
+        <div class="w-[125px] mx-auto lg:!mx-0 transform-gpu transition duration-300 hover:scale-105">
+            <img src="{{ asset('images/white-logo.png') }}" alt="logo-ise" class="w-full h-auto ">
+        </div>
         <dl class="text-center lg:!text-start">
             <dt class="pb-4 text-xl font-semibold text-white font-poppins">About Us</dt>
             <a href="/">
