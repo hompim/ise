@@ -46,7 +46,7 @@
                             <h4 class="text-lg font-medium text-white text-end font-poppins">Competition Zone</h4>
                             <ul class="text-[#B5B3BC] text-base text-end">
                                 <li>BIONIX Student Level</li>
-                                <li>Startup College Level</li>
+                                <li>BIONIX College Level</li>
                             </ul>
                         </div>
                         <a href="/bionix" class="flex items-end justify-end text-end">

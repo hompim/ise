@@ -71,7 +71,7 @@
                     Zone</h4>
                 <ul class="text-[#B5B3BC] text-end lg:block hidden">
                     <li>BIONIX Student Level</li>
-                    <li>Startup College Level</li>
+                    <li>BIONIX College Level</li>
                 </ul>
             </div>
             <a href="#bionix">
