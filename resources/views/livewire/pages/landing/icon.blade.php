@@ -1,6 +1,7 @@
 <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
 <script src="//unpkg.com/alpinejs" defer></script>
 <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+<link rel="stylesheet" href="{{ asset('css/new.css') }}">
 
 <div class="bg-black font-poppins">
     <div class="flex flex-col-reverse pl-[130px] lg:flex-row  items-center pt-[202px]">
@@ -40,19 +41,39 @@
                     </p>
                 </div>
                 <!-- about this -->
-                <div class="swiper mySwiper w-[700px]">
-                    <div class="swiper-wrapper cursor-grab">
-                        <div class="flex justify-center swiper-slide">
-                            <img class="w-[600px] rounded-3xl h-[420px]" src="./images/rectangle-icon.svg" />
-                        </div>
-                        <div class="flex justify-center swiper-slide">
-                            <img class="w-[600px] rounded-3xl  h-[420px]" src="./images/rectangle-icon.svg" />
-                        </div>
-                        <div class="flex justify-center swiper-slide">
-                            <img class="w-[600px] rounded-3xl h-[420px]" src="./images/rectangle-icon.svg" />
-                        </div>
+                <div class="relative ">
+                
+                <section id="slider" >
+                    
+                    <input type="radio" name="slider" id="s1" class="hidden" checked >
+                    <input type="radio" name="slider" id="s2" class="hidden">
+                    
+                    
+                    <input type="radio" name="slider" id="s5" class="hidden">
+
+                    <label for="s1" id="slide1">
+                    <div id="shadow">
+                    
                     </div>
-                </div>
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class="w-[645px] h-[420px] relative">
+                        
+                    </label>
+                    <label for="s2" id="slide2">
+                    <div id="shadow">
+                    
+                    </div>
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class="w-[645px] h-[420px] relative">
+                    </label>
+                    <label for="s5" id="slide5">
+                    <div id="shadow">
+                    
+                    </div>
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class="w-[645px] h-[420px] relative">
+                    </label>
+                    </section>
+                    
+
+                    </div>
                 <!-- coba coba -->
             </div>
         </div>
@@ -63,38 +84,70 @@
         </div>
         <!--Frame picture-->
         <div class="flex justify-center mb-[71px] mt-[146px]">
-            <img class="mt-10 justify-center w-[826px] h-[818px] " src="{{ asset('images/Frame.svg') }}"
+            <img class="relative mt-10 justify-center w-[826px] h-[818px] " src="{{ asset('images/Frame.svg') }}"
                 alt="">
             <!--Icon kecil city-->
             <div>
                 <div class="group">
                     <div class="opacity-0 group-hover:opacity-100">
                         <p
-                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins font-semibold text-[20px] mt-[22px] ml-[-480px]">
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] font-semibold text-[20px] mt-[22px] ml-[-530px]">
                             Startup Academy</p>
                     </div>
-                    <a
+                    <button
                         class="transition duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 absolute mt-[115px] ml-[-480px]"><img
-                            src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></a>
+                            src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></button>
                 </div>
-
-                <button type="button" class="w-[57px] h[72px] absolute mt-[410px] ml-[-168px]"><img
-                        src="{{ asset('images/data-science-icon.svg') }}" alt=""></button>
-                <button type="button" class="w-[57px] h[72px] absolute mt-[340px] ml-[-780px]"><img
-                        src="{{ asset('images/grand-is.svg') }}" alt=""></button>
-                <button type="button" class="w-[57px] h[72px] absolute mt-[460px] ml-[-520px]"><img
-                        src="{{ asset('images/hall-is.svg') }}" alt=""></button>
+                <!-- 2 -->
+                <div class="group ml-[-168px]">
+                    <div class="opacity-0 group-hover:opacity-100">
+                        <p
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] mt-80 font-semibold text-[20px] ">
+                            Data Science Academy</p>
+                    </div>
+                    <button
+                        class="absolute transition mt-[410px] duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 "><img
+                            src="{{ asset('images/data-science-icon.svg') }}" alt=""></button>
+                </div>
+                <!-- 3 -->
+                <div class="group ">
+                    <div class="opacity-0 group-hover:opacity-100">
+                        <p
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] ml-[-900px] mt-64 font-semibold text-[20px] ">
+                            Grand Talkshow</p>
+                    </div>
+                    <button
+                        class="absolute transition ml-[-780px] mt-[340px] duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 "><img
+                            src="{{ asset('images/grand-is.svg') }}" alt=""></button>
+                </div>
+                <!-- 4 -->
+                <div class="group ">
+                    <div class="opacity-0 group-hover:opacity-100">
+                        <p
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] ml-[-520px] mt-96 font-semibold text-[20px] ">
+                            E-Hall of IS</p>
+                    </div>
+                    <button
+                        class="absolute transition ml-[-520px] mt-[460px] duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 "><img
+                            src="{{ asset('images/hall-is.svg') }}" alt=""></button>
+                </div>
+                <!-- <button type="button" class="w-[57px] h[72px] absolute mt-[410px] ml-[-168px]"><img
+                        src="{{ asset('images/data-science-icon.svg') }}" alt=""></button> -->
+                <!-- <button type="button" class="w-[57px] h[72px] absolute mt-[340px] ml-[-780px]"><img
+                        src="{{ asset('images/grand-is.svg') }}" alt=""></button> -->
+                <!-- <button type="button" class="w-[57px] h[72px] absolute mt-[460px] ml-[-520px]"><img
+                        src="{{ asset('images/hall-is.svg') }}" alt=""></button> -->
 
             </div>
         </div>
         <!-- Startup academy slide  -->
-        <div class="swiper mySwiper ">
-            <div class="swiper-wrapper sm:w-[700px] cursor-grab">
-                <!--slide 1-->
-                <div class="flex justify-center swiper-slide">
-
-                    <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
-                        <div>
+        
+<div id="default-carousel" class="relative h-[446px] w-[752px] mx-auto" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl sm:h-64 xl:h-[1000px]">
+         <!-- Item 1 -->
+        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20 h-[1000px]" data-carousel-item="">
+        <div >
                             <img src="./images/startup-academy.svg" alt=""
                                 class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
                             <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Startup Academy</p>
@@ -106,71 +159,37 @@
                                 class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
                         </div>
-                    </div>
-
-                </div>
-                <!-- 2 -->
-                <div class="flex justify-center swiper-slide">
-
-                    <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
-                        <div>
-                            <img src="./images/data-science-slide.svg" alt=""
-                                class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
-                            <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Data Science Academy</p>
-                            <p
-                                class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
-                                Data Science Academy hadir untuk menjadi langkah awal atau katalis karier peserta
-                                sebagai seorang data scientist.</p>
-                            <button
-                                class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
-                                Lanjut</button>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- 3 -->
-                <div class="flex justify-center swiper-slide">
-
-                    <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
-                        <div>
-                            <img src="./images/hall-is-slide.svg" alt=""
-                                class="w-[94px] h-[94px] mb-[-12px] mx-auto">
-                            <p class="mt-[30px] text-center font-bold font-poppins text-2xl">E-Hall of IS</p>
-                            <p
-                                class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
-                                porttitor.</p>
-                            <button
-                                class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
-                                Lanjut</button>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- 4 -->
-                <div class="flex justify-center swiper-slide">
-
-                    <div class="bg-[#191A1E] mx-auto w-[752px] h-[446px] rounded-2xl flex justify-center pt-[49px]">
-                        <div>
-                            <img src="./images/grand-talkshow-slide.svg" alt=""
-                                class="w-[94px] h-[94px] mb-[-12px] mx-auto">
-                            <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Grand Talkshow</p>
-                            <p
-                                class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
-                                porttitor.</p>
-                            <button
-                                class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
-                                Lanjut</button>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- button arrow-->
-            </div>
-            <div class="mr-20 rounded-full swiper-button-next bg-liteBlack"></div>
-            <div class="rounded-full swiper-button-prev bg-liteBlack"></div>
+            
         </div>
+        <!-- Item 2 -->
+        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
+            
+        </div>
+        <!-- Item 3 -->
+        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
+            
+        </div>
+    </div>
+    <!-- Slider indicators -->
+    
+    <!-- Slider controls -->
+    <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev="">
+        <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="hidden">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next="">
+        <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="hidden">Next</span>
+        </span>
+    </button>
+</div>
+
+               
+                
+                        
         <!--Startup academy slide -->
 
         <!-- timeline -->
@@ -228,7 +247,7 @@
             {{-- timeline --}}
             <div class="my">
                 <div class="container mx-auto">
-                    <ol class="items-center justify-center text-center md:flex">
+                    <ol class="items-start justify-center text-center md:flex">
                         <li class="relative mb-6 sm:mb-0 w-[400px]">
 
                             <div class="flex items-center justify-center overflow-hidden">
@@ -238,10 +257,9 @@
                                 <div class="hidden sm:flex w-1/2 absolute right-0 h-2 bg-[#333333]">
                                 </div>
                             </div>
-                            <div class="mt-3">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">03
-                                    Sep</time>
-                                <h3 class="text-lg font-semibold text-white font-poppins pb-7">E-hall of IS
+                            <div class="mt-10">
+                                <time class="block px-12 mb-9 tracking-wide text-[20px] font-bold text-white font-poppins">3 September 2022</time>
+                                <h3 class="text-[16px] tracking-wide font-semibold text-white font-poppins pb-7">E-hall of IS
                             </div>
                         </li>
 
@@ -253,10 +271,10 @@
                                 </div>
                                 <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                             </div>
-                            <div class="mt-3">
-                                <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">10 - 18 Sep
+                            <div class="mt-10">
+                                <time class="block px-12 mb-9 tracking-wide text-[20px] font-bold text-white font-poppins">10-18 September 2022
                                 </time>
-                                <h3 class="text-lg font-semibold text-white font-poppins">Startup Academy & <br>
+                                <h3 class="text-[16px] tracking-wide font-semibold text-white font-poppins">Startup Academy <br> & <br>
                                     Data Science Academy</h3>
                             </div>
                         </li>
@@ -268,9 +286,9 @@
                                 </div>
                                 <div class="hidden sm:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
                             </div>
-                            <div class="mt-3">
-                                <time class="block mb-2 text-lg font-medium text-white font-poppins">19 Nov</time>
-                                <h3 class="text-lg font-semibold text-white font-poppins pb-7">Grand Talkshow</h3>
+                            <div class="mt-10">
+                                <time class="block mb-9 tracking-wide text-[20px] font-bold text-white font-poppins">19 November 2022</time>
+                                <h3 class="text-[16px] tracking-wide font-semibold text-white font-poppins pb-7">Grand Talkshow</h3>
                             </div>
                         </li>
                     </ol>
