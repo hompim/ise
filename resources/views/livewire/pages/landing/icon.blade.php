@@ -40,7 +40,7 @@
                         <a class="text-white font-semiboldbold">E-Hall of IS.</a>
                     </p>
                 </div>
-                <!-- about this -->
+                <!-- slider about this start-->
                 <div class="relative ">
                 
                 <section id="slider" >
@@ -74,7 +74,7 @@
                     
 
                     </div>
-                <!-- coba coba -->
+                <!-- slider about this end -->
             </div>
         </div>
 
@@ -131,12 +131,6 @@
                         class="absolute transition ml-[-520px] mt-[460px] duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 "><img
                             src="{{ asset('images/hall-is.svg') }}" alt=""></button>
                 </div>
-                <!-- <button type="button" class="w-[57px] h[72px] absolute mt-[410px] ml-[-168px]"><img
-                        src="{{ asset('images/data-science-icon.svg') }}" alt=""></button> -->
-                <!-- <button type="button" class="w-[57px] h[72px] absolute mt-[340px] ml-[-780px]"><img
-                        src="{{ asset('images/grand-is.svg') }}" alt=""></button> -->
-                <!-- <button type="button" class="w-[57px] h[72px] absolute mt-[460px] ml-[-520px]"><img
-                        src="{{ asset('images/hall-is.svg') }}" alt=""></button> -->
 
             </div>
         </div>
