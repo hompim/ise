@@ -3,26 +3,33 @@
 <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
 <link rel="stylesheet" href="{{ asset('css/new.css') }}">
 
-<div class="bg-black font-poppins">
-    <div class="flex flex-col-reverse pl-[130px] lg:flex-row  items-center pt-[202px]">
+
+    <div class="bg-black md:flex md:flex-col-reverse pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
         <div class="flex flex-col items-start flex-1 text-white">
             <h1
-                class="text-7xl text-center lg:text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">
-                IT Convention</h1>
-            <h1 class="font-bold text-center text-7xl lg:text-left">Zone</h1>
-            <button
-                class="px-6 py-3 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full mt-[140px] relative xl:blur font-bold">Let's
-                Explore</button>
-            <button
-                class="px-6 py-3 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full mt-[284px] absolute font-semibold">Let's
-                Explore</button>
+                class="lg:!text-7xl ml-8 md:ml-0 text-5xl md:text-center lg:!text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">
+                IT Convention
+                <br>
+                <span class="text-white">Zone</span>
+            </h1>
+            <!-- button start -->
+            <div class="relative mt-16 ml-8 md:ml-0 md:mt-24 md:mb-8 text-center max-w-fit group" >
+            <div class="absolute inset-0 ">
+                <a href="#isometric-city"
+                    class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's
+                    Explore</a>
+            </div>
+            <a href="#isometric-city" class="relative btn">Let's
+                Explore</a>
+    </div>
+            <!-- button end -->
         </div>
         <div class="flex justify-center flex-1 w-[691px] h[553px]">
             <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full">
         </div>
 
     </div>
-    <div x-data="{ tab: 'bsl' }" class="flex-row items-center justify-center text-white ">
+    <div x-data="{ tab: 'bsl' }" class=" bg-black flex-row items-center justify-center text-white ">
         <div x-show="tab === 'bsl'" class="flex justify-center">
             <div class="flex-col w-3/4 p-4 mt-32 text-center">
                 <div class="px-[100px] mt[124px] mb-[77px]">
@@ -333,7 +340,7 @@
         <!--nutup bsl -->
     </div>
 </div>
-</div>
+
 <!-- feedback event -->
 <div class="bg-black pt-[210px] pb-[138px]">
     <img src="{{ asset('images/rectangle-footer-icon.svg') }}" class="w-auto h-[20px] absolute mt-[90px]">
