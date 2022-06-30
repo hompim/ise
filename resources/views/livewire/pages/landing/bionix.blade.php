@@ -1,5 +1,5 @@
 <div class="bg-black font-poppins">
-    <div class="md:flex md:flex-col-reverse lg:flex-row items-start pt-1 md:pt-[202px] md:pl-[130px]">
+    <div class="md:flex md:flex-col-reverse lg:flex-row items-start pt-1 md:pt-[202px] md:pl-[130px] overflow-hidden">
         <div class="flex flex-col items-start flex-1 text-white mt-36">
             <h1
                 class="lg:text-7xl ml-8 md:ml-0 text-5xl md:text-center lg:!text-left font-bold bg-gradient-to-t bg-clip-text text-transparent from-pink-300 to-[#E499FF]">
