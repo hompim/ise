@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/new.css') }}">
 
     <!-- hero section start -->
-    <div class="bg-black pt-20 md:flex md:flex-col-reverse pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
+    <div class="bg-black pt-20 md:flex md:flex-col-reverse l:pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
         <div class="flex flex-col items-start flex-1 text-white">
             <h1
                 class="lg:!text-7xl ml-8 md:ml-0 text-5xl md:text-center lg:!text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">
@@ -25,14 +25,14 @@
             <!-- button end -->
         </div>
         <!-- ml-48 w-[210px] -translate-y-24 md:-translate-y-0 flex justify-center flex-1 -->
-        <div class="flex justify-center flex-1 w-[691px] h[553px]">
+        <div class="flex justify-center flex-1 lg:w-[691px] lg:h[553px]">
             <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full">
         </div>
 
     </div>
     <!-- hero section end -->
-    <div class="bg-black pt-[124px] text-center px-[183px]">
-                    <h1 class=" lg:text-2xl font-bold font-poppins text-white">About This Zone</h1>
+    <div class="bg-black pt-[124px] text-center px-[22px] lg:px-[183px]">
+                    <h1 class=" lg:text-4xl font-bold font-poppins text-white">About This Zone</h1>
                     <p class="mt-10 text-lg text-[#B5B3BC] font-poppins">
                         <a class="text-white font-semiboldbold">IT Convention</a> merupakan salah satu zona dari ISE!
                         (Information Systems
@@ -51,7 +51,7 @@
             <div class="flex-col text-center">
                 
                 <!-- slider about this start-->
-                <div class="relative items-start lg:items-center ">
+                <div class="relative ">
                 
                 <section id="slider" >
                     
@@ -65,20 +65,20 @@
                     <div id="shadow">
                     
                     </div>
-                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" lg:w-[645px] lg:h-[420px] relative">
                         
                     </label>
                     <label for="s2" id="slide2">
                     <div id="shadow">
                     
                     </div>
-                        <img src="{{ asset('images/rectangle-icon.svg') }}" class="w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" lg:w-[645px] lg:h-[420px] relative">
                     </label>
                     <label for="s5" id="slide5">
                     <div id="shadow">
                     
                     </div>
-                        <img src="{{ asset('images/rectangle-icon.svg') }}" class="w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" lg:w-[645px] lg:h-[420px] relative">
                     </label>
                     </section>
                     
@@ -146,7 +146,7 @@
         </div>
         <!-- Startup academy slide  -->
         
-<div id="default-carousel" class="relative h-[446px] w-[752px] mx-auto" data-carousel="static">
+<div id="default-carousel" class="relative lg:h-[446px] lg:w-[752px] mx-auto" data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl h-[446px]">
          <!-- Item 1 -->
@@ -348,7 +348,7 @@
 <div class="bg-black pt-[210px] pb-[138px]">
     <img src="{{ asset('images/rectangle-footer-icon.svg') }}" class="w-auto h-[20px] absolute mt-[90px]">
     <!-- feedback input -->
-    <div class="bg-[#191A1E] mx-auto w-[866px] h-[189px] rounded-2xl flex justify-center relative">
+    <div class="bg-[#191A1E] mx-auto l:w-[866px] l:h-[189px] rounded-2xl flex justify-center relative">
         <div class="rounded ">
             <p class="mt-[22px] text-[26px] text-center text-white font-bold font-poppins">What do you want to say
                 about our event?</p>
