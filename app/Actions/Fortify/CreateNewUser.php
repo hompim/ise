@@ -35,7 +35,7 @@ class CreateNewUser implements CreatesNewUsers
             'jenjang' => ['required']
         ])->validate();
 
-        $member =  Member::created([
+        $member =  Member::create([
             'jenjang' => $input['jenjang']
         ]);
 

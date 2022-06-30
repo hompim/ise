@@ -138,9 +138,9 @@
         
 <div id="default-carousel" class="relative h-[446px] w-[752px] mx-auto" data-carousel="static">
     <!-- Carousel wrapper -->
-    <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl sm:h-64 xl:h-[1000px]">
+    <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl h-[446px]">
          <!-- Item 1 -->
-        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20 h-[1000px]" data-carousel-item="">
+        <div class="duration-700 flex flex-col justify-center items-center ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20 " data-carousel-item="">
         <div >
                             <img src="./images/startup-academy.svg" alt=""
                                 class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">

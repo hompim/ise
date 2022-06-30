@@ -3,9 +3,14 @@
 namespace App\Http\Livewire\Pages\Auth\Bionix;
 
 use Livewire\Component;
+use Livewire\WithFileUploads;
+use Intervention\Image\ImageManager;
 
 class RegisterCollege extends Component
 {
+
+    use WithFileUploads;
+
     public $cities;
     public $step = 1;
     public $isIdentityDone = false;
@@ -14,6 +19,8 @@ class RegisterCollege extends Component
     public $errorMessage;
     public $team_name,
         $info_source,
+        $judul_ide_bisnis,
+        $bmc_file_path,
         $member_1_name,
         $member_2_name,
         $member_3_name,
@@ -66,8 +73,8 @@ class RegisterCollege extends Component
     {
         $validatedData = $this->validate([
             'team_name' => 'required',
-            'university_name' => 'required',
-            'university_city' => 'required',
+            'judul_ide_bisnis' => 'required',
+            'bmc_file_path' => 'required'
         ]);
         $this->isIdentityDone = true;
         $this->move(2);
@@ -160,7 +167,7 @@ class RegisterCollege extends Component
             'whatsapp' => $this->member_1_whatsapp,
             'year' => $this->member_1_year,
             'major' => $this->member_1_major,
-            'link_twibbon' => $this->member_1_twibbon
+            'twibbon' => $this->member_1_twibbon
         ]);
         $team_member_2 = null;
         if ($this->with_member_2) {
@@ -170,7 +177,7 @@ class RegisterCollege extends Component
                 'whatsapp' => $this->member_2_whatsapp,
                 'year' => $this->member_2_year,
                 'major' => $this->member_2_major,
-                'link_twibbon' => $this->member_2_twibbon
+                'twibbon' => $this->member_2_twibbon
             ])->id;
         }
         $team_member_3 = null;
@@ -182,7 +189,7 @@ class RegisterCollege extends Component
                     'year' => $this->member_3_year,
                     'major' => $this->member_3_major,
                     'whatsapp' => $this->member_3_whatsapp,
-                    'link_twibbon' => $this->member_3_twibbon
+                    'twibbon' => $this->member_3_twibbon
                 ])->id;
             } else {
                 $team_member_2 = TeamSeniorMember::create([
@@ -191,7 +198,7 @@ class RegisterCollege extends Component
                     'whatsapp' => $this->member_3_whatsapp,
                     'year' => $this->member_3_year,
                     'major' => $this->member_3_major,
-                    'link_twibbon' => $this->member_3_twibbon
+                    'twibbon' => $this->member_3_twibbon
                 ])->id;
             }
         }
@@ -200,6 +207,8 @@ class RegisterCollege extends Component
             'info_source' => $this->info_source,
             'university_name' => $this->university_name,
             'city_id' => $this->university_city,
+            'bmc_file_path' => $this->bmc_file_path,
+            'judul_ide_bisnis' => $this->judul_ide_bisnis,
             'competition_round' => 'Penyisihan',
             'leader_id' => $team_member_1->id,
             'member1_id' => $team_member_2,

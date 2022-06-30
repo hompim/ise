@@ -103,6 +103,11 @@ Route::middleware('auth')->group(function () {
                 //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
             });
 
+            Route::group(['prefix' => 'is-class'], function () {
+                Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegistasiISClass::class)->name('register-is-class');
+                //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
+            });
+
 
         });
     });

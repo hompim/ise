@@ -64,7 +64,7 @@ class Sidebar extends Component
                     ],
                     [
                         'type' => 'divider',
-                        'tag' =>'class=my-3'
+                        'tag' =>'class=mb-3'
                     ]
                 );
             }
@@ -106,7 +106,7 @@ class Sidebar extends Component
                     ],
                     [
                         'type' => 'divider',
-                        'tag' =>'class=my-3'
+                        'tag' =>'class=mb-3'
                     ]
                 );
             }

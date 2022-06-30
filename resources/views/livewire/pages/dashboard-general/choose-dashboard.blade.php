@@ -18,14 +18,18 @@
                         </div>
                         <div>
                             @if($e->regis_link)
-                                @if(date('Y-m-d')<=date('Y-m-d',strtotime($e->end_date)))
+                                @if(date('Y-m-d')<=date('Y-m-d',strtotime($e->end_date) && date('Y-m-d')>date('Y-m-d',strtotime($e->start_date))))
                                     <a href="{{route("$e->regis_link")}}" type="button" target="_blank"
                                         style="background: rgb(178,33,229)"
                                        class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">Daftar
                                     </a>
                                 @elseif(date('Y-m-d')>date('Y-m-d',strtotime($e->end_date)))
-                                    <p class="text-center font-bold">
+                                    <p class="text-center font-bold text-white">
                                         Pendaftaran ditutup
+                                    </p>
+                                @elseif(date('Y-m-d')<date('Y-m-d',strtotime($e->start_date)))
+                                    <p class="text-center font-bold text-white">
+                                        Pendaftaran belum dibuka
                                     </p>
                                 @endif
                             @endif
@@ -83,7 +87,7 @@
                 slidesPerView: 1,
                 spaceBetween: 40,
                 autoHeight: true,
-                loop: @if(sizeof($events)>=3) true @else false @endif,
+                loop: @if(sizeof($events)>3) true @else false @endif,
                 autoplay: {
                     delay: 45000
                 },

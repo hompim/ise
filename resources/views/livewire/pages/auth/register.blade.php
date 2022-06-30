@@ -6,9 +6,7 @@
             @foreach ($errors->all() as $error)
                 <div class="relative px-4 py-3 text-red-700 bg-red-100 border border-red-400 rounded" role="alert">
                     <ul>
-                        @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
-                        @endforeach
                     </ul>
                 </div>
             @endforeach
