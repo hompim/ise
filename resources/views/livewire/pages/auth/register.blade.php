@@ -1,3 +1,27 @@
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISE! 2022</title>
+
+    <link rel="icon" href="{{ asset('images/logo-only.png') }}">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/swiper.css')}}">
+</head>
+<body class=" bg-black font font-poppins">
+<div class="rounded-md mt-36  md:mx-auto justify-center md:w-10/12 mx-8 mb-8  bg-liteBlack font-poppins">
+   <div class="bg-[#141414]  flex flex-row md:py-12 md:gap-[892px]">
+   <img class="ml-[88px] -translate-y-16 w-[88px]" src="{{ asset('images/logo-ise.svg') }}" alt="logo ise">
+   <img class="translate-y-12" src="{{ asset('images/isometric-city-webinar-kickoff.svg') }}" alt="logo ise">
+   </div>
+
 <div>
     <form class="mx-10 mt-8 mb-12 space-y-6 text-lg" action="/register" method="POST">
         <h2 class="text-4xl font-bold text-white font-poppins">Sign Up</h2>
@@ -13,7 +37,12 @@
         @endif
         <div class="rounded-md shadow-sm ">
 
-            <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
+            <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins"><div class="mt-12 flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
+    <label for="email-address">Nomor WhatsApp</label>
+    <input id="" name="email" type="email" required
+        class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
+        placeholder="Masukkan nomor WhatsApp kamu">
+</div>
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" required
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
