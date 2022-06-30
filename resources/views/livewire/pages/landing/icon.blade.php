@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/new.css') }}">
 
     <!-- hero section start -->
-    <div class="bg-black pt-20 md:flex md:flex-col-reverse l:pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
+    <div class="bg-black pt-20  md:flex md:flex-col-reverse l:pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
         <div class="flex flex-col items-start flex-1 text-white">
             <h1
                 class="lg:!text-7xl ml-8 md:ml-0 text-5xl md:text-center lg:!text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">
@@ -25,7 +25,7 @@
             <!-- button end -->
         </div>
         <!-- ml-48 w-[210px] -translate-y-24 md:-translate-y-0 flex justify-center flex-1 -->
-        <div class="flex justify-center flex-1 lg:w-[691px] lg:h[553px]">
+        <div class=" flex  flex-1 w-[317px] l-[254px] lg:w-[691px] lg:h[553px]">
             <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full">
         </div>
 
@@ -90,11 +90,11 @@
 
         <!--Let's See The Inside-->
         <div>
-            <h1 class="font-bold text-4xl mt-[201px] font-poppins text-center">Let's See The Inside</h1>
+            <h1 class="font-bold text-xl lg:text-4xl mt-[201px] font-poppins text-center">Let's See The Inside</h1>
         </div>
         <!--Frame picture-->
         <div class="flex justify-center mb-[71px] mt-[146px]">
-            <img class="relative mt-10 justify-center w-[826px] h-[818px] " src="{{ asset('images/Frame.svg') }}"
+            <img class="relative mt-10 justify-center w-[312px] h-[247px] l:w-[826px] l:h-[818px] " src="{{ asset('images/Frame.svg') }}"
                 alt="">
             <!--Icon kecil city-->
             <div>
