@@ -87,7 +87,7 @@
                 slidesPerView: 1,
                 spaceBetween: 40,
                 autoHeight: true,
-                loop: @if(sizeof($events)>=3) true @else false @endif,
+                loop: @if(sizeof($events)>3) true @else false @endif,
                 autoplay: {
                     delay: 45000
                 },
