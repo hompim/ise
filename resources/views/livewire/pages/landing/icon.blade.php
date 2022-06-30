@@ -3,8 +3,8 @@
 <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
 <link rel="stylesheet" href="{{ asset('css/new.css') }}">
 
-
-    <div class="bg-black md:flex md:flex-col-reverse pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
+    <!-- hero section start -->
+    <div class="bg-black pt-20 md:flex md:flex-col-reverse pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
         <div class="flex flex-col items-start flex-1 text-white">
             <h1
                 class="lg:!text-7xl ml-8 md:ml-0 text-5xl md:text-center lg:!text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">
@@ -30,11 +30,9 @@
         </div>
 
     </div>
-    <div x-data="{ tab: 'bsl' }" class=" bg-black flex-row items-center justify-center text-white ">
-        <div x-show="tab === 'bsl'" class="flex justify-center">
-            <div class="flex-col w-3/4 p-4 mt-32 text-center">
-                <div class="px-[100px] mt[124px] mb-[77px]">
-                    <h1 class=" lg:text-2xl font-bold font-poppins">About This Zone</h1>
+    <!-- hero section end -->
+    <div class="bg-black pt-[124px] text-center px-[183px]">
+                    <h1 class=" lg:text-2xl font-bold font-poppins text-white">About This Zone</h1>
                     <p class="mt-10 text-lg text-[#B5B3BC] font-poppins">
                         <a class="text-white font-semiboldbold">IT Convention</a> merupakan salah satu zona dari ISE!
                         (Information Systems
@@ -48,8 +46,12 @@
                         <a class="text-white font-semiboldbold">E-Hall of IS.</a>
                     </p>
                 </div>
+    <div x-data="{ tab: 'bsl' }" class=" bg-black flex-row items-center justify-center text-white ">
+        <div x-show="tab === 'bsl'" class="flex justify-center">
+            <div class="flex-col text-center">
+                
                 <!-- slider about this start-->
-                <div class="relative ">
+                <div class="relative items-start lg:items-center ">
                 
                 <section id="slider" >
                     
@@ -63,20 +65,20 @@
                     <div id="shadow">
                     
                     </div>
-                        <img src="{{ asset('images/rectangle-icon.svg') }}" class="w-[645px] h-[420px] relative">
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                         
                     </label>
                     <label for="s2" id="slide2">
                     <div id="shadow">
                     
                     </div>
-                        <img src="{{ asset('images/rectangle-icon.svg') }}" class="w-[645px] h-[420px] relative">
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class="w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                     </label>
                     <label for="s5" id="slide5">
                     <div id="shadow">
                     
                     </div>
-                        <img src="{{ asset('images/rectangle-icon.svg') }}" class="w-[645px] h-[420px] relative">
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class="w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                     </label>
                     </section>
                     
