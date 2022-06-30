@@ -26,7 +26,7 @@
         <div x-show="tab === 'bsl'" class="flex justify-center">
             <div class="flex-col w-3/4 p-4 mt-32 text-center">
                 <div class="px-[100px] mt[124px] mb-[77px]">
-                    <h1 class="text-2xl font-bold font-poppins">About This Zone</h1>
+                    <h1 class=" lg:text-2xl font-bold font-poppins">About This Zone</h1>
                     <p class="mt-10 text-lg text-[#B5B3BC] font-poppins">
                         <a class="text-white font-semiboldbold">IT Convention</a> merupakan salah satu zona dari ISE!
                         (Information Systems
@@ -40,7 +40,7 @@
                         <a class="text-white font-semiboldbold">E-Hall of IS.</a>
                     </p>
                 </div>
-                <!-- about this -->
+                <!-- slider about this start-->
                 <div class="relative ">
                 
                 <section id="slider" >
@@ -74,7 +74,7 @@
                     
 
                     </div>
-                <!-- coba coba -->
+                <!-- slider about this end -->
             </div>
         </div>
 
@@ -131,12 +131,6 @@
                         class="absolute transition ml-[-520px] mt-[460px] duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 "><img
                             src="{{ asset('images/hall-is.svg') }}" alt=""></button>
                 </div>
-                <!-- <button type="button" class="w-[57px] h[72px] absolute mt-[410px] ml-[-168px]"><img
-                        src="{{ asset('images/data-science-icon.svg') }}" alt=""></button> -->
-                <!-- <button type="button" class="w-[57px] h[72px] absolute mt-[340px] ml-[-780px]"><img
-                        src="{{ asset('images/grand-is.svg') }}" alt=""></button> -->
-                <!-- <button type="button" class="w-[57px] h[72px] absolute mt-[460px] ml-[-520px]"><img
-                        src="{{ asset('images/hall-is.svg') }}" alt=""></button> -->
 
             </div>
         </div>
@@ -144,9 +138,9 @@
         
 <div id="default-carousel" class="relative h-[446px] w-[752px] mx-auto" data-carousel="static">
     <!-- Carousel wrapper -->
-    <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl sm:h-64 xl:h-[1000px]">
+    <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl h-[446px]">
          <!-- Item 1 -->
-        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20 h-[1000px]" data-carousel-item="">
+        <div class="duration-700 flex flex-col justify-center items-center ease-in-out transition-all absolute inset-0 transform translate-x-0 z-20 " data-carousel-item="">
         <div >
                             <img src="./images/startup-academy.svg" alt=""
                                 class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
@@ -162,14 +156,52 @@
             
         </div>
         <!-- Item 2 -->
-        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
-            
+        <div class="duration-700 pt-[51px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
+        <div>
+                            <img src="./images/data-science-slide.svg" alt=""
+                                class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
+                            <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Data Science Academy</p>
+                            <p
+                                class="ml-[107px] mr-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                                Data Science Academy hadir untuk menjadi langkah awal atau katalis karier peserta
+                                sebagai seorang data scientist.</p>
+                            <button
+                                class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                Lanjut</button>
+                        </div>
         </div>
         <!-- Item 3 -->
-        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-            
+        <div class="duration-700 pt-[51px] ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
+        <div>
+                            <img src="./images/hall-is-slide.svg" alt=""
+                                class="w-[94px] h-[94px] mb-[-12px] mx-auto">
+                            <p class="mt-[30px] text-center font-bold font-poppins text-2xl">E-Hall of IS</p>
+                            <p
+                                class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
+                                porttitor.</p>
+                            <button
+                                class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                Lanjut</button>
+                        </div>
+        </div>
+        <!-- item 4 -->
+        <div class="duration-700 pt-[51px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
+        <div>
+                            <img src="./images/grand-talkshow-slide.svg" alt=""
+                                class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
+                            <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Grand Talkshow</p>
+                            <p
+                                class="ml-[107px] mr-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
+                                porttitor.</p>
+                            <button
+                                class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                Lanjut</button>
+                        </div>
         </div>
     </div>
+    
     <!-- Slider indicators -->
     
     <!-- Slider controls -->

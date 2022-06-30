@@ -6,6 +6,7 @@ use App\Http\Livewire\Pages\Landing\Icon;
 use App\Http\Livewire\Pages\Landing\Bionix;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
+use App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,15 @@ use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
 Route::get('/', Ise::class)->name('ise');
 Route::get('/bionix', Bionix::class)->name('bionix');
 Route::get('/icon', Icon::class)->name('icon');
+<<<<<<< HEAD
+Route::get('/daftarbsl', RegisterStudent::class)->name('bsl');
+Route::get('/daftarbcl', RegisterCollege::class)->name('bcl');
+
+
+=======
+
+
+// Route::get('/test', IdentitasTim::class)->name('tim');
 
 // Route::get('/daftarbsl', RegisterStudent::class)->name('bsl');
 // Route::get('/daftarbcl', RegisterCollege::class)->name('bcl');
@@ -30,6 +40,7 @@ Route::get('/icon', Icon::class)->name('icon');
 // - /dashboard/bionix/register/college
 // - /dashboard/bionix/register/student
 
+>>>>>>> 44c90b9d88c382aae39f4c038610b853eab8b485
 
 // Coming Soon Route
 Route::get('/coming-soon', function () {

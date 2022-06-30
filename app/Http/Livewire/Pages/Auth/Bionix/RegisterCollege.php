@@ -3,9 +3,14 @@
 namespace App\Http\Livewire\Pages\Auth\Bionix;
 
 use Livewire\Component;
+use Livewire\WithFileUploads;
+use Intervention\Image\ImageManager;
 
 class RegisterCollege extends Component
 {
+
+    use WithFileUploads;
+
     public $cities;
     public $step = 1;
     public $isIdentityDone = false;
@@ -69,6 +74,7 @@ class RegisterCollege extends Component
         $validatedData = $this->validate([
             'team_name' => 'required',
             'judul_ide_bisnis' => 'required',
+            'bmc_file_path' => 'required'
         ]);
         $this->isIdentityDone = true;
         $this->move(2);
