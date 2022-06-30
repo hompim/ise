@@ -23,16 +23,6 @@ use App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim;
 Route::get('/', Ise::class)->name('ise');
 Route::get('/bionix', Bionix::class)->name('bionix');
 Route::get('/icon', Icon::class)->name('icon');
-Route::get('/daftarbsl', RegisterStudent::class)->name('bsl');
-Route::get('/daftarbcl', RegisterCollege::class)->name('bcl');
-
-Route::get('/c', function () {
-    return view('livewire.pages.auth.icon.Registrasi-webinar-kick-off');
-});
-
-Route::get('/d', function () {
-    return view('livewire.pages.auth.register');
-});
 
 // Coming Soon Route
 Route::get('/coming-soon', function () {
@@ -41,5 +31,3 @@ Route::get('/coming-soon', function () {
 
 //Route Dashboard -> Dashboard.php
 Route::prefix('dashboard')->group(__DIR__ . '/dashboard.php');
-
-
