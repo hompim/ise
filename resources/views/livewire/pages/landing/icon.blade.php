@@ -16,7 +16,7 @@
             <div class="relative mt-16 ml-8 md:ml-0 md:mt-24 md:mb-8 text-center max-w-fit group" >
             <div class="absolute inset-0 ">
                 <a href="#isometric-city"
-                    class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's
+                    class="relative transition duration-1000 opacity-75 btn blur-lg  group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's
                     Explore</a>
             </div>
             <a href="#isometric-city" class="relative btn">Let's
@@ -24,6 +24,7 @@
     </div>
             <!-- button end -->
         </div>
+        <!-- ml-48 w-[210px] -translate-y-24 md:-translate-y-0 flex justify-center flex-1 -->
         <div class="flex justify-center flex-1 w-[691px] h[553px]">
             <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full">
         </div>
