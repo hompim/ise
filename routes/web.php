@@ -22,9 +22,13 @@ use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
 Route::get('/', Ise::class)->name('ise');
 Route::get('/bionix', Bionix::class)->name('bionix');
 Route::get('/icon', Icon::class)->name('icon');
-Route::get('/daftarbsl', RegisterStudent::class)->name('bsl');
-Route::get('/daftarbcl', RegisterCollege::class)->name('bcl');
 
+// Route::get('/daftarbsl', RegisterStudent::class)->name('bsl');
+// Route::get('/daftarbcl', RegisterCollege::class)->name('bcl');
+
+// Route register bionix -> dashboard.php
+// - /dashboard/bionix/register/college
+// - /dashboard/bionix/register/student
 
 
 // Coming Soon Route
