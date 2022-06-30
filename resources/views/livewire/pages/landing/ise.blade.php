@@ -105,14 +105,16 @@
             <div class="swiper mySwiper w-[24rem] lg:w-[700px]">
                 <div class="swiper-wrapper cursor-grab">
                     <div class="flex justify-center swiper-slide">
-                        <img class="rounded-3xl h-[420px]"
+                        <img class="w-full rounded-3xl h-[420px] object-cover"
                             src="{{ asset('images/dokumentasi/BIONIX 2020 2.png') }}" />
                     </div>
                     <div class="flex justify-center swiper-slide">
-                        <img class="rounded-3xl  h-[420px]" src="{{ asset('images/dokumentasi/BIONIX 2020.png') }}" />
+                        <img class="w-full rounded-3xl  h-[420px] object-cover"
+                            src="{{ asset('images/dokumentasi/BIONIX 2020.png') }}" />
                     </div>
                     <div class="flex justify-center swiper-slide">
-                        <img class="rounded-3xl h-[420px]" src="{{ asset('images/dokumentasi/BIONIX 2021.jpeg') }}" />
+                        <img class="w-full rounded-3xl h-[420px] object-cover"
+                            src="{{ asset('images/dokumentasi/BIONIX 2021.jpeg') }}" />
                     </div>
                 </div>
                 <div class="p-6 rounded-full swiper-button-next bg-liteBlack"></div>
@@ -133,14 +135,15 @@
             <div class="swiper mySwiper w-[24rem] lg:w-[700px] lg:!ml-0">
                 <div class="swiper-wrapper cursor-grab">
                     <div class="flex justify-center swiper-slide">
-                        <img class=" rounded-3xl h-[420px]"
+                        <img class="w-full rounded-3xl h-[420px] object-cover"
                             src="{{ asset('images\dokumentasi\ICON 2019(2).jpg') }}" />
                     </div>
                     <div class="flex justify-center swiper-slide">
-                        <img class=" rounded-3xl h-[420px]" src="{{ asset('images\dokumentasi\ICON 2019.jpg') }}" />
+                        <img class="w-full rounded-3xl h-[420px] object-cover"
+                            src="{{ asset('images\dokumentasi\ICON 2019.jpg') }}" />
                     </div>
                     <div class="flex justify-center swiper-slide">
-                        <img class=" rounded-3xl h-[420px]"
+                        <img class="w-full rounded-3xl h-[420px] object-cover"
                             src="{{ asset('images\dokumentasi\ICON 2021(1).png') }}" />
                     </div>
                 </div>
@@ -184,6 +187,51 @@
                 <a class="pt-6 text-2xl font-semibold text-white transition duration-300 opacity-75 font-poppins hover:opacity-100 "
                     href="/bionix">Learn More <img class="inline pl-5"
                         src="{{ asset('images/chevron-left.svg') }}" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    {{-- Kick Off Webinar Class --}}
+    <div class="px-12 lg:px-56 my-36">
+        <h1 class="mb-24 text-4xl font-bold text-white font-poppins lg:!text-7xl"><span
+                class="bg-gradient-to-r from-[#E11BAA]  to-purple-200 text-transparent bg-clip-text">Kick
+                Off
+                Webinar</span>
+            ISE!
+            2022</h1>
+        <div class="relative group">
+            <div
+                class="absolute inset-0 transition duration-1000 bg-purple-200 opacity-75 blur-lg group-hover:opacity-100 group-hover:duration-300 animate-tilt">
+            </div>
+            <div
+                class="relative flex flex-col items-center justify-center px-4 pb-24 rounded-md bg-liteBlack lg:px-28">
+                <h3 class="pt-12 text-4xl font-semibold text-white font-poppins lg:text-4xl">
+                    Data Science and Data Analytics: <br> Their Role in Startup Companies
+                </h3>
+                <img src="{{ asset('images/people-siluet.png') }}"
+                    class="transition duration-1000 ease-linear hover:transform hover:scale-105 hover:duration-300"
+                    alt="is-class">
+                <div class="relative my-12 group">
+                    <div
+                        class="absolute inset-0 transition duration-1000 bg-gradient-to-b from-[#E11BAA] to-purple-200 opacity-75 blur-lg group-hover:opacity-100 group-hover:duration-300 animate-pulse">
+                    </div>
+                    <div
+                        class="relative flex flex-col items-center justify-center px-4 py-6 rounded-xl bg-liteBlack lg:px-28">
+                        <h4 class="text-4xl font-bold text-white">16 Juli 2022</h4>
+                    </div>
+                </div>
+                <p class="text-base font-medium lg:!text-lg font-poppins text-liteGray">Menjadi pembuka dari seluruh
+                    rangkaian kegiatan ISE! 2022, webinar ini akan memberimu wawasan baru mengenai peran penting
+                    pengolahan data pada suatu startup. <br> Nantikan dan daftar segera, gratis!</p>
+                <div
+                    class="relative left-0 right-0 justify-center mx-auto mt-24 text-center max-w-fit group  transition duration-300 hover:!scale-105">
+                    <div class="absolute inset-0 ">
+                        <a href="#"
+                            class="relative px-12 transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins">Sign
+                            Up</a>
+                    </div>
+                    <a href="#" class="relative px-12 btn">Sign Up</a>
+                </div>
             </div>
         </div>
     </div>
