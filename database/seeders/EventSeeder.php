@@ -18,9 +18,10 @@ class EventSeeder extends Seeder
         Event::insert([
             [
                 'title' => 'Webinar Kick Off ISE! 2022',
-                'description' => 'Occaecat et magna consequat duis exercitation.',
+                'description' => 'Menjadi pembuka dari seluruh rangkaian kegiatan ISE! 2022, webinar ini akan memberimu wawasan baru mengenai peran penting pengolahan data pada suatu startup.
+                Nantikan dan daftar segera, gratis!',
                 'start_date' => '2022-07-03',
-                'end_date' => '2022-08-01',
+                'end_date' => null,
                 'regis_link' => 'register-webinar',
                 'landing_link' => null,
                 'event_type' => 'All',
@@ -36,9 +37,9 @@ class EventSeeder extends Seeder
             ],
             [
                 'title' => 'IS Class ISE! 2022',
-                'description' => 'Eu ipsum exercitation culpa commodo anim cillum voluptate eu.',
-                'start_date' => '2021-07-016',
-                'end_date' => '2022-09-25',
+                'description' => 'Simulasi perkuliahan yang memberikan kamu, para siswa/i SMA/SMK/sederajat, pengalaman menjadi seorang mahasiswa Sistem Informasi ITS. Dapatkan informasi seputar keilmuan dan keprofesian, serta rasakan langsung dunia perkuliahan bersama dosen-dosen terbaik di bidangnya.',
+                'start_date' => null,
+                'end_date' => null,
                 'regis_link' => 'register-is-class',
                 'landing_link' =>null,
                 'event_type' => 'SMA',

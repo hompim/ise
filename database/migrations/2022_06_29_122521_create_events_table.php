@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
             $table->enum('event_type', ['Mahasiswa', 'SMA', 'Umum', 'All']);
             $table->string('landing_link')->nullable();
             $table->string('regis_link')->nullable();
