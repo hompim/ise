@@ -38,8 +38,8 @@
             <div class="flex-col px-5 md:w-3/4 md:p-4 text-center font-poppins">
                 <div class="md:px-[10px] md:pt-24 pt-[43.5px]">
                     <h1 class="md:text-2xl text-[19.25px] font-bold font-poppins">Bionix Student Level</h1>
-                    <p class="md:mt-10 mt-[12px] md:text-lg font-poppins text-center text-[#B5B3BC] md:mx-48 mx-8 text-[14.6px]">Olimpiade bisnis dan IT 
-                        untuk siswa/i SMA/SMK seluruh Indonesia dan kompetisi inovasi bisnis dengan memanfaatkan kemajuan 
+                    <p class="md:mt-10 mt-[12px] md:text-lg font-poppins text-center text-[#B5B3BC] md:mx-48 mx-8 text-[14.6px]">Olimpiade bisnis dan IT
+                        untuk siswa/i SMA/SMK seluruh Indonesia dan kompetisi inovasi bisnis dengan memanfaatkan kemajuan
                         teknologi  dalam  bentuk business plan
                     </p>
                 </div>
@@ -64,7 +64,7 @@
                                     berlangsung.</p>
                                 <div class="flex flex-row justify-center mt-12 space-x-4 font-poppins text-base items-center">
                                     <div>
-                                        <button 
+                                        <button
                                             class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg
                                                 class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
@@ -88,7 +88,7 @@
 
                         <!-- second carousel -->
                         <div class="grid grid-cols-8 gap-4 swiper-slide">
-                            <div 
+                            <div
                                 class="bg-liteBlack h-[330px] rounded-2xl col-span-5 px-6 py-8 text-start">
                                 <div class="flex flex-row ">
                                     <div class="flex flex-col">
@@ -159,7 +159,7 @@
                                     berlangsung.</p>
                                 <div class="flex flex-col-reverse justify-center mt-[27px] gap-3 font-poppins text-[12px] items-center">
                                     <div>
-                                        <button 
+                                        <button
                                             class="py-1/2 px-4 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg
                                                 class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
@@ -235,7 +235,7 @@
                     <div class="p-1 -ml-1 rounded-full swiper-button-prev bg-liteBlack"></div>
                 </div>
             <!-- IS Class Mobile end -->
-                
+
             <!-- Start Competition pc -->
                 <h1 class="text-white font-poppins font-bold text-[28px] md:text-[64px] pt-[32px] md:pt-[65px] md:mt-[211px]">Competition</h1>
                 <div class="swiper mySwiper w-[980px] mt-14 font-poppins h-[695px] hidden md:block">
@@ -248,13 +248,13 @@
                             </div>
                             <div class="bg-liteBlack rounded-b-lg text-center h-[399px]">
                                 <p class="items-center px-24 pt-10 text-lg text-center font-poppins text-[#B5B3BC]">
-                                    Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang 
-                                    terbagi dalam beberapa region di Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi 
-                                    informasi, pemrograman, logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan, 
+                                    Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang
+                                    terbagi dalam beberapa region di Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi
+                                    informasi, pemrograman, logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan,
                                     Final Presentasi Bisnis, dan terakhir Awarding Night</p>
                                 <div class="flex flex-row justify-center mt-12 space-x-4 font-poppins text-base items-center">
                                     <div>
-                                        <button 
+                                        <button
                                             class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg
                                                 class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
@@ -282,7 +282,7 @@
                                 <div class="flex flex-row">
                                     <div class="flex flex-col">
                                         <h1 class="text-2xl font-bold text-white font-poppins">Free Pass</h1>
-                                        <p class="text-2xl text-liteGray font-poppins">Dapatkan Free Pass Departemen 
+                                        <p class="text-2xl text-liteGray font-poppins">Dapatkan Free Pass Departemen
                                         Sistem Informasi ITS</p>
                                     </div>
                                     <img class="w-48 mt-32" src="{{ asset('images/mail-star.svg') }}" alt="mail star">
@@ -303,7 +303,7 @@
                                 <div class="flex flex-row">
                                     <div class="flex flex-col">
                                         <h1 class="text-2xl font-bold text-black font-poppins">1 Try Out Pack</h1>
-                                        <p class="text-2xl text-[#555555] font-poppins">Dapatkan 
+                                        <p class="text-2xl text-[#555555] font-poppins">Dapatkan
                                         1 paket TRY OUT bagi peserta yang mendaftar saat roadshow</p>
                                     </div>
                                     <img class="mt-32 -mr-8 w-52" src="{{ asset('images/love-folder.svg') }}"
@@ -341,13 +341,13 @@
                             </div>
                             <div class="bg-liteBlack rounded-b-lg text-center h-[399px]">
                                 <p class="items-center px-[40px] pt-[18px] text-sm text-center font-poppins text-[#B5B3BC]">
-                                    Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang 
-                                    terbagi dalam beberapa region di Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi 
-                                    informasi, pemrograman, logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan, 
+                                    Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang
+                                    terbagi dalam beberapa region di Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi
+                                    informasi, pemrograman, logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan,
                                     Final Presentasi Bisnis, dan terakhir Awarding Night</p>
                                 <div class="flex flex-col-reverse justify-center mt-[27px] gap-3 font-poppins text-[12px] items-center">
                                     <div>
-                                        <button 
+                                        <button
                                             class="py-1/2 px-4 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg
                                                 class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
@@ -374,7 +374,7 @@
                             <div class="flex flex-row">
                                 <div class="flex flex-col">
                                     <h1 class="text-[14.6px] font-bold text-white font-poppins pb-2">Free Pass</h1>
-                                    <p class="text-[14.6px] text-liteGray font-poppins">Dapatkan Free Pass Departemen 
+                                    <p class="text-[14.6px] text-liteGray font-poppins">Dapatkan Free Pass Departemen
                                     Sistem Informasi ITS</p>
                                 </div>
                                 <img class="w-36 mt-28 -ml-10" src="{{ asset('images/mail-star.svg') }}" alt="mail star">
@@ -395,7 +395,7 @@
                             <div class="flex flex-row">
                                 <div class="flex flex-col">
                                     <h1 class="text-[14.6px] font-bold text-black font-poppins pb-2">1 Try Out Pack</h1>
-                                    <p class="text-[14.6px] text-[#555555] font-poppins">Dapatkan 
+                                    <p class="text-[14.6px] text-[#555555] font-poppins">Dapatkan
                                     1 paket TRY OUT bagi peserta yang mendaftar saat roadshow</p>
                                 </div>
                                 <img class="mt-28 -ml-14 w-[105px]" src="{{ asset('images/love-folder.svg') }}"
@@ -589,7 +589,7 @@
                         <div class="flex flex-col md:my-0 my-8 mx-4 md:mx-4 text-2xl text-left pr-18">
 
                             <a class="md:mt-8 my-2 text-lg md:text-2xl font-bold">E-certificate</a>
-                           
+
 
                             <a class="md:mr-16 text-sm text-[#EAEAEA] md:text-base">Daftar dan dapatkan e-certificate</a>
 
@@ -629,7 +629,7 @@
                         </div>
                     </div>
 
-                
+
 
 
                 </div>
@@ -639,7 +639,7 @@
                         class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text"> fantastic
                     </a> prizes
                 </div>
-                
+
                 <div class="relative font-poppins">
                     <img class="left-0 right-0 mx-auto" src="{{ asset('images/trophy.svg') }}" alt="">
                     <h1 class="absolute md:text-2xl text-xs transform -translate-x-1/2 -translate-y-1/2 top-3/4 left-1/2">Total
@@ -736,4 +736,4 @@
     </div>
 </div>
 
-<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+{{-- <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script> --}}

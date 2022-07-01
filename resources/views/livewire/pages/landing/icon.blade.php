@@ -1,7 +1,10 @@
-<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+{{-- <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
 <script src="//unpkg.com/alpinejs" defer></script>
-<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" /> --}}
+
+@push('css')
 <link rel="stylesheet" href="{{ asset('css/new.css') }}">
+@endpush
 
     <!-- hero section start -->
     <div class="bg-black pt-[81px] lg:pt-[210px]  md:flex md:flex-col-reverse lg:pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
@@ -49,39 +52,39 @@
     <div x-data="{ tab: 'bsl' }" class=" bg-black flex-row items-center justify-center text-white ">
         <div x-show="tab === 'bsl'" class="flex justify-center">
             <div class="flex-col text-center">
-                
+
                 <!-- slider about this start-->
                 <div class="relative ">
-                
+
                 <section id="slider" >
-                    
+
                     <input type="radio" name="slider" id="s1" class="hidden" checked >
                     <input type="radio" name="slider" id="s2" class="hidden">
-                    
-                    
+
+
                     <input type="radio" name="slider" id="s5" class="hidden">
 
                     <label for="s1" id="slide1">
                     <div id="shadow">
-                    
+
                     </div>
                         <img src="{{ asset('images/rectangle-icon.svg') }}" class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
-                        
+
                     </label>
                     <label for="s2" id="slide2">
                     <div id="shadow">
-                    
+
                     </div>
                         <img src="{{ asset('images/rectangle-icon.svg') }}" class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                     </label>
                     <label for="s5" id="slide5">
                     <div id="shadow">
-                    
+
                     </div>
                         <img src="{{ asset('images/rectangle-icon.svg') }}" class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                     </label>
                     </section>
-                    
+
 
                     </div>
                     <script type="text/javascript">
@@ -165,7 +168,7 @@
             </div>
         </div>
         <!-- Startup academy slide  -->
-        
+
 <div id="default-carousel" class="relative p-[77px] lg:p-0 lg:h-[446px] lg:w-[752px] mx-auto" data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl h-[446px]">
@@ -183,7 +186,7 @@
                                 class=" mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] lg:text-2xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
                         </div>
-            
+
         </div>
         <!-- Item 2 -->
         <div class="duration-700 pt-[51px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
@@ -231,9 +234,9 @@
                         </div>
         </div>
     </div>
-    
+
     <!-- Slider indicators -->
-    
+
     <!-- Slider controls -->
     <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev="">
         <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -249,9 +252,9 @@
     </button>
 </div>
 
-               
-                
-                        
+
+
+
         <!--Startup academy slide -->
 
         <!-- timeline -->
@@ -382,4 +385,4 @@
         </div>
     </div>
 </div>
-<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></>
+{{-- //<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></> --}}
