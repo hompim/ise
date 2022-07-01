@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\bionixcheck;
+use App\Http\Middleware\iconcheck;
 use App\Http\Middleware\membercheck;
 use App\Http\Middleware\usertype;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
@@ -68,6 +69,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'membercheck' => membercheck::class,
         'usertype' => usertype::class,
-        'bionixcheck' => bionixcheck::class
+        'bionixcheck' => bionixcheck::class,
+        'iconcheck' => iconcheck::class
     ];
 }

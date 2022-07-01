@@ -42,20 +42,19 @@
 <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
 
-@if(!config('app.debug'))
+    @if (!config('app.debug'))
     <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z0XNDJT58"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ59B1X1XZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-            gtag('js', new Date());
-
-            gtag('config', 'G-2Z0XNDJT58');
-        </script>
+        gtag('config', 'G-DJ59B1X1XZ');
+    </script>
     @endif
 </head>
 <body class="font-sans antialiased c-app" >
@@ -85,20 +84,7 @@
 <!-- Alpine v2 -->
 {{-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> --}}
 
-@if (!config('app.debug'))
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ59B1X1XZ"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-DJ59B1X1XZ');
-</script>
-@endif
 
 <!-- Alpine v3 -->
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>

@@ -8,6 +8,6 @@ class TermCondition extends Component
 {
     public function render()
     {
-        return view('livewire.pages.auth.term-condition');
+        return view('livewire.pages.auth.term-condition')->layout('layouts.guest');
     }
 }

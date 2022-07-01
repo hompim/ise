@@ -37,6 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::middleware('verified')->group(function () {
     //    Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
     //    Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
+    Route::get('/term&conditions',\App\Http\Livewire\Pages\Auth\TermCondition::class)->name('term-condition');
 
 
         //Admin
@@ -95,7 +96,7 @@ Route::middleware('auth')->group(function () {
             });
 
             Route::group(['prefix' => 'webinar'], function () {
-                Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegistasiWebinarKickOff::class)->name('register-webinar');
+                Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegistasiWebinarKickOff::class)->name('register-webinar')->middleware('iconcheck:webinar_peserta');
                 //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
             });
 
