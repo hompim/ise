@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AccessDate;
 use App\Http\Middleware\bionixcheck;
 use App\Http\Middleware\iconcheck;
 use App\Http\Middleware\membercheck;
@@ -70,6 +71,7 @@ class Kernel extends HttpKernel
         'membercheck' => membercheck::class,
         'usertype' => usertype::class,
         'bionixcheck' => bionixcheck::class,
-        'iconcheck' => iconcheck::class
+        'iconcheck' => iconcheck::class,
+        'accessdate' => AccessDate::class
     ];
 }
