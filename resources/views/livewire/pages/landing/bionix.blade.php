@@ -422,7 +422,7 @@
             <!-- Competition Mobile end -->
 
                 <!-- Start prizes -->
-                <div class="text-4xl md:text-6xl text-white font-bold mt-36 md:w-[537px] md:mx-auto">
+                <div class="text-4xl md:text-6xl text-white font-bold mt-[88px] md:mt-36 md:w-[537px] md:mx-auto">
                     Join and earn <a
                         class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text"> fantastic
                     </a> prizes
@@ -439,7 +439,7 @@
 
                 <!-- Timeline Start -->
                 <div class="my-36">
-                    <h1 class="mb-24 font-bold text-white font-poppins text-5xl md:text-7xl">Mark your calender and <br> follow the
+                    <h1 class="mb-24 font-bold text-white font-poppins text-[27.75px] md:text-7xl">Mark your calender and <br> follow the
                         <span
                             class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
                     </h1>
