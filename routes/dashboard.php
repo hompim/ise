@@ -35,7 +35,9 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard.index');
 
     Route::middleware('verified')->group(function () {
-       // Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
+    //    Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
+    //    Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
+
 
         //Admin
         Route::group(['prefix' => 'admin', 'middleware' => 'usertype:admin'], function () {
@@ -66,6 +68,10 @@ Route::middleware('auth')->group(function () {
         //Peserta
         Route::group(['prefix' => 'peserta', 'middleware' => 'usertype:member'], function () {
            Route::get('/', \App\Http\Livewire\Pages\DashboardGeneral\ChooseDashboard::class)->name('peserta.dashboard.choose');
+           Route::get('/register-success', function(){
+                return view('livewire.pages.auth.register-success');
+           })->name('register-success');
+
 
             //Bionix Dashboard
             Route::group(['prefix' => 'bionix'], function () {

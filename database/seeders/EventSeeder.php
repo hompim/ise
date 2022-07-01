@@ -28,7 +28,7 @@ class EventSeeder extends Seeder
             ],
             [
                 'title' => 'BIONIX Student Level 2022',
-                'description' => 'Olimpiade bisnis dan IT terbesar di Indonesia untuk tingkat pelajar SMA/SMK sederajat.BIONIX Student Level dilaksanakan melalui empat tahapan kompetisi dengan konsep acara daring penuh.',
+                'description' => 'Olimpiade bisnis dan IT terbesar di Indonesia untuk tingkat pelajar SMA/SMK sederajat.BIONIX Student Level dilaksanakan melalui empat tahapan kompetisi',
                 'start_date' => '2022-07-16',
                 'end_date' => '2022-09-25',
                 'regis_link' => 'register-student',

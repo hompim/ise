@@ -10,7 +10,7 @@
 
 body {
     -webkit-text-size-adjust: none;
-    background: linear-gradient(0deg, rgba(0,155,189,1) 0%, rgba(0,65,103,1) 50%);
+    background: linear-gradient(to right, #B221E5,#5B1BE1 );
     color: black;
     height: 100%;
     line-height: 1.4;
@@ -82,7 +82,7 @@ img {
     -premailer-cellpadding: 0;
     -premailer-cellspacing: 0;
     -premailer-width: 100%;
-    background: linear-gradient(0deg, rgba(0,155,189,1) 0%, rgba(0,65,103,1) 50%);
+    background: linear-gradient(to right, #B221E5,#5B1BE1 );
     margin: 0;
     padding: 0;
     width: 100%;
@@ -229,7 +229,7 @@ img {
 .button {
     -webkit-text-size-adjust: none;
     border-radius: 8px;
-    background: linear-gradient(270.02deg, #4CCCED 0%, #507EC5 64.04%, #1F4D95 99.96%);
+    background: linear-gradient(to right, #B221E5,#5B1BE1 );
     font-weight: bold;
     padding: 8px 40px;
     /*border-radius: 20px;*/
