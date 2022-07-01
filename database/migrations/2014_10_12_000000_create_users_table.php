@@ -20,6 +20,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->nullableMorphs('userable');
+            $table->string('whatsapp')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

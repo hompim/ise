@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Exception\ImageException;
+use Intervention\Image\ImageManager;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -17,11 +18,11 @@ class RegistasiWebinarKickOff extends Component
     use WithFileUploads;
 
     public $name,
-            $instagram_story,
-            $whatsapp,
-            $info_source,
-            $agree,
-            $errorMessage;
+        $instagram_story,
+        $whatsapp,
+        $info_source,
+        $agree,
+        $errorMessage;
 
     public function render()
     {
@@ -49,25 +50,31 @@ class RegistasiWebinarKickOff extends Component
         Storage::disk('public')->makeDirectory('instagram_story_webinar');
         $name = date('YmdHis') . '_WEBINAR_' . $this->name . '.' . $this->instagram_story->getClientOriginalExtension();
         $instagram_story_path = 'instagram_story_webinar/' . $name;
-        $resized_image = (new ImageException())
-                ->make($this->instagram_story)
-                ->resize(600, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                    $constraint->upsize();
-                })->encode($this->photo1->getClientOriginalExtension());
+        $resized_image = (new ImageManager())
+            ->make($this->instagram_story)
+            ->resize(600, null, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->encode($this->instagram_story->getClientOriginalExtension());
 
-                Storage::disk('public')
-                ->put('instagram_story_webinar/' . $name,
-                    $resized_image->__toString());
+        Storage::disk('public')
+            ->put(
+                $instagram_story_path,
+                $resized_image->__toString()
+            );
+
+        Auth::user()->update([
+            'name' => $this->name,
+            'whatsapp' => $this->whatsapp
+        ]);
 
         IconWebinarKickOff::create([
             'member_id' => Auth::user()->userable_id,
             'info_source' => $this->info_source,
             'instagram_story_path' => $instagram_story_path,
-            'whatsapp' => $this->whatsapp
         ]);
         Mail::to(Auth::user()->email)->send(new WebinarKickOffMail);
-        return redirect()->to(route('register-success-talkshow'));
+        //return redirect()->to(route('register-success-talkshow'));
     }
 
     public function mount()
