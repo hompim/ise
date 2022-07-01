@@ -2,7 +2,7 @@
 <script src="//unpkg.com/alpinejs" defer></script>
 <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
 <link rel="stylesheet" href="{{ asset('css/new.css') }}">
-
+<script src="{{ asset('js/index.js') }}"></script>
     <!-- hero section start -->
     <div class="bg-black pt-[81px] lg:pt-[210px]  md:flex md:flex-col-reverse lg:pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
         <div class="flex flex-col items-start flex-1 text-white">
@@ -55,26 +55,26 @@
                 
                 <section id="slider" >
                     
-                    <input type="radio" name="slider" id="s1" class="hidden" checked >
-                    <input type="radio" name="slider" id="s2" class="hidden">
+                    <input type="radio" name="slider" id="radio1" class="hidden" checked >
+                    <input type="radio" name="slider" id="radio2" class="hidden">
                     
                     
-                    <input type="radio" name="slider" id="s5" class="hidden">
+                    <input type="radio" name="slider" id="radio3" class="hidden">
 
-                    <label for="s1" id="slide1">
+                    <label for="radio1" id="slide1">
                     <div id="shadow">
                     
                     </div>
                         <img src="{{ asset('images/rectangle-icon.svg') }}" class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                         
                     </label>
-                    <label for="s2" id="slide2">
+                    <label for="radio2" id="slide2">
                     <div id="shadow">
                     
                     </div>
                         <img src="{{ asset('images/rectangle-icon.svg') }}" class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                     </label>
-                    <label for="s5" id="slide5">
+                    <label for="radio3" id="slide5">
                     <div id="shadow">
                     
                     </div>
@@ -84,16 +84,7 @@
                     
 
                     </div>
-                    <script type="text/javascript">
-                        var counter = 1;
-                        setInterval(function() {
-                            document.getElementById('radio'+ counter).checked = true;
-                            counter++;
-                            if (counter > 3) {
-                                counter = 1;
-                            }
-                        }, 5000);
-                    </script>
+                    
                     <!-- <script type="text/javascript">
                     var counter = 1;
                     setInterval(function(){
@@ -121,7 +112,7 @@
                 <div class="group">
                     <div class="lg:opacity-0 lg:group-hover:opacity-100">
                         <p
-                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] font-semibold lg:text-[20px] lg:mt-[22px] lg:ml-[-530px]">
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] font-semibold lg:text-[20px] ml-[-200px] lg:mt-[22px] lg:ml-[-530px]">
                             Startup Academy</p>
                     </div>
                     <button
@@ -132,7 +123,7 @@
                 <div class="group ml-[-60px] lg:ml-[-168px]">
                     <div class="lg:opacity-0 lg:group-hover:opacity-100">
                         <p
-                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] mt-[20px] lg:mt-80 font-semibold lg:text-[20px] ">
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] mt-[100px] lg:mt-80 font-semibold lg:text-[20px] ">
                             Data Science Academy</p>
                     </div>
                     <button
@@ -143,7 +134,7 @@
                 <div class="group ">
                     <div class="lg:opacity-0 lg:group-hover:opacity-100">
                         <p
-                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] lg:ml-[-900px] lg:mt-64 font-semibold lg:text-[20px] ">
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-330px] mt-[90px] lg:ml-[-900px] lg:mt-64 font-semibold lg:text-[20px] ">
                             Grand Talkshow</p>
                     </div>
                     <button
@@ -154,7 +145,7 @@
                 <div class="group ">
                     <div class="lg:opacity-0 lg:group-hover:opacity-100">
                         <p
-                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-220px] mt-[140px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
                             E-Hall of IS</p>
                     </div>
                     <button
@@ -166,7 +157,7 @@
         </div>
         <!-- Startup academy slide  -->
         
-<div id="default-carousel" class="relative p-[77px] lg:p-0 lg:h-[446px] lg:w-[752px] mx-auto" data-carousel="static">
+<div id="default-carousel" class="relative px-[77px] lg:px-0 lg:h-[446px] lg:w-[752px] mx-auto" data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl h-[446px]">
          <!-- Item 1 -->
@@ -340,7 +331,7 @@
                                     Data Science Academy</h3>
                             </div>
                         </li>
-                        <li class="relative mb-6 sm:mb-0 w-[400px]">
+                        <li class="relative pb-6 sm:mb-0 w-[400px]">
 
                             <div class="relative flex items-center">
                                 <div
