@@ -27,24 +27,25 @@ class AdminSeeder extends Seeder
             'admin_type' => 'Icon Admin'
         ]);
 
-        User::create(
+        User::insert(
             [
-                'name' => 'Admin Bionix',
-                'email' => 'admin1@gmail.com',
-                'password' => Hash::make('password'),
-                'userable_id' => $admin1->id,
-                'userable_type' => 'App\Models\Admin',
-                'email_verified_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Admin Icon',
-                'email' => 'admin2@gmail.com',
-                'password' => Hash::make('password'),
-                'userable_id' => $admin2->id,
-                'userable_type' => 'App\Models\Admin',
-                'email_verified_at' => Carbon::now()
-            ],
-
+                [
+                    'name' => 'Admin Bionix',
+                    'email' => 'admin1@gmail.com',
+                    'password' => Hash::make('password'),
+                    'userable_id' => $admin1->id,
+                    'userable_type' => 'App\Models\Admin',
+                    'email_verified_at' => Carbon::now()
+                ],
+                [
+                    'name' => 'Admin Icon',
+                    'email' => 'admin2@gmail.com',
+                    'password' => Hash::make('password'),
+                    'userable_id' => $admin2->id,
+                    'userable_type' => 'App\Models\Admin',
+                    'email_verified_at' => Carbon::now()
+                ],
+            ]
         );
     }
 }

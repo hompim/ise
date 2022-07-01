@@ -23,8 +23,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/', function () {
         if (Auth::user()) {
             if (Auth::user()->userable_type == 'App\Models\Admin') {
-                if (Auth::user()->userable->admin_type == "ICON Admin") {
-                    return redirect(route('academy.admin.home.index'));
+                if (Auth::user()->userable->admin_type == "Icon Admin") {
+                    return redirect(route('icon.admin.index'));
                 } else {
                     return redirect(route('bionix.admin.beranda.index'));
                 }
@@ -53,9 +53,11 @@ Route::middleware('auth')->group(function () {
             });
 
              //Icon
-             Route::group(['prefix' => 'icon', 'middleware' => 'usertype:icon_admin'], function () {
+             Route::group(['prefix' => 'icon', 'middleware' => 'usertype:admin'], function () {
+                Route::get('/', \App\Http\Livewire\Pages\Icon\Admin\Index::class)->name('icon.admin.index');
+
                 Route::group(['prefix' => 'webinar'], function () {
-                    Route::get('daftar-peserta', \App\Http\Livewire\Pages\Auth\Icon\RegistasiWebinarKickOff::class)->name('webinar.admin.daftar-peserta.index');
+                    Route::get('daftar-peserta', \App\Http\Livewire\Pages\Icon\Webinar\Admin\Index::class)->name('webinar.admin.daftar-webinar');
                     //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
                 });
             });

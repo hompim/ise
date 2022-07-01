@@ -77,17 +77,18 @@ class Sidebar extends Component
                         'title' => 'ICON',
                     ],
                     [
-                        'type' => 'divider'
+                        'type' => 'divider',
+                        'tag' => 'mb-3'
                     ],
                     [
                         'type' => 'title',
-                        'title' => 'ICON - Grand Talkshow'
+                        'title' => 'Webinar Kick Off'
                     ],
                     [
                         'type' => 'menu',
                         'icon' => 'cil-group',
                         'title' => 'Daftar Peserta',
-                        'route-name' => 'webinar.admin.daftar-peserta.index'
+                        'route-name' => 'webinar.admin.daftar-webinar'
                     ],
                     [
                         'type' => 'divider',

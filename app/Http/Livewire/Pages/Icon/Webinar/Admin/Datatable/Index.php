@@ -11,7 +11,7 @@ class Index extends LivewireDatatable
     public function builder()
     {
         return IconWebinarKickOff::join('members', function ($q) {
-            $q->on('members.id', '=', 'icon_talkshow_members.member_id');
+            $q->on('members.id', '=', 'icon_webinar_kick_offs.member_id');
         })->join('users', function ($q) {
             $q->on('users.userable_id', '=', 'members.id');
             $q->where('users.userable_type', '=', 'App\Models\Member');

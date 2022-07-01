@@ -38,6 +38,11 @@ class usertype
             if (Auth::user()->userable_type == "App\Models\Admin" && (Auth::user()->userable->admin_type == "Bionix Admin" || Auth::user()->userable->admin_type == "Global Admin")) {
                 return $next($request);
             }
+            elseif ($type == 'icon_admin') {
+                if (Auth::user()->userable_type == "App\Models\Admin" && (Auth::user()->userable->admin_type == "Icon Admin" || Auth::user()->userable->admin_type == "Global Admin")) {
+                    return $next($request);
+                }
+            }
         } elseif ($type == 'Mahasiswa' || $type == 'SMA') {
             if (Auth::user()->userable->jenjang == $type) {
                 return $next($request);
