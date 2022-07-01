@@ -65,25 +65,45 @@
                     <div id="shadow">
                     
                     </div>
-                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" lg:w-[645px] lg:h-[420px] relative">
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                         
                     </label>
                     <label for="s2" id="slide2">
                     <div id="shadow">
                     
                     </div>
-                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" lg:w-[645px] lg:h-[420px] relative">
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                     </label>
                     <label for="s5" id="slide5">
                     <div id="shadow">
                     
                     </div>
-                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" lg:w-[645px] lg:h-[420px] relative">
+                        <img src="{{ asset('images/rectangle-icon.svg') }}" class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                     </label>
                     </section>
                     
 
                     </div>
+                    <script type="text/javascript">
+                        var counter = 1;
+                        setInterval(function() {
+                            document.getElementById('radio'+ counter).checked = true;
+                            counter++;
+                            if (counter > 3) {
+                                counter = 1;
+                            }
+                        }, 5000);
+                    </script>
+                    <!-- <script type="text/javascript">
+                    var counter = 1;
+                    setInterval(function(){
+                    document.getElementById('radio' + counter).checked = true;
+                    counter++;
+                    if(counter > 3){
+                        counter = 1;
+                    }
+                    }, 5000);
+                    </script> -->
                 <!-- slider about this end -->
             </div>
         </div>
@@ -362,4 +382,4 @@
         </div>
     </div>
 </div>
-<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></>
