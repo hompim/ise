@@ -26,7 +26,7 @@ Route::get('/icon', Icon::class)->name('icon');
 
 // Coming Soon Route
 Route::get('/coming-soon', function () {
-    return view('coming-soon');
+    return view('coming-soon-page');
 });
 
 //Route Dashboard -> Dashboard.php

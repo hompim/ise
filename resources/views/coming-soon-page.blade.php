@@ -11,20 +11,19 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
 </head>
 
-<body class="h-screen bg-no-repeat bg-cover"
-    style="background-image: url('{{ asset('images/coming-soon/bg.png') }}');">
+<body class="h-screen bg-black bg-no-repeat bg-cover">
     <main class="flex flex-col items-center justify-center h-screen text-center">
         <div class="relative">
             <div class="absolute inset-0">
                 <h1 class="relative text-2xl font-bold text-blue-300 font-poppins lg:text-6xl md:text-4xl blur">
-                    Our website will come very soon
+                    This page will come very soon
                 </h1>
                 <h2 class="relative text-sm font-bold text-blue-300 font-poppins blur top-6 md:top-12">
                     Meanwhile, have a look at these..
                 </h2>
             </div>
             <h1 class="relative text-2xl font-bold text-white font-poppins lg:text-6xl md:text-4xl">
-                Our website will come very soon
+                This page will come very soon
             </h1>
             <h2 class="relative text-sm font-bold text-white top-6 md:top-12 font-poppins">
                 Meanwhile, have a look at these..
