@@ -40,6 +40,7 @@
                         </div>
                     </a>
                 </div>
+
                 <div class="flex flex-row items-end justify-center space-x-6">
                     <a href="https://ise-its.com" target="_blank">
                         <svg class="transition duration-300 ease-linear fill-white hover:fill-pink-300" width="20"

@@ -18,7 +18,7 @@
                         </div>
                         <div>
                             @if($e->regis_link)
-                                @if(date('Y-m-d')<=date('Y-m-d',strtotime($e->end_date) && date('Y-m-d')>date('Y-m-d',strtotime($e->start_date))))
+                                @if(date('Y-m-d')<=date('Y-m-d',strtotime($e->end_date) ))
                                     <a href="{{route("$e->regis_link")}}" type="button" target="_blank"
                                         style="background: rgb(178,33,229)"
                                        class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">Daftar

@@ -77,26 +77,6 @@ Route::middleware('auth')->group(function () {
                     });
                 });
             });
-             //Bionix Dashboard
-             Route::group(['prefix' => 'bionix'], function () {
-                Route::group(['middleware' => 'bionixcheck:unregistered'], function () {
-                    Route::middleware(['usertype:Mahasiswa'])->group(function () {
-                        Route::get('register/college', \App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege::class)->middleware(['accessdate:true,01-01-2021 00:00:00,01-09-2021 23:59:59'])->name('register-college');
-                    });
-                    Route::middleware('usertype:SMA')->group(function () {
-                        Route::get('register/student', \App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent::class)->name('register-student');
-                    });
-                });
-
-                Route::group(['middleware' => 'usertype:bionix_peserta'], function () {
-                    Route::get('/')->name('bionix.peserta.homepage');
-                    Route::get('/identitas-tim',\App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim::class)->name('bionix.peserta.identitas-tim');
-
-                    Route::group(['middleware' => 'bionixcheck:profil_terverifikasi'], function () {
-                        Route::get('/pembayaran', \App\Http\Livewire\Pages\Bionix\Peserta\Pembayaran::class)->name('bionix.peserta.pembayaran');
-                    });
-                });
-            });
 
             Route::group(['prefix' => 'webinar'], function () {
                 Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegistasiWebinarKickOff::class)->name('register-webinar');

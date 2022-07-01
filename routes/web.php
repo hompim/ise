@@ -31,3 +31,7 @@ Route::get('/coming-soon', function () {
 
 //Route Dashboard -> Dashboard.php
 Route::prefix('dashboard')->group(__DIR__ . '/dashboard.php');
+
+Route::get('testing' ,function(){
+    return view('livewire.pages.auth.icon.tes');
+});
