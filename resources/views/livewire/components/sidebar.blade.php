@@ -38,7 +38,7 @@
             @endif
         @endforeach
         <li class="c-sidebar-nav-item @if (Route::current()->getName() == 'bantuan') c-active @endif">
-            <a class="c-sidebar-nav-link" href="">
+            <a class="c-sidebar-nav-link" href="{{route('bantuan')}}">
                 <i class="far fa-question-circle c-sidebar-nav-icon"></i> Bantuan
             </a>
         </li>

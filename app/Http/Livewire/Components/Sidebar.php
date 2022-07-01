@@ -77,6 +77,12 @@ class Sidebar extends Component
                         'title' => 'ICON',
                     ],
                     [
+                        'type' => 'menu',
+                        'icon' => 'fas fa-link',
+                        'title' => 'Shorten Link',
+                        'route-name' => 'admin.shorten-link'
+                    ],
+                    [
                         'type' => 'divider',
                         'tag' => 'mb-3'
                     ],

@@ -36,7 +36,7 @@ Route::middleware('auth')->group(function () {
 
     Route::middleware('verified')->group(function () {
     //    Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
-    //    Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
+    Route::get('/bantuan', \App\Http\Livewire\Pages\DashboardGeneral\Bantuan::class)->name('bantuan');
     Route::get('/term&conditions',\App\Http\Livewire\Pages\Auth\TermCondition::class)->name('term-condition');
 
 
