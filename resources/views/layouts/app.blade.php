@@ -24,6 +24,20 @@
     <script>
         AOS.init();
     </script>
+       @if (!config('app.debug'))
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ59B1X1XZ"></script>
+       <script>
+           window.dataLayer = window.dataLayer || [];
+
+           function gtag() {
+               dataLayer.push(arguments);
+           }
+           gtag('js', new Date());
+
+           gtag('config', 'G-DJ59B1X1XZ');
+       </script>
+   @endif
 </body>
 
 </html>
