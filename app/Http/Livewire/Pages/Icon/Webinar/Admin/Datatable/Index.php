@@ -28,9 +28,9 @@ class Index extends LivewireDatatable
                 "Sekolah (guru, dll)",
                 "Teman/keluarga",
                 "Website/Aplikasi Sejuta Cita"]),
-            // Column::callback(['id'], function ($id) {
-            //     return view('livewire.pages.icon.talkshow.admin.daftar-peserta.data-tables.actions', ['id' => $id]);
-            // })
+            Column::callback(['id'], function ($id) {
+                return view('livewire.pages.icon.webinar.admin.componenets.datatable-action', ['id' => $id]);
+            })
         ];
     }
 }
