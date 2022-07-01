@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/new.css') }}">
 
     <!-- hero section start -->
-    <div class="bg-black pt-20  md:flex md:flex-col-reverse l:pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
+    <div class="bg-black pt-[81px] lg:pt-[210px]  md:flex md:flex-col-reverse lg:pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
         <div class="flex flex-col items-start flex-1 text-white">
             <h1
                 class="lg:!text-7xl ml-8 md:ml-0 text-5xl md:text-center lg:!text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">
@@ -90,11 +90,11 @@
 
         <!--Let's See The Inside-->
         <div>
-            <h1 class="font-bold text-xl lg:text-4xl mt-[201px] font-poppins text-center">Let's See The Inside</h1>
+            <h1 class="font-bold text-xl mt-[60px] lg:!text-4xl lg:mt-[201px] font-poppins text-center">Let's See The Inside</h1>
         </div>
         <!--Frame picture-->
-        <div class="flex justify-center mb-[71px] mt-[146px]">
-            <img class="relative mt-10 justify-center w-[312px] h-[247px] l:w-[826px] l:h-[818px] " src="{{ asset('images/Frame.svg') }}"
+        <div class="flex justify-center mt-[28px] mb-[71px] lg:mt-[146px]">
+            <img class="relative mt-10 justify-center w-[312px] h-[247px] lg:w-[826px] lg:h-[818px] " src="{{ asset('images/Frame.svg') }}"
                 alt="">
             <!--Icon kecil city-->
             <div>
@@ -146,21 +146,21 @@
         </div>
         <!-- Startup academy slide  -->
         
-<div id="default-carousel" class="relative lg:h-[446px] lg:w-[752px] mx-auto" data-carousel="static">
+<div id="default-carousel" class="relative p-[77px] lg:p-0 lg:h-[446px] lg:w-[752px] mx-auto" data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl h-[446px]">
          <!-- Item 1 -->
         <div class="duration-700 flex flex-col justify-center items-center ease-in-out transition-all absolute inset-0 transform translate-x-0 z-20 " data-carousel-item="">
         <div >
                             <img src="./images/startup-academy.svg" alt=""
-                                class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
-                            <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Startup Academy</p>
+                                class="sm:w-[94px] h-[94px] lg:mb-[-12px] mx-auto">
+                            <p class="mt-[30px] text-center font-bold font-poppins lg:text-2xl">Startup Academy</p>
                             <p
-                                class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                                class="  lg:mx-[80.5px] lg:mt-[30px] text-center text-[#B5B3BC] font-medium lg:text-lg font-poppins tracking-wide">
                                 Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi
                                 sebagai the next founder of startup.</p>
                             <button
-                                class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                class=" mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] lg:text-2xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
                         </div>
             
@@ -170,13 +170,13 @@
         <div>
                             <img src="./images/data-science-slide.svg" alt=""
                                 class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
-                            <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Data Science Academy</p>
+                            <p class="mt-[30px] text-center font-bold font-poppins lg:text-2xl">Data Science Academy</p>
                             <p
-                                class="ml-[107px] mr-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                                class="lg:mx-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium lg:text-lg font-poppins tracking-wide">
                                 Data Science Academy hadir untuk menjadi langkah awal atau katalis karier peserta
                                 sebagai seorang data scientist.</p>
                             <button
-                                class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                class="mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
                         </div>
         </div>
@@ -237,7 +237,7 @@
         <!-- timeline -->
         <!-- mark kalender -->
         <div class="mt-36">
-            <h1 class="mb-24 font-bold text-center text-white font-poppins text-7xl">Mark your calender and <br> follow
+            <h1 class="mb-24 font-bold text-center text-white font-poppins text-3xl lg:!text-7xl">Mark your calender and <br> follow
                 the <span
                     class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
             </h1>
@@ -345,20 +345,20 @@
 </div>
 
 <!-- feedback event -->
-<div class="bg-black pt-[210px] pb-[138px]">
-    <img src="{{ asset('images/rectangle-footer-icon.svg') }}" class="w-auto h-[20px] absolute mt-[90px]">
+<div class="bg-black pt-[81px] lg:pt-[210px] pb-[138px]">
+    <img src="{{ asset('images/rectangle-footer-icon.svg') }}" class="w-auto h-[20px] absolute mt-[22px] lg:mt-[90px]">
     <!-- feedback input -->
-    <div class="bg-[#191A1E] mx-auto l:w-[866px] l:h-[189px] rounded-2xl flex justify-center relative">
+    <div class="bg-[#191A1E] mx-auto w-[321px] h-[62px] lg:w-[866px] lg:h-[189px] rounded-2xl flex justify-center relative">
         <div class="rounded ">
-            <p class="mt-[22px] text-[26px] text-center text-white font-bold font-poppins">What do you want to say
+            <p class=" lg:pt-[22px] text-[12px] lg:text-[26px] text-center text-white font-bold font-poppins">What do you want to say
                 about our event?</p>
             <!-- input + button -->
             <input placeholder="Type here"
-                class="mt-[32px] w-[743px] h-[54px] font-medium text-[24px] pl-[33px] font-poppins rounded-2xl text-start">
+                class=" lg:mt-[32px] w-[274px] h-[20px] lg:w-[743px] lg:h-[54px] font-medium text-[10px] lg:text-[24px] pl-[23px] lg:pl-[33px] font-poppins rounded-2xl text-start">
             <button
-                class="mt-[32px] w-[146px] h-[54px] text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-144px] xl:blur font-poppins text-white ">Send</button>
+                class=" lg:contens hidden lg:mt-[32px] w-[53px] h-[19px] lg:w-[146px] lg:h-[54px] lg:text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl lg:ml-[-144px] xl:blur font-poppins text-white ">Send</button>
             <button
-                class="mt-[32px] w-[146px] h-[54px] text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-144px] absolute font-poppins text-white ">Send</button>
+                class="  lg:mt-[32px] w-[53px] h-[19px] lg:w-[146px] lg:h-[54px] text-[12px] lg:text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-52px] lg:ml-[-144px] absolute font-poppins text-white ">Send</button>
         </div>
     </div>
 </div>
