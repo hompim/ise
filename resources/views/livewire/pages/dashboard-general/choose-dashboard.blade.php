@@ -21,8 +21,8 @@
                             <p class="text-sm font-weight-normal text-white my-4">{{$e->description}}</p>
                         </div>
                         <div>
-                            @if($e->regis_link)
-                                @if(date('Y-m-d')<=date('Y-m-d',strtotime($e->end_date) && date('Y-m-d')>=date('Y-m-d',strtotime($e->start_date))))
+                            @if($e->regis_link && $e->start_date)
+                                @if(date('Y-m-d') >= date('Y-m-d',strtotime($e->start_date)) && date('Y-m-d') < date('Y-m-d',strtotime($e->end_date)) )
                                     <a href="{{route("$e->regis_link")}}" type="button" target="_blank"
                                         style="background: rgb(178,33,229)"
                                        class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">Daftar
@@ -36,6 +36,10 @@
                                         Pendaftaran belum dibuka
                                     </p>
                                 @endif
+                            @else
+                            <p class="text-center font-bold text-white">
+                                Pendaftaran belum dibuka
+                            </p>
                             @endif
                             <a href="{{"/$e->landing_link"}}" type="button" target="_blank" style="color: rgb(178,33,229)"
                                class="w-full p-2 font-bold mt-2 text-center no-underline">{{$e['title']=='Virtual Play'?'Mainkan Sekarang':'Selengkapnya'}}</a>
