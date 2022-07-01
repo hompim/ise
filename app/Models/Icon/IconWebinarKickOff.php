@@ -10,7 +10,7 @@ class IconWebinarKickOff extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['member_id', 'insitute_name', 'link_story', 'info_source'];
+    protected $fillable = ['member_id', 'instagram_story_path', 'info_source', 'whatsapp'];
 
     public function member(){
         return $this->belongsTo(Member::class);
