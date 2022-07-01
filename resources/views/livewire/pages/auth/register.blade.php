@@ -38,11 +38,6 @@
         <div class="rounded-md shadow-sm ">
 
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins"><div class="mt-12 flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
-    <label for="email-address">Nomor WhatsApp</label>
-    <input id="" name="email" type="email" required
-        class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
-        placeholder="Masukkan nomor WhatsApp kamu">
-</div>
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" required
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
