@@ -27,7 +27,7 @@
                                     <p class="text-center font-bold text-white">
                                         Pendaftaran belum dibuka
                                     </p>
-                                @elseif (date('Y-m-d') <= date('Y-m-d', strtotime($e->end_date)))
+                                @elseif($e->end_date ? date('Y-m-d') <= date('Y-m-d', strtotime($e->end_date) : true))
                                     <a href="{{ route("$e->regis_link") }}" type="button" target="_blank"
                                         style="background: rgb(178,33,229)"
                                         class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">Daftar
