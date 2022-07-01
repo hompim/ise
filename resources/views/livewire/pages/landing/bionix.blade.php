@@ -194,38 +194,38 @@
                         </div>
                         <!-- third carousel  mobile -->
                         <div
-                            class="swiper-slide bg-gradient-to-r from-liteGray to-white rounded-lg p-[30px] text-start px-10 h-[292px]">
+                            class="swiper-slide bg-gradient-to-r from-liteGray to-white rounded-lg p-[30px] text-start px-10 h-[292px] mt-32">
                             <div class="flex flex-row">
                                 <div class="flex flex-col flex-wrap">
-                                    <h1 class="text-[14.6px] font-bold text-black font-poppins">Discount</h1>
+                                    <h1 class="text-[14.6px] font-bold text-black font-poppins pb-2">Discount</h1>
                                     <p class="text-[14.6px] text-[#555555] font-poppins">
                                         Potongan biaya pedaftaran BIONIX Student Level.</p>
                                 </div>
-                                <img class="w-52 mt-10 -ml-52" src="{{ asset('images/cash-promo.svg') }}"
+                                <img class="w-52 mt-20 -ml-52" src="{{ asset('images/cash-promo.svg') }}"
                                     alt="money promo">
                             </div>
                         </div>
                         <!-- fourth carousel  mobile -->
                         <div
-                            class="swiper-slide bg-gradient-to-r from-purple-100 to-purple-400 rounded-lg p-[30px] text-start px-10">
+                            class="swiper-slide bg-gradient-to-r from-purple-100 to-purple-400 rounded-lg p-[30px] text-start px-10 mt-32">
                             <div class="flex flex-col">
-                                <h1 class="text-[14.6px] font-bold text-white font-poppins">Certificate</h1>
+                                <h1 class="text-[14.6px] font-bold text-white font-poppins pb-2">Certificate</h1>
                                 <p class="text-[14.6px] text-[#EAEAEA] font-poppins">Daftar dan dapatkan e-certificate
                                 </p>
-                                <img class="w-32 mt-36 ml-14" src="{{ asset('images/sertif.svg') }}"
+                                <img class="w-28 mt-10 ml-28" src="{{ asset('images/sertif.svg') }}"
                                     alt="purple certificate">
                             </div>
                         </div>
                         <!-- fifth carousel  mobile -->
                         <div
-                            class="swiper-slide bg-gradient-to-r from-[#E7BAF7] to-[#F7E9FC] rounded-lg p-[30px] text-start px-10">
+                            class="swiper-slide bg-gradient-to-r from-[#E7BAF7] to-[#F7E9FC] rounded-lg p-[30px] text-start px-10 mt-32">
                             <div class="flex flex-row">
                                 <div class="flex flex-col">
-                                    <h1 class="text-[14.6px] font-bold text-black font-poppins">Course Material</h1>
+                                    <h1 class="text-[14.6px] font-bold text-black font-poppins pb-2">Course Material</h1>
                                     <p class="text-[14.6px] text-[#555555] font-poppins">Materi perkuliahan dasar
                                         Departemen Sistem Informasi ITS</p>
                                 </div>
-                                <img class="mt-24 w-60 " src="{{ asset('images/js-phone-thumbs.svg') }}"
+                                <img class="mt-28 w-36 -ml-14" src="{{ asset('images/js-phone-thumbs.svg') }}"
                                     alt="phone thumbs">
                             </div>
                         </div>
@@ -331,7 +331,7 @@
             <!-- End Competition pc -->
 
             <!-- Competition Mobile start -->
-            <div class="swiper mySwiper mt-[22px] font-poppins w-[316px] h-[534px] md:hidden block">
+            <div class="swiper mySwiper mt-[22px] font-poppins w-[316px] h-fit md:hidden block">
                     <div class="swiper-wrapper">
                         <!-- first carousel -->
                         <div class="flex-col justify-center swiper-slide font-poppins">
@@ -370,47 +370,47 @@
                         </div>
 
                         <!-- second carousel  mobile -->
-                        <div class="swiper-slide bg-liteBlack rounded-lg text-start p-[30px]">
+                        <div class="swiper-slide bg-liteBlack rounded-lg text-start p-[30px] px-10 mt-32 pt">
                             <div class="flex flex-row">
                                 <div class="flex flex-col">
-                                    <h1 class="text-2xl font-bold text-white font-poppins">Free Pass</h1>
-                                    <p class="text-2xl text-liteGray font-poppins">Dapatkan Free Pass Departemen 
+                                    <h1 class="text-[14.6px] font-bold text-white font-poppins pb-2">Free Pass</h1>
+                                    <p class="text-[14.6px] text-liteGray font-poppins">Dapatkan Free Pass Departemen 
                                     Sistem Informasi ITS</p>
                                 </div>
-                                <img class="w-48 mt-32" src="{{ asset('images/mail-star.svg') }}" alt="mail star">
+                                <img class="w-36 mt-28 -ml-10" src="{{ asset('images/mail-star.svg') }}" alt="mail star">
                             </div>
                         </div>
                         <!-- third carousel  mobile -->
-                        <div class="swiper-slide bg-gradient-to-r from-purple-100 to-purple-400 rounded-lg text-start p-[30px]">
+                        <div class="swiper-slide bg-gradient-to-r from-purple-100 to-purple-400 rounded-lg text-start p-[30px] px-10 mt-32">
                             <div class="flex flex-col">
-                                <h1 class="text-2xl font-bold text-white font-poppins">E-Certificate</h1>
-                                <p class="text-2xl text-[#EAEAEA] font-poppins">Daftar dan dapatkan
+                                <h1 class="text-[14.6px] font-bold text-white font-poppins pb-2">E-Certificate</h1>
+                                <p class="text-[14.6px] text-[#EAEAEA] font-poppins">Daftar dan dapatkan
                                 e-certificate</p>
-                                <img class="w-32 mt-8 ml-24" src="{{ asset('images/sertif.svg') }}"
+                                <img class="w-28 mt-10 ml-28" src="{{ asset('images/sertif.svg') }}"
                                     alt="purple certificate">
                             </div>
                         </div>
                         <!-- fourth carousel  mobile -->
-                        <div class="swiper-slide bg-gradient-to-r from-liteGray to-white  rounded-lg text-start p-[30px]">
+                        <div class="swiper-slide bg-gradient-to-r from-liteGray to-white  rounded-lg text-start p-[30px] px-10 mt-32">
                             <div class="flex flex-row">
                                 <div class="flex flex-col">
-                                    <h1 class="text-2xl font-bold text-black font-poppins">1 Try Out Pack</h1>
-                                    <p class="text-2xl text-[#555555] font-poppins">Dapatkan 
+                                    <h1 class="text-[14.6px] font-bold text-black font-poppins pb-2">1 Try Out Pack</h1>
+                                    <p class="text-[14.6px] text-[#555555] font-poppins">Dapatkan 
                                     1 paket TRY OUT bagi peserta yang mendaftar saat roadshow</p>
                                 </div>
-                                <img class="mt-32 -mr-8 w-52" src="{{ asset('images/love-folder.svg') }}"
+                                <img class="mt-28 -ml-14 w-[105px]" src="{{ asset('images/love-folder.svg') }}"
                                     alt="love folder">
                             </div>
                         </div>
                         <!-- fifth carousel  mobile -->
-                        <div class="swiper-slide bg-gradient-to-r from-[#BBBAF7] to-[#E9F4FC] rounded-lg text-start p-[30px]">
+                        <div class="swiper-slide bg-gradient-to-r from-[#BBBAF7] to-[#E9F4FC] rounded-lg text-start p-[30px] px-10 mt-32">
                             <div class="flex flex-row">
                                 <div class="flex flex-col">
-                                    <h1 class="text-2xl font-bold text-black font-poppins">2 Try Out Packs</h1>
-                                    <p class="text-2xl text-[#555555] font-poppins">Kesempatan memperoleh
+                                    <h1 class="text-[14.6px] font-bold text-black font-poppins pb-2">2 Try Out Packs</h1>
+                                    <p class="text-[14.6px] text-[#555555] font-poppins">Kesempatan memperoleh
                                     2 paket Try Out Olimpiade beserta pembahasan</p>
                                 </div>
-                                <img class="mt-20 mr-4 w-52" src="{{ asset('images/thumbs-folder.svg') }}"
+                                <img class="mt-12 pb-5 w-36" src="{{ asset('images/thumbs-folder.svg') }}"
                                     alt="thumbs folder">
                             </div>
                         </div>
