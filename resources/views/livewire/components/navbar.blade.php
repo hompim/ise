@@ -86,7 +86,7 @@
                     text-start">
                     <a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
-                $('#logout').submit();">
+                document.querySelector('#logout').submit();">
                         Log out
                         <form action="{{ route('logout') }}" method="POST" id="logout"> @csrf
                         </form>

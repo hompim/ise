@@ -32,11 +32,8 @@
                 </div>
                 <div class="flex flex-col justify-center w-full my-12 space-y-12">
                     <h1 class="text-2xl font-bold text-center text-white lg:text-4xl">Registrasi Berhasil</h1>
-                    <p class="px-4 text-base font-medium text-center text-white lg:text-lg lg:px-12">Selamat, Anda sudah
-                        berhasil mendaftarkan diri
-                        Anda!
-                        Akses
-                        dashboard untuk melengkapi proses pendaftaran dan segera lakukan verifikasi.</p>
+                    <p class="px-4 text-base font-medium text-center text-white lg:text-lg lg:px-12">
+                        Selamat, Anda sudah berhasil mendaftarkan diri Anda! Jangan lupa cek selalu email kamu untuk update informasi terbaru dari kami.</p>
                     <div class="flex flex-col space-y-4 lg:justify-around lg:flex-row lg:space-y-0">
                         <a href="https://wa.me/6285162852050"
                             class="block mx-auto transition duration-300 hover:scale-105" target="_blank">
