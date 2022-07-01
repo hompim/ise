@@ -99,46 +99,46 @@
             <!--Icon kecil city-->
             <div>
                 <div class="group">
-                    <div class="opacity-0 group-hover:opacity-100">
+                    <div class="lg:opacity-0 lg:group-hover:opacity-100">
                         <p
-                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] font-semibold text-[20px] mt-[22px] ml-[-530px]">
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] font-semibold lg:text-[20px] lg:mt-[22px] lg:ml-[-530px]">
                             Startup Academy</p>
                     </div>
                     <button
-                        class="transition duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 absolute mt-[115px] ml-[-480px]"><img
+                        class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px]lg:group-hover:scale-[1.8] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
                             src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></button>
                 </div>
                 <!-- 2 -->
-                <div class="group ml-[-168px]">
-                    <div class="opacity-0 group-hover:opacity-100">
+                <div class="group ml-[-60px] lg:ml-[-168px]">
+                    <div class="lg:opacity-0 lg:group-hover:opacity-100">
                         <p
-                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] mt-80 font-semibold text-[20px] ">
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] mt-[20px] lg:mt-80 font-semibold lg:text-[20px] ">
                             Data Science Academy</p>
                     </div>
                     <button
-                        class="absolute transition mt-[410px] duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 "><img
+                        class="absolute lg:transition mt-[150px] lg:mt-[410px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
                             src="{{ asset('images/data-science-icon.svg') }}" alt=""></button>
                 </div>
                 <!-- 3 -->
                 <div class="group ">
-                    <div class="opacity-0 group-hover:opacity-100">
+                    <div class="lg:opacity-0 lg:group-hover:opacity-100">
                         <p
-                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] ml-[-900px] mt-64 font-semibold text-[20px] ">
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] lg:ml-[-900px] lg:mt-64 font-semibold lg:text-[20px] ">
                             Grand Talkshow</p>
                     </div>
                     <button
-                        class="absolute transition ml-[-780px] mt-[340px] duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 "><img
+                        class="absolute lg:transition ml-[-295px] mt-[120px] lg:ml-[-780px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
                             src="{{ asset('images/grand-is.svg') }}" alt=""></button>
                 </div>
                 <!-- 4 -->
                 <div class="group ">
-                    <div class="opacity-0 group-hover:opacity-100">
+                    <div class="lg:opacity-0 lg:group-hover:opacity-100">
                         <p
-                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] ml-[-520px] mt-96 font-semibold text-[20px] ">
+                            class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
                             E-Hall of IS</p>
                     </div>
                     <button
-                        class="absolute transition ml-[-520px] mt-[460px] duration-1000 w-[57px] h[72px] group-hover:scale-[1.8] group-hover:duration-300 "><img
+                        class="absolute lg:transition ml-[-196px] mt-[166px] lg:ml-[-520px] lg:mt-[460px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
                             src="{{ asset('images/hall-is.svg') }}" alt=""></button>
                 </div>
 
@@ -187,11 +187,11 @@
                                 class="w-[94px] h-[94px] mb-[-12px] mx-auto">
                             <p class="mt-[30px] text-center font-bold font-poppins text-2xl">E-Hall of IS</p>
                             <p
-                                class="ml-[80.5px] mr-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                                class="lg:mx-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
                                 porttitor.</p>
                             <button
-                                class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                class="mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
                         </div>
         </div>
@@ -202,11 +202,11 @@
                                 class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
                             <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Grand Talkshow</p>
                             <p
-                                class="ml-[107px] mr-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                                class="lg:mx-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
                                 porttitor.</p>
                             <button
-                                class="mt-[30px] ml-[92px] content-center w-[577px] h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                class="mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
                         </div>
         </div>
@@ -356,7 +356,7 @@
             <input placeholder="Type here"
                 class=" lg:mt-[32px] w-[274px] h-[20px] lg:w-[743px] lg:h-[54px] font-medium text-[10px] lg:text-[24px] pl-[23px] lg:pl-[33px] font-poppins rounded-2xl text-start">
             <button
-                class=" lg:contens hidden lg:mt-[32px] w-[53px] h-[19px] lg:w-[146px] lg:h-[54px] lg:text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl lg:ml-[-144px] xl:blur font-poppins text-white ">Send</button>
+                class="  lg:mt-[32px] w-[53px] h-[19px] lg:w-[146px] lg:h-[54px] lg:text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl lg:ml-[-144px] xl:blur font-poppins text-white ">Send</button>
             <button
                 class="  lg:mt-[32px] w-[53px] h-[19px] lg:w-[146px] lg:h-[54px] text-[12px] lg:text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-52px] lg:ml-[-144px] absolute font-poppins text-white ">Send</button>
         </div>
