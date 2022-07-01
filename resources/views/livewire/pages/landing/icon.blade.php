@@ -32,7 +32,7 @@
     </div>
     <!-- hero section end -->
     <div class="bg-black pt-[124px] text-center px-[22px] lg:px-[183px]">
-                    <h1 class=" lg:text-4xl font-bold font-poppins text-white">About This Zone</h1>
+                    <h1 class="text-xl lg:!text-4xl font-bold font-poppins text-white">About This Zone</h1>
                     <p class="mt-10 text-lg text-[#B5B3BC] font-poppins">
                         <a class="text-white font-semiboldbold">IT Convention</a> merupakan salah satu zona dari ISE!
                         (Information Systems
@@ -105,7 +105,7 @@
                             Startup Academy</p>
                     </div>
                     <button
-                        class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px]lg:group-hover:scale-[1.8] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
+                        class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
                             src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></button>
                 </div>
                 <!-- 2 -->
