@@ -24,11 +24,11 @@
                     2022</h1>
                 <div class="relative left-0 right-0 justify-center hidden max-w-2xl mx-auto text-center mt-36 lg:block"
                     id="isometric-city">
-                    <div class="absolute bottom-20 right-1 group">
+                    <div class="absolute right-0 bottom-20 group">
                         <div
                             class="pl-2 transition duration-1000 ease-linear border-l-2 opacity-0 group-hover:duration-300 group-hover:opacity-100 group-hover:ease-linear border-l-purple-300">
                             <h4 class="text-lg font-medium text-white text-start font-poppins">IT Convention Zone</h4>
-                            <ul class="text-[#B5B3BC] text-base text-start">
+                            <ul class="text-[#B5B3BC] text-sm text-start">
                                 <li>Data Science Academy</li>
                                 <li>Startup Academy</li>
                                 <li>E-Hall of Information System</li>
@@ -37,7 +37,7 @@
                         </div>
                         <a href="/icon">
                             <img src="{{ asset('images/icon-city.svg') }}" alt="isometric-city"
-                                class="items-end justify-end w-32 transition duration-1000 transform group-hover:scale-105 group-hover:duration-300 text-end">
+                                class="items-end justify-end w-[8em] transition duration-1000 transform group-hover:scale-105 group-hover:duration-300 text-end">
                         </a>
                     </div>
                     <div class="absolute left-2 bottom-32 group">
