@@ -20,8 +20,8 @@ class EventSeeder extends Seeder
                 'title' => 'Webinar Kick Off ISE! 2022',
                 'description' => 'Menjadi pembuka dari seluruh rangkaian kegiatan ISE! 2022, webinar ini akan memberimu wawasan baru mengenai peran penting pengolahan data pada suatu startup.
                 Nantikan dan daftar segera, gratis!',
-                'start_date' => '2022-07-03',
-                'end_date' => null,
+                'start_date' => '2022-07-02',
+                'end_date' => '2022-07-14',
                 'regis_link' => 'register-webinar',
                 'landing_link' => null,
                 'event_type' => 'All',
