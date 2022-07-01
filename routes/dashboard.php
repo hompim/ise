@@ -51,6 +51,14 @@ Route::middleware('auth')->group(function () {
                     Route::get('/pembayaran', App\Http\Livewire\Pages\Bionix\Admin\VerifikasiPembayaran\Index::class)->name('bionix.admin.verifikasi-pembayaran.index');
                 });
             });
+
+             //Icon
+             Route::group(['prefix' => 'icon', 'middleware' => 'usertype:icon_admin'], function () {
+                Route::group(['prefix' => 'webinar'], function () {
+                    Route::get('daftar-peserta', \App\Http\Livewire\Pages\Auth\Icon\RegistasiWebinarKickOff::class)->name('webinar.admin.daftar-peserta.index');
+                    //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
+                });
+            });
         });
 
         //Peserta
