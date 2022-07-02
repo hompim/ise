@@ -1044,6 +1044,9 @@ select {
 .z-40 {
     z-index: 40;
 }
+.z-\[999\] {
+    z-index: 999;
+}
 .col-span-5 {
     grid-column: span 5 / span 5;
 }
