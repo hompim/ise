@@ -7,7 +7,10 @@ module.exports = {
         "./vendor/wire-elements/modal/resources/views/*.blade.php",
         "./storage/framework/views/*.php",
     ],
-
+    safelist: [
+        "sm:max-w-4xl",
+        "xl:max-w-4xl",
+    ],
     theme: {
         extend: {
             animation: {

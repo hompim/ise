@@ -1,4 +1,4 @@
-<div class="p-4">
+<div class="p-4 w-100">
 
     <div class="flex justify-between">
         <h5 class="text-lg font-weight-bold">Detail Peserta</h5>
@@ -13,12 +13,12 @@
                     <p>{{$webinar->member->user->name}}</p>
                 </div>
                 <div>
-                    <p class="font-bold mb-0 mt-2">Email</p>
-                    <p>{{$webinar->member->user->email}}</p>
-                </div>
-                <div>
                     <p class="font-bold mb-0 mt-2">Whatsapp</p>
                     <p>{{$webinar->member->user->whatsapp}}</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-0 mt-2">Email</p>
+                    <p>{{$webinar->member->user->email}}</p>
                 </div>
                 <div>
                     <p class="font-bold mb-0 mt-2">Instagram Story</p>
