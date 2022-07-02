@@ -1,6 +1,6 @@
     <!-- Main modal -->
     <div id="defaultModal" aria-hidden="true" data-modal-show="true"
-        class="fixed top-0 bottom-0 left-0 right-0 z-50 hidden w-full mt-12 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full lg:mt-4"
+        class="fixed top-0 bottom-0 left-0 right-0 z-50 hidden w-full mt-12 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full lg:mt-4 z-[9999]"
         data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="2500" data-aos-one="true">
         <div class="relative w-full h-full max-w-4xl p-4 md:h-auto">
             <!-- Modal content -->
@@ -72,10 +72,9 @@
                         class="relative left-0 right-0 justify-center mx-auto text-center max-w-fit group  transition duration-300 hover:!scale-105 mb-4">
                         <div class="absolute inset-0 ">
                             <a href="/dashboard/peserta/webinar/register"
-                                class="relative px-12 transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins">Sign
-                                Up</a>
+                                class="relative px-12 transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins">Register</a>
                         </div>
-                        <a href="/dashboard/peserta/webinar/register" class="relative px-12 btn">Sign Up</a>
+                        <a href="/dashboard/peserta/webinar/register" class="relative px-12 btn">Register</a>
                     </div>
                 </div>
             </div>
@@ -334,10 +333,10 @@
                             class="relative left-0 right-0 justify-center mx-auto mt-24 text-center max-w-fit group  transition duration-300 hover:!scale-105">
                             <div class="absolute inset-0 ">
                                 <a href="/dashboard/peserta/webinar/register"
-                                    class="relative px-12 transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins">Sign
-                                    Up</a>
+                                    class="relative px-12 transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins">Register
+                                </a>
                             </div>
-                            <a href="/dashboard/peserta/webinar/register" class="relative px-12 btn">Sign Up</a>
+                            <a href="/dashboard/peserta/webinar/register" class="relative px-12 btn">Register</a>
                         </div>
                     </div>
 
@@ -356,7 +355,7 @@
             <div class="container lg:mx-auto">
                 <ol class="items-center justify-center md:flex">
                     <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun 2022</time>
+                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
                         <div class="flex items-center justify-center overflow-hidden">
                             <div
                                 class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
@@ -365,12 +364,24 @@
                             </div>
                         </div>
                         <div class="mt-3">
-                            <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
-                                Student Level</h3>
+                            <h3 class="text-lg font-semibold text-white font-poppins pb-7">E-Hall of IS
+                            </h3>
                         </div>
                     </li>
                     <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jun 2022</time>
+                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
+                        <div class="relative flex items-center">
+                            <div
+                                class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                            </div>
+                            <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
+                        </div>
+                        <div class="mt-3">
+                            <h3 class="text-lg font-semibold text-white font-poppins pb-7">Academy</h3>
+                        </div>
+                    </li>
+                    <li class="relative mb-6 sm:mb-0">
+                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
                         <div class="relative flex items-center">
                             <div
                                 class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -382,18 +393,6 @@
                         </div>
                     </li>
                     <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Jul 2022</time>
-                        <div class="relative flex items-center">
-                            <div
-                                class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
-                            </div>
-                            <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
-                        </div>
-                        <div class="mt-3">
-                            <h3 class="text-lg font-semibold text-white font-poppins">ICON <br> Academy</h3>
-                        </div>
-                    </li>
-                    <li class="relative mb-6 sm:mb-0">
                         <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">Sep 2022</time>
                         <div class="relative flex items-center">
                             <div
@@ -403,7 +402,7 @@
                         </div>
                         <div class="mt-3">
                             <h3 class="text-lg font-semibold text-white font-poppins">BIONIX <br>
-                                College Level</h3>
+                                Student Level</h3>
                         </div>
                     </li>
                     <li class="relative mb-6 sm:mb-0">
@@ -415,7 +414,7 @@
                             <div class="hidden sm:flex absolute w-full h-2 bg-[#333333]"></div>
                         </div>
                         <div class="mt-3">
-                            <h3 class="text-lg font-semibold text-white font-poppins pb-7">E-hall of IS</h3>
+                            <h3 class="text-lg font-semibold text-white font-poppins">Bionix <br> College Level</h3>
                         </div>
                     </li>
                     <li class="relative mb-6 sm:mb-0">

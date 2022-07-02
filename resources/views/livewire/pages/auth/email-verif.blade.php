@@ -49,9 +49,7 @@ Jika kamu tidak membuat akun, tidak perlu melanjutkan proses verifikasi.
         <div class="flex-grow border-t border-zinc-800  "></div>
     </div>
     <p class="text-base" style="margin-top: 1.25rem">Bukan akun kamu? <a href="/logout"
-        onclick="
-event.preventDefault();
-$('#logout').submit();" class="text-indigo-400 hover:underline">Keluar</a>
+        onclick="event.preventDefault();document.querySelector('#logout').submit();" class="text-indigo-400 hover:underline">Keluar</a>
 <form action="{{ url('/logout') }}" method="POST" id="logout"> @csrf
 </form>
 </p>

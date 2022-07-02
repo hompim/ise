@@ -40,10 +40,10 @@
                     <span class="block mb-2 font-medium text-white">Info</span>
                     <select wire:model.defer="info_source" name="info_source" id=""
                         class="w-full p-2 bg-transparent rounded-md text-liteGray focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200">
-                        <option value="Media Sosial ISE! 2021" class="bg-liteBlack">Media Sosial ISE! 2021</option>
-                        <option value="Media Sosial selain ISE! 2021 (info lomba, dll)" class="bg-liteBlack">Media
+                        <option value="Media Sosial ISE! 2022" class="bg-liteBlack">Media Sosial ISE! 2022</option>
+                        <option value="Media Sosial selain ISE! 2022 (info lomba, dll)" class="bg-liteBlack">Media
                             Sosial selain ISE!
-                            2021 (info lomba, dll)
+                            2022 (info lomba, dll)
                         </option>
                         <option value="Grup WA/Line/dll" class="bg-liteBlack">Grup WA/Line/dll</option>
                         <option value="Sekolah (guru, dll)" class="bg-liteBlack">Sekolah (guru, dll)</option>
@@ -57,14 +57,14 @@
                 <input wire:model.defer="agree" name="agree" type="checkbox"
                     class="w-4 h-4 text-pink-200 rounded cursor-pointer focus:ring-pink-200">
                 <label for="remember_me" class="ml-2 block text-sm text-[#B5B3BC] font-poppins font-medium">
-                    Saya setuju dengan kebijakan privasi serta syarat dan ketentuan yang berlaku
+                    Saya setuju dengan kebijakan privasi serta <a href="{{route('term-condition')}}" class="text-blue-400" target="_blank">syarat dan ketentuan</a> yang berlaku
                 </label>
             </div>
         </div>
         <span class="flex justify-center mt-12 mb-24">
             <div wire:loading>
 
-                <h3 class="text-2xl">Harap Tunggu</h3>
+                <h3 class="text-2xl text-white">Harap Tunggu</h3>
 
             </div>
             <button wire:loading.remove type="submit"

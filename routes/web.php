@@ -7,6 +7,7 @@ use App\Http\Livewire\Pages\Landing\Bionix;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
 use App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,15 @@ Route::get('/d', function () {
 //Route Dashboard -> Dashboard.php
 Route::prefix('dashboard')->group(__DIR__ . '/dashboard.php');
 
+
+Route::get('/{shorten_link}', function ($shorten_link) {
+    $destination = \App\Models\ShortenLink::where('shorten_link', $shorten_link)->first();
+    if ($destination) {
+        $destination = $destination->destination;
+        return Redirect::to(strpos($destination, 'http') !== false ? $destination : 'http://' . $destination);
+    }
+    return abort(404);
+});
 Route::get('testing' ,function(){
     return view('livewire.pages.auth.icon.tes');
 });

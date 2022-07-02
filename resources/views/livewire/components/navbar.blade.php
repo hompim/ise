@@ -1,4 +1,4 @@
-<nav class="flex flex-wrap max-w-screen-xl justify-between text-center lg:mt-4 lg:w-fit bg-[#191A1E] lg:rounded-full fixed z-[9999] mx-auto left-0 right-0 shadow-lg shadow-liteBlack"
+<nav class="flex flex-wrap max-w-screen-xl justify-between text-center lg:mt-4 lg:w-fit bg-[#191A1E] lg:rounded-full fixed z-[999] mx-auto left-0 right-0 shadow-lg shadow-liteBlack"
     @if (Route::current()->getName() == 'ise') data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="2500" data-aos-one="true" @endif
     x-data="{ open: false }">
 
@@ -86,7 +86,7 @@
                     text-start">
                     <a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
-                $('#logout').submit();">
+                document.querySelector('#logout').submit();">
                         Log out
                         <form action="{{ route('logout') }}" method="POST" id="logout"> @csrf
                         </form>

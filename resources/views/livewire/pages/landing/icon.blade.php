@@ -22,12 +22,54 @@
             <a href="#isometric-city" class="relative btn">Let's
                 Explore</a>
     </div>
+<<<<<<< HEAD
             <!-- button end -->
         </div>
         <!-- ml-48 w-[210px] -translate-y-24 md:-translate-y-0 flex justify-center flex-1 -->
         <div class="-translate-y-24 md:-translate-y-0 ml-[180px] lg:ml-0  flex  flex-1 w-[210px] h-[179px] lg:!w-[691px] lg:!h-full">
             <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full">
         </div>
+=======
+    <!-- ml-48 w-[210px] -translate-y-24 md:-translate-y-0 flex justify-center flex-1 -->
+    <div class=" flex  flex-1 w-[317px] l-[254px] lg:w-[691px] lg:h[553px]">
+        <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full">
+    </div>
+
+</div>
+<!-- hero section end -->
+<div class="bg-black pt-[124px] text-center px-[22px] lg:px-[183px]">
+    <h1 class="text-xl lg:!text-4xl font-bold font-poppins text-white">About This Zone</h1>
+    <p class="mt-10 text-lg text-[#B5B3BC] font-poppins">
+        Serangkaian acara yang dihadirkan sebagai bentuk kontribusi peningkatan kesadaran masyarakat akan teknologi
+        dengan memamerkan dunia IT serta melakukan edukasi terkait isu-isu seputar IT terkini. Pada zona ini terdapat
+        beberapa acara, yaitu
+        <span class="text-white font-semiboldbold">Academy, </span>
+        <span class="text-white font-semiboldbold">Grand Talkshow,</span> dan
+        <span class="text-white font-semiboldbold">E-Hall of IS.</span>
+    </p>
+</div>
+<div x-data="{ tab: 'bsl' }" class="flex-row items-center justify-center text-white bg-black ">
+    <div x-show="tab === 'bsl'" class="flex justify-center">
+        <div class="flex-col text-center">
+
+            <!-- slider about this start-->
+            <div class="relative ">
+
+                <section id="slider">
+
+                    <input type="radio" name="slider" id="s1" class="hidden" checked>
+                    <input type="radio" name="slider" id="s2" class="hidden">
+
+
+                    <input type="radio" name="slider" id="s5" class="hidden">
+
+                    <label for="s1" id="slide1">
+                        <div id="shadow">
+
+                        </div>
+                        <img src="{{ asset('images/dokumentasi/ICON 2019(2).jpg') }}"
+                            class=" w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative rounded-xl">
+>>>>>>> 5004b2a518329bc364101e2edd8c51ad47709724
 
     </div>
     <!-- hero section end -->
@@ -101,6 +143,7 @@
 
         <!--Let's See The Inside-->
         <div>
+<<<<<<< HEAD
             <h1 class="font-bold text-xl mt-[60px] lg:!text-4xl lg:mt-[201px] font-poppins text-center">Let's See The Inside</h1>
         </div>
         <!--Frame picture-->
@@ -115,10 +158,77 @@
                             class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] font-semibold lg:text-[20px] ml-[-200px] lg:mt-[22px] lg:ml-[-530px]">
                             Startup Academy</p>
                     </div>
+=======
+            <div class="group">
+                <div class="lg:opacity-0 lg:group-hover:opacity-100">
+                    <p
+                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] font-semibold lg:text-[20px] lg:mt-[22px] lg:ml-[-530px]">
+                        Startup Academy</p>
+                </div>
+                <button
+                    class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
+                        src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></button>
+            </div>
+            <!-- 2 -->
+            <div class="group ml-[-60px] lg:ml-[-168px]">
+                <div class="lg:opacity-0 lg:group-hover:opacity-100">
+                    <p
+                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] mt-[20px] lg:mt-80 font-semibold lg:text-[20px] ">
+                        Data Science Academy</p>
+                </div>
+                <button
+                    class="absolute lg:transition mt-[150px] lg:mt-[410px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 "><img
+                        src="{{ asset('images/data-science-icon.svg') }}" alt=""></button>
+            </div>
+            <!-- 3 -->
+            <div class="group ">
+                <div class="lg:opacity-0 lg:group-hover:opacity-100">
+                    <p
+                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] lg:ml-[-900px] lg:mt-64 font-semibold lg:text-[20px] ">
+                        Grand Talkshow</p>
+                </div>
+                <button
+                    class="absolute lg:transition ml-[-295px] mt-[120px] lg:ml-[-780px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 "><img
+                        src="{{ asset('images/grand-is.svg') }}" alt=""></button>
+            </div>
+            <!-- 4 -->
+            <div class="group ">
+                <div class="lg:opacity-0 lg:group-hover:opacity-100">
+                    <p
+                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[12px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
+                        E-Hall of IS</p>
+                </div>
+                <button
+                    class="absolute lg:transition ml-[-196px] mt-[166px] lg:ml-[-520px] lg:mt-[460px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 "><img
+                        src="{{ asset('images/hall-is.svg') }}" alt=""></button>
+            </div>
+
+        </div>
+    </div>
+    <!-- Startup academy slide  -->
+
+    <div id="default-carousel" class="relative p-[77px] lg:p-0 lg:h-[446px] lg:w-[752px] mx-auto"
+        data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl h-[446px]">
+            <!-- Item 1 -->
+            <div class="absolute inset-0 z-20 flex flex-col items-center justify-center transition-all duration-700 ease-in-out transform translate-x-0 "
+                data-carousel-item="">
+                <div>
+                    <img src="./images/startup-academy.svg" alt=""
+                        class="sm:w-[94px] h-[94px] lg:mb-[-12px] mx-auto">
+                    <p class="mt-[30px] text-center font-bold font-poppins lg:text-2xl">Startup Academy</p>
+                    <p
+                        class="  lg:mx-[80.5px] lg:mt-[30px] text-center text-[#B5B3BC] font-medium lg:text-lg font-poppins tracking-wide">
+                        Startup Academy akan memberikan para peserta pengetahuan dasar dalam pendirian sebuah startup.
+                        Para peserta akan mendapatkan materi dan eksplorasi mandiri bersama para pakar di bidangnya.
+                        Bangun startup-mu sendiri bersama Startup Academy.</p>
+>>>>>>> 5004b2a518329bc364101e2edd8c51ad47709724
                     <button
                         class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
                             src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></button>
                 </div>
+<<<<<<< HEAD
                 <!-- 2 -->
                 <div class="group ml-[-60px] lg:ml-[-168px]">
                     <div class="lg:opacity-0 lg:group-hover:opacity-100">
@@ -126,10 +236,27 @@
                             class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] mt-[100px] lg:mt-80 font-semibold lg:text-[20px] ">
                             Data Science Academy</p>
                     </div>
+=======
+
+            </div>
+            <!-- Item 2 -->
+            <div class="duration-700 pt-[51px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+                data-carousel-item="">
+                <div>
+                    <img src="./images/data-science-slide.svg" alt=""
+                        class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
+                    <p class="mt-[30px] text-center font-bold font-poppins lg:text-2xl">Data Science Academy</p>
+                    <p
+                        class="lg:mx-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium lg:text-lg font-poppins tracking-wide">
+                        Data Science Academy mempersiapkan para peserta sebagai seorang data scientist dengan
+                        fundamental yang kuat. Akademi ini dapat diikuti siapapun yang memiliki ketertarikan besar
+                        terhadap data dan informasi.</p>
+>>>>>>> 5004b2a518329bc364101e2edd8c51ad47709724
                     <button
                         class="absolute lg:transition mt-[150px] lg:mt-[410px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
                             src="{{ asset('images/data-science-icon.svg') }}" alt=""></button>
                 </div>
+<<<<<<< HEAD
                 <!-- 3 -->
                 <div class="group ">
                     <div class="lg:opacity-0 lg:group-hover:opacity-100">
@@ -137,10 +264,25 @@
                             class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-330px] mt-[90px] lg:ml-[-900px] lg:mt-64 font-semibold lg:text-[20px] ">
                             Grand Talkshow</p>
                     </div>
+=======
+            </div>
+            <!-- Item 3 -->
+            <div class="duration-700 pt-[51px] ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
+                data-carousel-item="">
+                <div>
+                    <img src="./images/hall-is-slide.svg" alt=""
+                        class="w-[94px] h-[94px] mb-[-12px] mx-auto">
+                    <p class="mt-[30px] text-center font-bold font-poppins text-2xl">E-Hall of IS</p>
+                    <p
+                        class="lg:mx-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                        Pameran karya autentik mahasiswa dan alumni Sistem Informasi ITS sebagai bentuk kontribusi untuk
+                        negeri. Kunjungi dan menangkan setiap Challenge untuk menjadi bagian dari sejarah kami.</p>
+>>>>>>> 5004b2a518329bc364101e2edd8c51ad47709724
                     <button
                         class="absolute lg:transition ml-[-295px] mt-[120px] lg:ml-[-780px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
                             src="{{ asset('images/grand-is.svg') }}" alt=""></button>
                 </div>
+<<<<<<< HEAD
                 <!-- 4 -->
                 <div class="group ">
                     <div class="lg:opacity-0 lg:group-hover:opacity-100">
@@ -148,6 +290,21 @@
                             class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-220px] mt-[140px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
                             E-Hall of IS</p>
                     </div>
+=======
+            </div>
+            <!-- item 4 -->
+            <div class="duration-700 pt-[51px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+                data-carousel-item="">
+                <div>
+                    <img src="./images/grand-talkshow-slide.svg" alt=""
+                        class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
+                    <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Grand Talkshow</p>
+                    <p
+                        class="lg:mx-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                        Acara talkshow yang menghadirkan pembicara-pembicara terkemuka di bidangnya dengan berbagai
+                        topik menarik untuk seluruh peserta. Bergabunglah secara gratis dan dapatkan manfaatnya secara
+                        penuh!</p>
+>>>>>>> 5004b2a518329bc364101e2edd8c51ad47709724
                     <button
                         class="absolute lg:transition ml-[-196px] mt-[166px] lg:ml-[-520px] lg:mt-[460px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
                             src="{{ asset('images/hall-is.svg') }}" alt=""></button>
