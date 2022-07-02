@@ -40,10 +40,10 @@
                     <span class="block mb-2 font-medium text-white">Info</span>
                     <select wire:model.defer="info_source" name="info_source" id=""
                         class="w-full p-2 bg-transparent rounded-md text-liteGray focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200">
-                        <option value="Media Sosial ISE! 2021" class="bg-liteBlack">Media Sosial ISE! 2021</option>
-                        <option value="Media Sosial selain ISE! 2021 (info lomba, dll)" class="bg-liteBlack">Media
+                        <option value="Media Sosial ISE! 2022" class="bg-liteBlack">Media Sosial ISE! 2022</option>
+                        <option value="Media Sosial selain ISE! 2022 (info lomba, dll)" class="bg-liteBlack">Media
                             Sosial selain ISE!
-                            2021 (info lomba, dll)
+                            2022 (info lomba, dll)
                         </option>
                         <option value="Grup WA/Line/dll" class="bg-liteBlack">Grup WA/Line/dll</option>
                         <option value="Sekolah (guru, dll)" class="bg-liteBlack">Sekolah (guru, dll)</option>
