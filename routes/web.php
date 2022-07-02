@@ -26,7 +26,7 @@ Route::get('/icon', Icon::class)->name('icon');
 
 // Coming Soon Route
 Route::get('/coming-soon', function () {
-    return view('coming-soon');
+    return view('coming-soon-page');
 });
 Route::get('/d', function () {
     return view('livewire.pages.auth.bionix.Registrasi-roadshow');
@@ -34,3 +34,7 @@ Route::get('/d', function () {
 
 //Route Dashboard -> Dashboard.php
 Route::prefix('dashboard')->group(__DIR__ . '/dashboard.php');
+
+Route::get('testing' ,function(){
+    return view('livewire.pages.auth.icon.tes');
+});

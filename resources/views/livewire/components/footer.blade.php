@@ -13,12 +13,12 @@
             <a href="/bionix">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                    BIONIX</dd>
+                    Competition</dd>
             </a>
             <a href="/icon">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
-                    ICON</dd>
+                    IT Convention</dd>
             </a>
         </dl>
         <dl class="text-center lg:!text-start">

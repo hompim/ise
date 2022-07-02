@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ISE! 2022</title>
+    <meta name="description" content="@yield('desc', 'ISE! merupakan singkatan dari Information Systems Expo yang merupakan event tahunan yang diselenggarakan oleh Departemen Sistem Informasi Institut Teknologi Sepuluh Nopember Surabaya dalam rangka memperkenalkan Departemen Sistem Informasi ITS kepada masyarakat luas')">
+    <meta name="keywords" content="@yield('keywords', 'ISE, Sistem Informasi ITS, Sistem Informasi, ITS, Olimpiade, Bisnis, TIK, Teknologi, Pameran IT, Konser')">
+    <meta name="author" content="WebDev ISE! 2022">
+    <title>ISE! | Information System Expo! 2022</title>
     <!-- linknya -->
     <link rel="icon" href="{{ asset('images/logo-only.png') }}">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -13,6 +16,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/swiper.css') }}">
+
+    @stack('css')
 </head>
 
 <body class="w-full h-full m-0">
@@ -96,6 +101,22 @@
     <script>
         AOS.init();
     </script>
+
+    @if (!config('app.debug'))
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ59B1X1XZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-DJ59B1X1XZ');
+        </script>
+    @endif
+    @stack('js')
 </body>
 
 </html>

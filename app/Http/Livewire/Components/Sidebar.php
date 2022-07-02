@@ -68,6 +68,34 @@ class Sidebar extends Component
                     ]
                 );
             }
+            else if(Auth::user()->userable->admin_type == "Icon Admin")
+            {
+                array_push(
+                    $this->menu,
+                    [
+                        'type' => 'title',
+                        'title' => 'ICON',
+                    ],
+                    [
+                        'type' => 'divider',
+                        'tag' => 'mb-3'
+                    ],
+                    [
+                        'type' => 'title',
+                        'title' => 'Webinar Kick Off'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-group',
+                        'title' => 'Daftar Peserta',
+                        'route-name' => 'webinar.admin.daftar-webinar'
+                    ],
+                    [
+                        'type' => 'divider',
+                        'tag' => 'mb-3'
+                    ],
+                );
+            }
         }else{
             array_push($this->menu, [
                 'type' => 'menu',

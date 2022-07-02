@@ -38,34 +38,34 @@
             <div class="flex-col px-5 md:w-3/4 md:p-4 text-center font-poppins">
                 <div class="md:px-[10px] md:pt-24 pt-[43.5px]">
                     <h1 class="md:text-2xl text-[19.25px] font-bold font-poppins">Bionix Student Level</h1>
-                    <p class="md:mt-10 mt-[12px] md:text-lg font-poppins text-center text-[#B5B3BC] md:mx-48 mx-8 text-[14.6px]">Olimpiade bisnis dan IT 
-                        untuk siswa/i SMA/SMK seluruh Indonesia dan kompetisi inovasi bisnis dengan memanfaatkan kemajuan 
+                    <p class="md:mt-10 mt-[12px] md:text-lg font-poppins text-center text-[#B5B3BC] md:mx-48 mx-8 text-[14.6px]">Olimpiade bisnis dan IT
+                        untuk siswa/i SMA/SMK seluruh Indonesia dan kompetisi inovasi bisnis dengan memanfaatkan kemajuan
                         teknologi  dalam  bentuk business plan
                     </p>
                 </div>
             <!-- bsl explanation end -->
 
-            <!-- IS class start -->
+            <!-- IS class start pc-->
                 <h1 class="text-white font-poppins font-bold text-[28px] md:text-[64px] pt-[65px] md:mt-[211px]">IS Class</h1>
-                <div class="swiper mySwiper md:w-[980px] md:mt-14 mt-[22px] font-poppins w-[316px] md:h-[695px] h-[534px]">
+                <div class="swiper mySwiper w-[980px] mt-14 font-poppins h-[695px] hidden md:block">
                     <div class="swiper-wrapper">
                         <!-- first carousel -->
                         <div class="flex-col justify-center swiper-slide font-poppins">
-                            <div class="overflow-hidden md:h-[24rem] h-[137px]">
+                            <div class="overflow-hidden h-[24rem]">
                                 <img class="object-cover rounded-t-lg"
                                     src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" />
                             </div>
                             <div class="bg-liteBlack rounded-b-lg text-center h-[399px]">
-                                <p class="items-center px-[40px] md:px-24 pt-[18px] md:pt-10 md:text-lg text-sm text-center font-poppins text-[#B5B3BC]">Konsep terbaru dari
+                                <p class="items-center px-24 pt-10 text-lg text-center font-poppins text-[#B5B3BC]">Konsep terbaru dari
                                     BIONIX Student Level yang ditujukan untuk memberikan pengalaman seputar keilmuan,
                                     kehidupan perkuliahan, dan keprofesian dari Departemen Sistem Informasi ITS dalam
                                     bentuk simulasi perkuliahan dengan beberapa materi sesuai dengan kurikulum dan
                                     disampaikan oleh dosen Sistem Informasi ITS selama masa belajar mengajar
                                     berlangsung.</p>
-                                <div class="flex flex-col-reverse md:flex-row justify-center md:mt-12 mt-[27px] md:space-x-4 gap-3 font-poppins md:text-base text-[12px] items-center">
+                                <div class="flex flex-row justify-center mt-12 space-x-4 font-poppins text-base items-center">
                                     <div>
-                                        <button 
-                                            class="md:px-3 md:py-1 py-1/2 px-4 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
+                                        <button
+                                            class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg
                                                 class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -80,109 +80,87 @@
                                             Download Guidebook</button>
                                     </div>
                                     <div>
-                                        <button class="md:px-16 px-8 md:py-2 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                        <button class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- second carousel -->
-                        <div class="md:block hidden">
-                            <div class="grid grid-cols-8 gap-4 swiper-slide">
-                                <div 
-                                    class="bg-liteBlack h-[330px] rounded-2xl col-span-5 px-6 py-8 text-start">
-                                    <div class="flex flex-row ">
-                                        <div class="flex flex-col">
-                                            <h1 class="text-2xl font-bold text-white font-poppins ">Info & Facts</h1>
-                                            <p class="text-2xl text-liteGray font-poppins">Kesempatan memperoleh info dan
-                                                fakta menarik tentang Departemen Sistem Informasi ITS</p>
-                                        </div>
-                                        <img class="mt-20 w-52" src="{{ asset('images/sit-laptop.png') }}" alt="">
-                                    </div>
-                                </div>
-                                <div
-                                    class="bg-gradient-to-r from-liteGray to-white h-[330px]  rounded-lg col-span-3 px-6 py-8 text-start">
-                                    <div class="flex flex-row">
-                                        <div class="flex flex-col">
-                                            <h1 class="text-2xl font-bold text-black font-poppins">Discount</h1>
-                                            <p class="text-2xl text-[#555555] font-poppins">Potongan biaya pedaftaran BIONIX
-                                                Student Level</p>
-                                        </div>
-                                        <img class="w-52 mt-36 -ml-28" src="{{ asset('images/cash-promo.svg') }}"
-                                            alt="money promo">
-                                    </div>
-                                </div>
-                                <div
-                                    class="bg-gradient-to-r from-purple-100 to-purple-400 h-[330px] rounded-lg col-span-3 px-6 py-8 text-start">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-2xl font-bold text-white font-poppins">Certificate</h1>
-                                        <p class="text-2xl text-[#EAEAEA] font-poppins">Daftar dan dapatkan e-certificate
-                                        </p>
-                                        <img class="w-32 mt-12 ml-14" src="{{ asset('images/sertif.svg') }}"
-                                            alt="purple certificate">
-                                    </div>
-                                </div>
-                                <div
-                                    class="bg-gradient-to-r from-[#E7BAF7] to-[#F7E9FC]  h-[330px] rounded-lg col-span-5 px-6 py-8 text-start">
-                                    <div class="flex flex-row">
-                                        <div class="flex flex-col">
-                                            <h1 class="text-2xl font-bold text-black font-poppins">Course Material</h1>
-                                            <p class="text-2xl text-[#555555] font-poppins">Materi perkuliahan dasar
-                                                Departemen Sistem Informasi ITS</p>
-                                        </div>
-                                        <img class="mt-24 w-60 " src="{{ asset('images/js-phone-thumbs.svg') }}"
-                                            alt="phone thumbs">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- second carousel if mobile -->
-                        <!-- <div class="md:hidden block"> -->
-                            <div class="swiper-slide bg-liteBlack h-[292px] rounded-2xl text-start p-4">
+                        <div class="grid grid-cols-8 gap-4 swiper-slide">
+                            <div
+                                class="bg-liteBlack h-[330px] rounded-2xl col-span-5 px-6 py-8 text-start">
                                 <div class="flex flex-row ">
                                     <div class="flex flex-col">
-                                        <h1 class="text-[14.6px] md:text-2xl font-bold text-white font-poppins">Info & Facts</h1>
-                                        <p class="text-[14.6px] md:text-2xl text-liteGray font-poppins">Kesempatan memperoleh info dan
+                                        <h1 class="text-2xl font-bold text-white font-poppins ">Info & Facts</h1>
+                                        <p class="text-2xl text-liteGray font-poppins">Kesempatan memperoleh info dan
                                             fakta menarik tentang Departemen Sistem Informasi ITS</p>
                                     </div>
                                     <img class="mt-20 w-52" src="{{ asset('images/sit-laptop.png') }}" alt="">
                                 </div>
                             </div>
-                        <!-- </div> -->
-                        <!-- third carousel if mobile -->
-
-                        <!-- fourth carousel if mobile -->
-
-                        <!-- fifth carousel if mobile -->
-
+                            <div
+                                class="bg-gradient-to-r from-liteGray to-white h-[330px]  rounded-lg col-span-3 px-6 py-8 text-start">
+                                <div class="flex flex-row">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-2xl font-bold text-black font-poppins">Discount</h1>
+                                        <p class="text-2xl text-[#555555] font-poppins">Potongan biaya pedaftaran BIONIX
+                                            Student Level</p>
+                                    </div>
+                                    <img class="w-52 mt-36 -ml-28" src="{{ asset('images/cash-promo.svg') }}"
+                                        alt="money promo">
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-r from-purple-100 to-purple-400 h-[330px] rounded-lg col-span-3 px-6 py-8 text-start">
+                                <div class="flex flex-col">
+                                    <h1 class="text-2xl font-bold text-white font-poppins">Certificate</h1>
+                                    <p class="text-2xl text-[#EAEAEA] font-poppins">Daftar dan dapatkan e-certificate
+                                    </p>
+                                    <img class="w-32 mt-12 ml-24" src="{{ asset('images/sertif.svg') }}"
+                                        alt="purple certificate">
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-r from-[#E7BAF7] to-[#F7E9FC]  h-[330px] rounded-lg col-span-5 px-6 py-8 text-start">
+                                <div class="flex flex-row">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-2xl font-bold text-black font-poppins">Course Material</h1>
+                                        <p class="text-2xl text-[#555555] font-poppins">Materi perkuliahan dasar
+                                            Departemen Sistem Informasi ITS</p>
+                                    </div>
+                                    <img class="mt-24 w-60 " src="{{ asset('images/js-phone-thumbs.svg') }}"
+                                        alt="phone thumbs">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 <!-- Carousel Button -->
-                    <div class="p-1 md:p-6 -mr-1 rounded-full swiper-button-next bg-liteBlack"></div>
-                    <div class="p-1 md:p-6 -ml-1 rounded-full swiper-button-prev bg-liteBlack"></div>
+                    <div class="p-6 -mr-1 rounded-full swiper-button-next bg-liteBlack"></div>
+                    <div class="p-6 -ml-1 rounded-full swiper-button-prev bg-liteBlack"></div>
                 </div>
-                <!-- IS classs end -->
+            <!-- IS Class PC end -->
 
-                <!-- Start Competition -->
-                <h1 class="text-white font-poppins font-bold text-[28px] md:text-[64px] pt-[32px] md:pt-[65px] md:mt-[211px]">Competition</h1>
-                <div class="swiper mySwiper md:w-[980px] md:mt-14 mt-[22px] font-poppins w-[316px] md:h-[695px] h-[534px]">
+            <!-- IS Class Mobile start -->
+                <div class="swiper mySwiper mt-[22px] font-poppins w-[316px] h-fit md:hidden block">
                     <div class="swiper-wrapper">
                         <!-- first carousel -->
-                        <div class="flex-col justify-center swiper-slide font-poppins">
-                            <div class="overflow-hidden md:h-[24rem] h-[137px]">
+                        <div class="flex-col justify-center swiper-slide font-poppins h-[534px]">
+                            <div class="overflow-hidden h-[137px]">
                                 <img class="object-cover rounded-t-lg"
-                                    src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+                                    src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" />
                             </div>
                             <div class="bg-liteBlack rounded-b-lg text-center h-[399px]">
-                                <p class="items-center px-[40px] md:px-24 pt-[18px] md:pt-10 md:text-lg text-sm text-center font-poppins text-[#B5B3BC]">
-                                    Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang 
-                                    terbagi dalam beberapa region di Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi 
-                                    informasi, pemrograman, logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan, 
-                                    Final Presentasi Bisnis, dan terakhir Awarding Night.</p>
-                                <div class="flex flex-col-reverse md:flex-row justify-center md:mt-12 mt-[27px] md:space-x-4 gap-3 font-poppins md:text-base text-[12px] items-center">
+                                <p class="items-center px-[40px] pt-[18px] text-sm text-center font-poppins text-[#B5B3BC]">Konsep terbaru dari
+                                    BIONIX Student Level yang ditujukan untuk memberikan pengalaman seputar keilmuan,
+                                    kehidupan perkuliahan, dan keprofesian dari Departemen Sistem Informasi ITS dalam
+                                    bentuk simulasi perkuliahan dengan beberapa materi sesuai dengan kurikulum dan
+                                    disampaikan oleh dosen Sistem Informasi ITS selama masa belajar mengajar
+                                    berlangsung.</p>
+                                <div class="flex flex-col-reverse justify-center mt-[27px] gap-3 font-poppins text-[12px] items-center">
                                     <div>
-                                        <button 
-                                            class="md:px-3 md:py-1 py-1/2 px-4 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
+                                        <button
+                                            class="py-1/2 px-4 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg
                                                 class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -197,70 +175,254 @@
                                             Download Guidebook</button>
                                     </div>
                                     <div>
-                                        <button class="md:px-16 px-8 md:py-2 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                        <button class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- second carousel  mobile -->
+                        <div class="swiper-slide bg-liteBlack rounded-lg text-start p-[30px] px-10 mt-32">
+                            <div class="flex flex-row">
+                                <div class="flex flex-col">
+                                    <h1 class="text-[14.6px] font-bold text-white font-poppins pb-2">Info & Facts</h1>
+                                    <p class="text-[14.6px] text-liteGray font-poppins">Kesempatan memperoleh info dan
+                                        fakta menarik tentang Departemen Sistem Informasi ITS</p>
+                                </div>
+                                <img class="mt-10 w-40" src="{{ asset('images/sit-laptop.png') }}" alt="">
+                            </div>
+                        </div>
+                        <!-- third carousel  mobile -->
+                        <div
+                            class="swiper-slide bg-gradient-to-r from-liteGray to-white rounded-lg p-[30px] text-start px-10 h-[292px] mt-32">
+                            <div class="flex flex-row">
+                                <div class="flex flex-col flex-wrap">
+                                    <h1 class="text-[14.6px] font-bold text-black font-poppins pb-2">Discount</h1>
+                                    <p class="text-[14.6px] text-[#555555] font-poppins">
+                                        Potongan biaya pedaftaran BIONIX Student Level.</p>
+                                </div>
+                                <img class="w-52 mt-20 -ml-52" src="{{ asset('images/cash-promo.svg') }}"
+                                    alt="money promo">
+                            </div>
+                        </div>
+                        <!-- fourth carousel  mobile -->
+                        <div
+                            class="swiper-slide bg-gradient-to-r from-purple-100 to-purple-400 rounded-lg p-[30px] text-start px-10 mt-32">
+                            <div class="flex flex-col">
+                                <h1 class="text-[14.6px] font-bold text-white font-poppins pb-2">Certificate</h1>
+                                <p class="text-[14.6px] text-[#EAEAEA] font-poppins">Daftar dan dapatkan e-certificate
+                                </p>
+                                <img class="w-28 mt-10 ml-28" src="{{ asset('images/sertif.svg') }}"
+                                    alt="purple certificate">
+                            </div>
+                        </div>
+                        <!-- fifth carousel  mobile -->
+                        <div
+                            class="swiper-slide bg-gradient-to-r from-[#E7BAF7] to-[#F7E9FC] rounded-lg p-[30px] text-start px-10 mt-32">
+                            <div class="flex flex-row">
+                                <div class="flex flex-col">
+                                    <h1 class="text-[14.6px] font-bold text-black font-poppins pb-2">Course Material</h1>
+                                    <p class="text-[14.6px] text-[#555555] font-poppins">Materi perkuliahan dasar
+                                        Departemen Sistem Informasi ITS</p>
+                                </div>
+                                <img class="mt-28 w-36 -ml-14" src="{{ asset('images/js-phone-thumbs.svg') }}"
+                                    alt="phone thumbs">
+                            </div>
+                        </div>
+                    </div>
+                <!-- Carousel Button -->
+                    <div class="p-1 -mr-1 rounded-full swiper-button-next bg-liteBlack"></div>
+                    <div class="p-1 -ml-1 rounded-full swiper-button-prev bg-liteBlack"></div>
+                </div>
+            <!-- IS Class Mobile end -->
+
+            <!-- Start Competition pc -->
+                <h1 class="text-white font-poppins font-bold text-[28px] md:text-[64px] pt-[32px] md:pt-[65px] md:mt-[211px]">Competition</h1>
+                <div class="swiper mySwiper w-[980px] mt-14 font-poppins h-[695px] hidden md:block">
+                    <div class="swiper-wrapper">
+                        <!-- first carousel -->
+                        <div class="flex-col justify-center swiper-slide font-poppins">
+                            <div class="overflow-hidden h-[24rem]">
+                                <img class="object-cover rounded-t-lg"
+                                    src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" />
+                            </div>
+                            <div class="bg-liteBlack rounded-b-lg text-center h-[399px]">
+                                <p class="items-center px-24 pt-10 text-lg text-center font-poppins text-[#B5B3BC]">
+                                    Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang
+                                    terbagi dalam beberapa region di Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi
+                                    informasi, pemrograman, logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan,
+                                    Final Presentasi Bisnis, dan terakhir Awarding Night</p>
+                                <div class="flex flex-row justify-center mt-12 space-x-4 font-poppins text-base items-center">
+                                    <div>
+                                        <button
+                                            class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
+                                            <svg
+                                                class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.5034 13.8623L15.4998 18.8506L20.4961 13.8623" stroke="#B221E5"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M15.5 5.54492V18.847" stroke="#B221E5" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M26.92 16.9502V25.5015C26.92 25.7535 26.8198 25.9952 26.6413 26.1734C26.4628 26.3516 26.2208 26.4517 25.9684 26.4517H5.03128C4.77887 26.4517 4.53681 26.3516 4.35833 26.1734C4.17986 25.9952 4.07959 25.7535 4.07959 25.5015V16.9502"
+                                                    stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Download Guidebook</button>
+                                    </div>
+                                    <div>
+                                        <button class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- second carousel -->
-                        <div class="hidden md:block">
-                            <div class="grid grid-cols-8 gap-4 swiper-slide">
-                                <div class="bg-liteBlack h-[330px] rounded-2xl col-span-5 px-6 py-8 text-start">
-                                    <div class="flex flex-row">
-                                        <div class="flex flex-col">
-                                            <h1 class="text-2xl font-bold text-white font-poppins">Free Pass</h1>
-                                            <p class="text-2xl text-liteGray font-poppins">Dapatkan Free Pass Departemen 
-                                            Sistem Informasi ITS</p>
-                                        </div>
-                                        <img class="w-48 mt-32" src="{{ asset('images/mail-star.svg') }}" alt="mail star">
-                                    </div>
-                                </div>
-                                <div
-                                    class="bg-gradient-to-r from-purple-100 to-purple-400 h-[330px] rounded-lg col-span-3 px-6 py-8 text-start">
+                        <div class="grid grid-cols-8 gap-4 swiper-slide">
+                            <div class="bg-liteBlack h-[330px] rounded-2xl col-span-5 px-6 py-8 text-start">
+                                <div class="flex flex-row">
                                     <div class="flex flex-col">
-                                        <h1 class="text-2xl font-bold text-white font-poppins">E-Certificate</h1>
-                                        <p class="text-2xl text-[#EAEAEA] font-poppins">Daftar dan dapatkan
-                                        e-certificate</p>
-                                        <img class="w-32 mt-8 ml-14" src="{{ asset('images/sertif.svg') }}"
-                                            alt="purple certificate">
+                                        <h1 class="text-2xl font-bold text-white font-poppins">Free Pass</h1>
+                                        <p class="text-2xl text-liteGray font-poppins">Dapatkan Free Pass Departemen
+                                        Sistem Informasi ITS</p>
                                     </div>
+                                    <img class="w-48 mt-32" src="{{ asset('images/mail-star.svg') }}" alt="mail star">
                                 </div>
-                                <div
-                                    class="bg-gradient-to-r from-liteGray to-white h-[330px]  rounded-lg col-span-3 px-6 py-8 text-start">
-                                    <div class="flex flex-row">
-                                        <div class="flex flex-col">
-                                            <h1 class="text-2xl font-bold text-black font-poppins">1 Try Out Pack</h1>
-                                            <p class="text-2xl text-[#555555] font-poppins">Dapatkan 
-                                            1 paket TRY OUT bagi peserta yang mendaftar saat roadshow</p>
-                                        </div>
-                                        <img class="mt-32 -mr-8 w-52" src="{{ asset('images/love-folder.svg') }}"
-                                            alt="love folder">
-                                    </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-r from-purple-100 to-purple-400 h-[330px] rounded-lg col-span-3 px-6 py-8 text-start">
+                                <div class="flex flex-col">
+                                    <h1 class="text-2xl font-bold text-white font-poppins">E-Certificate</h1>
+                                    <p class="text-2xl text-[#EAEAEA] font-poppins">Daftar dan dapatkan
+                                    e-certificate</p>
+                                    <img class="w-32 mt-8 ml-24" src="{{ asset('images/sertif.svg') }}"
+                                        alt="purple certificate">
                                 </div>
-                                <div
-                                    class="bg-gradient-to-r from-[#BBBAF7] to-[#E9F4FC]  h-[330px] rounded-lg col-span-5 px-6 py-8 text-start">
-                                    <div class="flex flex-row">
-                                        <div class="flex flex-col">
-                                            <h1 class="text-2xl font-bold text-black font-poppins">2 Try Out Packs</h1>
-                                            <p class="text-2xl text-[#555555] font-poppins">Kesempatan memperoleh
-                                            2 paket Try Out Olimpiade beserta pembahasan</p>
-                                        </div>
-                                        <img class="mt-20 mr-4 w-52" src="{{ asset('images/thumbs-folder.svg') }}"
-                                            alt="thumbs folder">
+                            </div>
+                            <div
+                                class="bg-gradient-to-r from-liteGray to-white h-[330px]  rounded-lg col-span-3 px-6 py-8 text-start">
+                                <div class="flex flex-row">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-2xl font-bold text-black font-poppins">1 Try Out Pack</h1>
+                                        <p class="text-2xl text-[#555555] font-poppins">Dapatkan
+                                        1 paket TRY OUT bagi peserta yang mendaftar saat roadshow</p>
                                     </div>
+                                    <img class="mt-32 -mr-8 w-52" src="{{ asset('images/love-folder.svg') }}"
+                                        alt="love folder">
+                                </div>
+                            </div>
+                            <div
+                                class="bg-gradient-to-r from-[#BBBAF7] to-[#E9F4FC]  h-[330px] rounded-lg col-span-5 px-6 py-8 text-start">
+                                <div class="flex flex-row">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-2xl font-bold text-black font-poppins">2 Try Out Packs</h1>
+                                        <p class="text-2xl text-[#555555] font-poppins">Kesempatan memperoleh
+                                        2 paket Try Out Olimpiade beserta pembahasan</p>
+                                    </div>
+                                    <img class="mt-20 mr-4 w-52" src="{{ asset('images/thumbs-folder.svg') }}"
+                                        alt="thumbs folder">
                                 </div>
                             </div>
                         </div>
                     </div>
                 <!-- Carousel button -->
-                    <div class="p-1 md:p-6 -mr-1 rounded-full swiper-button-next bg-liteBlack"></div>
-                    <div class="p-1 md:p-6 -ml-1 rounded-full swiper-button-prev bg-liteBlack"></div>
+                    <div class="p-6 -mr-1 rounded-full swiper-button-next bg-liteBlack"></div>
+                    <div class="p-6 -ml-1 rounded-full swiper-button-prev bg-liteBlack"></div>
                 </div>
-                <!-- End Competition -->
+            <!-- End Competition pc -->
+
+            <!-- Competition Mobile start -->
+            <div class="swiper mySwiper mt-[22px] font-poppins w-[316px] h-fit md:hidden block">
+                    <div class="swiper-wrapper">
+                        <!-- first carousel -->
+                        <div class="flex-col justify-center swiper-slide font-poppins">
+                            <div class="overflow-hidden h-[137px]">
+                                <img class="object-cover rounded-t-lg"
+                                    src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" />
+                            </div>
+                            <div class="bg-liteBlack rounded-b-lg text-center h-[399px]">
+                                <p class="items-center px-[40px] pt-[18px] text-sm text-center font-poppins text-[#B5B3BC]">
+                                    Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang
+                                    terbagi dalam beberapa region di Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi
+                                    informasi, pemrograman, logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan,
+                                    Final Presentasi Bisnis, dan terakhir Awarding Night</p>
+                                <div class="flex flex-col-reverse justify-center mt-[27px] gap-3 font-poppins text-[12px] items-center">
+                                    <div>
+                                        <button
+                                            class="py-1/2 px-4 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
+                                            <svg
+                                                class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.5034 13.8623L15.4998 18.8506L20.4961 13.8623" stroke="#B221E5"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M15.5 5.54492V18.847" stroke="#B221E5" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M26.92 16.9502V25.5015C26.92 25.7535 26.8198 25.9952 26.6413 26.1734C26.4628 26.3516 26.2208 26.4517 25.9684 26.4517H5.03128C4.77887 26.4517 4.53681 26.3516 4.35833 26.1734C4.17986 25.9952 4.07959 25.7535 4.07959 25.5015V16.9502"
+                                                    stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            Download Guidebook</button>
+                                    </div>
+                                    <div>
+                                        <button class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- second carousel  mobile -->
+                        <div class="swiper-slide bg-liteBlack rounded-lg text-start p-[30px] px-10 mt-32 pt">
+                            <div class="flex flex-row">
+                                <div class="flex flex-col">
+                                    <h1 class="text-[14.6px] font-bold text-white font-poppins pb-2">Free Pass</h1>
+                                    <p class="text-[14.6px] text-liteGray font-poppins">Dapatkan Free Pass Departemen
+                                    Sistem Informasi ITS</p>
+                                </div>
+                                <img class="w-36 mt-28 -ml-10" src="{{ asset('images/mail-star.svg') }}" alt="mail star">
+                            </div>
+                        </div>
+                        <!-- third carousel  mobile -->
+                        <div class="swiper-slide bg-gradient-to-r from-purple-100 to-purple-400 rounded-lg text-start p-[30px] px-10 mt-32">
+                            <div class="flex flex-col">
+                                <h1 class="text-[14.6px] font-bold text-white font-poppins pb-2">E-Certificate</h1>
+                                <p class="text-[14.6px] text-[#EAEAEA] font-poppins">Daftar dan dapatkan
+                                e-certificate</p>
+                                <img class="w-28 mt-10 ml-28" src="{{ asset('images/sertif.svg') }}"
+                                    alt="purple certificate">
+                            </div>
+                        </div>
+                        <!-- fourth carousel  mobile -->
+                        <div class="swiper-slide bg-gradient-to-r from-liteGray to-white  rounded-lg text-start p-[30px] px-10 mt-32">
+                            <div class="flex flex-row">
+                                <div class="flex flex-col">
+                                    <h1 class="text-[14.6px] font-bold text-black font-poppins pb-2">1 Try Out Pack</h1>
+                                    <p class="text-[14.6px] text-[#555555] font-poppins">Dapatkan
+                                    1 paket TRY OUT bagi peserta yang mendaftar saat roadshow</p>
+                                </div>
+                                <img class="mt-28 -ml-14 w-[105px]" src="{{ asset('images/love-folder.svg') }}"
+                                    alt="love folder">
+                            </div>
+                        </div>
+                        <!-- fifth carousel  mobile -->
+                        <div class="swiper-slide bg-gradient-to-r from-[#BBBAF7] to-[#E9F4FC] rounded-lg text-start p-[30px] px-10 mt-32">
+                            <div class="flex flex-row">
+                                <div class="flex flex-col">
+                                    <h1 class="text-[14.6px] font-bold text-black font-poppins pb-2">2 Try Out Packs</h1>
+                                    <p class="text-[14.6px] text-[#555555] font-poppins">Kesempatan memperoleh
+                                    2 paket Try Out Olimpiade beserta pembahasan</p>
+                                </div>
+                                <img class="mt-12 pb-5 w-36" src="{{ asset('images/thumbs-folder.svg') }}"
+                                    alt="thumbs folder">
+                            </div>
+                        </div>
+                    </div>
+                <!-- Carousel Button -->
+                    <div class="p-1 -mr-1 rounded-full swiper-button-next bg-liteBlack"></div>
+                    <div class="p-1 -ml-1 rounded-full swiper-button-prev bg-liteBlack"></div>
+                </div>
+            <!-- Competition Mobile end -->
 
                 <!-- Start prizes -->
-                <div class="text-4xl md:text-6xl text-white font-bold mt-36 md:w-[537px] md:mx-auto">
+                <div class="text-4xl md:text-6xl text-white font-bold mt-[88px] md:mt-36 md:w-[537px] md:mx-auto">
                     Join and earn <a
                         class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text"> fantastic
                     </a> prizes
@@ -277,7 +439,7 @@
 
                 <!-- Timeline Start -->
                 <div class="my-36">
-                    <h1 class="mb-24 font-bold text-white font-poppins text-5xl md:text-7xl">Mark your calender and <br> follow the
+                    <h1 class="mb-24 font-bold text-white font-poppins text-[27.75px] md:text-7xl">Mark your calender and <br> follow the
                         <span
                             class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
                     </h1>
@@ -427,7 +589,7 @@
                         <div class="flex flex-col md:my-0 my-8 mx-4 md:mx-4 text-2xl text-left pr-18">
 
                             <a class="md:mt-8 my-2 text-lg md:text-2xl font-bold">E-certificate</a>
-                           
+
 
                             <a class="md:mr-16 text-sm text-[#EAEAEA] md:text-base">Daftar dan dapatkan e-certificate</a>
 
@@ -467,7 +629,7 @@
                         </div>
                     </div>
 
-                
+
 
 
                 </div>
@@ -477,7 +639,7 @@
                         class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text"> fantastic
                     </a> prizes
                 </div>
-                
+
                 <div class="relative font-poppins">
                     <img class="left-0 right-0 mx-auto" src="{{ asset('images/trophy.svg') }}" alt="">
                     <h1 class="absolute md:text-2xl text-xs transform -translate-x-1/2 -translate-y-1/2 top-3/4 left-1/2">Total
@@ -574,4 +736,4 @@
     </div>
 </div>
 
-<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+{{-- <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script> --}}

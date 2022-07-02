@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/new.css') }}">
 <script src="{{ asset('js/index.js') }}"></script>
     <!-- hero section start -->
-    <div class="bg-black pt-[81px] lg:pt-[210px]  md:flex md:flex-col-reverse lg:pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
+    <div class="bg-black pt-[145px] lg:pt-[210px]  md:flex md:flex-col-reverse lg:pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
         <div class="flex flex-col items-start flex-1 text-white">
             <h1
                 class="lg:!text-7xl ml-8 md:ml-0 text-5xl md:text-center lg:!text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">
@@ -25,13 +25,13 @@
             <!-- button end -->
         </div>
         <!-- ml-48 w-[210px] -translate-y-24 md:-translate-y-0 flex justify-center flex-1 -->
-        <div class=" flex  flex-1 w-[317px] l-[254px] lg:w-[691px] lg:h[553px]">
+        <div class="-translate-y-24 md:-translate-y-0 ml-[180px] lg:ml-0  flex  flex-1 w-[210px] h-[179px] lg:!w-[691px] lg:!h-full">
             <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full">
         </div>
 
     </div>
     <!-- hero section end -->
-    <div class="bg-black pt-[124px] text-center px-[22px] lg:px-[183px]">
+    <div class="bg-black pt-0 lg:pt-[124px] text-center px-[22px] lg:px-[183px]">
                     <h1 class="text-xl lg:!text-4xl font-bold font-poppins text-white">About This Zone</h1>
                     <p class="mt-10 text-lg text-[#B5B3BC] font-poppins">
                         <a class="text-white font-semiboldbold">IT Convention</a> merupakan salah satu zona dari ISE!
@@ -155,19 +155,19 @@
 
             </div>
         </div>
-        <!-- Startup academy slide  -->
+<!-- Startup academy slide  -->
         
 <div id="default-carousel" class="relative px-[77px] lg:px-0 lg:h-[446px] lg:w-[752px] mx-auto" data-carousel="static">
     <!-- Carousel wrapper -->
-    <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl h-[446px]">
+    <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl  h-[255px] md:h-[446px]">
          <!-- Item 1 -->
         <div class="duration-700 flex flex-col justify-center items-center ease-in-out transition-all absolute inset-0 transform translate-x-0 z-20 " data-carousel-item="">
         <div >
                             <img src="./images/startup-academy.svg" alt=""
-                                class="sm:w-[94px] h-[94px] lg:mb-[-12px] mx-auto">
-                            <p class="mt-[30px] text-center font-bold font-poppins lg:text-2xl">Startup Academy</p>
+                                class="w-[80px] h-[80px] md:w-[94px] lg:h-[94px] lg:mb-[-12px] mx-auto">
+                            <p class="md:mt-[30px] text-center font-bold font-poppins lg:text-2xl">Startup Academy</p>
                             <p
-                                class="  lg:mx-[80.5px] lg:mt-[30px] text-center text-[#B5B3BC] font-medium lg:text-lg font-poppins tracking-wide">
+                                class="  lg:mx-[80.5px] lg:mt-[30px] text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
                                 Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi
                                 sebagai the next founder of startup.</p>
                             <button
@@ -248,8 +248,8 @@
         <!-- timeline -->
         <!-- mark kalender -->
         <div class="mt-36">
-            <h1 class="mb-24 font-bold text-center text-white font-poppins text-3xl lg:!text-7xl">Mark your calender and <br> follow
-                the <span
+            <h1 class="mb-24 font-bold text-center text-white font-poppins text-3xl lg:!text-7xl">Mark your calender <br class="md:hidden block"> and <br class="md:block hidden"> follow
+                the <br class="md:hidden block"><span
                     class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">excitement</span>
             </h1>
             <!-- timeline -->
@@ -366,10 +366,11 @@
             <!-- input + button -->
             <input placeholder="Type here"
                 class=" lg:mt-[32px] w-[274px] h-[20px] lg:w-[743px] lg:h-[54px] font-medium text-[10px] lg:text-[24px] pl-[23px] lg:pl-[33px] font-poppins rounded-2xl text-start">
-            <button
-                class="  lg:mt-[32px] w-[53px] h-[19px] lg:w-[146px] lg:h-[54px] lg:text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl lg:ml-[-144px] xl:blur font-poppins text-white ">Send</button>
-            <button
-                class="  lg:mt-[32px] w-[53px] h-[19px] lg:w-[146px] lg:h-[54px] text-[12px] lg:text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-52px] lg:ml-[-144px] absolute font-poppins text-white ">Send</button>
+                <button
+                class=" mt-[4.7px] lg:mt-[32px] w-[53px] h-[20px] lg:w-[146px] lg:h-[54px] text-[12px] lg:text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-52px] lg:ml-[-144px] absolute font-poppins text-white transition duration-1000 opacity-75 btn blur-lg  group-hover:duration-300 group-hover:opacity-100 ">Send</button>
+                <button
+                class=" mt-[4.7px] lg:mt-[32px] w-[53px] h-[21px] lg:w-[146px] lg:h-[54px] text-[12px] lg:text-[24px] font-semibold bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-r-2xl ml-[-52px] lg:ml-[-144px] absolute font-poppins text-white ">Send</button>
+                
         </div>
     </div>
 </div>

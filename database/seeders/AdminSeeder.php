@@ -19,32 +19,33 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        $admin = Admin::create([
+        $admin1 = Admin::create([
             'admin_type' => 'Bionix Admin'
         ]);
 
-        $member = Member::create([
-            'bionix_type' => 'App\Models\Bionix\TeamJuniorData'
+        $admin2 = Admin::create([
+            'admin_type' => 'Icon Admin'
         ]);
 
-        User::create(
+        User::insert(
             [
-                'name' => 'Admin 1',
-                'email' => 'admin1@gmail.com',
-                'password' => Hash::make('password'),
-                'userable_id' => $admin->id,
-                'userable_type' => 'App\Models\Admin',
-                'email_verified_at' => Carbon::now()
-            ],
-            [
-                'name' => 'peserta2',
-                'email' => 'peserta@gmail.com',
-                'password' => Hash::make('password'),
-                'userable_id' => $member->id,
-                'userable_type' => 'App\Models\Admin',
-                'email_verified_at' => Carbon::now()
-            ],
-
+                [
+                    'name' => 'Admin Bionix',
+                    'email' => 'admin1@gmail.com',
+                    'password' => Hash::make('password'),
+                    'userable_id' => $admin1->id,
+                    'userable_type' => 'App\Models\Admin',
+                    'email_verified_at' => Carbon::now()
+                ],
+                [
+                    'name' => 'Admin Icon',
+                    'email' => 'admin2@gmail.com',
+                    'password' => Hash::make('password'),
+                    'userable_id' => $admin2->id,
+                    'userable_type' => 'App\Models\Admin',
+                    'email_verified_at' => Carbon::now()
+                ],
+            ]
         );
     }
 }

@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('icon_webinar_kick_offs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('member_id');
-            $table->string('institute_name');
-            $table->string('link_story');
+            $table->string('instagram_story_path');
             $table->enum('info_source', ["Media Sosial ISE! 2021",
                 "Media Sosial selain ISE! 2021 (info lomba, dll)",
                 "Grup WA/Line/dll",
