@@ -133,7 +133,7 @@
                         Startup Academy</p>
                 </div>
                 <button
-                    class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
+                    class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
                         src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></button>
             </div>
             <!-- 2 -->
@@ -144,7 +144,7 @@
                         Data Science Academy</p>
                 </div>
                 <button
-                    class="absolute lg:transition mt-[150px] lg:mt-[410px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
+                    class="absolute lg:transition mt-[150px] lg:mt-[410px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/data-science-icon.svg') }}" alt=""></button>
             </div>
             <!-- 3 -->
@@ -155,7 +155,7 @@
                         Grand Talkshow</p>
                 </div>
                 <button
-                    class="absolute lg:transition ml-[-295px] mt-[120px] lg:ml-[-780px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
+                    class="absolute lg:transition ml-[-295px] mt-[120px] lg:ml-[-780px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/grand-is.svg') }}" alt=""></button>
             </div>
             <!-- 4 -->
@@ -166,7 +166,7 @@
                         E-Hall of IS</p>
                 </div>
                 <button
-                    class="absolute lg:transition ml-[-196px] mt-[166px] lg:ml-[-520px] lg:mt-[460px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
+                    class="absolute lg:transition ml-[-196px] mt-[166px] lg:ml-[-520px] lg:mt-[460px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/hall-is.svg') }}" alt=""></button>
             </div>
 
