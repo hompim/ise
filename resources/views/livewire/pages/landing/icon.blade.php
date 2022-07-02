@@ -38,16 +38,12 @@
 <div class="bg-black pt-[124px] text-center px-[22px] lg:px-[183px]">
     <h1 class="text-xl lg:!text-4xl font-bold font-poppins text-white">About This Zone</h1>
     <p class="mt-10 text-lg text-[#B5B3BC] font-poppins">
-        <a class="text-white font-semiboldbold">IT Convention</a> merupakan salah satu zona dari ISE!
-        (Information Systems
-        Expo) yang bertujuan menghadirkan rangkaian acara yang
-        bermanfaat dengan memamerkan dunia IT serta melakukan edukasi
-        kepada masyarakat terkait isu-isu seputar IT saat ini. Terdapat
-        beberapa acara
-        yang dihadirkan, yakni
-        <a class="text-white font-semiboldbold">Academy, </a>
-        <a class="text-white font-semiboldbold">Grand Talkshow,</a> dan
-        <a class="text-white font-semiboldbold">E-Hall of IS.</a>
+        Serangkaian acara yang dihadirkan sebagai bentuk kontribusi peningkatan kesadaran masyarakat akan teknologi
+        dengan memamerkan dunia IT serta melakukan edukasi terkait isu-isu seputar IT terkini. Pada zona ini terdapat
+        beberapa acara, yaitu
+        <span class="text-white font-semiboldbold">Academy, </span>
+        <span class="text-white font-semiboldbold">Grand Talkshow,</span> dan
+        <span class="text-white font-semiboldbold">E-Hall of IS.</span>
     </p>
 </div>
 <div x-data="{ tab: 'bsl' }" class="flex-row items-center justify-center text-white bg-black ">
@@ -133,7 +129,7 @@
                         Startup Academy</p>
                 </div>
                 <button
-                    class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
+                    class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
                         src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></button>
             </div>
             <!-- 2 -->
@@ -144,7 +140,7 @@
                         Data Science Academy</p>
                 </div>
                 <button
-                    class="absolute lg:transition mt-[150px] lg:mt-[410px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
+                    class="absolute lg:transition mt-[150px] lg:mt-[410px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/data-science-icon.svg') }}" alt=""></button>
             </div>
             <!-- 3 -->
@@ -155,7 +151,7 @@
                         Grand Talkshow</p>
                 </div>
                 <button
-                    class="absolute lg:transition ml-[-295px] mt-[120px] lg:ml-[-780px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
+                    class="absolute lg:transition ml-[-295px] mt-[120px] lg:ml-[-780px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/grand-is.svg') }}" alt=""></button>
             </div>
             <!-- 4 -->
@@ -166,7 +162,7 @@
                         E-Hall of IS</p>
                 </div>
                 <button
-                    class="absolute lg:transition ml-[-196px] mt-[166px] lg:ml-[-520px] lg:mt-[460px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.8] lg:group-hover:duration-300 "><img
+                    class="absolute lg:transition ml-[-196px] mt-[166px] lg:ml-[-520px] lg:mt-[460px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.25] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/hall-is.svg') }}" alt=""></button>
             </div>
 
@@ -187,8 +183,9 @@
                     <p class="mt-[30px] text-center font-bold font-poppins lg:text-2xl">Startup Academy</p>
                     <p
                         class="  lg:mx-[80.5px] lg:mt-[30px] text-center text-[#B5B3BC] font-medium lg:text-lg font-poppins tracking-wide">
-                        Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi
-                        sebagai the next founder of startup.</p>
+                        Startup Academy akan memberikan para peserta pengetahuan dasar dalam pendirian sebuah startup.
+                        Para peserta akan mendapatkan materi dan eksplorasi mandiri bersama para pakar di bidangnya.
+                        Bangun startup-mu sendiri bersama Startup Academy.</p>
                     <button
                         class=" mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] lg:text-2xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
@@ -204,8 +201,9 @@
                     <p class="mt-[30px] text-center font-bold font-poppins lg:text-2xl">Data Science Academy</p>
                     <p
                         class="lg:mx-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium lg:text-lg font-poppins tracking-wide">
-                        Data Science Academy hadir untuk menjadi langkah awal atau katalis karier peserta
-                        sebagai seorang data scientist.</p>
+                        Data Science Academy mempersiapkan para peserta sebagai seorang data scientist dengan
+                        fundamental yang kuat. Akademi ini dapat diikuti siapapun yang memiliki ketertarikan besar
+                        terhadap data dan informasi.</p>
                     <button
                         class="mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
@@ -220,8 +218,8 @@
                     <p class="mt-[30px] text-center font-bold font-poppins text-2xl">E-Hall of IS</p>
                     <p
                         class="lg:mx-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
-                        porttitor.</p>
+                        Pameran karya autentik mahasiswa dan alumni Sistem Informasi ITS sebagai bentuk kontribusi untuk
+                        negeri. Kunjungi dan menangkan setiap Challenge untuk menjadi bagian dari sejarah kami.</p>
                     <button
                         class="mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
@@ -236,8 +234,9 @@
                     <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Grand Talkshow</p>
                     <p
                         class="lg:mx-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
-                        porttitor.</p>
+                        Acara talkshow yang menghadirkan pembicara-pembicara terkemuka di bidangnya dengan berbagai
+                        topik menarik untuk seluruh peserta. Bergabunglah secara gratis dan dapatkan manfaatnya secara
+                        penuh!</p>
                     <button
                         class="mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
