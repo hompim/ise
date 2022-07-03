@@ -9,7 +9,7 @@
 
     <link rel="icon" href="{{ asset('images/logo-only.png') }}">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+    <script src="{{ asset('js/alpine.js') }}"></script>
 </head>
 
 <body>
