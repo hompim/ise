@@ -52,6 +52,7 @@
             @endif --}}
 
             {{-- step 1 --}}
+            <!-- nama tim-->
             <input type="hidden" name="peserta_type" value="junior" />
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nama Tim</label>
@@ -59,20 +60,20 @@
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nama tim kamu" wire:model.defer="team_name" name="team_name">
             </div>
-            <div class="flex flex-col space-y-2 font-medium font-poppins">
-                <label for="asal-sekolah" class="text-white">Asal Sekolahmu</label>
-                <select id="asal-sekolah" required
-                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
-                    <option class="bg-liteBlack" disabled selected value="">Pilih
-                        asal
-                        sekolah
-                        kamu</option>
-                    <option value="1" class="bg-liteBlack ">sma 1</option>
-                </select>
+            <!-- nama tim-->
+            <!-- asal sekolah -->
+            <input type="hidden" name="peserta_type" value="junior" />
+            <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
+                <label for="name">Asal Sekolah</label>
+                <input id="name" name="name" type="text" required
+                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Masukkan asal sekolah kamu" wire:model.defer="team_name" name="team_name">
             </div>
+            <!-- asal sekolah -->
+            <!-- asal provinsi -->
             <div class="flex flex-col space-y-2 font-medium font-poppins">
-                <label for="asal-domisili" class="text-white">Asal provinsi/kota/kabupaten
-                    sekolahmu</label>
+                <label for="asal-domisili" class="text-white">Asal provinsi/Kota/Kabupaten
+                    Sekolah</label>
                 <select id="asal-domisili" required
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white"
                     name="school_city">
@@ -84,7 +85,7 @@
                     {{-- @endif --}}
                     {{-- <?php $curr_reg = $city->region; ?> --}}
                     {{-- @endif --}}
-                    <option class="bg-liteBlack" disabled selected value="">Pilih asal
+                    <option class="bg-liteBlack" disabled selected value="">Masukkan asal
                         provinsi/kota/kabupaten
                         sekolah
                         kamu</option>
@@ -92,11 +93,51 @@
                     {{-- @endforeach --}}
                 </select>
             </div>
+            <!-- asal provinsi -->
+            <!-- sekolah -->
+            <div class="flex flex-col space-y-2 font-medium font-poppins">
+                <label for="asal-sekolah" class="text-white">Sekolah</label>
+                <select id="asal-sekolah" required
+                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
+                    <option class="bg-liteBlack" disabled selected value="">Pilih
+                        nama
+                        sekolah
+                        kamu</option>
+                    <option value="1" class="bg-liteBlack ">sma 1</option>
+                </select>
+            </div>
+            <!-- sekolah -->
+            <!-- pembayaran -->
+            <div class="flex flex-col space-y-2 font-medium font-poppins">
+                <label for="asal-sekolah" class="text-white">Pembayaran</label>
+                <select id="asal-sekolah" required
+                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
+                    <option class="bg-liteBlack" disabled selected value="">Pilih opsi pembayaran (DP/Lunas)</option>
+                    <option value="1" class="bg-liteBlack ">sma 1</option>
+                </select>
+            </div>
+            <!-- pembayaran -->
             <div class="flex-flex-col">
                 <h3 class="text-xl font-semibold text-white font-poppins">Region</h3>
                 <h4 class="text-lg font-semibold text-[#6B7280] font-poppins">Kamu berada di <span
                         class="text-pink-300">{{ $region }}</span></h4>
             </div>
+            <!-- upload pembayaran -->
+            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Upload bukti pembayaran
+                </label>
+                <div class="flex flex-row justify-start items-center">
+                <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
+                <input  id="inputan"  type="file"  
+                    class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Add File" wire:model.defer="student_card_file_path" name="student_card_file_path"  >
+                <span class="pl-5" id="output"></span>    
+                </div>  
+                
+                <img class="transition" id="img-preview" src="" alt="">
+  
+            </div>
+            <!-- upload pembayaran -->
             <div class="relative left-0 right-0 justify-center mx-auto mt-24 text-center max-w-fit group">
                 <button type="button"
                     class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Next</button>
@@ -115,7 +156,7 @@
                     placeholder="Masukkan nama lengkap anggota 1">
             </div>
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
-                <label for="email-address">Email address</label>
+                <label for="email-address">Email</label>
                 <input id="email-address" name="email" type="email" required
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                     placeholder="Masukkan email aktif anggota 1">
@@ -147,31 +188,60 @@
                         12</label>
                 </div>
             </div>
-            <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="kartu-pelajar1">Kartu Pelajar Anggota 1
+            
+            <!--Upload kartu pelajar anggota 1-->
+            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Upload kartu pelajar anggota 1
                 </label>
-                <input id="kartu-pelajar1" name="kartu-pelajar1" type="file" required
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nomor WhatsApp anggota 1">
+                <div class="flex flex-row justify-start items-center">
+                <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
+                <input  id="inputan"  type="file"  
+                    class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Add File" wire:model.defer="igfollow_proof_file_path" name="igfollow_proof_file_path"  >
+                <span class="pl-5" id="output"></span>    
+                </div>  
+                
+                <img class="transition" id="img-preview" src="" alt="">
+  
             </div>
-            <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="twibbon1">Bukti Upload Twibbon
+            <!--Upload kartu pelajar anggota 1-->
+            <!--Upload bukti upload twibbon-->
+            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Upload bukti upload twibbon
                 </label>
-                <input id="twibbon1" name="twibbon1" type="file" required
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nomor WhatsApp anggota 1">
+                <div class="flex flex-row justify-start items-center">
+                <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
+                <input  id="inputan"  type="file"  
+                    class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Add File" wire:model.defer="igfollow_proof_file_path" name="igfollow_proof_file_path"  >
+                <span class="pl-5" id="output"></span>    
+                </div>  
+                
+                <img class="transition" id="img-preview" src="" alt="">
+  
             </div>
-            <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
-                        href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
+            <!--Upload bukti twibbon-->
+            <!--Upload bukti follow-->
+            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Upload bukti follow instagram ISE! <a class="text-purple-100 hover:underline"
+                href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
                 </label>
-                <input id="bukti-ig1" name="bukti-ig1" type="file" required
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nomor WhatsApp anggota 1">
+                <div class="flex flex-row justify-start items-center">
+                <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
+                <input  id="inputan"  type="file"  
+                    class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Add File" wire:model.defer="igfollow_proof_file_path" name="igfollow_proof_file_path"  >
+                <span class="pl-5" id="output"></span>    
+                </div>  
+                
+                <img class="transition" id="img-preview" src="" alt="">
+  
             </div>
+            <!--Upload bukti follow-->
+            
             {{-- anggota 1 end --}}
-
             {{-- anggota 2 --}}
+
             <h3 class="text-4xl font-semibold text-white underline underline-offset-2 decoration-purple-200">Anggota 2
             </h3>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
@@ -181,7 +251,7 @@
                     placeholder="Masukkan nama lengkap anggota 2">
             </div>
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
-                <label for="email-address">Email address</label>
+                <label for="email-address">Email</label>
                 <input id="email-address" name="email" type="email" required
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                     placeholder="Masukkan email aktif anggota 2">
@@ -213,31 +283,60 @@
                         12</label>
                 </div>
             </div>
-            <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="kartu-pelajar2">Kartu Pelajar Anggota 2
+            
+            <!--Upload kartu pelajar anggota 1-->
+            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Upload kartu pelajar anggota 2
                 </label>
-                <input id="kartu-pelajar2" name="kartu-pelajar2" type="file" required
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nomor WhatsApp anggota 1">
+                <div class="flex flex-row justify-start items-center">
+                <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
+                <input  id="inputan"  type="file"  
+                    class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Add File" wire:model.defer="igfollow_proof_file_path" name="igfollow_proof_file_path"  >
+                <span class="pl-5" id="output"></span>    
+                </div>  
+                
+                <img class="transition" id="img-preview" src="" alt="">
+  
             </div>
-            <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="twibbon2">Bukti Upload Twibbon
+            <!--Upload kartu pelajar anggota 1-->
+            <!--Upload bukti upload twibbon-->
+            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Upload bukti upload twibbon
                 </label>
-                <input id="twibbon2" name="twibbon2" type="file" required
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nomor WhatsApp anggota 1">
+                <div class="flex flex-row justify-start items-center">
+                <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
+                <input  id="inputan"  type="file"  
+                    class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Add File" wire:model.defer="igfollow_proof_file_path" name="igfollow_proof_file_path"  >
+                <span class="pl-5" id="output"></span>    
+                </div>  
+                
+                <img class="transition" id="img-preview" src="" alt="">
+  
             </div>
-            <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="bukti-ig2">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
-                        href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
+            <!--Upload bukti twibbon-->
+            <!--Upload bukti follow-->
+            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Upload bukti follow instagram ISE! <a class="text-purple-100 hover:underline"
+                href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
                 </label>
-                <input id="bukti-ig2" name="bukti-ig2" type="file" required
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nomor WhatsApp anggota 1">
+                <div class="flex flex-row justify-start items-center">
+                <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
+                <input  id="inputan"  type="file"  
+                    class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Add File" wire:model.defer="igfollow_proof_file_path" name="igfollow_proof_file_path"  >
+                <span class="pl-5" id="output"></span>    
+                </div>  
+                
+                <img class="transition" id="img-preview" src="" alt="">
+  
             </div>
+            <!--Upload bukti follow-->
+            
             {{-- anggota 2 end --}}
-
             {{-- anggota 3 --}}
+
             <h3 class="text-4xl font-semibold text-white underline underline-offset-2 decoration-purple-200">Anggota 3
             </h3>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
@@ -247,7 +346,7 @@
                     placeholder="Masukkan nama lengkap anggota 3">
             </div>
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
-                <label for="email-address">Email address</label>
+                <label for="email-address">Email</label>
                 <input id="email-address" name="email" type="email" required
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                     placeholder="Masukkan email aktif anggota 3">
@@ -279,29 +378,62 @@
                         12</label>
                 </div>
             </div>
-            <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="kartu-pelajar3">Kartu Pelajar Anggota 3
+            
+            <!--Upload kartu pelajar anggota 1-->
+            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Upload kartu pelajar anggota 3
                 </label>
-                <input id="kartu-pelajar3" name="kartu-pelajar3" type="file" required
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nomor WhatsApp anggota 3">
+                <div class="flex flex-row justify-start items-center">
+                <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
+                <input  id="inputan"  type="file"  
+                    class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Add File" wire:model.defer="igfollow_proof_file_path" name="igfollow_proof_file_path"  >
+                <span class="pl-5" id="output"></span>    
+                </div>  
+                
+                <img class="transition" id="img-preview" src="" alt="">
+  
             </div>
-            <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="twibbon3">Bukti Upload Twibbon
+            <!--Upload kartu pelajar anggota 1-->
+            <!--Upload bukti upload twibbon-->
+            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Upload bukti upload twibbon
                 </label>
-                <input id="twibbon3" name="twibbon3" type="file" required
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nomor WhatsApp anggota 1">
+                <div class="flex flex-row justify-start items-center">
+                <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
+                <input  id="inputan"  type="file"  
+                    class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Add File" wire:model.defer="igfollow_proof_file_path" name="igfollow_proof_file_path"  >
+                <span class="pl-5" id="output"></span>    
+                </div>  
+                
+                <img class="transition" id="img-preview" src="" alt="">
+  
             </div>
-            <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="bukti-ig3">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
-                        href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
+            <!--Upload bukti twibbon-->
+            <!--Upload bukti follow-->
+            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Upload bukti follow instagram ISE! <a class="text-purple-100 hover:underline"
+                href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
                 </label>
-                <input id="bukti-ig3" name="bukti-ig3" type="file" required
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nomor WhatsApp anggota 1">
+                <div class="flex flex-row justify-start items-center">
+                <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
+                <input  id="inputan"  type="file"  
+                    class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Add File" wire:model.defer="igfollow_proof_file_path" name="igfollow_proof_file_path"  >
+                <span class="pl-5" id="output"></span>    
+                </div>  
+                
+                <img class="transition" id="img-preview" src="" alt="">
+  
             </div>
+            <!--Upload bukti follow-->
+            
             {{-- anggota 3 end --}}
+
+            
+
+            
             <div
                 class="relative left-0 right-0 flex flex-col justify-center mx-auto mt-24 text-center lg:flex-row max-w-fit group">
                 <button type="button"
@@ -317,7 +449,7 @@
                 <label for="email-address">Email Anggota 1 (untuk login)</label>
                 <input id="email-address" name="email" type="email" required
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
-                    placeholder="Masukkan email aktif anggota 3">
+                    placeholder="Masukkan email aktif anggota 1">
             </div>
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
                 <div class="relative" x-data="{ isVisible: false }">
@@ -345,8 +477,8 @@
                         </button>
                     </div>
                     <label for="password" class="block">
-                        <span class="block mb-2 font-medium text-white">Password</span>
-                        <input type="password" name="password" id="password" placeholder="Masukkan password"
+                        <span class="block mb-2 font-medium text-white">Kata Sandi</span>
+                        <input type="password" name="password" id="password" placeholder="Masukkan kata sandi"
                             minlength="5"
                             class="w-full p-2 bg-transparent rounded-md focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
                             @visibility.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
@@ -382,8 +514,8 @@
                         </button>
                     </div>
                     <label for="password" class="block">
-                        <span class="block mb-2 font-medium text-white">Repeat Password</span>
-                        <input type="password" id="password" placeholder="Ulangi Password" minlength="5"
+                        <span class="block mb-2 font-medium text-white">Masukkan kembali kata sandi</span>
+                        <input type="password" id="password" placeholder="Masukkan kata sandi" minlength="5"
                             class="w-full p-2 bg-transparent rounded-md focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
                             @visibility.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
                         {{-- <p class="invisible m-1 text-xs text-pink-700 peer-invalid:visible">less than 5 characters</p> --}}
