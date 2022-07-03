@@ -6,6 +6,7 @@ use App\Http\Livewire\Pages\Landing\Icon;
 use App\Http\Livewire\Pages\Landing\Bionix;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
+use App\Http\Livewire\Pages\Auth\Bionix\RegistrasiRoadshow;
 use App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim;
 use Illuminate\Support\Facades\Redirect;
 
@@ -29,10 +30,10 @@ Route::get('/icon', Icon::class)->name('icon');
 Route::get('/coming-soon', function () {
     return view('coming-soon-page');
 });
-Route::get('/d', function () {
-    return view('livewire.pages.auth.bionix.Registrasi-roadshow');
-});
 
+Route::get('/Registerbcl', RegisterCollege::class);
+Route::get('/Registerst', RegisterStudent::class);
+Route::get('/Registerbclroad', RegistrasiRoadshow::class);
 //Route Dashboard -> Dashboard.php
 Route::prefix('dashboard')->group(__DIR__ . '/dashboard.php');
 
