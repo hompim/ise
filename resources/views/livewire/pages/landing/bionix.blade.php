@@ -594,9 +594,9 @@
         <!-- BCL Start -->
         <div x-show="tab === 'bcl'" class="flex justify-center">
             <div class="flex-col px-5 text-center md:w-3/4 md:p-4 font-poppins">
-                <div class="md:px-[100px]  pt-24">
-                    <h1 class="text-2xl font-bold ">Bionix College Level</h1>
-                    <p class="text-lg mt-10  text-[#B5B3BC] text-center">Hadir dengan konsep startup business plan yang
+                <div class="md:px-[100px] md:pt-24 pt-[43.5px]">
+                    <h1 class="md:text-2xl font-bold text-[19.25px]">Bionix College Level</h1>
+                    <p class="md:text-lg mt-10  text-[#B5B3BC] text-centertext-[12px]">Hadir dengan konsep startup business plan yang
                         akan mengasah skill kreativitas dan problem solving mahasiswa Indonesia dalam mengatasi
                         permasalahan yang ada melalui sebuah ide bisnis kreatif di bidang startup dengan memanfaatkan
                         kemajuan teknologi</p>
