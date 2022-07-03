@@ -164,60 +164,60 @@
         <div class="duration-700 flex flex-col justify-center items-center ease-in-out transition-all absolute inset-0 transform translate-x-0 z-20 " data-carousel-item="">
         <div >
                             <img src="./images/startup-academy.svg" alt=""
-                                class="w-[80px] h-[80px] md:w-[94px] lg:h-[94px] lg:mb-[-12px] mx-auto">
-                            <p class="md:mt-[30px] text-center font-bold font-poppins lg:text-2xl">Startup Academy</p>
+                                class="w-[60px] h-[60px] md:w-[94px] lg:h-[94px] lg:mb-[-12px] mx-auto">
+                            <p class="md:mt-[30px] text-center font-bold font-poppins text-[12px] md:text-2xl rounded-t-full md:rounded-none">Startup Academy</p>
                             <p
-                                class="  lg:mx-[80.5px] lg:mt-[30px] text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
+                                class="  lg:mx-[80.5px] mt-[8px] lg:mt-[30px] text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
                                 Startup Academy hadir untuk memberikan fundamental knowledge kepada para akademisi
                                 sebagai the next founder of startup.</p>
                             <button
-                                class=" mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] lg:text-2xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                class=" mt-[30px] ml-[50px]  md:ml-[92px] h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] md:text-2xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
                         </div>
             
         </div>
         <!-- Item 2 -->
-        <div class="duration-700 pt-[51px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
+        <div class="duration-700 md:pt-[51px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
         <div>
                             <img src="./images/data-science-slide.svg" alt=""
-                                class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
-                            <p class="mt-[30px] text-center font-bold font-poppins lg:text-2xl">Data Science Academy</p>
+                                class="mt-[40px] md:mt-0 w-[60px] h-[60px] md:w-[94px] md:h-[94px] md:mb-[-12px] mx-auto">
+                            <p class="md:mt-[30px] text-center font-bold font-poppins text-[12px] md:text-2xl ">Data Science Academy</p>
                             <p
-                                class="lg:mx-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium lg:text-lg font-poppins tracking-wide">
+                                class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[30px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
                                 Data Science Academy hadir untuk menjadi langkah awal atau katalis karier peserta
                                 sebagai seorang data scientist.</p>
                             <button
-                                class="mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
                         </div>
         </div>
         <!-- Item 3 -->
-        <div class="duration-700 pt-[51px] ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
+        <div class="duration-700 md:pt-[51px] ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
         <div>
                             <img src="./images/hall-is-slide.svg" alt=""
-                                class="w-[94px] h-[94px] mb-[-12px] mx-auto">
-                            <p class="mt-[30px] text-center font-bold font-poppins text-2xl">E-Hall of IS</p>
+                                class="mt-[40px] md:mt-0 w-[60px] h-[60px] md:w-[94px] md:h-[94px] md:mb-[-12px] mx-auto">
+                            <p class="md:mt-[30px] text-center font-bold font-poppins text-[12px] md:text-2xl">E-Hall of IS</p>
                             <p
-                                class="lg:mx-[80.5px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                                class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[30px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
                                 porttitor.</p>
                             <button
-                                class="mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
                         </div>
         </div>
         <!-- item 4 -->
-        <div class="duration-700 pt-[51px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
+        <div class="duration-700 md:pt-[51px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
         <div>
                             <img src="./images/grand-talkshow-slide.svg" alt=""
-                                class="sm:w-[94px] h-[94px] mb-[-12px] mx-auto">
-                            <p class="mt-[30px] text-center font-bold font-poppins text-2xl">Grand Talkshow</p>
+                                class="mt-[40px] md:mt-0 w-[60px] h-[60px] md:w-[94px] md:h-[94px] md:mb-[-12px] mx-auto">
+                            <p class="md:mt-[30px] text-center font-bold font-poppins text-[12px] md:text-2xl">Grand Talkshow</p>
                             <p
-                                class="lg:mx-[107px] mt-[30px] text-center text-[#B5B3BC] font-medium text-lg font-poppins tracking-wide">
+                                class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[30px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
                                 porttitor.</p>
                             <button
-                                class="mt-[30px] ml-[92px] content-center lg:w-[577px] lg:h-[50px] text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                                class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
                         </div>
         </div>
