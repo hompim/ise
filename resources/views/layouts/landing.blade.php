@@ -29,7 +29,7 @@
     @livewire('components.footer')
 
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
