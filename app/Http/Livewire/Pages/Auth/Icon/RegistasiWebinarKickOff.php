@@ -68,6 +68,7 @@ class RegistasiWebinarKickOff extends Component
             'whatsapp' => $this->whatsapp
         ]);
 
+
         IconWebinarKickOff::create([
             'member_id' => Auth::user()->userable_id,
             'info_source' => $this->info_source,
@@ -80,7 +81,7 @@ class RegistasiWebinarKickOff extends Component
     public function mount()
     {
         $this->name = Auth::user()->name;
-        $this->info_source = 'Media Sosial ISE! 2021';
+        $this->info_source = 'Media Sosial ISE! 2022';
     }
 
     public function closeModal()
