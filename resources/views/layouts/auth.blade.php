@@ -9,7 +9,7 @@
 
     <link rel="icon" href="{{ asset('images/logo-only.png') }}">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/alpine.js') }}"></script>
+    <script  src="{{ mix('js/app.js') }}"></script>
 </head>
 
 <body>
