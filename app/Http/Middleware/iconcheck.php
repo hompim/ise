@@ -30,7 +30,7 @@ class iconcheck
                 if (!Auth::user()->userable->webinar) {
                     return $next($request);
                 }else{
-                    return redirect(route('peserta.dashboard.choose'));
+                    return redirect(route('peserta.dashboard.choose'))->with('error','Anda Sudah mendaftar');
                 }
             }
         }
