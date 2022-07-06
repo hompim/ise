@@ -97,6 +97,7 @@ Route::middleware('auth')->group(function () {
 
             Route::group(['prefix' => 'webinar'], function () {
                 Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegistasiWebinarKickOff::class)->name('register-webinar')->middleware('iconcheck:webinar_peserta');
+                Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Beranda::class)->name('webinar.peserta.beranda')->middleware('iconcheck:webinar_peserta');
                 //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
             });
 

@@ -110,7 +110,7 @@ class Sidebar extends Component
                 'route-name' => 'peserta.dashboard.choose'
             ], [
                 'type' => 'divider',
-                'tag' =>'class=my-3'
+                'tag' =>'class=my-2'
             ]);
 
             if(Auth::user()->userable->bionix_id){
@@ -143,6 +143,24 @@ class Sidebar extends Component
                         'tag' =>'class=mb-3'
                     ]
                 );
+            } else if(Auth::user()->userable->webinar){
+                array_push(
+                    $this->menu,
+                    [
+                        'type' => 'title',
+                        'title' => 'Webinar Kick Off'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-home',
+                        'title' => 'Beranda',
+                        'route-name' => 'webinar.peserta.beranda'
+                    ],
+                    [
+                        'type' => 'divider',
+                        'tag' =>'class=my-2'
+                    ]
+                    );
             }
         }
 
