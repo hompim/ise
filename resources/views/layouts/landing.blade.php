@@ -9,6 +9,7 @@
     <meta name="keywords" content="@yield('keywords', 'ISE, Sistem Informasi ITS, Sistem Informasi, ITS, Olimpiade, Bisnis, TIK, Teknologi, Pameran IT, Konser')">
     <meta name="author" content="WebDev ISE! 2022">
     <meta property="og:image" content="{{ asset('images/isometric-city.png') }}">
+    <meta property="og:image" content="https://ise-its.com/images/isometric-city.png">
     <title>ISE! | Information System Expo! 2022</title>
     <!-- linknya -->
     <link rel="icon" href="{{ asset('images/logo-only.png') }}">
