@@ -7,7 +7,7 @@
                 <h3 class="text-white text-lg my-1 font-weight-bold">Email</h3>
                 <a href="mailto:bionix@ise-its.com" class="text-lg underline text-blue-500" target="_blank">bionix@ise-its.com</a>
                 <h3 class="text-white text-lg py-1 mt-2 font-weight-bold">Whatsapp</h3>
-                <a href="https://wa.me/6285624939354" class="text-lg underline text-blue-500" target="_blank">-</a>
+                <a href="https://wa.me/6285162852050" class="text-lg underline text-blue-500" target="_blank">6285162852050</a>
             </div>
         </div>
         <div class="card rounded-xl" style=" background-color: #191a1e; border:0">
@@ -16,7 +16,7 @@
                 <h3 class="text-white text-lg my-1 font-weight-bold">Email</h3>
                 <a href="mailto:icon@ise-its.com" class="text-lg underline text-blue-500" target="_blank">icon@ise-its.com</a>
                 <h3 class="text-white text-lg py-1 mt-2 font-weight-bold">Whatsapp</h3>
-                <a href="https://wa.me/6287755508283" class="text-lg underline text-blue-500" target="_blank">-</a><br/>
+                <a href="https://wa.me/6285162852050" class="text-lg underline text-blue-500" target="_blank">085162852050</a><br/>
             </div>
         </div>
     </div>

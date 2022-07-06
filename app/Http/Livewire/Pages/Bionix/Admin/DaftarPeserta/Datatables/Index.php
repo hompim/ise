@@ -19,36 +19,6 @@ class Index extends LivewireDatatable
     public $status = [];
     public $statusValue = '';
 
-    // public function mount(
-    //     $model = false,
-    //     $include = [],
-    //     $exclude = [],
-    //     $hide = [],
-    //     $dates = [],
-    //     $times = [],
-    //     $searchable = [],
-    //     $sort = null,
-    //     $hideHeader = null,
-    //     $hidePagination = null,
-    //     $perPage = null,
-    //     $exportable = false,
-    //     $hideable = false,
-    //     $beforeTableSlot = false,
-    //     $buttonsSlot = false,
-    //     $afterTableSlot = false,
-    //     $params = []
-    // ){
-    //     parent::mount();
-    //     if ($this->model == 'App\Models\Bionix\TeamJuniorData') {
-    //         $this->status = ['Penyisihan 1', 'Penyisihan 2', 'Semifinal', 'Final'];
-    //         $this->radio = 'student';
-    //     } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
-    //         $this->status = ['Penyisihan', 'Semifinal', 'Final'];
-    //         $this->radio = 'college';
-    //     }
-    //     $this->statusValue = $this->status[0];
-    // }
-
     public function builder()
     {
         if ($this->model == 'App\Models\Bionix\TeamJuniorData') {

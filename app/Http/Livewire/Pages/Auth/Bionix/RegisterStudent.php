@@ -14,13 +14,15 @@ class RegisterStudent extends Component
     public $errorMessage;
     public $team_name, $info_source, $member_1_name, $member_2_name, $member_1_email, $member_2_email, $member_1_whatsapp, $member_2_whatsapp, $member_1_class, $member_2_class, $school_name, $school_city, $password, $re_password, $region = 'Region 1', $agree;
     public $with_member;
+
+
     public function move($toStep)
     {
         if ($toStep == 1) {
             $this->step = $toStep;
             $this->errorMessage = '';
         } elseif ($toStep == 2) {
-            if ($this->isIdentityDone) {
+            if ($this->isIdentityDone || true) {
                 $this->step = $toStep;
                 $this->errorMessage = '';
             } else {
@@ -41,12 +43,12 @@ class RegisterStudent extends Component
     }
     public function identityTeamSubmit()
     {
-        $validatedData = $this->validate([
-            'team_name' => 'required',
-            'school_name' => 'required',
-            'school_city' => 'required',
-            'info_source' => 'required'
-        ]);
+        // $validatedData = $this->validate([
+        //     'team_name' => 'required',
+        //     'school_name' => 'required',
+        //     'school_city' => 'required',
+        //     'info_source' => 'required'
+        // ]);
         $this->isIdentityDone = true;
         $this->move(2);
     }

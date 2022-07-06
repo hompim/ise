@@ -78,7 +78,7 @@ Route::middleware('auth')->group(function () {
             Route::group(['prefix' => 'bionix'], function () {
                 Route::group(['middleware' => 'bionixcheck:unregistered'], function () {
                     Route::middleware(['usertype:Mahasiswa'])->group(function () {
-                        Route::get('register/college', \App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege::class)->middleware(['accessdate:true,01-01-2021 00:00:00,01-09-2021 23:59:59'])->name('register-college');
+                        Route::get('register/college', \App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege::class)->name('register-college');
                     });
                     Route::middleware('usertype:SMA')->group(function () {
                         Route::get('register/student', \App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent::class)->name('register-student');
