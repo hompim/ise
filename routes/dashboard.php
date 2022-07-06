@@ -69,10 +69,6 @@ Route::middleware('auth')->group(function () {
         //Peserta
         Route::group(['prefix' => 'peserta', 'middleware' => 'usertype:member'], function () {
            Route::get('/', \App\Http\Livewire\Pages\DashboardGeneral\ChooseDashboard::class)->name('peserta.dashboard.choose');
-           Route::get('/register-success', function(){
-                return view('livewire.pages.auth.register-success');
-           })->name('register-success');
-
 
             //Bionix Dashboard
             Route::group(['prefix' => 'bionix'], function () {
@@ -98,7 +94,7 @@ Route::middleware('auth')->group(function () {
             Route::group(['prefix' => 'webinar'], function () {
                 Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegistasiWebinarKickOff::class)->name('register-webinar')->middleware('iconcheck:!webinar_peserta');
                 Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Beranda::class)->name('webinar.peserta.beranda')->middleware('iconcheck:webinar_peserta');
-                //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
+                Route::get('register/success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\Webinar::class)->name('register-success-talkshow');
             });
 
             Route::group(['prefix' => 'is-class'], function () {
