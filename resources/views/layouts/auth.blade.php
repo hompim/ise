@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ISE! 2022</title>
 
-    <link rel="icon" href="{{ asset('images/logo-only.png') }}">
+    <link rel="icon" href="{{ asset('images/logo-only-small.png') }}">
+    <link rel="shortcut icon" href="{{ asset('images/logo-only-small.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/logo-only-small.png') }}" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script  src="{{ mix('js/app.js') }}"></script>
 </head>

@@ -10,11 +10,12 @@
     <meta name="author" content="WebDev ISE! 2022">
     <meta property="og:title" content="ISE! | Information System Expo! 2022">
     <meta property="og:description" content="@yield('desc', 'ISE! merupakan singkatan dari Information Systems Expo yang merupakan event tahunan yang diselenggarakan oleh Departemen Sistem Informasi Institut Teknologi Sepuluh Nopember Surabaya dalam rangka memperkenalkan Departemen Sistem Informasi ITS kepada masyarakat luas')"">
-    <meta property="og:image" content="{{ asset('images/logo-only.png') }}">
+    <meta property="og:image" content="{{ asset('images/logo-only-small.png') }}">
     <title>ISE! | Information System Expo! 2022</title>
     <!-- linknya -->
-    <link rel="icon" href="{{ asset('images/logo-only.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('images/logo-only.png') }}" />
+    <link rel="icon" href="{{ asset('images/logo-only-small.png') }}">
+    <link rel="shortcut icon" href="{{ asset('images/logo-only-small.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/logo-only-small.png') }}" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />

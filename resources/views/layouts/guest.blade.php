@@ -9,7 +9,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('images/logo-only.png') }}">
+    <link rel="icon" href="{{ asset('images/logo-only-small.png') }}">
+    <link rel="shortcut icon" href="{{ asset('images/logo-only-small.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/logo-only-small.png') }}" />
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
