@@ -30,7 +30,13 @@ class iconcheck
                 if (Auth::user()->userable->webinar) {
                     return $next($request);
                 }else{
-                    return redirect(route('register-webinar'));
+                    return redirect()->to(route('register-webinar'));
+                }
+            } elseif( $type == '!webinar_peserta'){
+                if (!Auth::user()->userable->webinar) {
+                    return $next($request);
+                }else{
+                    return redirect()->to(route('webinar.peserta.beranda'));
                 }
             }
         }
