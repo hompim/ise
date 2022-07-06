@@ -75,7 +75,7 @@ class RegistasiWebinarKickOff extends Component
             'instagram_story_path' => $instagram_story_path,
         ]);
         Mail::to(Auth::user()->email)->send(new WebinarKickOffMail);
-        return redirect()->to(route('register-success-webinar'));
+        return redirect(route('webinar.register-success'));
     }
 
     public function mount()
