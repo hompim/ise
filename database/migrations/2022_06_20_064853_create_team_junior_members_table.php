@@ -20,6 +20,8 @@ return new class extends Migration
             $table->enum('class',[10,11,12]);
             $table->string('whatsapp');
             $table->string('identity_card_path')->nullable();
+            $table->string('instagram_path')->nullable();
+            $table->string('twibbon_path')->nullable();
             $table->timestamps();
         });
     }

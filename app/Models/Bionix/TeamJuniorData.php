@@ -9,11 +9,7 @@ class TeamJuniorData extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['team_name', 'info_source', 'school_name', 'city_id', 'competition_round', 'profile_verif_status', 'profile_verfied_by', 'profile_verif_comment', 'payment_price', 'invoice_id', 'payment_proof_path', 'payment_verif_status', 'payment_verified_by', 'payment_verif_comment'];
-
-    public function member(){
-        return $this->hasMany(TeamJuniorMember::class, 'team_id');
-    }
+    protected $fillable = ['team_name', 'info_source', 'school_name', 'city_id', 'competition_round', 'profile_verif_status', 'profile_verfied_by', 'profile_verif_comment', 'payment_price', 'invoice_id', 'payment_proof_path', 'payment_verif_status', 'payment_verified_by', 'payment_verif_comment', 'leader_id', 'member_id'];
 
     public function city(){
         return $this->belongsTo(City::class);
@@ -29,5 +25,13 @@ class TeamJuniorData extends Model
 
     public function promo(){
         return $this->morphOne(PromoTeam::class, 'teamable');
+    }
+
+    public function leader() {
+        return $this->belongsTo(TeamJuniorMember::class, 'leader_id');
+    }
+
+    public function member() {
+        return $this->belongsTo(TeamJuniorMember::class, 'member_id');
     }
 }

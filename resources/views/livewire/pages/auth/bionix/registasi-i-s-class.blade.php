@@ -31,23 +31,6 @@
             wire:submit.prevent="akunSubmit" method="POST">
             @csrf
             {{-- @if ($errors->any())
-                <div class="relative px-4 py-3 mx-5 text-red-700 bg-red-100 border border-red-400 rounded md:mx-24"
-                    role="alert">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif --}}
-            {{-- @if (!empty($errorMessage))
-                <div class="relative px-4 py-3 mx-5 text-red-700 bg-red-100 border border-red-400 rounded md:mx-24"
-                    role="alert">
-                    <ul>
-                        <li>{{ $errorMessage }}</li>
-                    </ul>
-                </div>
-            @endif --}}
 
             {{-- step 1 --}}
             {{-- class="{{$step == 1 ? '' : 'hidden'}}" --}}
@@ -55,25 +38,25 @@
             <input type="hidden" name="peserta_type" value="senior" />
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nama Lengkap</label>
-                <input id="name" type="text" 
+                <input id="name" type="text"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nama lengkap kamu" wire:model.defer="full_name" name="full_name">
             </div>
             <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="name">Email</label>
-                <input id="name"  type="text" 
+                <input id="name"  type="text"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan email aktif kamu" wire:model.defer="active_email" name="active_email">
             </div>
             <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nomor WhatsApp</label>
-                <input id="name"  type="text" 
+                <input id="name"  type="text"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nomor WhatsApp kamu" wire:model.defer="whatsapp_number" name="whatsapp_number">
             </div>
             <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="name">Asal Sekolah</label>
-                <input id="name"  type="text" 
+                <input id="name"  type="text"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan asal sekolah kamu" wire:model.defer="school_origin" name="school_origin">
             </div>
@@ -82,28 +65,28 @@
                 </label>
                 <div class="flex flex-row justify-start items-center">
                 <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
-                <input  id="inputan"  type="file"  
+                <input  id="inputan"  type="file"
                     class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Add File" wire:model.defer="student_card_file_path" name="student_card_file_path"  >
-                <span class="pl-5" id="output"></span>    
-                </div>  
-                
+                <span class="pl-5" id="output"></span>
+                </div>
+
                 <img class="transition" id="img-preview" src="" alt="">
-  
+
             </div> --}}
             {{-- <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
                 <label for="kartu-pelajar1">Upload bukti upload twibbon
                 </label>
                 <div class="flex flex-row justify-start items-center">
                 <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
-                <input  id="inputan"  type="file"  
+                <input  id="inputan"  type="file"
                     class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Add File" wire:model.defer="twibbon_proof_file_path" name="twibbon_proof_file_path"  >
-                <span class="pl-5" id="output"></span>    
-                </div>  
-                
+                <span class="pl-5" id="output"></span>
+                </div>
+
                 <img class="transition" id="img-preview" src="" alt="">
-  
+
             </div> --}}
             {{-- <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
                 <label for="kartu-pelajar1">Upload bukti follow instagram ISE! <a class="text-purple-100 hover:underline"
@@ -111,17 +94,17 @@
                 </label>
                 <div class="flex flex-row justify-start items-center">
                 <button type="button" id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
-                <input  id="inputan"  type="file"  
+                <input  id="inputan"  type="file"
                     class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Add File" wire:model.defer="igfollow_proof_file_path" name="igfollow_proof_file_path"  >
-                <span class="pl-5" id="output"></span>    
-                </div>  
-                
+                <span class="pl-5" id="output"></span>
+                </div>
+
                 <img class="transition" id="img-preview" src="" alt="">
-  
+
             </div> --}}
-            
-     
+
+
             </div>
             {{-- step 1 end --}}
 
@@ -133,19 +116,19 @@
             </h3>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nama Lengkap</label>
-                <input id="name" wire:model.defer="member_1_name" name="member_1_name" type="text" 
+                <input id="name" wire:model.defer="member_1_name" name="member_1_name" type="text"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nama lengkap anggota 1">
             </div>
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
                 <label for="email-address">Email</label>
-                <input id="email-address" name="email" type="email" 
+                <input id="email-address" name="email" type="email"
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                     placeholder="Masukkan email aktif anggota 1">
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="wa">Nomor WhatsApp</label>
-                <input id="wa" name="wa" type="tel" 
+                <input id="wa" name="wa" type="tel"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nomor WhatsApp anggota 1">
             </div>
@@ -154,22 +137,22 @@
                 </label>
                   <div class="flex flex-row justify-start items-center">
                 <button id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
-                <input  id="kartu-pelajar1" name="kartu-pelajar1" type="file"  
+                <input  id="kartu-pelajar1" name="kartu-pelajar1" type="file"
                     class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Add File" >
-                <span class="pl-5" id="output"></span>    
-                </div>  
+                <span class="pl-5" id="output"></span>
+                </div>
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="twibbon1">Bukti Upload Twibbon
                 </label>
                 <div class="flex flex-row justify-start items-center">
                     <button id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
-                    <input  id="member_1_twibbon" name="member_1_twibbon" type="file"  
+                    <input  id="member_1_twibbon" name="member_1_twibbon" type="file"
                         class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Add File" >
-                    <span class="pl-5" id="output"></span>    
-                    </div>  
+                    <span class="pl-5" id="output"></span>
+                    </div>
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
@@ -177,11 +160,11 @@
                 </label>
                 <div class="flex flex-row justify-start items-center">
                     <button id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
-                    <input  id="bukti_ig1" name="bukti_ig1" type="file"  
+                    <input  id="bukti_ig1" name="bukti_ig1" type="file"
                         class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Add File" >
-                    <span class="pl-5" id="output"></span>    
-                    </div>  
+                    <span class="pl-5" id="output"></span>
+                    </div>
             </div>
             {{-- anggota 1 end --}}
 
@@ -190,37 +173,37 @@
             </h3>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nama Lengkap</label>
-                <input id="name" name="name" type="text" 
+                <input id="name" name="name" type="text"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nama lengkap anggota 2">
             </div>
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
                 <label for="email-address">Email address</label>
-                <input id="email-address" name="email" type="email" 
+                <input id="email-address" name="email" type="email"
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                     placeholder="Masukkan email aktif anggota 2">
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="wa">Nomor WhatsApp</label>
-                <input id="wa" name="wa" type="tel" 
+                <input id="wa" name="wa" type="tel"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nomor WhatsApp anggota 2">
-            </div>  
+            </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="kartu-pelajar2">Upload kartu pelajar anggota 2
                 </label>
                   <div class="flex flex-row justify-start items-center">
                 <button id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
-                <input  id="inputan" name="kartu-pelajar2" type="file"  
+                <input  id="inputan" name="kartu-pelajar2" type="file"
                     class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Add File" >
-                <span class="pl-5" id="output"></span>    
-                </div>  
+                <span class="pl-5" id="output"></span>
+                </div>
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="twibbon2">Bukti Upload Twibbon
                 </label>
-                <input id="twibbon2" name="member_2_twibbon" type="file" 
+                <input id="twibbon2" name="member_2_twibbon" type="file"
                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Add File">
             </div>
@@ -228,7 +211,7 @@
                 <label for="bukti-ig2">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
                         href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
                 </label>
-                <input id="bukti-ig2"  type="file" 
+                <input id="bukti-ig2"  type="file"
                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Add File">
             </div>
@@ -239,49 +222,49 @@
             </h3>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nama Lengkap</label>
-                <input id="name" name="name" type="text" 
+                <input id="name" name="name" type="text"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nama lengkap anggota 3">
             </div>
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
                 <label for="email-address">Email address</label>
-                <input id="email-address" name="email" type="email" 
+                <input id="email-address" name="email" type="email"
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                     placeholder="Masukkan email aktif anggota 3">
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="wa">Nomor WhatsApp</label>
-                <input id="wa" name="wa" type="tel" 
+                <input id="wa" name="wa" type="tel"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nomor WhatsApp anggota 3">
-            </div> 
+            </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="kartu-pelajar3">Upload kartu pelajar anggota 3
                 </label>
                   <div class="flex flex-row justify-start items-center">
                 <button id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
-                <input  id="kartu-pelajar3" name="kartu-pelajar3" type="file"  
+                <input  id="kartu-pelajar3" name="kartu-pelajar3" type="file"
                     class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Add File" >
-                <span class="pl-5" id="output"></span>    
-                </div>  
+                <span class="pl-5" id="output"></span>
+                </div>
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="twibbon3">Bukti Upload Twibbon
                 </label>
                 <div class="flex flex-row justify-start items-center">
                     <button id="buton" class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent" > <img class="mr-4" src="{{asset('images/upload.svg')}}" alt=""> Add File </button>
-                    <input  id="twibbon3" name="twibbon3" type="file"  
+                    <input  id="twibbon3" name="twibbon3" type="file"
                         class=" rounded-md bg-transparent !border border-[rgb(107,114,128)] hidden focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Add File" >
-                    <span class="pl-5" id="output"></span>    
-                    </div>  
+                    <span class="pl-5" id="output"></span>
+                    </div>
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="bukti-ig3">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
                         href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
                 </label>
-                <input id="bukti-ig3"  type="file" 
+                <input id="bukti-ig3"  type="file"
                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Add File">
             </div>
@@ -293,7 +276,7 @@
             <div class="{{$step == 3 ? '' : 'hidden'}}">
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
                 <label for="email-address">Email Anggota 1 (untuk login)</label>
-                <input id="email-address" name="email" type="email" 
+                <input id="email-address" name="email" type="email"
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                     placeholder="Masukkan email aktif anggota 3">
             </div>
@@ -369,10 +352,10 @@
 
                 </div>
             </div>
-        
+
             <div class="flex flex-col space-y-2 font-medium font-poppins">
                 <label for="info-pendaftaran" class="text-white">Info Pendaftaran</label>
-                <select id="info-pendaftaran" name="info_source" 
+                <select id="info-pendaftaran" name="info_source"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
                     <option class="bg-liteBlack" disabled selected value="">Dari manakah kamu mendapatkan
                         informasi mengenai BIONIX?</option>
@@ -392,7 +375,7 @@
                     berlaku</label>
                 </d>
             </div>
-        
+
             <div
                 class="relative left-0 right-0 flex flex-col justify-center mx-auto mt-24 text-center lg:flex-row max-w-fit group">
                 <button type="button"
@@ -403,23 +386,23 @@
         </div>
 
 
-        
+
         <div
         class="relative left-0 right-0 flex flex-col justify-center mx-auto mt-24 text-center lg:flex-row max-w-fit group">
-        @if($step == 1)    
+        @if($step == 1)
         <button wire:click="identityTeamSubmit" type="button"
                 class="relative px-24 text-xl duration-300 transform btn hover:scale-105 cursor-pointer">Next</button>
-             
-        
+
+
 
         @elseif($step == 2)
-        
+
         <button type="button"
             class="relative px-24 mx-auto mb-4 text-xl text-purple-200 duration-300 transform lg:mr-4 lg:mb-0 btn-secondary hover:scale-105">Back</button>
         <button type="button"
             class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Next</button>
         </div>
-        @endif   
+        @endif
 
         </form>
 
@@ -429,7 +412,7 @@
             const filepicker = document.getElementById('inputan');
             const buton = document.getElementById('buton');
             let image = document.getElementById('img-preview');
-            
+
 
             buton.addEventListener('click', () => {
                 filepicker.click();
@@ -446,5 +429,34 @@
 
 
             })
-        </script>    
+        </script>
+
+        @if ($errors->any() || $errorMessage)
+        <div class="fixed px-4 py-3 text-red-900 bg-red-100 border-t-4 border-red-500 rounded-b shadow-md bottom-12 right-12"
+            role="alert">
+            <div class="flex">
+                <div class="py-1">
+                    <svg class="w-6 h-6 mr-4 text-red-500 fill-current" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-bold">Terjadi masalah</p>
+                    <ul class="font-normal">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    @if ($errorMessage)
+                        <p class="font-normal">{{ $errorMessage }}</p>
+                    @endif
+                </div>
+                <button type="button" title="Hapus" wire:click="closeModal()" class="self-start"><i
+                        class="fas fa-times"></i></button>
+            </div>
+        </div>
+    @endif
+
     </div>

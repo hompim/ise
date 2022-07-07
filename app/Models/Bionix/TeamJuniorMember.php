@@ -9,9 +9,6 @@ class TeamJuniorMember extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email','class', 'whatsapp', 'identity_card_path', 'team_id'];
+    protected $fillable = ['name', 'email','class', 'whatsapp', 'identity_card_path','instagram_path', 'twibbon_path'];
 
-    public function team(){
-        return $this->belongsTo(TeamSeniorData::class, 'team_id');
-    }
 }

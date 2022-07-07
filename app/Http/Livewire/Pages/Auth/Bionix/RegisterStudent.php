@@ -2,17 +2,29 @@
 
 namespace App\Http\Livewire\Pages\Auth\Bionix;
 
+use App\Models\Bionix\City;
+use App\Models\Bionix\TeamJuniorData;
+use App\Models\Bionix\TeamJuniorMember;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManager;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class RegisterStudent extends Component
 {
+    use WithFileUploads;
+
     public $cities;
     public $step = 1;
     public $isIdentityDone = false;
     public $isAnggotaDone = false;
     public $isAkunDone = false;
     public $errorMessage;
-    public $team_name, $info_source, $member_1_name, $member_2_name, $member_1_email, $member_2_email, $member_1_whatsapp, $member_2_whatsapp, $member_1_class, $member_2_class, $school_name, $school_city, $password, $re_password, $region = 'Region 1', $agree;
+    public $team_name, $info_source, $member_1_name, $member_2_name, $member_1_email, $member_2_email, $member_1_whatsapp, $member_2_whatsapp, $member_1_class, $member_2_class, $school_name, $school_city, $password, $re_password, $region = '1', $agree;
+    public $twibbon_1,$twibbon_2;
+    public $ktm_1, $ktm_2;
+    public $instagram_1, $instagram_2;
     public $with_member;
 
 
@@ -22,7 +34,7 @@ class RegisterStudent extends Component
             $this->step = $toStep;
             $this->errorMessage = '';
         } elseif ($toStep == 2) {
-            if ($this->isIdentityDone || true) {
+            if ($this->isIdentityDone ) {
                 $this->step = $toStep;
                 $this->errorMessage = '';
             } else {
@@ -37,33 +49,34 @@ class RegisterStudent extends Component
             }
         }
     }
-    public function setCity($city_id)
-    {
-        $this->school_city = $city_id;
-    }
+
     public function identityTeamSubmit()
     {
-        // $validatedData = $this->validate([
-        //     'team_name' => 'required',
-        //     'school_name' => 'required',
-        //     'school_city' => 'required',
-        //     'info_source' => 'required'
-        // ]);
+        $this->validate([
+            'team_name' => 'required',
+            'school_name' => 'required',
+            'school_city' => 'required',
+        ]);
         $this->isIdentityDone = true;
         $this->move(2);
     }
     public function anggotaTeamSubmit()
     {
-        $validatedData = $this->validate([
+        $this->validate([
             'member_1_name' => 'required',
-            'member_2_name' => 'required',
             'member_1_email' => 'required|email',
-            'member_2_email' => 'required|email|unique:users,email|unique:team_senior_members,email|unique:team_junior_members',
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
-            'member_2_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'member_1_class' => 'required',
-            'member_2_class' => 'required',
+            'twibbon_1' => 'required|image|max:1024', // 1MB Max
+            'ktm_1' => 'required|image|max:1024', // 1MB Max
+            'instagram_1' => 'required|image|max:1024', // 1MB Max
+            'member_2_email' => 'email|unique:users,email|unique:team_senior_members,email|unique:team_junior_members',
+            'member_2_whatsapp' => 'regex:/^(^08)\d{8,11}$/|max:14|string',
+            'twibbon_2' => 'image|max:1024', // 1MB Max
+            'ktm_2' => 'image|max:1024', // 1MB Max
+            'instagram_2' => 'image|max:1024', // 1MB Max
         ]);
+
         if ($this->member_1_email == $this->member_2_email) {
             $this->errorMessage = "Email kedua peserta tidak boleh sama";
             return;
@@ -82,14 +95,20 @@ class RegisterStudent extends Component
             'member_1_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
             'member_1_class' => 'required',
+            'twibbon_1' => 'required|image|max:1024', // 1MB Max
+            'ktm_1' => 'required|image|max:1024', // 1MB Max
+            'instagram_1' => 'required|image|max:1024', // 1MB Max
 
         ];
-        if ($this->member_2_email || $this->member_2_name || $this->member_2_whatsapp || $this->member_2_class) {
+        if ($this->member_2_email || $this->member_2_name || $this->member_2_whatsapp || $this->member_2_class || $this->twibbon_2 || $this->ktm_2 || $this-> instagram_2) {
             $arr_validation = array_merge($arr_validation, [
                 'member_2_name' => 'required',
                 'member_2_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
                 'member_2_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
                 'member_2_class' => 'required',
+                'twibbon_2' => 'required|image|max:1024', // 1MB Max
+                'ktm_2' => 'required|image|max:1024', // 1MB Max
+                'instagram_2' => 'required|image|max:1024', // 1MB Max
 
             ]);
             $this->with_member = true;
@@ -104,8 +123,12 @@ class RegisterStudent extends Component
             $this->errorMessage = 'Tolong setujui syarat dan ketentuan';
             return;
         }
+
         $this->isAkunDone = true;
-        \Auth::user()->update([
+
+        Storage::disk('public')->makeDirectory('bionix');
+
+        Auth::user()->update([
             'name' => $this->member_1_name,
             'no_hp' => $this->member_1_whatsapp
         ]);
@@ -116,6 +139,51 @@ class RegisterStudent extends Component
             'class' => $this->member_1_class,
             'whatsapp' => $this->member_1_whatsapp
         ])->id;
+
+        if (!is_string($this->ktm_1) && !is_string($this->twibbon_1) && !is_string($this->instagram_1)) {
+            $ktm = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_KTM' . '.' . $this->ktm_1->getClientOriginalExtension();
+            $instagram = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_INSTAGRAM' . '.' . $this->instagram_1->getClientOriginalExtension();
+            $twibbon = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_TWIBBON' . '.' . $this->twibbon_1->getClientOriginalExtension();
+
+            $resized_image_ktm = (new ImageManager())
+                ->make($this->ktm_1)
+                ->resize(600, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->encode($this->ktm_1->getClientOriginalExtension());
+
+            $resized_image_instagram = (new ImageManager())
+                ->make($this->instagram_1)
+                ->resize(600, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->encode($this->instagram_1->getClientOriginalExtension());
+
+            $resized_image_twibbon = (new ImageManager())
+                ->make($this->twibbon_1)
+                ->resize(600, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->encode($this->twibbon_1->getClientOriginalExtension());
+
+
+            Storage::disk('public')
+                ->put('bionix/' . $ktm,
+                    $resized_image_ktm->__toString());
+            Storage::disk('public')
+                ->put('bionix/' . $instagram,
+                    $resized_image_instagram->__toString());
+            Storage::disk('public')
+                ->put('bionix/' . $twibbon,
+                    $resized_image_twibbon->__toString());
+
+            Auth::user()->userable->bionix->leader->update([
+                'identity_card_path' => 'bionix/' . $ktm,
+                'twibbon_path' => 'bionix/'. $twibbon,
+                'instagram_path' => 'bionix'. $instagram
+            ]);
+        }
+
         $team_member_2 = null;
         if ($this->with_member) {
             $team_member_2 = TeamJuniorMember::create([
@@ -124,6 +192,50 @@ class RegisterStudent extends Component
                 'class' => $this->member_2_class,
                 'whatsapp' => $this->member_2_whatsapp
             ])->id;
+
+            if (!is_string($this->ktm_2) && !is_string($this->twibbon_2) && !is_string($this->instagram_2)) {
+                $ktm2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_KTM' . '.' . $this->ktm_1->getClientOriginalExtension();
+                $instagram2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_INSTAGRAM' . '.' . $this->instagram_1->getClientOriginalExtension();
+                $twibbon2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_TWIBBON' . '.' . $this->twibbon_1->getClientOriginalExtension();
+
+                $resized_image_ktm2 = (new ImageManager())
+                    ->make($this->ktm_2)
+                    ->resize(600, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    })->encode($this->ktm_2->getClientOriginalExtension());
+
+                $resized_image_instagram2 = (new ImageManager())
+                    ->make($this->instagram_2)
+                    ->resize(600, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    })->encode($this->instagram_2->getClientOriginalExtension());
+
+                $resized_image_twibbon2 = (new ImageManager())
+                    ->make($this->twibbon_2)
+                    ->resize(600, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    })->encode($this->twibbon_2->getClientOriginalExtension());
+
+
+                Storage::disk('public')
+                    ->put('bionix/' . $ktm2,
+                        $resized_image_ktm2->__toString());
+                Storage::disk('public')
+                    ->put('bionix/' . $instagram2,
+                        $resized_image_instagram2->__toString());
+                Storage::disk('public')
+                    ->put('bionix/' . $twibbon2,
+                        $resized_image_twibbon2->__toString());
+
+                Auth::user()->userable->bionix->member->update([
+                    'identity_card_path' => 'bionix/' . $ktm,
+                    'twibbon_path' => 'bionix/'. $twibbon,
+                    'instagram_path' => 'bionix'. $instagram
+                ]);
+            }
         }
         $team_data = TeamJuniorData::create([
             'team_name' => $this->team_name,
@@ -134,26 +246,27 @@ class RegisterStudent extends Component
             'leader_id' => $team_member_1,
             'member_id' => $team_member_2
         ]);
-        \Auth::user()->userable->update([
+        Auth::user()->userable->update([
             'bionix_id' => $team_data->id,
             'bionix_type' => 'App\Models\Bionix\TeamJuniorData'
         ]);
 
         return redirect()->to(route('bionix.peserta.homepage'));
     }
-    public function getRegion($city_id)
-    {
-        foreach ($this->cities as $city) {
-            if ($city->id == $city_id) {
-                $this->region = $city->region;
-                break;
-            }
-        }
+
+
+    public function updatedSchoolCity(){
+        $this->region = City::find($this->school_city)->region;
     }
+
     public function closeModal()
     {
         $this->errorMessage = '';
         $this->resetErrorBag();
+    }
+
+    public function mount(){
+        $this->cities = City::all();
     }
 
     public function render()

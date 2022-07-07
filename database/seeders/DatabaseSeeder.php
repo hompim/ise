@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Database\Seeders\Bionix\CitiesSeeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,7 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AdminSeeder::class,
             EventSeeder::class,
-            PesertaSeeder::class
+            PesertaSeeder::class,
+            CitiesSeeder::class
         ]);
     }
 }
