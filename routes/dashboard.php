@@ -81,6 +81,8 @@ Route::middleware('auth')->group(function () {
                     });
                 });
 
+                Route::get('register/success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\Bionix::class)->name('register-student-success');
+
                 Route::group(['middleware' => 'usertype:bionix_peserta'], function () {
                     Route::get('/')->name('bionix.peserta.homepage');
                     Route::get('/identitas-tim',\App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim::class)->name('bionix.peserta.identitas-tim');

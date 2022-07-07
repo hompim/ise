@@ -38,14 +38,14 @@ class RegisterStudent extends Component
                 $this->step = $toStep;
                 $this->errorMessage = '';
             } else {
-                $this->errorMessage = "Harap selesaikan tahap 1 terlebih dahulu";
+                $this->errorMessage = "Harap selesaikan tahap 2 terlebih dahulu";
             }
         } elseif ($toStep == 3) {
             if ($this->isAnggotaDone) {
                 $this->step = $toStep;
                 $this->errorMessage = '';
             } else {
-                $this->errorMessage = "Harap selesaikan tahap 2 terlebih dahulu";
+                $this->errorMessage = "Harap selesaikan tahap 3 terlebih dahulu";
             }
         }
     }
@@ -70,8 +70,8 @@ class RegisterStudent extends Component
             'twibbon_1' => 'required|image|max:1024', // 1MB Max
             'ktm_1' => 'required|image|max:1024', // 1MB Max
             'instagram_1' => 'required|image|max:1024', // 1MB Max
-            'member_2_email' => 'email|unique:users,email|unique:team_senior_members,email|unique:team_junior_members',
-            'member_2_whatsapp' => 'regex:/^(^08)\d{8,11}$/|max:14|string',
+            'member_2_email' => 'email|unique:users,email|unique:team_senior_members,email|unique:team_junior_members,email',
+            'member_2_whatsapp' => '|regex:/^(^08)\d{8,11}$/|max:14|string',
             'twibbon_2' => 'image|max:1024', // 1MB Max
             'ktm_2' => 'image|max:1024', // 1MB Max
             'instagram_2' => 'image|max:1024', // 1MB Max
@@ -251,7 +251,7 @@ class RegisterStudent extends Component
             'bionix_type' => 'App\Models\Bionix\TeamJuniorData'
         ]);
 
-        return redirect()->to(route('bionix.peserta.homepage'));
+        return redirect()->to(route('register-student-success'));
     }
 
 

@@ -90,27 +90,27 @@
             {{-- step 2 Anggota Tim --}}
             <div class="{{$step == 2 ? null : "hidden"}}">
                 {{-- anggota 1 --}}
-            <h3 class="text-4xl font-semibold text-white underline underline-offset-2 decoration-purple-200">Anggota 2
+            <h3 class="text-4xl mb-5 font-semibold text-white underline underline-offset-2 decoration-purple-200">Anggota 1
             </h3>
-            <div class="flex flex-col mb-11 space-y-2 font-medium text-white font-poppins">
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nama Lengkap</label>
                 <input id="name" name="member_1_name" wire:model.defer ="member_1_name" type="text" required
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nama lengkap anggota 1">
             </div>
-            <div class="flex flex-col mb-11 space-y-2 font-medium text-white font-poppins">
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="email-address">Email address</label>
                 <input id="email-address" name="member_1_email" wire:model.defer ="member_1_email" type="email" required
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                     placeholder="Masukkan email aktif anggota 1">
             </div>
-            <div class="flex flex-col mb-11 space-y-2 font-medium text-white font-poppins">
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="wa">Nomor WhatsApp</label>
                 <input id="wa" name="member_1_whatsapp" wire:model.defer ="member_1_whatsapp" type="tel" required
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nomor WhatsApp anggota 1">
             </div>
-            <div class="kelas mb-11">
+            <div class="kelas my-11">
                 <h5 class="mb-4 text-lg text-white">Kelas</h5>
                 <div class="flex items-center mb-2">
                     <input id="kelas10" name="member_1_class" wire:model.defer ="member_1_class" type="radio" value="10" required
@@ -131,21 +131,21 @@
                         12</label>
                 </div>
             </div>
-            <div class="flex flex-col mb-11 space-y-2 font-medium text-white font-poppins">
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="kartu-pelajar1">Kartu Pelajar Anggota 1
                 </label>
                 <input id="kartu-pelajar1" name="ktm_1" wire:model.defer="ktm_1" type="file" required
                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Kartu Pelajar Anggota 1">
             </div>
-            <div class="flex flex-col space-y-2 mb-11 font-medium text-white font-poppins">
+            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                 <label for="twibbon1">Bukti Upload Twibbon
                 </label>
                 <input id="twibbon1" name="twibbon_1" wire:model.defer="twibbon_1" type="file" required
                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Twibbon Anggota 1">
             </div>
-            <div class="flex flex-col space-y-2 mb-11 font-medium text-white font-poppins">
+            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                 <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
                         href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
                 </label>
@@ -156,27 +156,27 @@
             {{-- anggota 1 end --}}
 
             {{-- anggota 2 --}}
-            <h3 class="text-4xl font-semibold text-white underline underline-offset-2 decoration-purple-200">Anggota 1
+            <h3 class="text-4xl font-semibold text-white underline underline-offset-2 decoration-purple-200">Anggota 2
             </h3>
-            <div class="flex flex-col mb-11 space-y-2 font-medium text-white font-poppins">
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nama Lengkap</label>
                 <input id="name" name="member_2_name" wire:model.defer ="member_2_name" type="text"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nama lengkap anggota 2">
             </div>
-            <div class="flex flex-col mb-11 space-y-2 font-medium text-white font-poppins">
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="email-address">Email address</label>
                 <input id="email-address" name="member_2_email" wire:model.defer ="member_2_email" type="email"
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                     placeholder="Masukkan email aktif anggota 2">
             </div>
-            <div class="flex flex-col mb-11 space-y-2 font-medium text-white font-poppins">
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="wa">Nomor WhatsApp</label>
                 <input id="wa" name="member_2_whatsapp" wire:model.defer ="member_2_whatsapp" type="tel"
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nomor WhatsApp anggota 2">
             </div>
-            <div class="kelas mb-11">
+            <div class="kelas my-11">
                 <h5 class="mb-4 text-lg text-white">Kelas</h5>
                 <div class="flex items-center mb-2">
                     <input id="kelas10" name="member_2_class" wire:model.defer ="member_2_class" type="radio" value="10"
@@ -197,21 +197,21 @@
                         12</label>
                 </div>
             </div>
-            <div class="flex flex-col mb-11 space-y-2 font-medium text-white font-poppins">
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="kartu-pelajar1">Kartu Pelajar Anggota 2
                 </label>
                 <input id="kartu-pelajar1" name="ktm_2" wire:model.defer="ktm_2" type="file"
                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Kartu Pelajar Anggota 2">
             </div>
-            <div class="flex flex-col space-y-2 mb-11 font-medium text-white font-poppins">
+            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                 <label for="twibbon1">Bukti Upload Twibbon
                 </label>
                 <input id="twibbon1" name="twibbon_2" wire:model.defer="twibbon_2" type="file"
                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Twibbon Anggota 2">
             </div>
-            <div class="flex flex-col space-y-2 mb-11 font-medium text-white font-poppins">
+            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                 <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
                         href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
                 </label>
@@ -222,9 +222,9 @@
             {{-- anggota 2 end --}}
             <div
                 class="relative left-0 right-0 flex flex-col justify-center mx-auto mt-24 text-center lg:flex-row max-w-fit group">
-                <button type="button"
+                <button type="button" wire:click ="move({{$step-1}})"
                     class="relative px-24 mx-auto mb-4 text-xl text-purple-200 duration-300 transform lg:mr-4 lg:mb-0 btn-secondary hover:scale-105">Back</button>
-                <button type="button"
+                <button type="button" wire:click = "anggotaTeamSubmit()"
                     class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Next</button>
             </div>
 
@@ -233,7 +233,7 @@
 
             {{-- step 3 --}}
             <div class="{{$step == 3 ? null : "hidden"}}">
-                <div class="flex flex-col space-y-2 mb-11 font-medium font-poppins">
+                <div class="flex flex-col space-y-2 font-medium font-poppins">
                     <label for="info-pendaftaran" class="text-white">Info Pendaftaran</label>
                     <select id="info-pendaftaran" name="info-pendaftaran" name="info_source" wire:model.defer = "info_source" required
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
@@ -246,7 +246,7 @@
                     </select>
                 </div>
 
-                <div class="flex-row space-x-4 mb-11 font-medium font-poppins">
+                <div class="flex-row space-x-4 my-11 font-medium font-poppins">
                     <input type="checkbox" id="setuju-kebijakan" name="agree" wire:model.defer="agree"
                         class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
                     <label class="text-white" for="setuju-kebijakan">Saya setuju dengan kebijakan privasi serta syarat dan
@@ -256,7 +256,7 @@
                 </div>
                 <div
                     class="relative left-0 right-0 flex flex-col justify-center mx-auto mt-24 text-center lg:flex-row max-w-fit group">
-                    <button type="button"
+                    <button type="button" wire:click ="move({{$step - 1}})"
                         class="relative px-24 mx-auto mb-4 text-xl text-purple-200 duration-300 transform lg:mr-4 btn-secondary hover:scale-105 lg:mb-0">Back</button>
                     <button type="Submit"
                         class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Submit</button>
