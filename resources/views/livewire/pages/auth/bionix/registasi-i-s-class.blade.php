@@ -274,48 +274,6 @@
 
             {{-- step 3 --}}
             <div class="{{$step == 3 ? '' : 'hidden'}}">
-            <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
-                <label for="email-address">Email Anggota 1 (untuk login)</label>
-                <input id="email-address" name="email" type="email"
-                    class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
-                    placeholder="Masukkan email aktif anggota 3">
-            </div>
-            <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
-                <div class="relative" x-data="{ isVisible: false }">
-                    <div class="absolute flex items-center h-full mt-4 ml-2 right-4">
-                        <button type="button" class="block px-1 focus:outline-none"
-                            @click="$dispatch('visibility'); isVisible = !isVisible;">
-                            <div x-show="isVisible">
-                                <svg class="w-6 h-6 stroke-[#6B7280] hover:stroke-pink-200" fill="none"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div x-show="!isVisible">
-                                <svg class="w-6 h-6 stroke-[#6B7280] hover:stroke-pink-200" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21">
-                                    </path>
-                                </svg>
-                            </div>
-                        </button>
-                    </div>
-                    <label for="password" class="block">
-                        <span class="block mb-2 font-medium text-white">Password</span>
-                        <input type="password" name="password" id="password" placeholder="Masukkan password"
-                            minlength="5"
-                            class="w-full p-2 bg-transparent rounded-md focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
-                            @visibility.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
-                        {{-- <p class="invisible m-1 text-xs text-pink-700 peer-invalid:visible">less than 5 characters</p> --}}
-                    </label>
-
-                </div>
-            </div>
 
             <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
                 <div class="relative" x-data="{ isVisible: false }">

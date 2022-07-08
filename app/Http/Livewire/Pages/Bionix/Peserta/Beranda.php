@@ -10,6 +10,7 @@ use Livewire\Component;
 class Beranda extends Component
 {
     public $announcement;
+    public $is_junior;
 
     public function mount(){
         $this->announcement = Announcement::where('start', '<=', Carbon::now())
@@ -18,10 +19,12 @@ class Beranda extends Component
             $q->where('category', Auth::user()->userable->bionix_type == 'bionix_junior' ? 'Student' : 'College')
                 ->orWhere('category', 'Both');
         })->get();
+
+        $this->is_junior = Auth::user()->jenjang == 'SMA' ? true : false;
     }
 
     public function render()
     {
-        return view('livewire.pages.bionix.peserta.beranda');
+        return view('livewire.pages.bionix.peserta.beranda')->layout('layouts.dashboard');
     }
 }

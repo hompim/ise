@@ -64,8 +64,7 @@ class IdentitasTim extends Component
 
     public function mount()
     {
-
-        $this->is_junior = Auth::user()->userable->bionix_type = "Admin\Models\Bionix\TeamJuniorData"?true:false;
+        $this->is_junior = Auth::user()->userable->jenjang = "SMA" ? true : false;
         $this->with_member_2 = (($this->is_junior && Auth::user()->userable->bionix->member_id) || (!$this->is_junior && Auth::user()->userable->bionix->member1_id)) ? true : false;
         $this->with_member_3 = !$this->is_junior && Auth::user()->userable->bionix->member2_id ? true : false;
         $this->cities = City::orderBy('region')->get();
@@ -518,6 +517,6 @@ class IdentitasTim extends Component
 
     public function render()
     {
-        return view('livewire.pages.bionix.peserta.identitas-tim');
+        return view('livewire.pages.bionix.peserta.identitas-tim')->layout('layouts.dashboard');
     }
 }

@@ -68,7 +68,7 @@
                             <p class="font-bold text-lg">-</p>
                         </div>
                         <div>
-                            <label for="Email" class="mb-2 font-bold text-gray-300 mt-4">Link Zoom</label><br>
+                            <label for="Email" class="mb-2 font-bold text-gray-300   mt-4">Link Zoom</label><br>
                             <p class="font-bold text-lg">-</p>
                         </div>
                     </div>

@@ -113,7 +113,7 @@ class Sidebar extends Component
                 'tag' =>'class=my-2'
             ]);
 
-            if(Auth::user()->userable->bionix_id){
+            if(Auth::user()->userable->bionix){
                 array_push(
                     $this->menu,
                     [
@@ -124,7 +124,7 @@ class Sidebar extends Component
                         'type' => 'menu',
                         'icon' => 'cil-home',
                         'title' => 'Beranda',
-                        'route-name' => 'bionix.admin.beranda.index'
+                        'route-name' => 'bionix.peserta.homepage'
                     ],
                     [
                         'type' => 'menu',

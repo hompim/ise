@@ -54,17 +54,27 @@
                         <p class="font-bold mb-0 mt-2">Tahun Angkatan</p>
                         <p class="truncate">{{$member1_year}}</p>
                     </div>
-
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Link Twibbon</p>
-                        <p class="text-blue-500 truncate"><a href="{{$member1_twibbon}}"
-                                                             target="_blank">{{$member1_twibbon}}</a></p>
-                    </div>
                 @endif
                 <div>
                     <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
                     @if($photo1)
                         <img class="object-scale-down w-50" src="{{asset('/storage/'.$photo1)}}"/>
+                    @else
+                        <p>Belum unggah</p>
+                    @endif
+                </div>
+                <div>
+                    <p class="font-bold mb-0 mt-2">Twibbon</p>
+                    @if($photo1)
+                        <img class="object-scale-down w-50" src="{{asset('/storage/'.$member1_twibbon)}}"/>
+                    @else
+                        <p>Belum unggah</p>
+                    @endif
+                </div>
+                <div>
+                    <p class="font-bold mb-0 mt-2">Follow Instagram</p>
+                    @if($photo1)
+                        <img class="object-scale-down w-50" src="{{asset('/storage/'.$member1_instagram)}}"/>
                     @else
                         <p>Belum unggah</p>
                     @endif
@@ -107,8 +117,24 @@
                     @endif
                     <div>
                         <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
-                        @if($photo2)
+                        @if($photo1)
                             <img class="object-scale-down w-50" src="{{asset('/storage/'.$photo2)}}"/>
+                        @else
+                            <p>Belum unggah</p>
+                        @endif
+                    </div>
+                    <div>
+                        <p class="font-bold mb-0 mt-2">Twibbon</p>
+                        @if($photo1)
+                            <img class="object-scale-down w-50" src="{{asset('/storage/'.$member2_twibbon)}}"/>
+                        @else
+                            <p>Belum unggah</p>
+                        @endif
+                    </div>
+                    <div>
+                        <p class="font-bold mb-0 mt-2">Follow Instagram</p>
+                        @if($photo1)
+                            <img class="object-scale-down w-50" src="{{asset('/storage/'.$member2_instagram)}}"/>
                         @else
                             <p>Belum unggah</p>
                         @endif
@@ -142,16 +168,26 @@
                         <p class="font-bold mb-0 mt-2">Tahun Angkatan</p>
                         <p class="truncate">{{$member3_year}}</p>
                     </div>
-
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Link Twibbon</p>
-                        <p class="text-blue-500 truncate"><a href="{{$member3_twibbon}}"
-                                                             target="_blank">{{$member3_twibbon}}</a></p>
-                    </div>
                     <div>
                         <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
-                        @if($photo3)
+                        @if($photo1)
                             <img class="object-scale-down w-50" src="{{asset('/storage/'.$photo3)}}"/>
+                        @else
+                            <p>Belum unggah</p>
+                        @endif
+                    </div>
+                    <div>
+                        <p class="font-bold mb-0 mt-2">Twibbon</p>
+                        @if($photo1)
+                            <img class="object-scale-down w-50" src="{{asset('/storage/'.$member3_twibbon)}}"/>
+                        @else
+                            <p>Belum unggah</p>
+                        @endif
+                    </div>
+                    <div>
+                        <p class="font-bold mb-0 mt-2">Follow Instagram</p>
+                        @if($photo1)
+                            <img class="object-scale-down w-50" src="{{asset('/storage/'.$member3_instagram)}}"/>
                         @else
                             <p>Belum unggah</p>
                         @endif
@@ -159,7 +195,7 @@
                 </div>
             </div>
         @endif
-        @if($bionix_data->payment_verif_status=="Tahap Verifikasi"||$bionix_data->payment_verif_status=="Terverifikasi"||$bionix_data->payment_verif_status=="Ditolak")
+        {{-- @if($bionix_data->payment_verif_status=="Tahap Verifikasi"||$bionix_data->payment_verif_status=="Terverifikasi"||$bionix_data->payment_verif_status=="Ditolak")
             <div id="promo" class="mt-8">
                 <h5>Promo yang Digunakan</h5>
                 <hr/>
@@ -230,7 +266,7 @@
                     </div>
                 </div>
             </div>
-        @endif
+        @endif --}}
     </div>
     <hr class="my-4"/>
 

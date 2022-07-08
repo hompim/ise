@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Livewire\Pages\Bionix\Admin\DaftarPeserta\Components;
+namespace App\Http\Livewire\Pages\Bionix\Admin\VerifikasiIdentitas\Components;
 
 use App\Models\Bionix\TeamJuniorData;
 use App\Models\Bionix\TeamSeniorData;
 use Livewire\Component;
 use LivewireUI\Modal\ModalComponent;
 
-class ModaDetail extends ModalComponent
+class ModalDetail extends ModalComponent
 {
+
     public $bionix_data;
     public $type;
     public $photo1;
@@ -38,8 +39,7 @@ class ModaDetail extends ModalComponent
         $member3_instagram,
         $school_name,
         $school_city,
-        $team_name,
-        $payment_proof;
+        $team_name;
 
     public function mount($type, $id)
     {
@@ -50,10 +50,12 @@ class ModaDetail extends ModalComponent
         $this->member1_name = $this->bionix_data->leader->name;
         $this->member1_email = $this->bionix_data->leader->email;
         $this->member1_whatsapp = $this->bionix_data->leader->whatsapp;
-        $this->member1_twibbon = ($type == 'student' ? null : $this->bionix_data->leader->link_twibbon);
+        $this->member1_twibbon = $this->bionix_data->leader->twibbon_path;
+        $this->member1_instagram = $this->bionix_data->leader->instagram_path;
         $this->school_name = ($type == 'student' ? $this->bionix_data->school_name : $this->bionix_data->university_name);
         $this->school_city = $this->bionix_data->city;
         $this->photo1 = $this->bionix_data->leader->identity_card_path;
+
 
         $this->member2_name = ($type == 'student' ? ($this->bionix_data->member ? $this->bionix_data->member->name : null) : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->name : null));
         $this->member3_name = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->name : null));
@@ -63,8 +65,10 @@ class ModaDetail extends ModalComponent
         $this->member3_whatsapp = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->whatsapp : null));
         $this->photo2 = ($type == 'student' ? ($this->bionix_data->member ? $this->bionix_data->member->identity_card_path : null) : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->identity_card_path : null));
         $this->photo3 = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->identity_card_path : null));
-        $this->member2_twibbon = ($type == 'student' ? null : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->link_twibbon : null));
-        $this->member3_twibbon = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->link_twibbon : null));
+        $this->member2_twibbon = ($type == 'student' ? ($this->bionix_data->member ? $this->bionix_data->member->twibbon_path : null) : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->twibbon_path : null));
+        $this->member3_twibbon = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->twibbon_path : null));
+        $this->member2_instagram = ($type == 'student' ? ($this->bionix_data->member ? $this->bionix_data->member->instagram_path : null) : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->instagram_path : null));
+        $this->member3_instagram = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->instagram_path : null));
 
         $this->member1_major = ($type == 'student' ? null : $this->bionix_data->leader->major);
         $this->member2_major = ($type == 'student' ? null : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->major : null));
@@ -72,11 +76,15 @@ class ModaDetail extends ModalComponent
         $this->member1_year = ($type == 'student' ? null : $this->bionix_data->leader->year);
         $this->member2_year = ($type == 'student' ? null : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->year : null));
         $this->member3_year = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->year : null));
-        $this->payment_proof = $this->bionix_data->payment_proof_path;
+    }
+
+    public static function modalMaxWidth(): string
+    {
+        return '4xl';
     }
 
     public function render()
     {
-        return view('livewire.pages.bionix.admin.daftar-peserta.components.moda-detail');
+        return view('livewire.pages.bionix.admin.verifikasi-identitas.components.modal-detail');
     }
 }

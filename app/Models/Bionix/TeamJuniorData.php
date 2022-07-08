@@ -2,6 +2,7 @@
 
 namespace App\Models\Bionix;
 
+use App\Models\Member;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,6 +14,11 @@ class TeamJuniorData extends Model
 
     public function city(){
         return $this->belongsTo(City::class);
+    }
+
+    public function memberData()
+    {
+        return $this->morphOne(Member::class, 'bionix');
     }
 
     public function profile_verified_by(){
@@ -30,8 +36,8 @@ class TeamJuniorData extends Model
     public function leader() {
         return $this->belongsTo(TeamJuniorMember::class, 'leader_id');
     }
-
-    public function member() {
-        return $this->belongsTo(TeamJuniorMember::class, 'member_id');
+    public function member()
+    {
+        return $this->hasOne(TeamJuniorMember::class, 'id', 'member_id');
     }
 }

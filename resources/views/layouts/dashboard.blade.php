@@ -94,7 +94,7 @@
 
 
     <!-- Alpine v3 -->
-    <script src="{{ asset('js/alpine.js') }}"></script>
+    <script defer src="{{ mix('js/app.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"
         integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ=="
