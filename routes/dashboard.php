@@ -53,6 +53,13 @@ Route::middleware('auth')->group(function () {
                     Route::get('/identitas', App\Http\Livewire\Pages\Bionix\Admin\VerifikasiIdentitas\Index::class)->name('bionix.admin.verifikasi-identitas.index');
                     Route::get('/pembayaran', App\Http\Livewire\Pages\Bionix\Admin\VerifikasiPembayaran\Index::class)->name('bionix.admin.verifikasi-pembayaran.index');
                 });
+
+                Route::group(['prefix' => 'is-class'], function () {
+                    Route::get('/', \App\Http\Livewire\Pages\Bionix\IsClass\Admin\Beranda\Index::class)->name('isclass.admin.beranda');
+                    Route::get('daftar-peserta', \App\Http\Livewire\Pages\Bionix\IsClass\Admin\DaftarPeserta\Index::class)->name('isclass.admin.daftar-peserta');
+                    Route::get('verifikasi-identitas', \App\Http\Livewire\Pages\Bionix\IsClass\Admin\VerifikasiIdentitas\Index::class)->name('isclass.admin.verifikasi-identitas');
+                });
+
             });
 
              //Icon
@@ -91,6 +98,12 @@ Route::middleware('auth')->group(function () {
                         Route::get('/pembayaran', \App\Http\Livewire\Pages\Bionix\Peserta\Pembayaran::class)->name('bionix.peserta.pembayaran');
                     });
                 });
+
+
+            Route::group(['prefix' => 'is-class'], function () {
+                Route::get('register', \App\Http\Livewire\Pages\Auth\Bionix\RegistraiIsClass::class)->name('register-is-class');
+                //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
+            });
             });
 
             Route::group(['prefix' => 'webinar'], function () {
@@ -98,13 +111,6 @@ Route::middleware('auth')->group(function () {
                 Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Beranda::class)->name('webinar.peserta.beranda')->middleware('iconcheck:webinar_peserta');
                 Route::get('success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\Webinar::class)->name('webinar.register-success');
             });
-
-            Route::group(['prefix' => 'is-class'], function () {
-                Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegistasiISClass::class)->name('register-is-class');
-                //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
-            });
-
-
         });
     });
 });

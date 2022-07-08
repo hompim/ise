@@ -65,7 +65,29 @@ class Sidebar extends Component
                     [
                         'type' => 'divider',
                         'tag' =>'class=mb-3'
-                    ]
+                    ],
+                    [
+                        'type' => 'title',
+                        'title' => 'IS Class'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-home',
+                        'title' => 'Beranda',
+                        'route-name' => 'isclass.admin.beranda'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-group',
+                        'title' => 'Daftar Peserta',
+                        'route-name' => 'isclass.admin.daftar-peserta'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-group',
+                        'title' => 'Verifikasi Identitas',
+                        'route-name' => 'isclass.admin.verifikasi-identitas'
+                    ],
                 );
             }
             else if(Auth::user()->userable->admin_type == "Icon Admin")
