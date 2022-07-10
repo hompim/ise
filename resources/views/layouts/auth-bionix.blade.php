@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="{{ asset('images/logo-only-small.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/logo-only-small.png') }}" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <script  src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 </head>
 
 <body class="bg-black">
@@ -38,7 +38,8 @@
 
                 <div class="flex flex-col justify-center w-full p-4 lg:justify-between lg:flex-row">
                     <div class="mx-auto mb-4 lg:mx-0 w-fit lg:mb-0">
-                        <a href="https://wa.me/6285162852050" class="block transition duration-300 hover:scale-105">
+                        <a href="https://wa.me/6285162852050" class="block transition duration-300 hover:scale-105"
+                            target="_blank">
                             <div class="bg-[#25D366] rounded-xl px-2 py-1">
                                 <img src="{{ asset('images/whatsapp-icon.svg') }}" alt="whatsapp-icon">
                             </div>
