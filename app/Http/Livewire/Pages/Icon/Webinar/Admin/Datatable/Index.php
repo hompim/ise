@@ -28,6 +28,7 @@ class Index extends LivewireDatatable
                 "Sekolah (guru, dll)",
                 "Teman/keluarga",
                 "Website/Aplikasi Sejuta Cita"]),
+            Column::name('presensi_status')->label('Presensi')->filterable([1, 0]),
             Column::callback(['id'], function ($id) {
                 return view('livewire.pages.icon.webinar.admin.componenets.datatable-action', ['id' => $id]);
             })

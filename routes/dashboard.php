@@ -68,6 +68,7 @@ Route::middleware('auth')->group(function () {
 
                 Route::group(['prefix' => 'webinar'], function () {
                     Route::get('daftar-peserta', \App\Http\Livewire\Pages\Icon\Webinar\Admin\Index::class)->name('webinar.admin.daftar-webinar');
+                    Route::get('presensi', \App\Http\Livewire\Pages\Icon\Webinar\Admin\Presensi\Index::class)->name('webinar.admin.presensi');
                     //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
                 });
             });
@@ -109,6 +110,8 @@ Route::middleware('auth')->group(function () {
             Route::group(['prefix' => 'webinar'], function () {
                 Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegistasiWebinarKickOff::class)->name('register-webinar')->middleware('iconcheck:!webinar_peserta');
                 Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Beranda::class)->name('webinar.peserta.beranda')->middleware('iconcheck:webinar_peserta');
+                Route::get('presensi',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Presensi::class)->name('webinar.peserta.presensi')->middleware('iconcheck:webinar_peserta');
+                Route::get('presensi/success',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\PresensiSuccess::class)->name('webinar.peserta.presensi.success')->middleware('iconcheck:webinar_peserta');
                 Route::get('success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\Webinar::class)->name('webinar.register-success');
             });
         });
