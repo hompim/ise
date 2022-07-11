@@ -190,15 +190,15 @@
                     <div class="swiper-wrapper cursor-grab">
                         <div class="flex justify-center swiper-slide">
                             <img class="w-full rounded-3xl h-[420px] object-cover"
-                                src="{{ asset('images/dokumentasi/BIONIX 2020 2.png') }}" />
+                                src="{{ asset('images/dokumentasi/card-bionix-sl.png') }}" />
                         </div>
                         <div class="flex justify-center swiper-slide">
                             <img class="w-full rounded-3xl  h-[420px] object-cover"
-                                src="{{ asset('images/dokumentasi/BIONIX 2020.png') }}" />
+                                src="{{ asset('images/dokumentasi/card-bionix-cl.png') }}" />
                         </div>
                         <div class="flex justify-center swiper-slide">
                             <img class="w-full rounded-3xl h-[420px] object-cover"
-                                src="{{ asset('images/dokumentasi/BIONIX 2021.jpeg') }}" />
+                                src="{{ asset('images/dokumentasi/BIONIX 2019(2).png') }}" />
                         </div>
                     </div>
                     <div class="p-6 rounded-full swiper-button-next bg-liteBlack"></div>
