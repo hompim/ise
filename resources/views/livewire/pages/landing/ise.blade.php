@@ -1,6 +1,6 @@
     <!-- Main modal -->
     <div id="defaultModal" aria-hidden="true" data-modal-show="true"
-        class="fixed top-0 bottom-0 left-0 right-0 z-50 hidden w-full mt-12 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full lg:mt-4 z-[9999]"
+        class="fixed top-0 bottom-0 left-0 right-0 hidden w-full mt-12 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full lg:mt-4 z-[9999]"
         data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="2500" data-aos-one="true">
         <div class="relative w-full h-full max-w-4xl p-4 md:h-auto">
             <!-- Modal content -->
@@ -190,15 +190,15 @@
                     <div class="swiper-wrapper cursor-grab">
                         <div class="flex justify-center swiper-slide">
                             <img class="w-full rounded-3xl h-[420px] object-cover"
-                                src="{{ asset('images/dokumentasi/BIONIX 2020 2.png') }}" />
+                                src="{{ asset('images/dokumentasi/card-bionix-sl.png') }}" />
                         </div>
                         <div class="flex justify-center swiper-slide">
                             <img class="w-full rounded-3xl  h-[420px] object-cover"
-                                src="{{ asset('images/dokumentasi/BIONIX 2020.png') }}" />
+                                src="{{ asset('images/dokumentasi/card-bionix-cl.png') }}" />
                         </div>
                         <div class="flex justify-center swiper-slide">
                             <img class="w-full rounded-3xl h-[420px] object-cover"
-                                src="{{ asset('images/dokumentasi/BIONIX 2021.jpeg') }}" />
+                                src="{{ asset('images/dokumentasi/BIONIX 2019(2).png') }}" />
                         </div>
                     </div>
                     <div class="p-6 rounded-full swiper-button-next bg-liteBlack"></div>

@@ -22,12 +22,13 @@ class Index extends LivewireDatatable
     {
         return [
             Column::name('users.name')->label('Nama')->searchable(),
-            Column::name('info_source')->label('Informasi Asal')->filterable(["Media Sosial ISE! 2021",
-                "Media Sosial selain ISE! 2021 (info lomba, dll)",
+            Column::name('info_source')->label('Informasi Asal')->filterable(["Media Sosial ISE! 2022",
+                "Media Sosial selain ISE! 2022 (info lomba, dll)",
                 "Grup WA/Line/dll",
                 "Sekolah (guru, dll)",
                 "Teman/keluarga",
                 "Website/Aplikasi Sejuta Cita"]),
+            //Column::name('presensi_status')->label('Presensi')->filterable([1, 0]),
             Column::callback(['id'], function ($id) {
                 return view('livewire.pages.icon.webinar.admin.componenets.datatable-action', ['id' => $id]);
             })

@@ -8,16 +8,26 @@ use Livewire\Component;
 
 class ChooseDashboard extends Component
 {
-    public $events;
+    public $events,
+            $errorMessage;
 
-    public function mount()
+    public function mount($error = null)
     {
+        if($error){
+            $this->errorMessage = $error;
+        }
 
         $this->events = Auth::user()->userable->jenjang == 'SMA' ? Event::where('event_type', 'SMA')->orWhere('event_type', 'All')->get() :
                         (Auth::user()->userable->jenjang == 'Mahasiswa' ? Event::where('event_type', 'Mahasiswa')->orWhere('event_type', 'All')->get() :
                         (Auth::user()->userable->jenjang == 'Umum' ? Event::where('event_type', 'Umum')->orWhere('event_type', 'All')->get() :
                         null));
 
+    }
+
+    public function closeModal()
+    {
+        $this->errorMessage = '';
+        $this->resetErrorBag();
     }
 
     public function render()

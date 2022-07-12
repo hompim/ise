@@ -34,6 +34,7 @@ Route::get('/coming-soon', function () {
 Route::get('/Registerbcl', RegisterCollege::class);
 Route::get('/Registerst', RegisterStudent::class);
 Route::get('/Registerbclroad', RegistrasiRoadshow::class);
+
 //Route Dashboard -> Dashboard.php
 Route::prefix('dashboard')->group(__DIR__ . '/dashboard.php');
 

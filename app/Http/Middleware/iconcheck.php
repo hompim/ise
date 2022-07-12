@@ -19,18 +19,24 @@ class iconcheck
     {
         if (Auth::user()->userable_type == "App\Models\Member") {
             if ($type == 'profil_terverifikasi') {
-                if (Auth::user()->userable->bionix->profile_verif_status == 'Terverifikasi') {
+                if (Auth::user()->userable->icon->profile_verif_status == 'Terverifikasi') {
                     return $next($request);
                 }
             } elseif ($type == 'pembayaran_terverifikasi') {
-                if (Auth::user()->userable->bionix->payment_verif_status == 'Terverifikasi') {
+                if (Auth::user()->userable->icon->payment_verif_status == 'Terverifikasi') {
                     return $next($request);
                 }
             } elseif ($type == 'webinar_peserta') {
+                if (Auth::user()->userable->webinar) {
+                    return $next($request);
+                }else{
+                    return redirect()->to(route('register-webinar'));
+                }
+            } elseif( $type == '!webinar_peserta'){
                 if (!Auth::user()->userable->webinar) {
                     return $next($request);
                 }else{
-                    return redirect(route('peserta.dashboard.choose'));
+                    return redirect()->to(route('webinar.peserta.beranda'));
                 }
             }
         }

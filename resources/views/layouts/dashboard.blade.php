@@ -10,8 +10,9 @@
     <title>Dashboard {{ config('app.name', 'Laravel') }}</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('images/logo-only.png') }}">
-    <link rel="icon" href="{{ asset('images/logo-only.png') }}">
+    <link rel="icon" href="{{ asset('images/logo-only-small.png') }}">
+    <link rel="shortcut icon" href="{{ asset('images/logo-only-small.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/logo-only-small.png') }}" />
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -79,6 +80,8 @@
         </main>
     </div>
 
+
+
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -91,7 +94,7 @@
 
 
     <!-- Alpine v3 -->
-    <script src="{{ asset('js/alpine.js') }}"></script>
+    <script defer src="{{ mix('js/app.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"
         integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ=="

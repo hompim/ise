@@ -37,9 +37,9 @@ class Index extends LivewireDatatable
                 Column::name('school_name')->label('Nama Sekolah'),
                 Column::name('leader_group.name')->label('Nama Ketua'),
                 Column::name('member_group.name')->label('Nama Member'),
-                // Column::callback(['id'], function ($id) {
-                //     return view('livewire.pages.bionix.admin.verifikasi-identitas.data-tables.actions', ['id' => $id, 'type' => 'student']);
-                // })
+                Column::callback(['id'], function ($id) {
+                    return view('livewire.pages.bionix.admin.verifikasi-identitas.components.datatable-action', ['id' => $id, 'type' => 'student']);
+                })
             ];
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             $column = [
@@ -49,9 +49,9 @@ class Index extends LivewireDatatable
                 Column::name('leader.name')->label('Nama Ketua'),
                 Column::name('member1.name')->label('Nama Member 1'),
                 Column::name('member2.name')->label('Nama Member 2'),
-                // Column::callback(['id'], function ($id) {
-                //     return view('livewire.pages.bionix.admin.verifikasi-identitas.data-tables.actions', ['id' => $id, 'type' => 'college']);
-                // })
+                Column::callback(['id'], function ($id) {
+                    return view('livewire.pages.bionix.admin.verifikasi-identitas.components.datatable-action', ['id' => $id, 'type' => 'college']);
+                })
             ];
         }
         return $column;

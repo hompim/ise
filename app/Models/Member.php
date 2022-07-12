@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Bionix\BionixSchool;
+use App\Models\Bionix\IsClassData;
 use App\Models\Icon\IconWebinarKickOff;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -31,5 +32,9 @@ class Member extends Model
 
     public function webinar(){
         return $this->hasOne(IconWebinarKickOff::class);
+    }
+
+    public function isclass(){
+        return $this->hasOne(IsClassData::class);
     }
 }

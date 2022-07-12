@@ -19,5 +19,8 @@
         </div>
     </div>
 </div>
+@push('js')
+    @livewire('livewire-ui-modal')
+@endpush
 
 

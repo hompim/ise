@@ -33,6 +33,9 @@ class ModaDetail extends ModalComponent
         $member1_year,
         $member2_year,
         $member3_year,
+        $member1_instagram,
+        $member2_instagram,
+        $member3_instagram,
         $school_name,
         $school_city,
         $team_name,
@@ -70,11 +73,6 @@ class ModaDetail extends ModalComponent
         $this->member2_year = ($type == 'student' ? null : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->year : null));
         $this->member3_year = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->year : null));
         $this->payment_proof = $this->bionix_data->payment_proof_path;
-    }
-
-    public static function modalMaxWidth(): string
-    {
-        return '4xl';
     }
 
     public function render()

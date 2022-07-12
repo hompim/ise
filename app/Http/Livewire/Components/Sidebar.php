@@ -65,7 +65,29 @@ class Sidebar extends Component
                     [
                         'type' => 'divider',
                         'tag' =>'class=mb-3'
-                    ]
+                    ],
+                    [
+                        'type' => 'title',
+                        'title' => 'IS Class'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-home',
+                        'title' => 'Beranda',
+                        'route-name' => 'isclass.admin.beranda'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-group',
+                        'title' => 'Daftar Peserta',
+                        'route-name' => 'isclass.admin.daftar-peserta'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-group',
+                        'title' => 'Verifikasi Identitas',
+                        'route-name' => 'isclass.admin.verifikasi-identitas'
+                    ],
                 );
             }
             else if(Auth::user()->userable->admin_type == "Icon Admin")
@@ -96,6 +118,12 @@ class Sidebar extends Component
                         'title' => 'Daftar Peserta',
                         'route-name' => 'webinar.admin.daftar-webinar'
                     ],
+                    // [
+                    //     'type' => 'menu',
+                    //     'icon' => 'cil-group',
+                    //     'title' => 'Presensi Peserta',
+                    //     'route-name' => 'webinar.admin.presensi'
+                    // ],
                     [
                         'type' => 'divider',
                         'tag' => 'mb-3'
@@ -110,10 +138,10 @@ class Sidebar extends Component
                 'route-name' => 'peserta.dashboard.choose'
             ], [
                 'type' => 'divider',
-                'tag' =>'class=my-3'
+                'tag' =>'class=my-2'
             ]);
 
-            if(Auth::user()->userable->bionix_id){
+            if(Auth::user()->userable->bionix){
                 array_push(
                     $this->menu,
                     [
@@ -124,7 +152,7 @@ class Sidebar extends Component
                         'type' => 'menu',
                         'icon' => 'cil-home',
                         'title' => 'Beranda',
-                        'route-name' => 'bionix.admin.beranda.index'
+                        'route-name' => 'bionix.peserta.homepage'
                     ],
                     [
                         'type' => 'menu',
@@ -143,6 +171,24 @@ class Sidebar extends Component
                         'tag' =>'class=mb-3'
                     ]
                 );
+            } else if(Auth::user()->userable->webinar){
+                array_push(
+                    $this->menu,
+                    [
+                        'type' => 'title',
+                        'title' => 'Webinar Kick Off'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-home',
+                        'title' => 'Beranda',
+                        'route-name' => 'webinar.peserta.beranda'
+                    ],
+                    [
+                        'type' => 'divider',
+                        'tag' =>'class=my-2'
+                    ]
+                    );
             }
         }
 

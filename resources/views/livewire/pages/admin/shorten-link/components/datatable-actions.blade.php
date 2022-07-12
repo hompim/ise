@@ -1,6 +1,6 @@
 <div class="flex space-x-1 justify-around">
     <button
-        onclick="Livewire.emit('openModal', 'modal-add',{{json_encode(['type'=>'edit','id'=>$id])}})"
+        onclick="Livewire.emit('openModal', 'pages.admin.shorten-link.components.modal-add',{{json_encode(['type'=>'edit','id'=>$id])}})"
         class="p-1 text-blue-600 hover:bg-blue-600 hover:text-white rounded">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -8,7 +8,7 @@
         </svg>
     </button>
 
-    <button onclick="Livewire.emit('openModal', 'pages.admin.shorten-link.modal.delete',{{json_encode(['id'=>$id])}})"
+    <button onclick="Livewire.emit('openModal', 'pages.admin.shorten-link.components.modal-delete',{{json_encode(['id'=>$id])}})"
             class="p-1 text-red-600 hover:bg-red-600 hover:text-white rounded">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd"
