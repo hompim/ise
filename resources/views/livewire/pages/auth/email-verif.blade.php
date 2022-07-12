@@ -26,7 +26,7 @@
         <h1 class="mt-8 font-bold">Verifikasi Email Kamu</h1
     </div>
     <div class="text-white mt-6 md:mx-16 mx-6 text-justify ">
-    Halo, Future Catalyst! Data registrasi kamu telah berhasil kami terima. Verifikasi email kamu dengan mengklik tombol atau tautan dibawah ini:
+    Halo, Metazen! Data registrasi kamu telah berhasil kami terima. Verifikasi email kamu dengan mengklik tombol atau tautan dibawah ini:
     </div>
     <div class="flex justify-center">
         <form action="/email/verification-notification" method="POST">
