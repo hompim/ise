@@ -30,11 +30,10 @@
         class="-translate-y-24 md:-translate-y-0 ml-[180px] lg:ml-0  flex  flex-1 w-[210px] h-[179px] lg:!w-[691px] lg:!h-full">
         <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full">
     </div>
-    
 </div>
 <!-- hero section end -->
-<div class="bg-black pt-0 lg:pt-[124px] text-center px-[22px] lg:px-[183px]">
-    <h1 class="text-xl lg:!text-4xl font-bold font-poppins text-white" id="explore">About This Zone</h1>
+<div class="bg-black pt-0 lg:pt-[124px] text-center px-[22px] lg:px-[183px]" id="explore">
+    <h1 class="text-xl md:!text-4xl font-bold font-poppins text-white">About This Zone</h1>
     <p class="mt-10 text-lg text-[#B5B3BC] font-poppins">
         <a class="text-white font-semiboldbold">IT Convention</a> merupakan salah satu zona dari ISE!
         (Information Systems
@@ -168,16 +167,16 @@
         <!-- Carousel wrapper -->
         <div class="overflow-hidden relative bg-[#191A1E] block  mx-auto rounded-2xl  h-[255px] md:h-[446px]">
             <!-- Item 1 -->
-            <div class="absolute inset-0 z-20 flex flex-col items-center justify-center transition-all duration-700 ease-in-out transform translate-x-0 "
+            <div class="absolute inset-0 z-20 flex flex-col items-center justify-center transition-all duration-700 ease-in-out transform translate-x-0 pt-[10px]"
                 data-carousel-item="">
                 <div>
                     <img src="./images/startup-academy.svg" alt=""
                         class="w-[60px] h-[60px] md:w-[94px] lg:h-[94px] lg:mb-[-12px] mx-auto">
                     <p
-                        class="md:mt-[30px] text-center font-bold font-poppins text-[12px] md:text-2xl rounded-t-full md:rounded-none">
+                        class="md:mt-[20px] text-center font-bold font-poppins text-[12px] md:text-2xl rounded-t-full md:rounded-none">
                         Startup Academy</p>
                     <p
-                        class="  lg:mx-[80.5px] mt-[8px] lg:mt-[30px] text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
+                        class="  lg:mx-[80.5px] mt-[8px] lg:mt-[20px] text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
                         Startup Academy akan memberikan para peserta pengetahuan dasar dalam pendirian sebuah startup. Para peserta akan mendapatkan materi dan eksplorasi mandiri bersama para pakar di bidangnya. Bangun startup-mu sendiri bersama Startup Academy.</p>
                     <button
                         class=" mt-[30px] ml-[50px]  md:ml-[92px] h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] md:text-2xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
@@ -186,17 +185,16 @@
 
             </div>
             <!-- Item 2 -->
-            <div class="duration-700 md:pt-[51px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+            <div class="duration-700 md:pt-[41px] ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
                 data-carousel-item="">
                 <div>
                     <img src="./images/data-science-slide.svg" alt=""
                         class="mt-[40px] md:mt-0 w-[60px] h-[60px] md:w-[94px] md:h-[94px] md:mb-[-12px] mx-auto">
-                    <p class="md:mt-[30px] text-center font-bold font-poppins text-[12px] md:text-2xl ">Data Science
+                    <p class="md:mt-[20px] text-center font-bold font-poppins text-[12px] md:text-2xl ">Data Science
                         Academy</p>
                     <p
-                        class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[30px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
-                        Data Science Academy hadir untuk menjadi langkah awal atau katalis karier peserta
-                        sebagai seorang data scientist.</p>
+                        class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[20px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
+                        Data Science Academy mempersiapkan para peserta sebagai seorang data scientist dengan fundamental yang kuat. Akademi ini dapat diikuti siapapun yang memiliki ketertarikan besar terhadap data dan informasi.</p>
                     <button
                         class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
@@ -208,11 +206,10 @@
                 <div>
                     <img src="./images/hall-is-slide.svg" alt=""
                         class="mt-[40px] md:mt-0 w-[60px] h-[60px] md:w-[94px] md:h-[94px] md:mb-[-12px] mx-auto">
-                    <p class="md:mt-[30px] text-center font-bold font-poppins text-[12px] md:text-2xl">E-Hall of IS</p>
+                    <p class="md:mt-[25px] text-center font-bold font-poppins text-[12px] md:text-2xl">E-Hall of IS</p>
                     <p
-                        class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[30px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
-                        porttitor.</p>
+                        class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[25px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
+                        Pameran karya autentik mahasiswa dan alumni Sistem Informasi ITS sebagai bentuk kontribusi untuk negeri. Kunjungi dan menangkan setiap Challenge untuk menjadi bagian dari sejarah kami.</p>
                     <button
                         class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
@@ -224,12 +221,11 @@
                 <div>
                     <img src="./images/grand-talkshow-slide.svg" alt=""
                         class="mt-[40px] md:mt-0 w-[60px] h-[60px] md:w-[94px] md:h-[94px] md:mb-[-12px] mx-auto">
-                    <p class="md:mt-[30px] text-center font-bold font-poppins text-[12px] md:text-2xl">Grand Talkshow
+                    <p class="md:mt-[25px] text-center font-bold font-poppins text-[12px] md:text-2xl">Grand Talkshow
                     </p>
                     <p
-                        class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[30px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium vitae natoque pulvinar
-                        porttitor.</p>
+                        class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[25px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
+                        Acara talkshow yang menghadirkan pembicara-pembicara terkemuka di bidangnya dengan berbagai topik menarik untuk seluruh peserta. Bergabunglah secara gratis dan dapatkan manfaatnya secara penuh!</p>
                     <button
                         class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
