@@ -118,12 +118,12 @@ class Sidebar extends Component
                         'title' => 'Daftar Peserta',
                         'route-name' => 'webinar.admin.daftar-webinar'
                     ],
-                    [
-                        'type' => 'menu',
-                        'icon' => 'cil-group',
-                        'title' => 'Presensi Peserta',
-                        'route-name' => 'webinar.admin.presensi'
-                    ],
+                    // [
+                    //     'type' => 'menu',
+                    //     'icon' => 'cil-group',
+                    //     'title' => 'Presensi Peserta',
+                    //     'route-name' => 'webinar.admin.presensi'
+                    // ],
                     [
                         'type' => 'divider',
                         'tag' => 'mb-3'
