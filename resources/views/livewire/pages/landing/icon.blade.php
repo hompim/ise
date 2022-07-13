@@ -17,7 +17,7 @@
         <div class="relative mt-16 ml-8 text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
             <div class="absolute inset-0 ">
                 <a href="#explore"
-                    class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins " >Let's
+                    class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's
                     Explore</a>
             </div>
             <a href="#explore" class="relative btn">Let's
@@ -177,7 +177,9 @@
                         Startup Academy</p>
                     <p
                         class="  lg:mx-[80.5px] mt-[8px] lg:mt-[20px] text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
-                        Startup Academy akan memberikan para peserta pengetahuan dasar dalam pendirian sebuah startup. Para peserta akan mendapatkan materi dan eksplorasi mandiri bersama para pakar di bidangnya. Bangun startup-mu sendiri bersama Startup Academy.</p>
+                        Startup Academy akan memberikan para peserta pengetahuan dasar dalam pendirian sebuah startup.
+                        Para peserta akan mendapatkan materi dan eksplorasi mandiri bersama para pakar di bidangnya.
+                        Bangun startup-mu sendiri bersama Startup Academy.</p>
                     <button
                         class=" mt-[30px] ml-[50px]  md:ml-[92px] h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] md:text-2xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
@@ -194,7 +196,9 @@
                         Academy</p>
                     <p
                         class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[20px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
-                        Data Science Academy mempersiapkan para peserta sebagai seorang data scientist dengan fundamental yang kuat. Akademi ini dapat diikuti siapapun yang memiliki ketertarikan besar terhadap data dan informasi.</p>
+                        Data Science Academy mempersiapkan para peserta sebagai seorang data scientist dengan
+                        fundamental yang kuat. Akademi ini dapat diikuti siapapun yang memiliki ketertarikan besar
+                        terhadap data dan informasi.</p>
                     <button
                         class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
@@ -209,7 +213,8 @@
                     <p class="md:mt-[25px] text-center font-bold font-poppins text-[12px] md:text-2xl">E-Hall of IS</p>
                     <p
                         class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[25px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
-                        Pameran karya autentik mahasiswa dan alumni Sistem Informasi ITS sebagai bentuk kontribusi untuk negeri. Kunjungi dan menangkan setiap Challenge untuk menjadi bagian dari sejarah kami.</p>
+                        Pameran karya autentik mahasiswa dan alumni Sistem Informasi ITS sebagai bentuk kontribusi untuk
+                        negeri. Kunjungi dan menangkan setiap Challenge untuk menjadi bagian dari sejarah kami.</p>
                     <button
                         class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
@@ -225,7 +230,9 @@
                     </p>
                     <p
                         class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[25px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
-                        Acara talkshow yang menghadirkan pembicara-pembicara terkemuka di bidangnya dengan berbagai topik menarik untuk seluruh peserta. Bergabunglah secara gratis dan dapatkan manfaatnya secara penuh!</p>
+                        Acara talkshow yang menghadirkan pembicara-pembicara terkemuka di bidangnya dengan berbagai
+                        topik menarik untuk seluruh peserta. Bergabunglah secara gratis dan dapatkan manfaatnya secara
+                        penuh!</p>
                     <button
                         class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                         Lanjut</button>
