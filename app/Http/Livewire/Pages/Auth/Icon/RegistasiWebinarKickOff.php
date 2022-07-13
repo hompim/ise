@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Pages\Auth\Icon;
 
+use App\Mail\WebinarKickOffAcaraMail;
 use App\Mail\WebinarKickOffMail;
 use App\Models\Icon\IconWebinarKickOff;
 use Illuminate\Support\Facades\Auth;
@@ -75,6 +76,7 @@ class RegistasiWebinarKickOff extends Component
             'instagram_story_path' => $instagram_story_path,
         ]);
         Mail::to(Auth::user()->email)->send(new WebinarKickOffMail);
+        Mail::to(Auth::user()->email)->send(new WebinarKickOffAcaraMail);
         return redirect(route('webinar.register-success'));
     }
 

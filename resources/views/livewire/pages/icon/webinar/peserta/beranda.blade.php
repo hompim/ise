@@ -39,7 +39,7 @@
                         </div>
                         <div>
                             <label for="Email" class="mb-2 text-lg font-bold text-gray-300  mt-4">Link Virtual Background</label><br>
-                            <p class="font-bold ">-</p>
+                            <a href="https://ise-its.com/VirtualBackgroundKickOff" target="_blank"><p class="font-bold ">https://ise-its.com/VirtualBackgroundKickOff</p></a>
                         </div>
                     </div>
 
@@ -61,15 +61,15 @@
                         </div>
                         <div>
                             <label for="Email" class="mb-2 font-bold text-gray-300 mt-4">Meeting ID</label><br>
-                            <p class="font-bold text-lg">-</p>
+                            <p class="font-bold text-lg">96955075749</p>
                         </div>
                         <div>
                             <label for="Email" class="mb-2 font-bold text-gray-300 mt-4">Password</label><br>
-                            <p class="font-bold text-lg">-</p>
+                            <p class="font-bold text-lg">ise2022</p>
                         </div>
                         <div>
                             <label for="Email" class="mb-2 font-bold text-gray-300   mt-4">Link Zoom</label><br>
-                            <p class="font-bold text-lg">-</p>
+                            <a target="_blank" href="ise-its.com/WebinarKickOffISE!2022"><p class="font-bold text-lg">https://ise-its.com/WebinarKickOffISE!2022</p></a>
                         </div>
                         <div class="mt-3 {{$is_event_today && !Auth::user()->userable->webinar->presensi_status ? null : 'hidden'}}">
                             <a href="">
