@@ -60,7 +60,7 @@
                     </defs>
                 </svg>
 
-                <li>{{ Auth::user()->email }}</li>
+                <li title="{{ Auth::user()->email }}">{{ substr(Auth::user()->email, 0, 8) }}...</li>
                 <svg :class="{ 'rotate-180': open, 'rotate-0': !open }" class="transition-transform duration-200 transform"
                     width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.5L5.54167 6.83333L11.0833 0.5H0Z"
@@ -69,7 +69,7 @@
 
             </button>
 
-            <ul class="absolute py-4 pl-4 pr-12 left-24 mt-44 rounded-xl bg-liteBlack" x-show="open"
+            <ul class="absolute py-4 pl-4 pr-12 mt-44 rounded-xl bg-liteBlack" x-show="open"
                 x-transition:enter="transition ease-out duration-100"
                 x-transition:enter-start="transform opacity-0 scale-95"
                 x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
