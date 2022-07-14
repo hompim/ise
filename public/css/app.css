@@ -4864,10 +4864,6 @@ select {
         margin-right: 1rem;
     }
 
-    .lg\:mt-\[30px\] {
-        margin-top: 30px;
-    }
-
     .lg\:block {
         display: block;
     }
@@ -5268,12 +5264,6 @@ select {
         --tw-scale-x: 1.55 !important;
         --tw-scale-y: 1.55 !important;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
-    }
-
-    .group:hover .lg\:group-hover\:scale-\[1\.8\] {
-        --tw-scale-x: 1.8;
-        --tw-scale-y: 1.8;
-        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
 
     .group:hover .lg\:group-hover\:opacity-100 {
