@@ -13,6 +13,6 @@ class IsClassData extends Model
     protected $guarded = [];
 
     public function member(){
-        $this->belongsTo(Member::class);
+        return $this->belongsTo(Member::class);
     }
 }
