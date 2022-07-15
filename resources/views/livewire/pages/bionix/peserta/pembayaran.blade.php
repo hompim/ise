@@ -32,7 +32,7 @@
     <h3 class="text-xl font-weight-bold my-4">Pembayaran</h3>
     <div
         class="grid @if(!(Auth::user()->userable->bionix->payment_verif_status=='Belum Bayar'&&Auth::user()->userable->bionix_type == "bionix_senior")) md:grid-cols-2 @endif gap-4 pb-8">
-        <div class="card rounded-xl mb-0">
+        <div class="card rounded-xl mb-0" style="background-color: #191a1e"">
             <div class="card-body pb-0">
                 <div class="flex flex-col justify-center items-center">
                     <div class="my-8">
