@@ -23,4 +23,8 @@ class IconWebinarKickOff extends Model
             get: fn ($value) => $value ? 'Sudah Presensi' : 'Belum Presensi'
         );
     }
+
+    public function feedback(){
+        return $this->hasOne(IconWebinarKickOffFeedback::class, 'webinar_id');
+    }
 }

@@ -32,7 +32,7 @@ class Presensi extends Component
             'presensi_status' => true
         ]);
 
-        return redirect()->to(route('webinar.peserta.presensi.success'));
+        return redirect()->to(route('webinar.peserta.success', ['type' => 'presensi']));
     }
 
     public function render()

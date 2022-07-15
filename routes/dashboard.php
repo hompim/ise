@@ -17,7 +17,7 @@ Route::middleware('guest')->group(function () {
 
 //Authenticate User
 Route::middleware('auth')->group(function () {
-    Route::get('/email/verify', function(){
+    Route::get('/email/verify', function () {
         return view('livewire.pages.auth.email-verif');
     })->name('verification.notice'); //For Email Verification
     Route::get('/', function () {
@@ -35,9 +35,9 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard.index');
 
     Route::middleware('verified')->group(function () {
-    //    Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
-    Route::get('/bantuan', \App\Http\Livewire\Pages\DashboardGeneral\Bantuan::class)->name('bantuan');
-    Route::get('/term&conditions',\App\Http\Livewire\Pages\Auth\TermCondition::class)->name('term-condition');
+        //    Route::get('/ganti-password', \App\Http\Livewire\Pages\Auth\GantiPassword::class)->name('ganti-password');
+        Route::get('/bantuan', \App\Http\Livewire\Pages\DashboardGeneral\Bantuan::class)->name('bantuan');
+        Route::get('/term&conditions', \App\Http\Livewire\Pages\Auth\TermCondition::class)->name('term-condition');
 
 
         //Admin
@@ -59,11 +59,10 @@ Route::middleware('auth')->group(function () {
                     Route::get('daftar-peserta', \App\Http\Livewire\Pages\Bionix\IsClass\Admin\DaftarPeserta\Index::class)->name('isclass.admin.daftar-peserta');
                     Route::get('verifikasi-identitas', \App\Http\Livewire\Pages\Bionix\IsClass\Admin\VerifikasiIdentitas\Index::class)->name('isclass.admin.verifikasi-identitas');
                 });
-
             });
 
-             //Icon
-             Route::group(['prefix' => 'icon', 'middleware' => 'usertype:admin'], function () {
+            //Icon
+            Route::group(['prefix' => 'icon', 'middleware' => 'usertype:admin'], function () {
                 Route::get('/', \App\Http\Livewire\Pages\Icon\Admin\Index::class)->name('icon.admin.index');
 
                 Route::group(['prefix' => 'webinar'], function () {
@@ -76,7 +75,7 @@ Route::middleware('auth')->group(function () {
 
         //Peserta
         Route::group(['prefix' => 'peserta', 'middleware' => 'usertype:member'], function () {
-           Route::get('/', \App\Http\Livewire\Pages\DashboardGeneral\ChooseDashboard::class)->name('peserta.dashboard.choose');
+            Route::get('/', \App\Http\Livewire\Pages\DashboardGeneral\ChooseDashboard::class)->name('peserta.dashboard.choose');
 
             //Bionix Dashboard
             Route::group(['prefix' => 'bionix'], function () {
@@ -93,7 +92,7 @@ Route::middleware('auth')->group(function () {
 
                 Route::group(['middleware' => 'usertype:bionix_peserta'], function () {
                     Route::get('/', \App\Http\Livewire\Pages\Bionix\Peserta\Beranda::class)->name('bionix.peserta.homepage');
-                    Route::get('/identitas-tim',\App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim::class)->name('bionix.peserta.identitas-tim');
+                    Route::get('/identitas-tim', \App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim::class)->name('bionix.peserta.identitas-tim');
 
                     Route::group(['middleware' => 'bionixcheck:profil_terverifikasi'], function () {
                         Route::get('/pembayaran', \App\Http\Livewire\Pages\Bionix\Peserta\Pembayaran::class)->name('bionix.peserta.pembayaran');
@@ -101,18 +100,24 @@ Route::middleware('auth')->group(function () {
                 });
 
 
-            Route::group(['prefix' => 'is-class'], function () {
-                Route::get('register', \App\Http\Livewire\Pages\Auth\Bionix\RegistraiIsClass::class)->name('register-is-class');
-                //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
-            });
+                Route::group(['prefix' => 'is-class'], function () {
+                    Route::get('register', \App\Http\Livewire\Pages\Auth\Bionix\RegistraiIsClass::class)->name('register-is-class');
+                    //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
+                });
             });
 
             Route::group(['prefix' => 'webinar'], function () {
                 Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegistasiWebinarKickOff::class)->name('register-webinar')->middleware('iconcheck:!webinar_peserta');
-                Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Beranda::class)->name('webinar.peserta.beranda')->middleware('iconcheck:webinar_peserta');
-                Route::get('presensi',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Presensi::class)->name('webinar.peserta.presensi')->middleware('iconcheck:webinar_peserta');
-                Route::get('presensi/success',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\PresensiSuccess::class)->name('webinar.peserta.presensi.success')->middleware('iconcheck:webinar_peserta');
                 Route::get('success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\Webinar::class)->name('webinar.register-success');
+
+
+                Route::group(['middleware' => 'iconcheck:webinar_peserta'], function () {
+                    Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Beranda::class)->name('webinar.peserta.beranda');
+                    Route::get('presensi',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Presensi::class)->name('webinar.peserta.presensi');
+                    Route::get('success/{type}',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\PresensiSuccess::class)->name('webinar.peserta.success');
+                    Route::get('feedback',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Feedback::class)->name('webinar.peserta.feedback');
+                    //Route::get('feedback/success',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\PresensiSuccess::class)->name('webinar.peserta.presensi.success');
+                });
             });
         });
     });
