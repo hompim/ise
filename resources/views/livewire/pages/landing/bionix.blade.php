@@ -20,8 +20,7 @@
         <div class="ml-48 w-[210px] -translate-y-24 md:-translate-y-0 flex justify-center flex-1">
             <div class="relative left-0 right-0 justify-center mx-auto mb-20 text-center mt-24 max-w-fit scroll-mt-36"
                 id="isometric-city">
-                <div class="absolute lg:!left-44 bottom-4 lg:!bottom-40 group" data-aos="fade-up"
-                    data-aos-easing="linear" data-aos-duration="750" data-aos-once="true">
+                <div class="absolute lg:!left-44 bottom-4 lg:!bottom-40 group">
                     <div
                         class="pr-2 mb-12 transition duration-1000 ease-linear border-r-2 opacity-0 group-hover:duration-300 lg:group-hover:opacity-100 group-hover:ease-linear border-r-pink-300">
                         <h4 class="text-2xl font-medium text-center text-white font-poppins">

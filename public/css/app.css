@@ -1023,6 +1023,24 @@ select {
 .bottom-4 {
     bottom: 1rem;
 }
+.-top-24 {
+    top: -6rem;
+}
+.-top-4 {
+    top: -1rem;
+}
+.bottom-48 {
+    bottom: 12rem;
+}
+.-top-56 {
+    top: -14rem;
+}
+.-top-96 {
+    top: -24rem;
+}
+.-top-72 {
+    top: -18rem;
+}
 .z-50 {
     z-index: 50;
 }

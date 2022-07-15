@@ -27,8 +27,7 @@
         class="-translate-y-12 md:-translate-y-0 ml-[180px] lg:ml-0  flex  flex-1 w-[210px] h-[179px] lg:!w-[691px] lg:!h-full">
         <div class="relative left-0 right-0 justify-center mx-auto mb-20 text-center max-w-fit scroll-mt-36"
             id="isometric-city">
-            <div class="absolute -top-48 lg:top-0 right-4 lg:right-52 group" data-aos="fade-up" data-aos-easing="linear"
-                data-aos-duration="750" data-aos-once="true">
+            <div class="absolute -top-72 lg:top-0 right-4 lg:right-52 group">
                 <div
                     class="pl-2 mb-12 transition duration-1000 ease-linear border-l-2 opacity-0 group-hover:duration-300 lg:group-hover:opacity-100 group-hover:ease-linear border-l-purple-300">
                     <h4 class="text-2xl font-medium text-white text-start font-poppins">IT
