@@ -212,7 +212,7 @@
                                 <span class="space-x-2">{{ $this->results->links('datatables::tailwind-simple-pagination') }}</span>
                             </div>
 
-                            <div class="justify-center hidden lg:flex">
+                            <div class="justify-center lg:flex">
                                 <span>{{ $this->results->links('datatables::tailwind-pagination') }}</span>
                             </div>
                         </div>
