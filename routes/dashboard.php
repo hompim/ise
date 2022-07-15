@@ -123,7 +123,7 @@ Route::middleware('auth')->group(function () {
                     Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Beranda::class)->name('webinar.peserta.beranda');
                     Route::get('presensi',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Presensi::class)->name('webinar.peserta.presensi')->middleware(['accessdate:true,16-07-2022 08:45:00,16-07-2022 13:00:00']);
                     Route::get('success/{type}',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\PresensiSuccess::class)->name('webinar.peserta.success');
-                    Route::get('feedback',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Feedback::class)->name('webinar.peserta.feedback')->middleware(['accessdate:true,13-06-2022 08:45:00,16-07-2022 13:00:00']);;
+                    Route::get('feedback',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Feedback::class)->name('webinar.peserta.feedback')->middleware(['accessdate:true,16-07-2022 08:45:00,16-07-2022 13:00:00']);;
                     //Route::get('feedback/success',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\PresensiSuccess::class)->name('webinar.peserta.presensi.success');
                 });
             });
