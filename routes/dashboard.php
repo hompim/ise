@@ -86,7 +86,7 @@ Route::middleware('auth')->group(function () {
                         Route::get('register/college', \App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege::class)->name('register-college');
                     });
                     Route::middleware('usertype:SMA')->group(function () {
-                        Route::get('register/student', \App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent::class)->name('register-student')->middleware(['accessdate:true,16-07-2022 00:00:00,01-09-2021 23:59:59']);
+                        Route::get('register/student', \App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent::class)->name('register-student')->middleware(['accessdate:true,16-07-2022 07:00:00,01-09-2023 23:59:59']);
                     });
                 });
 
@@ -103,7 +103,7 @@ Route::middleware('auth')->group(function () {
 
 
             Route::group(['prefix' => 'is-class'], function () {
-                Route::get('register', \App\Http\Livewire\Pages\Auth\Bionix\RegistraiIsClass::class)->name('register-is-class');
+                Route::get('register', \App\Http\Livewire\Pages\Auth\Bionix\RegistraiIsClass::class)->name('register-is-class')->middleware(['accessdate:true,16-07-2022 07:00:00,30-12-2022 13:00:00']);
                 Route::get('register-success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\IsClass::class)->name('isclass.register-success');
                 //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
 
@@ -121,9 +121,9 @@ Route::middleware('auth')->group(function () {
 
                 Route::group(['middleware' => 'iconcheck:webinar_peserta'], function () {
                     Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Beranda::class)->name('webinar.peserta.beranda');
-                    Route::get('presensi',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Presensi::class)->name('webinar.peserta.presensi')->middleware(['accessdate:true,13-07-2022 09:00:00,16-07-2022 13:00:00']);
+                    Route::get('presensi',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Presensi::class)->name('webinar.peserta.presensi')->middleware(['accessdate:true,16-07-2022 08:45:00,16-07-2022 13:00:00']);
                     Route::get('success/{type}',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\PresensiSuccess::class)->name('webinar.peserta.success');
-                    Route::get('feedback',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Feedback::class)->name('webinar.peserta.feedback')->middleware(['accessdate:true,13-07-2022 09:00:00,16-07-2022 13:00:00']);;
+                    Route::get('feedback',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\Feedback::class)->name('webinar.peserta.feedback')->middleware(['accessdate:true,13-06-2022 08:45:00,16-07-2022 13:00:00']);;
                     //Route::get('feedback/success',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\PresensiSuccess::class)->name('webinar.peserta.presensi.success');
                 });
             });

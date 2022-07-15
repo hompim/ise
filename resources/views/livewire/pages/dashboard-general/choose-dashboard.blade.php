@@ -22,11 +22,6 @@
                         </div>
                         <div>
                             @if($e->regis_link && $e->start_date)
-                                @if(Auth::user()->userable->webinar || Auth::user()->userable->bionix_id || Auth::user()->userable->academy_id)
-                                <p class="text-center font-bold text-white">
-                                    Anda sudah mendaftar
-                                </p>
-                                @else
                                 @if(date('Y-m-d') >= date('Y-m-d',strtotime($e->start_date)) && date('Y-m-d') < date('Y-m-d',strtotime($e->end_date)) )
                                     <a href="{{route("$e->regis_link")}}" type="button" target="_blank"
                                         style="background: rgb(178,33,229)"

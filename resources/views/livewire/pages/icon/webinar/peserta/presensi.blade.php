@@ -37,7 +37,7 @@ Good Luck 😊
                 <label for="email-address">Sekolah/Universitas/Instansi</label>
                 <input wire:model.defer="school" id="whatsapp" name="school" type="text" required
                     class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
-                    placeholder="Masukkan nomor WhatsApp kamu">
+                    placeholder="Masukkan Sekolah/Universitas/Instansi kamu">
             </div>
         </div>
         <span class="flex justify-center mt-12 mb-24">
