@@ -32,9 +32,11 @@
             </div>
         </div>
     </div>
+
+
     <h3 class="text-xl font-weight-bold my-4">Informasi Tim</h3>
     <form wire:submit.prevent="saveData" enctype="multipart/form-data">
-        <div class="card p-8 rounded-xl">
+        <div class="card p-8 rounded-xl" style="background-color: #191a1e"">
             <div
                 class="grid sm:mb-10 sm:gap-x-20 sm:gap-y-8 gap-y-5 gap-x-5 md:grid-cols-10">
                 <h4 class="text-lg font-bold text-gray-500 col-span-5 md:col-span-2">Tim</h4>

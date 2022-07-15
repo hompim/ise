@@ -10,7 +10,7 @@ class Presensi extends Component
     public $name, $email, $whatsapp, $school, $errorMessage;
 
     public function mount(){
-        if(Auth::user()->userable->webinar->presensi_status){
+        if(Auth::user()->userable->webinar->presensi_status == 1){
             return redirect(route('webinar.peserta.beranda'));
         }
 
