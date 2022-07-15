@@ -36,7 +36,6 @@
                                         Pendaftaran belum dibuka
                                     </p>
                                 @endif
-                                @endif
                             @else
                             <p class="text-center font-bold text-white">
                                 Pendaftaran belum dibuka
