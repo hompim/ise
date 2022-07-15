@@ -72,7 +72,8 @@
                                 <div
                                     class="flex flex-row items-center justify-center mt-12 space-x-4 text-base font-poppins">
                                     <div>
-                                        <button
+                                        <a href="https://drive.google.com/drive/u/0/folders/17kFv0l_x-DDreAj81CGAjtVcT_3RAijI"
+                                            target="_blank"
                                             class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg class="pr-2" width="31" height="32" viewBox="0 0 31 32"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,11 +87,11 @@
                                                     stroke="#B221E5" stroke-width="2" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
-                                            Download Guidebook</button>
+                                            Download Guidebook</a>
                                     </div>
                                     <div>
-                                        <button
-                                            class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                        <a href="/dashboard/peserta/bionix/is-class/register"
+                                            class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +172,8 @@
                                 <div
                                     class="flex flex-col-reverse justify-center mt-[27px] gap-3 font-poppins text-[12px] items-center">
                                     <div>
-                                        <button
+                                        <a href="https://drive.google.com/drive/u/0/folders/17kFv0l_x-DDreAj81CGAjtVcT_3RAijI"
+                                            target="_blank"
                                             class="py-1/2 px-4 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg class="pr-2" width="31" height="32" viewBox="0 0 31 32"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,11 +187,11 @@
                                                     stroke="#B221E5" stroke-width="2" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
-                                            Download Guidebook</button>
+                                            Download Guidebook</a>
                                     </div>
                                     <div>
-                                        <button
-                                            class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                        <a href="/dashboard/peserta/bionix/is-class/register"
+                                            class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
                                     </div>
                                 </div>
                             </div>
@@ -273,7 +275,8 @@
                                 <div
                                     class="flex flex-row items-center justify-center mt-12 space-x-4 text-base font-poppins">
                                     <div>
-                                        <button
+                                        <a href="https://drive.google.com/drive/u/0/folders/17kFv0l_x-DDreAj81CGAjtVcT_3RAijI"
+                                            target="_blank"
                                             class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg class="pr-2" width="31" height="32" viewBox="0 0 31 32"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -287,11 +290,11 @@
                                                     stroke="#B221E5" stroke-width="2" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
-                                            Download Guidebook</button>
+                                            Download Guidebook</a>
                                     </div>
                                     <div>
-                                        <button
-                                            class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                        <a href="/dashboard/peserta/bionix/register"
+                                            class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
                                     </div>
                                 </div>
                             </div>
@@ -303,7 +306,8 @@
                                 <div class="flex flex-row">
                                     <div class="flex flex-col">
                                         <h1 class="text-2xl font-bold text-white font-poppins">Free Pass</h1>
-                                        <p class="text-2xl text-liteGray font-poppins">Dapatkan Free SNMPTN</p>
+                                        <p class="text-2xl text-liteGray font-poppins">Dapatkan Free Pass SNMPTN Sistem
+                                            Informasi 2023</p>
                                     </div>
                                     <img class="w-48 mt-32" src="{{ asset('images/mail-star.svg') }}"
                                         alt="mail star">
@@ -372,7 +376,8 @@
                                 <div
                                     class="flex flex-col-reverse justify-center mt-[27px] gap-3 font-poppins text-[12px] items-center">
                                     <div>
-                                        <button
+                                        <a href="https://drive.google.com/drive/u/0/folders/17kFv0l_x-DDreAj81CGAjtVcT_3RAijI"
+                                            target="_blank"
                                             class="py-1/2 px-4 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg class="pr-2" width="31" height="32" viewBox="0 0 31 32"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -386,11 +391,11 @@
                                                     stroke="#B221E5" stroke-width="2" stroke-linecap="round"
                                                     stroke-linejoin="round" />
                                             </svg>
-                                            Download Guidebook</button>
+                                            Download Guidebook</a>
                                     </div>
                                     <div>
-                                        <button
-                                            class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                                        <a href="/dashboard/peserta/bionix/register"
+                                            class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
                                     </div>
                                 </div>
                             </div>
@@ -401,8 +406,9 @@
                             <div class="flex flex-row">
                                 <div class="flex flex-col">
                                     <h1 class="text-[14.6px] font-bold text-white font-poppins pb-2">Free Pass</h1>
-                                    <p class="text-[14.6px] text-liteGray font-poppins">Dapatkan Free Pass Departemen
-                                        Sistem Informasi ITS</p>
+                                    <p class="text-[14.6px] text-liteGray font-poppins">Dapatkan Free Pass SNMPTN
+                                        Sistem Informasi 2023
+                                    </p>
                                 </div>
                                 <img class="-ml-10 w-36 mt-28" src="{{ asset('images/mail-star.svg') }}"
                                     alt="mail star">
@@ -596,13 +602,14 @@
             <div class="flex-col px-5 text-center md:w-3/4 md:p-4 font-poppins">
                 <div class="md:px-[100px] md:pt-24 pt-[43.5px]">
                     <h1 class="md:text-2xl font-bold text-[19.25px]">Bionix College Level</h1>
-                    <p class="md:text-lg mt-10  text-[#B5B3BC] text-centertext-[12px]">Hadir dengan konsep startup business plan yang
+                    <p class="md:text-lg mt-10  text-[#B5B3BC] text-centertext-[12px]">Hadir dengan konsep startup
+                        business plan yang
                         akan mengasah skill kreativitas dan problem solving mahasiswa Indonesia dalam mengatasi
                         permasalahan yang ada melalui sebuah ide bisnis kreatif di bidang startup dengan memanfaatkan
                         kemajuan teknologi</p>
                 </div>
                 <div class="flex flex-col justify-center mt-12 md:flex-row md:space-x-4 font-poppins">
-                    <button
+                    <button title="Guidebook Available soon!"
                         class="md:px-3 md:mx-0 mx-16 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center"><svg
                             class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -615,8 +622,8 @@
                                 stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         Download Guidebook</button>
-                    <button
-                        class="py-2 my-6 rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300">Register</button>
+                    <a href="/dashboard/peserta/bionix/register"
+                        class="py-2 my-6 rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 hidden">Register</a>
                 </div>
                 <div class="text-4xl md:text-6xl text-white font-bold mt-16 md:mt-[220px] md:w-[600px] md:mx-auto">
                     Many <a class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text"> benefit
@@ -783,5 +790,3 @@
 
     </div>
 </div>
-
-{{-- <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script> --}}
