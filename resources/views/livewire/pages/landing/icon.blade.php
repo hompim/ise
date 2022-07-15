@@ -1,6 +1,3 @@
-<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
-<script src="//unpkg.com/alpinejs" defer></script>
-<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
 <link rel="stylesheet" href="{{ asset('css/new.css') }}">
 <script src="{{ asset('js/index.js') }}"></script>
 <!-- hero section start -->
@@ -27,8 +24,32 @@
     </div>
     <!-- ml-48 w-[210px] -translate-y-24 md:-translate-y-0 flex justify-center flex-1 -->
     <div
-        class="-translate-y-24 md:-translate-y-0 ml-[180px] lg:ml-0  flex  flex-1 w-[210px] h-[179px] lg:!w-[691px] lg:!h-full">
-        <img src="{{ asset('images/isometric-city-icon.svg') }}" class="w-full h:full">
+        class="-translate-y-12 md:-translate-y-0 ml-[180px] lg:ml-0  flex  flex-1 w-[210px] h-[179px] lg:!w-[691px] lg:!h-full">
+        <div class="relative left-0 right-0 justify-center mx-auto mb-20 text-center max-w-fit scroll-mt-36"
+            id="isometric-city">
+            <div class="absolute -top-72 lg:top-0 right-4 lg:right-52 group">
+                <div
+                    class="pl-2 mb-12 transition duration-1000 ease-linear border-l-2 opacity-0 group-hover:duration-300 lg:group-hover:opacity-100 group-hover:ease-linear border-l-purple-300">
+                    <h4 class="text-2xl font-medium text-white text-start font-poppins">IT
+                        Convention Zone</h4>
+                    <ul class="text-[#B5B3BC] text-start">
+                        <li>Data Science Academy</li>
+                        <li>Startup Academy</li>
+                        <li>E-Hall of Information System</li>
+                        <li>Grand Talkshow ISE! 2022</li>
+                    </ul>
+                </div>
+                <a href="#icon">
+                    {{-- <img src="{{ asset('images/icon-city.svg') }}" alt="isometric-city"
+                    class="transition duration-1000 transform group-hover:scale-105 group-hover:duration-300"> --}}
+                    <div
+                        class="transition duration-1000 transform lg:!scale-[1.7] lg:group-hover:!scale-[1.8] group-hover:duration-300">
+                        @livewire('components.icon-city')
+                    </div>
+                </a>
+            </div>
+            <img src="{{ asset('images/bg-isometric-icon.svg') }}" alt="isometric-city">
+        </div>
     </div>
 </div>
 <!-- hero section end -->

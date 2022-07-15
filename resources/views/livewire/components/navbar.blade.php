@@ -2,7 +2,7 @@
     @if (Route::current()->getName() == 'ise') data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="2500" data-aos-one="true" @endif
     x-data="{ open: false }">
 
-    <div class="flex items-center pl-12 lg:!hidden">
+    <div class="flex items-center pl-4 md:pl-12 lg:!hidden">
         <button x-on:click="open = !open" class="flex items-center space-x-2 text-purple-200 focus:outline-none">
             <div class="relative flex items-center justify-center w-6">
                 <span x-bind:class="open ? 'translate-y-0 rotate-45' : '-translate-y-2'"

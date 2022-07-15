@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="flex flex-col justify-center w-full my-12 space-y-12">
-                <h2 class="text-2xl font-bold text-center text-white lg:text-4xl">Registrasi @yield('title' ,'') Berhasil</h2>
+                <h2 class="text-2xl font-bold text-center text-white lg:text-4xl">@yield('title' ,'')</h2>
                 <p class="px-4 text-base font-medium text-center text-white lg:text-lg lg:px-12">@yield('message')</p>
                 <div class="flex flex-col space-y-4 lg:justify-around lg:flex-row lg:space-y-0">
                     <a href="https://wa.me/6285162852050" class="block mx-auto transition duration-300 hover:scale-105"

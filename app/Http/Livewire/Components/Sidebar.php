@@ -114,16 +114,28 @@ class Sidebar extends Component
                     ],
                     [
                         'type' => 'menu',
+                        'icon' => 'cil-home',
+                        'title' => 'Beranda',
+                        'route-name' => 'webinar.admin.beranda'
+                    ],
+                    [
+                        'type' => 'menu',
                         'icon' => 'cil-group',
                         'title' => 'Daftar Peserta',
                         'route-name' => 'webinar.admin.daftar-webinar'
                     ],
-                    // [
-                    //     'type' => 'menu',
-                    //     'icon' => 'cil-group',
-                    //     'title' => 'Presensi Peserta',
-                    //     'route-name' => 'webinar.admin.presensi'
-                    // ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-group',
+                        'title' => 'Presensi Peserta',
+                        'route-name' => 'webinar.admin.presensi'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-bullhorn',
+                        'title' => 'Feedback Peserta',
+                        'route-name' => 'webinar.admin.feedback'
+                    ],
                     [
                         'type' => 'divider',
                         'tag' => 'mb-3'
