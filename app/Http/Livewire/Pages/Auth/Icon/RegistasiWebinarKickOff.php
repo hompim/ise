@@ -40,7 +40,8 @@ class RegistasiWebinarKickOff extends Component
             'name' => 'required',
             'whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'instagram_story' => 'required|image|max:2048',
-            'info_source' => 'required'
+            'info_source' => 'required',
+            'status'=>'required'
         ]);
 
         if (!$this->agree) {
@@ -71,7 +72,7 @@ class RegistasiWebinarKickOff extends Component
 
 
         IconWebinarKickOff::create([
-            'member_id' => Auth::user()->userable_id,
+            'member_id' => Auth::user()->userable->id,
             'info_source' => $this->info_source,
             'instagram_story_path' => $instagram_story_path,
         ]);

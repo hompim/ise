@@ -22,10 +22,17 @@ class RegistraiIsClass extends Component
     public $agree;
     public $step = 1;
     public $errorMessage;
+    public $status;
 
     public function render()
     {
         return view('livewire.pages.auth.bionix.registrai-is-class')->layout('layouts.auth-bionix');
+    }
+
+     public function mount()
+    {
+        $this->name = Auth::user()->name;
+        $this->info_pendaftaran = 'Media Sosial ISE! 2022';
     }
 
     public function akunSubmit()
@@ -48,7 +55,7 @@ class RegistraiIsClass extends Component
         }
 
         Storage::disk('public')->makeDirectory('kartu_pelajar');
-        $name = date('YmdHis') . '_isclass_' . $this->namalengkap . '.' . $this->kartu_pelajar->getClientOriginalExtension();
+        $name = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '.' . $this->kartu_pelajar->getClientOriginalExtension();
         $kartu_pelajar_path = 'kartu_pelajar/' . $name;
         $resized_image = (new ImageManager())
             ->make($this->kartu_pelajar)
@@ -64,19 +71,17 @@ class RegistraiIsClass extends Component
             );
 
         Auth::user()->update([
-            'namalengkap' => $this->namalengkap,
+            'name' => $this->namalengkap,
             'email' => $this->email,
-            'whatsapp' => $this->whatsapp,
-            'sekolah' => $this->sekolah,
-            'kartu_pelajar' => $this->kartu_pelajar,
-            
+            'whatsapp' => $this->whatsapp
         ]);
 
-
         IsClassData::create([
-            'member_id' => Auth::user()->userable_id,
-            'info_pendaftaran' => $this->info_pendaftaran,
-            'kartu_pelajar_path' => $kartu_pelajar_path
+            'member_id' => Auth::user()->userable->id,
+            'info_source' => $this->info_pendaftaran,
+            'identity_card_path' => $kartu_pelajar_path,
+            'school_name' => $this->sekolah,
+            'status' => $this->status
         ]);
         return redirect(route('isclass.register-success'));
     }

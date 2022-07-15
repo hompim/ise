@@ -17,7 +17,7 @@ class usertype
      */
     public function handle(Request $request, Closure $next, $type)
     {
-        if ($type == 'bionix_peserta' || $type == 'member') {
+        if ($type == 'bionix_peserta' || $type = "isclass_peserta" || $type == 'member') {
             if (Auth::user()->userable_type == "App\Models\Member") {
                 if ($type == 'bionix_peserta') {
                     if (!Auth::user()->userable->bionix_id) {
@@ -26,6 +26,14 @@ class usertype
                         } elseif (Auth::user()->userable->jenjang == 'Siswa SMA') {
                             return redirect()->to(route('register-student'));
                         }
+                    }
+                }
+                if ($type == 'isclass_peserta') {
+                    if (!Auth::user()->userable->isclass) {
+                        if (Auth::user()->userable->jenjang == 'Mahasiswa') {
+                            return abort(403);
+                        }
+                        return redirect()->to(route('register-is-class'));
                     }
                 }
                 return $next($request);

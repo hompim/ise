@@ -201,6 +201,24 @@ class Sidebar extends Component
                         'tag' =>'class=my-2'
                     ]
                     );
+            } else if(Auth::user()->userable->isclass){
+                array_push(
+                    $this->menu,
+                    [
+                        'type' => 'title',
+                        'title' => 'IS Class'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-home',
+                        'title' => 'Beranda',
+                        'route-name' => 'isclass.peserta.beranda'
+                    ],
+                    [
+                        'type' => 'divider',
+                        'tag' =>'class=my-2'
+                    ]
+                    );
             }
         }
 

@@ -9,7 +9,6 @@
             {{-- @if ($errors->any())
 
             {{-- step 1 --}}
-            <div class="{{$step == 1 ? '' : 'hidden'}}" >
             <input type="hidden" name="peserta_type" value="senior" />
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nama Lengkap</label>
@@ -35,7 +34,7 @@
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan asal sekolah kamu" wire:model.defer="sekolah" name="sekolah">
             </div>
-            <div class="flex flex-col space-y-2  font-medium text-white font-poppins">
+            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                 <label for="kartu-pelajar1">Upload kartu pelajar kamu
                 </label>
 
@@ -49,26 +48,42 @@
                             File</button>
                         <input type="file" wire:model.defer="kartu_pelajar" class="form-control-file"
                             name="kartu_pelajar" id="story" accept=".jpg,.jpeg,.png" hidden>
-    
                 </div>
+            </div>
 
-                <img class="transition" id="img-preview" wsrc="" alt="">
-
-                <div class="flex flex-col space-y-2 font-medium font-poppins">
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <label for="name">Kelas yang ingin kamu ikuti</label>
+                    <div class="flex items-center mb-2">
+                        <input id="kelas10" name="status" wire:model.defer ="status" type="radio" value="online"
+                            class="p-2 bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  checked:bg-purple-200 cursor-pointer">
+                        <label for="kelas10" class="!mt-0 ml-2 font-light text-white font-poppins cursor-pointer">Kelas
+                            Online</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input id="kelas10" name="status" wire:model.defer ="status" type="radio" value="offline"
+                            class="p-2 bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  checked:bg-purple-200 cursor-pointer">
+                        <label for="kelas10" class="!mt-0 ml-2 font-light text-white font-poppins cursor-pointer">Kelas
+                            Offline</label>
+                    </div>
+            </div>
+                <div class="flex flex-col space-y-2 my-11 font-medium font-poppins">
                     <label for="info-pendaftaran" class="text-white">Info Pendaftaran</label>
-                    <select id="info-pendaftaran" name="info_pendaftaran" wire:model.defer="info_pendaftaran"
-                        class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
-                        <option class="bg-liteBlack" disabled selected value="">Dari manakah kamu mendapatkan
-                            informasi mengenai BIONIX?</option>
-                        <option value="1" class="bg-liteBlack ">IG</option>
-                        <option value="2" class="bg-liteBlack ">TikTok</option>
-                        <option value="3" class="bg-liteBlack ">Linkedin</option>
-                        <option value="4" class="bg-liteBlack ">Twitter</option>
+                    <select wire:model.defer="info_pendaftaran" name="info_pendaftaran" id=""
+                        class="w-full p-2 bg-transparent rounded-md text-liteGray focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200">
+                        <option value="Media Sosial ISE! 2022" class="bg-liteBlack">Media Sosial ISE! 2022</option>
+                        <option value="Media Sosial selain ISE! 2022 (info lomba, dll)" class="bg-liteBlack">Media
+                            Sosial selain ISE!
+                            2022 (info lomba, dll)
+                        </option>
+                        <option value="Grup WA/Line/dll" class="bg-liteBlack">Grup WA/Line/dll</option>
+                        <option value="Sekolah (guru, dll)" class="bg-liteBlack">Sekolah (guru, dll)</option>
+                        <option value="Teman/keluarga" class="bg-liteBlack">Teman/keluarga</option>
+                        <option value="Website/Aplikasi Sejuta Cita" class="bg-liteBlack">Website/Aplikasi Sejuta Cita
+                        </option>
                     </select>
                 </div>
 
-
-                <div class="flex-row space-x-4 font-medium font-poppins">
+                <div class="flex-row my-11 space-x-4 font-medium font-poppins">
                     <input wire:model.defer="agree" type="checkbox" id="setuju-kebijakan" name="setuju-kebijakan"
                         class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
                     <label class="text-white" for="setuju-kebijakan">Saya setuju dengan kebijakan privasi serta syarat dan
@@ -81,47 +96,9 @@
                     <button type="Submit"
                         class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Submit</button>
                 </div>
-
-                <div class="flex flex-col space-y-2 font-medium font-poppins">
-                    <label for="info-pendaftaran" class="text-white">Info Pendaftaran</label>
-                    <select id="info-pendaftaran" name="info_source"
-                        class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
-                        <option class="bg-liteBlack" disabled selected value="">Dari manakah kamu mendapatkan
-                            informasi mengenai BIONIX?</option>
-                        <option value="1" class="bg-liteBlack ">IG</option>
-                        <option value="2" class="bg-liteBlack ">TikTok</option>
-                        <option value="3" class="bg-liteBlack ">Linkedin</option>
-                        <option value="4" class="bg-liteBlack ">Twitter</option>
-                    </select>
-                </div>
-
-
-                <div class="flex-row space-x-4 font-medium font-poppins">
-                    <input type="checkbox" id="setuju-kebijakan" name="setuju-kebijakan"
-                        class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
-                    <label class="text-white" for="setuju-kebijakan">Saya setuju dengan kebijakan privasi serta syarat dan
-                        ketentuan yang
-                        berlaku</label>
-                </div>
-
-                <div
-                    class="relative left-0 right-0 flex flex-col justify-center mx-auto mt-24 text-center lg:flex-row max-w-fit group">
-                    <button type="Submit"
-                        class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Submit</button>
-                </div>
-
-            </div>
             {{-- step 1 end --}}
 
             {{-- step 3 --}}
-            <div class="{{$step == 2 ? '' : 'hidden'}}">
-        </div>
-
-
-
-        <div
-        class="relative left-0 right-0 flex flex-col justify-center mx-auto mt-24 text-center lg:flex-row max-w-fit group">
-
         </form>
 
 

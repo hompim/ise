@@ -102,18 +102,16 @@ Route::middleware('auth')->group(function () {
                 });
 
 
-<<<<<<< HEAD
             Route::group(['prefix' => 'is-class'], function () {
                 Route::get('register', \App\Http\Livewire\Pages\Auth\Bionix\RegistraiIsClass::class)->name('register-is-class');
                 Route::get('register-success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\IsClass::class)->name('isclass.register-success');
                 //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
-            });
-=======
-                Route::group(['prefix' => 'is-class'], function () {
-                    Route::get('register', \App\Http\Livewire\Pages\Auth\Bionix\RegistraiIsClass::class)->name('register-is-class');
-                    //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
+
+
+                Route::group(['middleware' => 'usertype:isclass_peserta'], function () {
+                    Route::get('/', \App\Http\Livewire\Pages\Bionix\IsClass\Peserta\Beranda::class)->name('isclass.peserta.beranda');
                 });
->>>>>>> fb3e9cb2989433b04e02ed8ee5f1bb4e1bb62ebf
+            });
             });
 
             Route::group(['prefix' => 'webinar'], function () {

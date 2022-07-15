@@ -24,6 +24,10 @@ return new class extends Migration
                 "Sekolah (guru, dll)",
                 "Teman/keluarga",
                 "Website/Aplikasi Sejuta Cita"])->nullable();
+            $table->enum('status', ['online', 'offline']);
+            $table->enum('profile_verif_status', ['Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Tahap Verifikasi');
+            $table->unsignedTinyInteger('profile_verified_by')->nullable();
+            $table->text('profile_verif_comment')->nullable();
             $table->timestamps();
         });
     }
