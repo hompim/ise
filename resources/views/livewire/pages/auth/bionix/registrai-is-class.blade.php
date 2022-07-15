@@ -82,6 +82,34 @@
                         class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Submit</button>
                 </div>
 
+                <div class="flex flex-col space-y-2 font-medium font-poppins">
+                    <label for="info-pendaftaran" class="text-white">Info Pendaftaran</label>
+                    <select id="info-pendaftaran" name="info_source"
+                        class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
+                        <option class="bg-liteBlack" disabled selected value="">Dari manakah kamu mendapatkan
+                            informasi mengenai BIONIX?</option>
+                        <option value="1" class="bg-liteBlack ">IG</option>
+                        <option value="2" class="bg-liteBlack ">TikTok</option>
+                        <option value="3" class="bg-liteBlack ">Linkedin</option>
+                        <option value="4" class="bg-liteBlack ">Twitter</option>
+                    </select>
+                </div>
+
+
+                <div class="flex-row space-x-4 font-medium font-poppins">
+                    <input type="checkbox" id="setuju-kebijakan" name="setuju-kebijakan"
+                        class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
+                    <label class="text-white" for="setuju-kebijakan">Saya setuju dengan kebijakan privasi serta syarat dan
+                        ketentuan yang
+                        berlaku</label>
+                </div>
+
+                <div
+                    class="relative left-0 right-0 flex flex-col justify-center mx-auto mt-24 text-center lg:flex-row max-w-fit group">
+                    <button type="Submit"
+                        class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Submit</button>
+                </div>
+
             </div>
             {{-- step 1 end --}}
 

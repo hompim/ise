@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Pages\Bionix\IsClass\Admin\DaftarPeserta\Components;
+namespace App\Http\Livewire\Pages\Bionix\IsClass\Admin\VerifikasiIdentitas\Components;
 
 use Livewire\Component;
 use App\Models\Bionix\IsClassData;
