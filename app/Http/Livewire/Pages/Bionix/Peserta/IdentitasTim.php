@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Pages\Bionix\Peserta;
 
 use App\Models\Bionix\City;
 use App\Models\Bionix\TeamJuniorMember;
+use App\Models\Bionix\TeamSeniorMember;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\FacadesAuth;
@@ -84,9 +85,12 @@ class IdentitasTim extends Component
         $this->photo1 = Auth::user()->userable->bionix->leader->identity_card_path;
         $this->photo2 = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->identity_card_path : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->identity_card_path : null));
         $this->photo3 = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->identity_card_path : null));
-        $this->member_1_twibbon = ($this->is_junior ? null : Auth::user()->userable->bionix->leader->link_twibbon);
-        $this->member_2_twibbon = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
+        $this->member_1_twibbon = ($this->is_junior ? Auth::user()->userable->bionix->leader->twibbon_path : Auth::user()->userable->bionix->leader->link_twibbon);
+        $this->member_2_twibbon = ($this->is_junior ? Auth::user()->userable->bionix->member->twibbon_path : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
         $this->member_3_twibbon = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->link_twibbon : null));
+        $this->member_1_instagram = ($this->is_junior ? Auth::user()->userable->bionix->leader->instagram_path : Auth::user()->userable->bionix->leader->link_twibbon);
+        $this->member_2_instagram = ($this->is_junior ? Auth::user()->userable->bionix->member->instagram_path : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
+        $this->member_3_instagram = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->link_twibbon : null));
         $this->member_1_major = ($this->is_junior ? null : Auth::user()->userable->bionix->leader->major);
         $this->member_2_major = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->major : null));
         $this->member_3_major = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->major : null));
@@ -211,7 +215,7 @@ class IdentitasTim extends Component
 
         $this->validate($validate);
 
-        Storage::disk('public')->makeDirectory('kartu_identitas');
+        Storage::disk('public')->makeDirectory('bionix');
 
         //Update DB
         if ($this->is_junior) {
@@ -246,10 +250,10 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->photo1->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('kartu_identitas/' . $name,
+                    ->put('bionix/' . $name,
                         $resized_image->__toString());
                 Auth::user()->userable->bionix->leader->update([
-                    'identity_card_path' => 'kartu_identitas/' . $name
+                    'identity_card_path' => 'bionix/' . $name
                 ]);
             }
 
@@ -262,11 +266,11 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->photo2->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('kartu_identitas/' . $name,
+                    ->put('bionix/' . $name,
                         $resized_image->__toString());
 
                 Auth::user()->userable->bionix->member->update([
-                    'identity_card_path' => 'kartu_identitas/' . $name
+                    'identity_card_path' => 'bionix/' . $name
                 ]);
             }
         } elseif (!$this->is_junior) {
@@ -357,10 +361,10 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->photo1->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('kartu_identitas/' . $name,
+                    ->put('bionix/' . $name,
                         $resized_image->__toString());
                 Auth::user()->userable->bionix->leader->update([
-                    'identity_card_path' => 'kartu_identitas/' . $name
+                    'identity_card_path' => 'bionix/' . $name
                 ]);
             }
             if ($this->photo2 && !is_string($this->photo2)) {
@@ -372,10 +376,10 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->photo2->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('kartu_identitas/' . $name,
+                    ->put('bionix/' . $name,
                         $resized_image->__toString());
                 Auth::user()->userable->bionix->member_1->update([
-                    'identity_card_path' => 'kartu_identitas/' . $name
+                    'identity_card_path' => 'bionix/' . $name
                 ]);
             }
             if ($this->photo3 && !is_string($this->photo3)) {
@@ -387,10 +391,10 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->photo3->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('kartu_identitas/' . $name,
+                    ->put('bionix/' . $name,
                         $resized_image->__toString());
                 Auth::user()->userable->bionix->member_2->update([
-                    'identity_card_path' => 'kartu_identitas/' . $name
+                    'identity_card_path' => 'bionix/' . $name
                 ]);
             }
         }
@@ -514,6 +518,9 @@ class IdentitasTim extends Component
         $this->messageType = null;
     }
 
+    public function toEditMode(){
+        $this->is_edit = true;
+    }
 
     public function render()
     {

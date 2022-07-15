@@ -180,7 +180,7 @@ class RegisterStudent extends Component
             $team_member_1->update([
                 'identity_card_path' => 'bionix/' . $ktm,
                 'twibbon_path' => 'bionix/'. $twibbon,
-                'instagram_path' => 'bionix'. $instagram
+                'instagram_path' => 'bionix/'. $instagram
             ]);
         }
 
@@ -233,7 +233,7 @@ class RegisterStudent extends Component
                     $team_member_2->update([
                     'identity_card_path' => 'bionix/' . $ktm,
                     'twibbon_path' => 'bionix/'. $twibbon,
-                    'instagram_path' => 'bionix'. $instagram
+                    'instagram_path' => 'bionix/'. $instagram
                 ]);
             }
         }
@@ -267,6 +267,7 @@ class RegisterStudent extends Component
 
     public function mount(){
         $this->cities = City::all();
+        $this->info_source = "IG";
     }
 
     public function render()

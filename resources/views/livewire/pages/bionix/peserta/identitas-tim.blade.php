@@ -1,4 +1,4 @@
-<div class="px-8">
+<div class="px-8 text-white">
     <div
         class="bg-{{$alert_color}}-100 border-t-4 border-{{$alert_color}}-500 rounded-b text-{{$alert_color}}-900 px-4 py-3 shadow-md"
         role="alert">
@@ -34,34 +34,16 @@
     </div>
 
 
-    <h3 class="text-xl font-weight-bold my-4">Informasi Tim</h3>
+    <h3 class="text-xl font-weight-bold my-4 text-white">Informasi Tim</h3>
     <form wire:submit.prevent="saveData" enctype="multipart/form-data">
-        <div class="card p-8 rounded-xl" style="background-color: #191a1e"">
+        <div class="card p-8 rounded-xl" style="background-color: #191a1e">
             <div
                 class="grid sm:mb-10 sm:gap-x-20 sm:gap-y-8 gap-y-5 gap-x-5 md:grid-cols-10">
-                <h4 class="text-lg font-bold text-gray-500 col-span-5 md:col-span-2">Tim</h4>
-                <div class="md:hidden col-span-5">
-                    @if($is_edit)
-                        @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi")
-                            <button
-                                class="justify-self-end block text-blue-500">Simpan
-                            </button>
-                        @endif
-
-                    @else
-                        @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi")
-                            <button
-                                type="button"
-                                class="justify-self-end block text-blue-500"
-                                wire:click="toEditMode()"><i class="fas fa-edit"></i> Edit
-                            </button>
-                        @endif
-                    @endif
-                </div>
+                <h4 class="text-gray-400 text-lg font-bold  col-span-5 md:col-span-2">Tim</h4>
                 <div class="col-span-10 md:col-span-6 flex items-center">
                     <div class="border-2 border-bottom-0 flex-grow" style="height: 1px;"></div>
                 </div>
-                <div class="col-span-10 md:col-span-2 md:block hidden">
+                <div class="col-span-10 md:col-span-2 md:block">
                     @if($is_edit)
                         @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi")
                             <button
@@ -70,9 +52,11 @@
                         @endif
                     @else
                         @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi"&&!$alreadyDeadline)
-                            <button type="button"
+                            <button
+                            disabled
+                            type="button"
                                     class="text-blue-500 justify-self-end"
-                                    wire:click="toEditMode()"><i class="fas fa-edit"></i> Edit
+                                    wire:click="toEditMode()"><i class="fas fa-edit"></i>
                             </button>
                         @endif
                     @endif
@@ -254,6 +238,74 @@
                                         </button>
                                         <input type="file"
                                                wire:model.defer="photo1"
+                                               class="form-control-file"
+                                               name="member_1_card"
+                                               id="member_1_card"
+                                               accept=".jpg,.jpeg,.png"
+                                               hidden>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div x-data="{ isUploading: false, progress: 0 }"
+                                 x-on:livewire-upload-start="isUploading = true"
+                                 x-on:livewire-upload-finish="isUploading = false"
+                                 x-on:livewire-upload-error="isUploading = false"
+                                 x-on:livewire-upload-progress="progress = $event.detail.progress">
+                                <div class="flex flex-col items-center justify-center md:p-3 w-full">
+                                    <label for="kartu_pelajar"
+                                           class="capitalize text-gray-400">Twibbon Anggota 1</label>
+                                    <div x-show="isUploading" class="w-full">
+                                        <progress max="100" x-bind:value="progress" class="w-full"></progress>
+                                    </div>
+                                    <img
+                                        src="{{$member_1_twibbon?(is_string($member_1_twibbon)?asset('storage/'.$member_1_twibbon):$member_1_twibbon->temporaryUrl()):asset('/img/global/placeholder-image.png')}}"
+                                        class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_card_preview"
+                                        style="max-height:50vh">
+                                    @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi"&&$is_edit)
+                                        <button
+                                            onclick="$('#member_1_card').click()"
+                                            type="button"
+                                            class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
+                                            <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
+                                        </button>
+                                        <input type="file"
+                                               wire:model.defer="member_1_twibbon"
+                                               class="form-control-file"
+                                               name="member_1_card"
+                                               id="member_1_card"
+                                               accept=".jpg,.jpeg,.png"
+                                               hidden>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                            <div>
+                            <div x-data="{ isUploading: false, progress: 0 }"
+                                 x-on:livewire-upload-start="isUploading = true"
+                                 x-on:livewire-upload-finish="isUploading = false"
+                                 x-on:livewire-upload-error="isUploading = false"
+                                 x-on:livewire-upload-progress="progress = $event.detail.progress">
+                                <div class="flex flex-col items-center justify-center md:p-3 w-full">
+                                    <label for="kartu_pelajar"
+                                           class="capitalize text-gray-400">Instagram Post Anggota 1</label>
+                                    <div x-show="isUploading" class="w-full">
+                                        <progress max="100" x-bind:value="progress" class="w-full"></progress>
+                                    </div>
+                                    <img
+                                        src="{{$member_1_instagram?(is_string($member_1_instagram)?asset('storage/'.$member_1_instagram):$member_1_instagram->temporaryUrl()):asset('/img/global/placeholder-image.png')}}"
+                                        class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_card_preview"
+                                        style="max-height:50vh">
+                                    @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi"&&$is_edit)
+                                        <button
+                                            onclick="$('#member_1_card').click()"
+                                            type="button"
+                                            class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
+                                            <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
+                                        </button>
+                                        <input type="file"
+                                               wire:model.defer="member_1_instagram"
                                                class="form-control-file"
                                                name="member_1_card"
                                                id="member_1_card"
