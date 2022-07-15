@@ -41,6 +41,10 @@
                             <label for="Email" class="mb-2 text-lg font-bold text-gray-300  mt-4">Link Virtual Background</label><br>
                             <a href="https://ise-its.com/VirtualBackgroundKickOff" target="_blank"><p class="font-bold text-blue-600">VirtualBackgroundKickOff</p></a>
                         </div>
+                        <div class="mt-4 flex gap-4">
+                            <a href="https://ise-its.com/WebinarKickOffPresensi" target="_blank"><button class="px-4 py-2 bg-purple-400 text-white font-bold rounded-md">Presensi</button></a>
+                            <a href="https://ise-its.com/WebinarKickOffFeedback" target="_blank"><button class="px-4 py-2 bg-pink-400 text-white font-bold rounded-md">Feedback</button></a>
+                        </div>
                     </div>
 
 
