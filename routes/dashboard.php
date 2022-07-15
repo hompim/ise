@@ -86,7 +86,7 @@ Route::middleware('auth')->group(function () {
                         Route::get('register/college', \App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege::class)->name('register-college');
                     });
                     Route::middleware('usertype:SMA')->group(function () {
-                        Route::get('register/student', \App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent::class)->name('register-student')->middleware(['accessdate:true,16-07-2022 07:00:00,01-09-2023 23:59:59']);
+                        Route::get('register/student', \App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent::class)->name('register-student');
                     });
                 });
 

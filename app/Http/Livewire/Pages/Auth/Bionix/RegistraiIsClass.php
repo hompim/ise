@@ -46,7 +46,8 @@ class RegistraiIsClass extends Component
             'whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'sekolah' => 'required',
             'kartu_pelajar' => 'required|image|max:2048',
-            'info_pendaftaran' => 'required'
+            'info_pendaftaran' => 'required',
+            'status' => 'required'
         ]);
 
         if (!$this->agree) {

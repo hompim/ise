@@ -138,7 +138,7 @@ class RegisterStudent extends Component
             'email' => $this->member_1_email,
             'class' => $this->member_1_class,
             'whatsapp' => $this->member_1_whatsapp
-        ])->id;
+        ]);
 
         if (!is_string($this->ktm_1) && !is_string($this->twibbon_1) && !is_string($this->instagram_1)) {
             $ktm = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_KTM' . '.' . $this->ktm_1->getClientOriginalExtension();
@@ -177,7 +177,7 @@ class RegisterStudent extends Component
                 ->put('bionix/' . $twibbon,
                     $resized_image_twibbon->__toString());
 
-            Auth::user()->userable->bionix->leader->update([
+            $team_member_1->update([
                 'identity_card_path' => 'bionix/' . $ktm,
                 'twibbon_path' => 'bionix/'. $twibbon,
                 'instagram_path' => 'bionix'. $instagram
@@ -191,7 +191,7 @@ class RegisterStudent extends Component
                 'email' => $this->member_2_email,
                 'class' => $this->member_2_class,
                 'whatsapp' => $this->member_2_whatsapp
-            ])->id;
+            ]);
 
             if (!is_string($this->ktm_2) && !is_string($this->twibbon_2) && !is_string($this->instagram_2)) {
                 $ktm2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_KTM' . '.' . $this->ktm_1->getClientOriginalExtension();
@@ -230,7 +230,7 @@ class RegisterStudent extends Component
                     ->put('bionix/' . $twibbon2,
                         $resized_image_twibbon2->__toString());
 
-                Auth::user()->userable->bionix->member->update([
+                    $team_member_2->update([
                     'identity_card_path' => 'bionix/' . $ktm,
                     'twibbon_path' => 'bionix/'. $twibbon,
                     'instagram_path' => 'bionix'. $instagram
@@ -243,8 +243,8 @@ class RegisterStudent extends Component
             'school_name' => $this->school_name,
             'city_id' => $this->school_city,
             'competition_round' => 'Penyisihan 1',
-            'leader_id' => $team_member_1,
-            'member_id' => $team_member_2
+            'leader_id' => $team_member_1->id,
+            'member_id' => $team_member_2->id
         ]);
         Auth::user()->userable->update([
             'bionix_id' => $team_data->id,

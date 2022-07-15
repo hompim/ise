@@ -16,12 +16,7 @@ return new class extends Migration
         Schema::create('team_junior_data', function (Blueprint $table) {
             $table->id();
             $table->string('team_name');
-            $table->enum('info_source', ["Media Sosial ISE! 2021",
-                "Media Sosial selain ISE! 2021 (info lomba, dll)",
-                "Roadshow ISE! 2021",
-                "Grup WA/Line/dll",
-                "Sekolah (guru, dll)",
-                "Teman/keluarga"]);
+            $table->string('info_source');
             $table->string('school_name');
             $table->unsignedInteger('city_id');
             $table->enum('competition_round', ['Penyisihan 1', 'Penyisihan 2', 'Semifinal', 'Final'])->default('Penyisihan 1');

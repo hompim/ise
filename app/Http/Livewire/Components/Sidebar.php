@@ -183,7 +183,7 @@ class Sidebar extends Component
                         'tag' =>'class=mb-3'
                     ]
                 );
-            } else if(Auth::user()->userable->webinar){
+            } if(Auth::user()->userable->webinar){
                 array_push(
                     $this->menu,
                     [
@@ -201,7 +201,7 @@ class Sidebar extends Component
                         'tag' =>'class=my-2'
                     ]
                     );
-            } else if(Auth::user()->userable->isclass){
+            } if(Auth::user()->userable->isclass){
                 array_push(
                     $this->menu,
                     [
