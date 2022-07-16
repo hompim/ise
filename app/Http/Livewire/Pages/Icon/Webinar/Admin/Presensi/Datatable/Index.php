@@ -8,6 +8,8 @@ use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 
 class Index extends LivewireDatatable
 {
+    public $exportable = true;
+
     public function builder()
     {
         return IconWebinarKickOff::where('presensi_status', true)->join('members', function ($q) {
@@ -21,9 +23,10 @@ class Index extends LivewireDatatable
     public function columns()
     {
         return [
-            Column::name('users.name')->label('Nama')->searchable(),
+            Column::name('users.name')->label('Nama Lengkap')->searchable(),
             Column::name('users.email')->label('Email'),
             Column::name('users.whatsapp')->label('Whatsapp'),
+            Column::name('school_name')->label('Sekolah/Universitas/Instansi')
         ];
     }
 }
