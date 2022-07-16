@@ -28,6 +28,6 @@ class WebinarKickOffAcaraMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.webinar-mail')->subject("WEBINAR KICK OFF ISE! 2022 - Hello Participants! Here is the link for join the webinar!");
+        return $this->view('mails.webinar-mail')->subject("D-DAY! - WEBINAR KICK OFF ISE! 2022");
     }
 }

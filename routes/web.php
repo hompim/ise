@@ -8,6 +8,9 @@ use App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
 use App\Http\Livewire\Pages\Auth\Bionix\RegistrasiRoadshow;
 use App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim;
+use App\Mail\WebinarKickOffAcaraMail;
+use App\Models\Icon\IconWebinarKickOff;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 
 /*
@@ -31,6 +34,19 @@ Route::get('/coming-soon', function () {
     return view('coming-soon-page');
 });
 
+<!-- Route::get('/sendEmail', function () {
+    $pesertas = IconWebinarKickOff::all();
+
+    foreach ($pesertas as $peserta) {
+        Mail::to($peserta->member->user->email)->send(new WebinarKickOffAcaraMail);
+        sleep(4);
+    }
+
+    return response()->json([
+        'success' => true
+    ]);
+}); -->
+
 Route::get('/Registerbcl', RegisterCollege::class);
 Route::get('/Registerst', RegisterStudent::class);
 Route::get('/Registerbclroad', RegistrasiRoadshow::class);
@@ -47,6 +63,6 @@ Route::get('/{shorten_link}', function ($shorten_link) {
     }
     return abort(404);
 });
-Route::get('testing' ,function(){
+Route::get('testing', function () {
     return view('livewire.pages.auth.icon.tes');
 });

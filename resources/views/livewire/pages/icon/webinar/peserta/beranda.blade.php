@@ -73,12 +73,7 @@
                         </div>
                         <div>
                             <label for="Email" class="mb-2 font-bold text-gray-300   mt-4">Link Zoom</label><br>
-                            <a target="_blank" href="ise-its.com/WebinarKickOffISE!2022"><p class="font-bold text-blue-600">WebinarKickOffISE!2022</p></a>
-                        </div>
-                        <div class="mt-3 {{$is_event_today && !Auth::user()->userable->webinar->presensi_status ? null : 'hidden'}}">
-                            <a href="">
-                                <button class="px-3 py-2 rounded-md w-100 text-white font-bold bg-purple-300">Presensi</button>
-                            </a>
+                            <a target="_blank" href="https://ise-its.com/WebinarKickOffISE!2022"><p class="font-bold text-blue-600">WebinarKickOffISE!2022</p></a>
                         </div>
                     </div>
 

@@ -31,7 +31,9 @@ class RegistraiIsClass extends Component
 
      public function mount()
     {
-        $this->name = Auth::user()->name;
+        $this->namalengkap = Auth::user()->name;
+        $this->email = Auth::user()->email;
+        $this->whatsapp = Auth::user()->whatsapp;
         $this->info_pendaftaran = 'Media Sosial ISE! 2022';
     }
 

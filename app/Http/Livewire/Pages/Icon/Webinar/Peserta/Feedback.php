@@ -20,6 +20,9 @@ class Feedback extends Component
 
     public function mount()
     {
+        if(Auth::user()->userable->webinar->feedback){
+            return redirect(route('webinar.peserta.beranda'));
+        }
         $this->name = Auth::user()->name;
         $this->email = Auth::user()->email;
     }

@@ -34,7 +34,7 @@ Twitter : @is_expo
 </p>
 
 <p>
-Best Regards, ISE 2022<br>
+Best Regards<br>
 ISE 2022<br>
 One Aim, One Goal, One ISE!<br>
 </p>
