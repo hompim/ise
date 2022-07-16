@@ -23,6 +23,19 @@
     <link rel="stylesheet" href="{{ asset('css/swiper.css') }}">
 
     @stack('css')
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPLRLTV1G7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QPLRLTV1G7');
+    </script>
 </head>
 
 <body class="w-full h-full m-0">
