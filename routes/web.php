@@ -34,18 +34,18 @@ Route::get('/coming-soon', function () {
     return view('coming-soon-page');
 });
 
-<!-- Route::get('/sendEmail', function () {
-    $pesertas = IconWebinarKickOff::all();
+// <!-- Route::get('/sendEmail', function () {
+//     $pesertas = IconWebinarKickOff::all();
 
-    foreach ($pesertas as $peserta) {
-        Mail::to($peserta->member->user->email)->send(new WebinarKickOffAcaraMail);
-        sleep(4);
-    }
+//     foreach ($pesertas as $peserta) {
+//         Mail::to($peserta->member->user->email)->send(new WebinarKickOffAcaraMail);
+//         sleep(4);
+//     }
 
-    return response()->json([
-        'success' => true
-    ]);
-}); -->
+//     return response()->json([
+//         'success' => true
+//     ]);
+// }); -->
 
 Route::get('/Registerbcl', RegisterCollege::class);
 Route::get('/Registerst', RegisterStudent::class);
