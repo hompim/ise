@@ -8,9 +8,17 @@
     <meta name="description" content="@yield('desc', 'ISE! merupakan singkatan dari Information Systems Expo yang merupakan event tahunan yang diselenggarakan oleh Departemen Sistem Informasi Institut Teknologi Sepuluh Nopember Surabaya dalam rangka memperkenalkan Departemen Sistem Informasi ITS kepada masyarakat luas')">
     <meta name="keywords" content="@yield('keywords', 'ISE, Sistem Informasi ITS, Sistem Informasi, ITS, Olimpiade, Bisnis, TIK, Teknologi, Pameran IT, Konser')">
     <meta name="author" content="WebDev ISE! 2022">
+    {{-- open graph --}}
     <meta property="og:title" content="ISE! | Information System Expo! 2022">
-    <meta property="og:description" content="@yield('desc', 'ISE! merupakan singkatan dari Information Systems Expo yang merupakan event tahunan yang diselenggarakan oleh Departemen Sistem Informasi Institut Teknologi Sepuluh Nopember Surabaya dalam rangka memperkenalkan Departemen Sistem Informasi ITS kepada masyarakat luas')"">
-    <meta property="og:image" content="{{ asset('images/logo-url-preview.png') }}">
+    <meta property="og:description" content="@yield('desc', 'ISE! merupakan singkatan dari Information Systems Expo yang merupakan event tahunan yang diselenggarakan oleh Departemen Sistem Informasi Institut Teknologi Sepuluh Nopember Surabaya dalam rangka memperkenalkan Departemen Sistem Informasi ITS kepada masyarakat luas')">
+    <meta name="image" property="og:image" content="{{ asset('images/logo-url-preview.png') }}">
+    {{-- twitter --}}
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:site' content='@is_expo' />
+    <meta name='twitter:title' content='ISE! | Information System Expo! 2022' />
+    <meta name='twitter:description' content='@yield('desc', 'ISE! merupakan singkatan dari Information Systems Expo yang merupakan event tahunan yang diselenggarakan oleh Departemen Sistem Informasi Institut Teknologi Sepuluh Nopember Surabaya dalam rangka memperkenalkan Departemen Sistem Informasi ITS kepada masyarakat luas')' />
+    <meta name='twitter:image' content='{{ asset('images/logo-url-preview.png') }}' />
+
     <title>ISE! | Information System Expo! 2022</title>
     <!-- linknya -->
     <link rel="icon" href="{{ asset('images/logo-only-small.png') }}">
