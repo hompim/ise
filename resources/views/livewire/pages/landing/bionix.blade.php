@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="ml-48 w-[210px] -translate-y-24 md:-translate-y-0 flex justify-center flex-1">
-            <div class="relative left-0 right-0 justify-center mx-auto mb-20 text-center mt-24 max-w-fit scroll-mt-36"
+            <div class="relative left-0 right-0 justify-center mx-auto mt-24 mb-20 text-center max-w-fit scroll-mt-36"
                 id="isometric-city">
                 <div class="absolute lg:!left-44 bottom-4 lg:!bottom-40 group">
                     <div
@@ -60,7 +60,7 @@
         <!-- BSL Start -->
         <div x-show="tab === 'bsl'" class="flex justify-center">
             <!-- bsl explanation start -->
-            <div class="flex-col md:px-5 text-center md:w-3/4 md:p-4 font-poppins">
+            <div class="flex-col text-center md:px-5 md:w-3/4 md:p-4 font-poppins">
                 <div class="md:px-[10px] md:pt-24 pt-[43.5px]">
                     <h1 class="md:text-2xl text-[19.25px] font-bold font-poppins">Bionix Student Level</h1>
                     <p
@@ -95,7 +95,7 @@
                                 <div
                                     class="flex flex-row items-center justify-center mt-12 space-x-4 text-base font-poppins">
                                     <div>
-                                        <a href="https://drive.google.com/file/d/1UwjhyxxLDGelDZWEgumdwjQozUFp2svn/view?usp=sharing"
+                                        <a href="https://drive.google.com/file/d/1f95SbEAY14b2Br0lwNfSoZLzJ9_NmiEx/view?usp=sharing"
                                             target="_blank"
                                             class="px-3 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg class="pr-2" width="31" height="32" viewBox="0 0 31 32"
@@ -195,7 +195,7 @@
                                 <div
                                     class="flex flex-col-reverse justify-center mt-[27px] gap-3 font-poppins text-[12px] items-center">
                                     <div>
-                                        <a href="https://drive.google.com/file/d/1UwjhyxxLDGelDZWEgumdwjQozUFp2svn/view?usp=sharing"
+                                        <a href="https://drive.google.com/file/d/1f95SbEAY14b2Br0lwNfSoZLzJ9_NmiEx/view?usp=sharing"
                                             target="_blank"
                                             class="py-1/2 px-4 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center mx-auto">
                                             <svg class="pr-2" width="31" height="32" viewBox="0 0 31 32"
@@ -646,7 +646,7 @@
                         </svg>
                         Download Guidebook</button>
                     <a href="/dashboard/peserta/bionix/register"
-                        class="py-2 my-6 rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 hidden">Register</a>
+                        class="hidden py-2 my-6 rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
                 </div>
                 <div class="text-4xl md:text-6xl text-white font-bold mt-16 md:mt-[220px] md:w-[600px] md:mx-auto">
                     Many <a class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text"> benefit
