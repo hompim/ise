@@ -231,9 +231,9 @@ class RegisterStudent extends Component
                         $resized_image_twibbon2->__toString());
 
                     $team_member_2->update([
-                    'identity_card_path' => 'bionix/' . $ktm,
-                    'twibbon_path' => 'bionix/'. $twibbon,
-                    'instagram_path' => 'bionix/'. $instagram
+                    'identity_card_path' => 'bionix/' . $ktm2,
+                    'twibbon_path' => 'bionix/'. $twibbon2,
+                    'instagram_path' => 'bionix/'. $instagram2
                 ]);
             }
         }
