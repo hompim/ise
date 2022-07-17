@@ -31,7 +31,7 @@
     @endif
     <h3 class="text-xl font-weight-bold my-4">Pembayaran</h3>
     <div
-        class="grid @if(!(Auth::user()->userable->bionix->payment_verif_status=='Belum Bayar'&&Auth::user()->userable->bionix_type == "bionix_senior")) md:grid-cols-2 @endif gap-4 pb-8">
+        class="hidden @if(!(Auth::user()->userable->bionix->payment_verif_status=='Belum Bayar'&&Auth::user()->userable->bionix_type == "bionix_senior")) md:grid-cols-2 @endif gap-4 pb-8">
         <div class="card rounded-xl mb-0" style="background-color: #191a1e"">
             <div class="card-body pb-0">
                 <div class="flex flex-col justify-center items-center">
@@ -227,6 +227,7 @@
             </div>
         </div>
     </div>
+
     <div wire:loading.delay wire:target="image"
          class="fixed bottom-12 right-12 bg-blue-100 border-t-4 border-blue-500 rounded-b text-blue-900 px-4 py-3 shadow-md"
          role="alert" style="color:rgba(30, 58, 138, var(--tw-text-opacity))">
@@ -244,6 +245,25 @@
             </div>
         </div>
     </div>
+
+    <div
+         class="fixed bottom-12 right-12 bg-blue-100 border-t-4 border-blue-500 rounded-b text-blue-900 px-4 py-3 shadow-md"
+         role="alert" style="color:rgba(30, 58, 138, var(--tw-text-opacity))">
+        <div class="flex">
+            <div class="py-1">
+                <svg class="fill-current h-6 w-6 text-blue-500 mr-4" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 20 20">
+                    <path
+                        d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/>
+                </svg>
+            </div>
+            <div>
+                <p class="font-bold">Pembayaran</p>
+                <p class="text-sm">Harap tunggu sesaat.</p>
+            </div>
+        </div>
+    </div>
+
     @if(session('error'))
         <div
             class="fixed bottom-12 right-12 bg-red-100 border-t-4 border-red-500 rounded-b text-red-900 px-4 py-3 shadow-md"

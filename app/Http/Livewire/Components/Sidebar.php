@@ -88,6 +88,10 @@ class Sidebar extends Component
                         'title' => 'Verifikasi Identitas',
                         'route-name' => 'isclass.admin.verifikasi-identitas'
                     ],
+                    [
+                        'type' => 'divider',
+                        'tag' =>'class=my-2'
+                    ]
                 );
             }
             else if(Auth::user()->userable->admin_type == "Icon Admin")

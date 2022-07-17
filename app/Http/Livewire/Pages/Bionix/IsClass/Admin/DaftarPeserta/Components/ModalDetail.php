@@ -19,4 +19,9 @@ class ModalDetail extends ModalComponent
     {
         $this->is_class_peserta = IsClassData::find($id);
     }
+
+    public static function modalMaxWidth(): string
+    {
+        return '3xl';
+    }
 }

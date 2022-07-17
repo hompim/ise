@@ -22,7 +22,18 @@ class Index extends LivewireDatatable
     {
         return [
             Column::name('users.name')->label('Nama')->searchable(),
-            //Column::name('presensi_status')->label('Presensi')->filterable([1, 0]),
+            Column::name('info_source')->label('Informasi Asal')->filterable([
+                "Media Sosial ISE! 2021",
+                "Media Sosial selain ISE! 2021 (info lomba, dll)",
+                "Roadshow ISE! 2021",
+                "Grup WA/Line/dll",
+                "Sekolah (guru, dll)",
+                "Teman/keluarga",
+                "Website/Aplikasi Sejuta Cita"
+            ]),
+            Column::name('school_name')->label('Nama Sekolah')->searchable(),
+            Column::name('profile_verif_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
+            Column::raw('date_format(is_class_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(is_class_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
             Column::callback(['id'], function ($id) {
                 return view('livewire.pages.bionix.is-class.admin.daftar-peserta.components.datatable-action', ['id' => $id]);
             })
