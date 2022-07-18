@@ -50,7 +50,8 @@ class ModaDetail extends ModalComponent
         $this->member1_name = $this->bionix_data->leader->name;
         $this->member1_email = $this->bionix_data->leader->email;
         $this->member1_whatsapp = $this->bionix_data->leader->whatsapp;
-        $this->member1_twibbon = ($type == 'student' ? null : $this->bionix_data->leader->link_twibbon);
+        $this->member1_twibbon = $this->bionix_data->leader->twibbon_path;
+        $this->member1_instagram = $this->bionix_data->leader->instagram_path;
         $this->school_name = ($type == 'student' ? $this->bionix_data->school_name : $this->bionix_data->university_name);
         $this->school_city = $this->bionix_data->city;
         $this->photo1 = $this->bionix_data->leader->identity_card_path;
@@ -63,8 +64,10 @@ class ModaDetail extends ModalComponent
         $this->member3_whatsapp = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->whatsapp : null));
         $this->photo2 = ($type == 'student' ? ($this->bionix_data->member ? $this->bionix_data->member->identity_card_path : null) : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->identity_card_path : null));
         $this->photo3 = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->identity_card_path : null));
-        $this->member2_twibbon = ($type == 'student' ? null : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->link_twibbon : null));
-        $this->member3_twibbon = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->link_twibbon : null));
+        $this->member2_twibbon = ($type == 'student' ? ($this->bionix_data->member ? $this->bionix_data->member->twibbon_path : null) : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->twibbon_path : null));
+        $this->member3_twibbon = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->twibbon_path : null));
+        $this->member2_instagram = ($type == 'student' ? ($this->bionix_data->member ? $this->bionix_data->member->instagram_path : null) : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->instagram_path : null));
+        $this->member3_instagram = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->instagram_path : null));
 
         $this->member1_major = ($type == 'student' ? null : $this->bionix_data->leader->major);
         $this->member2_major = ($type == 'student' ? null : ($this->bionix_data->member_1 ? $this->bionix_data->member_1->major : null));

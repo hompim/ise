@@ -32,7 +32,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
 
 
-
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
@@ -96,7 +95,6 @@
 
 
     <!-- Alpine v3 -->
-    <script defer src="{{ mix('js/app.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"
         integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ=="
