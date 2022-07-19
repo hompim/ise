@@ -82,4 +82,8 @@ class ModaDetail extends ModalComponent
     {
         return view('livewire.pages.bionix.admin.daftar-peserta.components.moda-detail');
     }
+    public static function modalMaxWidth(): string
+    {
+        return '3xl';
+    }
 }

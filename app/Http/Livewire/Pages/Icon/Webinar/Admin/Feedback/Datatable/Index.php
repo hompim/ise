@@ -8,6 +8,9 @@ use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 
 class Index extends LivewireDatatable
 {
+
+    public $exportable = true;
+
     public function builder()
     {
         return IconWebinarKickOffFeedback::query();
@@ -17,10 +20,12 @@ class Index extends LivewireDatatable
     {
         return [
             Column::name('webinar.member.user.name')->label('Nama')->searchable(),
-            //Column::name('presensi_status')->label('Presensi')->filterable([1, 0]),
-            Column::callback(['id'], function ($id) {
-                return view('livewire.pages.icon.webinar.admin.feedback.components.datatable-action', ['id' => $id]);
-            })
+            Column::name('penyampaian_materi')->label('Penyampaian Materi'),
+            Column::name('pemahaman_materi')->label('Pemahaman Materi'),
+            Column::name('keseluruhan_pelaksanaan')->label('Keseluruhan Pelaksanaan'),
+            Column::name('kepuasan')->label('Kinerja Panitia'),
+            Column::name('kritik')->label('Kritik'),
+            Column::name('saran')->label('Saran'),
         ];
     }
 }
