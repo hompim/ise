@@ -32,10 +32,15 @@ class ModalAdd extends ModalComponent
                 'link_tujuan' => 'required',
                 'deskripsi' => 'required',
             ]);
+
+            $link = "https://ise-its.com/$this->link_pendek";
+            $qrCode = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=$link";
+
             ShortenLink::create([
                 'shorten_link' => $this->link_pendek,
                 'destination' => $this->link_tujuan,
-                'description' => $this->deskripsi
+                'description' => $this->deskripsi,
+                "qr_code" => $qrCode
             ]);
         } elseif ($this->type == 'edit') {
             $this->validate([
@@ -43,10 +48,15 @@ class ModalAdd extends ModalComponent
                 'link_tujuan' => 'required',
                 'deskripsi' => 'required',
             ]);
+
+            $link = "https://ise-its.com/$this->link_pendek";
+            $qrCode = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=$link";
+
             $this->shorten_link->update([
                 'shorten_link' => $this->link_pendek,
                 'destination' => $this->link_tujuan,
-                'description' => $this->deskripsi
+                'description' => $this->deskripsi,
+                "qr_code" => $qrCode
             ]);
         }
 

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('destination');
             $table->text('description');
             $table->string('shorten_link')->unique()->collation('utf8_bin');
+            $table->string('qr_code')->collation('utf8_bin')->nullable();
             $table->timestamps();
         });
     }
