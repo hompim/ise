@@ -78,10 +78,6 @@ class ModalDetail extends ModalComponent
         $this->member3_year = ($type == 'student' ? null : ($this->bionix_data->member_2 ? $this->bionix_data->member_2->year : null));
     }
 
-    public static function modalMaxWidth(): string
-    {
-        return '3xl';
-    }
 
     public function render()
     {
