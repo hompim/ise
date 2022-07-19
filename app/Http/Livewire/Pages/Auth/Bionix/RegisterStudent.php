@@ -70,11 +70,6 @@ class RegisterStudent extends Component
             'twibbon_1' => 'required|image|max:1024', // 1MB Max
             'ktm_1' => 'required|image|max:1024', // 1MB Max
             'instagram_1' => 'required|image|max:1024', // 1MB Max
-            'member_2_email' => 'email|unique:users,email|unique:team_senior_members,email|unique:team_junior_members,email',
-            'member_2_whatsapp' => '|regex:/^(^08)\d{8,11}$/|max:14|string',
-            'twibbon_2' => 'image|max:1024', // 1MB Max
-            'ktm_2' => 'image|max:1024', // 1MB Max
-            'instagram_2' => 'image|max:1024', // 1MB Max
         ]);
 
         if ($this->member_1_email == $this->member_2_email) {
@@ -244,8 +239,14 @@ class RegisterStudent extends Component
             'city_id' => $this->school_city,
             'competition_round' => 'Penyisihan 1',
             'leader_id' => $team_member_1->id,
-            'member_id' => $team_member_2->id
         ]);
+
+        if($this->with_member){
+            $team_data->update([
+                'member_id' => $team_member_2->id
+            ]);
+        }
+
         Auth::user()->userable->update([
             'bionix_id' => $team_data->id,
             'bionix_type' => 'App\Models\Bionix\TeamJuniorData'

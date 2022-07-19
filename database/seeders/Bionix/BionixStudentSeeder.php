@@ -22,57 +22,59 @@ class BionixStudentSeeder extends Seeder
      */
     public function run()
     {
-        $price = Setting::where('name','bionix_junior_price')->first()->value;
-        for($x=0;$x<10;$x++){
-            $city = City::inRandomOrder()->first();
-            $member_junior_1 = TeamJuniorMember::create(
-                [
-                    'name'=>'John',
-                    'class'=>'10',
-                    'whatsapp'=>'12345678',
-                    'email'=>'leader_junior_'.$x.'@gmail.com',
-                    'instagram_path' => 'bionix/instagram_testing.jpg',
-                    'identity_card_path' =>'bionix/identity_testing.jpg',
-                    'twibbon_path' =>'bionix/twibbon_testing.jpg'
-                ]
-            );
-            $member_junior_2 = TeamJuniorMember::create(
-                [
-                    'name'=>'Doe',
-                    'class'=>'12',
-                    'whatsapp'=>'12345678',
-                    'email'=>'doe_'.$x.'@gmail.com',
-                    'instagram_path' => 'bionix/instagram_testing.jpg',
-                    'identity_card_path' =>'bionix/identity_testing.jpg',
-                    'twibbon_path' =>'bionix/twibbon_testing.jpg'
-                ]
-            );
-            $team_data = TeamJuniorData::create(
-                [
-                    'team_name'=>'Team '.$x,
-                    'info_source'=>'Media Sosial ISE! 2021',
-                    'school_name'=>'SMA Tadika Mesra',
-                    'city_id'=>$city->id,
-                    'payment_price'=>$price,
-                    'leader_id'=>$member_junior_1->id,
-                    'member_id'=>$member_junior_2->id
-                ]
-            );
-            $member_data = Member::create([
-                'jenjang'=>'SMA',
-                'bionix_id'=>$team_data->id,
-                'bionix_type'=>'App\Models\Bionix\TeamJuniorData',
-            ]);
-            User::create(
-                [
-                    'name'=>$member_junior_1->name,
-                    'email'=>$member_junior_1->email,
-                    'password'=>Hash::make('password'),
-                    'userable_id'=>$member_data->id,
-                    'userable_type'=>'App\Models\Member',
-                    'email_verified_at'=>Carbon::now()
-                ]
-            );
+        if(env('APP_ENV') == 'local'){
+            $price = Setting::where('name','bionix_junior_price')->first()->value;
+            for($x=0;$x<10;$x++){
+                $city = City::inRandomOrder()->first();
+                $member_junior_1 = TeamJuniorMember::create(
+                    [
+                        'name'=>'John',
+                        'class'=>'10',
+                        'whatsapp'=>'12345678',
+                        'email'=>'leader_junior_'.$x.'@gmail.com',
+                        'instagram_path' => 'bionix/instagram_testing.jpg',
+                        'identity_card_path' =>'bionix/identity_testing.jpg',
+                        'twibbon_path' =>'bionix/twibbon_testing.jpg'
+                    ]
+                );
+                $member_junior_2 = TeamJuniorMember::create(
+                    [
+                        'name'=>'Doe',
+                        'class'=>'12',
+                        'whatsapp'=>'12345678',
+                        'email'=>'doe_'.$x.'@gmail.com',
+                        'instagram_path' => 'bionix/instagram_testing.jpg',
+                        'identity_card_path' =>'bionix/identity_testing.jpg',
+                        'twibbon_path' =>'bionix/twibbon_testing.jpg'
+                    ]
+                );
+                $team_data = TeamJuniorData::create(
+                    [
+                        'team_name'=>'Team '.$x,
+                        'info_source'=>'Media Sosial ISE! 2021',
+                        'school_name'=>'SMA Tadika Mesra',
+                        'city_id'=>$city->id,
+                        'payment_price'=>$price,
+                        'leader_id'=>$member_junior_1->id,
+                        'member_id'=>$member_junior_2->id
+                    ]
+                );
+                $member_data = Member::create([
+                    'jenjang'=>'SMA',
+                    'bionix_id'=>$team_data->id,
+                    'bionix_type'=>'App\Models\Bionix\TeamJuniorData',
+                ]);
+                User::create(
+                    [
+                        'name'=>$member_junior_1->name,
+                        'email'=>$member_junior_1->email,
+                        'password'=>Hash::make('password'),
+                        'userable_id'=>$member_data->id,
+                        'userable_type'=>'App\Models\Member',
+                        'email_verified_at'=>Carbon::now()
+                    ]
+                );
+            }
         }
     }
 }

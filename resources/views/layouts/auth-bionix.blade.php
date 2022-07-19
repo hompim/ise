@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="{{ asset('images/logo-only-small.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/logo-only-small.png') }}" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script defer src="{{ mix('js/app.js') }}"></script>
 </head>
 
 <body class="bg-black">
@@ -112,6 +112,7 @@
         </div>
     </div>
 
+    @livewireScripts
     @if (!config('app.debug'))
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ59B1X1XZ"></script>
@@ -126,8 +127,7 @@
             gtag('config', 'G-DJ59B1X1XZ');
         </script>
     @endif
-
-    @livewireScripts
+    @stack('js')
 </body>
 
 </html>

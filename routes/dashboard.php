@@ -79,8 +79,12 @@ Route::middleware('auth')->group(function () {
         Route::group(['prefix' => 'peserta', 'middleware' => 'usertype:member'], function () {
             Route::get('/', \App\Http\Livewire\Pages\DashboardGeneral\ChooseDashboard::class)->name('peserta.dashboard.choose');
 
+
             //Bionix Dashboard
             Route::group(['prefix' => 'bionix'], function () {
+                Route::get('pembayaran-dp', App\Http\Livewire\Pages\Auth\Bionix\RegistrasiRoadshow::class)->name('pembayaran-roadshow');
+                Route::get('pembayaran-dp/success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\DpBionix::class)->name('bionix.pembayaran-success');
+
                 Route::group(['middleware' => 'bionixcheck:unregistered'], function () {
                     Route::middleware(['usertype:Mahasiswa'])->group(function () {
                         Route::get('register/college', \App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege::class)->name('register-college');

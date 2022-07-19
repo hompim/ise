@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Bionix\BionixInvoice;
 use App\Models\Bionix\BionixSchool;
 use App\Models\Bionix\IsClassData;
 use App\Models\Icon\IconWebinarKickOff;
@@ -36,5 +37,9 @@ class Member extends Model
 
     public function isclass(){
         return $this->hasOne(IsClassData::class);
+    }
+
+    public function dp(){
+        return $this->hasMany(BionixInvoice::class);
     }
 }

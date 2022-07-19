@@ -18,8 +18,8 @@ class SettingSeeder extends Seeder
         DB::table('settings')->insert(
             [
                 ['name' => 'bionix_bank_name', 'value' => 'bank_bni'],
-                ['name' => 'bionix_bank_norek', 'value' => '99999999'],
-                ['name' => 'bionix_bank_owner', 'value' => 'Not fix'],
+                ['name' => 'bionix_bank_norek', 'value' => '1372121344'],
+                ['name' => 'bionix_bank_owner', 'value' => 'Hardhika Propitadewa'],
                 ['name' => 'bionix_junior_price', 'value' => '89000'],
                 ['name' => 'bionix_senior_price', 'value' => '99000'],
                 ['name' => 'academy_startup_price', 'value' => '10000'],

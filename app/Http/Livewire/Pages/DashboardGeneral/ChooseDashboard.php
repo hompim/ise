@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Pages\DashboardGeneral;
 
+use App\Models\Bionix\BionixSchool;
 use App\Models\Event;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
@@ -9,7 +10,8 @@ use Livewire\Component;
 class ChooseDashboard extends Component
 {
     public $events,
-            $errorMessage;
+            $errorMessage,
+            $schools;
 
     public function mount($error = null)
     {
