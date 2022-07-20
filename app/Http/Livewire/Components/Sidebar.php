@@ -58,6 +58,12 @@ class Sidebar extends Component
                     ],
                     [
                         'type' => 'menu',
+                        'icon' => 'fa-solid fa-percent',
+                        'title' => 'Promo Code',
+                        'route-name' => 'bionix.admin.promo.index'
+                    ],
+                    [
+                        'type' => 'menu',
                         'icon' => 'fas fa-link',
                         'title' => 'Shorten Link',
                         'route-name' => 'admin.shorten-link'

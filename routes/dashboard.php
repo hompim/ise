@@ -49,6 +49,7 @@ Route::middleware('auth')->group(function () {
                 Route::get('/', Index::class)->name('bionix.admin.beranda.index');
                 Route::get('/daftar-peserta', App\Http\Livewire\Pages\Bionix\Admin\DaftarPeserta\Index::class)->name('bionix.admin.daftar-peserta.index');
                 Route::get('/pengumuman', App\Http\Livewire\Pages\Bionix\Admin\Pengumuman\Index::class)->name('bionix.admin.pengumuman.index');
+                Route::get('/promo', App\Http\Livewire\Pages\Bionix\Admin\Promo\Index::class)->name('bionix.admin.promo.index');
                 Route::group(['prefix' => 'verifikasi'], function () {
                     Route::get('/identitas', App\Http\Livewire\Pages\Bionix\Admin\VerifikasiIdentitas\Index::class)->name('bionix.admin.verifikasi-identitas.index');
                     Route::get('/pembayaran', App\Http\Livewire\Pages\Bionix\Admin\VerifikasiPembayaran\Index::class)->name('bionix.admin.verifikasi-pembayaran.index');
