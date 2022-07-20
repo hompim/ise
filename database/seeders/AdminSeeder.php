@@ -31,7 +31,7 @@ class AdminSeeder extends Seeder
             [
                 [
                     'name' => 'Admin Bionix',
-                    'email' => 'admin1@gmail.com',
+                    'email' => 'Bionix.Admin@ise-its.com',
                     'password' => Hash::make('password'),
                     'userable_id' => $admin1->id,
                     'userable_type' => 'App\Models\Admin',
@@ -39,7 +39,7 @@ class AdminSeeder extends Seeder
                 ],
                 [
                     'name' => 'Admin Icon',
-                    'email' => 'admin2@gmail.com',
+                    'email' => 'Icon.Admin@ise-its.com',
                     'password' => Hash::make('password'),
                     'userable_id' => $admin2->id,
                     'userable_type' => 'App\Models\Admin',

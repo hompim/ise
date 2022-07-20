@@ -267,6 +267,10 @@ class RegisterStudent extends Component
     }
 
     public function mount(){
+        if(Auth::user()->userable->roadshow_school){
+            $this->school_name = Auth::user()->userable->roadshow_school->school_name;
+        }
+
         $this->cities = City::all();
         $this->info_source = "IG";
     }
