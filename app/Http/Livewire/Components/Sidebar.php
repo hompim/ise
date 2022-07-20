@@ -64,6 +64,12 @@ class Sidebar extends Component
                     ],
                     [
                         'type' => 'menu',
+                        'icon' => 'cil-money',
+                        'title' => 'Verifikasi Pembayaran DP Roadshow',
+                        'route-name' => 'bionix.admin.verifikasi-pembayaran.index'
+                    ],
+                    [
+                        'type' => 'menu',
                         'icon' => 'fas fa-link',
                         'title' => 'Shorten Link',
                         'route-name' => 'admin.shorten-link'

@@ -39,8 +39,8 @@ return new class extends Migration
             $table->unsignedTinyInteger('payment_verified_by')->nullable();
             $table->text('payment_verif_comment')->nullable();
             $table->unsignedBigInteger('leader_id');
-            $table->unsignedBigInteger('member1_id');
-            $table->unsignedBigInteger('member2_id');
+            $table->unsignedBigInteger('member1_id')->nullable();
+            $table->unsignedBigInteger('member2_id')->nullable();
             $table->timestamps();
         });
     }

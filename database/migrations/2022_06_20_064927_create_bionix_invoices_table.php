@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('account_no')->nullable();
             $table->unsignedInteger('nominal');
             $table->string('payment_proof');
-            $table->enum('status',['Pending','Terverifikasi'])->default('Pending');
+            $table->enum('status',['Pending','Terverifikasi' , 'Ditolak'])->default('Pending');
             $table->timestamps();
         });
     }

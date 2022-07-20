@@ -53,6 +53,7 @@ Route::middleware('auth')->group(function () {
                 Route::group(['prefix' => 'verifikasi'], function () {
                     Route::get('/identitas', App\Http\Livewire\Pages\Bionix\Admin\VerifikasiIdentitas\Index::class)->name('bionix.admin.verifikasi-identitas.index');
                     Route::get('/pembayaran', App\Http\Livewire\Pages\Bionix\Admin\VerifikasiPembayaran\Index::class)->name('bionix.admin.verifikasi-pembayaran.index');
+                    Route::get('/pembayaran-dp', App\Http\Livewire\Pages\Bionix\Admin\VerifikasiDp\Index::class)->name('bionix.admin.verifikasi-pembayaran-dp.index');
                 });
 
                 Route::group(['prefix' => 'is-class'], function () {
