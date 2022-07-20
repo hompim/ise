@@ -249,9 +249,7 @@
                 <div class="flex-row space-x-4 my-11 font-medium font-poppins">
                     <input type="checkbox" id="setuju-kebijakan" name="agree" wire:model.defer="agree"
                         class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
-                    <label class="text-white" for="setuju-kebijakan">Saya setuju dengan kebijakan privasi serta syarat dan
-                        ketentuan yang
-                        berlaku</label>
+                    <label class="text-white" for="setuju-kebijakan">  Saya setuju dengan kebijakan privasi serta <a href="{{route('term-condition')}}" class="text-blue-400" target="_blank">syarat dan ketentuan</a> yang berlaku</label>
                     </d>
                 </div>
                 <div
