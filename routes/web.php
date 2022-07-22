@@ -8,10 +8,12 @@ use App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
 use App\Http\Livewire\Pages\Auth\Bionix\RegistrasiRoadshow;
 use App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim;
+use App\Mail\SertifikatMail;
 use App\Mail\WebinarKickOffAcaraMail;
 use App\Models\Icon\IconWebinarKickOff;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
+use Spatie\SimpleExcel\SimpleExcelReader;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +48,15 @@ Route::get('/coming-soon', function () {
 //         'success' => true
 //     ]);
 // }); -->
+
+// Route::get('/sendCertif', function() {
+//     $rows = SimpleExcelReader::create(public_path().'/'.'csv/peserta.csv')->getRows();
+
+//     $rows->each(function(array $rowProperties) {
+//         Mail::to($rowProperties['Email'])->send(new SertifikatMail($rowProperties['Nama Lengkap'], $rowProperties['Merged Doc URL - Sertifikat Webinar KickOff ISE 2022']));
+//         sleep(3);
+//      });
+// });
 
 Route::get('/Registerbcl', RegisterCollege::class);
 Route::get('/Registerst', RegisterStudent::class);

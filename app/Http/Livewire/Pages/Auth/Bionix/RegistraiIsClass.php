@@ -23,6 +23,7 @@ class RegistraiIsClass extends Component
     public $step = 1;
     public $errorMessage;
     public $status;
+    public $ktm, $instagram, $twibbon;
 
     public function render()
     {
@@ -57,11 +58,14 @@ class RegistraiIsClass extends Component
             return;
         }
 
-        Storage::disk('public')->makeDirectory('kartu_pelajar');
-        $name = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '.' . $this->kartu_pelajar->getClientOriginalExtension();
-        $kartu_pelajar_path = 'kartu_pelajar/' . $name;
+        Storage::disk('public')->makeDirectory('isclass');
+        $ktm = date('YmdHis') . '_ISCLASS_' . $this->team_name . '_KTM' . '.' . $this->ktm->getClientOriginalExtension();
+        $instagram = date('YmdHis') . '_ISCLASS_' . $this->team_name . '_INSTAGRAM' . '.' . $this->instagram->getClientOriginalExtension();
+        $twibbon = date('YmdHis') . '_ISCLASS_' . $this->team_name . '_TWIBBON' . '.' . $this->twibbon->getClientOriginalExtension();
+
+        $kartu_pelajar_path = 'isclass/' . $ktm;
         $resized_image = (new ImageManager())
-            ->make($this->kartu_pelajar)
+            ->make($this->ktm)
             ->resize(600, null, function ($constraint) {
                 $constraint->aspectRatio();
                 $constraint->upsize();
@@ -70,6 +74,34 @@ class RegistraiIsClass extends Component
         Storage::disk('public')
             ->put(
                 $kartu_pelajar_path,
+                $resized_image->__toString()
+            );
+
+        $instagram_path = 'isclass/' . $instagram;
+        $resized_image = (new ImageManager())
+            ->make($this->instagram)
+            ->resize(600, null, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->encode($this->instagram->getClientOriginalExtension());
+
+        Storage::disk('public')
+            ->put(
+                $instagram_path,
+                $resized_image->__toString()
+            );
+
+        $twibbon_path = 'isclass/' . $twibbon;
+        $resized_image = (new ImageManager())
+            ->make($this->twibbon)
+            ->resize(600, null, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->encode($this->twibbon->getClientOriginalExtension());
+
+        Storage::disk('public')
+            ->put(
+                $twibbon,
                 $resized_image->__toString()
             );
 
@@ -84,7 +116,9 @@ class RegistraiIsClass extends Component
             'info_source' => $this->info_pendaftaran,
             'identity_card_path' => $kartu_pelajar_path,
             'school_name' => $this->sekolah,
-            'status' => $this->status
+            'status' => $this->status,
+            'twibbon_path' => $twibbon_path,
+            'instagram_path' => $instagram_path,
         ]);
         return redirect(route('isclass.register-success'));
     }
