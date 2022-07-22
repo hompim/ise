@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('member_id');
             $table->string('identity_card_path');
+            $table->string('twibbon_path');
+            $table->string('instagram_path');
             $table->string('school_name');
             $table->enum('info_source', ["Media Sosial ISE! 2022",
                 "Media Sosial selain ISE! 2022 (info lomba, dll)",
