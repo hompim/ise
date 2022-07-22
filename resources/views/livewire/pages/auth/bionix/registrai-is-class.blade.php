@@ -34,21 +34,27 @@
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan asal sekolah kamu" wire:model.defer="sekolah" name="sekolah">
             </div>
-            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
-                <label for="kartu-pelajar1">Upload kartu pelajar kamu
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <label for="kartu-pelajar1">Kartu Pelajar
                 </label>
-
-                <div class="flex flex-col justify-start items-center">
-                    <img src="{{ $kartu_pelajar ? $kartu_pelajar->temporaryUrl() : null }}" class="mx-auto object-fit"
-                    style="max-height:50vh">
-                    <span
-                        class="flex flex-row gap-4 w-32 py-2 p-2 rounded-md bg-transparent !border border-[#6B7280] hover:border-pink-200  autofill:bg-transparent mt-4 text-white item-center mb-4">
-                        <img class="" src="{{ asset('images/upload.svg') }}" alt="">
-                        <button type="button" onclick="document.querySelector('#story').click()" class="text-liteGray">Add
-                            File</button>
-                        <input type="file" wire:model.defer="kartu_pelajar" class="form-control-file"
-                            name="kartu_pelajar" id="story" accept=".jpg,.jpeg,.png" hidden>
-                </div>
+                <input id="kartu-pelajar1" name="ktm" wire:model.defer="ktm" type="file"
+                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Kartu Pelajar Anggota 2">
+            </div>
+            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <label for="twibbon1">Bukti Upload Twibbon
+                </label>
+                <input id="twibbon1" name="twibbon" wire:model.defer="twibbon" type="file"
+                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Twibbon Anggota 2">
+            </div>
+            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
+                        href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
+                </label>
+                <input id="bukti-ig1" name="instagram" wire:model.defer="instagram" type="file"
+                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Bukti Follow Anggota 2">
             </div>
 
             <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
