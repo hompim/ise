@@ -48,7 +48,9 @@ class RegistraiIsClass extends Component
             'namalengkap' => 'required',
             'whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'sekolah' => 'required',
-            'kartu_pelajar' => 'required|image|max:2048',
+            'ktm' => 'required|image|max:2048',
+            'instagram' => 'required|image|max:2048',
+            'twibbon' => 'required|image|max:2048',
             'info_pendaftaran' => 'required',
             'status' => 'required'
         ]);
@@ -59,9 +61,9 @@ class RegistraiIsClass extends Component
         }
 
         Storage::disk('public')->makeDirectory('isclass');
-        $ktm = date('YmdHis') . '_ISCLASS_' . $this->team_name . '_KTM' . '.' . $this->ktm->getClientOriginalExtension();
-        $instagram = date('YmdHis') . '_ISCLASS_' . $this->team_name . '_INSTAGRAM' . '.' . $this->instagram->getClientOriginalExtension();
-        $twibbon = date('YmdHis') . '_ISCLASS_' . $this->team_name . '_TWIBBON' . '.' . $this->twibbon->getClientOriginalExtension();
+        $ktm = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_KTM' . '.' . $this->ktm->getClientOriginalExtension();
+        $instagram = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_INSTAGRAM' . '.' . $this->instagram->getClientOriginalExtension();
+        $twibbon = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_TWIBBON' . '.' . $this->twibbon->getClientOriginalExtension();
 
         $kartu_pelajar_path = 'isclass/' . $ktm;
         $resized_image = (new ImageManager())
@@ -69,7 +71,7 @@ class RegistraiIsClass extends Component
             ->resize(600, null, function ($constraint) {
                 $constraint->aspectRatio();
                 $constraint->upsize();
-            })->encode($this->kartu_pelajar->getClientOriginalExtension());
+            })->encode($this->ktm->getClientOriginalExtension());
 
         Storage::disk('public')
             ->put(

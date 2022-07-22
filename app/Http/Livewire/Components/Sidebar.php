@@ -188,17 +188,22 @@ class Sidebar extends Component
                         'title' => 'Identitas Tim',
                         'route-name' => 'bionix.peserta.identitas-tim'
                     ],
+                );
+                if(Auth::user()->userable->bionix->profile_verif_status == "Terverifikasi"){
+                    array_push($this->menu,
                     [
                         'type' => 'menu',
-                        'icon' => 'cil-bullhorn',
+                        'icon' => 'cil-money',
                         'title' => 'Pembayaran',
-                        'route-name' => 'bionix.admin.daftar-peserta.index'
-                    ],
-                    [
-                        'type' => 'divider',
-                        'tag' =>'class=mb-3'
-                    ]
-                );
+                        'route-name' => 'bionix.peserta.pembayaran'
+                    ]);
+                }
+
+                array_push($this->menu,
+                [
+                    'type' => 'divider',
+                    'tag' =>'class=mb-3'
+                ]);
             } if(Auth::user()->userable->webinar){
                 array_push(
                     $this->menu,
