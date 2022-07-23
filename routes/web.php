@@ -7,6 +7,8 @@ use App\Http\Livewire\Pages\Landing\Bionix;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
 use App\Http\Livewire\Pages\Auth\Bionix\RegistrasiRoadshow;
+use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience;
+use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterStartup;
 use App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim;
 use App\Mail\SertifikatMail;
 use App\Mail\WebinarKickOffAcaraMail;
@@ -58,9 +60,9 @@ Route::get('/coming-soon', function () {
 //      });
 // });
 
-Route::get('/Registerbcl', RegisterCollege::class);
-Route::get('/Registerst', RegisterStudent::class);
-Route::get('/Registerbclroad', RegistrasiRoadshow::class);
+// Route::get('/Registerbcl', RegisterCollege::class);
+// Route::get('/Registerst', RegisterStudent::class);
+// Route::get('/Registerbclroad', RegistrasiRoadshow::class);
 
 //Route Dashboard -> Dashboard.php
 Route::prefix('dashboard')->group(__DIR__ . '/dashboard.php');
@@ -74,6 +76,13 @@ Route::get('/{shorten_link}', function ($shorten_link) {
     }
     return abort(404);
 });
+
+
 Route::get('testing', function () {
     return view('livewire.pages.auth.icon.tes');
 });
+
+///Route Testng Register ACADEMY
+Route::get('/Registerds', RegisterDataScience::class);
+Route::get('/Registersa', RegisterStartup::class);
+
