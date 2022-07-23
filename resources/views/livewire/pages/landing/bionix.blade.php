@@ -113,7 +113,7 @@
                                             Download Guidebook</a>
                                     </div>
                                     <div>
-                                        <a href="/dashboard/peserta/bionix/is-class/register"
+                                        <a href="{{route('register-is-class')}}"
                                             class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@
                                 <div class="flex flex-row">
                                     <div class="flex flex-col">
                                         <h1 class="text-2xl font-bold text-black font-poppins">Discount</h1>
-                                        <p class="text-2xl text-[#555555] font-poppins">Potongan biaya pedaftaran BIONIX
+                                        <p class="text-2xl text-[#555555] font-poppins">Potongan biaya pendaftaran BIONIX
                                             Student Level</p>
                                     </div>
                                     <img class="w-52 mt-36 -ml-28" src="{{ asset('images/cash-promo.svg') }}"
@@ -316,7 +316,7 @@
                                             Download Guidebook</a>
                                     </div>
                                     <div>
-                                        <a href="/dashboard/peserta/bionix/register"
+                                        <a href="{{route('register-student')}}"
                                             class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
                                     </div>
                                 </div>
@@ -417,7 +417,7 @@
                                             Download Guidebook</a>
                                     </div>
                                     <div>
-                                        <a href="/dashboard/peserta/bionix/register"
+                                        <a href="{{route('register-student')}}"
                                             class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
                                     </div>
                                 </div>
@@ -645,7 +645,7 @@
                                 stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         Download Guidebook</button>
-                    <a href="/dashboard/peserta/bionix/register"
+                    <a href="#"
                         class="hidden py-2 my-6 rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
                 </div>
                 <div class="text-4xl md:text-6xl text-white font-bold mt-16 md:mt-[220px] md:w-[600px] md:mx-auto">
