@@ -36,7 +36,7 @@
 
     <h3 class="text-xl font-weight-bold my-4 text-white">Informasi Tim</h3>
     <form wire:submit.prevent="saveData" enctype="multipart/form-data">
-        <div class="card p-8 rounded-xl" style="background-color: #191a1e">
+        <div class="card p-8 rounded-xl" style="background-color: #191a1e;border:0">
             <div
                 class="grid sm:mb-10 sm:gap-x-20 sm:gap-y-8 gap-y-5 gap-x-5 md:grid-cols-10">
                 <h4 class="text-gray-400 text-lg font-bold  col-span-5 md:col-span-2">Tim</h4>

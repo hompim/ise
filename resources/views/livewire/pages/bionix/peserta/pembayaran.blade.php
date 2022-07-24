@@ -1,4 +1,4 @@
-<div class="px-8">
+<div class="px-8 text-white">
     <div
         class="bg-{{$alert_color}}-100 border-t-4 border-{{$alert_color}}-500 rounded-b text-{{$alert_color}}-900 px-4 py-3 shadow-md"
         role="alert">
@@ -31,8 +31,8 @@
     @endif
     <h3 class="text-xl font-weight-bold my-4">Pembayaran</h3>
     <div
-        class="hidden @if(!(Auth::user()->userable->bionix->payment_verif_status=='Belum Bayar'&&Auth::user()->userable->bionix_type == "bionix_senior")) md:grid-cols-2 @endif gap-4 pb-8">
-        <div class="card rounded-xl mb-0" style="background-color: #191a1e"">
+        class="@if(!(Auth::user()->userable->bionix->payment_verif_status=='Belum Bayar'&&Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamSeniorData")) md:grid-cols-2 @endif gap-4 pb-8">
+        <div class="card rounded-xl mb-0 border-0" style="background-color: #191a1e">
             <div class="card-body pb-0">
                 <div class="flex flex-col justify-center items-center">
                     <div class="my-8">
@@ -53,8 +53,8 @@
                             <h5 class="text-center font-normal text-xl mt-4">Jumlah yang harus dibayar : </h5>
                             <h1 class="text-center text-4xl font-bold">{{"Rp " . number_format($payment_price,2,',','.')}}</h1>
                             @if(Auth::user()->userable->bionix->payment_verif_status=='Belum Bayar')
-                                @if(Auth::user()->userable->bionix_type == "bionix_junior")
-                                    <p class="mt-4">Anda dapat memasukkan kode promo dan nomor invoice di sini.</p>
+                                @if(Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamJuniorData")
+                                    <p class="mt-4">Anda dapat memasukkan kode promo.</p>
                                 @endif
                                 <p>Setelah menekan tombol bayar, maka anda harus melakukan pembayaran ke
                                     rekening yang tertera.</p>
@@ -65,7 +65,7 @@
                                     Kembali ke tahap sebelumnya
                                 </button>
                             @else
-                                @if(Auth::user()->userable->bionix_type == "bionix_senior")
+                                @if(Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamSeniorData")
                                     <form class=" flex flex-col" wire:submit.prevent="submitBayar">
                                         <button type="submit" class="btn btn-outline-success mt-3">
                                             Bayar
@@ -78,18 +78,20 @@
                 </div>
             </div>
         </div>
-        <div
-            class="card rounded-xl @if(Auth::user()->userable->bionix->payment_verif_status=='Belum Bayar'&&Auth::user()->userable->bionix_type == "bionix_senior") hidden @endif">
+        <div style="background-color: #191a1e;border:0" class="card rounded-xl mt-3 @if(Auth::user()->userable->bionix->payment_verif_status=='Belum Bayar'&&Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamSeniorData") hidden @endif">
             <div class="card-body">
                 <div class="justify-center flex">
+
                     @if(Auth::user()->userable->bionix->payment_verif_status=='Belum Bayar'
-&&(
-    (Auth::user()->userable->bionix_type == "bionix_senior"&&((!Auth::user()->userable->payment_batch_2&&date('Y-m-d')<=date('Y-m-d',strtotime('2021-09-22')))||(Auth::user()->userable->payment_batch_2&&date('Y-m-d')>=date('Y-m-d',strtotime('2021-09-23'))&&date('Y-m-d')<=date('Y-m-d',strtotime('2021-09-26')))))||
-    Auth::user()->userable->bionix_type == "bionix_junior"))
-                        @if(Auth::user()->userable->bionix_type == "bionix_junior")
+
+                    &&(
+                         (Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamSeniorData"&&((!Auth::user()->userable->payment_batch_2&&date('Y-m-d')<=date('Y-m-d',strtotime('2021-09-22')))||(Auth::user()->userable->payment_batch_2&&date('Y-m-d')>=date('Y-m-d',strtotime('2021-09-23'))&&date('Y-m-d')<=date('Y-m-d',strtotime('2021-09-26')))))||
+                             Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamJuniorData"))
+
+                        @if(Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamJuniorData")
                             <form class=" flex flex-col" wire:submit.prevent="submitBayar">
                                 <div class="w-full mb-6 md:mb-0">
-                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
                                            for="grid-promo">
                                         Kode Promo (opsional)
                                     </label>
@@ -99,20 +101,11 @@
                                                    id="grid-promo"
                                                    class="h-14 min-w-full md:pr-8 rounded text-black focus:shadow focus:outline-none uppercase"
                                                    wire:model.defer="kode_promo"/>
-                                            {{--                                            <div class="absolute top-4 right-3">--}}
-                                            {{--                                                <button--}}
-                                            {{--                                                    wire:click="checkPromo"--}}
-                                            {{--                                                    type="button"--}}
-                                            {{--                                                    class="inline-flex items-center"--}}
-                                            {{--                                                    title="Cek Promo">--}}
-                                            {{--                                                    <i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i>--}}
-                                            {{--                                                </button>--}}
-                                            {{--                                            </div>--}}
                                         </div>
                                         <button
                                             wire:click="checkPromo"
                                             type="button"
-                                            class="bg-transparent mt-4 mt-md-0 text-blue-700 font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                                            class="bg-transparent mt-4 mt-md-0 text-white font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                                             Cek Kode Promo
                                         </button>
                                     </div>
@@ -123,9 +116,9 @@
                                             class="border-blue-400 bg-blue-100 border-2 px-2 py-2 mt-2 flex flex-row justify-between"
                                             wire:key="promo_{{$i}}">
                                             <div class="mx-1">
-                                                <b class="text-green-600 font-extrabold">{{$p['kode']}}</b>
-                                                <p class="m-0">Anda mendapatkan potongan maksimal
-                                                    Rp{{number_format($p['potongan'], 2, ',', '.')}}</p>
+                                                <b class="text-green-600 font-extrabold">{{$p['promo_code']}}</b>
+                                                <p class="m-0 text-green-600">Anda mendapatkan potongan maksimal
+                                                    Rp{{number_format($p['nominal'], 2, ',', '.')}}</p>
                                             </div>
                                             <div>
                                                 <button type="button" title="Hapus" wire:click="removePromo({{$i}})"><i
@@ -135,55 +128,6 @@
                                         @php $i++; @endphp
                                     @endforeach
                                 </div>
-                                {{-- Nomor Invoice --}}
-                                <div class="w-full mb-6 md:mb-0 mt-3">
-                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                           for="grid-promo">
-                                        Nomor Invoice (opsional)
-                                    </label>
-                                    <div class="md:grid md:grid-cols-3 gap-4">
-                                        <div class="md:col-span-2">
-                                            <input type="text"
-                                                   id="grid-invoice"
-                                                   class="h-14 min-w-full pr-8 rounded z-0 focus:shadow focus:outline-none uppercase"
-                                                   wire:model.defer="nomor_invoice"/>
-                                            {{--                                        <div class="absolute top-4 right-3">--}}
-                                            {{--                                            <button--}}
-                                            {{--                                                wire:click="checkInvoice"--}}
-                                            {{--                                                type="button"--}}
-                                            {{--                                                class="inline-flex items-center"--}}
-                                            {{--                                                title="Cek Invoice">--}}
-                                            {{--                                                <i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i>--}}
-                                            {{--                                            </button>--}}
-                                            {{--                                        </div>--}}
-                                        </div>
-                                        <button
-                                            wire:click="checkInvoice"
-                                            type="button"
-                                            class="bg-transparent mt-4 mt-md-0 text-blue-700 font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                                            Cek Invoice
-                                        </button>
-                                    </div>
-                                    <label class="block tracking-wide text-gray-700 text-xs mb-2"
-                                           for="grid-invoice">
-                                        Masukkan nomor invoice jika anda pernah melakukan pembayaran sebelumnya
-                                    </label>
-                                    @if($invoice)
-                                        <div
-                                            class="border-blue-400 bg-blue-100 border-2 px-2 py-2 mt-2 flex flex-row justify-between">
-                                            <div class="mx-1">
-                                                <b class="text-green-600 font-extrabold">{{$invoice->invoice_no}}</b>
-                                                <p class="m-0">Anda telah melakukan DP sebesar
-                                                    Rp{{number_format($invoice->nominal, 2, ',', '.')}}</p>
-                                            </div>
-                                            <div>
-                                                <button type="button" title="Hapus" wire:click="removeInvoice()"><i
-                                                        class="cil-x"></i></button>
-                                            </div>
-                                        </div>
-                                    @endif
-                                </div>
-
                                 <button type="submit" class="btn btn-outline-success mt-3">
                                     Bayar
                                 </button>
@@ -203,8 +147,8 @@
                                 id="bukti_transfer_preview">
 
                             @if((Auth::user()->userable->bionix->payment_verif_status=='Belum Unggah'||Auth::user()->userable->bionix->payment_verif_status=='Ditolak')&&(
-    (Auth::user()->userable->bionix_type == "bionix_senior"&&(!(Auth::user()->userable->payment_batch_2&&date('Y-m-d')<=date('Y-m-d',strtotime('2021-09-22')))||(Auth::user()->userable->payment_batch_2&&(date('Y-m-d')>=date('Y-m-d',strtotime('2021-09-23'))&&date('Y-m-d')<=date('Y-m-d',strtotime('2021-09-26'))))))||
-    Auth::user()->userable->bionix_type == "bionix_junior"))
+    (Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamSeniorData"&&(!(Auth::user()->userable->payment_batch_2&&date('Y-m-d')<=date('Y-m-d',strtotime('2021-09-22')))||(Auth::user()->userable->payment_batch_2&&(date('Y-m-d')>=date('Y-m-d',strtotime('2021-09-23'))&&date('Y-m-d')<=date('Y-m-d',strtotime('2021-09-26'))))))||
+    Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamJuniorData"))
                                 <form wire:submit.prevent="save" class="flex-col flex items-center">
                                     <label
                                         class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
@@ -215,7 +159,7 @@
                                                                                                        hidden
                                                                                                        wire:model="image"/>
                                     </label>
-                                    <button type="submit" class="btn btn-success mt-2 font-bold"><i
+                                    <button wire.loading.remove type="submit" class="btn btn-success mt-2 font-bold"><i
                                             class="fas fa-save"></i>
                                         Kirim Bukti Bayar
                                     </button>
@@ -246,7 +190,7 @@
         </div>
     </div>
 
-    <div
+    <div wire:loading
          class="fixed bottom-12 right-12 bg-blue-100 border-t-4 border-blue-500 rounded-b text-blue-900 px-4 py-3 shadow-md"
          role="alert" style="color:rgba(30, 58, 138, var(--tw-text-opacity))">
         <div class="flex">

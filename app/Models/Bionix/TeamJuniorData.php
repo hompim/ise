@@ -30,7 +30,7 @@ class TeamJuniorData extends Model
     }
 
     public function promo(){
-        return $this->morphOne(PromoTeam::class, 'teamable');
+        return $this->morphMany(PromoTeam::class, 'teamable');
     }
 
     public function leader() {

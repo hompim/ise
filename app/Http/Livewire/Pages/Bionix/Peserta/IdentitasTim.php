@@ -86,10 +86,10 @@ class IdentitasTim extends Component
         $this->photo2 = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->identity_card_path : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->identity_card_path : null));
         $this->photo3 = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->identity_card_path : null));
         $this->member_1_twibbon = ($this->is_junior ? Auth::user()->userable->bionix->leader->twibbon_path : Auth::user()->userable->bionix->leader->link_twibbon);
-        $this->member_2_twibbon = ($this->is_junior ? Auth::user()->userable->bionix->member->twibbon_path : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
+        $this->member_2_twibbon = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->twibbon_path : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
         $this->member_3_twibbon = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->link_twibbon : null));
         $this->member_1_instagram = ($this->is_junior ? Auth::user()->userable->bionix->leader->instagram_path : Auth::user()->userable->bionix->leader->link_twibbon);
-        $this->member_2_instagram = ($this->is_junior ? Auth::user()->userable->bionix->member->instagram_path : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
+        $this->member_2_instagram = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->instagram_path : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
         $this->member_3_instagram = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->link_twibbon : null));
         $this->member_1_major = ($this->is_junior ? null : Auth::user()->userable->bionix->leader->major);
         $this->member_2_major = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->major : null));
