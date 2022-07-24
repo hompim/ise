@@ -43,7 +43,7 @@
                                     berikut
                                     : </h5>
                                 <center><img
-                                        src="{{asset('img/global/'.\App\Models\Setting::where('name','bionix_bank_name')->first()->value.'.png')}}"
+                                        src="{{asset('image/global/'.\App\Models\Setting::where('name','bionix_bank_name')->first()->value.'.png')}}"
                                         alt="Logo Bank"
                                         class="object-scale-down md:h-1/2 h-14 max-w-xs"/></center>
                                 <h4 class="text-center text-2xl">{{\App\Models\Setting::where('name','bionix_bank_norek')->first()->value}}</h4>
