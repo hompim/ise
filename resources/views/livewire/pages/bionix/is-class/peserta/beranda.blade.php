@@ -196,7 +196,7 @@
             </div>
             <div class="card shadow-md rounded-xl bg-gray-900" style="border:0">
                 <div class="card-body">
-                    <h6 class="font-bold {{ $a->type == 'Normal' ? 'text-black' : 'text-red-500' }}">
+                    <h6 class="font-bold">
                         </h6>
                     <h4 class="font-bold text-xl" style="color: #FF7C74;">Grub Whatsapp</h4>
                     <p class="text-sm font-weight-normal mt-4">Bagi peserta yang telah mendaftar silahkan masuk ke grub berikut untuk mendapatkan informasi terbaru: <a href="https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm">https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm</a></p>
