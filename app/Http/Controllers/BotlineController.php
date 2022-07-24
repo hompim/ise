@@ -17,12 +17,8 @@ class BotlineController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        if ($request->password != "ISE2022Bot") return response()->json([
-            "success" => false,
-            "message" => "Not Authenticate"
-        ]);
         //TIM
         $tim = [
             "bionix_junior" => TeamJuniorData::count(),
