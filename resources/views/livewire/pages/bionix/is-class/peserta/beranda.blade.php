@@ -147,6 +147,11 @@
                                         <p class="font-bold text-lg">{{ $whatsapp }}</p>
                                     @endif
                                 </div>
+                                <div class="">
+                                    <label for="whatsapp" class="mb-2 font-bold text-gray-400 mt-4">Grub Whatsapp IS Clas
+                                    </label><br>
+                                        <a class="font-bold text-lg" href="https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm">https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm</a>
+                                </div>
                             </div>
                             <div class="mt-3">
                                 <div class="" x-data="{ isUploading: false, progress: 0 }"
@@ -188,6 +193,14 @@
             <h3 class="text-xl mt-3 font-weight-bold text-white">Pengumuman</h3>
             <div class="col-span-10 md:col-span-6 flex items-center mb-3">
                 <div class="border-2 border-bottom-0 flex-grow" style="height: 1px;"></div>
+            </div>
+            <div class="card shadow-md rounded-xl bg-gray-900" style="border:0">
+                <div class="card-body">
+                    <h6 class="font-bold {{ $a->type == 'Normal' ? 'text-black' : 'text-red-500' }}">
+                        </h6>
+                    <h4 class="font-bold text-xl" style="color: #FF7C74;">Grub Whatsapp</h4>
+                    <p class="text-sm font-weight-normal mt-4">Bagi peserta yang telah mendaftar silahkan masuk ke grub berikut untuk mendapatkan informasi terbaru: <a href="https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm">https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm</a></p>
+                </div>
             </div>
             @forelse($announcement as $a)
                 <div class="card shadow-md rounded-xl bg-gray-900" style="border:0">

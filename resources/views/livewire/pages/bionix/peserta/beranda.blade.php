@@ -66,6 +66,14 @@
     </div>
     <h3 class="text-xl font-weight-bold">Pengumuman</h3>
     <div class="grid md:grid-cols-2 gap-4 mt-8">
+        <div class="card shadow-md rounded-xl">
+            <div class="card-body">
+                <h6 class="font-bold {{($a->type=='Normal'?'text-black':'text-red-500')}}"></h6>
+                <h4 class="font-bold text-xl" style="color: #FF7C74;">Grup Whatsapp</h4>
+                <div class="flex flex-row align-items-center"><i class="far fa-calendar-alt"></i><p class="mb-0 ml-2 text-gray-500 font-medium">{{date('d F Y',strtotime($a->start))}}</p></div>
+                <p class="text-sm font-weight-normal mt-4">Bagi peserta yang telah mendaftar silahkan masuk ke grub berikut untuk mendapatkan informasi terbaru: <a href="https://chat.whatsapp.com/BwcOnXQZYey8p7eI2Fqdzv">https://chat.whatsapp.com/BwcOnXQZYey8p7eI2Fqdzv</a></p>
+            </div>
+        </div>
         @forelse($announcement as $a)
             <div class="card shadow-md rounded-xl">
                 <div class="card-body">
