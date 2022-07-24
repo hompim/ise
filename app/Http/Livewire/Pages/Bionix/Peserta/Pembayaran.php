@@ -29,8 +29,10 @@ class Pembayaran extends Component
     $alert_header;
 
 
+
     public function mount()
     {
+
         $this->is_junior = Auth::user()->userable->jenjang = "SMA" ? true : false;
         $this->promo = [];
         $this->statusNotification();
@@ -40,7 +42,7 @@ class Pembayaran extends Component
             return;
         }
         $this->invoice = !Auth::user()->userable->dp->isEmpty() ? Auth::user()->userable->dp->where('status',"Terverifikasi")->first() : null;
-        $this->payment_price = Setting::where('name', (Auth::user()->userable->bionix_type == 'bionix_junior' ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
+        $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
         $this->countPrice();
     }
 
@@ -52,11 +54,11 @@ class Pembayaran extends Component
 
         Auth::user()->userable->bionix->update([
             'payment_verif_status' => 'Belum Bayar',
-            'payment_price' => Setting::where('name', (Auth::user()->userable->bionix_type == 'bionix_junior' ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value
+            'payment_price' => Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value
         ]);
 
         if(sizeof($this->promo)==0){
-            $this->payment_price = Setting::where('name', (Auth::user()->userable->bionix_type == 'bionix_junior' ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
+            $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
         }
         $this->countPrice();
     }
@@ -88,7 +90,7 @@ class Pembayaran extends Component
 
     function countPrice()
     {
-        $payment_price = Setting::where('name', (Auth::user()->userable->bionix_type == 'bionix_junior' ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
+        $payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
         foreach ($this->promo as $promo) {
             $payment_price -= $promo['nominal'];
         }
