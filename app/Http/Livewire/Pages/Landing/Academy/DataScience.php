@@ -8,6 +8,6 @@ class DataScience extends Component
 {
     public function render()
     {
-        return view('livewire.pages.landing.academy.data-science');
+        return view('livewire.pages.landing.academy.data-science')->layout('layouts.landing');
     }
 }
