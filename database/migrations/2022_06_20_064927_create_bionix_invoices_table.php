@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('bionix_invoices', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('member_id');
+            $table->unsignedBigInteger('team_id')->nullable();
             $table->string('bank_name')->nullable();
             $table->string('account_name')->nullable();
             $table->string('account_no')->nullable();

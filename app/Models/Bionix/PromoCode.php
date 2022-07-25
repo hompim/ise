@@ -12,6 +12,6 @@ class PromoCode extends Model
     protected $guarded =[];
 
     public function team(){
-        return $this->hasMany(PromoTeam::class);
+        return $this->hasMany(PromoTeam::class, 'promo_id');
     }
 }

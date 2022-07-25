@@ -14,4 +14,8 @@ class PromoTeam extends Model
     public function team(){
         return $this->morphTo();
     }
+
+    public function promo(){
+        return $this->belongsTo(PromoCode::class, 'promo_id');
+    }
 }

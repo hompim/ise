@@ -112,8 +112,8 @@ class Pembayaran extends Component
             foreach ($this->promo as $promo) {
                 PromoTeam::create([
                     'promo_id' => $promo['id'],
-                    'team_id' => Auth::user()->userable->bionix->id,
-                    'team_type' => Auth::user()->userable->bionix_type == 'App\Models\Bionix\TeamJuniorData' ? 'App\Models\Bionix\TeamJuniorData' : 'App\Models\Bionix\TeamSeniorData'
+                    'teamable_id' => Auth::user()->userable->bionix->id,
+                    'teamable_type' => Auth::user()->userable->bionix_type == 'App\Models\Bionix\TeamJuniorData' ? 'App\Models\Bionix\TeamJuniorData' : 'App\Models\Bionix\TeamSeniorData'
                 ]);
             }
         }
@@ -125,6 +125,12 @@ class Pembayaran extends Component
                 'payment_price' => $this->payment_price
             ]);
             return;
+        }
+
+        if ($this->invoice) {
+            $this->invoice->update([
+                'team_id' =>  Auth::user()->userable->bionix->id
+            ]);
         }
 
         Auth::user()->userable->bionix->update([

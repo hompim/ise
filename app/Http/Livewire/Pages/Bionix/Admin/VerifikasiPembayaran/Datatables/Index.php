@@ -36,9 +36,9 @@ class Index extends LivewireDatatable
                 Column::name('school_name')->label('Nama Sekolah'),
                 Column::name('leader_group.name')->label('Nama Ketua'),
                 NumberColumn::name('payment_price')->label('Jumlah Bayar'),
-                // Column::callback(['id'], function ($id) {
-                //     return view('livewire.pages.bionix.admin.verifikasi-pembayaran.data-tables.actions', ['id' => $id, 'type' => 'student']);
-                // })
+                Column::callback(['id'], function ($id) {
+                    return view('livewire.pages.bionix.admin.verifikasi-pembayaran.components.datatable-actions', ['id' => $id, 'type' => 'student']);
+                })
             ];
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             $column = [
@@ -47,9 +47,9 @@ class Index extends LivewireDatatable
                 Column::name('university_name')->label('Nama Universitas'),
                 Column::name('leader.name')->label('Nama Ketua'),
                 NumberColumn::name('payment_price')->label('Jumlah Bayar'),
-                // Column::callback(['id'], function ($id) {
-                //     return view('livewire.pages.bionix.admin.verifikasi-pembayaran.data-tables.actions', ['id' => $id, 'type' => 'college']);
-                // })
+                Column::callback(['id'], function ($id) {
+                    return view('livewire.pages.bionix.admin.verifikasi-pembayaran.components.datatable-action', ['id' => $id, 'type' => 'college']);
+                })
             ];
         }
         return $column;

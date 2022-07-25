@@ -20,8 +20,7 @@
     </div>
 </div>
 @push('js')
-    {{-- @livewire('livewire-ui-modal')
-    @livewireUIScripts --}}
+    @livewire('livewire-ui-modal')
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 @endpush
 @push('css')

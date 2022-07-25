@@ -15,5 +15,8 @@ class BionixInvoice extends Model
     public function member(){
         return $this->belongsTo(Member::class);
     }
+    public function team(){
+        return $this->belongsTo(TeamJuniorData::class, 'team_id');
+    }
 
 }

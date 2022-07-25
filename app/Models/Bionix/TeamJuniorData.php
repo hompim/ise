@@ -40,4 +40,8 @@ class TeamJuniorData extends Model
     {
         return $this->hasOne(TeamJuniorMember::class, 'id', 'member_id');
     }
+
+    public function invoice(){
+        return $this->hasOne(BionixInvoice::class, 'team_id');
+    }
 }
