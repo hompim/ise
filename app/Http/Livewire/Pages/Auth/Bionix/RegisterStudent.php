@@ -67,9 +67,9 @@ class RegisterStudent extends Component
             'member_1_email' => 'required|email',
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'member_1_class' => 'required',
-            'twibbon_1' => 'required|image|max:1024', // 1MB Max
-            'ktm_1' => 'required|image|max:1024', // 1MB Max
-            'instagram_1' => 'required|image|max:1024', // 1MB Max
+            'twibbon_1' => 'required|image|max:2048', // 1MB Max
+            'ktm_1' => 'required|image|max:2048', // 1MB Max
+            'instagram_1' => 'required|image|max:2048', // 1MB Max
         ]);
 
         if ($this->member_1_email == $this->member_2_email) {
@@ -90,9 +90,9 @@ class RegisterStudent extends Component
             'member_1_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
             'member_1_class' => 'required',
-            'twibbon_1' => 'required|image|max:1024', // 1MB Max
-            'ktm_1' => 'required|image|max:1024', // 1MB Max
-            'instagram_1' => 'required|image|max:1024', // 1MB Max
+            'twibbon_1' => 'required|image|max:2048', // 1MB Max
+            'ktm_1' => 'required|image|max:2048', // 1MB Max
+            'instagram_1' => 'required|image|max:2048', // 1MB Max
 
         ];
         if ($this->member_2_email || $this->member_2_name || $this->member_2_whatsapp || $this->member_2_class || $this->twibbon_2 || $this->ktm_2 || $this-> instagram_2) {
@@ -101,9 +101,9 @@ class RegisterStudent extends Component
                 'member_2_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
                 'member_2_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
                 'member_2_class' => 'required',
-                'twibbon_2' => 'required|image|max:1024', // 1MB Max
-                'ktm_2' => 'required|image|max:1024', // 1MB Max
-                'instagram_2' => 'required|image|max:1024', // 1MB Max
+                'twibbon_2' => 'required|image|max:2048', // 1MB Max
+                'ktm_2' => 'required|image|max:2048', // 1MB Max
+                'instagram_2' => 'required|image|max:2048', // 1MB Max
 
             ]);
             $this->with_member = true;
@@ -267,6 +267,9 @@ class RegisterStudent extends Component
     }
 
     public function mount(){
+        $this->member_1_name = Auth::user()->name;
+        $this->member_1_email = Auth::user()->email;
+
         if(Auth::user()->userable->roadshow_school){
             $this->school_name = Auth::user()->userable->roadshow_school->school_name;
         }
