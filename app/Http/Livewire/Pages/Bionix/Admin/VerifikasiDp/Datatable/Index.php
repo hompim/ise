@@ -17,7 +17,7 @@ class Index extends LivewireDatatable
                 $q->on('members.id', '=', 'bionix_invoices.member_id');
             })
             ->join('bionix_schools', function($q){
-                $q->on('bionix_schools.id', '=' ,'member.roadshow_school_id' );
+                $q->on('bionix_schools.id', '=' ,'members.roadshow_school_id' );
             })
             ->join('users', function ($q) {
                 $q->on('users.userable_id', '=', 'members.id');

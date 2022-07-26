@@ -136,7 +136,7 @@
                     @else
                         <div class="mt-3 flex flex-col">
                             <center><label
-                                    class="text-lg font-weight-bold block tracking-wide text-gray-700 text-xs mb-2"
+                                    class="text-lg font-weight-bold block tracking-wide text-gray-700 mb-2"
                                     for="bukti_transfer">
                                     Bukti Transfer
                                 </label>
