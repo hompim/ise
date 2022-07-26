@@ -55,6 +55,7 @@
                             @if(Auth::user()->userable->bionix->payment_verif_status=='Belum Bayar')
                                 @if(Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamJuniorData")
                                     <p class="mt-4">Anda dapat memasukkan kode promo.</p>
+                                    <p class="mt-4">Bila Anda sudah pernah membayar DP sebelumnya, maka jumlah yang harus dibayar akan menyesuaikan</p>
                                 @endif
                                 <p>Setelah menekan tombol bayar, maka anda harus melakukan pembayaran ke
                                     rekening yang tertera.</p>

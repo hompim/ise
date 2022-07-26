@@ -522,7 +522,7 @@
                                      x-on:livewire-upload-progress="progress = $event.detail.progress">
                                     <div class="flex flex-col items-center justify-center md:p-3 w-full">
                                         <label for="kartu_pelajar"
-                                               class="capitalize text-gray-400">Instagram Post Anggota 1</label>
+                                               class="capitalize text-gray-400">Instagram Post Anggota 2</label>
                                         <div x-show="isUploading" class="w-full">
                                             <progress max="100" x-bind:value="progress" class="w-full"></progress>
                                         </div>

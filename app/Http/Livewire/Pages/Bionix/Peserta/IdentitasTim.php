@@ -77,7 +77,7 @@ class IdentitasTim extends Component
         $this->member_1_email = Auth::user()->email;
         $this->member_2_email = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->email : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->email : null));
         $this->member_3_email = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->email : null));
-        $this->member_1_whatsapp = Auth::user()->no_hp;
+        $this->member_1_whatsapp = Auth::user()->whatsapp;
         $this->member_2_whatsapp = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->whatsapp : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->whatsapp : null));
         $this->member_3_whatsapp = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->whatsapp : null));
         $this->school_name = ($this->is_junior ? Auth::user()->userable->bionix->school_name : Auth::user()->userable->bionix->university_name);
