@@ -4,14 +4,15 @@ namespace App\Http\Livewire\Pages\Bionix\Admin\VerifikasiDp\Components;
 
 use App\Models\Bionix\BionixInvoice;
 use Livewire\Component;
+use LivewireUI\Modal\ModalComponent;
 
-class ModalAcceptReject extends Component
+class ModalAcceptReject extends ModalComponent
 {
 
     public $type;
     public $bionix_data;
 
-    public function mount($modal_type, $type, $id)
+    public function mount($modal_type, $id)
     {
         $this->type = $modal_type;
         $this->bionix_data = BionixInvoice::find($id);
