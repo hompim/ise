@@ -260,11 +260,11 @@
                                     </div>
                                     <img
                                         src="{{$member_1_twibbon?(is_string($member_1_twibbon)?asset('storage/'.$member_1_twibbon):$member_1_twibbon->temporaryUrl()):asset('/img/global/placeholder-image.png')}}"
-                                        class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_card_preview"
+                                        class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_twibbon_preview"
                                         style="max-height:50vh">
                                     @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi"&&$is_edit)
                                         <button
-                                            onclick="$('#member_1_card').click()"
+                                            onclick="$('#member_1_twibbon').click()"
                                             type="button"
                                             class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
                                             <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
@@ -272,8 +272,8 @@
                                         <input type="file"
                                                wire:model.defer="member_1_twibbon"
                                                class="form-control-file"
-                                               name="member_1_card"
-                                               id="member_1_card"
+                                               name="member_1_twibbon"
+                                               id="member_1_twibbon"
                                                accept=".jpg,.jpeg,.png"
                                                hidden>
                                     @endif
@@ -294,11 +294,11 @@
                                     </div>
                                     <img
                                         src="{{$member_1_instagram?(is_string($member_1_instagram)?asset('storage/'.$member_1_instagram):$member_1_instagram->temporaryUrl()):asset('/img/global/placeholder-image.png')}}"
-                                        class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_card_preview"
+                                        class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_instagram_preview"
                                         style="max-height:50vh">
                                     @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi"&&$is_edit)
                                         <button
-                                            onclick="$('#member_1_card').click()"
+                                            onclick="$('#member_1_instagram').click()"
                                             type="button"
                                             class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
                                             <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
@@ -306,8 +306,8 @@
                                         <input type="file"
                                                wire:model.defer="member_1_instagram"
                                                class="form-control-file"
-                                               name="member_1_card"
-                                               id="member_1_card"
+                                               name="member_1_instagram"
+                                               id="member_1_instagram"
                                                accept=".jpg,.jpeg,.png"
                                                hidden>
                                     @endif
@@ -494,20 +494,20 @@
                                         </div>
                                         <img
                                             src="{{$member_2_twibbon?(is_string($member_2_twibbon)?asset('storage/'.$member_2_twibbon):$member_2_twibbon->temporaryUrl()):asset('/img/global/placeholder-image.png')}}"
-                                            class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_card_preview"
+                                            class="object-fit mx-auto" alt="Kartu Pelajar" id="member_2_twibbon_preview"
                                             style="max-height:50vh">
                                         @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi"&&$is_edit)
                                             <button
-                                                onclick="$('#member_1_card').click()"
+                                                onclick="$('#member_2_twibbon').click()"
                                                 type="button"
                                                 class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
                                                 <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
                                             </button>
                                             <input type="file"
-                                                   wire:model.defer="member_1_twibbon"
+                                                   wire:model.defer="member_2_twibbon"
                                                    class="form-control-file"
-                                                   name="member_1_card"
-                                                   id="member_1_card"
+                                                   name="member_2_twibbon"
+                                                   id="member_2_twibbon"
                                                    accept=".jpg,.jpeg,.png"
                                                    hidden>
                                         @endif
@@ -528,20 +528,20 @@
                                         </div>
                                         <img
                                             src="{{$member_2_instagram?(is_string($member_2_instagram)?asset('storage/'.$member_2_instagram):$member_2_instagram->temporaryUrl()):asset('/img/global/placeholder-image.png')}}"
-                                            class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_card_preview"
+                                            class="object-fit mx-auto" alt="Kartu Pelajar" id="member_2_instagram_preview"
                                             style="max-height:50vh">
                                         @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi"&&$is_edit)
                                             <button
-                                                onclick="$('#member_1_card').click()"
+                                                onclick="$('#member_2_instagram').click()"
                                                 type="button"
                                                 class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
                                                 <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
                                             </button>
                                             <input type="file"
-                                                   wire:model.defer="member_1_instagram"
+                                                   wire:model.defer="member_2_instagram"
                                                    class="form-control-file"
-                                                   name="member_1_card"
-                                                   id="member_1_card"
+                                                   name="member_2_instagram"
+                                                   id="member_2_instagram"
                                                    accept=".jpg,.jpeg,.png"
                                                    hidden>
                                         @endif

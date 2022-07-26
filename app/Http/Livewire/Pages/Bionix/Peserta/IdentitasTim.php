@@ -242,7 +242,7 @@ class IdentitasTim extends Component
                 ]);
             }
             if (!is_string($this->photo1)) {
-                $name = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1' . '.' . $this->photo1->getClientOriginalExtension();
+                $name1 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_KTM' . '.' . $this->photo1->getClientOriginalExtension();
                 $resized_image = (new ImageManager())
                     ->make($this->photo1)
                     ->resize(600, null, function ($constraint) {
@@ -250,15 +250,45 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->photo1->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('bionix/' . $name,
+                    ->put('bionix/' . $name1,
                         $resized_image->__toString());
                 Auth::user()->userable->bionix->leader->update([
-                    'identity_card_path' => 'bionix/' . $name
+                    'identity_card_path' => 'bionix/' . $name1
+                ]);
+            }
+            if (!is_string($this->member_1_instagram)) {
+                $insta1 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_INSTAGRAM' . '.' . $this->member_1_instagram->getClientOriginalExtension();
+                $resized_image = (new ImageManager())
+                    ->make($this->member_1_instagram)
+                    ->resize(600, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    })->encode($this->member_1_instagram->getClientOriginalExtension());
+                Storage::disk('public')
+                    ->put('bionix/' . $insta1,
+                        $resized_image->__toString());
+                Auth::user()->userable->bionix->leader->update([
+                    'instagram_path' => 'bionix/' . $insta1
+                ]);
+            }
+            if (!is_string($this->member_1_twibbon)) {
+                $twibbon1 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_TWIBBON' . '.' . $this->member_1_twibbon->getClientOriginalExtension();
+                $resized_image = (new ImageManager())
+                    ->make($this->member_1_twibbon)
+                    ->resize(600, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    })->encode($this->member_1_twibbon->getClientOriginalExtension());
+                Storage::disk('public')
+                    ->put('bionix/' . $twibbon1,
+                        $resized_image->__toString());
+                Auth::user()->userable->bionix->leader->update([
+                    'twibbon_path' => 'bionix/' . $twibbon1
                 ]);
             }
 
             if ($this->photo2 && !is_string($this->photo2)) {
-                $name = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2' . '.' . $this->photo2->getClientOriginalExtension();
+                $name2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_KTM' . '.' . $this->photo2->getClientOriginalExtension();
                 $resized_image = (new ImageManager())
                     ->make($this->photo2)
                     ->resize(600, null, function ($constraint) {
@@ -266,11 +296,43 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->photo2->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('bionix/' . $name,
+                    ->put('bionix/' . $name2,
                         $resized_image->__toString());
 
                 Auth::user()->userable->bionix->member->update([
-                    'identity_card_path' => 'bionix/' . $name
+                    'identity_card_path' => 'bionix/' . $name2
+                ]);
+            }
+            if ($this->member_2_instagram && !is_string($this->member_2_instagram)) {
+                $insta2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_INSTAGRAM' . '.' . $this->member_2_instagram->getClientOriginalExtension();
+                $resized_image = (new ImageManager())
+                    ->make($this->member_2_instagram)
+                    ->resize(600, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    })->encode($this->member_2_instagram->getClientOriginalExtension());
+                Storage::disk('public')
+                    ->put('bionix/' . $insta2,
+                        $resized_image->__toString());
+
+                Auth::user()->userable->bionix->member->update([
+                    'instagram_path' => 'bionix/' . $insta2
+                ]);
+            }
+            if ($this->member_2_twibbon && !is_string($this->member_2_twibbon)) {
+                $twibbon2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_TWIBBON' . '.' . $this->member_2_twibbon->getClientOriginalExtension();
+                $resized_image = (new ImageManager())
+                    ->make($this->member_2_twibbon)
+                    ->resize(600, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    })->encode($this->member_2_twibbon->getClientOriginalExtension());
+                Storage::disk('public')
+                    ->put('bionix/' . $twibbon2,
+                        $resized_image->__toString());
+
+                Auth::user()->userable->bionix->member->update([
+                    'twibbon_path' => 'bionix/' . $twibbon2
                 ]);
             }
         } elseif (!$this->is_junior) {
@@ -349,8 +411,6 @@ class IdentitasTim extends Component
 
 
             }
-
-
 
             if (!is_string($this->photo1)) {
                 $name = date('YmdHis') . '_BIONIX College_' . $this->team_name . '_1' . '.' . $this->photo1->getClientOriginalExtension();
