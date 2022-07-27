@@ -103,7 +103,7 @@ class RegistraiIsClass extends Component
 
         Storage::disk('public')
             ->put(
-                $twibbon,
+                $twibbon_path,
                 $resized_image->__toString()
             );
 
