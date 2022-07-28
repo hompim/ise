@@ -107,31 +107,6 @@
             {{-- step 3 --}}
         </form>
 
-
-        <script>
-            const output = document.getElementById('output');
-            const filepicker = document.getElementById('inputan');
-            const buton = document.getElementById('buton');
-            let image = document.getElementById('img-preview');
-
-
-            buton.addEventListener('click', () => {
-                filepicker.click();
-            })
-
-            filepicker.addEventListener('change', (event) => {
-            const files = event.target.files;
-            output.textContent = '';
-
-            for (const file of files) {
-            output.textContent = file.name;
-            image.src = URL.createObjectURL(file);
-            }
-
-
-            })
-        </script>
-
         @if ($errors->any() || $errorMessage)
         <div class="fixed px-4 py-3 text-red-900 bg-red-100 border-t-4 border-red-500 rounded-b shadow-md bottom-12 right-12"
             role="alert">
