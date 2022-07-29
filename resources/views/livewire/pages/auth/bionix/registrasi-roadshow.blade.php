@@ -67,7 +67,13 @@
                 <label for="kartu-pelajar1">Upload bukti pembayaran
                 </label>
 
-                <div class="flex flex-col justify-start items-center">
+                <div x-data="{ isUploading: false, progress: 0 }" x-on:livewire-upload-start="isUploading = true"
+                    x-on:livewire-upload-finish="isUploading = false" x-on:livewire-upload-error="isUploading = false"
+                    x-on:livewire-upload-progress="progress = $event.detail.progress"
+                    class="flex flex-col justify-start items-center">
+                    <div x-show="isUploading" class="w-full">
+                        <progress max="100" x-bind:value="progress" class="w-full"></progress>
+                    </div>
                     <img src="{{ $payment_proof ? $payment_proof->temporaryUrl() : null }}" class="mx-auto object-fit"
                         style="max-height:50vh">
                     <button type="button" onclick="document.getElementById('payment_proof').click()"
