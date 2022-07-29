@@ -20,7 +20,8 @@ class RegistrasiRoadshow extends Component
         $bank_name,
         $nominal,
         $payment_proof,
-        $agree;
+        $agree,
+        $errorMessage;
 
     public function mount()
     {
@@ -80,7 +81,11 @@ class RegistrasiRoadshow extends Component
         return redirect(route('bionix.pembayaran-success'));
     }
 
-
+    public function closeModal()
+    {
+        $this->errorMessage = '';
+        $this->resetErrorBag();
+    }
     public function render()
     {
         return view('livewire.pages.auth.bionix.registrasi-roadshow')->layout('layouts.auth-bionix');

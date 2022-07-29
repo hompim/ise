@@ -38,6 +38,12 @@ class RegistraiIsClass extends Component
         $this->info_pendaftaran = 'Media Sosial ISE! 2022';
     }
 
+    public function closeModal()
+    {
+        $this->errorMessage = '';
+        $this->resetErrorBag();
+    }
+
     public function akunSubmit()
     {
         if (Auth::user()->userable->isclass) {

@@ -104,4 +104,32 @@
             </div>
 
         </form>
+
+        @if ($errors->any() || $errorMessage)
+        <div class="fixed px-4 py-3 text-red-900 bg-red-100 border-t-4 border-red-500 rounded-b shadow-md bottom-12 right-12"
+            role="alert">
+            <div class="flex">
+                <div class="py-1">
+                    <svg class="w-6 h-6 mr-4 text-red-500 fill-current" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-bold">Terjadi masalah</p>
+                    <ul class="font-normal">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    @if ($errorMessage)
+                        <p class="font-normal">{{ $errorMessage }}</p>
+                    @endif
+                </div>
+                <button type="button" title="Hapus" wire:click="closeModal()" class="self-start"><i
+                        class="fas fa-times"></i></button>
+            </div>
+        </div>
+    @endif
     </div>
