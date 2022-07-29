@@ -86,6 +86,7 @@
                     </button>
                     <input type="file" class="form-control-file" id="payment_proof" name="payment_proof"
                         accept=".jpg,.jpeg,.png" hidden wire:model="payment_proof">
+                        <small>File Tidak boleh lebih dari 2MB</small>
                 </div>
             </div>
 

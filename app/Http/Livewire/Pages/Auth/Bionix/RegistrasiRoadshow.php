@@ -24,10 +24,16 @@ class RegistrasiRoadshow extends Component
 
     public function mount()
     {
-        if(date('Y-m-d') > date('Y-m-d',strtotime(Auth::user()->userable->roadshow_school->end_dp))) return abort(403);
+        if(date('Y-m-d') > date('Y-m-d',strtotime(Auth::user()->userable->roadshow_school->end_dp)) || date('Y-m-d') != date('Y-m-d',strtotime(Auth::user()->userable->roadshow_school->start_dp))) return abort(403);
 
             $this->name = Auth::user()->name;
             $this->school = Auth::user()->userable->roadshow_school->school_name;
+    }
+
+    public function updatedPaymentProof(){
+        $this->validate([
+            'payment_proof' =>' image|max:2048',
+        ]);
     }
 
     public function dpSubmit()
