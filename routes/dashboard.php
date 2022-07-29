@@ -108,16 +108,27 @@ Route::middleware('auth')->group(function () {
                 });
 
 
-            Route::group(['prefix' => 'is-class'], function () {
-                Route::get('register', \App\Http\Livewire\Pages\Auth\Bionix\RegistraiIsClass::class)->name('register-is-class')->middleware(['accessdate:true,16-07-2022 07:00:00,30-12-2022 13:00:00']);
-                Route::get('register-success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\IsClass::class)->name('isclass.register-success');
-                //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
+                Route::group(['prefix' => 'is-class'], function () {
+                    Route::get('register', \App\Http\Livewire\Pages\Auth\Bionix\RegistraiIsClass::class)->name('register-is-class')->middleware(['accessdate:true,16-07-2022 07:00:00,30-12-2022 13:00:00']);
+                    Route::get('register-success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\IsClass::class)->name('isclass.register-success');
+                    //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
 
 
-                Route::group(['middleware' => 'usertype:isclass_peserta'], function () {
-                    Route::get('/', \App\Http\Livewire\Pages\Bionix\IsClass\Peserta\Beranda::class)->name('isclass.peserta.beranda');
+                    Route::group(['middleware' => 'usertype:isclass_peserta'], function () {
+                        Route::get('/', \App\Http\Livewire\Pages\Bionix\IsClass\Peserta\Beranda::class)->name('isclass.peserta.beranda');
+                    });
                 });
             });
+
+            //Icon
+
+
+            Route::group(['prefix' => 'icon'], function () {
+                Route::group(['prefix' => 'academy'], function () {
+                    Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience::class)->name('register-data-science-academy');
+                });
+
+                Route::get('register/success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\DataScienceAcademy::class)->name('register-dsacademy-success');
             });
 
             Route::group(['prefix' => 'webinar'], function () {
