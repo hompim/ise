@@ -70,21 +70,25 @@
                 <div class="flex flex-col justify-start items-center">
                     <img src="{{ $payment_proof ? $payment_proof->temporaryUrl() : null }}" class="mx-auto object-fit"
                         style="max-height:50vh">
-                    <span
-                        class="flex flex-row gap-4 w-32 py-2 p-2 rounded-md bg-transparent !border border-[#6B7280] hover:border-pink-200  autofill:bg-transparent mt-4 text-white item-center mb-4">
-                        <img class="" src="{{ asset('images/upload.svg') }}" alt="">
-                        <button type="button" onclick="document.querySelector('#payment').click()"
-                            class="text-liteGray">Add
-                            File</button>
-                        <input type="file" wire:model.defer="payment_proof" class="form-control-file"
-                            name="payment_proof" id="payment" accept=".jpg,.jpeg,.png" hidden>
+                    <button type="button" onclick="document.getElementById('payment_proof').click()"
+                        class="text-liteGray">
+                        <span
+                            class="flex flex-row gap-4 w-32 py-2 p-2 rounded-md bg-transparent !border border-[#6B7280] hover:border-pink-200  autofill:bg-transparent mt-4 text-white item-center mb-4">
+                            <img class="" src="{{ asset('images/upload.svg') }}" alt="">
+                            Add
+                            File
+                    </button>
+                    <input type="file" class="form-control-file" id="payment_proof" name="payment_proof"
+                        accept=".jpg,.jpeg,.png" hidden wire:model="payment_proof">
                 </div>
             </div>
 
             <div class="flex-row my-11 space-x-4 font-medium font-poppins">
                 <input wire:model.defer="agree" type="checkbox" id="setuju-kebijakan" name="setuju-kebijakan"
                     class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
-                <label class="text-white" for="setuju-kebijakan">  Saya setuju dengan kebijakan privasi serta <a href="{{route('term-condition')}}" class="text-blue-400" target="_blank">syarat dan ketentuan</a> yang berlaku</label>
+                <label class="text-white" for="setuju-kebijakan"> Saya setuju dengan kebijakan privasi serta <a
+                        href="{{ route('term-condition') }}" class="text-blue-400" target="_blank">syarat dan
+                        ketentuan</a> yang berlaku</label>
             </div>
             <div
                 class="relative left-0 right-0 flex flex-col justify-center mx-auto mt-24 text-center lg:flex-row max-w-fit group">
@@ -94,4 +98,3 @@
 
         </form>
     </div>
-
