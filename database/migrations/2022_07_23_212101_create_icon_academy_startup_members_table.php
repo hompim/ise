@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
+            $table->string('university');
             $table->string('whatsapp');
             $table->string('identity_card_path')->nullable();
             $table->string('link_twibbon')->nullable();

@@ -9,7 +9,7 @@ class IconAcademyStartupData extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = ['team_name', 'institute_name', 'startup_idea_title', 'startup_idea_desc','profile_verif_status', 'profile_verified_by', 'profile_verif_comment', 'academy_status', 'leader_id', 'member1_id', 'member2_id'];
 
 
     public function memberData()

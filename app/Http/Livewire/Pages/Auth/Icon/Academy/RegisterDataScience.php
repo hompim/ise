@@ -15,12 +15,11 @@ class RegisterDataScience extends Component
 {
     use WithFileUploads;
 
-    public $cities;
     public $step = 1;
     public $isIdentityDone = false;
     public $isAkunDone = false;
     public $errorMessage;
-    public $password, $re_password, $region = '1', $agree;
+    public $agree;
 
     public $members;
 
@@ -46,7 +45,7 @@ class RegisterDataScience extends Component
                 $this->step = $toStep;
                 $this->errorMessage = '';
             } else {
-                $this->errorMessage = "Harap selesaikan tahap 2 terlebih dahulu";
+                $this->errorMessage = "Harap selesaikan tahap 1 terlebih dahulu";
             }
         }
     }
