@@ -8,7 +8,7 @@
 <div class="min-h-screeen bg-black">
     <!-- hero section start -->
     <div
-        class="pt-[145px] lg:pt-[210px] md:flex md:flex-col-reverse lg:pl-[130px] lg:flex-row items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
+        class="pt-[100px] lg:pt-[210px] md:flex md:flex-col-reverse lg:pl-[130px] lg:flex-row items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
         <div class="flex flex-col items-start flex-1 text-white">
             <h1
                 class="lg:!text-7xl ml-8 md:ml-0 text-5xl md:text-center lg:!text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">
@@ -31,7 +31,7 @@
             <div class="relative left-0 right-0 justify-center mx-auto mb-20 text-center max-w-fit scroll-mt-36"
                 id="isometric-city">
                 <!-- datascience icon--> 
-                <img src="{{ asset('images/datascience-icon.png') }}" class="w-1/2 ml-14 md:ml-0 md:w-auto">
+                <img src="{{ asset('images/datascience-icon.png') }}" class="w-1/2 ml-14 md:ml-0 md:w-[70%]">
             </div>
         </div>
     </div>
@@ -158,7 +158,7 @@
     {{-- Start Meet Our Superb Speakers --}}
     <div class="mt-24 md:mt-52 font-poppins">
         <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Meet Our <span class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">Superb</span> <br> Speakers</h1>
-        <div class="flex flex-col md:grid md:grid-cols-4 mx-14 md:mx-56 font-poppins">
+        <div class="flex flex-col md:grid md:grid-cols-4 mx-14 md:mx-24  font-poppins gap-10">
             <div class="w-[280px] h-[419px] flex flex-col">
                 <img src="{{ asset('images/speaker-placeholder.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
                 <div class="flex flex-col bg-liteBlack text-white text-center px-3 py-2 rounded-2xl">
