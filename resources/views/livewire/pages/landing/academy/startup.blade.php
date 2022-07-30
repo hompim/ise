@@ -112,7 +112,7 @@
 </div>
 <!-- text :other have.. end -->
 <!-- make card start -->
-<div class="flex flex-col sm:flex-row  mx-auto mb-[10px] mb-[200px] sm:gap-6 sm:justify-center font-poppins text-[#B5B3BC] gap-4 lg:gap-6 ">
+<div class="flex flex-col sm:flex-row  mb-[10px] lg:mb-[200px] sm:gap-6 sm:justify-center font-poppins text-[#B5B3BC] gap-4 lg:gap-6 ml-12">
     <!-- 1 -->
     <div class=" bg-[#191A1E] px-[42px] pt-[32px] font-semibold text-[14px] lg:text-[18px] rounded-2xl w-[300px] lg:w-[380px] lg:h-[607px] ">
         <!-- profil -->
@@ -163,7 +163,7 @@
     {{-- Start Meet Our Superb Speakers --}}
     <div class=" font-poppins">
         <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Meet Our <span class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">Superb</span> <br> Speakers</h1>
-        <div class="flex flex-col md:grid md:grid-cols-4 mx-14 md:mx-56 font-poppins">
+        <div class="flex flex-col md:grid md:grid-cols-4 mx-14 md:mx-20 font-poppins gap-10">
             <div class="w-[280px] h-[419px] flex flex-col">
                 <img src="{{ asset('images/speaker-placeholder.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
                 <div class="flex flex-col bg-liteBlack text-white text-center px-3 py-2 rounded-2xl">
