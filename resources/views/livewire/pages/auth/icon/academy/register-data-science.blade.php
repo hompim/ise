@@ -25,7 +25,6 @@
             @csrf
             {{-- step 1 --}}
             <div class="{{$step == 1 ? '' : "hidden"}}">
-                <input type="hidden" name="peserta_type" value="junior" />
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nama Tim</label>
                 <input wire:model.defer = "team_name" id="name" name="team_name" type="text" required
@@ -80,14 +79,14 @@
                         placeholder="Masukkan nama lengkap anggota {{$x}}">
                 </div>
                 <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
-                    <label for="email-address">Email address</label>
-                    <input id="email-address" name="member_{{$x}}_email" wire:model.defer ="member_{{$x}}_email" type="email" @if($x < 3) required @endif
+                    <label for="member_{{$x}}_email">Email address</label>
+                    <input id="member_{{$x}}_email" name="member_{{$x}}_email" wire:model.defer ="member_{{$x}}_email" type="email" @if($x < 3) required @endif
                         class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                         placeholder="Masukkan email aktif anggota {{$x}}">
                 </div>
                 <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
-                    <label for="wa">Nomor WhatsApp</label>
-                    <input id="wa" name="member_{{$x}}_whatsapp" wire:model.defer ="member_{{$x}}_whatsapp" type="tel" @if($x < 3) required @endif
+                    <label for="member_{{$x}}_whatsapp">Nomor WhatsApp</label>
+                    <input id="member_{{$x}}_whatsapp" name="member_{{$x}}_whatsapp" wire:model.defer ="member_{{$x}}_whatsapp" type="tel" @if($x < 3) required @endif
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Masukkan nomor WhatsApp anggota {{$x}}">
                 </div>

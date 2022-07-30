@@ -125,10 +125,19 @@ Route::middleware('auth')->group(function () {
 
             Route::group(['prefix' => 'icon'], function () {
                 Route::group(['prefix' => 'academy'], function () {
-                    Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience::class)->name('register-data-science-academy');
+                    // Rute DS Academy
+                    Route::group(['prefix' => 'data-science'], function () {
+                        Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience::class)->name('register-data-science-academy');
+                    });
+                    
+                    // Rute Startup Academy
+                    Route::group(['prefix' => 'startup'], function () {
+                        Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterStartup::class)->name('register-startup-academy');
+                    });
                 });
 
                 Route::get('register/success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\DataScienceAcademy::class)->name('register-dsacademy-success');
+                Route::get('register/success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\StartupAcademy::class)->name('register-startupacademy-success');
             });
 
             Route::group(['prefix' => 'webinar'], function () {
