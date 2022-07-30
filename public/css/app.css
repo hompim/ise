@@ -1467,6 +1467,18 @@ select {
 .mt-64 {
     margin-top: 16rem;
 }
+.mt-\[85px\] {
+    margin-top: 85px;
+}
+.mb-\[100px\] {
+    margin-bottom: 100px;
+}
+.mb-\[10px\] {
+    margin-bottom: 10px;
+}
+.mb-\[200px\] {
+    margin-bottom: 200px;
+}
 .block {
     display: block;
 }
@@ -2956,6 +2968,14 @@ select {
 .px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
+}
+.px-\[42px\] {
+    padding-left: 42px;
+    padding-right: 42px;
+}
+.py-52 {
+    padding-top: 13rem;
+    padding-bottom: 13rem;
 }
 .pt-4 {
     padding-top: 1rem;
@@ -5210,6 +5230,10 @@ select {
         margin-top: 13rem;
     }
 
+    .lg\:mt-\[200px\] {
+        margin-top: 200px;
+    }
+
     .lg\:block {
         display: block;
     }
@@ -5264,6 +5288,10 @@ select {
 
     .lg\:h-\[531px\] {
         height: 531px;
+    }
+
+    .lg\:h-\[607px\] {
+        height: 607px;
     }
 
     .lg\:w-\[56em\] {
