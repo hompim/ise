@@ -9,5 +9,5 @@ class IconAcademyStartupMember extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = ['name', 'university', 'email', 'whatsapp', 'identity_card_path','link_twibbon', 'link_instagram', 'link_linkedin', 'link_twitter'];
 }
