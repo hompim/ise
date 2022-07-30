@@ -1,21 +1,23 @@
 <?php
 
+use App\Mail\SertifikatMail;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\WebinarKickOffAcaraMail;
 use Illuminate\Support\Facades\Route;
+use App\Models\Icon\IconWebinarKickOff;
 use App\Http\Livewire\Pages\Landing\Ise;
+use Illuminate\Support\Facades\Redirect;
 use App\Http\Livewire\Pages\Landing\Icon;
+use Spatie\SimpleExcel\SimpleExcelReader;
 use App\Http\Livewire\Pages\Landing\Bionix;
+use App\Http\Livewire\Pages\Landing\Academy\Startup;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
-use App\Http\Livewire\Pages\Auth\Bionix\RegistrasiRoadshow;
-use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience;
-use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterStartup;
 use App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim;
-use App\Mail\SertifikatMail;
-use App\Mail\WebinarKickOffAcaraMail;
-use App\Models\Icon\IconWebinarKickOff;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Redirect;
-use Spatie\SimpleExcel\SimpleExcelReader;
+use App\Http\Livewire\Pages\Landing\Academy\DataScience;
+use App\Http\Livewire\Pages\Auth\Bionix\RegistrasiRoadshow;
+use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterStartup;
+use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +34,10 @@ use Spatie\SimpleExcel\SimpleExcelReader;
 Route::get('/', Ise::class)->name('ise');
 Route::get('/bionix', Bionix::class)->name('bionix');
 Route::get('/icon', Icon::class)->name('icon');
+
+// Academy Route
+Route::get('/icon/data-science', DataScience::class)->name('data-science-academy');
+Route::get('/icon/startup', Startup::class)->name('startup-academy');
 
 // Coming Soon Route
 Route::get('/coming-soon', function () {
