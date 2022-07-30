@@ -1,10 +1,8 @@
-{{-- Masukin ini Penting --}}
 <link rel="stylesheet" href="{{ asset('css/new.css') }}">
 <script src="{{ asset('js/index.js') }}"></script>
 <style>
     [x-cloak] { display: none !important; }
 </style>
-{{-- Masukin ini Penting --}}
 
 
 <div class="min-h-screeen bg-black">
