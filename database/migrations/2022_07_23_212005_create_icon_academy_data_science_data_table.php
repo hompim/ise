@@ -20,14 +20,10 @@ return new class extends Migration
             $table->text('post_activity');
             $table->text('expectation_joining_academy');
             $table->string('university_name');
-            $table->enum('competition_round', ['Administrasi', 'Penyisihan', 'Semifinal', 'Final'])->default('Administrasi');
-            $table->enum('profile_verif_status', ['Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Tahap Verifikasi');
-            $table->unsignedTinyInteger('profile_verified_by')->nullable();
-            $table->text('profile_verif_comment')->nullable();
-            $table->string('payment_proof_path')->nullable();
-            $table->enum('payment_verif_status', ['Belum Unggah','Belum Bayar', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Belum Bayar');
-            $table->unsignedTinyInteger('payment_verified_by')->nullable();
-            $table->text('payment_verif_comment')->nullable();
+            $table->enum('competition_round', ['Administrasi', 'Pending','Penyisihan', 'Semifinal', 'Final', 'Rejected'])->default('Administrasi');
+            $table->enum('commitement_payment_status', ['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Belum Unggah');
+            $table->string('commitement_payment_path')->nullable();
+            $table->text('commitement_payment_comment')->nullable();
             $table->unsignedBigInteger('leader_id');
             $table->unsignedBigInteger('member1_id')->nullable();
             $table->unsignedBigInteger('member2_id')->nullable();

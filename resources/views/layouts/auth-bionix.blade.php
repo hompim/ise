@@ -14,6 +14,7 @@
     <link rel="apple-touch-icon" href="{{ asset('images/logo-only-small.png') }}" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script defer src="{{ mix('js/app.js') }}"></script>
+    @stack('css')
 </head>
 
 <body class="bg-black">

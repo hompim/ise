@@ -178,12 +178,12 @@ class RegisterDataScience extends Component
             ]);
         }
 
-        // Auth::user()->userable->update([
-        //     'icon_id' => $team_data->id,
-        //     'icon_type' => 'App\Models\Icon\Academy\RegisterDataScience'
-        // ]);
+        Auth::user()->userable->update([
+            'academy_id' => $team_data->id,
+            'academy_type' => 'App\Models\Icon\IconAcademyDataScienceData'
+        ]);
 
-        return redirect()->to(route('register-dsacademy-success'));
+        return redirect(route('register-ds-success'));
     }
 
     public function mount(){

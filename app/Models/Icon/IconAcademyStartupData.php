@@ -9,7 +9,7 @@ class IconAcademyStartupData extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['team_name', 'institute_name', 'startup_idea_title', 'startup_idea_desc','profile_verif_status', 'profile_verified_by', 'profile_verif_comment', 'academy_status', 'leader_id', 'member1_id', 'member2_id'];
+    protected $guarded = [];
 
 
     public function memberData()
@@ -30,10 +30,10 @@ class IconAcademyStartupData extends Model
     }
     public function member1()
     {
-        return $this->hasOne(IconAcademyStartupMember::class, 'id', 'member1_id');
+        return $this->belongsTo(IconAcademyStartupMember::class, 'member1_id');
     }
     public function member2()
     {
-        return $this->hasOne(IconAcademyStartupMember::class, 'id', 'member2_id');
+        return $this->belongsTo(IconAcademyStartupMember::class,'member2_id');
     }
 }

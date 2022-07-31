@@ -15,10 +15,11 @@ class Sidebar extends Component
         return view('livewire.components.sidebar');
     }
 
-    public function mount(){
+    public function mount()
+    {
         $this->menu = [];
 
-        if(Auth::user()->userable_type == 'App\Models\Admin'){
+        if (Auth::user()->userable_type == 'App\Models\Admin') {
             if (Auth::user()->userable->admin_type == "Bionix Admin") {
                 array_push(
                     $this->menu,
@@ -76,7 +77,7 @@ class Sidebar extends Component
                     ],
                     [
                         'type' => 'divider',
-                        'tag' =>'class=mb-3'
+                        'tag' => 'class=mb-3'
                     ],
                     [
                         'type' => 'title',
@@ -102,12 +103,10 @@ class Sidebar extends Component
                     ],
                     [
                         'type' => 'divider',
-                        'tag' =>'class=my-2'
+                        'tag' => 'class=my-2'
                     ]
                 );
-            }
-            else if(Auth::user()->userable->admin_type == "Icon Admin")
-            {
+            } else if (Auth::user()->userable->admin_type == "Icon Admin") {
                 array_push(
                     $this->menu,
                     [
@@ -158,7 +157,7 @@ class Sidebar extends Component
                     ],
                 );
             }
-        }else{
+        } else {
             array_push($this->menu, [
                 'type' => 'menu',
                 'icon' => 'far fa-calendar-alt',
@@ -166,10 +165,10 @@ class Sidebar extends Component
                 'route-name' => 'peserta.dashboard.choose'
             ], [
                 'type' => 'divider',
-                'tag' =>'class=my-2'
+                'tag' => 'class=my-2'
             ]);
 
-            if(Auth::user()->userable->bionix){
+            if (Auth::user()->userable->bionix) {
                 array_push(
                     $this->menu,
                     [
@@ -189,40 +188,27 @@ class Sidebar extends Component
                         'route-name' => 'bionix.peserta.identitas-tim'
                     ],
                 );
-                if(Auth::user()->userable->bionix->profile_verif_status == "Terverifikasi"){
-                    array_push($this->menu,
-                    [
-                        'type' => 'menu',
-                        'icon' => 'cil-money',
-                        'title' => 'Pembayaran',
-                        'route-name' => 'bionix.peserta.pembayaran'
-                    ]);
+                if (Auth::user()->userable->bionix->profile_verif_status == "Terverifikasi") {
+                    array_push(
+                        $this->menu,
+                        [
+                            'type' => 'menu',
+                            'icon' => 'cil-money',
+                            'title' => 'Pembayaran',
+                            'route-name' => 'bionix.peserta.pembayaran'
+                        ]
+                    );
                 }
 
-                array_push($this->menu,
-                [
-                    'type' => 'divider',
-                    'tag' =>'class=mb-3'
-                ]);
-            } if(Auth::user()->userable->webinar){
                 array_push(
                     $this->menu,
                     [
-                        'type' => 'title',
-                        'title' => 'Webinar Kick Off'
-                    ],
-                    [
-                        'type' => 'menu',
-                        'icon' => 'cil-home',
-                        'title' => 'Beranda',
-                        'route-name' => 'webinar.peserta.beranda'
-                    ],
-                    [
                         'type' => 'divider',
-                        'tag' =>'class=my-2'
+                        'tag' => 'class=mb-3'
                     ]
-                    );
-            } if(Auth::user()->userable->isclass){
+                );
+            }
+            if (Auth::user()->userable->isclass) {
                 array_push(
                     $this->menu,
                     [
@@ -237,11 +223,53 @@ class Sidebar extends Component
                     ],
                     [
                         'type' => 'divider',
-                        'tag' =>'class=my-2'
+                        'tag' => 'class=my-2'
                     ]
+                );
+            }
+            if (Auth::user()->userable->academy) {
+                if (Auth::user()->userable->academy_type == "App\Models\Icon\IconAcademyDataScienceData") {
+                    array_push(
+                        $this->menu,
+                        [
+                            'type' => 'title',
+                            'title' => 'Data Science Academy'
+                        ],
+                        [
+                            'type' => 'menu',
+                            'icon' => 'cil-home',
+                            'title' => 'Beranda',
+                            'route-name' => 'ds.peserta.beranda'
+                        ],
+                        [
+                            'type' => 'menu',
+                            'icon' => 'cil-group',
+                            'title' => 'Identitas Tim',
+                            'route-name' => 'ds.peserta.identitas-tim'
+                        ],
                     );
+                } else {
+                    array_push(
+                        $this->menu,
+                        [
+                            'type' => 'title',
+                            'title' => 'Startup Academy'
+                        ],
+                        [
+                            'type' => 'menu',
+                            'icon' => 'cil-home',
+                            'title' => 'Beranda',
+                            'route-name' => 'sua.peserta.beranda'
+                        ],
+                        [
+                            'type' => 'menu',
+                            'icon' => 'cil-group',
+                            'title' => 'Identitas Tim',
+                            'route-name' => 'sua.peserta.identitas-tim'
+                        ],
+                    );
+                }
             }
         }
-
     }
 }

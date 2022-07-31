@@ -6,7 +6,7 @@
             <h3 class="text-xl font-weight-bold mt-8">Info</h3>
             <div class="grid md:grid-cols-2 gap-4">
                 {{--        Nama Tim --}}
-                <div class="card shadow-md rounded-xl" style="background-color: #191a1e">
+                <div class="card shadow-md rounded-xl" style="background-color: #191a1e;border: 0;">
                     <div class="card-body d-flex">
                         <div class="py-1 mr-4">
                             <i class="fas fa-users text-3xl" style="color: #675783;"></i>

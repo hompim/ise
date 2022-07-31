@@ -125,7 +125,7 @@ class RegisterStudent extends Component
 
         Auth::user()->update([
             'name' => $this->member_1_name,
-            'no_hp' => $this->member_1_whatsapp
+            'whatsapp' => $this->member_1_whatsapp
         ]);
         //masukin ke database di sini bikin create
         $team_member_1 = TeamJuniorMember::create([

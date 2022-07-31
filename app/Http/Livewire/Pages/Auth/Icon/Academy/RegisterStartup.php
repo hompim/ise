@@ -58,7 +58,7 @@ class RegisterStartup extends Component
 
     public function identityTeamSubmit()
     {
-        // Mengecek 300 kata 
+        // Mengecek 300 kata
         $jumlahkata = count(explode(' ', $this->deskripsi));
 
         // Mengecek 300 kata
@@ -87,7 +87,7 @@ class RegisterStartup extends Component
     public function identityMemberSubmit()
     {
         $member3 = !empty($this->member_3_name) || !empty($this->member_3_universitas) || !empty($this->ktm_3) || !empty($this->member_3_whatsapp) || !empty($this->member_3_email) || !empty($this->member_3_ig) || !empty($this->member_3_twibbon) || !empty($this->member_3_linkedin) || !empty($this->member_3_twitter);
-        
+
         $arr_validation = [];
         for($x = 1; $x <= 3; $x++)
         {
@@ -142,7 +142,7 @@ class RegisterStartup extends Component
             $this->errorMessage = 'Tolong setujui semua data yang diisi benar dan bisa dipertanggungjawabkan';
             return;
         }
-        
+
         $this->isIdentityDone = true;
         $this->move(2);
     }
@@ -214,10 +214,10 @@ class RegisterStartup extends Component
             ]);
         }
 
-        // Auth::user()->userable->update([
-        //     'icon_id' => $team_data->id,
-        //     'icon_type' => 'App\Models\Icon\Academy\RegisterDataScience'
-        // ]);
+        Auth::user()->userable->update([
+            'academy_id' => $team_data->id,
+            'academy_type' => 'App\Models\Icon\IconAcademyStartupData'
+        ]);
 
         return redirect()->to(route('register-startupacademy-success'));
     }
@@ -226,7 +226,7 @@ class RegisterStartup extends Component
         $this->member_1_name = Auth::user()->name;
         $this->member_1_email = Auth::user()->email;
     }
-    
+
     public function render()
     {
         return view('livewire.pages.auth.icon.academy.register-startup')->layout('layouts.auth-bionix');;

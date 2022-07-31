@@ -9,7 +9,7 @@ class IconAcademyDataScienceData extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['team_name', 'reason_joining', 'post_activity', 'expectation_joining_academy', 'university_name', 'competition_round', 'profile_verif_status', 'profile_verified_by', 'profile_verif_comment', 'payment_proof_path', 'payment_verif_status', 'payment_verified_by', 'payment_verif_comment', 'leader_id', 'member1_id', 'member2_id'];
+    protected $guarded = [];
 
 
     public function memberData()
@@ -30,10 +30,10 @@ class IconAcademyDataScienceData extends Model
     }
     public function member1()
     {
-        return $this->hasOne(IconAcademyDataScienceMember::class, 'id', 'member1_id');
+        return $this->belongsTo(IconAcademyDataScienceMember::class, 'member1_id');
     }
     public function member2()
     {
-        return $this->hasOne(IconAcademyDataScienceMember::class, 'id', 'member2_id');
+        return $this->belongsTo(IconAcademyDataScienceMember::class,'member2_id');
     }
 }
