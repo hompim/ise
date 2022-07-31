@@ -183,7 +183,7 @@ class RegisterDataScience extends Component
             'academy_type' => 'App\Models\Icon\IconAcademyDataScienceData'
         ]);
 
-        return redirect(route('register-ds-success'));
+        return redirect()->to(route('register-ds-success'));
     }
 
     public function mount(){

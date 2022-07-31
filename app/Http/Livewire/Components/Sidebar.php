@@ -234,19 +234,7 @@ class Sidebar extends Component
                         [
                             'type' => 'title',
                             'title' => 'Data Science Academy'
-                        ],
-                        [
-                            'type' => 'menu',
-                            'icon' => 'cil-home',
-                            'title' => 'Beranda',
-                            'route-name' => 'ds.peserta.beranda'
-                        ],
-                        [
-                            'type' => 'menu',
-                            'icon' => 'cil-group',
-                            'title' => 'Identitas Tim',
-                            'route-name' => 'ds.peserta.identitas-tim'
-                        ],
+                        ]
                     );
                 } else {
                     array_push(
@@ -254,18 +242,21 @@ class Sidebar extends Component
                         [
                             'type' => 'title',
                             'title' => 'Startup Academy'
-                        ],
+                        ]
+                    );
+                    array_push(
+                        $this->menu,
                         [
                             'type' => 'menu',
                             'icon' => 'cil-home',
                             'title' => 'Beranda',
-                            'route-name' => 'sua.peserta.beranda'
+                            'route-name' => 'academy.peserta.beranda'
                         ],
                         [
                             'type' => 'menu',
                             'icon' => 'cil-group',
                             'title' => 'Identitas Tim',
-                            'route-name' => 'sua.peserta.identitas-tim'
+                            'route-name' => 'academy.peserta.identitas-tim'
                         ],
                     );
                 }

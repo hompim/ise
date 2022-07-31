@@ -219,7 +219,7 @@ class RegisterStartup extends Component
             'academy_type' => 'App\Models\Icon\IconAcademyStartupData'
         ]);
 
-        return redirect()->to(route('register-startupacademy-success'));
+        return redirect()->to(route('register-startup-success'));
     }
 
     public function mount(){
