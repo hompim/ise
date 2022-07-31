@@ -28,11 +28,11 @@ class IconAcademyStartupData extends Model
     public function leader() {
         return $this->belongsTo(IconAcademyStartupMember::class, 'leader_id');
     }
-    public function member1()
+    public function member_1()
     {
         return $this->belongsTo(IconAcademyStartupMember::class, 'member1_id');
     }
-    public function member2()
+    public function member_2()
     {
         return $this->belongsTo(IconAcademyStartupMember::class,'member2_id');
     }

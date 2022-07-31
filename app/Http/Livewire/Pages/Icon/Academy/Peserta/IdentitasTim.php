@@ -54,35 +54,27 @@ class IdentitasTim extends Component
     {
         $this->name = Auth::user()->name;
         $this->email = Auth::user()->email;
-        $this->photo1 = (Auth::user()->userable->academy_type == 'App\Models\Icon\IconAcademyStartupData' ? Auth::user()->userable->academy->leader->identity_card_path : Auth::user()->userable->academy->identity_card_path);
+        $this->photo1 = Auth::user()->userable->academy->leader->identity_card_path;
+        $this->isStartup = (Auth::user()->userable->academy_type == 'App\Models\Icon\IconAcademyStartupData' ? true : false);
         $this->whatsapp = Auth::user()->no_hp;
-        if (Auth::user()->userable->academy_type == 'App\Models\Icon\IconAcademyStartupData') {
-            $this->team_name = Auth::user()->userable->academy->team_name;
-            $this->institute_name = Auth::user()->userable->academy->institute_name;
-            $this->startup_idea = Auth::user()->userable->academy->startup_idea;
-            $this->reason_joining_academy = Auth::user()->userable->academy->reason_joining_academy;
-            $this->post_academy_activity = Auth::user()->userable->academy->post_academy_activity;
-            $this->expectation_joining_academy = Auth::user()->userable->academy->expectation_joining_academy;
-            $this->member_2_name = Auth::user()->userable->academy->member_1->name;
-            $this->member_2_email = Auth::user()->userable->academy->member_1->email;
-            $this->member_2_whatsapp = Auth::user()->userable->academy->member_1->whatsapp;
-            $this->photo2 = Auth::user()->userable->academy->member_1->identity_card_path;
-            $this->member_1_twibbon = Auth::user()->userable->academy->leader->link_twibbon;
-            $this->member_2_twibbon = Auth::user()->userable->academy->member_1->link_twibbon;
-            $this->isStartup = true;
+        $this->team_name = Auth::user()->userable->academy->team_name;
+        $this->institute_name = Auth::user()->userable->academy->university_name;
+        $this->startup_idea = Auth::user()->userable->academy->startup_idea;
+        $this->reason_joining_academy = Auth::user()->userable->academy->reason_joining_academy;
+        $this->post_academy_activity = Auth::user()->userable->academy->post_academy_activity;
+        $this->expectation_joining_academy = Auth::user()->userable->academy->expectation_joining_academy;
+        $this->member_2_name = Auth::user()->userable->academy->member_1->name;
+        $this->member_2_email = Auth::user()->userable->academy->member_1->email;
+        $this->member_2_whatsapp = Auth::user()->userable->academy->member_1->whatsapp;
+        $this->photo2 = Auth::user()->userable->academy->member_1->identity_card_path;
+        $this->photo2 = Auth::user()->userable->academy->member_2->identity_card_path;
+        $this->member_1_twibbon = Auth::user()->userable->academy->leader->link_twibbon;
+        $this->member_2_twibbon = Auth::user()->userable->academy->member_1->link_twibbon;
+        $this->member_3_name = Auth::user()->userable->academy->member_2->name;
+        $this->member_3_email = Auth::user()->userable->academy->member_2->email;
+        $this->member_3_whatsapp = Auth::user()->userable->academy->member_2->whatsapp;
+        $this->member_3_twibbon = Auth::user()->userable->academy->member_2->link_twibbon;
 
-            if (Auth::user()->userable->academy->member2_id) {
-                $this->member_3_name = Auth::user()->userable->academy->member_2->name;
-                $this->member_3_email = Auth::user()->userable->academy->member_2->email;
-                $this->member_3_whatsapp = Auth::user()->userable->academy->member_2->whatsapp;
-                $this->member_3_twibbon = Auth::user()->userable->academy->member_2->link_twibbon;
-                $this->photo3 = Auth::user()->userable->academy->member_2->identity_card_path;
-            }
-        } else {
-            $this->hackerrank_link = Auth::user()->userable->academy->hackerrank_profile_link;
-            $this->curriculum_vitae = Auth::user()->userable->academy->cv_path;
-            $this->twibbon_link = Auth::user()->userable->academy->link_twibbon;
-        }
         $this->alert();
     }
 
@@ -316,31 +308,6 @@ class IdentitasTim extends Component
     }
 
 
-    public function startupMount()
-    {
-        $this->team_name = Auth::user()->userable->academy->team_name;
-        $this->institute_name = Auth::user()->userable->academy->institute_name;
-        $this->startup_idea = Auth::user()->userable->academy->startup_idea;
-        $this->reason_joining_academy = Auth::user()->userable->academy->reason_joining_academy;
-        $this->post_academy_activity = Auth::user()->userable->academy->post_academy_activity;
-        $this->expectation_joining_academy = Auth::user()->userable->academy->expectation_joining_academy;
-        $this->member_2_name = Auth::user()->userable->academy->member_1->name;
-        $this->member_2_email = Auth::user()->userable->academy->member_1->email;
-        $this->member_2_whatsapp = Auth::user()->userable->academy->member_1->whatsapp;
-        $this->photo2 = Auth::user()->userable->academy->member_1->identity_card_path;
-        $this->member_1_twibbon = Auth::user()->userable->academy->leader->link_twibbon;
-        $this->member_2_twibbon = Auth::user()->userable->academy->member_1->link_twibbon;
-        $this->isStartup = true;
-
-        if (Auth::user()->userable->academy->member2_id) {
-            $this->member_3_name = Auth::user()->userable->academy->member_2->name;
-            $this->member_3_email = Auth::user()->userable->academy->member_2->email;
-            $this->member_3_whatsapp = Auth::user()->userable->academy->member_2->whatsapp;
-            $this->member_3_twibbon = Auth::user()->userable->academy->member_2->link_twibbon;
-            $this->photo3 = Auth::user()->userable->academy->member_2->identity_card_path;
-        }
-    }
-
     public function closeMessage()
     {
         $this->resetErrorBag();
@@ -364,23 +331,23 @@ class IdentitasTim extends Component
 
     public function alert()
     {
-        switch (Auth::user()->userable->academy->profile_verif_status) {
-            case 'Tahap Verifikasi':
-                $this->alert_color = 'yellow';
-                $this->alert_header = 'Identitas Sedang Dalam Tahap Verifikasi';
-                $this->alert_content = 'Mohon tunggu beberapa saat hingga identitas anda diverifikasi oleh admin';
+        switch (Auth::user()->userable->academy->competition_round) {
+            case 'Administrasi':
+                $this->alert_color = 'blue';
+                $this->alert_header = 'Tim Anda dalam tahap proses seleksi berkas';
+                $this->alert_content = 'Hai Metazen, selamat kamu telah berhasil mendaftarkan diri di ISE Academy 2022. Saat ini admin sedang melakukan proses seleksi berkas, hasil seleksi akan diumumkan pada tanggal 28 Agustus 2022.';
                 $this->readonly = true;
                 break;
-            case 'Terverifikasi':
+            case 'Pending':
                 $this->alert_color = 'green';
-                $this->alert_header = 'Identitas Telah Terverifikasi';
-                $this->alert_content = 'Selamat identitas anggota tim telah diverifikasi oleh Admin';
-                $this->readonly = true;
+                $this->alert_header = 'Tim Anda lolos tahap seleksi berkas';
+                $this->alert_content = 'Selamat Tim anda telah lolos dalam  tahap seleksi berkas, pantau terus media sosial kami untuk informasi selanjutnya';
+                $this->readonly = false;
                 break;
-            case 'Ditolak':
+            case 'Rejected':
                 $this->alert_color = 'red';
-                $this->alert_header = 'Identitas Ditolak';
-                $this->alert_content = 'Identitas ditolak karena alasan berikut : <b>' . Auth::user()->userable->academy->profile_verif_comment . '</b>';
+                $this->alert_header = 'Tim Anda tidak lolos tahap seleksi berkas';
+                $this->alert_content = '';
                 $this->readonly = false;
                 break;
             default:
@@ -396,6 +363,6 @@ class IdentitasTim extends Component
 
     public function render()
     {
-        return view('livewire.pages.icon.academy.peserta.identitas-tim');
+        return view('livewire.pages.icon.academy.peserta.identitas-tim')->layout('layouts.dashboard');
     }
 }
