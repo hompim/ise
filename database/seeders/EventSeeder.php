@@ -33,6 +33,24 @@ class EventSeeder extends Seeder
                 'regis_link' => 'register-is-class',
                 'landing_link' =>null,
                 'event_type' => 'SMA',
+            ],
+            [
+                'title' => 'Data Science Academy ISE! 2022',
+                'description' => 'desc',
+                'start_date' => '2022-08-01',
+                'end_date' => null,
+                'regis_link' => 'register-data-science-academy',
+                'landing_link' =>null,
+                'event_type' => 'Mahasiswa',
+            ],
+            [
+                'title' => 'Startup Academy ISE! 2022',
+                'description' => 'desc',
+                'start_date' => '2022-08-01',
+                'end_date' => null,
+                'regis_link' => 'register-startup-academy',
+                'landing_link' =>null,
+                'event_type' => 'Mahasiswa',
             ]
             ]);
     }
