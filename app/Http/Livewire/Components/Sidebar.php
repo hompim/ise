@@ -123,26 +123,26 @@ class Sidebar extends Component
                         'type' => 'divider',
                         'tag' => 'mb-3'
                     ],
-                    [
-                        'type' => 'title',
-                        'title' => 'Academy'
-                    ],
-                    [
-                        'type' => 'menu',
-                        'icon' => 'cil-home',
-                        'title' => 'Beranda',
-                        'route-name' => 'academy.admin.beranda'
-                    ],
-                    [
-                        'type' => 'menu',
-                        'icon' => 'cil-group',
-                        'title' => 'Daftar Peserta',
-                        'route-name' => 'academy.admin.daftar-academy'
-                    ],
-                    [
-                        'type' => 'divider',
-                        'tag' => 'mb-3'
-                    ],
+                    // [
+                    //     'type' => 'title',
+                    //     'title' => 'Academy'
+                    // ],
+                    // [
+                    //     'type' => 'menu',
+                    //     'icon' => 'cil-home',
+                    //     'title' => 'Beranda',
+                    //     'route-name' => 'academy.admin.beranda'
+                    // ],
+                    // [
+                    //     'type' => 'menu',
+                    //     'icon' => 'cil-group',
+                    //     'title' => 'Daftar Peserta',
+                    //     'route-name' => 'academy.admin.daftar-academy'
+                    // ],
+                    // [
+                    //     'type' => 'divider',
+                    //     'tag' => 'mb-3'
+                    // ],
                     [
                         'type' => 'title',
                         'title' => 'Webinar Kick Off'
