@@ -132,50 +132,50 @@
     <!--Frame picture-->
     <div class="flex justify-center mt-[28px] mb-[71px] lg:mt-[146px]">
         <img class="relative mt-10 justify-center w-[312px] h-[247px] lg:w-[826px] lg:h-[818px] "
-            src="{{ asset('images/Frame.svg') }}" alt="">
+            src="{{ asset('images/icon-buildings.svg') }}" alt="">
         <!--Icon kecil city-->
         <div>
             <div class="group">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
                     <a href="{{ route('startup-academy') }}"
-                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] font-semibold lg:text-[20px] ml-[-200px] lg:mt-[22px] lg:ml-[-530px]">
+                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] font-semibold lg:text-[20px] ml-[-210px] lg:mt-[70px] lg:ml-[-530px]">
                         Startup Academy</a>
                 </div>
                 <a href="{{ route('startup-academy') }}"
-                    class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
+                    class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[108px] ml-[-170px] lg:ml-[-450px]"><img
                         src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></a>
             </div>
             <!-- 2 -->
             <div class="group ml-[-60px] lg:ml-[-168px]">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
                     <a href="{{ route('data-science-academy') }}"
-                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] mt-[100px] lg:mt-80 font-semibold lg:text-[20px] ">
+                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] mt-[90px] lg:mt-80 font-semibold lg:text-[20px] -translate-x-4 lg:-translate-x-12">
                         Data Science Academy</a>
                 </div>
                 <a href="{{ route('data-science-academy') }}"
-                    class="absolute lg:transition mt-[150px] lg:mt-[410px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
+                    class="absolute lg:transition mt-[130px] lg:mt-[380px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/data-science-icon.svg') }}" alt=""></a>
             </div>
             <!-- 3 -->
             <div class="group ">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
                     <p
-                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-330px] mt-[90px] lg:ml-[-900px] lg:mt-64 font-semibold lg:text-[20px] ">
+                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-330px] mt-[90px] lg:ml-[-800px] lg:mt-64 font-semibold lg:text-[20px] ">
                         Grand Talkshow</p>
                 </div>
                 <button
-                    class="absolute lg:transition ml-[-295px] mt-[120px] lg:ml-[-780px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
+                    class="absolute lg:transition ml-[-275px] mt-[110px] lg:ml-[-720px] lg:mt-[300px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/grand-is.svg') }}" alt=""></button>
             </div>
             <!-- 4 -->
             <div class="group ">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
                     <p
-                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-220px] mt-[140px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
+                        class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-200px] mt-[140px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
                         E-Hall of IS</p>
                 </div>
                 <a href="{{ route('coming-soon') }}"
-                    class="absolute lg:transition ml-[-196px] mt-[166px] lg:ml-[-520px] lg:mt-[460px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
+                    class="absolute lg:transition ml-[-176px] mt-[155px] lg:ml-[-480px] lg:mt-[420px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/hall-is.svg') }}" alt=""></a>
             </div>
 
