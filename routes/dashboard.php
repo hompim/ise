@@ -129,19 +129,20 @@ Route::middleware('auth')->group(function () {
             Route::group(['prefix' => 'icon'], function () {
                 Route::group(['prefix' => 'academy'], function () {
                     // Rute DS Academy
-                    Route::group(['prefix' => 'data-science'], function () {
-                        Route::get('register/success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\DataScienceAcademy::class)->name('register-ds-success');
+                    Route::group(['prefix' => 'data-science', 'middleware' => 'iconcheck:unregistered'], function () {
                         Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience::class)->name('register-data-science-academy');
                     });
 
                     // Rute Startup Academy
-                    Route::group(['prefix' => 'startup'], function () {
+                    Route::group(['prefix' => 'startup','middleware' => 'iconcheck:unregistered'], function () {
                         Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterStartup::class)->name('register-startup-academy');
-                        Route::get('register/success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\StartupAcademy::class)->name('register-startup-success');
                     });
 
-                    Route::get('beranda', \App\Http\Livewire\Pages\Icon\Academy\Peserta\Beranda::class)->name('academy.peserta.beranda');
-                    Route::get('identitas-tim', \App\Http\Livewire\Pages\Icon\Academy\Peserta\IdentitasTim::class)->name('academy.peserta.identitas-tim');
+                    Route::group(['middleware' => 'usertype:academy_peserta'], function () {
+                        Route::get('register/success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\DataScienceAcademy::class)->name('register-ds-success');
+                        Route::get('beranda', \App\Http\Livewire\Pages\Icon\Academy\Peserta\Beranda::class)->name('academy.peserta.beranda');
+                        Route::get('identitas-tim', \App\Http\Livewire\Pages\Icon\Academy\Peserta\IdentitasTim::class)->name('academy.peserta.identitas-tim');
+                    });
                 });
             });
 

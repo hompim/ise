@@ -19,7 +19,7 @@
                                         Coming Soon
                                     @endif
                             </div>
-                            <p class="text-sm font-weight-normal text-white my-4">{{ $e->description }}</p>
+                            <p class="text-sm font-weight-normal text-white my-4">{!! $e->description !!}</p>
                         </div>
                         <div>
                             @if ($e->regis_link && $e->start_date)

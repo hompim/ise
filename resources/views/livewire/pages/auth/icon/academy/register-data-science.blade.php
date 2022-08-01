@@ -136,6 +136,7 @@
                             @if ($x < 3) required @endif
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Link Twibbon Anggota {{ $x }}">
+                            <small>Petunjuk twibbon dapat diunduh lewat link berikut: <a class="text-blue-400" href="https://ise-its.com/PetunjukTwibbonAcademy">ise-its.com/PetunjukTwibbonAcademy</a></small>
                     </div>
                     <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                         <label for="cv_{{ $x }}">Curriculum Vitae (<=3Mb, .pdf) </label>

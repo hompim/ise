@@ -1,4 +1,4 @@
-<div class="px-8">
+<div class="px-8 text-white">
     <div
         class="bg-{{$alert_color}}-100 border-t-4 border-{{$alert_color}}-500 rounded-b text-{{$alert_color}}-900 px-4 py-3 shadow-md"
         role="alert">
@@ -18,12 +18,12 @@
     </div>
     <h3 class="text-xl font-weight-bold my-4">Informasi Tim</h3>
     <form wire:submit.prevent="saveData" enctype="multipart/form-data">
-        <div class="card p-8 rounded-xl">
+        <div class="card p-8 rounded-xl" style="background-color: #191a1e;border:0">
             <div
                 class="grid sm:mb-10 sm:gap-x-20 sm:gap-y-8 gap-y-5 gap-x-5 md:grid-cols-10">
                 <h4 class="text-lg font-bold text-gray-500 col-span-5 md:col-span-2">Tim</h4>
                 <div class="md:hidden col-span-5">
-                    {{-- @if($is_edit)
+                    @if($is_edit)
                         @if(Auth::user()->userable->academy->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->academy->profile_verif_status!="Tahap Verifikasi")
                             <button
                                 class="justify-self-end block text-blue-500">Simpan
@@ -35,10 +35,10 @@
                             <button
                                 type="button"
                                 class="justify-self-end block text-blue-500"
-                                wire:click="toEditMode()"><i class="fas fa-edit"></i> Edit
+                                wire:click="toEditMode()">
                             </button>
                         @endif
-                    @endif --}}
+                    @endif
                 </div>
                 <div class="col-span-10 md:col-span-6 flex items-center">
                     <div class="border-2 border-bottom-0 flex-grow" style="height: 1px;"></div>
@@ -54,7 +54,7 @@
                         @if(Auth::user()->userable->academy->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->academy->profile_verif_status!="Tahap Verifikasi")
                             <button type="button"
                                     class="text-blue-500 justify-self-end"
-                                    wire:click="toEditMode()"><i class="fas fa-edit"></i> Edit
+                                    wire:click="toEditMode()">
                             </button>
                         @endif
                     @endif
@@ -86,63 +86,6 @@
                             <p class="font-bold text-lg">{{$institute_name}}</p>
                         @endif
                     </div>
-                    <div class="">
-                        <label for="" class="mb-2 font-bold text-gray-400 mt-4">Jelaskan secara singkat ide startup tim
-                            Anda! (maks. 300 kata)</label><br>
-                        @if($is_edit)
-                            <textarea wire:model.defer="startup_idea" id="startup_idea" name="startup_idea"
-                                      class="registration-form input-text" required rows="5"
-                                      onkeyup="countWords(this.value,'startup_idea_error')"></textarea>
-                            <small class="text-red-400 font-normal" id="startup_idea_error"
-                                   style="display: none">Tidak boleh lebih dari 300 kata.</small><br/>
-                        @else
-                            <p class="font-semibold text-md">{{($startup_idea==''?'Belum terisi':$startup_idea)}}</p>
-                        @endif
-                    </div>
-                    <div class="">
-                        <label for="" class="mb-2 font-bold text-gray-400 mt-4">Apa alasan Anda mendaftar Startup
-                            Academy? (maks. 300 kata)</label><br>
-                        @if($is_edit)
-                            <textarea wire:model.defer="reason_joining_academy" id="reason_joining_academy"
-                                      name="reason_joining_academy"
-                                      class="registration-form input-text" required rows="5"
-                                      onkeyup="countWords(this.value,'reason_joining_error')"></textarea>
-                            <small class="text-red-400 font-normal" id="reason_joining_error"
-                                   style="display: none">Tidak boleh lebih dari 300 kata.</small><br/>
-                        @else
-                            <p class="font-bold text-md">{{($reason_joining_academy==''?'Belum terisi':$reason_joining_academy)}}</p>
-                        @endif
-                    </div>
-                    <div class="">
-                        <label for="" class="mb-2 font-bold text-gray-400 mt-4">Apa yang tim Anda harapkan dari Startup
-                            Academy? (maks. 300 kata)</label><br>
-                        @if($is_edit)
-                            <textarea wire:model.defer="expectation_joining_academy" id="expectation_joining_academy"
-                                      name="expectation_joining_academy"
-                                      class="registration-form input-text" required rows="5"
-                                      onkeyup="countWords(this.value,'expectation_joining_error')"></textarea>
-                            <small class="text-red-400 font-normal" id="expectation_joining_error"
-                                   style="display: none">Tidak boleh lebih dari 300 kata.</small><br/>
-                        @else
-                            <p class="font-bold text-md">{{($expectation_joining_academy==''?'Belum terisi':$expectation_joining_academy)}}</p>
-                        @endif
-                    </div>
-                    <div class="">
-                        <label for="" class="mb-2 font-bold text-gray-400 mt-4">Apa yang tim Anda akan lakukan pasca
-                            mengikuti Startup Academy? (maks. 300 kata)</label><br>
-                        @if($is_edit)
-                            <textarea wire:model.defer="post_academy_activity" id="post_academy_activity"
-                                      name="post_academy_activity"
-                                      class="registration-form input-text" required rows="5"
-                                      onkeyup="countWords(this.value,'post_academy_error')"></textarea>
-                            <small class="text-red-400 font-normal" id="post_academy_error"
-                                   style="display: none">Tidak boleh lebih dari 300 kata.</small><br/>
-                        @else
-                            <p class="font-bold text-md">{{($post_academy_activity==''?'Belum terisi':$post_academy_activity)}}</p>
-                        @endif
-                    </div>
-
-
                 </div>
 
                 <div class="col-span-10 md:col-span-2"></div>

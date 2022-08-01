@@ -117,7 +117,7 @@ class RegisterDataScience extends Component
         // Update data peserta1 jika berubah
         Auth::user()->update([
             'name' => $this->member_1_name,
-            'no_hp' => $this->member_1_whatsapp
+            'whatsapp' => $this->member_1_whatsapp
         ]);
 
         // Simpan data ke database

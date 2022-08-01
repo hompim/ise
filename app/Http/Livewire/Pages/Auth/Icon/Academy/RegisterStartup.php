@@ -68,8 +68,8 @@ class RegisterStartup extends Component
         }
 
         $this->validate([
-            'team_name' => 'required|max:15',
-            'judul_bisnis' => 'required|max:20',
+            'team_name' => 'required',
+            'judul_bisnis' => 'required',
             'deskripsi' => 'required'
         ]);
 
@@ -155,7 +155,7 @@ class RegisterStartup extends Component
         // Update data peserta1 jika berubah
         Auth::user()->update([
             'name' => $this->member_1_name,
-            'no_hp' => $this->member_1_whatsapp
+            'whatsapp' => $this->member_1_whatsapp
         ]);
 
         // Simpan data ke database
@@ -199,7 +199,7 @@ class RegisterStartup extends Component
         // Menyimpan data tim pada database
         $team_data = IconAcademyStartupData::create([
             'team_name' => $this->team_name,
-            'institute_name' => $this->member_1_universitas,
+            'university_name' => $this->member_1_universitas,
             'startup_idea_title' => $this->judul_bisnis,
             'startup_idea_desc' => $this->deskripsi,
             'leader_id' => $team_member_1->id,
@@ -219,7 +219,7 @@ class RegisterStartup extends Component
             'academy_type' => 'App\Models\Icon\IconAcademyStartupData'
         ]);
 
-        return redirect()->to(route('register-startup-success'));
+        return redirect()->to(route('register-ds-success'));
     }
 
     public function mount(){

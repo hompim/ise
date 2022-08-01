@@ -1,7 +1,7 @@
 
     <div class="mx-8 text-white">
         {{--    Header Card--}}
-        <h1 class="text-3xl font-weight-bold">Halo, Selamat Datang di Dashboard {{Auth::user()->userable->academy_type == "App/Models/Icon/IconDataScienceData" ? "Data Science Academy" : "Startup Academy"}}!</h1>
+        <h1 class="text-3xl font-weight-bold">Halo, Selamat Datang di Dashboard {{Auth::user()->userable->academy_type == "App\Models\Icon\IconAcademyDataScienceData" ? "Data Science Academy" : "Startup Academy"}}!</h1>
         <div class="grid md:grid-cols-2 gap-4">
             <div>
                 <h3 class="text-xl font-weight-bold mt-8">Info</h3>
