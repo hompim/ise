@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('icon_academy_startup_data', function (Blueprint $table) {
             $table->id();
             $table->string('team_name');
-            $table->string('institute_name');
+            $table->string('university_name');
             $table->text('startup_idea_title');
             $table->text('startup_idea_desc');
             $table->enum('commitement_payment_status', ['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Belum Unggah');

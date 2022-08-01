@@ -199,7 +199,7 @@ class RegisterStartup extends Component
         // Menyimpan data tim pada database
         $team_data = IconAcademyStartupData::create([
             'team_name' => $this->team_name,
-            'institute_name' => $this->member_1_universitas,
+            'university_name' => $this->member_1_universitas,
             'startup_idea_title' => $this->judul_bisnis,
             'startup_idea_desc' => $this->deskripsi,
             'leader_id' => $team_member_1->id,

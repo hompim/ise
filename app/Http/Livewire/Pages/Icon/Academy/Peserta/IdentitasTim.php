@@ -56,7 +56,7 @@ class IdentitasTim extends Component
         $this->email = Auth::user()->email;
         $this->photo1 = Auth::user()->userable->academy->leader->identity_card_path;
         $this->isStartup = (Auth::user()->userable->academy_type == 'App\Models\Icon\IconAcademyStartupData' ? true : false);
-        $this->whatsapp = Auth::user()->no_hp;
+        $this->whatsapp = Auth::user()->whatsapp;
         $this->team_name = Auth::user()->userable->academy->team_name;
         $this->institute_name = Auth::user()->userable->academy->university_name;
         $this->startup_idea = Auth::user()->userable->academy->startup_idea;
@@ -67,7 +67,7 @@ class IdentitasTim extends Component
         $this->member_2_email = Auth::user()->userable->academy->member_1->email;
         $this->member_2_whatsapp = Auth::user()->userable->academy->member_1->whatsapp;
         $this->photo2 = Auth::user()->userable->academy->member_1->identity_card_path;
-        $this->photo2 = Auth::user()->userable->academy->member_2->identity_card_path;
+        $this->photo3 = Auth::user()->userable->academy->member_2->identity_card_path;
         $this->member_1_twibbon = Auth::user()->userable->academy->leader->link_twibbon;
         $this->member_2_twibbon = Auth::user()->userable->academy->member_1->link_twibbon;
         $this->member_3_name = Auth::user()->userable->academy->member_2->name;
