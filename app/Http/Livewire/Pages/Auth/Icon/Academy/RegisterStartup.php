@@ -68,8 +68,8 @@ class RegisterStartup extends Component
         }
 
         $this->validate([
-            'team_name' => 'required|max:15',
-            'judul_bisnis' => 'required|max:20',
+            'team_name' => 'required',
+            'judul_bisnis' => 'required',
             'deskripsi' => 'required'
         ]);
 
@@ -219,7 +219,7 @@ class RegisterStartup extends Component
             'academy_type' => 'App\Models\Icon\IconAcademyStartupData'
         ]);
 
-        return redirect()->to(route('register-startup-success'));
+        return redirect()->to(route('register-ds-success'));
     }
 
     public function mount(){

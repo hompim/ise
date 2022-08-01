@@ -17,7 +17,7 @@ class usertype
      */
     public function handle(Request $request, Closure $next, $type)
     {
-        if ($type == 'bionix_peserta'  || $type == 'member' || $type == 'isclass_peserta') {
+        if ($type == 'bionix_peserta'  || $type == 'member' || $type == 'isclass_peserta'|| $type == 'academy_peserta') {
             if (Auth::user()->userable_type == "App\Models\Member") {
                 if ($type == 'bionix_peserta') {
                     if (!Auth::user()->userable->bionix_id) {
@@ -31,6 +31,10 @@ class usertype
                 else if ($type == 'isclass_peserta') {
                     if (!Auth::user()->userable->isclass) {
                         return redirect()->to(route('register-is-class'));
+                    }
+                }else if($type == 'academy_peserta'){
+                    if(!Auth::user()->userable->academy_id){
+                        return redirect()->to(route('peserta.dashboard.choose'));
                     }
                 }
                 return $next($request);
