@@ -295,20 +295,18 @@
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa itu Data Science Academy?</h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Data Science Academy adalah salah
@@ -326,20 +324,18 @@
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Kapan acara berlangsung?</h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Data Science Academy adakan
@@ -357,20 +353,18 @@
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana alur pendaftaran Data
                                 Science Academy?
                             </h1>
-                            <button x-on:click="open = !open">
                                 <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Pendaftaran dapat dilakukan dengan
@@ -392,20 +386,18 @@
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Berapa banyak kuota tim peserta Data
                                 Science Academy?
                             </h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Kuota peserta Data Science Academy :
@@ -422,20 +414,18 @@
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana seleksi tim dilakukan?
                             </h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Seleksi tim peserta Data Science
@@ -453,20 +443,18 @@
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa saja syarat peserta Data Science
                                 Academy?</h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Peserta adalah mahasiswa aktif di
@@ -485,20 +473,18 @@
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Berapa biaya pendaftaran Data
                                 Science Academy?</h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Biaya pendaftaran Data Science
@@ -520,20 +506,18 @@
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa saja yang didapatkan dari ISE!
                                 Academy?
                             </h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Pada Data Science Academy, peserta

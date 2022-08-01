@@ -328,22 +328,20 @@
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa itu Startup Academy?</h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
-                        <div x-show="open" x-cloak class="pt-4">
+                        <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Startup Academy adalah salah satu
                                 sub-event ICON pada Information Systems Expo! 2022 yang merupakan acara edukasi
                                 berbentuk workshop tematik seputar dunia Startup untuk membentuk The Next Startup
@@ -359,7 +357,6 @@
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Kapan acara berlangsung?</h1>
-                            <button x-on:click="open = !open">
                                 <div x-show="!open">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -372,9 +369,8 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
                                     </svg>
                                 </div>
-                            </button>
                         </div>
-                        <div x-show="open" x-cloak class="pt-4">
+                        <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Startup Academy adakan berlangsung
                                 pada hari Sabtu-Minggu, 10-11 September 2022 dan 17-18 September 2022.</h1>
                         </div>
@@ -390,7 +386,6 @@
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana alur pendaftaran Startup
                                 Academy?
                             </h1>
-                            <button x-on:click="open = !open">
                                 <div x-show="!open">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -403,9 +398,8 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
                                     </svg>
                                 </div>
-                            </button>
                         </div>
-                        <div x-show="open" x-cloak class="pt-4">
+                        <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Pendaftaran dapat dilakukan dengan
                                 membuat akun pada https://ise-its.com/icon. Khusus untuk Startup Academy, peserta hanya
                                 perlu membuat 1 akun atas nama Ketua Tim. Langkah-langkah pendaftaran lebih lanjut dapat
@@ -424,22 +418,20 @@
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Berapa banyak kuota tim peserta
                                 Startup Academy?</h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
-                        <div x-show="open" x-cloak class="pt-4">
+                        <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Kuota peserta Startup Academy adalah
                                 sebanyak: 20 tim
                             </h1>
@@ -454,22 +446,20 @@
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana proses seleksi tim?</h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
-                        <div x-show="open" x-cloak class="pt-4">
+                        <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Seleksi tim peserta Startup Academy
                                 didasarkan pada inovasi dan keunikan ide startup yang diajukan. Keputusan panitia tidak
                                 dapat diganggu gugat.</h1>
@@ -485,22 +475,20 @@
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa saja syarat peserta Startup
                                 Academy?</h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
-                        <div x-show="open" x-cloak class="pt-4">
+                        <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Peserta adalah mahasiswa aktif di
                                 tingkat D3/D4/S1/sederajat dibuktikan dengan Kartu Tanda Mahasiswa. Jika hilang atau
                                 belum memiliki, peserta diperbolehkan untuk menggantinya dengan bukti lain, yaitu Surat
@@ -518,22 +506,20 @@
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Berapa biaya pendaftaran Startup
                                 Academy?</h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
-                        <div x-show="open" x-cloak class="pt-4">
+                        <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Biaya pendaftaran Startup Academy
                                 adalah gratis. Setelah lolos proses seleksi, Peserta yang lolos diharuskan membayar
                                 commitment fee sebesar Rp150.000. </h1>
@@ -548,22 +534,20 @@
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa saja yang didapatkan dari ISE!
                                 Academy?</h1>
-                            <button x-on:click="open = !open">
-                                <div x-show="!open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </div>
-                                <div x-show="open">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                                    </svg>
-                                </div>
-                            </button>
+                            <div x-show="!open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                            <div x-show="open">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                                </svg>
+                            </div>
                         </div>
-                        <div x-show="open" x-cloak class="pt-4">
+                        <div x-show="open" x-cloak class="pt-4" x-transition>
                             <h1 class="w-[80%] text-liteGray text-base md:text-lg">Pada Startup Academy, peserta akan
                                 mendapatkan bimbingan dan umpan balik dari expert di dunia Startup terkait ide yang
                                 dimiliki, serta materi workshop mengenai dasar-dasar Startup (termasuk recording dan
