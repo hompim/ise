@@ -82,7 +82,7 @@ class RegisterDataScience extends Component
                     'ktm_'.$x => $required . 'image|max:2048', // 2MB Max
                     'member_'.$x.'_ig' => $required . 'string',
                     'member_'.$x.'_twibbon' => $required . 'string',
-                    'cv_'.$x => $required . 'mimes:png,jpg,pdf|max:3072', // 3MB Max, allowed file ext: PNG, JPG, PDF
+                    'cv_'.$x => $required . 'mimes:pdf|max:3072', // 3MB Max, allowed file ext: PNG, JPG, PDF
                 ]);
             }
         }
