@@ -244,26 +244,26 @@ class Sidebar extends Component
                             'title' => 'Startup Academy'
                         ]
                     );
-                    array_push(
-                        $this->menu,
-                        [
-                            'type' => 'menu',
-                            'icon' => 'cil-home',
-                            'title' => 'Beranda',
-                            'route-name' => 'academy.peserta.beranda'
-                        ],
-                        [
-                            'type' => 'menu',
-                            'icon' => 'cil-group',
-                            'title' => 'Identitas Tim',
-                            'route-name' => 'academy.peserta.identitas-tim'
-                        ],
-                        [
-                            'type' => 'divider',
-                            'tag' => 'class=my-2'
-                        ]
-                    );
                 }
+                array_push(
+                    $this->menu,
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-home',
+                        'title' => 'Beranda',
+                        'route-name' => 'academy.peserta.beranda'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-group',
+                        'title' => 'Identitas Tim',
+                        'route-name' => 'academy.peserta.identitas-tim'
+                    ],
+                    [
+                        'type' => 'divider',
+                        'tag' => 'class=my-2'
+                    ]
+                );
             }
         }
     }
