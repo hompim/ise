@@ -40,26 +40,26 @@
         </dl>
         <dl class="text-center lg:!text-start">
             <dt class="pb-4 text-xl font-semibold text-white font-poppins">IT Convention Zone</dt>
-            <a href="/icon">
+            <a href="{{ route('data-science-academy') }}">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     Data Science
                     Academy
                 </dd>
             </a>
-            <a href="/icon#">
+            <a href="{{ route('startup-academy') }}">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     Startup Academy
                 </dd>
             </a>
-            <a href="/icon">
+            <a href="{{ route('coming-soon') }}">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     E-Hall of
                     Information System</dd>
             </a>
-            <a href="/icon">
+            <a href="{{ route('coming-soon') }}">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     Grand Talkshow

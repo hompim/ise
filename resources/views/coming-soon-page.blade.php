@@ -13,6 +13,10 @@
 
 <body class="h-screen bg-black bg-no-repeat bg-cover">
     <main class="flex flex-col items-center justify-center h-screen text-center">
+        <a href="{{ url()->previous() }}"
+            class="flex px-2 py-1 space-x-4 text-base font-semibold text-blue-900 transition -translate-y-12 bg-blue-100 rounded-lg md:text-lg font-poppins hover:scale-105 hover:bg-purple-50">
+            <img src="{{ asset('images/coming-soon/chevron-right.svg') }}" alt="chevron-right"
+                class="transform rotate-180" />Back</a>
         <div class="relative">
             <div class="absolute inset-0">
                 <h1 class="relative text-2xl font-bold text-blue-300 font-poppins lg:text-6xl md:text-4xl blur">

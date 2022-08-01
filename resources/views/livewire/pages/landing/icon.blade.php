@@ -137,24 +137,24 @@
         <div>
             <div class="group">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
-                    <p
+                    <a href="{{ route('startup-academy') }}"
                         class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] font-semibold lg:text-[20px] ml-[-200px] lg:mt-[22px] lg:ml-[-530px]">
-                        Startup Academy</p>
+                        Startup Academy</a>
                 </div>
-                <button
+                <a href="{{ route('startup-academy') }}"
                     class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 absolute mt-[35px] lg:mt-[115px] ml-[-180px] lg:ml-[-480px]"><img
-                        src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></button>
+                        src="{{ asset('images/startup-academy-icon.svg') }}" alt=""></a>
             </div>
             <!-- 2 -->
             <div class="group ml-[-60px] lg:ml-[-168px]">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
-                    <p
+                    <a href="{{ route('data-science-academy') }}"
                         class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] mt-[100px] lg:mt-80 font-semibold lg:text-[20px] ">
-                        Data Science Academy</p>
+                        Data Science Academy</a>
                 </div>
-                <button
+                <a href="{{ route('data-science-academy') }}"
                     class="absolute lg:transition mt-[150px] lg:mt-[410px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
-                        src="{{ asset('images/data-science-icon.svg') }}" alt=""></button>
+                        src="{{ asset('images/data-science-icon.svg') }}" alt=""></a>
             </div>
             <!-- 3 -->
             <div class="group ">
@@ -174,9 +174,9 @@
                         class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-220px] mt-[140px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
                         E-Hall of IS</p>
                 </div>
-                <button
+                <a href="{{ route('coming-soon') }}"
                     class="absolute lg:transition ml-[-196px] mt-[166px] lg:ml-[-520px] lg:mt-[460px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
-                        src="{{ asset('images/hall-is.svg') }}" alt=""></button>
+                        src="{{ asset('images/hall-is.svg') }}" alt=""></a>
             </div>
 
         </div>
@@ -201,9 +201,11 @@
                         Startup Academy akan memberikan para peserta pengetahuan dasar dalam pendirian sebuah startup.
                         Para peserta akan mendapatkan materi dan eksplorasi mandiri bersama para pakar di bidangnya.
                         Bangun startup-mu sendiri bersama Startup Academy.</p>
-                    <button
-                        class=" mt-[30px] ml-[50px]  md:ml-[92px] h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] md:text-2xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
-                        Lanjut</button>
+                    <a href="{{ route('startup-academy') }}">
+                        <button
+                            class=" mt-[30px] ml-[50px]  md:ml-[92px] h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] md:text-2xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                            Lanjut</button>
+                    </a>
                 </div>
 
             </div>
@@ -220,9 +222,11 @@
                         Data Science Academy mempersiapkan para peserta sebagai seorang data scientist dengan
                         fundamental yang kuat. Akademi ini dapat diikuti siapapun yang memiliki ketertarikan besar
                         terhadap data dan informasi.</p>
-                    <button
-                        class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
-                        Lanjut</button>
+                    <a href="{{ route('data-science-academy') }}">
+                        <button
+                            class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                            Lanjut</button>
+                    </a>
                 </div>
             </div>
             <!-- Item 3 -->
@@ -236,9 +240,11 @@
                         class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[25px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
                         Pameran karya autentik mahasiswa dan alumni Sistem Informasi ITS sebagai bentuk kontribusi untuk
                         negeri. Kunjungi dan menangkan setiap Challenge untuk menjadi bagian dari sejarah kami.</p>
-                    <button
-                        class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
-                        Lanjut</button>
+                    <a href="{{ route('coming-soon') }}">
+                        <button
+                            class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                            Lanjut</button>
+                    </a>
                 </div>
             </div>
             <!-- item 4 -->
@@ -254,9 +260,11 @@
                         Acara talkshow yang menghadirkan pembicara-pembicara terkemuka di bidangnya dengan berbagai
                         topik menarik untuk seluruh peserta. Bergabunglah secara gratis dan dapatkan manfaatnya secara
                         penuh!</p>
-                    <button
-                        class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
-                        Lanjut</button>
+                    <a href="{{ route('coming-soon') }}">
+                        <button
+                            class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
+                            Lanjut</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -366,7 +374,7 @@
                             <time
                                 class="block px-12 mb-9 tracking-wide text-[20px] font-bold text-white font-poppins">3
                                 September 2022</time>
-                            <h3 class="text-[16px] tracking-wide font-semibold text-white font-poppins pb-7">E-hall of
+                            <h3 class="text-[16px] tracking-wide font-semibold text-white font-poppins pb-7">E-Hall of
                                 IS
                         </div>
                     </li>

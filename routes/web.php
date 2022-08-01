@@ -42,7 +42,7 @@ Route::get('/icon/startup', Startup::class)->name('startup-academy');
 // Coming Soon Route
 Route::get('/coming-soon', function () {
     return view('coming-soon-page');
-});
+})->name('coming-soon');
 
 // <!-- Route::get('/sendEmail', function () {
 //     $pesertas = IconWebinarKickOff::all();
@@ -91,4 +91,3 @@ Route::get('testing', function () {
 ///Route Testng Register ACADEMY
 Route::get('/Registerds', RegisterDataScience::class);
 Route::get('/Registersa', RegisterStartup::class);
-
