@@ -258,6 +258,10 @@ class Sidebar extends Component
                             'title' => 'Identitas Tim',
                             'route-name' => 'academy.peserta.identitas-tim'
                         ],
+                        [
+                            'type' => 'divider',
+                            'tag' => 'class=my-2'
+                        ]
                     );
                 }
             }
