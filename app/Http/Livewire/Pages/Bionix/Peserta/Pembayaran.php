@@ -65,6 +65,11 @@ class Pembayaran extends Component
 
     public function checkPromo()
     {
+        if($this->invoice){
+            session()->flash('error', 'Promo otomatis digunakan saat membayar DP');
+            return;
+        }
+
         $promo = PromoCode::where('promo_code', $this->kode_promo)->first();
         if ($promo) {
             foreach ($this->promo as $p) {
@@ -96,6 +101,7 @@ class Pembayaran extends Component
         }
         if ($this->invoice) {
             $payment_price -= $this->invoice->nominal;
+            $payment_price -= 20000;
         }
         $this->payment_price = $payment_price;
     }
