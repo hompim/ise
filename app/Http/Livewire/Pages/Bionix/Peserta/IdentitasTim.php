@@ -462,7 +462,7 @@ class IdentitasTim extends Component
 
         Auth::User()->update([
             'name' => $this->member_1_name,
-            'whatsapp' => $this->member_1_whatsapp
+            'whatsapp' => $this->member_1_whatsapp,
         ]);
 
         Auth::user()->userable->bionix->leader->update([

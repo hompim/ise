@@ -128,7 +128,7 @@
                                     <label for="Email" class="mb-2 font-bold text-gray-400 mt-4">Email
                                         Peserta</label><br>
                                     @if ($is_edit)
-                                        <input wire:model.defer="email" type="text" id="email" name="email"
+                                        <input wire:model.defer="email" disabled type="text" id="email" name="email"
                                             class="bg-gray-100 form-control input-text"
                                             style="color: black;margin-top:0;" required disabled>
                                     @else
@@ -147,12 +147,8 @@
                                         <p class="font-bold text-lg">{{ $whatsapp }}</p>
                                     @endif
                                 </div>
-                                <div class="">
-                                    <label for="whatsapp" class="mb-2 font-bold text-gray-400 mt-4">Grub Whatsapp IS Clas
-                                    </label><br>
-                                        <a class="font-bold text-lg" href="https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm">https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm</a>
-                                </div>
                             </div>
+
                             <div class="mt-3">
                                 <div class="" x-data="{ isUploading: false, progress: 0 }"
                                     x-on:livewire-upload-start="isUploading = true"
@@ -183,6 +179,66 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="mt-3">
+                                <div class="" x-data="{ isUploading: false, progress: 0 }"
+                                    x-on:livewire-upload-start="isUploading = true"
+                                    x-on:livewire-upload-finish="isUploading = false"
+                                    x-on:livewire-upload-error="isUploading = false"
+                                    x-on:livewire-upload-progress="progress = $event.detail.progress">
+                                    <div class="flex flex-col items-center justify-center md:p-3 w-full">
+                                        <label for="kartu_pelajar" class="capitalize text-gray-400">twibbon</label>
+                                        <div x-show="isUploading" class="w-full">
+                                            <progress max="100" x-bind:value="progress"
+                                                class="w-full"></progress>
+                                        </div>
+                                        <img src="{{ $twibbon ? (is_string($twibbon) ? asset('storage/' . $twibbon) : $twibbon->temporaryUrl()) : asset('/img/global/placeholder-image.png') }}"
+                                            class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_card_preview"
+                                            style="max-height:50vh">
+                                        @if (Auth::user()->userable->isclass->profile_verif_status != 'Terverifikasi' &&
+                                            Auth::user()->userable->isclass->profile_verif_status != 'Tahap Verifikasi' &&
+                                            $is_edit)
+                                            <button type="button" onclick="$('#member_1_card').click()"
+                                                class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-3">
+                                                <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
+                                            </button>
+                                            <input type="file" wire:model.defer="twibbon" class="form-control-file"
+                                                name="twibbon" id="member_1_twibbon" accept=".jpg,.jpeg,.png"
+                                                hidden>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- <div class="mt-3">
+                                <div class="" x-data="{ isUploading: false, progress: 0 }"
+                                    x-on:livewire-upload-start="isUploading = true"
+                                    x-on:livewire-upload-finish="isUploading = false"
+                                    x-on:livewire-upload-error="isUploading = false"
+                                    x-on:livewire-upload-progress="progress = $event.detail.progress">
+                                    <div class="flex flex-col items-center justify-center md:p-3 w-full">
+                                        <label for="kartu_pelajar" class="capitalize text-gray-400">Bukti Follow</label>
+                                        <div x-show="isUploading" class="w-full">
+                                            <progress max="100" x-bind:value="progress"
+                                                class="w-full"></progress>
+                                        </div>
+                                        <img src="{{ $instagram ? (is_string($instagram) ? asset('storage/' . $instagram) $instagram->temporaryUrl()) : asset('/img/global/placeholder-image.png') }}"
+                                            class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_card_preview"
+                                            style="max-height:50vh">
+                                        @if (Auth::user()->userable->isclass->profile_verif_status != 'Terverifikasi' &&
+                                            Auth::user()->userable->isclass->profile_verif_status != 'Tahap Verifikasi' &&
+                                            $is_edit)
+                                            <button type="button" onclick="$('#member_1_card').click()"
+                                                class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-3">
+                                                <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
+                                            </button>
+                                            <input type="file" wire:model.defer="instagram" class="form-control-file"
+                                                name="instagram" id="member_1_instagram" accept=".jpg,.jpeg,.png"
+                                                hidden>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div> --}}
+
+
                         </div>
                     </div>
                 </div>

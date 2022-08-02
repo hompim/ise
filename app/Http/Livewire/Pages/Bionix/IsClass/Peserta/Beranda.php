@@ -22,7 +22,9 @@ class Beranda extends Component
         $readonly;
 
     public $name, $email, $whatsapp, $class, $photo1;
-    public $is_edit, $notif = true, $errorMessage, $photoUpdate = false;
+    public $twibbon;
+    public $instagram;
+    public $is_edit, $notif = true, $errorMessage, $photoUpdate = false, $twibbonUpdate = false, $instagramUpdate = false;
 
     public function render()
     {
@@ -32,10 +34,12 @@ class Beranda extends Component
     public function mount()
     {
         $this->name = Auth::user()->name;
-        $this->email = Auth::user()->name;
+        $this->email = Auth::user()->email;
         $this->whatsapp = Auth::user()->userable->isclass->school_name;
         $this->class = Auth::user()->userable->isclass->status;
         $this->photo1 = Auth::user()->userable->isclass->identity_card_path;
+        $this->twibbon = Auth::user()->userable->isclass->twibbon_path;
+        $this->instagram = Auth::user()->userable->isclass->instagram_path;
         $this->announcement = Announcement::all();
 
         $this->statusNotification();
@@ -71,22 +75,29 @@ class Beranda extends Component
         $this->notif = false;
     }
 
-    public function updatedPhoto1(){
+    public function updatedPhoto1()
+    {
         $this->photoUpdate = true;
+    }
+    public function updatedTwibbon()
+    {
+        $this->twibbonUpdate = true;
+    }
+    public function updatedInstagram()
+    {
+        $this->instagramUpdate = true;
     }
 
     public function saveData()
     {
         $this->validate([
             'name' => 'required',
-            'email' => 'required',
             'whatsapp' => 'required',
             'class' => 'required',
         ]);
 
         Auth::user()->update([
             'name' => $this->name,
-            'email' => $this->email,
             'whatsapp' => $this->whatsapp
         ]);
 
@@ -95,15 +106,16 @@ class Beranda extends Component
                 'photo1' => 'required|image|max:2048',
             ]);
 
-            Storage::disk('public')->makeDirectory('kartu_pelajar');
-            $name = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '.' . $this->kartu_pelajar->getClientOriginalExtension();
-            $kartu_pelajar_path = 'kartu_pelajar/' . $name;
+            Storage::disk('public')->makeDirectory('isclass');
+            $ktm = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_KTM' . '.' . $this->photo1->getClientOriginalExtension();
+
+            $kartu_pelajar_path = 'isclass/' . $ktm;
             $resized_image = (new ImageManager())
-                ->make($this->kartu_pelajar)
+                ->make($this->photo1)
                 ->resize(600, null, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
-                })->encode($this->kartu_pelajar->getClientOriginalExtension());
+                })->encode($this->photo1->getClientOriginalExtension());
 
             Storage::disk('public')
                 ->put(
@@ -115,10 +127,56 @@ class Beranda extends Component
                 'identity_card_path' => $kartu_pelajar_path
             ]);
         }
-        $this->is_edit=false;
+
+        if ($this->instagramUpdate) {
+            $instagram = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_INSTAGRAM' . '.' . $this->instagram->getClientOriginalExtension();
+
+            $instagram_path = 'isclass/' . $instagram;
+            $resized_image = (new ImageManager())
+                ->make($this->instagram)
+                ->resize(600, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->encode($this->instagram->getClientOriginalExtension());
+
+            Storage::disk('public')
+                ->put(
+                    $instagram_path,
+                    $resized_image->__toString()
+                );
+
+            Auth::user()->userable->isclass->update([
+                'instagram_path' => $instagram_path
+            ]);
+        }
+
+        if ($this->updatedTwibbon) {
+            $twibbon = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_TWIBBON' . '.' . $this->twibbon->getClientOriginalExtension();
+
+            $twibbon_path = 'isclass/' . $twibbon;
+            $resized_image = (new ImageManager())
+                ->make($this->twibbon)
+                ->resize(600, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->encode($this->twibbon->getClientOriginalExtension());
+
+            Storage::disk('public')
+                ->put(
+                    $twibbon_path,
+                    $resized_image->__toString()
+                );
+
+            Auth::user()->userable->isclass->update([
+                'twibbon_path' => $instagram_path
+            ]);
+        }
+
+        $this->is_edit = false;
     }
 
-    public function applyVerification(){
+    public function applyVerification()
+    {
         Auth::user()->userable->isclass->update([
             'profile_verif_status' => 'Tahap Verifikasi'
         ]);
@@ -126,8 +184,8 @@ class Beranda extends Component
         $this->statusNotification();
     }
 
-    public function closeModal(){
+    public function closeModal()
+    {
         $this->errorMessage = '';
     }
-
 }
