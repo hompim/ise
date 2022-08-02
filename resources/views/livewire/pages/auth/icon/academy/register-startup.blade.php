@@ -106,7 +106,8 @@
                             @if ($x < 3) required @endif
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Link Twibbon {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
-                            <small>Petunjuk twibbon dapat diunduh lewat link berikut: <a class="text-blue-400" href="https://ise-its.com/PetunjukTwibbonAcademy">ise-its.com/PetunjukTwibbonAcademy</a></small>
+                        <small>Petunjuk twibbon dapat diunduh lewat link berikut: <a class="text-blue-400"
+                                href="https://ise-its.com/PetunjukTwibbonAcademy">ise-its.com/PetunjukTwibbonAcademy</a></small>
                     </div>
                     <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                         <label for="member_{{ $x }}_linkedin">Link Linkedin
@@ -149,14 +150,14 @@
                     <label for="name">Nama Tim</label>
                     <input wire:model.defer="team_name" id="name" name="team_name" type="text" required
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                        placeholder="Masukkan nama tim kamu">
+                        placeholder="Masukkan nama tim kamu" maxlength="20">
                 </div>
                 <div class="flex flex-col my-12 space-y-2 font-medium text-white font-poppins">
                     <label for="judul">Judul Bisnis</label>
                     <input wire:model.defer="judul_bisnis" id="judul" name="judul_bisnis" type="text"
                         required
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                        placeholder="Masukkan judul bisnis tim kamu" >
+                        placeholder="Masukkan judul bisnis tim kamu" maxlength="30">
                 </div>
                 <div class="flex flex-col my-12 space-y-2 font-medium text-white font-poppins">
                     <label for="deskripsi">Deskripsi Ide Bisnis (Maksimal dalam 300 kata)</label>
@@ -174,7 +175,7 @@
                 </div>
                 <div class="relative left-0 right-0 justify-center mx-auto mt-24 text-center max-w-fit group">
                     <button type="button" wire:click="move({{ $step - 1 }})"
-                    class="relative px-24 mx-auto mb-4 text-xl text-purple-200 duration-300 transform lg:mr-4 lg:mb-0 btn-secondary hover:scale-105">Back</button>
+                        class="relative px-24 mx-auto mb-4 text-xl text-purple-200 duration-300 transform lg:mr-4 lg:mb-0 btn-secondary hover:scale-105">Back</button>
                     <button type="button" wire:click="identityTeamSubmit()"
                         class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Next</button>
                 </div>

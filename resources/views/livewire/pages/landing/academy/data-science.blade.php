@@ -353,7 +353,7 @@
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana alur pendaftaran Data
                                 Science Academy?
                             </h1>
-                                <div x-show="!open">
+                            <div x-show="!open">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
@@ -536,9 +536,9 @@
         <div class="mt-32 mb-24 md:mt-60 font-poppins">
             <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Our Event Partner
             </h1>
-            <div class="w-80 md:w-[1180px] h-max bg-liteBlack mx-auto py-10 px-20">
-                <div class="flex flex-col">
-                    <div class="flex flex-col gap-12 md:flex-row">
+            <div class="w-80 md:w-fit h-max bg-liteBlack mx-auto py-10 px-20">
+                <div class="flex flex-col items-center justify-center">
+                    <div class="flex flex-col gap-12 md:flex-row w-[24rem]">
                         <img src="{{ asset('images/logo-myskill.png') }}" alt="logo-myskill"
                             class="w-auto md:w-full">
                     </div>
