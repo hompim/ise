@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" manifest="{{ asset('cache.manifest') }}">
 
 <head>
     <meta charset="UTF-8" />
@@ -32,6 +32,7 @@
 
     @stack('css')
 
+    <script type="text/javascript" src="{{ asset('js/update_cache.js') }}"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPLRLTV1G7"></script>
     <script>
@@ -46,7 +47,7 @@
     </script>
 </head>
 
-<body class="w-full h-full m-0">
+<body class="w-full h-full m-0" onload="checkForUpdate()">
     <div itemprop="image" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
         <meta content="{{ asset('images/isometric-city.png') }}" itemprop="url" />
     </div>
