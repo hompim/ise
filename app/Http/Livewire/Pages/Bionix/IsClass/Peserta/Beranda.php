@@ -107,7 +107,7 @@ class Beranda extends Component
             ]);
 
             Storage::disk('public')->makeDirectory('isclass');
-            $ktm = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_KTM' . '.' . $this->photo1->getClientOriginalExtension();
+            $ktm = date('YmdHis') . '_ISCLASS_' . $this->name . '_KTM' . '.' . $this->photo1->getClientOriginalExtension();
 
             $kartu_pelajar_path = 'isclass/' . $ktm;
             $resized_image = (new ImageManager())
@@ -129,7 +129,7 @@ class Beranda extends Component
         }
 
         if ($this->instagramUpdate) {
-            $instagram = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_INSTAGRAM' . '.' . $this->instagram->getClientOriginalExtension();
+            $instagram = date('YmdHis') . '_ISCLASS_' . $this->name . '_INSTAGRAM' . '.' . $this->instagram->getClientOriginalExtension();
 
             $instagram_path = 'isclass/' . $instagram;
             $resized_image = (new ImageManager())
@@ -150,8 +150,8 @@ class Beranda extends Component
             ]);
         }
 
-        if ($this->updatedTwibbon) {
-            $twibbon = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_TWIBBON' . '.' . $this->twibbon->getClientOriginalExtension();
+        if ($this->twibbonUpdate) {
+            $twibbon = date('YmdHis') . '_ISCLASS_' . $this->name . '_TWIBBON' . '.' . $this->twibbon->getClientOriginalExtension();
 
             $twibbon_path = 'isclass/' . $twibbon;
             $resized_image = (new ImageManager())
@@ -168,7 +168,7 @@ class Beranda extends Component
                 );
 
             Auth::user()->userable->isclass->update([
-                'twibbon_path' => $instagram_path
+                'twibbon_path' => $twibbon_path
             ]);
         }
 

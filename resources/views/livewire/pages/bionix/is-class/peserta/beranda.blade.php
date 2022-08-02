@@ -197,7 +197,7 @@
                                         @if (Auth::user()->userable->isclass->profile_verif_status != 'Terverifikasi' &&
                                             Auth::user()->userable->isclass->profile_verif_status != 'Tahap Verifikasi' &&
                                             $is_edit)
-                                            <button type="button" onclick="$('#member_1_card').click()"
+                                            <button type="button" onclick="$('#member_1_twibbon').click()"
                                                 class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-3">
                                                 <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
                                             </button>
