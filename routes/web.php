@@ -89,5 +89,5 @@ Route::get('testing', function () {
 });
 
 ///Route Testng Register ACADEMY
-Route::get('/Registerds', RegisterDataScience::class);
-Route::get('/Registersa', RegisterStartup::class);
+// Route::get('/Registerds', RegisterDataScience::class);
+// Route::get('/Registersa', RegisterStartup::class);

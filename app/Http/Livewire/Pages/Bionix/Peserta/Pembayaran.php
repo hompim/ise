@@ -65,6 +65,11 @@ class Pembayaran extends Component
 
     public function checkPromo()
     {
+        if($this->invoice){
+            session()->flash('error', 'Promo otomatis digunakan saat membayar DP');
+            return;
+        }
+
         $promo = PromoCode::where('promo_code', $this->kode_promo)->first();
         if ($promo) {
             foreach ($this->promo as $p) {
@@ -96,6 +101,7 @@ class Pembayaran extends Component
         }
         if ($this->invoice) {
             $payment_price -= $this->invoice->nominal;
+            $payment_price -= 20000;
         }
         $this->payment_price = $payment_price;
     }
@@ -120,9 +126,12 @@ class Pembayaran extends Component
         $this->countPrice();
         if ($this->payment_price <= 0) {
             Auth::user()->userable->bionix->update([
-                'invoice_no' => ($this->invoice ? $this->invoice->invoice_no : null),
+                'invoice_id' => $this->invoice->id,
                 'payment_verif_status' => 'Terverifikasi',
                 'payment_price' => $this->payment_price
+            ]);
+            $this->invoice->update([
+                'team_id' =>  Auth::user()->userable->bionix->id
             ]);
             return;
         }
@@ -134,6 +143,7 @@ class Pembayaran extends Component
         }
 
         Auth::user()->userable->bionix->update([
+            'invoice_id' => $this->invoice->id,
             'payment_verif_status' => 'Belum Unggah',
             'payment_price' => $this->payment_price
         ]);
