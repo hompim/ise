@@ -120,9 +120,11 @@ class Pembayaran extends Component
         $this->countPrice();
         if ($this->payment_price <= 0) {
             Auth::user()->userable->bionix->update([
-                'invoice_no' => ($this->invoice ? $this->invoice->invoice_no : null),
                 'payment_verif_status' => 'Terverifikasi',
                 'payment_price' => $this->payment_price
+            ]);
+            $this->invoice->update([
+                'team_id' =>  Auth::user()->userable->bionix->id
             ]);
             return;
         }
