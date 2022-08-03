@@ -60,7 +60,7 @@
                 Download Guidebook</button>
         </a>
         <a href="{{ route('register-startup-academy') }}"
-            class="py-2 my-6 text-white rounded-full  md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
+            class="py-2 my-6 text-white rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
     </div>
     <!-- guidebook and register button end-->
 </div>
@@ -300,7 +300,7 @@
                         </div>
                     </li>
                     <li class="relative mb-6 sm:mb-0">
-                        <time class="block mb-2 px-12 text-lg font-medium text-white font-poppins">19 Nov
+                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">19 Nov
                         </time>
                         <div class="relative flex items-center">
                             <div
@@ -564,20 +564,20 @@
         <div class="mt-32 mb-24 md:mt-60 font-poppins">
             <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Our Event Partner
             </h1>
-            <div class="w-80 md:w-fit h-max bg-liteBlack mx-auto py-10 px-20">
-                <div class="flex flex-col justify-center items-center">
-                    <div class="flex flex-col md:flex-row items-center space-y-12 md:space-y-0 md:space-x-12">
-                        <div class="w-full md:w-[24rem]">
+            <div class="px-20 py-10 mx-auto w-80 md:w-fit h-max bg-liteBlack">
+                <div class="flex flex-col items-center justify-center">
+                    <div class="flex flex-col items-center space-y-12 lg:flex-row md:space-y-0 md:space-x-12">
+                        <div class="w-full lg:w-[24rem]">
                             <img src="{{ asset('images/academy-tokopedia.png') }}" alt="academy-tokopedia"
                                 class="md:w-full">
                         </div>
-                        <div class="w-full md:w-[24rem] transition duration-300 hover:scale-105">
+                        <div class="w-full lg:w-[24rem] transition duration-300 hover:scale-105">
                             <a href="https://indigo.id/" target="_blank">
                                 <img src="{{ asset('images/indigospace-sub-logo-red.png') }}" alt="indigo-space-sby"
                                     class="md:w-full">
                             </a>
                         </div>
-                        <div class="w-full md:w-[24rem]">
+                        <div class="w-full lg:w-[24rem]">
                             <img src="{{ asset('images/binar-academy.png') }}" alt="binar-academy"
                                 class="md:w-full">
                         </div>
