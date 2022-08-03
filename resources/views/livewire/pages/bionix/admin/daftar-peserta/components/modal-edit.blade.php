@@ -20,6 +20,14 @@
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-payer">
+                    Nama Tim
+                </label>
+                <input name="tim"
+                    class="appearance-none block w-full bg-white text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    id="tim" type="text" required wire:model.defer="tim" required>
+            </div>
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-payer">
                     Nama Anggota 1
                 </label>
                 <input name="anggota_1"
@@ -36,7 +44,7 @@
             </div>
             @if (($type == 'student' && $this->bionix_data->member_id) ||
                 ($type == 'college' && $this->bionix_data->member1_id))
-                <div class="w-full md:w-1/2 px-3">
+                <div class="w-full md:w-1/2 px-3 mb-6">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                         for="grid-creator">
                         Nama Anggota 2
@@ -45,7 +53,7 @@
                         class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         id="anggota_1" type="text" required wire:model.defer="anggota_2" required>
                 </div>
-                <div class="w-full md:w-1/2 px-3">
+                <div class="w-full md:w-1/2 px-3 mb-6">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                         for="grid-creator">
                         Email Anggota 2

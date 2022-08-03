@@ -18,18 +18,20 @@ class ModalEdit extends ModalComponent
     public $anggota_3_email;
     public $nama_institusi;
     public $type;
+    public $tim;
 
     public function mount($id, $type)
     {
         $this->type = $type;
-        $this->bionix_data = $this->type == ' student' ? TeamJuniorData::find($id) : TeamSeniorData::find($id);
+        $this->bionix_data = $this->type == 'student' ? TeamJuniorData::find($id) : TeamSeniorData::find($id);
+        $this->tim = $this->bionix_data->team_name;
         $this->anggota_1 = $this->bionix_data->leader->name;
-        $this->anggota_2 = $this->type == ' student' ? ($this->bionix_data->member_id ? $this->bionix_data->member->name : null) : ($this->bionix_data->member1_id ? $this->bionix_data->member_1->name : null);
-        $this->anggota_3 = $this->type == ' student' ? null : ($this->bionix_data->member2_id ? $this->bionix_data->member_2->name : null);
+        $this->anggota_2 = $this->type == 'student' ? ($this->bionix_data->member_id ? $this->bionix_data->member->name : null) : ($this->bionix_data->member1_id ? $this->bionix_data->member_1->name : null);
+        $this->anggota_3 = $this->type == 'student' ? null : ($this->bionix_data->member2_id ? $this->bionix_data->member_2->name : null);
         $this->anggota_1_email = $this->bionix_data->leader->email;
-        $this->anggota_2_email = $this->type == ' student' ? ($this->bionix_data->member_id ? $this->bionix_data->member->email : null) : ($this->bionix_data->member1_id ? $this->bionix_data->member_1->email : null);
-        $this->anggota_3_email = $this->type == ' student' ? null : ($this->bionix_data->member2_id ? $this->bionix_data->member_2->email : null);
-        $this->nama_institusi = $this->type == ' student' ? $this->bionix_data->school_name : $this->bionix_data->university_name;
+        $this->anggota_2_email = $this->type == 'student' ? ($this->bionix_data->member_id ? $this->bionix_data->member->email : null) : ($this->bionix_data->member1_id ? $this->bionix_data->member_1->email : null);
+        $this->anggota_3_email = $this->type == 'student' ? null : ($this->bionix_data->member2_id ? $this->bionix_data->member_2->email : null);
+        $this->nama_institusi = $this->type == 'student' ? $this->bionix_data->school_name : $this->bionix_data->university_name;
     }
 
     public function submit()
@@ -37,8 +39,8 @@ class ModalEdit extends ModalComponent
         if ($this->type == 'student') {
             $this->validate([
                 'anggota_1' => 'required|string',
-                'anggota_1_email' => 'required|string',
-                'nama_institusi' => 'required|string|email'
+                'anggota_1_email' => 'required|string|email',
+                'nama_institusi' => 'required|string'
             ]);
             if ($this->bionix_data->member_id) {
                 $this->validate([
