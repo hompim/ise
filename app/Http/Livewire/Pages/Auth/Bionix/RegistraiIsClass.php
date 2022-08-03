@@ -47,7 +47,7 @@ class RegistraiIsClass extends Component
     public function akunSubmit()
     {
         if (Auth::user()->userable->isclass) {
-            $this->errorMessage = 'Anda sudah mendaftar Webinar Kick Off ISE! 2022';
+            $this->errorMessage = 'Anda sudah mendaftar IS Class';
             return;
         }
         $this->validate([
