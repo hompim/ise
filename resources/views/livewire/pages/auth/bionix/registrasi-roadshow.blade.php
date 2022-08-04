@@ -57,10 +57,11 @@
                     placeholder="Masukkan nomor akun pembayaran kamu" wire:model.defer="account_no">
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="name">Nominal DP</label>
+                <label for="name">Nominal DP(dalam ribuan)</label>
                 <input id="name" name="nominal" type="text" required
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Masukkan nominal DP" wire:model.defer="nominal">
+                    <small>Mininal nominal 10000 hingga 69000.</small>
             </div>
 
             <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
