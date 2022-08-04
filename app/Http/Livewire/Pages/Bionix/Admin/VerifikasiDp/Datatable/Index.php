@@ -12,7 +12,6 @@ class Index extends LivewireDatatable
     public function builder()
     {
         return BionixInvoice::query()
-            ->where('status', 'Pending')
             ->join('members', function ($q) {
                 $q->on('members.id', '=', 'bionix_invoices.member_id');
             })
@@ -35,9 +34,13 @@ class Index extends LivewireDatatable
             Column::name('account_name')->label('Nama Akun Pembayaran'),
             Column::name('account_no')->label('Nomer Akun Pembayaran'),
             Column::name('nominal')->label('Nominal Pembayaran'),
+            Column::name('status')->label('Status DP')->filterable([
+                'Terverifikasi',
+                'Pending'
+            ]),
             DateColumn::name('created_at')->label('Waktu Pemabayaran'),
-            Column::callback(['id'],function($id){
-                return view('livewire.pages.bionix.admin.verifikasi-dp.components.datatable-action',['id'=>$id]);
+            Column::callback(['id', 'status'],function($id, $status){
+                return view('livewire.pages.bionix.admin.verifikasi-dp.components.datatable-action',['id'=>$id, 'status' => $status]);
             })
         ];
     }
