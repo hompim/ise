@@ -51,10 +51,10 @@
                     placeholder="Masukkan nama akun pembayaran kamu" wire:model.defer="account_name">
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
-                <label for="name">Nomer Akun pembayaran (Rek. Bank atau Nomer HP untuk Gopay/OVO)</label>
+                <label for="name">Nomer Handphone</label>
                 <input id="name" name="account_no" type="text" required
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Masukkan nomor akun pembayaran kamu" wire:model.defer="account_no">
+                    placeholder="Masukkan nomor handphone kamu" wire:model.defer="account_no">
             </div>
             <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                 <label for="name">Nominal DP(dalam ribuan)</label>
