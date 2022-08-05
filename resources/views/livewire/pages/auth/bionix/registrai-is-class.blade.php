@@ -65,12 +65,6 @@
                         <label for="kelas10" class="!mt-0 ml-2 font-light text-white font-poppins cursor-pointer">Kelas
                             Online</label>
                     </div>
-                    <div class="flex items-center mb-2">
-                        <input id="kelas10" name="status" wire:model.defer ="status" type="radio" value="offline"
-                            class="p-2 bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  checked:bg-purple-200 cursor-pointer">
-                        <label for="kelas10" class="!mt-0 ml-2 font-light text-white font-poppins cursor-pointer">Kelas
-                            Offline</label>
-                    </div>
             </div>
                 <div class="flex flex-col space-y-2 my-11 font-medium font-poppins">
                     <label for="info-pendaftaran" class="text-white">Info Pendaftaran</label>
