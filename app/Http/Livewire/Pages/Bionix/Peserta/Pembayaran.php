@@ -134,10 +134,12 @@ class Pembayaran extends Component
             $this->invoice->update([
                 'team_id' =>  Auth::user()->userable->bionix->id
             ]);
+            Auth::user()->userable->bionix->update([
+                'invoice_id' => $this->invoice->id,
+            ]);
         }
 
         Auth::user()->userable->bionix->update([
-            'invoice_id' => $this->invoice->id,
             'payment_verif_status' => 'Belum Unggah',
             'payment_price' => $this->payment_price
         ]);
