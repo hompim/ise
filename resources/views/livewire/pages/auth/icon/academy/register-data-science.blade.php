@@ -36,36 +36,37 @@
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Masukkan nama tim kamu">
                 </div>
-                <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="institution_name">Asal Institusi/Universitas</label>
                     <input wire:model.defer="institution_name" id="institution_name" name="institution_name"
                         type="text" required
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Masukkan institusi kamu">
                 </div>
-                <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="alasan">Apa alasan tim Anda mengikuti Data Science Academy</label>
                     <textarea wire:model.defer="alasan" id="alasan" name="alasan"
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         required rows="5" placeholder="Masukkan apa alasan tim Anda" onkeyup="countWords(this.value,'alasan_error')"></textarea>
-                    <small class="text-red-400 font-normal" id="alasan_error" style="display: none">Tidak boleh
+                    <small class="font-normal text-red-400" id="alasan_error" style="display: none">Tidak boleh
                         lebih dari 300 kata.</small><br />
                 </div>
-                <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="harapkan">Apa yang tim Anda harapkan dari Data Science Academy</label>
                     <textarea wire:model.defer="harapkan" id="harapkan" name="harapkan"
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         required rows="5" placeholder="Masukkan apa yang tim Anda harapkan"
                         onkeyup="countWords(this.value,'harapkan_error')"></textarea>
-                    <small class="text-red-400 font-normal" id="harapkan_error" style="display: none">Tidak boleh
+                    <small class="font-normal text-red-400" id="harapkan_error" style="display: none">Tidak boleh
                         lebih dari 300 kata.</small><br />
                 </div>
-                <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="lakukan">Apa yang akan tim Anda lakukan pasca Data Science Academy</label>
                     <textarea wire:model.defer="lakukan" id="lakukan" name="lakukan"
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                        required rows="5" placeholder="Masukkan apa yang akan tim Anda lakukan" onkeyup="countWords(this.value,'lakukan_error')"></textarea>
-                    <small class="text-red-400 font-normal" id="lakukan_error" style="display: none">Tidak boleh
+                        required rows="5" placeholder="Masukkan apa yang akan tim Anda lakukan"
+                        onkeyup="countWords(this.value,'lakukan_error')"></textarea>
+                    <small class="font-normal text-red-400" id="lakukan_error" style="display: none">Tidak boleh
                         lebih dari 300 kata.</small><br />
                 </div>
                 <div class="relative left-0 right-0 justify-center mx-auto mt-24 text-center max-w-fit group">
@@ -82,10 +83,10 @@
                 @for ($x = 1; $x <= 3; $x++)
                     {{-- anggota {{$x}} --}}
                     <h3
-                        class="text-4xl mb-5 font-semibold text-white underline underline-offset-2 decoration-purple-200">
+                        class="mb-5 text-4xl font-semibold text-white underline underline-offset-2 decoration-purple-200">
                         Anggota {{ $x }}
                     </h3>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_name">Nama Lengkap</label>
                         <input id="member_{{ $x }}_name" name="member_{{ $x }}_name"
                             wire:model.defer="member_{{ $x }}_name" type="text"
@@ -93,7 +94,7 @@
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nama lengkap anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_email">Email address</label>
                         <input id="member_{{ $x }}_email" name="member_{{ $x }}_email"
                             wire:model.defer="member_{{ $x }}_email" type="email"
@@ -101,7 +102,7 @@
                             class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                             placeholder="Masukkan email aktif anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_whatsapp">Nomor WhatsApp</label>
                         <input id="member_{{ $x }}_whatsapp" name="member_{{ $x }}_whatsapp"
                             wire:model.defer="member_{{ $x }}_whatsapp" type="tel"
@@ -109,7 +110,7 @@
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nomor WhatsApp anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="ktm_{{ $x }}">Bukti Mahasiswa S1/Sederajat Aktif
                         </label>
                         <input id="ktm_{{ $x }}" name="ktm_{{ $x }}"
@@ -119,7 +120,7 @@
                             placeholder="Bukti Mahasiswa S1/Sederajat Aktif Anggota {{ $x }}"
                             accept=".jpg,.png">
                     </div>
-                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_ig">Username Instagram
                         </label>
                         <input id="member_{{ $x }}_ig" name="member_{{ $x }}_ig"
@@ -128,7 +129,7 @@
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Username Instagram Anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_twibbon">Link Twibbon
                         </label>
                         <input id="member_{{ $x }}_twibbon" name="member_{{ $x }}_twibbon"
@@ -136,9 +137,11 @@
                             @if ($x < 3) required @endif
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Link Twibbon Anggota {{ $x }}">
-                            <small>Petunjuk twibbon dapat diunduh lewat link berikut: <a class="text-blue-400" href="https://ise-its.com/PetunjukTwibbonAcademy">ise-its.com/PetunjukTwibbonAcademy</a></small>
+                        <small>Petunjuk twibbon dapat diunduh lewat link berikut: <a class="text-blue-400"
+                                href="https://ise-its.com/PetunjukTwibbonAcademy"
+                                target="_blank">ise-its.com/PetunjukTwibbonAcademy</a></small>
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="cv_{{ $x }}">Curriculum Vitae (<=3Mb, .pdf) </label>
                                 <input id="cv_{{ $x }}" name="cv_{{ $x }}"
                                     wire:model.defer="cv_{{ $x }}" type="file"
@@ -150,7 +153,7 @@
                     {{-- anggota {{$x}} end --}}
                 @endfor
 
-                <div class="flex-row space-x-4 my-11 font-medium font-poppins">
+                <div class="flex-row space-x-4 font-medium my-11 font-poppins">
                     <input type="checkbox" id="setuju-kebijakan" name="agree" wire:model.defer="agree"
                         class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
                     <label class="text-white" for="setuju-kebijakan"> Saya setuju dengan kebijakan privasi serta <a
