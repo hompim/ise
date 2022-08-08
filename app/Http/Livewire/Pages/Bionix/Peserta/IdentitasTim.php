@@ -105,7 +105,7 @@ class IdentitasTim extends Component
     {
         $this->jenisKartu = ($this->is_junior ? "kartu pelajar" : "kartu tanda mahasiswa / sejenisnya");
 
-        $this->alert_color = Auth::user()->userable->bionix->profile_verif_status == 'Tahap Verifikasi' ? 'yellow'
+        $this->alert_color = Auth::user()->userable->bionix->profile_verif_status == 'Tahap Verifikasi' ? 'blue'
             : (Auth::user()->userable->bionix->profile_verif_status == 'Terverifikasi' ? 'green'
                 : (Auth::user()->userable->bionix->profile_verif_status == 'Ditolak' ? 'red'
                     : 'blue'));
