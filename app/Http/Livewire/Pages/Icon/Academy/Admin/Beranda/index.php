@@ -9,7 +9,6 @@ class Index extends Component
 {
     public function render()
     {
-        return view('livewire.pages.icon.academy.admin.beranda.index')
-            ->layout('layouts.dashboard');
+        return view('livewire.pages.icon.academy.admin.beranda.index')->layout('layouts.dashboard');
     }
 }
