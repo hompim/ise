@@ -97,7 +97,7 @@
                             <div id="shadow">
 
                             </div>
-                            <img src="{{ asset('images/data-science/2.png') }}"
+                            <img src="{{ asset('images/data-science/4.png') }}"
                                 class="rounded-2xl w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                         </label>
                         <!-- slide 3 -->
