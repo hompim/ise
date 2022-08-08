@@ -177,7 +177,7 @@
                 <br> Speakers
             </h1>
             <div
-                class="flex flex-col  items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
+                class="flex flex-col items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-[419px] flex flex-col">
                     <img src="{{ asset('images/unknown_man.png') }}" alt="speaker"
                         class="w-1/2 md:w-[211px] mx-auto">
@@ -536,10 +536,15 @@
         <div class="mt-32 mb-24 md:mt-60 font-poppins">
             <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Our Event Partner
             </h1>
-            <div class="w-80 md:w-fit h-max bg-liteBlack mx-auto py-10 px-20">
-                <div class="flex flex-col items-center justify-center">
-                    <div class="flex flex-col gap-12 md:flex-row w-[24rem]">
+            <div class="px-20 py-10 mx-auto w-80 md:w-fit h-max bg-liteBlack">
+                <div
+                    class="flex flex-col items-center justify-center space-y-12 lg:space-y-0 lg:space-x-12 lg:flex-row">
+                    <div class="flex flex-col gap-12 md:flex-row w-[20rem]">
                         <img src="{{ asset('images/logo-myskill.png') }}" alt="logo-myskill"
+                            class="w-auto md:w-full">
+                    </div>
+                    <div class="flex flex-col gap-12 md:flex-row w-[20rem]">
+                        <img src="{{ asset('images/dsi.png') }}" alt="logo-data-science-indonesia"
                             class="w-auto md:w-full">
                     </div>
                 </div>

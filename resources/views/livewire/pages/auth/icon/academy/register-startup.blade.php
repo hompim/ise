@@ -43,10 +43,10 @@
                 @for ($x = 1; $x <= 3; $x++)
                     {{-- anggota {{$x}} --}}
                     <h3
-                        class="text-4xl mb-5 font-semibold text-white underline underline-offset-2 decoration-purple-200">
+                        class="mb-5 text-4xl font-semibold text-white underline underline-offset-2 decoration-purple-200">
                         {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}
                     </h3>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_name">Nama Lengkap</label>
                         <input id="member_{{ $x }}_name" name="member_{{ $x }}_name"
                             wire:model.defer="member_{{ $x }}_name" type="text"
@@ -54,7 +54,7 @@
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nama lengkap {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_universitas">Asal Universitas</label>
                         <input id="member_{{ $x }}_universitas"
                             name="member_{{ $x }}_universitas"
@@ -63,7 +63,7 @@
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan asal universitas {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }} (Tidak disingkat)">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="ktm_{{ $x }}">Bukti Mahasiswa S1/Sederajat Aktif
                         </label>
                         <input id="ktm_{{ $x }}" name="ktm_{{ $x }}"
@@ -73,7 +73,7 @@
                             placeholder="Bukti Mahasiswa S1/Sederajat Aktif {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}"
                             accept=".jpg,.png">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_whatsapp">Nomor WhatsApp (+62)</label>
                         <input id="member_{{ $x }}_whatsapp" name="member_{{ $x }}_whatsapp"
                             wire:model.defer="member_{{ $x }}_whatsapp" type="tel"
@@ -81,7 +81,7 @@
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nomor WhatsApp {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_email">Email address</label>
                         <input id="member_{{ $x }}_email" name="member_{{ $x }}_email"
                             wire:model.defer="member_{{ $x }}_email" type="email"
@@ -89,7 +89,7 @@
                             class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                             placeholder="Masukkan email aktif {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                     </div>
-                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_ig">Link Akun Instagram (Tidak di-<i>private</i>)
                         </label>
                         <input id="member_{{ $x }}_ig" name="member_{{ $x }}_ig"
@@ -98,7 +98,7 @@
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Link Instagram {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                     </div>
-                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_twibbon">Link Twibbon
                         </label>
                         <input id="member_{{ $x }}_twibbon" name="member_{{ $x }}_twibbon"
@@ -107,9 +107,10 @@
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Link Twibbon {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                         <small>Petunjuk twibbon dapat diunduh lewat link berikut: <a class="text-blue-400"
-                                href="https://ise-its.com/PetunjukTwibbonAcademy">ise-its.com/PetunjukTwibbonAcademy</a></small>
+                                href="https://ise-its.com/PetunjukTwibbonAcademy"
+                                target="_blank">ise-its.com/PetunjukTwibbonAcademy</a></small>
                     </div>
-                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_linkedin">Link Linkedin
                         </label>
                         <input id="member_{{ $x }}_linkedin" name="member_{{ $x }}_linkedin"
@@ -117,7 +118,7 @@
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Link Linkedin {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                     </div>
-                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_twitter">Link Twitter
                         </label>
                         <input id="member_{{ $x }}_twitter" name="member_{{ $x }}_twitter"
@@ -128,7 +129,7 @@
                     {{-- anggota {{$x}} end --}}
                 @endfor
 
-                <div class="flex-row space-x-4 my-11 font-medium font-poppins">
+                <div class="flex-row space-x-4 font-medium my-11 font-poppins">
                     <input type="checkbox" id="setuju_data_benar" name="setuju_data_benar"
                         wire:model.defer="setuju_data_benar"
                         class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
@@ -166,7 +167,7 @@
                         required rows="5" placeholder="Masukkan deskripsi bisnis tim kamu"></textarea>
                 </div>
 
-                <div class="flex-row space-x-4 my-11 font-medium font-poppins">
+                <div class="flex-row space-x-4 font-medium my-11 font-poppins">
                     <input type="checkbox" id="setuju_ide_tim" name="setuju_ide_tim"
                         wire:model.defer="setuju_ide_tim"
                         class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
@@ -184,7 +185,7 @@
             {{-- step 2 end --}}
             {{-- step 3 --}}
             <div class="{{ $step == 3 ? null : 'hidden' }}">
-                <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label>Pastikan semua data yang telah diisi sudah benar sebelum melakukan <i>submit</i>
                     </label>
                 </div>

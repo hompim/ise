@@ -421,6 +421,40 @@
         <!-- batas -->
     </div>
     <!--nutup bsl -->
+
+    {{-- Start Event Partner --}}
+    <div class="pb-24 mt-32 md:mt-60 font-poppins">
+        <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Our Event Partner
+        </h1>
+        <div class="px-20 py-10 mx-auto w-80 md:w-fit h-max bg-liteBlack">
+            <div class="flex flex-col items-center justify-center space-y-8 lg:space-y-16">
+                <div class="flex flex-col items-center space-y-12 lg:flex-row md:space-y-0 md:space-x-12">
+                    <div class="w-full lg:w-[24rem]">
+                        <img src="{{ asset('images/academy-tokopedia.png') }}" alt="academy-tokopedia"
+                            class="md:w-full">
+                    </div>
+                    <div class="w-full lg:w-[24rem] transition duration-300 hover:scale-105">
+                        <a href="https://indigo.id/" target="_blank">
+                            <img src="{{ asset('images/indigospace-sub-logo-red.png') }}" alt="indigo-space-sby"
+                                class="md:w-full">
+                        </a>
+                    </div>
+                    <div class="w-full lg:w-[24rem]">
+                        <img src="{{ asset('images/binar-academy.png') }}" alt="binar-academy" class="md:w-full">
+                    </div>
+                </div>
+                <div class="flex flex-col items-center space-y-12 lg:flex-row md:space-y-0 md:space-x-12">
+                    <div class="w-full lg:w-[12rem]">
+                        <img src="{{ asset('images/dsi.png') }}" alt="academy-tokopedia" class="md:w-full">
+                    </div>
+                    <div class="w-full lg:w-[20rem]">
+                        <img src="{{ asset('images/logo-myskill.png') }}" alt="binar-academy" class="md:w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- End Partner --}}
 </div>
 </div>
 
