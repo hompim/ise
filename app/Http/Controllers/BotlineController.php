@@ -28,7 +28,7 @@ class BotlineController extends Controller
             "bionix_junior" => TeamJuniorData::count(),
             "bionix_senior" => TeamSeniorData::count(),
             "Icon_startup" => IconAcademyStartupData::count(),
-            "Icon_startup" => IconAcademyDataScienceData::count(),
+            "Icon_data-science" => IconAcademyDataScienceData::count(),
             "total" => TeamJuniorData::count() + TeamSeniorData::count() + IconAcademyStartupData::count() + IconAcademyDataScienceData::count()
         ];
 
@@ -39,7 +39,7 @@ class BotlineController extends Controller
             "bionix_senior" => TeamSeniorMember::count(),
             "is_class" => IsClassData::count(),
             "icon_startup" => IconAcademyStartupMember::count(),
-            "icon_data" => IconAcademyDataScienceMember::count(),
+            "icon_data-science" => IconAcademyDataScienceMember::count(),
             "total" => IconWebinarKickOff::count() + TeamJuniorMember::count() + TeamSeniorMember::count() + IsClassData::count() + IconAcademyStartupMember::count() + IconAcademyDataScienceMember::count()
         ];
 
