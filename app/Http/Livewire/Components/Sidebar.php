@@ -127,12 +127,12 @@ class Sidebar extends Component
                         'type' => 'title',
                         'title' => 'Academy'
                     ],
-                    [
-                        'type' => 'menu',
-                        'icon' => 'cil-home',
-                        'title' => 'Beranda',
-                        'route-name' => 'academy.admin.beranda'
-                    ],
+                    // [
+                    //     'type' => 'menu',
+                    //     'icon' => 'cil-home',
+                    //     'title' => 'Beranda',
+                    //     'route-name' => 'academy.admin.beranda'
+                    // ],
                     [
                         'type' => 'menu',
                         'icon' => 'cil-group',

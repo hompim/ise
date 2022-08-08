@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire\Pages\Icon\Academy\Admin\Beranda;
 
-
 use Livewire\Component;
 
 class Index extends Component

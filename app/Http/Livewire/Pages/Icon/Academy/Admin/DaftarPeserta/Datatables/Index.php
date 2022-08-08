@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Pages\Icon\Academy\Admin\DaftarPeserta\Datatables;
 
 use App\Models\Icon\IconAcademyDataScienceData;
 use App\Models\Icon\IconAcademyStartupData;
+use Maatwebsite\Excel\Facades\Excel;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 
@@ -44,7 +45,7 @@ class Index extends LivewireDatatable
                 Column::name('leader.name')->label('Nama Ketua')->searchable(),
                 Column::name('member1.name')->label('Nama Member 1')->searchable(),
                 Column::name('member2.name')->label('Nama Member 2')->searchable(),
-                Column::name('profile_verif_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
+                Column::name('commitement_payment_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('competition_round')->label('Status Academy')->filterable(['Proses Seleksi', 'Lolos', 'Tidak Lolos']),
                 Column::raw('date_format(icon_academy_startup_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(icon_academy_startup_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
                 // Column::callback(['id'], function ($id) {
@@ -66,7 +67,7 @@ class Index extends LivewireDatatable
                 Column::name('leader.name')->label('Nama Ketua')->searchable(),
                 Column::name('member1.name')->label('Nama Member 1')->searchable(),
                 Column::name('member2.name')->label('Nama Member 2')->searchable(),
-                Column::name('profile_verif_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
+                Column::name('commitement_payment_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('competition_round')->label('Status Academy')->filterable(['Proses Seleksi', 'Lolos', 'Tidak Lolos']),
                 Column::raw('date_format(icon_academy_data_science_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(icon_academy_startup_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
                 // Column::callback(['id'], function ($id) {
@@ -77,38 +78,17 @@ class Index extends LivewireDatatable
         return $column;
     }
 
-    public function export()
-    {
-        if ($this->model == 'App\Models\Icon\IconAcademyStartup') {
-            return Excel::download(new StartupExport, 'Startup Academy_' . Carbon::now() . '.xlsx');
-        } elseif ($this->model == 'App\Models\Icon\IconAcademyDataScience') {
-            return Excel::download(new DataScienceExport, 'Data Science Academy_' . Carbon::now() . '.xlsx');
-        }
-    }
-
-    public function numberSequence($id)
-    {
-        $res = [];
-        $limit = IconAcademyStartup::count();
-        $x = 1;
-        while ($x <= $limit) {
-            array_push($res, $x);
-            $x++;
-        }
-        return $res;
-    }
-
     public function saveStatus()
     {
         foreach ($this->selected as $selected) {
-            if ($this->model == 'App\Models\Icon\IconAcademyStartup') {
-                IconAcademyStartup::find($selected)->update(
+            if ($this->model == 'App\Models\Icon\IconAcademyStartupData') {
+                IconAcademyStartupData::find($selected)->update(
                     [
                         'academy_status' => $this->statusValue
                     ]
                 );
-            } elseif ($this->model == 'App\Models\Icon\IconAcademyDataScience') {
-                IconAcademyDataScience::find($selected)->update(
+            } elseif ($this->model == 'App\Models\Icon\IconAcademyDataScienceData') {
+                IconAcademyDataScienceData::find($selected)->update(
                     [
                         'academy_status' => $this->statusValue
                     ]

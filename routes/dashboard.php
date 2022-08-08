@@ -68,7 +68,7 @@ Route::middleware('auth')->group(function () {
                 Route::get('/', \App\Http\Livewire\Pages\Icon\Admin\Index::class)->name('icon.admin.index');
 
                 Route::group(['prefix' => 'academy'], function () {
-                    Route::get('beranda', \App\Http\Livewire\Pages\Icon\Academy\Admin\Beranda\Index::class)->name('academy.admin.beranda');
+                    //Route::get('/', \App\Http\Livewire\Pages\Icon\Academy\Admin\Beranda\Index::class)->name('academy.admin.beranda');
                     Route::get('daftar-peserta', \App\Http\Livewire\Pages\Icon\Academy\Admin\DaftarPeserta\Index::class)->name('academy.admin.daftar-peserta');
                 });
 
