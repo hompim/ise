@@ -37,8 +37,15 @@ class Pembayaran extends Component
         $this->promo = [];
         $this->statusNotification();
         if (Auth::user()->userable->bionix->payment_verif_status != 'Belum Bayar') {
-
             $this->payment_price = Auth::user()->userable->bionix->payment_price;
+            if(Auth::user()->userable->dp){
+                $this->invoice = Auth::user()->userable->dp->where('status',"Terverifikasi")->first();
+                $this->payment_price -= $this->invoice->nominal;
+
+                Auth::user()->userable->bionix->update([
+                    'payment_price' => $this->payment_price
+                ]);
+            }
             return;
         }
         if(Auth::user()->userable->dp){
