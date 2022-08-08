@@ -231,7 +231,7 @@
                         </div>
                     </li>
                     <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">31
+                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">27
                             Agu</time>
                         <div class="relative flex items-center">
                             <div
