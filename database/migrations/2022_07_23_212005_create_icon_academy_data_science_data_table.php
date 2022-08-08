@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('post_activity');
             $table->text('expectation_joining_academy');
             $table->string('university_name');
-            $table->enum('competition_round', ['Administrasi', 'Pending','Penyisihan', 'Semifinal', 'Final', 'Rejected'])->default('Administrasi');
+            $table->enum('competition_round', ['Administrasi', 'Seleksi','Pending' ,'Commitement Fee','Penyisihan', 'Semifinal', 'Final', 'Rejected'])->default('Administrasi');
             $table->enum('commitement_payment_status', ['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Belum Unggah');
             $table->string('commitement_payment_path')->nullable();
             $table->text('commitement_payment_comment')->nullable();

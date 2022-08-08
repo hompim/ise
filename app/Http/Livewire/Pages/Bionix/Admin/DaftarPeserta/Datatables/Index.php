@@ -26,7 +26,8 @@ class Index extends LivewireDatatable
             $this->statusValue = $this->status[0];
             return TeamJuniorData::query()
                 ->leftJoin('team_junior_members as leader_group', 'leader_group.id', 'team_junior_data.leader_id')
-                ->leftJoin('team_junior_members as member_group', 'member_group.id', 'team_junior_data.member_id');
+                ->leftJoin('team_junior_members as member_group', 'member_group.id', 'team_junior_data.member_id')
+                ->with('city');
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             $this->status = ['Penyisihan', 'Semifinal', 'Final'];
             $this->statusValue = $this->status[0];
@@ -59,8 +60,6 @@ class Index extends LivewireDatatable
                     "Sekolah (guru, dll)",
                     "Teman/keluarga",
                     "Website/Aplikasi Sejuta Cita"]),
-                Column::name('city.region')->label('Region')->filterable($this->cities->distinct()->pluck('region')),
-                Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->cities->pluck('name')),
                 Column::name('school_name')->label('Nama Sekolah')->searchable(),
                 Column::name('competition_round')->filterable(['Penyisihan 1', 'Penyisihan 2', 'Semifinal', 'Final'])->label('Babak'),
                 Column::name('leader_group.name')->label('Nama Ketua')->searchable(),

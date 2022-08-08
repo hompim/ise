@@ -8,6 +8,8 @@ use Mediconesystems\LivewireDatatables\Column;
 
 class Index extends LivewireDatatable
 {
+    public $exportable = true;
+
     public function builder()
     {
         return IsClassData::join('members', function ($q) {

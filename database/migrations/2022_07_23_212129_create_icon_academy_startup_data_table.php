@@ -21,8 +21,7 @@ return new class extends Migration
             $table->text('startup_idea_desc');
             $table->enum('commitement_payment_status', ['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Belum Unggah');
             $table->string('commitement_payment_path')->nullable();
-            $table->unsignedTinyInteger('profile_verified_by')->nullable();
-            $table->enum('competition_round', ['Administrasi', 'Pending' ,'Penyisihan', 'Semifinal', 'Final'])->default('Administrasi');
+            $table->enum('competition_round', ['Administrasi', 'Pending','Commitment Fee' ,'Penyisihan', 'Semifinal', 'Final', 'Rejected'])->default('Administrasi');
             $table->text('commitement_payment_comment')->nullable();
             $table->unsignedBigInteger('leader_id');
             $table->unsignedBigInteger('member1_id');
