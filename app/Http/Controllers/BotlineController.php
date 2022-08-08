@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Bionix\IsClassData;
 use App\Models\Bionix\TeamJuniorData;
-use App\Models\Bionix\TeamJuniorMember;
 use App\Models\Bionix\TeamSeniorData;
+use App\Models\Bionix\TeamJuniorMember;
 use App\Models\Bionix\TeamSeniorMember;
+use App\Models\Icon\IconAcademyDataScienceData;
 use App\Models\Icon\IconWebinarKickOff;
-use Illuminate\Http\Request;
+use App\Models\Icon\IconAcademyStartupMember;
+use App\Models\Icon\IconAcademyDataScienceMember;
+use App\Models\Icon\IconAcademyStartupData;
 
 class BotlineController extends Controller
 {
@@ -23,8 +27,9 @@ class BotlineController extends Controller
         $tim = [
             "bionix_junior" => TeamJuniorData::count(),
             "bionix_senior" => TeamSeniorData::count(),
-            "Icon_startup" => 0,
-            "total" => TeamJuniorData::count() + TeamSeniorData::count()
+            "Icon_startup" => IconAcademyStartupData::count(),
+            "Icon_startup" => IconAcademyDataScienceData::count(),
+            "total" => TeamJuniorData::count() + TeamSeniorData::count() + IconAcademyStartupData::count() + IconAcademyDataScienceData::count()
         ];
 
         //Peserta
@@ -33,9 +38,9 @@ class BotlineController extends Controller
             "bionix_junior" => TeamJuniorMember::count(),
             "bionix_senior" => TeamSeniorMember::count(),
             "is_class" => IsClassData::count(),
-            "icon_startup" => 0,
-            "icon_data" => 0,
-            "total" => IconWebinarKickOff::count() + TeamJuniorMember::count() + TeamSeniorMember::count() + IsClassData::count()
+            "icon_startup" => IconAcademyStartupMember::count(),
+            "icon_data" => IconAcademyDataScienceMember::count(),
+            "total" => IconWebinarKickOff::count() + TeamJuniorMember::count() + TeamSeniorMember::count() + IsClassData::count() + IconAcademyStartupMember::count() + IconAcademyDataScienceMember::count()
         ];
 
         return response()->json([
