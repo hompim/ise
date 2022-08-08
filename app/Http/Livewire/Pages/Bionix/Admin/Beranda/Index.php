@@ -196,7 +196,7 @@ class Index extends Component
             'pieChartVerifikasiBionixModel' => $pieChartVerifikasiBionixModel,
             'columnChartRegionBionixSeniorModel' => $columnChartRegionSeniorBionixModel,
             'pieChartPembayaranBionixSeniorModel' => $pieChartPembayaranSeniorBionixModel,
-            'pieChartVerifikasiBionixSeniorModel' => $pieChartVerifikasiSeniorBionixModel,
+            'pieChartVerifikasiBionixSeniorModel' => $pieChartVerifikasiSeniorBionixModel,  
             'lineChartJunior' => $line_chart_junior,
             'lineChartSenior' => $line_chart_senior,
             'sumJunior' => $this->getSum('junior'),
