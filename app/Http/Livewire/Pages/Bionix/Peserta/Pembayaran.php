@@ -44,7 +44,6 @@ class Pembayaran extends Component
         if(Auth::user()->userable->dp){
             $this->invoice = Auth::user()->userable->dp->where('status',"Terverifikasi")->first();
         }
-        dd($this->invoice);
         $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
         $this->countPrice();
     }
