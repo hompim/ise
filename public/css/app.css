@@ -1601,6 +1601,11 @@ select {
 .h-8 {
     height: 2rem;
 }
+.h-max {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+}
 .h-\[20px\] {
     height: 20px;
 }
@@ -1627,11 +1632,6 @@ select {
 }
 .h-\[419px\] {
     height: 419px;
-}
-.h-max {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
 }
 .h-32 {
     height: 8rem;
@@ -1761,6 +1761,9 @@ select {
 .w-\[400px\] {
     width: 400px;
 }
+.w-80 {
+    width: 20rem;
+}
 .w-auto {
     width: auto;
 }
@@ -1790,12 +1793,6 @@ select {
 }
 .w-\[80\%\] {
     width: 80%;
-}
-.w-80 {
-    width: 20rem;
-}
-.w-\[24rem\] {
-    width: 24rem;
 }
 .w-\[20rem\] {
     width: 20rem;
@@ -2156,21 +2153,6 @@ select {
     --tw-space-y-reverse: 0;
     margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(3rem * var(--tw-space-y-reverse));
-}
-.space-x-12 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(3rem * var(--tw-space-x-reverse));
-    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-y-16 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(4rem * var(--tw-space-y-reverse));
-}
-.space-y-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]) {
     --tw-divide-y-reverse: 0;
@@ -2918,6 +2900,14 @@ select {
     padding-left: 77px;
     padding-right: 77px;
 }
+.px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
 .px-48 {
     padding-left: 12rem;
     padding-right: 12rem;
@@ -2925,14 +2915,6 @@ select {
 .py-2\.5 {
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
-}
-.py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-}
-.px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
 }
 .px-\[42px\] {
     padding-left: 42px;
@@ -3044,6 +3026,9 @@ select {
 .pb-6 {
     padding-bottom: 1.5rem;
 }
+.pb-24 {
+    padding-bottom: 6rem;
+}
 .pt-\[81px\] {
     padding-top: 81px;
 }
@@ -3064,9 +3049,6 @@ select {
 }
 .pl-6 {
     padding-left: 1.5rem;
-}
-.pb-24 {
-    padding-bottom: 6rem;
 }
 .pb-8 {
     padding-bottom: 2rem;
@@ -4576,6 +4558,14 @@ select {
         margin-top: 25px;
     }
 
+    .md\:mt-60 {
+        margin-top: 15rem;
+    }
+
+    .md\:mb-24 {
+        margin-bottom: 6rem;
+    }
+
     .md\:mb-0 {
         margin-bottom: 0px;
     }
@@ -4592,16 +4582,8 @@ select {
         margin-top: 13rem;
     }
 
-    .md\:mb-24 {
-        margin-bottom: 6rem;
-    }
-
     .md\:mt-4 {
         margin-top: 1rem;
-    }
-
-    .md\:mt-60 {
-        margin-top: 15rem;
     }
 
     .md\:block {
@@ -4688,6 +4670,16 @@ select {
         width: 94px;
     }
 
+    .md\:w-fit {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+
+    .md\:w-full {
+        width: 100%;
+    }
+
     .md\:w-\[80\%\] {
         width: 80%;
     }
@@ -4698,16 +4690,6 @@ select {
 
     .md\:w-\[1064px\] {
         width: 1064px;
-    }
-
-    .md\:w-fit {
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
-    }
-
-    .md\:w-full {
-        width: 100%;
     }
 
     .md\:w-1\/2 {
@@ -5216,6 +5198,18 @@ select {
         width: 577px;
     }
 
+    .lg\:w-\[24rem\] {
+        width: 24rem;
+    }
+
+    .lg\:w-\[12rem\] {
+        width: 12rem;
+    }
+
+    .lg\:w-\[20rem\] {
+        width: 20rem;
+    }
+
     .lg\:w-\[866px\] {
         width: 866px;
     }
@@ -5238,18 +5232,6 @@ select {
 
     .lg\:w-\[380px\] {
         width: 380px;
-    }
-
-    .lg\:w-\[24rem\] {
-        width: 24rem;
-    }
-
-    .lg\:w-\[20rem\] {
-        width: 20rem;
-    }
-
-    .lg\:w-\[12rem\] {
-        width: 12rem;
     }
 
     .lg\:translate-x-0 {
@@ -5336,6 +5318,12 @@ select {
         margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
     }
 
+    .lg\:space-y-16 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+    }
+
     .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
         --tw-space-x-reverse: 0;
         margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -5352,12 +5340,6 @@ select {
         --tw-space-x-reverse: 0;
         margin-right: calc(3rem * var(--tw-space-x-reverse));
         margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
-    }
-
-    .lg\:space-y-16 > :not([hidden]) ~ :not([hidden]) {
-        --tw-space-y-reverse: 0;
-        margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-        margin-bottom: calc(4rem * var(--tw-space-y-reverse));
     }
 
     .lg\:rounded-full {

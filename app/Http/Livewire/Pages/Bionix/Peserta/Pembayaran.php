@@ -74,6 +74,13 @@ class Pembayaran extends Component
         if (sizeof($this->promo) == 0) {
             $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
         }
+
+        if($this->invoice){
+            Auth::user()->userable->bionix->update([
+               'invoice_id' => null
+            ]);
+        }
+
         $this->countPrice();
     }
 
