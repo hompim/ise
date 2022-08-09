@@ -25,8 +25,8 @@ class Pembayaran extends Component
     public $is_junior;
 
     public $alert_color,
-    $alert_content,
-    $alert_header;
+        $alert_content,
+        $alert_header;
 
 
 
@@ -38,18 +38,22 @@ class Pembayaran extends Component
         $this->statusNotification();
         if (Auth::user()->userable->bionix->payment_verif_status != 'Belum Bayar') {
             $this->payment_price = Auth::user()->userable->bionix->payment_price;
-            if(Auth::user()->userable->dp){
-                $this->invoice = Auth::user()->userable->dp->where('status',"Terverifikasi")->first();
-                $this->payment_price -= $this->invoice->nominal;
+            if (Auth::user()->userable->bionix->payment_verif_status == 'Belum Unggah') {
+                if (Auth::user()->userable->dp) {
+                    if (!Auth::user()->userable->bionix->invoice_id) {
+                        $this->invoice = Auth::user()->userable->dp->where('status', "Terverifikasi")->first();
+                        $this->payment_price -= $this->invoice->nominal;
 
-                Auth::user()->userable->bionix->update([
-                    'payment_price' => $this->payment_price
-                ]);
+                        Auth::user()->userable->bionix->update([
+                            'payment_price' => $this->payment_price
+                        ]);
+                    }
+                }
             }
             return;
         }
-        if(Auth::user()->userable->dp){
-            $this->invoice = Auth::user()->userable->dp->where('status',"Terverifikasi")->first();
+        if (Auth::user()->userable->dp) {
+            $this->invoice = Auth::user()->userable->dp->where('status', "Terverifikasi")->first();
         }
         $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
         $this->countPrice();
@@ -66,7 +70,7 @@ class Pembayaran extends Component
             'payment_price' => Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value
         ]);
 
-        if(sizeof($this->promo)==0){
+        if (sizeof($this->promo) == 0) {
             $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
         }
         $this->countPrice();
@@ -84,7 +88,7 @@ class Pembayaran extends Component
             }
 
             if (Carbon::now() >= $promo->start && Carbon::now() <= (new \DateTime($promo->end))->modify("+1 day")->modify("-1 second")->format("Y-m-d H:i:s")) {
-//                session()->flash('message', 'Anda mendapatkan potongan sebesar Rp ' . number_format($this->promo->nominal, 2, ',', '.'));
+                //                session()->flash('message', 'Anda mendapatkan potongan sebesar Rp ' . number_format($this->promo->nominal, 2, ',', '.'));
                 array_push($this->promo, [
                     'id' => $promo->id,
                     'promo_code' => strtoupper($promo->promo_code),
@@ -168,9 +172,11 @@ class Pembayaran extends Component
                 $constraint->upsize();
             })->encode($this->image->getClientOriginalExtension());
         Storage::disk('public')
-            ->put('bukti_bayar/' . $name,
-                $resized_image->__toString());
-//        $path = Storage::disk('public')->putFile('bukti_bayar', $this->image);
+            ->put(
+                'bukti_bayar/' . $name,
+                $resized_image->__toString()
+            );
+        //        $path = Storage::disk('public')->putFile('bukti_bayar', $this->image);
         Auth::user()->userable->bionix->update([
             'payment_proof_path' => 'bukti_bayar/' . $name,
             'payment_verif_status' => 'Tahap Verifikasi'
