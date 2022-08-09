@@ -18,6 +18,16 @@ use App\Http\Livewire\Pages\Landing\Academy\DataScience;
 use App\Http\Livewire\Pages\Auth\Bionix\RegistrasiRoadshow;
 use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterStartup;
 use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience;
+use App\Http\Livewire\Pages\Landing\EHall\Game\Index as GameIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Index as EHallIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Content as PrestasiContent;
+use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Index as PrestasiIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\ChoosePicture;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\Index as QuizIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\MultipleChoice;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\TrueOrFalse;
+use App\Http\Livewire\Pages\Landing\EHall\Startup\Content;
+use App\Http\Livewire\Pages\Landing\EHall\Startup\Index;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,9 +45,47 @@ Route::get('/', Ise::class)->name('ise');
 Route::get('/bionix', Bionix::class)->name('bionix');
 Route::get('/icon', Icon::class)->name('icon');
 
-// Academy Route
-Route::get('/icon/data-science', DataScience::class)->name('data-science-academy');
-Route::get('/icon/startup', Startup::class)->name('startup-academy');
+// ICON Landing Route
+Route::group(['prefix' => 'icon'], function () {
+    //Route academy
+    // icon/data-science
+    Route::get('data-science', DataScience::class)->name('data-science-academy');
+    // icon/startup
+    Route::get('startup', Startup::class)->name('startup-academy');
+
+    // Route e-hall
+    Route::group(['prefix' => 'e-hall'], function () {
+        // icon/e-hall/
+        Route::get('/', EHallIndex::class)->name('e-hall');
+        // Route startup e-hall
+        Route::group(['prefix' => 'startup'], function () {
+            // icon/e-hall/startup
+            Route::get('/', Index::class)->name('home-startup-ehall');
+            // icon/e-hall/startup/content
+            Route::get('content', Content::class)->name('content-startup-ehall');
+        });
+        // Route prestasi
+        Route::group(['prefix' => 'prestasi'], function () {
+            // icon/e-hall/prestasi
+            Route::get('/', PrestasiIndex::class)->name('home-prestasi-ehall');
+            // icon/e-hall/prestasi/content
+            Route::get('content', PrestasiContent::class)->name('content-prestasi-ehall');
+        });
+        // Route quiz
+        Route::group(['prefix' => 'quiz'], function () {
+            // icon/quiz/
+            Route::get('/', QuizIndex::class)->name('quiz-ehall');
+            // icon/quiz/choose-picture
+            Route::get('choose-picture', ChoosePicture::class)->name('picture-quiz-ehall');
+            // icon/quiz/multiple-choice
+            Route::get('multiple-choice', MultipleChoice::class)->name('choice-quiz-ehall');
+            // icon/quiz/true-or-false
+            Route::get('true-or-false', TrueOrFalse::class)->name('true-false-quiz-ehall');
+        });
+        // icon/e-hall/games
+        Route::get('game', GameIndex::class)->name('game-ehall');
+    });
+});
 
 // Coming Soon Route
 Route::get('/coming-soon', function () {

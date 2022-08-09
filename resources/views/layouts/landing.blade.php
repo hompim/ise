@@ -19,7 +19,7 @@
     <meta name='twitter:description' content='@yield('desc', 'ISE! merupakan singkatan dari Information Systems Expo yang merupakan event tahunan yang diselenggarakan oleh Departemen Sistem Informasi Institut Teknologi Sepuluh Nopember Surabaya dalam rangka memperkenalkan Departemen Sistem Informasi ITS kepada masyarakat luas')' />
     <meta name='twitter:image' content='{{ asset('images/logo-url-preview.png') }}' />
 
-    <title>ISE! | Information System Expo! 2022</title>
+    <title>@yield('title', 'ISE!') | Information System Expo! 2022</title>
     <!-- linknya -->
     <link rel="icon" href="{{ asset('images/logo-only-small.png') }}">
     <link rel="shortcut icon" href="{{ asset('images/logo-only-small.png') }}">
