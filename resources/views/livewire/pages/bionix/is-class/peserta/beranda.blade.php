@@ -128,8 +128,8 @@
                                     <label for="Email" class="mb-2 font-bold text-gray-400 mt-4">Email
                                         Peserta</label><br>
                                     @if ($is_edit)
-                                        <input wire:model.defer="email" disabled type="text" id="email" name="email"
-                                            class="bg-gray-100 form-control input-text"
+                                        <input wire:model.defer="email" disabled type="text" id="email"
+                                            name="email" class="bg-gray-100 form-control input-text"
                                             style="color: black;margin-top:0;" required disabled>
                                     @else
                                         <p class="font-bold text-lg">{{ $email }}</p>
@@ -146,6 +146,25 @@
                                     @else
                                         <p class="font-bold text-lg">{{ $whatsapp }}</p>
                                     @endif
+                                </div>
+                                <div>
+                                    <label for="class" class="mb-2 font-bold text-gray-400 mt-4">Kelas</label><br>
+                                    <div class=" @if (!$is_edit) hidden @endif">
+                                        <div wire:ignore>
+                                            <select wire:model.defer="class"
+                                                class="js-example-basic-single input-text text-black bg-gray-100" name="class"
+                                                style="width: 100%;color:black" required>
+
+                                                <option value="offline">Offline</option>
+                                                <option value="online">Online</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <p class="font-bold text-lg @if ($is_edit) hidden @endif">
+                                        {{ $class }}</p>
+
                                 </div>
                             </div>
 
@@ -173,8 +192,7 @@
                                                 <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
                                             </button>
                                             <input type="file" wire:model.defer="photo1" class="form-control-file"
-                                                name="photo1" id="member_1_card" accept=".jpg,.jpeg,.png"
-                                                hidden>
+                                                name="photo1" id="member_1_card" accept=".jpg,.jpeg,.png" hidden>
                                         @endif
                                     </div>
                                 </div>
@@ -201,9 +219,9 @@
                                                 class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-3">
                                                 <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
                                             </button>
-                                            <input type="file" wire:model.defer="twibbon" class="form-control-file"
-                                                name="twibbon" id="member_1_twibbon" accept=".jpg,.jpeg,.png"
-                                                hidden>
+                                            <input type="file" wire:model.defer="twibbon"
+                                                class="form-control-file" name="twibbon" id="member_1_twibbon"
+                                                accept=".jpg,.jpeg,.png" hidden>
                                         @endif
                                     </div>
                                 </div>
@@ -223,9 +241,7 @@
                                         <img src="{{ $instagram ? (is_string($instagram) ? asset('storage/' . $instagram) $instagram->temporaryUrl()) : asset('/img/global/placeholder-image.png') }}"
                                             class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_card_preview"
                                             style="max-height:50vh">
-                                        @if (Auth::user()->userable->isclass->profile_verif_status != 'Terverifikasi' &&
-                                            Auth::user()->userable->isclass->profile_verif_status != 'Tahap Verifikasi' &&
-                                            $is_edit)
+                                        @if (Auth::user()->userable->isclass->profile_verif_status != 'Terverifikasi' && Auth::user()->userable->isclass->profile_verif_status != 'Tahap Verifikasi' && $is_edit)
                                             <button type="button" onclick="$('#member_1_card').click()"
                                                 class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-3">
                                                 <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
@@ -253,9 +269,12 @@
             <div class="card shadow-md rounded-xl bg-gray-900" style="border:0">
                 <div class="card-body">
                     <h6 class="font-bold">
-                        </h6>
+                    </h6>
                     <h4 class="font-bold text-xl" style="color: #FF7C74;">Grub Whatsapp</h4>
-                    <p class="text-sm font-weight-normal mt-4">Bagi peserta yang telah mendaftar silahkan masuk ke grub berikut untuk mendapatkan informasi terbaru: <a href="https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm">https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm</a></p>
+                    <p class="text-sm font-weight-normal mt-4">Bagi peserta yang telah mendaftar silahkan masuk ke grub
+                        berikut untuk mendapatkan informasi terbaru: <a
+                            href="https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm">https://chat.whatsapp.com/I8U5hnsizwl46s6ulildvm</a>
+                    </p>
                 </div>
             </div>
             @forelse($announcement as $a)
@@ -278,31 +297,31 @@
     </div>
 
     @if ($errors->any() || $errorMessage)
-    <div class="fixed px-4 py-3 text-red-900 bg-red-100 border-t-4 border-red-500 rounded-b shadow-md bottom-12 right-12"
-        role="alert">
-        <div class="flex">
-            <div class="py-1">
-                <svg class="w-6 h-6 mr-4 text-red-500 fill-current" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20">
-                    <path
-                        d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
-                </svg>
+        <div class="fixed px-4 py-3 text-red-900 bg-red-100 border-t-4 border-red-500 rounded-b shadow-md bottom-12 right-12"
+            role="alert">
+            <div class="flex">
+                <div class="py-1">
+                    <svg class="w-6 h-6 mr-4 text-red-500 fill-current" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="font-bold">Terjadi masalah</p>
+                    <ul class="font-normal">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    @if ($errorMessage)
+                        <p class="font-normal">{{ $errorMessage }}</p>
+                    @endif
+                </div>
+                <button type="button" title="Hapus" wire:click="closeModal()" class="self-start"><i
+                        class="fas fa-times"></i></button>
             </div>
-            <div>
-                <p class="font-bold">Terjadi masalah</p>
-                <ul class="font-normal">
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-                @if ($errorMessage)
-                    <p class="font-normal">{{ $errorMessage }}</p>
-                @endif
-            </div>
-            <button type="button" title="Hapus" wire:click="closeModal()" class="self-start"><i
-                    class="fas fa-times"></i></button>
         </div>
-    </div>
     @endif
 
 </div>

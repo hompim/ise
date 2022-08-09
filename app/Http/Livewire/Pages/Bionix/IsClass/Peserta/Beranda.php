@@ -101,6 +101,10 @@ class Beranda extends Component
             'whatsapp' => $this->whatsapp
         ]);
 
+        Auth::user()->userable->isclass->update([
+            'status' => $this->class
+        ]);
+
         if ($this->photoUpdate) {
             $this->validate([
                 'photo1' => 'required|image|max:2048',
