@@ -45,6 +45,7 @@ class Pembayaran extends Component
                         $this->payment_price -= $this->invoice->nominal;
 
                         Auth::user()->userable->bionix->update([
+                            'invoice_id' => $this->invoice->id,
                             'payment_price' => $this->payment_price
                         ]);
                     }
