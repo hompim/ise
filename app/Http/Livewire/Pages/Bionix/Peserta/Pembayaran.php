@@ -52,12 +52,13 @@ class Pembayaran extends Component
                 }
             }
             return;
+        } else {
+            if (Auth::user()->userable->dp) {
+                $this->invoice = Auth::user()->userable->dp->where('status', "Terverifikasi")->first();
+            }
+            $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
+            $this->countPrice();
         }
-        if (Auth::user()->userable->dp) {
-            $this->invoice = Auth::user()->userable->dp->where('status', "Terverifikasi")->first();
-        }
-        $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
-        $this->countPrice();
     }
 
     public function backToPayment()
@@ -75,9 +76,9 @@ class Pembayaran extends Component
             $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
         }
 
-        if($this->invoice){
+        if ($this->invoice) {
             Auth::user()->userable->bionix->update([
-               'invoice_id' => null
+                'invoice_id' => null
             ]);
         }
 
@@ -96,7 +97,7 @@ class Pembayaran extends Component
             }
 
             if (Carbon::now() >= $promo->start && Carbon::now() <= (new \DateTime($promo->end))->modify("+1 day")->modify("-1 second")->format("Y-m-d H:i:s")) {
-                //                session()->flash('message', 'Anda mendapatkan potongan sebesar Rp ' . number_format($this->promo->nominal, 2, ',', '.'));
+                //session()->flash('message', 'Anda mendapatkan potongan sebesar Rp ' . number_format($this->promo->nominal, 2, ',', '.'));
                 array_push($this->promo, [
                     'id' => $promo->id,
                     'promo_code' => strtoupper($promo->promo_code),
@@ -194,6 +195,15 @@ class Pembayaran extends Component
     public function closeMessage()
     {
         session()->remove('error');
+    }
+
+    public function checkInvoice(){
+        if(Auth::user()->userable->dp){
+            if(Auth::user()->userable->dp->where('status', "Terverifikasi")->first()->isEmpty()){
+                session()->flash('error', 'DP anda belum diverifikasi oleh Admin, silahkan hubungi admin untuk konfirmasi DP');
+            }
+        }
+        session()->flash('error', 'Anda tidak membayar DP');
     }
 
     public function statusNotification()

@@ -129,6 +129,40 @@
                                         @php $i++; @endphp
                                     @endforeach
                                 </div>
+                                <div class="w-full mb-6 md:mb-0 mt-3">
+                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                           for="grid-promo">
+                                        Cek Pembayaran DP (opsional)
+                                    </label>
+                                    <div class="md:grid md:grid-cols-3 gap-4">
+                                        <button
+                                            wire:click="checkInvoice"
+                                            type="button"
+                                            class="bg-transparent mt-4 mt-md-0 text-blue-700 font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                                            Cek Invoice
+                                        </button>
+                                    </div>
+                                    <label class="block tracking-wide text-gray-700 text-xs mb-2"
+                                           for="grid-invoice">
+                                        Jika anda sudah pernah membayar DP sebelumnya, maka akan muncul keterangah di bawah ini. Apabila tidak muncul silahkan hubungi Admin Bionix terlebih dahulu sebelum melanjutkan proses pembayaran.
+                                    </label>
+                                    @if($invoice)
+                                        <div
+                                            class="border-blue-400 bg-blue-100 border-2 px-2 py-2 mt-2 flex flex-row justify-between">
+                                            <div class="mx-1">
+                                                <b class="text-green-600 font-extrabold">{{$invoice->id}}</b>
+                                                <p class="m-0">Anda telah melakukan DP sebesar
+                                                    Rp{{number_format($invoice->nominal, 2, ',', '.')}}</p>
+                                            </div>
+                                            <div>
+                                                <button type="button" title="Hapus" wire:click="removeInvoice()"><i
+                                                        class="cil-x"></i></button>
+                                            </div>
+                                        </div>
+                                    @endif
+                                </div>
+
+
                                 <button type="submit" class="btn btn-outline-success mt-3">
                                     Bayar
                                 </button>
