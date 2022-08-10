@@ -73,13 +73,13 @@ Route::group(['prefix' => 'icon'], function () {
         });
         // Route quiz
         Route::group(['prefix' => 'quiz'], function () {
-            // icon/quiz/
+            // icon/e-hall/quiz/
             Route::get('/', QuizIndex::class)->name('quiz-ehall');
-            // icon/quiz/choose-picture
+            // icon/e-hall/quiz/choose-picture
             Route::get('choose-picture', ChoosePicture::class)->name('picture-quiz-ehall');
-            // icon/quiz/multiple-choice
+            // icon/e-hall/quiz/multiple-choice
             Route::get('multiple-choice', MultipleChoice::class)->name('choice-quiz-ehall');
-            // icon/quiz/true-or-false
+            // icon/e-hall/quiz/true-or-false
             Route::get('true-or-false', TrueOrFalse::class)->name('true-false-quiz-ehall');
         });
         // icon/e-hall/games

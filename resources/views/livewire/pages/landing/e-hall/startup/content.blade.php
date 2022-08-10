@@ -11,7 +11,8 @@
             <div class=" w-[80%] mx-auto block md:hidden">
                 <img src="{{ asset('images/startup/digiflux-founder.png') }}" alt="founder-digiflux">
             </div>
-            <p class="text-sm md:text-lg text-liteGray mt-4 px-6 md:px-0">Aplikasi Untuk menjembatani Influencer dan Pelaku Usaha Lorem ipsum  
+            <p class="text-sm md:text-lg text-liteGray mt-4 px-6 md:px-0 md:leading-normal">
+                Aplikasi Untuk menjembatani Influencer dan Pelaku Usaha Lorem ipsum  
                 dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
                 dictum est a, mattis tellus.Sed dignissim, metus nec fringilla accumsan,
                 risus sem sollicitudin lacus, ut interdum 
