@@ -1,3 +1,3 @@
 <div>
-    {{-- Success is as dangerous as failure. --}}
+    {{-- Stop trying to control. --}}
 </div>
