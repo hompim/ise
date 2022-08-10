@@ -37,6 +37,7 @@ class Index extends LivewireDatatable
                 Column::name('school_name')->label('Nama Sekolah'),
                 Column::name('leader_group.name')->label('Nama Ketua'),
                 Column::name('member_group.name')->label('Nama Member'),
+                Column::raw('date_format(team_junior_data.updated_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(team_junior_data.updated_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
                 Column::callback(['id'], function ($id) {
                     return view('livewire.pages.bionix.admin.verifikasi-identitas.components.datatable-action', ['id' => $id, 'type' => 'student']);
                 })

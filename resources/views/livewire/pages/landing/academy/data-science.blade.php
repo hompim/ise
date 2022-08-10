@@ -292,7 +292,7 @@
             <div x-data="{ open: false }" class="md:mt-24">
                 <div class="cursor-pointer" x-on:click="open = !open">
                     <div
-                        class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                        class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa itu Data Science Academy?</h1>
                             <div x-show="!open">
@@ -321,7 +321,7 @@
             <div x-data="{ open: false }" class="mt-3 md:mt-4">
                 <div class="cursor-pointer" x-on:click="open = !open">
                     <div
-                        class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                        class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Kapan acara berlangsung?</h1>
                             <div x-show="!open">
@@ -348,7 +348,7 @@
             <div x-data="{ open: false }" class="mt-3 md:mt-4">
                 <div class="cursor-pointer" x-on:click="open = !open">
                     <div
-                        class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                        class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana alur pendaftaran Data
                                 Science Academy?
@@ -381,7 +381,7 @@
             <div x-data="{ open: false }" class="mt-3 md:mt-4">
                 <div class="cursor-pointer" x-on:click="open = !open">
                     <div
-                        class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                        class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Berapa banyak kuota tim peserta Data
                                 Science Academy?
@@ -410,7 +410,7 @@
             <div x-data="{ open: false }" class="mt-3 md:mt-4">
                 <div class="cursor-pointer" x-on:click="open = !open">
                     <div
-                        class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                        class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana seleksi tim dilakukan?
                             </h1>
@@ -439,7 +439,7 @@
             <div x-data="{ open: false }" class="mt-3 md:mt-4">
                 <div class="cursor-pointer" x-on:click="open = !open">
                     <div
-                        class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                        class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa saja syarat peserta Data Science
                                 Academy?</h1>
@@ -469,7 +469,7 @@
             <div x-data="{ open: false }" class="mt-3 md:mt-4">
                 <div class="cursor-pointer" x-on:click="open = !open">
                     <div
-                        class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                        class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Berapa biaya pendaftaran Data
                                 Science Academy?</h1>
@@ -501,7 +501,7 @@
             <div x-data="{ open: false }" class="mt-3 md:mt-4">
                 <div class="cursor-pointer" x-on:click="open = !open">
                     <div
-                        class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                        class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa saja yang didapatkan dari ISE!
                                 Academy?

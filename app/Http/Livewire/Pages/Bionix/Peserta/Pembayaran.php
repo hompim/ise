@@ -23,6 +23,7 @@ class Pembayaran extends Component
     public $promo;
     public $payment_price;
     public $is_junior;
+    public $check;
 
     public $alert_color,
         $alert_content,
@@ -32,31 +33,47 @@ class Pembayaran extends Component
 
     public function mount()
     {
-
         $this->is_junior = Auth::user()->userable->jenjang = "SMA" ? true : false;
         $this->promo = [];
         $this->statusNotification();
         if (Auth::user()->userable->bionix->payment_verif_status != 'Belum Bayar') {
             $this->payment_price = Auth::user()->userable->bionix->payment_price;
             if (Auth::user()->userable->bionix->payment_verif_status == 'Belum Unggah') {
-                if (Auth::user()->userable->dp) {
-                    if (!Auth::user()->userable->bionix->invoice_id) {
+                if (!Auth::user()->userable->dp->isEmpty()) {
+                    if (Auth::user()->userable->bionix->invoice_id) {
+                        return;
+                    } else {
                         $this->invoice = Auth::user()->userable->dp->where('status', "Terverifikasi")->first();
                         $this->payment_price -= $this->invoice->nominal;
 
                         Auth::user()->userable->bionix->update([
+                            'invoice_id' => $this->invoice->id,
                             'payment_price' => $this->payment_price
                         ]);
+
+                        if ($this->payment_price <= 0) {
+                            Auth::user()->userable->bionix->update([
+                                'payment_verif_status' => 'Terverifikasi',
+                                'payment_price' => $this->payment_price
+                            ]);
+                            $this->invoice->update([
+                                'team_id' =>  Auth::user()->userable->bionix->id
+                            ]);
+                            return;
+                        }
                     }
                 }
             }
             return;
+        } else {
+            $this->check = true;
+            if (Auth::user()->userable->dp->isNotEmpty()) {
+                $this->invoice = Auth::user()->userable->dp->where('status', "Terverifikasi")->first();
+                $this->check = $this->invoice ? true : false;
+            }
+            $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
+            $this->countPrice();
         }
-        if (Auth::user()->userable->dp) {
-            $this->invoice = Auth::user()->userable->dp->where('status', "Terverifikasi")->first();
-        }
-        $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
-        $this->countPrice();
     }
 
     public function backToPayment()
@@ -73,6 +90,13 @@ class Pembayaran extends Component
         if (sizeof($this->promo) == 0) {
             $this->payment_price = Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value;
         }
+
+        if ($this->invoice) {
+            Auth::user()->userable->bionix->update([
+                'invoice_id' => null
+            ]);
+        }
+
         $this->countPrice();
     }
 
@@ -88,7 +112,7 @@ class Pembayaran extends Component
             }
 
             if (Carbon::now() >= $promo->start && Carbon::now() <= (new \DateTime($promo->end))->modify("+1 day")->modify("-1 second")->format("Y-m-d H:i:s")) {
-                //                session()->flash('message', 'Anda mendapatkan potongan sebesar Rp ' . number_format($this->promo->nominal, 2, ',', '.'));
+                //session()->flash('message', 'Anda mendapatkan potongan sebesar Rp ' . number_format($this->promo->nominal, 2, ',', '.'));
                 array_push($this->promo, [
                     'id' => $promo->id,
                     'promo_code' => strtoupper($promo->promo_code),
@@ -121,6 +145,11 @@ class Pembayaran extends Component
 
     public function submitBayar()
     {
+        if (!$this->check) {
+            session()->flash('error', 'Harap lakukan pengecekan DP terlebih dahulu');
+            return;
+        }
+
         if ($this->promo) {
             foreach ($this->promo as $promo) {
                 PromoTeam::create([
@@ -186,6 +215,22 @@ class Pembayaran extends Component
     public function closeMessage()
     {
         session()->remove('error');
+    }
+
+    public function checkInvoice()
+    {
+        if (Auth::user()->userable->dp->isNotEmpty()) {
+            if (Auth::user()->userable->dp->where('status', "Pending")->first()) {
+                session()->flash('error', 'DP anda belum diverifikasi oleh Admin, silahkan hubungi admin untuk konfirmasi DP');
+            } elseif (Auth::user()->userable->dp->where('status', "Ditolak")->first()) {
+                session()->flash('error', 'DP anda ditolak oleh Admin, silahkan hubungi admin untuk konfirmasi DP');
+            } else {
+                session()->flash('error', 'DP anda telah dikonfirmasi, total biaya akan berkuran sesuai dengan nominal dp');
+                $this->check = true;
+            }
+        } else {
+            session()->flash('error', 'Anda tidak membayar DP');
+        }
     }
 
     public function statusNotification()
