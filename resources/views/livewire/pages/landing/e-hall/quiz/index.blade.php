@@ -5,7 +5,7 @@
         {{-- Col 1 --}}
         <div class="flex flex-col flex-1">
             <div class="flex flex-row items-center gap-5">
-                <h1 class="text-white text-[50px] md:text-[80px] font-bold">ISE Trivia</h1>
+                <h1 class="text-white text-[50px] md:text-[80px] font-bold px-6 md:px-0">ISE Trivia</h1>
             </div>
             <div class=" w-[80%] mx-auto block md:hidden">
                 <img src="{{ asset('images/trivia-logo.png') }}" alt="founder-digiflux">
@@ -16,7 +16,7 @@
                 dictum est a, mattis tellus. Sed dignissim, metus nec 
                 fringilla accumsan,risus sem sollicitudin lacus, ut interdum
                 tellus elit sed risus  </p>
-            <div class="relative mt-16 ml-8 text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
+            <div class="relative mt-16 mx-auto text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
             <div class="absolute inset-0 ">
                 <a href="#explore"
                     class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's

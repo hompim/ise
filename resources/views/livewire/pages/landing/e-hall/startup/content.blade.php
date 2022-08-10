@@ -4,20 +4,20 @@
     <div class="flex flex-row pt-24 md:pt-52 mx-[20px] md:mx-[130px]">
         {{-- Col 1 --}}
         <div class="flex flex-col flex-1">
-            <div class="flex flex-row items-center gap-5">
+            <div class="flex flex-row items-center gap-5 px-6 md:px-0">
                 <img src="{{ asset('images/startup/digiflux-logo.svg') }}" alt="digilux-logo">
                 <h1 class="text-white text-[50px] md:text-[80px] font-bold">Digiflux</h1>
             </div>
             <div class=" w-[80%] mx-auto block md:hidden">
                 <img src="{{ asset('images/startup/digiflux-founder.png') }}" alt="founder-digiflux">
             </div>
-            <p class="text-sm md:text-lg text-liteGray mt-4 px-6 md:px-0 md:leading-normal">
+            <p class="text-sm md:text-lg text-liteGray mt-4 px-6 md:px-0 md:leading-normal text-center md:text-left">
                 Aplikasi Untuk menjembatani Influencer dan Pelaku Usaha Lorem ipsum  
                 dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
                 dictum est a, mattis tellus.Sed dignissim, metus nec fringilla accumsan,
                 risus sem sollicitudin lacus, ut interdum 
                 tellus elit sed risus. </p>
-            <div class="relative mt-16 ml-8 text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
+            <div class="relative mt-16 mx-auto text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
             <div class="absolute inset-0 ">
                 <a href="#explore"
                     class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's

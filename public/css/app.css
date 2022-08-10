@@ -5162,6 +5162,10 @@ select {
         padding-top: 13rem;
     }
 
+    .md\:text-left {
+        text-align: left;
+    }
+
     .md\:text-center {
         text-align: center;
     }
