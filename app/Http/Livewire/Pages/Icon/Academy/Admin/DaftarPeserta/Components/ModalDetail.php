@@ -65,13 +65,14 @@ class ModalDetail extends ModalComponent
         $this->member3_email = ($this->icon_data->member_2 ? $this->icon_data->member_2->email : null);
         $this->member3_twibbon = ($this->icon_data->member_2 ? $this->icon_data->member_2->link_twibbon : null);
         $this->photo3 = ($this->icon_data->member_2 ? $this->icon_data->member_2->identity_card_path : null);
+        $this->institute_name = $this->icon_data->university_name;
 
         if ($type == 'Data Science') {
             $this->cv1 = $this->icon_data->leader->cv_path;
             $this->cv2 = $this->icon_data->member_1->cv_path;
             $this->cv3 = $this->icon_data->member_2->cv_path;
             $this->expectation_joining_academy = $this->icon_data->expectation_joining_academy;
-            $this->reason_joining_academy = $this->icon_data->reason_joiningy;
+            $this->reason_joining_academy = $this->icon_data->reason_joining;
             $this->post_academy_activity = $this->icon_data->post_activity;
         } else {
             $this->startup_title = $this->icon_data->startup_idea_title;

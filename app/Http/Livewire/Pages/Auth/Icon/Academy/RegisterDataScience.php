@@ -130,8 +130,8 @@ class RegisterDataScience extends Component
                 'name' => $this->{'member_'.$x.'_name'},
                 'email' => $this->{'member_'.$x.'_email'},
                 'whatsapp' => $this->{'member_'.$x.'_whatsapp'},
-                'link_twibbon' => $this->{'member_'.$x.'_ig'},
-                'link_instagram' => $this->{'member_'.$x.'_twibbon'},
+                'link_instagram' => $this->{'member_'.$x.'_ig'},
+                'link_twibbon' => $this->{'member_'.$x.'_twibbon'},
             ]);
 
             if(!is_string($this->{'ktm_'.$x}) && !is_string($this->{'cv_'.$x}))

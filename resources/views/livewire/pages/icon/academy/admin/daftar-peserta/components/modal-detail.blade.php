@@ -46,9 +46,9 @@
                 </div>
             </div>
 
-            @for ($x = 1 ; $x<=3 ; x++)
+            @for ($x = 1 ; $x<=3 ; $x++)
             <div id="anggota_{{$x}}" class="mt-8">
-                <h5>Anggota Tim 1</h5>
+                <h5>Anggota Tim {{$x}}</h5>
                 <hr/>
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <div>
@@ -57,17 +57,24 @@
                     </div>
                     <div>
                         <p class="font-bold mb-0 mt-2">Email</p>
-                        <p>{{${'member'.$x.'_email'}}}</p>
+                        <p>{{ ${'member'.$x.'_email'} }}</p>
                     </div>
                     <div>
                         <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
-                        <p>{{${'member'.$x.'_whatsapp'}}}</p>
+                        <p>{{ ${'member'.$x.'_whatsapp'} }}</p>
                     </div>
                     <div>
                         <p class="font-bold mb-0 mt-2">Link Post Twibbon</p>
-                        <p class="text-blue-500 truncate"><a href="{{${'member'.$x.'_twibbon'}}}"
-                                                             target="_blank">{{${'member'.$x.'_twibbon'}}}</a></p>
+                        <p class="text-blue-500 truncate"><a href="{{ ${'member'.$x.'_twibbon'} }}"
+                                                             target="_blank">{{ ${'member'.$x.'_twibbon'} }}</a></p>
                     </div>
+                    @if($type == 'Data Science')
+                    <div>
+                        <p class="font-bold mb-0 mt-2">CV</p>
+                        <p class="text-blue-500 truncate"><a href="{{asset('/storage/'.${'cv'.$x})}}"
+                                                             target="_blank">CV Anggota {{$x}}</a></p>
+                    </div>
+                    @endif
                     <div>
                         <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
                         @if($photo1)
