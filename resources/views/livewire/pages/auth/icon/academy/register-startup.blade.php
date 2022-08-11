@@ -50,7 +50,7 @@
                         <label for="member_{{ $x }}_name">Nama Lengkap</label>
                         <input id="member_{{ $x }}_name" name="member_{{ $x }}_name"
                             wire:model.defer="member_{{ $x }}_name" type="text"
-                            @if ($x < 3) required @endif
+                            required
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nama lengkap {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                     </div>
@@ -59,7 +59,7 @@
                         <input id="member_{{ $x }}_universitas"
                             name="member_{{ $x }}_universitas"
                             wire:model.defer="member_{{ $x }}_universitas" type="text"
-                            @if ($x < 3) required @endif
+                            required
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan asal universitas {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }} (Tidak disingkat)">
                     </div>
@@ -68,7 +68,7 @@
                         </label>
                         <input id="ktm_{{ $x }}" name="ktm_{{ $x }}"
                             wire:model.defer="ktm_{{ $x }}" type="file"
-                            @if ($x < 3) required @endif
+                            required
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Bukti Mahasiswa S1/Sederajat Aktif {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}"
                             accept=".jpg,.png">
@@ -77,7 +77,7 @@
                         <label for="member_{{ $x }}_whatsapp">Nomor WhatsApp (+62)</label>
                         <input id="member_{{ $x }}_whatsapp" name="member_{{ $x }}_whatsapp"
                             wire:model.defer="member_{{ $x }}_whatsapp" type="tel"
-                            @if ($x < 3) required @endif
+                            required
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nomor WhatsApp {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                     </div>
@@ -85,7 +85,7 @@
                         <label for="member_{{ $x }}_email">Email address</label>
                         <input id="member_{{ $x }}_email" name="member_{{ $x }}_email"
                             wire:model.defer="member_{{ $x }}_email" type="email"
-                            @if ($x < 3) required @endif
+                            required
                             class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                             placeholder="Masukkan email aktif {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                     </div>
@@ -94,7 +94,7 @@
                         </label>
                         <input id="member_{{ $x }}_ig" name="member_{{ $x }}_ig"
                             wire:model.defer="member_{{ $x }}_ig" type="text"
-                            @if ($x < 3) required @endif
+                            required
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Link Instagram {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                     </div>
@@ -103,7 +103,7 @@
                         </label>
                         <input id="member_{{ $x }}_twibbon" name="member_{{ $x }}_twibbon"
                             wire:model.defer="member_{{ $x }}_twibbon" type="text"
-                            @if ($x < 3) required @endif
+                            required
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Link Twibbon {{ $x == 1 ? 'Ketua Tim' : 'Anggota ' . ($x - 1) }}">
                         <small>Petunjuk twibbon dapat diunduh lewat link berikut: <a class="text-blue-400"

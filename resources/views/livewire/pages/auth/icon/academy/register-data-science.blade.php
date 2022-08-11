@@ -90,7 +90,7 @@
                         <label for="member_{{ $x }}_name">Nama Lengkap</label>
                         <input id="member_{{ $x }}_name" name="member_{{ $x }}_name"
                             wire:model.defer="member_{{ $x }}_name" type="text"
-                            @if ($x < 3) required @endif
+                            required
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nama lengkap anggota {{ $x }}">
                     </div>
@@ -98,7 +98,7 @@
                         <label for="member_{{ $x }}_email">Email address</label>
                         <input id="member_{{ $x }}_email" name="member_{{ $x }}_email"
                             wire:model.defer="member_{{ $x }}_email" type="email"
-                            @if ($x < 3) required @endif
+                            required
                             class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                             placeholder="Masukkan email aktif anggota {{ $x }}">
                     </div>
@@ -106,7 +106,7 @@
                         <label for="member_{{ $x }}_whatsapp">Nomor WhatsApp</label>
                         <input id="member_{{ $x }}_whatsapp" name="member_{{ $x }}_whatsapp"
                             wire:model.defer="member_{{ $x }}_whatsapp" type="tel"
-                            @if ($x < 3) required @endif
+                            required
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nomor WhatsApp anggota {{ $x }}">
                     </div>
@@ -115,7 +115,7 @@
                         </label>
                         <input id="ktm_{{ $x }}" name="ktm_{{ $x }}"
                             wire:model.defer="ktm_{{ $x }}" type="file"
-                            @if ($x < 3) required @endif
+                            required
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Bukti Mahasiswa S1/Sederajat Aktif Anggota {{ $x }}"
                             accept=".jpg,.png">
@@ -125,7 +125,7 @@
                         </label>
                         <input id="member_{{ $x }}_ig" name="member_{{ $x }}_ig"
                             wire:model.defer="member_{{ $x }}_ig" type="text"
-                            @if ($x < 3) required @endif
+                            required
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Username Instagram Anggota {{ $x }}">
                     </div>
@@ -134,7 +134,7 @@
                         </label>
                         <input id="member_{{ $x }}_twibbon" name="member_{{ $x }}_twibbon"
                             wire:model.defer="member_{{ $x }}_twibbon" type="text"
-                            @if ($x < 3) required @endif
+                            required
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Link Twibbon Anggota {{ $x }}">
                         <small>Petunjuk twibbon dapat diunduh lewat link berikut: <a class="text-blue-400"
@@ -145,7 +145,7 @@
                         <label for="cv_{{ $x }}">Curriculum Vitae (<=3Mb, .pdf) </label>
                                 <input id="cv_{{ $x }}" name="cv_{{ $x }}"
                                     wire:model.defer="cv_{{ $x }}" type="file"
-                                    @if ($x < 3) required @endif
+                                    required
                                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                                     placeholder="Curriculum Vitae Anggota {{ $x }}"
                                     accept="application/pdf">

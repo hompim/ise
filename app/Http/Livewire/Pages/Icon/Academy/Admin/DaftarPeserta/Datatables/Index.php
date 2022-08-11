@@ -48,9 +48,9 @@ class Index extends LivewireDatatable
                 Column::name('commitement_payment_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('competition_round')->label('Status Academy')->filterable(['Proses Seleksi', 'Lolos', 'Tidak Lolos']),
                 Column::raw('date_format(icon_academy_startup_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(icon_academy_startup_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
-                // Column::callback(['id'], function ($id) {
-                //     return view('livewire.pages.icon.academy.admin.daftar-peserta.data-tables.actions', ['id' => $id, 'type' => 'startup']);
-                // })
+                Column::callback(['id'], function ($id) {
+                    return view('livewire.pages.icon.academy.admin.daftar-peserta.components.datatable-action', ['id' => $id, 'type' => 'Startup']);
+                })
             ];
         } elseif ($this->model == 'App\Models\Icon\IconAcademyDataScienceData') {
             $column = [
@@ -70,9 +70,9 @@ class Index extends LivewireDatatable
                 Column::name('commitement_payment_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('competition_round')->label('Status Academy')->filterable(['Proses Seleksi', 'Lolos', 'Tidak Lolos']),
                 Column::raw('date_format(icon_academy_data_science_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(icon_academy_startup_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
-                // Column::callback(['id'], function ($id) {
-                //     return view('livewire.pages.icon.academy.admin.daftar-peserta.data-tables.actions', ['id' => $id, 'type' => 'startup']);
-                // })
+                Column::callback(['id'], function ($id) {
+                    return view('livewire.pages.icon.academy.admin.daftar-peserta.components.datatable-action', ['id' => $id, 'type' => 'Data Science']);
+                })
             ];
         }
         return $column;
