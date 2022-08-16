@@ -82,7 +82,7 @@ Route::group(['prefix' => 'icon'], function () {
             // icon/e-hall/quiz/true-or-false
             Route::get('true-or-false', TrueOrFalse::class)->name('true-false-quiz-ehall');
         });
-        // icon/e-hall/games
+        // icon/e-hall/game
         Route::get('game', GameIndex::class)->name('game-ehall');
     });
 });
