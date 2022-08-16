@@ -1041,15 +1041,6 @@ select {
 .z-40 {
     z-index: 40;
 }
-.-z-10 {
-    z-index: -10;
-}
-.-z-20 {
-    z-index: -20;
-}
-.-z-50 {
-    z-index: -50;
-}
 .col-span-5 {
     grid-column: span 5 / span 5;
 }
@@ -1503,6 +1494,9 @@ select {
 .mt-\[55px\] {
     margin-top: 55px;
 }
+.ml-9 {
+    margin-left: 2.25rem;
+}
 .ml-\[88px\] {
     margin-left: 88px;
 }
@@ -1515,32 +1509,11 @@ select {
 .mt-64 {
     margin-top: 16rem;
 }
-.mt-\[\] {
-    margin-top: ;
+.mt-40 {
+    margin-top: 10rem;
 }
-.mt-\[50px\] {
-    margin-top: 50px;
-}
-.ml-\[63px\] {
-    margin-left: 63px;
-}
-.mr-\[28px\] {
-    margin-right: 28px;
-}
-.ml-\[28px\] {
-    margin-left: 28px;
-}
-.ml-\[39px\] {
-    margin-left: 39px;
-}
-.mt-\[73px\] {
-    margin-top: 73px;
-}
-.ml-10 {
-    margin-left: 2.5rem;
-}
-.ml-9 {
-    margin-left: 2.25rem;
+.ml-0 {
+    margin-left: 0px;
 }
 .block {
     display: block;
@@ -1735,14 +1708,11 @@ select {
 .h-\[151px\] {
     height: 151px;
 }
-.h-16 {
-    height: 4rem;
-}
-.h-\[\] {
-    height: ;
-}
 .h-\[362px\] {
     height: 362px;
+}
+.h-16 {
+    height: 4rem;
 }
 .max-h-48 {
     max-height: 12rem;
@@ -1923,11 +1893,11 @@ select {
 .w-\[256px\] {
     width: 256px;
 }
-.w-\[88px\] {
-    width: 88px;
-}
 .w-\[60\%\] {
     width: 60%;
+}
+.w-\[88px\] {
+    width: 88px;
 }
 .min-w-full {
     min-width: 100%;
@@ -2247,9 +2217,6 @@ select {
 }
 .gap-7 {
     gap: 1.75rem;
-}
-.gap-24 {
-    gap: 6rem;
 }
 .gap-20 {
     gap: 5rem;
@@ -3358,11 +3325,11 @@ select {
 .pt-\[29px\] {
     padding-top: 29px;
 }
-.pr-96 {
-    padding-right: 24rem;
-}
 .pr-14 {
     padding-right: 3.5rem;
+}
+.pr-0 {
+    padding-right: 0px;
 }
 .text-left {
     text-align: left;
@@ -3491,10 +3458,6 @@ select {
 }
 .text-\[24px\] {
     font-size: 24px;
-}
-.text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
 }
 .text-\[64px\] {
     font-size: 64px;
@@ -4976,6 +4939,10 @@ select {
         margin-top: 18rem;
     }
 
+    .md\:ml-9 {
+        margin-left: 2.25rem;
+    }
+
     .md\:block {
         display: block;
     }
@@ -5038,6 +5005,10 @@ select {
 
     .md\:h-\[420px\] {
         height: 420px;
+    }
+
+    .md\:h-\[362px\] {
+        height: 362px;
     }
 
     .md\:w-4\/12 {
@@ -5362,6 +5333,10 @@ select {
 
     .md\:pt-0 {
         padding-top: 0px;
+    }
+
+    .md\:pt-\[50px\] {
+        padding-top: 50px;
     }
 
     .md\:text-left {

@@ -31,35 +31,37 @@
     </div>
 
     {{-- Showcase --}}
-    <div class="mt-10 md:mt-52 flex flex-col mx-[20px] md:mx-[130px] pb-52">
+    <div class="mt-44 md:mt-52 flex flex-col mx-[20px] md:mx-[130px] pb-52">
         {{-- Digiflux Card --}}
         <div class="relative">
-            <div class="absolute inset-0 w-full h-[362px] rounded-3xl blur-2xl btn"></div>
-            <div class="bg-liteBlack w-full h-[362px] rounded-3xl relative flex flex-row gap-10 pt-[50px] px-7">
-                <div class="flex flex-col ml-9">
-                    <h1 class="text-white font-bold text-[64px] ">Digiflux</h1>
-                    <p class="text-liteGray font-semibold text-xl mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <div class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl blur-2xl btn"></div>
+            <div class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-10 pt-4 md:pt-[50px] px-7 py-10 md:py-0">
+                <div class="flex flex-col ml-0 md:ml-9">
+                    <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Digiflux</h1>
+                    <p class="text-liteGray font-semibold text-base md:text-xl mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
                          eget consequat nibh ac aenean vel eget. Sociis elementum sit 
                          quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
                     </p>
                 </div>
                 <div class="">
-                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class="hidden md:flex"></iframe>
+                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class=""></iframe>
                 </div>
             </div>
         </div>
 
         {{-- Drafta Card --}}
-        <div class="relative mt-36">
-            <div class="absolute inset-0 w-full h-[362px] rounded-3xl blur-2xl btn"></div>
-            <div class="bg-liteBlack w-full h-[362px] rounded-3xl relative flex flex-row gap-9 px-7 items-center pr-14">
+        <div class="relative mt-14 md:mt-36">
+            <div class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl blur-2xl btn"></div>
+            <div class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-8 px-7 items-center md:pr-14 py-10 md:py-0">
                 <div class="">
-                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class="hidden md:flex"></iframe>
+                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class=""></iframe>
                 </div>
-                <div class="flex flex-col ml-">
-                    <h1 class="text-white font-bold text-[64px] ">Drafta</h1>
-                    <p class="text-liteGray font-semibold text-xl mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <div class="flex flex-col">
+                    <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Drafta</h1>
+                    <p class="text-liteGray font-semibold text-base md:text-xl mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
                         eget consequat nibh ac aenean vel eget. Sociis elementum sit 
                         quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
@@ -69,33 +71,35 @@
         </div>
 
         {{-- Digiflux Card --}}
-        <div class="relative mt-36">
-            <div class="absolute inset-0 w-full h-[362px] rounded-3xl blur-2xl btn"></div>
-            <div class="bg-liteBlack w-full h-[362px] rounded-3xl relative flex flex-row gap-10 pt-[50px] px-7">
-                <div class="flex flex-col ml-9">
-                    <h1 class="text-white font-bold text-[64px] ">Digiflux</h1>
-                    <p class="text-liteGray font-semibold text-xl mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
-                            eget consequat nibh ac aenean vel eget. Sociis elementum sit 
-                            quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
+        <div class="relative mt-14 md:mt-36">
+            <div class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl blur-2xl btn"></div>
+            <div class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-10 pt-4 md:pt-[50px] px-7 py-10 md:py-0">
+                <div class="flex flex-col ml-0 md:ml-9">
+                    <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Digiflux</h1>
+                    <p class="text-liteGray font-semibold text-base md:text-xl mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
+                        eget consequat nibh ac aenean vel eget. Sociis elementum sit 
+                        quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
                     </p>
                 </div>
                 <div class="">
-                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class="hidden md:flex"></iframe>
+                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class=""></iframe>
                 </div>
             </div>
         </div>
 
         {{-- Drafta Card --}}
-        <div class="relative mt-36">
-            <div class="absolute inset-0 w-full h-[362px] rounded-3xl blur-2xl btn"></div>
-            <div class="bg-liteBlack w-full h-[362px] rounded-3xl relative flex flex-row gap-9 px-7 items-center pr-14">
+        <div class="relative mt-14 md:mt-36">
+            <div class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl blur-2xl btn"></div>
+            <div class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-8 px-7 items-center md:pr-14 py-10 md:py-0">
                 <div class="">
-                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class="hidden md:flex"></iframe>
+                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class=""></iframe>
                 </div>
-                <div class="flex flex-col ml-">
-                    <h1 class="text-white font-bold text-[64px] ">Drafta</h1>
-                    <p class="text-liteGray font-semibold text-xl mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <div class="flex flex-col">
+                    <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Drafta</h1>
+                    <p class="text-liteGray font-semibold text-base md:text-xl mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
                         eget consequat nibh ac aenean vel eget. Sociis elementum sit 
                         quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
@@ -105,33 +109,35 @@
         </div>
 
         {{-- Digiflux Card --}}
-        <div class="relative mt-36">
-            <div class="absolute inset-0 w-full h-[362px] rounded-3xl blur-2xl btn"></div>
-            <div class="bg-liteBlack w-full h-[362px] rounded-3xl relative flex flex-row gap-10 pt-[50px] px-7">
-                <div class="flex flex-col ml-9">
-                    <h1 class="text-white font-bold text-[64px] ">Digiflux</h1>
-                    <p class="text-liteGray font-semibold text-xl mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
-                            eget consequat nibh ac aenean vel eget. Sociis elementum sit 
-                            quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
+        <div class="relative mt-14 md:mt-36">
+            <div class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl blur-2xl btn"></div>
+            <div class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-10 pt-4 md:pt-[50px] px-7 py-10 md:py-0">
+                <div class="flex flex-col ml-0 md:ml-9">
+                    <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Digiflux</h1>
+                    <p class="text-liteGray font-semibold text-base md:text-xl mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
+                        eget consequat nibh ac aenean vel eget. Sociis elementum sit 
+                        quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
                     </p>
                 </div>
                 <div class="">
-                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class="hidden md:flex"></iframe>
+                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class=""></iframe>
                 </div>
             </div>
         </div>
 
         {{-- Drafta Card --}}
-        <div class="relative mt-36">
-            <div class="absolute inset-0 w-full h-[362px] rounded-3xl blur-2xl btn"></div>
-            <div class="bg-liteBlack w-full h-[362px] rounded-3xl relative flex flex-row gap-9 px-7 items-center pr-14">
+        <div class="relative mt-14 md:mt-36">
+            <div class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl blur-2xl btn"></div>
+            <div class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-8 px-7 items-center md:pr-14 py-10 md:py-0">
                 <div class="">
-                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class="hidden md:flex"></iframe>
+                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class=""></iframe>
                 </div>
-                <div class="flex flex-col ml-">
-                    <h1 class="text-white font-bold text-[64px] ">Drafta</h1>
-                    <p class="text-liteGray font-semibold text-xl mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <div class="flex flex-col">
+                    <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Drafta</h1>
+                    <p class="text-liteGray font-semibold text-base md:text-xl mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
                         eget consequat nibh ac aenean vel eget. Sociis elementum sit 
                         quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
@@ -141,33 +147,35 @@
         </div>
 
         {{-- Digiflux Card --}}
-        <div class="relative mt-36">
-            <div class="absolute inset-0 w-full h-[362px] rounded-3xl blur-2xl btn"></div>
-            <div class="bg-liteBlack w-full h-[362px] rounded-3xl relative flex flex-row gap-10 pt-[50px] px-7">
-                <div class="flex flex-col ml-9">
-                    <h1 class="text-white font-bold text-[64px] ">Digiflux</h1>
-                    <p class="text-liteGray font-semibold text-xl mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
-                            eget consequat nibh ac aenean vel eget. Sociis elementum sit 
-                            quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
+        <div class="relative mt-14 md:mt-36">
+            <div class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl blur-2xl btn"></div>
+            <div class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-10 pt-4 md:pt-[50px] px-7 py-10 md:py-0">
+                <div class="flex flex-col ml-0 md:ml-9">
+                    <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Digiflux</h1>
+                    <p class="text-liteGray font-semibold text-base md:text-xl mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
+                        eget consequat nibh ac aenean vel eget. Sociis elementum sit 
+                        quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
                     </p>
                 </div>
                 <div class="">
-                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class="hidden md:flex"></iframe>
+                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class=""></iframe>
                 </div>
             </div>
         </div>
         
         {{-- Drafta Card --}}
-        <div class="relative mt-36">
-            <div class="absolute inset-0 w-full h-[362px] rounded-3xl blur-2xl btn"></div>
-            <div class="bg-liteBlack w-full h-[362px] rounded-3xl relative flex flex-row gap-9 px-7 items-center pr-14">
+        <div class="relative mt-14 md:mt-36">
+            <div class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl blur-2xl btn"></div>
+            <div class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-8 px-7 items-center md:pr-14 py-10 md:py-0">
                 <div class="">
-                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class="hidden md:flex"></iframe>
+                    <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263" frameborder="0" allowfullscreen class=""></iframe>
                 </div>
-                <div class="flex flex-col ml-">
-                    <h1 class="text-white font-bold text-[64px] ">Drafta</h1>
-                    <p class="text-liteGray font-semibold text-xl mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <div class="flex flex-col">
+                    <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Drafta</h1>
+                    <p class="text-liteGray font-semibold text-base md:text-xl mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Vulputate cras ultrices odio arcu diam sociis sem. Turpis 
                         eget consequat nibh ac aenean vel eget. Sociis elementum sit 
                         quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
@@ -175,54 +183,8 @@
                 </div>
             </div>
         </div>
-
-        
-
-
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
