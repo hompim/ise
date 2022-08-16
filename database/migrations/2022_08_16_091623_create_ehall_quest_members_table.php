@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('members', function (Blueprint $table) {
+        Schema::create('ehall_quest_members', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('member_id');
+            $table->unsignedBigInteger('quiz_id');
+            $table->boolean('is_right');
+            $table->string('answer');
             $table->timestamps();
-            $table->enum('jenjang',['SMA','Mahasiswa','Umum']);
-            $table->nullableMorphs('academy');
-            $table->nullableMorphs('bionix');
-            $table->unsignedBigInteger('roadshow_school_id')->nullable();
-            $table->integer('hois_point')->default(0);
         });
     }
 
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('members');
+        Schema::dropIfExists('ehall_quest_members');
     }
 };
