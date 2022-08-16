@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="@yield('desc', 'ISE! merupakan singkatan dari Information Systems Expo yang merupakan event tahunan yang diselenggarakan oleh Departemen Sistem Informasi Institut Teknologi Sepuluh Nopember Surabaya dalam rangka memperkenalkan Departemen Sistem Informasi ITS kepada masyarakat luas')">
-    <meta name="keywords" content="@yield('keywords', 'ISE, Sistem Informasi ITS, Sistem Informasi, ITS, Olimpiade, Bisnis, TIK, Teknologi, Pameran IT, Konser')">
+    <meta name="keywords" content="@yield('keywords', 'ISE, Sistem Informasi ITS, Sistem Informasi, ITS, Olimpiade, Bisnis, TIK, Teknologi, Pameran IT, Konser, ISE ITS 2022, ise its, information system expo, information system expo 2022, information system its, information system expo its 2022')">
     <meta name="author" content="WebDev ISE! 2022">
     {{-- open graph --}}
     <meta property="og:title" content="ISE! | Information System Expo! 2022">
