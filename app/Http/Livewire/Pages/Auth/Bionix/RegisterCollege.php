@@ -2,6 +2,11 @@
 
 namespace App\Http\Livewire\Pages\Auth\Bionix;
 
+use App\Models\Bionix\City;
+use App\Models\Bionix\TeamSeniorData;
+use App\Models\Bionix\TeamSeniorMember;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Intervention\Image\ImageManager;
@@ -20,31 +25,49 @@ class RegisterCollege extends Component
     public $team_name,
         $info_source,
         $judul_ide_bisnis,
-        $bmc_file_path,
+        $bmc,
         $member_1_name,
         $member_2_name,
         $member_3_name,
+        $member_4_name,
+        $member_5_name,
         $member_1_email,
         $member_2_email,
         $member_3_email,
+        $member_4_email,
+        $member_5_email,
         $member_1_whatsapp,
         $member_2_whatsapp,
         $member_3_whatsapp,
-        $university_name,
-        $university_city,
-        $password,
-        $re_password,
+        $member_4_whatsapp,
+        $member_5_whatsapp,
+        $member_1_ktm,
+        $member_2_ktm,
+        $member_3_ktm,
+        $member_4_ktm,
+        $member_5_ktm,
+        $member_1_university,
+        $member_2_university,
+        $member_3_university,
+        $member_4_university,
+        $member_5_university,
         $agree,
         $member_1_twibbon,
         $member_2_twibbon,
         $member_3_twibbon,
+        $member_4_twibbon,
+        $member_5_twibbon,
         $member_1_major,
         $member_2_major,
         $member_3_major,
+        $member_4_major,
+        $member_5_major,
         $member_1_year,
         $member_2_year,
-        $member_3_year;
-    public $with_member_2 = false, $with_member_3 = false;
+        $member_3_year,
+        $member_4_year,
+        $member_5_year;
+    public $with_member_4 = false, $with_member_5 = false;
 
     public function move($toStep)
     {
@@ -74,7 +97,7 @@ class RegisterCollege extends Component
         $validatedData = $this->validate([
             'team_name' => 'required',
             'judul_ide_bisnis' => 'required',
-            'bmc_file_path' => 'required'
+            'bmc' => 'required|mimes:pdf|max:3072'
         ]);
         $this->isIdentityDone = true;
         $this->move(2);
@@ -106,8 +129,6 @@ class RegisterCollege extends Component
     }
     public function akunSubmit()
     {
-        $this->with_member_2 = false;
-        $this->with_member_3 = false;
         $arr_validation = [
             'team_name' => 'required',
             'university_name' => 'required',
@@ -118,36 +139,49 @@ class RegisterCollege extends Component
             'member_1_twibbon' => 'required|url',
             'member_1_year' => 'required|integer|min:2000',
             'member_1_major' => 'required|string',
+            'member_1_university' => 'required|string',
         ];
-        if ($this->member_2_email || $this->member_2_name || $this->member_2_twibbon || $this->member_2_whatsapp || $this->member_2_year || $this->member_2_major) {
-            $arr_validation = array_merge($arr_validation, [
-                'member_2_name' => 'required',
-                'member_2_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
-                'member_2_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
-                'member_2_twibbon' => 'required|url',
-                'member_2_year' => 'required|integer|min:2000',
-                'member_2_major' => 'required|string',
-            ]);
-            $this->with_member_2 = true;
+
+        for ($x = 2; $x <= 5; $x++) {
+            if ($this->{'member_' . $x . '_email'} || $this->{'member_' . $x . '_name'} || $this->{'member_' . $x . '_twibbon'} || $this->{'member_' . $x . '_whatsapp'} || $this->{'member_' . $x . '_year'} || $this->{'member_' . $x . '_major'}) {
+                $arr_validation = array_merge($arr_validation, [
+                    'member_' . $x . '_name' => 'required',
+                    'member_' . $x . '_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
+                    'member_' . $x . '_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
+                    'member_' . $x . '_twibbon' => 'required|url',
+                    'member_' . $x . '_year' => 'required|integer|min:2000',
+                    'member_' . $x . '_major' => 'required|string',
+                    'member_' . $x . '_university' => 'required|string',
+                ]);
+                if ($x == 4) $this->with_member_4 = true;
+                if ($x == 5) $this->with_member_5 = true;
+            }
         }
-        if ($this->member_3_email || $this->member_3_name || $this->member_3_twibbon || $this->member_3_whatsapp || $this->member_3_year || $this->member_3_major) {
-            $arr_validation = array_merge($arr_validation, [
-                'member_3_name' => 'required',
-                'member_3_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
-                'member_3_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
-                'member_3_twibbon' => 'required|url',
-                'member_3_year' => 'required|integer|min:2000',
-                'member_3_major' => 'required|string',
-            ]);
-            $this->with_member_3 = true;
+
+        for ($x = 1; $x <= 2; $x++) {
+            for ($y = $x + 1; $y <= 3; $y++) {
+                if (($this->{'member_' . $x . '_email'} == $this->{'member_' . $y . '_email'})) {
+                    $this->errorMessage = "Email masing-masing peserta tidak boleh sama";
+                    return;
+                }
+            }
         }
-        $this->validate($arr_validation);
-        if (($this->with_member_2 && $this->member_1_email == $this->member_2_email) ||
-            ($this->with_member_3 && $this->member_1_email == $this->member_3_email) ||
-            ($this->with_member_2 && $this->with_member_3 && $this->member_2_email == $this->member_3_email)
-        ) {
-            $this->errorMessage = "Email masing-masing peserta tidak boleh sama";
-            return;
+
+        if($this->with_member_4){
+            for ($i=1; $i < 4; $i++) {
+                if (($this->{'member_' . $x . '_email'} == $this->member_4_email)) {
+                    $this->errorMessage = "Email masing-masing peserta tidak boleh sama";
+                    return;
+                }
+            }
+        }
+        if($this->with_member_5){
+            for ($i=1; $i < 5; $i++) {
+                if (($this->{'member_' . $x . '_email'} == $this->member_5_email)) {
+                    $this->errorMessage = "Email masing-masing peserta tidak boleh sama";
+                    return;
+                }
+            }
         }
 
         if (!$this->agree) {
@@ -157,64 +191,116 @@ class RegisterCollege extends Component
 
         $this->isAkunDone = true;
         //            masukin ke database di sini bikin create
-        \Auth::user()->update([
+        Auth::user()->update([
             'name' => $this->member_1_name,
-            'no_hp' => $this->member_1_whatsapp
+            'whatsapp' => $this->member_1_whatsapp
         ]);
-        $team_member_1 = TeamSeniorMember::create([
-            'name' => $this->member_1_name,
-            'email' => $this->member_1_email,
-            'whatsapp' => $this->member_1_whatsapp,
-            'year' => $this->member_1_year,
-            'major' => $this->member_1_major,
-            'twibbon' => $this->member_1_twibbon
-        ]);
-        $team_member_2 = null;
-        if ($this->with_member_2) {
-            $team_member_2 = TeamSeniorMember::create([
-                'name' => $this->member_2_name,
-                'email' => $this->member_2_email,
-                'whatsapp' => $this->member_2_whatsapp,
-                'year' => $this->member_2_year,
-                'major' => $this->member_2_major,
-                'twibbon' => $this->member_2_twibbon
-            ])->id;
+
+
+        if (!is_string($this->bmc)) {
+            $bmc = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_BMC' . '.' . $this->bmc->getClientOriginalExtension();
+            $this->{'cv_' . $x}->storeAs("public/bionix", $bmc);
+
+            $team_data = TeamSeniorData::create([
+                'team_name' => $this->team_name,
+                'info_source' => $this->info_source,
+                'bmc_file_path' => 'bionix/'.$bmc,
+                'judul_ide_bisnis' => $this->judul_ide_bisnis,
+            ]);
         }
-        $team_member_3 = null;
-        if ($this->with_member_3) {
-            if ($this->with_member_2) {
-                $team_member_3 = TeamSeniorMember::create([
-                    'name' => $this->member_3_name,
-                    'email' => $this->member_3_email,
-                    'year' => $this->member_3_year,
-                    'major' => $this->member_3_major,
-                    'whatsapp' => $this->member_3_whatsapp,
-                    'twibbon' => $this->member_3_twibbon
-                ])->id;
-            } else {
-                $team_member_2 = TeamSeniorMember::create([
-                    'name' => $this->member_3_name,
-                    'email' => $this->member_3_email,
-                    'whatsapp' => $this->member_3_whatsapp,
-                    'year' => $this->member_3_year,
-                    'major' => $this->member_3_major,
-                    'twibbon' => $this->member_3_twibbon
-                ])->id;
-            }
+
+        for ($x = 1; $x <= 3; $x++) {
+            ${'team_member_' . $x} =  TeamSeniorMember::create([
+                'name' => $this->{'member_' . $x . '_name'},
+                'email' => $this->{'member_' . $x . '_email'},
+                'whatsapp' => $this->{'member_' . $x . '_whatsapp'},
+                'year' => $this->{'member_' . $x . '_year'},
+                'major' => $this->{'member_' . $x . '_major'},
+                'twibbon' => $this->{'member_' . $x . '_twibbon'},
+                'university' => $this->{'member_' . $x . '_university'},
+                'team_id' => $team_data->id,
+                'is_leader' => $x == 1 ? true : false
+            ]);
+
+            $ktm = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_' . $x . '_KTM' . '.' . $this->{'member_' . $x . '_ktm'}->getClientOriginalExtension();
+
+            $resized_image_ktm = (new ImageManager())
+                ->make($this->{'member_' . $x . '_ktm'})
+                ->resize(600, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->encode($this->{'member_' . $x . '_ktm'}->getClientOriginalExtension());
+
+            Storage::disk('public')
+                ->put(
+                    'bionix/' . $ktm,
+                    $resized_image_ktm->__toString()
+                );
+            ${'team_member_' . $x}->update([
+                'identity_card_path' => 'bionix/' . $ktm,
+            ]);
         }
-        $team_data = TeamSeniorData::create([
-            'team_name' => $this->team_name,
-            'info_source' => $this->info_source,
-            'university_name' => $this->university_name,
-            'city_id' => $this->university_city,
-            'bmc_file_path' => $this->bmc_file_path,
-            'judul_ide_bisnis' => $this->judul_ide_bisnis,
-            'competition_round' => 'Penyisihan',
-            'leader_id' => $team_member_1->id,
-            'member1_id' => $team_member_2,
-            'member2_id' => $team_member_3
-        ]);
-        \Auth::user()->userable->update([
+
+        if ($this->with_member_4) {
+            $team_member_4 = TeamSeniorMember::create([
+                'name' => $this->member_4_name,
+                'email' => $this->member_4_email,
+                'whatsapp' => $this->member_4_whatsapp,
+                'year' => $this->member_4_year,
+                'major' => $this->member_4_major,
+                'twibbon' => $this->member_4_twibbon,
+                'university' => $this->member_4_university
+            ]);
+            $ktm = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_4_KTM' . '.' . $this->member_4_ktm->getClientOriginalExtension();
+
+            $resized_image_ktm = (new ImageManager())
+                ->make($this->$this->member_4_ktm)
+                ->resize(600, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->encode($this->$this->member_4_ktm->getClientOriginalExtension());
+
+            Storage::disk('public')
+                ->put(
+                    'bionix/' . $ktm,
+                    $resized_image_ktm->__toString()
+                );
+            $team_member_4->update([
+                'identity_card_path' => 'bionix/' . $ktm,
+            ]);
+        }
+        if ($this->with_member_5) {
+            $team_member_5 = TeamSeniorMember::create([
+                'name' => $this->member_5_name,
+                'email' => $this->member_5_email,
+                'whatsapp' => $this->member_5_whatsapp,
+                'year' => $this->member_5_year,
+                'major' => $this->member_5_major,
+                'twibbon' => $this->member_5_twibbon,
+                'university' => $this->member_5_university
+            ]);
+
+            $ktm = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_5_KTM' . '.' . $this->member_5_ktm->getClientOriginalExtension();
+
+            $resized_image_ktm = (new ImageManager())
+                ->make($this->$this->member_5_ktm)
+                ->resize(600, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })->encode($this->$this->member_5_ktm->getClientOriginalExtension());
+
+            Storage::disk('public')
+                ->put(
+                    'bionix/' . $ktm,
+                    $resized_image_ktm->__toString()
+                );
+            $team_member_5->update([
+                'identity_card_path' => 'bionix/' . $ktm,
+            ]);
+        }
+
+
+        Auth::user()->userable->update([
             'bionix_id' => $team_data->id,
             'bionix_type' => 'App\Models\Bionix\TeamSeniorData'
         ]);
@@ -226,6 +312,11 @@ class RegisterCollege extends Component
     {
         $this->errorMessage = '';
         $this->resetErrorBag();
+    }
+
+    public function mount()
+    {
+        $this->cities == City::all();
     }
 
     public function render()
