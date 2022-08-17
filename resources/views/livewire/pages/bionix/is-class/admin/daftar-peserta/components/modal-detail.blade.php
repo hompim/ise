@@ -29,6 +29,10 @@
                     <p>{{ $is_class_peserta->status }}</p>
                 </div>
                 <div>
+                    <p class="font-bold mb-0 mt-2">Link Twibbon</p>
+                    <p>{{ $is_class_peserta->twibbon_path }}</p>
+                </div>
+                <div>
                     <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
                     <a href="{{ asset("storage/$is_class_peserta->identity_card_path") }}" target="_blank"
                         rel="noopener noreferrer">
@@ -42,14 +46,6 @@
                         rel="noopener noreferrer">
                         <img class="object-scale-down w-100"
                             src="{{ asset("storage/$is_class_peserta->instagram_path") }}" />
-                    </a>
-                </div>
-                <div>
-                    <p class="font-bold mb-0 mt-2">Twibbon</p>
-                    <a href="{{ asset("storage/$is_class_peserta->twibbon_path") }}" target="_blank"
-                        rel="noopener noreferrer">
-                        <img class="object-scale-down w-100"
-                            src="{{ asset("storage/$is_class_peserta->twibbon_path") }}" />
                     </a>
                 </div>
             </div>

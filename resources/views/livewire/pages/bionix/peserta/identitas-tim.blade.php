@@ -210,6 +210,18 @@
                                         <p class="font-bold text-lg">{{$member_1_year}}</p>
                                     @endif
                                 </div>
+                                <div>
+                                    <label for="member_1_major" class="mb-2 font-bold text-gray-400 mt-4">Link Twibbon</label><br>
+                                    @if($is_edit)
+                                        <input wire:model.defer="member_1_twibbon" type="text" id="member_1_twibbon"
+                                               name="member_1_twibbon"
+                                               class="{{$readonly?'bg-gray-100':''}} registration-form input-text"
+                                               style="color: black;margin-top:0;"
+                                               required {{$readonly?'disabled':''}}>
+                                    @else
+                                        <p class="font-bold text-lg">{{$member_1_twibbon}}</p>
+                                    @endif
+                                </div>
                             @endif
                         </div>
                         <div>
@@ -246,40 +258,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div x-data="{ isUploading: false, progress: 0 }"
-                                 x-on:livewire-upload-start="isUploading = true"
-                                 x-on:livewire-upload-finish="isUploading = false"
-                                 x-on:livewire-upload-error="isUploading = false"
-                                 x-on:livewire-upload-progress="progress = $event.detail.progress">
-                                <div class="flex flex-col items-center justify-center md:p-3 w-full">
-                                    <label for="kartu_pelajar"
-                                           class="capitalize text-gray-400">Twibbon Anggota 1</label>
-                                    <div x-show="isUploading" class="w-full">
-                                        <progress max="100" x-bind:value="progress" class="w-full"></progress>
-                                    </div>
-                                    <img
-                                        src="{{$member_1_twibbon?(is_string($member_1_twibbon)?asset('storage/'.$member_1_twibbon):$member_1_twibbon->temporaryUrl()):asset('/img/global/placeholder-image.png')}}"
-                                        class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_twibbon_preview"
-                                        style="max-height:50vh">
-                                    @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi"&&$is_edit)
-                                        <button
-                                            onclick="$('#member_1_twibbon').click()"
-                                            type="button"
-                                            class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
-                                            <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
-                                        </button>
-                                        <input type="file"
-                                               wire:model.defer="member_1_twibbon"
-                                               class="form-control-file"
-                                               name="member_1_twibbon"
-                                               id="member_1_twibbon"
-                                               accept=".jpg,.jpeg,.png"
-                                               hidden>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
+
+
                             <div>
                             <div x-data="{ isUploading: false, progress: 0 }"
                                  x-on:livewire-upload-start="isUploading = true"
@@ -476,40 +456,6 @@
                                                 id="member_2_card"
                                                 accept=".jpg,.jpeg,.png"
                                                 hidden>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div x-data="{ isUploading: false, progress: 0 }"
-                                     x-on:livewire-upload-start="isUploading = true"
-                                     x-on:livewire-upload-finish="isUploading = false"
-                                     x-on:livewire-upload-error="isUploading = false"
-                                     x-on:livewire-upload-progress="progress = $event.detail.progress">
-                                    <div class="flex flex-col items-center justify-center md:p-3 w-full">
-                                        <label for="kartu_pelajar"
-                                               class="capitalize text-gray-400">Twibbon Anggota 2</label>
-                                        <div x-show="isUploading" class="w-full">
-                                            <progress max="100" x-bind:value="progress" class="w-full"></progress>
-                                        </div>
-                                        <img
-                                            src="{{$member_2_twibbon?(is_string($member_2_twibbon)?asset('storage/'.$member_2_twibbon):$member_2_twibbon->temporaryUrl()):asset('/img/global/placeholder-image.png')}}"
-                                            class="object-fit mx-auto" alt="Kartu Pelajar" id="member_2_twibbon_preview"
-                                            style="max-height:50vh">
-                                        @if(Auth::user()->userable->bionix->profile_verif_status!="Terverifikasi"&&Auth::user()->userable->bionix->profile_verif_status!="Tahap Verifikasi"&&$is_edit)
-                                            <button
-                                                onclick="$('#member_2_twibbon').click()"
-                                                type="button"
-                                                class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
-                                                <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
-                                            </button>
-                                            <input type="file"
-                                                   wire:model.defer="member_2_twibbon"
-                                                   class="form-control-file"
-                                                   name="member_2_twibbon"
-                                                   id="member_2_twibbon"
-                                                   accept=".jpg,.jpeg,.png"
-                                                   hidden>
                                         @endif
                                     </div>
                                 </div>

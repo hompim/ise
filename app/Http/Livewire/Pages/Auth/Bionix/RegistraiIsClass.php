@@ -56,7 +56,7 @@ class RegistraiIsClass extends Component
             'sekolah' => 'required',
             'ktm' => 'required|image|max:2048',
             'instagram' => 'required|image|max:2048',
-            'twibbon' => 'required|image|max:2048',
+            'twibbon' => 'required',
             'info_pendaftaran' => 'required',
             'status' => 'required'
         ]);
@@ -69,7 +69,6 @@ class RegistraiIsClass extends Component
         Storage::disk('public')->makeDirectory('isclass');
         $ktm = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_KTM' . '.' . $this->ktm->getClientOriginalExtension();
         $instagram = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_INSTAGRAM' . '.' . $this->instagram->getClientOriginalExtension();
-        $twibbon = date('YmdHis') . '_ISCLASS_' . $this->namalengkap . '_TWIBBON' . '.' . $this->twibbon->getClientOriginalExtension();
 
         $kartu_pelajar_path = 'isclass/' . $ktm;
         $resized_image = (new ImageManager())
@@ -99,19 +98,6 @@ class RegistraiIsClass extends Component
                 $resized_image->__toString()
             );
 
-        $twibbon_path = 'isclass/' . $twibbon;
-        $resized_image = (new ImageManager())
-            ->make($this->twibbon)
-            ->resize(600, null, function ($constraint) {
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            })->encode($this->twibbon->getClientOriginalExtension());
-
-        Storage::disk('public')
-            ->put(
-                $twibbon_path,
-                $resized_image->__toString()
-            );
 
         Auth::user()->update([
             'name' => $this->namalengkap,
@@ -125,7 +111,7 @@ class RegistraiIsClass extends Component
             'identity_card_path' => $kartu_pelajar_path,
             'school_name' => $this->sekolah,
             'status' => $this->status,
-            'twibbon_path' => $twibbon_path,
+            'twibbon_path' => $this->twibbon,
             'instagram_path' => $instagram_path,
         ]);
         return redirect(route('isclass.register-success'));

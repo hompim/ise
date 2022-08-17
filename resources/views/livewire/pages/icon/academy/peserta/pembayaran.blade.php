@@ -36,7 +36,7 @@
                     <div class="flex flex-col justify-center items-center">
                         <div class="my-8">
                             <div class="flex flex-col justify-center">
-                                @if(Auth::user()->userable->academy->payment_verif_status!='Belum Bayar')
+                                @if(Auth::user()->userable->academy->commitment!='Belum Bayar')
                                     <h5 class="text-center font-normal text-xl">Harap lakukan transfer uang ke rekening
                                         bank
                                         berikut

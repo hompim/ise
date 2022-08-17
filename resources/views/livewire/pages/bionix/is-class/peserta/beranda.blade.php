@@ -197,35 +197,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3">
-                                <div class="" x-data="{ isUploading: false, progress: 0 }"
-                                    x-on:livewire-upload-start="isUploading = true"
-                                    x-on:livewire-upload-finish="isUploading = false"
-                                    x-on:livewire-upload-error="isUploading = false"
-                                    x-on:livewire-upload-progress="progress = $event.detail.progress">
-                                    <div class="flex flex-col items-center justify-center md:p-3 w-full">
-                                        <label for="kartu_pelajar" class="capitalize text-gray-400">twibbon</label>
-                                        <div x-show="isUploading" class="w-full">
-                                            <progress max="100" x-bind:value="progress"
-                                                class="w-full"></progress>
-                                        </div>
-                                        <img src="{{ $twibbon ? (is_string($twibbon) ? asset('storage/' . $twibbon) : $twibbon->temporaryUrl()) : asset('/img/global/placeholder-image.png') }}"
-                                            class="object-fit mx-auto" alt="Kartu Pelajar" id="member_1_card_preview"
-                                            style="max-height:50vh">
-                                        @if (Auth::user()->userable->isclass->profile_verif_status != 'Terverifikasi' &&
-                                            Auth::user()->userable->isclass->profile_verif_status != 'Tahap Verifikasi' &&
-                                            $is_edit)
-                                            <button type="button" onclick="$('#member_1_twibbon').click()"
-                                                class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-3">
-                                                <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
-                                            </button>
-                                            <input type="file" wire:model.defer="twibbon"
-                                                class="form-control-file" name="twibbon" id="member_1_twibbon"
-                                                accept=".jpg,.jpeg,.png" hidden>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
                             {{-- <div class="mt-3">
                                 <div class="" x-data="{ isUploading: false, progress: 0 }"
                                     x-on:livewire-upload-start="isUploading = true"

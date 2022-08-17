@@ -44,6 +44,10 @@
                     <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
                     <p>{{$member1_whatsapp}}</p>
                 </div>
+                <div>
+                    <p class="font-bold mb-0 mt-2">Link Twibbon</p>
+                    <p>{{$member1_twibbon}}</p>
+                </div>
                 @if($type=='college')
                     <div>
                         <p class="font-bold mb-0 mt-2">Jurusan</p>
@@ -59,14 +63,6 @@
                     <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
                     @if($photo1)
                         <img class="object-scale-down w-50" src="{{asset('/storage/'.$photo1)}}"/>
-                    @else
-                        <p>Belum unggah</p>
-                    @endif
-                </div>
-                <div>
-                    <p class="font-bold mb-0 mt-2">Twibbon</p>
-                    @if($photo1)
-                        <img class="object-scale-down w-50" src="{{asset('/storage/'.$member1_twibbon)}}"/>
                     @else
                         <p>Belum unggah</p>
                     @endif
@@ -98,6 +94,11 @@
                         <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
                         <p>{{$member2_whatsapp}}</p>
                     </div>
+                    <div>
+                        <p class="font-bold mb-0 mt-2">Link Twibbon</p>
+                        <p class="text-blue-500 truncate"><a href="{{$member2_twibbon}}"
+                                                             target="_blank">{{$member2_twibbon}}</a></p>
+                    </div>
                     @if($type=='college')
                         <div>
                             <p class="font-bold mb-0 mt-2">Jurusan</p>
@@ -107,12 +108,6 @@
                         <div>
                             <p class="font-bold mb-0 mt-2">Tahun Angkatan</p>
                             <p class="truncate">{{$member2_year}}</p>
-                        </div>
-
-                        <div>
-                            <p class="font-bold mb-0 mt-2">Link Twibbon</p>
-                            <p class="text-blue-500 truncate"><a href="{{$member2_twibbon}}"
-                                                                 target="_blank">{{$member2_twibbon}}</a></p>
                         </div>
                     @endif
                     <div>
@@ -124,16 +119,8 @@
                         @endif
                     </div>
                     <div>
-                        <p class="font-bold mb-0 mt-2">Twibbon</p>
-                        @if($photo1)
-                            <img class="object-scale-down w-50" src="{{asset('/storage/'.$member2_twibbon)}}"/>
-                        @else
-                            <p>Belum unggah</p>
-                        @endif
-                    </div>
-                    <div>
                         <p class="font-bold mb-0 mt-2">Follow Instagram</p>
-                        @if($photo1)
+                        @if($member2_instagram)
                             <img class="object-scale-down w-50" src="{{asset('/storage/'.$member2_instagram)}}"/>
                         @else
                             <p>Belum unggah</p>
