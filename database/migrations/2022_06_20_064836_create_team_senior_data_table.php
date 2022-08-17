@@ -19,8 +19,9 @@ return new class extends Migration
             $table->string('info_source');
             $table->string('judul_ide_bisnis')->nullable();
             $table->string('bmc_file_path')->nullable();
+            $table->unsignedBigInteger('city_id')->nullable();
             $table->enum('competition_round', ['Penyisihan', 'Semifinal', 'Final'])->default('Penyisihan');
-            $table->enum('profile_verif_status', ['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Belum Unggah');
+            $table->enum('profile_verif_status', ['Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Tahap Verifikasi');
             $table->unsignedTinyInteger('profile_verified_by')->nullable();
             $table->text('profile_verif_comment')->nullable();
             $table->boolean('want_to_pay')->default(true);

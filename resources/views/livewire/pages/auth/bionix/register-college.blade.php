@@ -41,6 +41,17 @@
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Masukkan nama tim kamu" wire:model.defer="team_name" name="team_name">
                 </div>
+                <div class="flex flex-col my-11 space-y-2 font-medium font-poppins">
+                    <label for="asal-domisili" class="text-white">Asal Daerah</label>
+                    <select wire:model ="city" name="city" id="asal-domisili" required
+                        class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white"
+                        name="city">
+                        <option class="bg-liteBlack" selected value="">Pilih asal daerah</option>
+                            @foreach ($cities as $city )
+                                <option class="bg-liteBlack text-white" value="{{$city->id}}">{{$city->name}}</option>
+                            @endforeach
+                    </select>
+                </div>
                 <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                     <label for="name">Judul Ide</label>
                     <input id="name" type="text"
@@ -98,6 +109,20 @@
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan Asal Institusi anggota {{ $x }}">
                     </div>
+                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                        <label for="wa">Jurusan</label>
+                        <input id="wa" wire:model.defer="member_{{ $x }}_major"
+                            name="member_{{ $x }}_university"
+                            class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                            placeholder="Masukkan jurusan anggota {{ $x }}">
+                    </div>
+                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                        <label for="wa">Tahun Angkatan</label>
+                        <input id="wa" wire:model.defer="member_{{ $x }}_year"
+                            name="member_{{ $x }}_university"
+                            class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                            placeholder="Masukkan tahun angkatan anggota {{ $x }}">
+                    </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="ktm_{{ $x }}">Bukti Mahasiswa S1/Sederajat Aktif
                         </label>
@@ -144,7 +169,7 @@
             <div class="{{ $step == 3 ? '' : 'hidden' }}">
                 <div class="flex flex-col space-y-2 font-medium font-poppins">
                     <label for="info-pendaftaran" class="text-white">Info Pendaftaran</label>
-                    <select id="info-pendaftaran" name="info_source" wire:model.defer="info_souce"
+                    <select id="info-pendaftaran" name="info_source" wire:model.defer="info_source"
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
                         <option class="bg-liteBlack" disabled selected value="">Dari manakah kamu
                             mendapatkan

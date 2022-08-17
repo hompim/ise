@@ -28,6 +28,7 @@
                 </div>
             </div>
         </div>
+
         <div id="anggota_1" class="mt-8">
             <h5 class="font-bold">Anggota Tim 1</h5>
             <hr/>
@@ -77,6 +78,7 @@
                 </div>
             </div>
         </div>
+
         @if($member2_name)
             <div id="anggota_2" class="mt-8">
                 <h5 class="font-bold">Anggota Tim 2</h5>
@@ -129,59 +131,7 @@
                 </div>
             </div>
         @endif
-        @if($member3_name)
-            <div id="anggota_3" class="mt-8">
-                <h5 class="font-bold">Anggota Tim 3</h5>
-                <hr/>
-                <div class="grid grid-cols-1 md:grid-cols-2">
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Nama</p>
-                        <p>{{$member3_name}}</p>
-                    </div>
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Email</p>
-                        <p>{{$member3_email}}</p>
-                    </div>
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
-                        <p>{{$member3_whatsapp}}</p>
-                    </div>
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Jurusan</p>
-                        <p class="truncate">{{$member3_major}}</p>
-                    </div>
 
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Tahun Angkatan</p>
-                        <p class="truncate">{{$member3_year}}</p>
-                    </div>
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
-                        @if($photo1)
-                            <img class="object-scale-down w-50" src="{{asset('/storage/'.$photo3)}}"/>
-                        @else
-                            <p>Belum unggah</p>
-                        @endif
-                    </div>
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Twibbon</p>
-                        @if($photo1)
-                            <img class="object-scale-down w-50" src="{{asset('/storage/'.$member3_twibbon)}}"/>
-                        @else
-                            <p>Belum unggah</p>
-                        @endif
-                    </div>
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Follow Instagram</p>
-                        @if($photo1)
-                            <img class="object-scale-down w-50" src="{{asset('/storage/'.$member3_instagram)}}"/>
-                        @else
-                            <p>Belum unggah</p>
-                        @endif
-                    </div>
-                </div>
-            </div>
-        @endif
         {{-- @if($bionix_data->payment_verif_status=="Tahap Verifikasi"||$bionix_data->payment_verif_status=="Terverifikasi"||$bionix_data->payment_verif_status=="Ditolak")
             <div id="promo" class="mt-8">
                 <h5>Promo yang Digunakan</h5>

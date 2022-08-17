@@ -25,7 +25,7 @@ class Beranda extends Component
 
     public function alert()
     {
-        switch (\Auth::user()->userable->academy->profile_verif_status) {
+        switch (Auth::user()->userable->academy->profile_verif_status) {
             case 'Tahap Verifikasi':
                 $this->alert_color = 'yellow';
                 $this->alert_header = 'Identitas Sedang Dalam Tahap Verifikasi';

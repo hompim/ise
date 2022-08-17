@@ -26,6 +26,7 @@ class RegisterCollege extends Component
         $info_source,
         $judul_ide_bisnis,
         $bmc,
+        $city,
         $member_1_name,
         $member_2_name,
         $member_3_name,
@@ -97,7 +98,8 @@ class RegisterCollege extends Component
         $validatedData = $this->validate([
             'team_name' => 'required',
             'judul_ide_bisnis' => 'required',
-            'bmc' => 'required|mimes:pdf|max:3072'
+            'bmc' => 'required|mimes:pdf|max:3072',
+            'city' => 'required'
         ]);
         $this->isIdentityDone = true;
         $this->move(2);
@@ -110,15 +112,14 @@ class RegisterCollege extends Component
             'member_2_name' => 'required',
             'member_3_name' => 'required',
             'member_1_email' => 'required|email',
-            'member_2_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members',
-            'member_3_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members',
+            'member_2_email' => 'required|email|unique:team_senior_members,email',
+            'member_3_email' => 'required|email|unique:team_senior_members,email',
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'member_2_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'member_3_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'member_1_twibbon' => 'required|url',
             'member_2_twibbon' => 'required|url',
             'member_3_twibbon' => 'required|url',
-            'info_source' => 'required'
         ]);
         if (($this->member_1_email == $this->member_2_email) || ($this->member_1_email == $this->member_3_email) || $this->member_3_email == $this->member_2_email) {
             $this->errorMessage = "Email masing-masing peserta tidak boleh sama";
@@ -131,13 +132,14 @@ class RegisterCollege extends Component
     {
         $arr_validation = [
             'team_name' => 'required',
-            'university_name' => 'required',
-            'university_city' => 'required',
+            'judul_ide_bisnis' => 'required',
+            'bmc' => 'required|mimes:pdf|max:3072',
+            'city' => 'required',
             'member_1_name' => 'required',
             'member_1_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
             'member_1_twibbon' => 'required|url',
-            'member_1_year' => 'required|integer|min:2000',
+            'member_1_year' => 'required',
             'member_1_major' => 'required|string',
             'member_1_university' => 'required|string',
         ];
@@ -148,8 +150,8 @@ class RegisterCollege extends Component
                     'member_' . $x . '_name' => 'required',
                     'member_' . $x . '_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
                     'member_' . $x . '_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
-                    'member_' . $x . '_twibbon' => 'required|url',
-                    'member_' . $x . '_year' => 'required|integer|min:2000',
+                    'member_' . $x . '_twibbon' => 'required',
+                    'member_' . $x . '_year' => 'required',
                     'member_' . $x . '_major' => 'required|string',
                     'member_' . $x . '_university' => 'required|string',
                 ]);
@@ -199,13 +201,14 @@ class RegisterCollege extends Component
 
         if (!is_string($this->bmc)) {
             $bmc = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_BMC' . '.' . $this->bmc->getClientOriginalExtension();
-            $this->{'cv_' . $x}->storeAs("public/bionix", $bmc);
+            $this->bmc->storeAs("public/bionix", $bmc);
 
             $team_data = TeamSeniorData::create([
                 'team_name' => $this->team_name,
                 'info_source' => $this->info_source,
                 'bmc_file_path' => 'bionix/'.$bmc,
                 'judul_ide_bisnis' => $this->judul_ide_bisnis,
+                'city_id' => $this->city,
             ]);
         }
 
@@ -316,7 +319,10 @@ class RegisterCollege extends Component
 
     public function mount()
     {
-        $this->cities == City::all();
+        $this->cities = City::all();
+        $this->member_1_email = Auth::user()->email;
+        $this->member_1_name = Auth::user()->name;
+        $this->info_source = 'IG';
     }
 
     public function render()
