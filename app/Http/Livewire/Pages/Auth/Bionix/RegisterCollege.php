@@ -117,9 +117,9 @@ class RegisterCollege extends Component
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'member_2_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'member_3_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
-            'member_1_twibbon' => 'required|url',
-            'member_2_twibbon' => 'required|url',
-            'member_3_twibbon' => 'required|url',
+            'member_1_twibbon' => 'required',
+            'member_2_twibbon' => 'required',
+            'member_3_twibbon' => 'required',
         ]);
         if (($this->member_1_email == $this->member_2_email) || ($this->member_1_email == $this->member_3_email) || $this->member_3_email == $this->member_2_email) {
             $this->errorMessage = "Email masing-masing peserta tidak boleh sama";
@@ -138,7 +138,7 @@ class RegisterCollege extends Component
             'member_1_name' => 'required',
             'member_1_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
-            'member_1_twibbon' => 'required|url',
+            'member_1_twibbon' => 'required',
             'member_1_year' => 'required',
             'member_1_major' => 'required|string',
             'member_1_university' => 'required|string',
@@ -311,7 +311,7 @@ class RegisterCollege extends Component
         return redirect()->to(route('bionix.peserta.homepage'));
     }
 
-    public function closeModal()
+    public function closeMessage()
     {
         $this->errorMessage = '';
         $this->resetErrorBag();

@@ -676,8 +676,7 @@
                     <p class="font-bold">{{ $messageType == 'green' ? 'Sukses' : 'Terjadi Masalah' }}</p>
                     <p class="text-sm">{{ $message }}</p>
                 </div>
-                <button type="button" title="Hapus" wire:click="closeMessage()" class="self-start"><i
-                        class="cil-x"></i></button>
+                <button type="button" title="Hapus" wire:click="closeMessage()" class="self-start"><p>Tutup</p></i></button>
             </div>
         </div>
     @endif

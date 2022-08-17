@@ -134,7 +134,7 @@
                     </div>
                     <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                         <label for="wa">Link Twibbon</label>
-                        <input id="wa" wire:model.defer="member_{{ $x }}_twibbon"
+                        <input wire:model.defer="member_{{ $x }}_twibbon"
                             name="member_{{ $x }}_twibbon"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan link twibbon anggota {{ $x }}">
@@ -225,8 +225,7 @@
                         <p class="font-normal">{{ $errorMessage }}</p>
                     @endif
                 </div>
-                <button type="button" title="Hapus" wire:click="closeModal()" class="self-start"><i
-                        class="fas fa-times"></i></button>
+                <button type="button" title="Hapus" wire:click="closeMessage()" class="self-start"><p class="text-white text-sm">Tutup</p></i></button>
             </div>
         </div>
     @endif
