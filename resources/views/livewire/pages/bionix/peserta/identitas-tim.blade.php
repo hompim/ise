@@ -560,6 +560,20 @@
                                         @endif
                                     </div>
                                     <div>
+                                        <label for="member_3_twibbon" class="mb-2 font-bold text-gray-400 mt-4">Link
+                                            Akun Instagram
+                                            {{$x}}</label><br>
+                                        @if ($is_edit)
+                                            <input wire:model.defer="member_{{$x}}_instagram" type="text"
+                                                id="member_{{$x}}_instagram" name="member_{{$x}}_instagram"
+                                                class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
+                                                style="color: black;margin-top:0;" {{ $readonly ? 'disabled' : '' }}>
+                                        @else
+                                            <a href="{{ ${'member_'.$x.'_instagram'} }}" target="_blank"
+                                                class="font-bold text-md text-blue-500">{{ ${'member_'.$x.'_instagram'} }}</a>
+                                        @endif
+                                    </div>
+                                    <div>
                                         <label for="member_3_major" class="mb-2 font-bold text-gray-400 mt-4">Universitas Anggota
                                             {{$x}}</label><br>
                                         @if ($is_edit)

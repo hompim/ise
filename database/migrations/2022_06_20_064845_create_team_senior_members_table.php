@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('university');
             $table->string('whatsapp');
             $table->string('twibbon')->nullable();
-            $table->string('instragram')->nullable();
+            $table->string('instagram')->nullable();
             $table->unsignedBigInteger('team_id');
             $table->boolean('is_leader')->default(false);
             $table->string('identity_card_path')->nullable();

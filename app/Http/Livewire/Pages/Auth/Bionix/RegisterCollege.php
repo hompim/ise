@@ -58,6 +58,11 @@ class RegisterCollege extends Component
         $member_3_twibbon,
         $member_4_twibbon,
         $member_5_twibbon,
+        $member_1_instagram,
+        $member_2_instagram,
+        $member_3_instagram,
+        $member_4_instagram,
+        $member_5_instagram,
         $member_1_major,
         $member_2_major,
         $member_3_major,
@@ -142,6 +147,7 @@ class RegisterCollege extends Component
             'member_1_year' => 'required',
             'member_1_major' => 'required|string',
             'member_1_university' => 'required|string',
+            'member_1_instagram' => 'required'
         ];
 
         for ($x = 2; $x <= 5; $x++) {
@@ -154,6 +160,7 @@ class RegisterCollege extends Component
                     'member_' . $x . '_year' => 'required',
                     'member_' . $x . '_major' => 'required|string',
                     'member_' . $x . '_university' => 'required|string',
+                    'member_' . $x . '_instagram' => 'required|string',
                 ]);
                 if ($x == 4) $this->with_member_4 = true;
                 if ($x == 5) $this->with_member_5 = true;
@@ -221,6 +228,7 @@ class RegisterCollege extends Component
                 'major' => $this->{'member_' . $x . '_major'},
                 'twibbon' => $this->{'member_' . $x . '_twibbon'},
                 'university' => $this->{'member_' . $x . '_university'},
+                'instagram' => $this->{'member_' . $x . '_instagram'},
                 'team_id' => $team_data->id,
                 'is_leader' => $x == 1 ? true : false
             ]);
@@ -252,7 +260,8 @@ class RegisterCollege extends Component
                 'year' => $this->member_4_year,
                 'major' => $this->member_4_major,
                 'twibbon' => $this->member_4_twibbon,
-                'university' => $this->member_4_university
+                'university' => $this->member_4_university,
+                'instagram' => $this->member_4_instagram
             ]);
             $ktm = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_4_KTM' . '.' . $this->member_4_ktm->getClientOriginalExtension();
 
@@ -280,7 +289,8 @@ class RegisterCollege extends Component
                 'year' => $this->member_5_year,
                 'major' => $this->member_5_major,
                 'twibbon' => $this->member_5_twibbon,
-                'university' => $this->member_5_university
+                'university' => $this->member_5_university,
+                'instagram' => $this->member_5_instagram,
             ]);
 
             $ktm = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_5_KTM' . '.' . $this->member_5_ktm->getClientOriginalExtension();

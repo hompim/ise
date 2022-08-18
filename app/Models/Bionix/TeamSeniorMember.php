@@ -9,7 +9,7 @@ class TeamSeniorMember extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email','year', 'major', 'twibbon','whatsapp','university' ,'identity_card_path', 'team_id','is_leader'];
+    protected $fillable = ['name', 'email','year', 'major', 'twibbon','instagram' ,'whatsapp','university' ,'identity_card_path', 'team_id','is_leader'];
 
     public function team(){
         return $this->belongsTo(TeamSeniorData::class, 'team_id');

@@ -123,6 +123,20 @@
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan tahun angkatan anggota {{ $x }}">
                     </div>
+                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                        <label for="wa">Akun Instagram</label>
+                        <input wire:model.defer="member_{{ $x }}_instagram"
+                            name="member_{{ $x }}_instagram"
+                            class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                            placeholder="Masukkan akun instagram anggota {{ $x }}">
+                    </div>
+                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                        <label for="wa">Link Twibbon</label>
+                        <input wire:model.defer="member_{{ $x }}_twibbon"
+                            name="member_{{ $x }}_twibbon"
+                            class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                            placeholder="Masukkan link twibbon anggota {{ $x }}">
+                    </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="ktm_{{ $x }}">Bukti Mahasiswa S1/Sederajat Aktif
                         </label>
@@ -131,13 +145,6 @@
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Bukti Mahasiswa S1/Sederajat Aktif Anggota {{ $x }}"
                             accept=".jpg,.png">
-                    </div>
-                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
-                        <label for="wa">Link Twibbon</label>
-                        <input wire:model.defer="member_{{ $x }}_twibbon"
-                            name="member_{{ $x }}_twibbon"
-                            class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                            placeholder="Masukkan link twibbon anggota {{ $x }}">
                     </div>
                     {{-- <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                         <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"

@@ -66,6 +66,11 @@ class IdentitasTim extends Component
         $member_3_university,
         $member_4_university,
         $member_5_university,
+        $member_1_instagram,
+        $member_2_instagram,
+        $member_3_instagram,
+        $member_4_instagram,
+        $member_5_instagram,
         $school_name,
         $school_city,
         $photo1,
@@ -120,6 +125,7 @@ class IdentitasTim extends Component
                 $this->{'member_' . $i + 1 . '_major'} = $member->major;
                 $this->{'member_' . $i + 1 . '_university'} = $member->university;
                 $this->{'member_' . $i + 1 . '_whatsapp'} = $member->whatsapp;
+                $this->{'member_' . $i + 1 . '_instagram'} = $member->instagram;
                 $this->{'photo'.$i+1} = $member->identity_card_path;
                 $this->senior_member++;
             }
