@@ -53,7 +53,7 @@
                         @if (Auth::user()->userable->bionix->profile_verif_status != 'Terverifikasi' &&
                             Auth::user()->userable->bionix->profile_verif_status != 'Tahap Verifikasi' &&
                             !$alreadyDeadline)
-                            <button type="button" disabled class="text-blue-500 justify-self-end" wire:click="toEditMode()"><i
+                            <button type="button" @if(!$is_junior) disabled @endif class="text-blue-500 justify-self-end" wire:click="toEditMode()"><i
                                     class="fas fa-edit"></i>
                             </button>
                         @endif
