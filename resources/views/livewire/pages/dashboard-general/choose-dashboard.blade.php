@@ -1,4 +1,32 @@
 <div class="px-4">
+    @if (Auth::user()->userable->jenjang == 'Mahasiswa')
+        <div
+            class=" bg-gradient-to-r from-purple-300 via-pink-200 to-pink-600 w-full z-50 rounded-3xl grid md:grid-cols-3 grid-cols-1 mb-12">
+            <div class="md:col-span-2 p-6 flex flex-col space-y-8">
+                <div>
+                    <img src="{{ asset('images/modal-myskill/ise-myskill.svg') }}" alt="ise-myskill">
+                </div>
+                <div>
+                    <p class="font-bold text-xl text-white">
+                        Dapatkan diskon 25%
+                    </p>
+                    <small class="text-base text-white font-poppins">
+                        Untuk pembelian video e-learning MySkill, dengan minimal pembelian Rp93.000,00
+                    </small>
+                </div>
+                <div class="mb-4">
+                    <a href="#"
+                        class="px-6 py-3 font-semibold text-center text-purple-300 rounded-full bg-white shadow-lg shadow-white font-poppins">Klaim
+                        Discount</a>
+                </div>
+            </div>
+            <div class="md:col-span-1 p-8 md:block hidden">
+                <div>
+                    <img src="{{ asset('images/modal-myskill/money.svg') }}" alt="money" class="w-full h-48">
+                </div>
+            </div>
+        </div>
+    @endif
     <h3 class="text-xl text-white font-weight-bold">Daftar Acara</h3>
     <p class="text-white">Berikut adalah daftar acara yang bisa anda ikuti</p>
     <div class="mt-8 swiper-container">
@@ -57,56 +85,61 @@
         <div class="swiper-pagination mt-10" style="bottom: auto !important;position: relative !important;"></div>
     </div>
 
+
+
     @if (Auth::user()->userable->jenjang == 'SMA')
-    <div class="mt-8 mb-8 swiper-container">
-        <h3 class="text-xl text-white font-weight-bold">Form Lainnya</h3>
-        <p class="text-white mb-3">Link form untuk keperluan lain.</p>
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <div class="card shadow-md rounded-xl swiper-slide"
-                style=" background-color: #191a1e; height: 100%; border:0">
-                <div class="card-body flex flex-col h-full justify-between">
-                    <div>
-                        <h4 class="font-bold text-xl" style="color: rgb(178,33,229)">Pembayaran DP Bionix Student Level
-                        </h4>
-                        <p class="text-sm font-weight-normal text-white my-4">
-                            Form pembayaran DP untuk peserta bionix student level yang telah melakukan roadshow ISE! di
-                            sekolah masing - masing.
-                            <b>Pembayaran DP hanya valid pada hari dilaksanakannya roadshow</b>
-                        </p>
-                    </div>
-                    <div>
-                        @if(Auth::user()->userable->roadshow_school)
-                        <a href="{{route('pembayaran-roadshow')}}"
-                        style="background: rgb(178,33,229)"
-                            class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">
-                            Form Pembayaran DP
-                        </a>
-                        @else
-                        <button onclick="Livewire.emit('openModal', 'pages.auth.bionix.registrasi-bionix-schol')"
-                        style="background: rgb(178,33,229)"
-                            class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">
-                            Form Pembayaran DP
-                        </button>
-                        @endif
+        <div class="mt-8 mb-8 swiper-container">
+            <h3 class="text-xl text-white font-weight-bold">Form Lainnya</h3>
+            <p class="text-white mb-3">Link form untuk keperluan lain.</p>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <div class="card shadow-md rounded-xl swiper-slide"
+                    style=" background-color: #191a1e; height: 100%; border:0">
+                    <div class="card-body flex flex-col h-full justify-between">
+                        <div>
+                            <h4 class="font-bold text-xl" style="color: rgb(178,33,229)">Pembayaran DP Bionix Student
+                                Level
+                            </h4>
+                            <p class="text-sm font-weight-normal text-white my-4">
+                                Form pembayaran DP untuk peserta bionix student level yang telah melakukan roadshow ISE!
+                                di
+                                sekolah masing - masing.
+                                <b>Pembayaran DP hanya valid pada hari dilaksanakannya roadshow</b>
+                            </p>
+                        </div>
+                        <div>
+                            @if (Auth::user()->userable->roadshow_school)
+                                <a href="{{ route('pembayaran-roadshow') }}" style="background: rgb(178,33,229)"
+                                    class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">
+                                    Form Pembayaran DP
+                                </a>
+                            @else
+                                <button
+                                    onclick="Livewire.emit('openModal', 'pages.auth.bionix.registrasi-bionix-schol')"
+                                    style="background: rgb(178,33,229)"
+                                    class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">
+                                    Form Pembayaran DP
+                                </button>
+                            @endif
+                        </div>
                     </div>
                 </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination mt-10" style="bottom: auto !important;position: relative !important;">
+                </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination mt-10" style="bottom: auto !important;position: relative !important;"></div>
         </div>
-    </div>
     @endif
 
 
 
-        {{-- <h3 class="text-xl font-weight-bold mt-12">Agenda</h3>
+    {{-- <h3 class="text-xl font-weight-bold mt-12">Agenda</h3>
 
     <p>Berikut adalah <span id="event-count"></span> agenda terdekat anda.</p> --}}
-        {{-- <div class="card p-8 mt-8"> --}}
-        {{-- <div id="calendar"></div> --}}
-        {{-- </div> --}}
-        {{-- <div class="grid md:grid-cols-2 gap-4 mt-4">
+    {{-- <div class="card p-8 mt-8"> --}}
+    {{-- <div id="calendar"></div> --}}
+    {{-- </div> --}}
+    {{-- <div class="grid md:grid-cols-2 gap-4 mt-4">
         @php $x=0; @endphp
         @foreach ($event_countdowns as $e)
             @if (strpos($e['who_can_join'], Auth::user()->userable->jenjang) !== false && (($e['for_event'] == 'bionix' && Auth::user()->userable->bionix_id) || ($e['for_event'] == 'startup_academy' && Auth::user()->userable->academy_type == 'Startup Academy') || ($e['for_event'] == 'data_science_academy' && Auth::user()->userable->academy_type == 'Data Science Academy') || $e['for_event'] == 'none') && date('Y-m-d H:i:s', strtotime($e['deadline'])) >= \Carbon\Carbon::now())
@@ -119,69 +152,69 @@
         @endforeach
     </div>
 </div> --}}
-        @if ($errors->any() || $errorMessage)
-            <div class="fixed px-4 py-3 text-red-900 bg-red-100 border-t-4 border-red-500 rounded-b shadow-md bottom-12 right-12"
-                role="alert">
-                <div class="flex">
-                    <div class="py-1">
-                        <svg class="w-6 h-6 mr-4 text-red-500 fill-current" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20">
-                            <path
-                                d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="font-bold">Terjadi masalah</p>
-                        <ul class="font-normal">
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                        @if ($errorMessage)
-                            <p class="font-normal">{{ $errorMessage }}</p>
-                        @endif
-                    </div>
-                    <button type="button" title="Hapus" wire:click="closeModal()" class="self-start"><i
-                            class="fas fa-times"></i></button>
+    @if ($errors->any() || $errorMessage)
+        <div class="fixed px-4 py-3 text-red-900 bg-red-100 border-t-4 border-red-500 rounded-b shadow-md bottom-12 right-12"
+            role="alert">
+            <div class="flex">
+                <div class="py-1">
+                    <svg class="w-6 h-6 mr-4 text-red-500 fill-current" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
+                    </svg>
                 </div>
+                <div>
+                    <p class="font-bold">Terjadi masalah</p>
+                    <ul class="font-normal">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    @if ($errorMessage)
+                        <p class="font-normal">{{ $errorMessage }}</p>
+                    @endif
+                </div>
+                <button type="button" title="Hapus" wire:click="closeModal()" class="self-start"><i
+                        class="fas fa-times"></i></button>
             </div>
-        @endif
+        </div>
+    @endif
 
-        @push('css')
-            <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-        @endpush
+    @push('css')
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    @endpush
 
-        @push('js')
-            @livewire('livewire-ui-modal')
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
+    @push('js')
+        @livewire('livewire-ui-modal')
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
 
-                    const swiper = new Swiper('.swiper-container', {
+                const swiper = new Swiper('.swiper-container', {
 
-                        pagination: {
-                            el: ".swiper-pagination",
+                    pagination: {
+                        el: ".swiper-pagination",
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                    autoHeight: true,
+                    loop: @if (sizeof($events) > 3)
+                        true
+                    @else
+                        false
+                    @endif ,
+                    autoplay: {
+                        delay: 45000
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2
                         },
-                        slidesPerView: 1,
-                        spaceBetween: 40,
-                        autoHeight: true,
-                        loop: @if (sizeof($events) > 3)
-                            true
-                        @else
-                            false
-                        @endif ,
-                        autoplay: {
-                            delay: 45000
-                        },
-                        breakpoints: {
-                            768: {
-                                slidesPerView: 2
-                            },
-                            1440: {
-                                slidesPerView: 3
-                            }
+                        1440: {
+                            slidesPerView: 3
                         }
-                    })
-                });
-            </script>
-        @endpush
+                    }
+                })
+            });
+        </script>
+    @endpush
