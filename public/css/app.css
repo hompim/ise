@@ -5036,6 +5036,10 @@ select {
         height: 362px;
     }
 
+    .md\:h-\[466px\] {
+        height: 466px;
+    }
+
     .md\:w-4\/12 {
         width: 33.333333%;
     }
@@ -5132,6 +5136,10 @@ select {
 
     .md\:w-1\/2 {
         width: 50%;
+    }
+
+    .md\:w-\[450px\] {
+        width: 450px;
     }
 
     .md\:-translate-y-0 {
