@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 {{--        Region --}}
-                <div class="card shadow-md rounded-xl" style="background-color: #191a1e">
+                <div class="card shadow-md rounded-xl" style="background-color: #191a1e;border: 0;">
                     <div class="card-body d-flex">
                         <div class="py-1 mr-4">
                             <i class="fas fa-map-marker-alt text-3xl" style="color: #70B3D0;"></i>
@@ -37,7 +37,7 @@
             <h3 class="md:mt-8 text-xl font-weight-bold">Status</h3>
             <div class="grid md:grid-cols-2 gap-4">
                 {{--        Status Kartu Pelajar --}}
-                <div class="card shadow-md rounded-xl" style="background-color: #191a1e">
+                <div class="card shadow-md rounded-xl" style="background-color: #191a1e;border: 0;">
                     <div class="card-body d-flex">
                         <div class="py-1 mr-4">
                             <i class="fas fa-clipboard-list text-3xl" style="color:{{(Auth::user()->userable->bionix->profile_verif_status == 'Terverifikasi'?'#00CE15':'red')}}"></i>
@@ -50,7 +50,7 @@
                 </div>
 
                 {{--        Status Pembayaran --}}
-                <div class="card shadow-md rounded-xl" style="background-color: #191a1e">
+                <div class="card shadow-md rounded-xl" style="background-color: #191a1e;border: 0;">
                     <div class="card-body d-flex">
                         <div class="py-1 mr-4">
                             <i class="fas fa-money-bill text-3xl" style="color:{{(Auth::user()->userable->bionix->payment_verif_status == 'Terverifikasi'?'#00CE15':'red')}}"></i>
@@ -66,6 +66,7 @@
     </div>
     <h3 class="text-xl font-weight-bold">Pengumuman</h3>
     <div class="grid md:grid-cols-2 gap-4 mt-8">
+        @if(Auth::user()->userable->jenjang == 'SMA')
         <div class="card shadow-md rounded-xl" style="background-color: #191a1e;border:0">
             <div class="card-body">
                 <h6 class="font-bold text-black"></h6>
@@ -73,6 +74,7 @@
                 <p class="text-sm font-weight-normal mt-4">Bagi peserta yang telah mendaftar silahkan masuk ke grub berikut untuk mendapatkan informasi terbaru: <a href="https://chat.whatsapp.com/BwcOnXQZYey8p7eI2Fqdzv">https://chat.whatsapp.com/BwcOnXQZYey8p7eI2Fqdzv</a></p>
             </div>
         </div>
+        @endif
         @forelse($announcement as $a)
             <div class="card shadow-md rounded-xl" style="background-color: #191a1e;border:0">
                 <div class="card-body">

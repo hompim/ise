@@ -139,11 +139,10 @@
                     placeholder="Kartu Pelajar Anggota 1">
             </div>
             <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
-                <label for="twibbon1">Bukti Upload Twibbon
-                </label>
-                <input id="twibbon1" name="twibbon_1" wire:model.defer="twibbon_1" type="file" required
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Twibbon Anggota 1">
+                <label for="name">Link Twibbon</label>
+                <input wire:model.defer = "twibbon_1" id="name" name="twibbon_1" type="text" required
+                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Link Twibbon 1">
             </div>
             <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                 <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
@@ -205,11 +204,10 @@
                     placeholder="Kartu Pelajar Anggota 2">
             </div>
             <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
-                <label for="twibbon1">Bukti Upload Twibbon
-                </label>
-                <input id="twibbon1" name="twibbon_2" wire:model.defer="twibbon_2" type="file"
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Twibbon Anggota 2">
+                <label for="name">Link Twibbon</label>
+                <input wire:model.defer = "twibbon_2" id="name" name="twibbon_2" type="text" required
+                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Link Twibbon 2">
             </div>
             <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                 <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"

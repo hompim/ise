@@ -44,6 +44,10 @@
                     <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
                     <p>{{$member1_whatsapp}}</p>
                 </div>
+                <div>
+                    <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
+                    <p>{{$member1_twibbon}}</p>
+                </div>
                 @if($type=='college')
                     <div>
                         <p class="font-bold mb-0 mt-2">Jurusan</p>
@@ -58,10 +62,6 @@
                 <div>
                     <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
                     <img class="object-scale-down w-50" src="{{asset('/storage/'.$photo1)}}"/>
-                </div>
-                <div>
-                    <p class="font-bold mb-0 mt-2">Twibbon</p>
-                    <img class="object-scale-down w-50" src="{{asset('/storage/'.$member1_twibbon)}}"/>
                 </div>
                 <div>
                     <p class="font-bold mb-0 mt-2">Follow Instagram</p>
@@ -87,6 +87,10 @@
                         <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
                         <p>{{$member2_whatsapp}}</p>
                     </div>
+                    <div>
+                        <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
+                        <p>{{$member2_twibbon}}</p>
+                    </div>
                     @if($type=='college')
                         <div>
                             <p class="font-bold mb-0 mt-2">Jurusan</p>
@@ -101,10 +105,6 @@
                     <div>
                         <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
                         <img class="object-scale-down w-50" src="{{asset('/storage/'.$photo2)}}"/>
-                    </div>
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Twibbon</p>
-                        <img class="object-scale-down w-50" src="{{asset('/storage/'.$member2_twibbon)}}"/>
                     </div>
                     <div>
                         <p class="font-bold mb-0 mt-2">Follow Instagram</p>

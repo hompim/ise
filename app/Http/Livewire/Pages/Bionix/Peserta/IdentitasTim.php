@@ -28,30 +28,57 @@ class IdentitasTim extends Component
     public
         $team_name,
         $info_source,
+        $bmc,
+        $judul,
+        $senior_member,
         $member_1_name,
         $member_2_name,
         $member_3_name,
+        $member_4_name,
+        $member_5_name,
         $member_1_email,
         $member_2_email,
         $member_3_email,
+        $member_4_email,
+        $member_5_email,
         $member_1_whatsapp,
         $member_2_whatsapp,
         $member_3_whatsapp,
+        $member_4_whatsapp,
+        $member_5_whatsapp,
         $member_1_twibbon,
         $member_2_twibbon,
         $member_3_twibbon,
+        $member_4_twibbon,
+        $member_5_twibbon,
         $member_1_major,
         $member_2_major,
         $member_3_major,
+        $member_4_major,
+        $member_5_major,
         $member_1_year,
         $member_2_year,
         $member_3_year,
+        $member_4_year,
+        $member_5_year,
+        $member_1_university,
+        $member_2_university,
+        $member_3_university,
+        $member_4_university,
+        $member_5_university,
+        $member_1_instagram,
+        $member_2_instagram,
+        $member_3_instagram,
+        $member_4_instagram,
+        $member_5_instagram,
         $school_name,
         $school_city,
         $photo1,
         $photo2,
-        $photo3;
-    public $with_member_2, $with_member_3;
+        $photo3,
+        $photo4,
+        $photo5;
+    public $with_member_2;
     public $new_member_2 = false, $new_member_3 = false;
 
     //Status Notification Variable
@@ -65,38 +92,45 @@ class IdentitasTim extends Component
 
     public function mount()
     {
-        $this->is_junior = Auth::user()->userable->jenjang = "SMA" ? true : false;
+        $this->is_junior = Auth::user()->userable->jenjang == "SMA" ? true : false;
+        $this->senior_member = 0;
         $this->with_member_2 = (($this->is_junior && Auth::user()->userable->bionix->member_id) || (!$this->is_junior && Auth::user()->userable->bionix->member1_id)) ? true : false;
-        $this->with_member_3 = !$this->is_junior && Auth::user()->userable->bionix->member2_id ? true : false;
         $this->cities = City::orderBy('region')->get();
         $this->info_source = Auth::user()->userable->bionix->info_source;
         $this->team_name = Auth::user()->userable->bionix->team_name;
-        $this->member_1_name = Auth::user()->name;
-        $this->member_2_name = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->name : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->name : null));
-        $this->member_3_name = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->name : null));
-        $this->member_1_email = Auth::user()->email;
-        $this->member_2_email = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->email : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->email : null));
-        $this->member_3_email = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->email : null));
-        $this->member_1_whatsapp = Auth::user()->whatsapp;
-        $this->member_2_whatsapp = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->whatsapp : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->whatsapp : null));
-        $this->member_3_whatsapp = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->whatsapp : null));
-        $this->school_name = ($this->is_junior ? Auth::user()->userable->bionix->school_name : Auth::user()->userable->bionix->university_name);
         $this->school_city = Auth::user()->userable->bionix->city_id;
-        $this->photo1 = Auth::user()->userable->bionix->leader->identity_card_path;
-        $this->photo2 = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->identity_card_path : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->identity_card_path : null));
-        $this->photo3 = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->identity_card_path : null));
-        $this->member_1_twibbon = ($this->is_junior ? Auth::user()->userable->bionix->leader->twibbon_path : Auth::user()->userable->bionix->leader->link_twibbon);
-        $this->member_2_twibbon = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->twibbon_path : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
-        $this->member_3_twibbon = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->link_twibbon : null));
-        $this->member_1_instagram = ($this->is_junior ? Auth::user()->userable->bionix->leader->instagram_path : Auth::user()->userable->bionix->leader->link_twibbon);
-        $this->member_2_instagram = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->instagram_path : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
-        $this->member_3_instagram = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->link_twibbon : null));
-        $this->member_1_major = ($this->is_junior ? null : Auth::user()->userable->bionix->leader->major);
-        $this->member_2_major = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->major : null));
-        $this->member_3_major = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->major : null));
-        $this->member_1_year = ($this->is_junior ? null : Auth::user()->userable->bionix->leader->year);
-        $this->member_2_year = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->year : null));
-        $this->member_3_year = ($this->is_junior ? null : (Auth::user()->userable->bionix->member_2 ? Auth::user()->userable->bionix->member_2->year : null));
+        if ($this->is_junior) {
+            $this->member_1_name = Auth::user()->name;
+            $this->member_2_name = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->name : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->name : null));
+            $this->member_1_email = Auth::user()->email;
+            $this->member_2_email = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->email : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->email : null));
+            $this->member_1_whatsapp = Auth::user()->whatsapp;
+            $this->member_2_whatsapp = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->whatsapp : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->whatsapp : null));
+            $this->school_name = ($this->is_junior ? Auth::user()->userable->bionix->school_name : Auth::user()->userable->bionix->university_name);
+            $this->photo1 = Auth::user()->userable->bionix->leader->identity_card_path;
+            $this->photo2 = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->identity_card_path : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->identity_card_path : null));
+            $this->member_1_twibbon = ($this->is_junior ? Auth::user()->userable->bionix->leader->twibbon_path : Auth::user()->userable->bionix->leader->link_twibbon);
+            $this->member_2_twibbon = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->twibbon_path : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
+            $this->member_1_instagram = ($this->is_junior ? Auth::user()->userable->bionix->leader->instagram_path : Auth::user()->userable->bionix->leader->link_twibbon);
+            $this->member_2_instagram = ($this->is_junior ? (Auth::user()->userable->bionix->member ? Auth::user()->userable->bionix->member->instagram_path : null) : (Auth::user()->userable->bionix->member_1 ? Auth::user()->userable->bionix->member_1->link_twibbon : null));
+        } else {
+            $this->bmc = Auth::user()->userable->bionix->bmc_file_path;
+            $this->judul = Auth::user()->userable->bionix->judul_ide_bisnis;
+
+            foreach (Auth::user()->userable->bionix->members as $i => $member) {
+                $this->{'member_' . $i + 1 . '_name'} = $member->name;
+                $this->{'member_' . $i + 1 . '_email'} = $member->email;
+                $this->{'member_' . $i + 1 . '_twibbon'} = $member->twibbon;
+                $this->{'member_' . $i + 1 . '_year'} = $member->year;
+                $this->{'member_' . $i + 1 . '_major'} = $member->major;
+                $this->{'member_' . $i + 1 . '_university'} = $member->university;
+                $this->{'member_' . $i + 1 . '_whatsapp'} = $member->whatsapp;
+                $this->{'member_' . $i + 1 . '_instagram'} = $member->instagram;
+                $this->{'photo'.$i+1} = $member->identity_card_path;
+                $this->senior_member++;
+            }
+        }
+
 
         $this->statusNotification();
     }
@@ -138,12 +172,14 @@ class IdentitasTim extends Component
         }
 
         if ($this->with_member_2) {
-            $validate = array_merge($validate,
+            $validate = array_merge(
+                $validate,
                 [
                     'member_2_name' => 'required',
                     'member_2_email' => ['required', 'email', Rule::unique('team_senior_members', 'email')->ignore(($this->is_junior ? '' : Auth::user()->userable->bionix->member1_id)), Rule::unique('team_junior_members', 'email')->ignore(($this->is_junior ? Auth::user()->userable->bionix->member_id : ''))],
                     'member_2_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string'
-                ]);
+                ]
+            );
             if (!$this->is_junior) {
                 $validate = array_merge($validate, [
                     'member_2_twibbon' => 'required|url',
@@ -158,15 +194,18 @@ class IdentitasTim extends Component
             }
         } else {
             if (($this->member_2_email || $this->member_2_name || $this->member_2_whatsapp || ($this->photo2 && !is_string($this->photo2))) ||
-                (!$this->is_junior && ($this->member_2_twibbon || $this->member_2_year || $this->member_2_major))) {
+                (!$this->is_junior && ($this->member_2_twibbon || $this->member_2_year || $this->member_2_major))
+            ) {
                 $this->new_member_2 = true;
-                $validate = array_merge($validate,
+                $validate = array_merge(
+                    $validate,
                     [
                         'member_2_name' => 'required',
                         'member_2_email' => ['required', 'email', Rule::unique('team_senior_members', 'email')->ignore(($this->is_junior ? '' : Auth::user()->userable->bionix->member1_id)), Rule::unique('team_junior_members', 'email')->ignore(($this->is_junior ? Auth::user()->userable->bionix->member_id : ''))],
                         'member_2_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
                         'photo2' => 'required|image|max:1024',
-                    ]);
+                    ]
+                );
                 if (!$this->is_junior) {
                     $validate = array_merge($validate, [
                         'member_2_twibbon' => 'required|url',
@@ -198,7 +237,8 @@ class IdentitasTim extends Component
                     ]);
                 }
             } elseif (($this->member_3_email || $this->member_3_name || $this->member_3_whatsapp || $this->member_3_major || $this->member_3_year || ($this->photo3 && !is_string($this->photo3))) ||
-                (!$this->is_junior && $this->member_3_twibbon)) {
+                (!$this->is_junior && $this->member_3_twibbon)
+            ) {
                 $this->new_member_3 = true;
                 $validate = array_merge($validate, [
                     'member_3_twibbon' => 'required|url',
@@ -210,7 +250,6 @@ class IdentitasTim extends Component
                     'photo3' => 'required|image|max:1024', // 1MB Max
                 ]);
             }
-
         }
 
         $this->validate($validate);
@@ -250,8 +289,10 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->photo1->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('bionix/' . $name1,
-                        $resized_image->__toString());
+                    ->put(
+                        'bionix/' . $name1,
+                        $resized_image->__toString()
+                    );
                 Auth::user()->userable->bionix->leader->update([
                     'identity_card_path' => 'bionix/' . $name1
                 ]);
@@ -265,8 +306,10 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->member_1_instagram->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('bionix/' . $insta1,
-                        $resized_image->__toString());
+                    ->put(
+                        'bionix/' . $insta1,
+                        $resized_image->__toString()
+                    );
                 Auth::user()->userable->bionix->leader->update([
                     'instagram_path' => 'bionix/' . $insta1
                 ]);
@@ -280,8 +323,10 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->member_1_twibbon->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('bionix/' . $twibbon1,
-                        $resized_image->__toString());
+                    ->put(
+                        'bionix/' . $twibbon1,
+                        $resized_image->__toString()
+                    );
                 Auth::user()->userable->bionix->leader->update([
                     'twibbon_path' => 'bionix/' . $twibbon1
                 ]);
@@ -296,8 +341,10 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->photo2->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('bionix/' . $name2,
-                        $resized_image->__toString());
+                    ->put(
+                        'bionix/' . $name2,
+                        $resized_image->__toString()
+                    );
 
                 Auth::user()->userable->bionix->member->update([
                     'identity_card_path' => 'bionix/' . $name2
@@ -312,8 +359,10 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->member_2_instagram->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('bionix/' . $insta2,
-                        $resized_image->__toString());
+                    ->put(
+                        'bionix/' . $insta2,
+                        $resized_image->__toString()
+                    );
 
                 Auth::user()->userable->bionix->member->update([
                     'instagram_path' => 'bionix/' . $insta2
@@ -328,8 +377,10 @@ class IdentitasTim extends Component
                         $constraint->upsize();
                     })->encode($this->member_2_twibbon->getClientOriginalExtension());
                 Storage::disk('public')
-                    ->put('bionix/' . $twibbon2,
-                        $resized_image->__toString());
+                    ->put(
+                        'bionix/' . $twibbon2,
+                        $resized_image->__toString()
+                    );
 
                 Auth::user()->userable->bionix->member->update([
                     'twibbon_path' => 'bionix/' . $twibbon2
@@ -338,124 +389,39 @@ class IdentitasTim extends Component
         } elseif (!$this->is_junior) {
             Auth::user()->userable->bionix->update([
                 'team_name' => $this->team_name,
-                'university_name' => $this->school_name,
                 'city_id' => $this->school_city,
-                'info_source' => $this->info_source
+                'info_source' => $this->info_source,
+                'judul_ide_bisnis' => $this->judul
             ]);
-            Auth::user()->userable->bionix->leader->update([
-                'link_twibbon' => $this->member_1_twibbon
-            ]);
-            if ($this->with_member_2) {
-                Auth::user()->userable->bionix->member_1->update([
-                    'link_twibbon' => $this->member_2_twibbon,
-                    'year' => $this->member_2_year,
-                    'major' => $this->member_2_major,
-                    'name' => $this->member_2_name,
-                    'email' => $this->member_2_email,
-                    'whatsapp' => $this->member_2_whatsapp
-                ]);
-            } elseif ($this->new_member_2) {
-                $member_2 = TeamSeniorMember::create([
-                    'link_twibbon' => $this->member_2_twibbon,
-                    'year' => $this->member_2_year,
-                    'major' => $this->member_2_major,
-                    'name' => $this->member_2_name,
-                    'email' => $this->member_2_email,
-                    'whatsapp' => $this->member_2_whatsapp
+
+            foreach (Auth::user()->userable->bionix->members as $i => $member) {
+                $member->update([
+                    'twibbon' => $this->{'member_' . $i + 1 . '_twibbon'},
+                    'university' => $this->{'member_' . $i + 1 . '_university'},
+                    'year' => $this->{'member_' . $i + 1 . '_year'},
+                    'major' => $this->{'member_' . $i + 1 . '_major'},
+                    'name' => $this->{'member_' . $i + 1 . '_name'},
+                    'email' => $this->{'member_' . $i + 1 . '_email'},
+                    'whatsapp' => $this->{'member_' . $i + 1 . '_whatsapp'}
                 ]);
 
-                Auth::user()->userable->bionix->update([
-                    'member1_id' => $member_2->id
-                ]);
-            }
-
-            if ($this->with_member_3) {
-                Auth::user()->userable->bionix->member_2->update([
-                    'link_twibbon' => $this->member_3_twibbon,
-                    'year' => $this->member_3_year,
-                    'major' => $this->member_3_major,
-                    'name' => $this->member_3_name,
-                    'email' => $this->member_3_email,
-                    'whatsapp' => $this->member_3_whatsapp
-                ]);
-            } elseif ($this->new_member_3) {
-                $member_3 = TeamSeniorMember::create([
-                    'link_twibbon' => $this->member_3_twibbon,
-                    'year' => $this->member_3_year,
-                    'major' => $this->member_3_major,
-                    'name' => $this->member_3_name,
-                    'email' => $this->member_3_email,
-                    'whatsapp' => $this->member_3_whatsapp
-                ]);
-                if (!$this->with_member_2 && !$this->new_member_2) {
-                    $this->member_2_twibbon = $this->member_3_twibbon;
-                    $this->member_2_name = $this->member_3_name;
-                    $this->member_2_email = $this->member_3_email;
-                    $this->member_2_whatsapp = $this->member_3_whatsapp;
-                    $this->photo2 = $this->photo3;
-
-                    $this->member_3_twibbon = null;
-                    $this->member_3_name = null;
-                    $this->member_3_email = null;
-                    $this->member_3_whatsapp = null;
-                    $this->photo3 = null;
-
-                    Auth::user()->userable->bionix->update([
-                        'member1_id' => $member_3->id
-                    ]);
-                } else {
-                    Auth::user()->userable->bionix->update([
-                        'member2_id' => $member_3->id
+                if ($this->{'photo'.$i+1} && !is_string($this->{'photo' . $i + 1})) {
+                    $name = date('YmdHis') . '_BIONIX College_' . $this->team_name . '_' . $i + 1 . '.' . $this->{'photo' . $i + 1}->getClientOriginalExtension();
+                    $resized_image = (new ImageManager())
+                        ->make($this->{'photo' . $i + 1})
+                        ->resize(600, null, function ($constraint) {
+                            $constraint->aspectRatio();
+                            $constraint->upsize();
+                        })->encode($this->{'photo' . $i + 1}->getClientOriginalExtension());
+                    Storage::disk('public')
+                        ->put(
+                            'bionix/' . $name,
+                            $resized_image->__toString()
+                        );
+                    $member->update([
+                        'identity_card_path' => 'bionix/' . $name
                     ]);
                 }
-
-
-            }
-
-            if (!is_string($this->photo1)) {
-                $name = date('YmdHis') . '_BIONIX College_' . $this->team_name . '_1' . '.' . $this->photo1->getClientOriginalExtension();
-                $resized_image = (new ImageManager())
-                    ->make($this->photo1)
-                    ->resize(600, null, function ($constraint) {
-                        $constraint->aspectRatio();
-                        $constraint->upsize();
-                    })->encode($this->photo1->getClientOriginalExtension());
-                Storage::disk('public')
-                    ->put('bionix/' . $name,
-                        $resized_image->__toString());
-                Auth::user()->userable->bionix->leader->update([
-                    'identity_card_path' => 'bionix/' . $name
-                ]);
-            }
-            if ($this->photo2 && !is_string($this->photo2)) {
-                $name = date('YmdHis') . '_BIONIX College_' . $this->team_name . '_2' . '.' . $this->photo2->getClientOriginalExtension();
-                $resized_image = (new ImageManager())
-                    ->make($this->photo2)
-                    ->resize(600, null, function ($constraint) {
-                        $constraint->aspectRatio();
-                        $constraint->upsize();
-                    })->encode($this->photo2->getClientOriginalExtension());
-                Storage::disk('public')
-                    ->put('bionix/' . $name,
-                        $resized_image->__toString());
-                Auth::user()->userable->bionix->member_1->update([
-                    'identity_card_path' => 'bionix/' . $name
-                ]);
-            }
-            if ($this->photo3 && !is_string($this->photo3)) {
-                $name = date('YmdHis') . '_BIONIX College_' . $this->team_name . '_3' . '.' . $this->photo3->getClientOriginalExtension();
-                $resized_image = (new ImageManager())
-                    ->make($this->photo3)
-                    ->resize(600, null, function ($constraint) {
-                        $constraint->aspectRatio();
-                        $constraint->upsize();
-                    })->encode($this->photo3->getClientOriginalExtension());
-                Storage::disk('public')
-                    ->put('bionix/' . $name,
-                        $resized_image->__toString());
-                Auth::user()->userable->bionix->member_2->update([
-                    'identity_card_path' => 'bionix/' . $name
-                ]);
             }
         }
 
@@ -465,12 +431,14 @@ class IdentitasTim extends Component
             'whatsapp' => $this->member_1_whatsapp,
         ]);
 
-        Auth::user()->userable->bionix->leader->update([
-            'name' => $this->member_1_name,
-            'year' => $this->member_1_year,
-            'major' => $this->member_1_major,
-            'whatsapp' => $this->member_1_whatsapp
-        ]);
+        if ($this->is_junior) {
+            Auth::user()->userable->bionix->leader->update([
+                'name' => $this->member_1_name,
+                'email' => $this->member_1_email,
+                'whatsapp' => $this->member_1_whatsapp
+            ]);
+        }
+
         $this->is_edit = false;
         $this->message = 'Data diri berhasil diubah';
         $this->messageType = 'green';
@@ -528,40 +496,43 @@ class IdentitasTim extends Component
             return;
         }
         if ($this->is_junior) {
-            if (!Auth::user()->userable->bionix->team_name ||
+            if (
+                !Auth::user()->userable->bionix->team_name ||
                 !Auth::user()->userable->bionix->school_name ||
                 !Auth::user()->userable->bionix->leader->identity_card_path ||
                 (Auth::user()->userable->bionix->member_id &&
                     (!Auth::user()->userable->bionix->member->name ||
                         !Auth::user()->userable->bionix->member->email ||
                         !Auth::user()->userable->bionix->member->identity_card_path ||
-                        !Auth::user()->userable->bionix->member->whatsapp))) {
+                        !Auth::user()->userable->bionix->member->whatsapp))
+            ) {
                 $this->message = 'Pastikan bahwa semua data telah terisi';
                 $this->messageType = 'red';
                 return;
             }
         } else {
-            if (!Auth::user()->userable->bionix->team_name ||
+            if (
+                !Auth::user()->userable->bionix->team_name ||
                 !Auth::user()->userable->bionix->university_name ||
                 !Auth::user()->userable->bionix->leader->identity_card_path ||
                 !Auth::user()->userable->bionix->leader->link_twibbon ||
                 !Auth::user()->userable->bionix->leader->year ||
                 !Auth::user()->userable->bionix->leader->major ||
-                (Auth::user()->userable->bionix->member1_id && (
-                        !Auth::user()->userable->bionix->member_1->identity_card_path ||
-                        !Auth::user()->userable->bionix->member_1->name ||
-                        !Auth::user()->userable->bionix->member_1->email ||
-                        !Auth::user()->userable->bionix->member_1->whatsapp ||
-                        !Auth::user()->userable->bionix->member_1->year ||
-                        !Auth::user()->userable->bionix->member_1->major ||
-                        !Auth::user()->userable->bionix->member_1->link_twibbon)) ||
+                (Auth::user()->userable->bionix->member1_id && (!Auth::user()->userable->bionix->member_1->identity_card_path ||
+                    !Auth::user()->userable->bionix->member_1->name ||
+                    !Auth::user()->userable->bionix->member_1->email ||
+                    !Auth::user()->userable->bionix->member_1->whatsapp ||
+                    !Auth::user()->userable->bionix->member_1->year ||
+                    !Auth::user()->userable->bionix->member_1->major ||
+                    !Auth::user()->userable->bionix->member_1->link_twibbon)) ||
                 (Auth::user()->userable->bionix->member2_id && (!Auth::user()->userable->bionix->member_2->link_twibbon ||
-                        !Auth::user()->userable->bionix->member_2->identity_card_path ||
-                        !Auth::user()->userable->bionix->member_2->name ||
-                        !Auth::user()->userable->bionix->member_2->email ||
-                        !Auth::user()->userable->bionix->member_2->year ||
-                        !Auth::user()->userable->bionix->member_2->major ||
-                        !Auth::user()->userable->bionix->member_2->whatsapp))) {
+                    !Auth::user()->userable->bionix->member_2->identity_card_path ||
+                    !Auth::user()->userable->bionix->member_2->name ||
+                    !Auth::user()->userable->bionix->member_2->email ||
+                    !Auth::user()->userable->bionix->member_2->year ||
+                    !Auth::user()->userable->bionix->member_2->major ||
+                    !Auth::user()->userable->bionix->member_2->whatsapp))
+            ) {
                 $this->message = 'Pastikan bahwa semua data telah terisi';
                 $this->messageType = 'red';
                 return;
@@ -579,7 +550,8 @@ class IdentitasTim extends Component
         $this->messageType = null;
     }
 
-    public function toEditMode(){
+    public function toEditMode()
+    {
         $this->is_edit = true;
     }
 

@@ -35,6 +35,23 @@ class Beranda extends Component
         $this->notif = false;
     }
 
+    public function Accept()
+    {
+        Auth::user()->userable->academy->update([
+            'competition_round' => 'Commitemnt Fee'
+        ]);
+
+        $this->alert();
+    }
+
+    public function Reject()
+    {
+        Auth::user()->userable->academy->update([
+            'competition_round' => 'Rejected'
+        ]);
+        $this->alert();
+    }
+
     public function alert()
     {
         switch (Auth::user()->userable->academy->competition_round) {
@@ -47,13 +64,25 @@ class Beranda extends Component
             case 'Pending':
                 $this->alert_color = 'green';
                 $this->alert_header = 'Tim Anda lolos tahap seleksi berkas';
-                $this->alert_content = 'Selamat Tim anda telah lolos dalam  tahap seleksi berkas, pantau terus media sosial kami untuk informasi selanjutnya';
+                $this->alert_content = 'Selamat Tim anda telah lolos dalam tahap seleksi berkas, selanjutnya silahkan konfirmasi apakah kamu akan melanjutkan ISE! Academy 2022';
                 $this->readonly = false;
                 break;
             case 'Rejected':
                 $this->alert_color = 'red';
-                $this->alert_header = 'Tim Anda tidak lolos tahap seleksi berkas';
-                $this->alert_content = '';
+                $this->alert_header = 'Tim Anda tidak lolos';
+                $this->alert_content = 'Mohon Maaf, Tim anda tidak lolos';
+                $this->readonly = false;
+                break;
+            case 'Seleksi':
+                $this->alert_color = 'blue';
+                $this->alert_header = 'Tim Anda lolos tahap seleksi berkas';
+                $this->alert_content = 'Selamat Tim anda lolos seleksi berkas, selanjutnya akan diadakan seleksi tulis yang berlangsung pada tanggal 28 Agustus.';
+                $this->readonly = false;
+                break;
+            case 'Commitment Fee':
+                $this->alert_color = 'blue';
+                $this->alert_header = 'Pembayaran Commitment Fee';
+                $this->alert_content = 'Sebelum melanjutkan, setiap Tim Academy ISE! 2022 wajib terlebih dahulu membayar commitment fee pada menu pembayaran';
                 $this->readonly = false;
                 break;
             default:

@@ -67,7 +67,7 @@ class RegisterStudent extends Component
             'member_1_email' => 'required|email',
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:14|string',
             'member_1_class' => 'required',
-            'twibbon_1' => 'required|image|max:2048', // 1MB Max
+            'twibbon_1' => 'required', // 1MB Max
             'ktm_1' => 'required|image|max:2048', // 1MB Max
             'instagram_1' => 'required|image|max:2048', // 1MB Max
         ]);
@@ -90,7 +90,7 @@ class RegisterStudent extends Component
             'member_1_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
             'member_1_class' => 'required',
-            'twibbon_1' => 'required|image|max:2048', // 1MB Max
+            'twibbon_1' => 'required', // 1MB Max
             'ktm_1' => 'required|image|max:2048', // 1MB Max
             'instagram_1' => 'required|image|max:2048', // 1MB Max
 
@@ -101,7 +101,7 @@ class RegisterStudent extends Component
                 'member_2_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
                 'member_2_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
                 'member_2_class' => 'required',
-                'twibbon_2' => 'required|image|max:2048', // 1MB Max
+                'twibbon_2' => 'required', // 1MB Max
                 'ktm_2' => 'required|image|max:2048', // 1MB Max
                 'instagram_2' => 'required|image|max:2048', // 1MB Max
 
@@ -132,13 +132,13 @@ class RegisterStudent extends Component
             'name' => $this->member_1_name,
             'email' => $this->member_1_email,
             'class' => $this->member_1_class,
-            'whatsapp' => $this->member_1_whatsapp
+            'whatsapp' => $this->member_1_whatsapp,
+            'twibbon_path' => $this->twibbon_1
         ]);
 
         if (!is_string($this->ktm_1) && !is_string($this->twibbon_1) && !is_string($this->instagram_1)) {
             $ktm = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_KTM' . '.' . $this->ktm_1->getClientOriginalExtension();
             $instagram = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_INSTAGRAM' . '.' . $this->instagram_1->getClientOriginalExtension();
-            $twibbon = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_TWIBBON' . '.' . $this->twibbon_1->getClientOriginalExtension();
 
             $resized_image_ktm = (new ImageManager())
                 ->make($this->ktm_1)
@@ -154,13 +154,6 @@ class RegisterStudent extends Component
                     $constraint->upsize();
                 })->encode($this->instagram_1->getClientOriginalExtension());
 
-            $resized_image_twibbon = (new ImageManager())
-                ->make($this->twibbon_1)
-                ->resize(600, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                    $constraint->upsize();
-                })->encode($this->twibbon_1->getClientOriginalExtension());
-
 
             Storage::disk('public')
                 ->put('bionix/' . $ktm,
@@ -168,13 +161,10 @@ class RegisterStudent extends Component
             Storage::disk('public')
                 ->put('bionix/' . $instagram,
                     $resized_image_instagram->__toString());
-            Storage::disk('public')
-                ->put('bionix/' . $twibbon,
-                    $resized_image_twibbon->__toString());
+
 
             $team_member_1->update([
                 'identity_card_path' => 'bionix/' . $ktm,
-                'twibbon_path' => 'bionix/'. $twibbon,
                 'instagram_path' => 'bionix/'. $instagram
             ]);
         }
@@ -185,13 +175,13 @@ class RegisterStudent extends Component
                 'name' => $this->member_2_name,
                 'email' => $this->member_2_email,
                 'class' => $this->member_2_class,
-                'whatsapp' => $this->member_2_whatsapp
+                'whatsapp' => $this->member_2_whatsapp,
+                'twibbon_path' => $this->twibbon_2,
             ]);
 
             if (!is_string($this->ktm_2) && !is_string($this->twibbon_2) && !is_string($this->instagram_2)) {
                 $ktm2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_KTM' . '.' . $this->ktm_1->getClientOriginalExtension();
                 $instagram2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_INSTAGRAM' . '.' . $this->instagram_1->getClientOriginalExtension();
-                $twibbon2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_TWIBBON' . '.' . $this->twibbon_1->getClientOriginalExtension();
 
                 $resized_image_ktm2 = (new ImageManager())
                     ->make($this->ktm_2)
@@ -207,13 +197,6 @@ class RegisterStudent extends Component
                         $constraint->upsize();
                     })->encode($this->instagram_2->getClientOriginalExtension());
 
-                $resized_image_twibbon2 = (new ImageManager())
-                    ->make($this->twibbon_2)
-                    ->resize(600, null, function ($constraint) {
-                        $constraint->aspectRatio();
-                        $constraint->upsize();
-                    })->encode($this->twibbon_2->getClientOriginalExtension());
-
 
                 Storage::disk('public')
                     ->put('bionix/' . $ktm2,
@@ -221,13 +204,9 @@ class RegisterStudent extends Component
                 Storage::disk('public')
                     ->put('bionix/' . $instagram2,
                         $resized_image_instagram2->__toString());
-                Storage::disk('public')
-                    ->put('bionix/' . $twibbon2,
-                        $resized_image_twibbon2->__toString());
 
                     $team_member_2->update([
                     'identity_card_path' => 'bionix/' . $ktm2,
-                    'twibbon_path' => 'bionix/'. $twibbon2,
                     'instagram_path' => 'bionix/'. $instagram2
                 ]);
             }

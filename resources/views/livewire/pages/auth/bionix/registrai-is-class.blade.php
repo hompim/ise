@@ -35,18 +35,17 @@
                     placeholder="Masukkan asal sekolah kamu" wire:model.defer="sekolah" name="sekolah">
             </div>
             <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <label for="name">Link Twibbon</label>
+                <input id="name"  type="text"
+                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Masukkan asal sekolah kamu" wire:model.defer="twibbon" name="twibbon">
+            </div>
+            <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="kartu-pelajar1">Kartu Pelajar
                 </label>
                 <input id="kartu-pelajar1" name="ktm" wire:model.defer="ktm" type="file"
                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Kartu Pelajar Anggota 2">
-            </div>
-            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
-                <label for="twibbon1">Bukti Upload Twibbon
-                </label>
-                <input id="twibbon1" name="twibbon" wire:model.defer="twibbon" type="file"
-                    class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Twibbon Anggota 2">
             </div>
             <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                 <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"

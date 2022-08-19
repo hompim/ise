@@ -66,6 +66,16 @@
             <div>
                 <p class="font-bold">{{ $alert_header }}</p>
                 <p class="text-sm">{!! $alert_content !!}</p>
+                @if(Auth::user()->userable->academy->competition_round =='Pending')
+                        <button wire:click="Accept"
+                                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mr-2 rounded">
+                            Lanjutkan Academy!
+                        </button>
+                        <button wire:click="Reject"
+                                class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                            Tolak
+                        </button>
+                @endif
             </div>
             <div class="flex-1 flex justify-end">
                 <button type="button" title="Hapus" wire:click="closeNotif()" class="self-start"><i
