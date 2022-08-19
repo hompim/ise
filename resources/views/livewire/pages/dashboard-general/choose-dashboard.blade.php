@@ -1,13 +1,13 @@
 <div class="px-4">
     @if (Auth::user()->userable->jenjang == 'Mahasiswa')
         <div
-            class=" bg-gradient-to-r from-purple-300 via-pink-200 to-pink-600 w-full z-50 rounded-3xl grid md:grid-cols-3 grid-cols-1 mb-12">
-            <div class="md:col-span-2 p-6 flex flex-col space-y-8">
+            class="z-50 grid w-full grid-cols-1 mb-12 bg-gradient-to-r from-purple-300 via-pink-200 to-pink-600 rounded-3xl md:grid-cols-3">
+            <div class="flex flex-col p-6 space-y-8 md:col-span-2">
                 <div>
                     <img src="{{ asset('images/modal-myskill/ise-myskill.svg') }}" alt="ise-myskill">
                 </div>
                 <div>
-                    <p class="font-bold text-xl text-white">
+                    <p class="text-xl font-bold text-white">
                         Dapatkan diskon 25%
                     </p>
                     <small class="text-base text-white font-poppins">
@@ -16,11 +16,11 @@
                 </div>
                 <div class="mb-4">
                     <a href="#"
-                        class="px-6 py-3 font-semibold text-center text-purple-300 rounded-full bg-white shadow-lg shadow-white font-poppins">Klaim
+                        class="px-6 py-3 font-semibold text-center text-purple-300 bg-white rounded-full shadow-lg shadow-white font-poppins">Klaim
                         Discount</a>
                 </div>
             </div>
-            <div class="md:col-span-1 p-8 md:block hidden">
+            <div class="hidden p-8 md:col-span-1 sm:block">
                 <div>
                     <img src="{{ asset('images/modal-myskill/money.svg') }}" alt="money" class="w-full h-48">
                 </div>
@@ -33,13 +33,13 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             @forelse($events as $e)
-                <div class="card shadow-md rounded-xl swiper-slide"
+                <div class="shadow-md card rounded-xl swiper-slide"
                     style=" background-color: #191a1e; height: 100%; border:0">
-                    <div class="card-body flex flex-col h-full justify-between">
+                    <div class="flex flex-col justify-between h-full card-body">
                         <div>
-                            <h4 class="font-bold text-xl" style="color: rgb(178,33,229)">{{ $e->title }}</h4>
+                            <h4 class="text-xl font-bold" style="color: rgb(178,33,229)">{{ $e->title }}</h4>
                             <div class="flex flex-row md:align-items-center"><i class="far fa-calendar-alt"></i>
-                                <p class="mb-0 ml-2 text-white font-medium">
+                                <p class="mb-0 ml-2 font-medium text-white">
                                     @if ($e->start_date || $e->end_date)
                                         Registrasi
                                         : {{ date('d F Y', strtotime($e->start_date)) }}
@@ -47,7 +47,7 @@
                                         Coming Soon
                                     @endif
                             </div>
-                            <p class="text-sm font-weight-normal text-white my-4">{!! $e->description !!}</p>
+                            <p class="my-4 text-sm text-white font-weight-normal">{!! $e->description !!}</p>
                         </div>
                         <div>
                             @if ($e->regis_link && $e->start_date)
@@ -55,25 +55,25 @@
                                     date('Y-m-d') < date('Y-m-d', strtotime($e->end_date)))
                                     <a href="{{ route("$e->regis_link") }}" type="button" target="_blank"
                                         style="background: rgb(178,33,229)"
-                                        class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">Daftar
+                                        class="w-full p-2 font-bold text-center text-white rounded hover:no-underline">Daftar
                                     </a>
                                 @elseif(date('Y-m-d') > date('Y-m-d', strtotime($e->end_date)))
-                                    <p class="text-center font-bold text-white">
+                                    <p class="font-bold text-center text-white">
                                         Pendaftaran ditutup
                                     </p>
                                 @elseif(date('Y-m-d') < date('Y-m-d', strtotime($e->start_date)))
-                                    <p class="text-center font-bold text-white">
+                                    <p class="font-bold text-center text-white">
                                         Pendaftaran belum dibuka
                                     </p>
                                 @endif
                             @else
-                                <p class="text-center font-bold text-white">
+                                <p class="font-bold text-center text-white">
                                     Pendaftaran belum dibuka
                                 </p>
                             @endif
                             <a href="{{ "/$e->landing_link" }}" type="button" target="_blank"
                                 style="color: rgb(178,33,229)"
-                                class="w-full p-2 font-bold mt-2 text-center no-underline">{{ $e['title'] == 'Virtual Play' ? 'Mainkan Sekarang' : 'Selengkapnya' }}</a>
+                                class="w-full p-2 mt-2 font-bold text-center no-underline">{{ $e['title'] == 'Virtual Play' ? 'Mainkan Sekarang' : 'Selengkapnya' }}</a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
             @endforelse
         </div>
         <!-- If we need pagination -->
-        <div class="swiper-pagination mt-10" style="bottom: auto !important;position: relative !important;"></div>
+        <div class="mt-10 swiper-pagination" style="bottom: auto !important;position: relative !important;"></div>
     </div>
 
 
@@ -90,17 +90,17 @@
     @if (Auth::user()->userable->jenjang == 'SMA')
         <div class="mt-8 mb-8 swiper-container">
             <h3 class="text-xl text-white font-weight-bold">Form Lainnya</h3>
-            <p class="text-white mb-3">Link form untuk keperluan lain.</p>
+            <p class="mb-3 text-white">Link form untuk keperluan lain.</p>
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-                <div class="card shadow-md rounded-xl swiper-slide"
+                <div class="shadow-md card rounded-xl swiper-slide"
                     style=" background-color: #191a1e; height: 100%; border:0">
-                    <div class="card-body flex flex-col h-full justify-between">
+                    <div class="flex flex-col justify-between h-full card-body">
                         <div>
-                            <h4 class="font-bold text-xl" style="color: rgb(178,33,229)">Pembayaran DP Bionix Student
+                            <h4 class="text-xl font-bold" style="color: rgb(178,33,229)">Pembayaran DP Bionix Student
                                 Level
                             </h4>
-                            <p class="text-sm font-weight-normal text-white my-4">
+                            <p class="my-4 text-sm text-white font-weight-normal">
                                 Form pembayaran DP untuk peserta bionix student level yang telah melakukan roadshow ISE!
                                 di
                                 sekolah masing - masing.
@@ -110,14 +110,14 @@
                         <div>
                             @if (Auth::user()->userable->roadshow_school)
                                 <a href="{{ route('pembayaran-roadshow') }}" style="background: rgb(178,33,229)"
-                                    class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">
+                                    class="w-full p-2 font-bold text-center text-white rounded hover:no-underline">
                                     Form Pembayaran DP
                                 </a>
                             @else
                                 <button
                                     onclick="Livewire.emit('openModal', 'pages.auth.bionix.registrasi-bionix-schol')"
                                     style="background: rgb(178,33,229)"
-                                    class="text-white w-full p-2 font-bold rounded text-center hover:no-underline">
+                                    class="w-full p-2 font-bold text-center text-white rounded hover:no-underline">
                                     Form Pembayaran DP
                                 </button>
                             @endif
@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <!-- If we need pagination -->
-                <div class="swiper-pagination mt-10" style="bottom: auto !important;position: relative !important;">
+                <div class="mt-10 swiper-pagination" style="bottom: auto !important;position: relative !important;">
                 </div>
             </div>
         </div>
@@ -133,13 +133,13 @@
 
 
 
-    {{-- <h3 class="text-xl font-weight-bold mt-12">Agenda</h3>
+    {{-- <h3 class="mt-12 text-xl font-weight-bold">Agenda</h3>
 
     <p>Berikut adalah <span id="event-count"></span> agenda terdekat anda.</p> --}}
-    {{-- <div class="card p-8 mt-8"> --}}
+    {{-- <div class="p-8 mt-8 card"> --}}
     {{-- <div id="calendar"></div> --}}
     {{-- </div> --}}
-    {{-- <div class="grid md:grid-cols-2 gap-4 mt-4">
+    {{-- <div class="grid gap-4 mt-4 md:grid-cols-2">
         @php $x=0; @endphp
         @foreach ($event_countdowns as $e)
             @if (strpos($e['who_can_join'], Auth::user()->userable->jenjang) !== false && (($e['for_event'] == 'bionix' && Auth::user()->userable->bionix_id) || ($e['for_event'] == 'startup_academy' && Auth::user()->userable->academy_type == 'Startup Academy') || ($e['for_event'] == 'data_science_academy' && Auth::user()->userable->academy_type == 'Data Science Academy') || $e['for_event'] == 'none') && date('Y-m-d H:i:s', strtotime($e['deadline'])) >= \Carbon\Carbon::now())
