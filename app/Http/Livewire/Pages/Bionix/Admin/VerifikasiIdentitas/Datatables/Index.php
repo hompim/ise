@@ -20,9 +20,6 @@ class Index extends LivewireDatatable
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             return TeamSeniorData::query()
                 ->where('profile_verif_status', 'Tahap Verifikasi')
-                ->leftJoin('team_senior_members as leader', 'leader.id', 'team_senior_data.leader_id')
-                ->leftJoin('team_senior_members as member1', 'member1.id', 'team_senior_data.member1_id')
-                ->leftJoin('team_senior_members as member2', 'member2.id', 'team_senior_data.member2_id');
         }
         return null;
     }
@@ -47,9 +44,6 @@ class Index extends LivewireDatatable
                 Column::name('team_name')->searchable()->label('Nama Tim'),
                 Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->cities->pluck('name')),
                 Column::name('university_name')->label('Nama Universitas'),
-                Column::name('leader.name')->label('Nama Ketua'),
-                Column::name('member1.name')->label('Nama Member 1'),
-                Column::name('member2.name')->label('Nama Member 2'),
                 Column::callback(['id'], function ($id) {
                     return view('livewire.pages.bionix.admin.verifikasi-identitas.components.datatable-action', ['id' => $id, 'type' => 'college']);
                 })
