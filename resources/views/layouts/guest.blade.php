@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -21,7 +22,7 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://pagecdn.io/lib/font-awesome/5.10.0-11/css/all.min.css"
-          integrity="sha256-p9TTWD+813MlLaxMXMbTA7wN/ArzGyW/L7c5+KkjOkM=" crossorigin="anonymous">
+        integrity="sha256-p9TTWD+813MlLaxMXMbTA7wN/ArzGyW/L7c5+KkjOkM=" crossorigin="anonymous">
 
     <!-- Styles -->
     @stack('css')
@@ -32,7 +33,7 @@
     <style>
         @font-face {
             font-family: 'guestFont';
-            src: url('{{asset("fonts/Audimat Mono Regular.TTF")}}');
+            src: url('{{ asset('fonts/Audimat Mono Regular.TTF') }}');
         }
 
         div {
@@ -42,30 +43,41 @@
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
     @if (!config('app.debug'))
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ59B1X1XZ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ59B1X1XZ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-        gtag('config', 'G-DJ59B1X1XZ');
-    </script>
-@endif
+            gtag('config', 'G-DJ59B1X1XZ');
+        </script>
+        <script>
+            (function(h, e, a, t, m, p) {
+                m = e.createElement(a);
+                m.async = !0;
+                m.src = t;
+                p = e.getElementsByTagName(a)[0];
+                p.parentNode.insertBefore(m, p);
+            })(window, document, 'script', 'https://u.heatmap.it/log.js');
+        </script>
+    @endif
 
 </head>
+
 <body>
 
-{{ $slot }}
+    {{ $slot }}
 
-<!-- JQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-@livewireScripts
-@stack('js')
+    @livewireScripts
+    @stack('js')
 </body>
+
 </html>

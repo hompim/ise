@@ -19,7 +19,7 @@ class Index extends LivewireDatatable
                 ->leftJoin('team_junior_members as member_group', 'member_group.id', 'team_junior_data.member_id');
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             return TeamSeniorData::query()
-                ->where('profile_verif_status', 'Tahap Verifikasi')
+                ->where('profile_verif_status', 'Tahap Verifikasi');
         }
         return null;
     }
@@ -43,10 +43,9 @@ class Index extends LivewireDatatable
             $column = [
                 Column::name('team_name')->searchable()->label('Nama Tim'),
                 Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->cities->pluck('name')),
-                Column::name('university_name')->label('Nama Universitas'),
-                Column::callback(['id'], function ($id) {
-                    return view('livewire.pages.bionix.admin.verifikasi-identitas.components.datatable-action', ['id' => $id, 'type' => 'college']);
-                })
+                // Column::callback(['id'], function ($id) {
+                //     return view('livewire.pages.bionix.admin.verifikasi-identitas.components.datatable-action', ['id' => $id, 'type' => 'college']);
+                // })
             ];
         }
         return $column;

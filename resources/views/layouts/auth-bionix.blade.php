@@ -14,6 +14,15 @@
     <link rel="apple-touch-icon" href="{{ asset('images/logo-only-small.png') }}" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <script defer src="{{ mix('js/app.js') }}"></script>
+    <script>
+        (function(h, e, a, t, m, p) {
+            m = e.createElement(a);
+            m.async = !0;
+            m.src = t;
+            p = e.getElementsByTagName(a)[0];
+            p.parentNode.insertBefore(m, p);
+        })(window, document, 'script', 'https://u.heatmap.it/log.js');
+    </script>
     @stack('css')
 </head>
 
