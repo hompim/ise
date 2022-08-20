@@ -15,9 +15,15 @@
                     </small>
                 </div>
                 <div class="mb-4">
-                    <button wire:click='$emit("openModal", "pages.dashboard-general.components.modal-skill", {{ json_encode(["user" => Auth::user()->id]) }})'><a
-                        class="px-6 py-3 font-semibold text-center text-purple-300 bg-white rounded-full shadow-lg shadow-white font-poppins">Klaim
-                        Discount</a></button>
+                    <button
+                        wire:click='$emit("openModal", "pages.dashboard-general.components.modal-skill", {{ json_encode(['user' => Auth::user()->id]) }})'
+                        class='transition duration-300 focus-within:outline-none focus:underline hover:underline'
+                        type='button'>
+                        <a
+                            class="px-6 py-3 font-semibold text-center text-purple-300 bg-white rounded-full shadow-lg shadow-white font-poppins focus-within:border-none">Klaim
+                            Discount
+                        </a>
+                    </button>
                 </div>
             </div>
             <div class="hidden p-8 md:col-span-1 sm:block">
