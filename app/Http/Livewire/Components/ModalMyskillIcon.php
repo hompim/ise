@@ -3,8 +3,9 @@
 namespace App\Http\Livewire\Components;
 
 use Livewire\Component;
+use LivewireUI\Modal\ModalComponent;
 
-class ModalMyskillIcon extends Component
+class ModalMyskillIcon extends ModalComponent
 {
     public function render()
     {
