@@ -74,6 +74,14 @@
                 <p class="text-sm font-weight-normal mt-4">Bagi peserta yang telah mendaftar silahkan masuk ke grub berikut untuk mendapatkan informasi terbaru: <a href="https://chat.whatsapp.com/BwcOnXQZYey8p7eI2Fqdzv">https://chat.whatsapp.com/BwcOnXQZYey8p7eI2Fqdzv</a></p>
             </div>
         </div>
+        @elseif (Auth::user()->userable->jenjang == 'Mahasiswa')
+        <div class="card shadow-md rounded-xl" style="background-color: #191a1e;border:0">
+            <div class="card-body">
+                <h6 class="font-bold text-black"></h6>
+                <h4 class="font-bold text-xl" style="color: #FF7C74;">Grup Whatsapp</h4>
+                <p class="text-sm font-weight-normal mt-4">Bagi peserta yang telah mendaftar silahkan masuk ke grub berikut untuk mendapatkan informasi terbaru: <a href="https://chat.whatsapp.com/HcINjKNISab9zE3RE7fHb1">https://chat.whatsapp.com/HcINjKNISab9zE3RE7fHb1</a></p>
+            </div>
+        </div>
         @endif
         @forelse($announcement as $a)
             <div class="card shadow-md rounded-xl" style="background-color: #191a1e;border:0">
