@@ -131,6 +131,12 @@
                         12</label>
                 </div>
             </div>
+            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <label for="name">Link Twibbon</label>
+                <input wire:model.defer = "twibbon_1" id="name" name="twibbon_1" type="text" required
+                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Link Twibbon 1">
+            </div>
             <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="kartu-pelajar1">Kartu Pelajar Anggota 1
                 </label>
@@ -138,12 +144,7 @@
                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Kartu Pelajar Anggota 1">
             </div>
-            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
-                <label for="name">Link Twibbon</label>
-                <input wire:model.defer = "twibbon_1" id="name" name="twibbon_1" type="text" required
-                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Link Twibbon 1">
-            </div>
+
             <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                 <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
                         href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
@@ -196,18 +197,18 @@
                         12</label>
                 </div>
             </div>
+            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <label for="name">Link Twibbon</label>
+                <input wire:model.defer = "twibbon_2" id="name" name="twibbon_2" type="text" required
+                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
+                    placeholder="Link Twibbon 2">
+            </div>
             <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
                 <label for="kartu-pelajar1">Kartu Pelajar
                 </label>
                 <input id="kartu-pelajar1" name="ktm_2" wire:model.defer="ktm_2" type="file"
                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                     placeholder="Kartu Pelajar Anggota 2">
-            </div>
-            <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
-                <label for="name">Link Twibbon</label>
-                <input wire:model.defer = "twibbon_2" id="name" name="twibbon_2" type="text" required
-                    class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                    placeholder="Link Twibbon 2">
             </div>
             <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
                 <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"

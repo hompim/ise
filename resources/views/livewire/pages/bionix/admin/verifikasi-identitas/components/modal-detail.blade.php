@@ -87,10 +87,6 @@
                         <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
                         <p>{{$member2_whatsapp}}</p>
                     </div>
-                    <div>
-                        <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
-                        <p>{{$member2_twibbon}}</p>
-                    </div>
                     @if($type=='college')
                         <div>
                             <p class="font-bold mb-0 mt-2">Jurusan</p>
@@ -102,6 +98,14 @@
                             <p class="truncate">{{$member2_year}}</p>
                         </div>
                     @endif
+                    <div>
+                        <p class="font-bold mb-0 mt-2">Twibbon</p>
+                        @if (Illuminate\Support\Facades\Storage::disk('public')->exists($member2_twibbon))
+                        <img class="object-scale-down w-50" src="{{asset('/storage/'.$member2_twibbon)}}"/>
+                        @else
+                        <a href="{{$member2_twibbon}}" target="_blank"><p>{{$member2_twibbon}}</p></a>
+                        @endif
+                    </div>
                     <div>
                         <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
                         <img class="object-scale-down w-50" src="{{asset('/storage/'.$photo2)}}"/>
