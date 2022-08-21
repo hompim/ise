@@ -142,7 +142,7 @@
                                 target="_blank">ise-its.com/PetunjukTwibbonAcademy</a></small>
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
-                        <label for="cv_{{ $x }}">Curriculum Vitae (<=3Mb, .pdf) </label>
+                        <label for="cv_{{ $x }}">Curriculum Vitae (<=2Mb, .pdf) </label>
                                 <input id="cv_{{ $x }}" name="cv_{{ $x }}"
                                     wire:model.defer="cv_{{ $x }}" type="file"
                                     required
