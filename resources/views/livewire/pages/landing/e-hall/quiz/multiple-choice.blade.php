@@ -16,68 +16,39 @@
                     est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.
                 </p>
                 <!-- start: make cards row 1 -->
-                <div class="flex flex-row mt-10 mx-auto gap-4 md:gap-[108px] pl-0">
-                    <div class="w-[177px] h-[159px] bg-[#B221E5] rounded-lg ">
-                        <!-- pic1 -->
-                        <div class="text-white text-[32px] text-center pt-[55px]">
-                            pic1
+                <div class="flex flex-row mt-[46px] mx-auto gap-4 md:gap-[74px] pl-0">
+                    <div class="w-[315px] h-[63px] bg-gradient-to-b from-[#B221E5] to-[#5B1BE1] rounded-lg ">
+                        <!-- A.  Lorem ipsum -->
+                        <div class="text-white text-[20px] pl-[16px] pt-[13px]">
+                            A.  Lorem ipsum
                         </div>
-                        <!-- pic1 -->
+                        <!-- A.  Lorem ipsum -->
                     </div>
-                    <div class="w-[177px] h-[159px] bg-[#B221E5] rounded-lg ">
-                        <!-- pic1 -->
-                        <div class="text-white text-[32px] text-center pt-[55px]">
-                            pic1
+                    <div class="w-[315px] h-[63px] bg-[#2F2F2F] rounded-lg ">
+                        <!-- B.  Lorem ipsum -->
+                        <div class="text-white text-[20px] pl-[16px] pt-[13px]">
+                            B.  Lorem ipsum
                         </div>
-                        <!-- pic1 -->
-                    </div>
-                    <div class="w-[177px] h-[159px] bg-[#B221E5] rounded-lg ">
-                        <!-- pic1 -->
-                        <div class="text-white text-[32px] text-center pt-[55px]">
-                            pic1
-                        </div>
-                        <!-- pic1 -->
+                        <!-- B.  Lorem ipsum -->
                     </div>
                 </div>
                 <!-- end: make cards row 1 -->
 
                 <!-- start: make cards row 2 -->
-                <div class="flex flex-row mt-10 mx-auto gap-4 md:gap-[76px]">
-                    <div class="w-[207.8px] h-[263px] bg-[#2F2F2F] rounded-lg ">
-                        <!-- pic1 -->
-                        <div class=" bg-black w-[176px] h-[158px] mx-auto mt-[19px] rounded-lg pt-[59px]">
-                            <div class="text-[#B5B3BC] text-center text-[32px]">
-                                blank
-                            </div>
+                <div class="flex flex-row mt-[46px] mx-auto gap-4 md:gap-[74px] pl-0">
+                    <div class="w-[315px] h-[63px] bg-[#2F2F2F] rounded-lg ">
+                        <!-- B.  Lorem ipsum -->
+                        <div class="text-white text-[20px] pl-[16px] pt-[13px]">
+                            B.  Lorem ipsum
                         </div>
-                        <!-- pic1 -->
-                        <!-- button start -->
-                        <div class="w-[176px] h-[46.8px] bg-[#B5B3BC] mx-auto mt-[18px] rounded-lg text-white text-[28px] text-center">Lorem</div>
-                        <!-- button start -->
+                        <!-- B.  Lorem ipsum -->
                     </div>
-                    <div class="w-[207.8px] h-[263px] bg-[#2F2F2F] rounded-lg ">
-                        <!-- pic1 -->
-                        <div class=" bg-black w-[176px] h-[158px] mx-auto mt-[19px] rounded-lg pt-[59px]">
-                            <div class="text-[#B5B3BC] text-center text-[32px]">
-                                blank
-                            </div>
+                    <div class="w-[315px] h-[63px] bg-[#2F2F2F] rounded-lg ">
+                        <!-- B.  Lorem ipsum -->
+                        <div class="text-white text-[20px] pl-[16px] pt-[13px]">
+                            B.  Lorem ipsum
                         </div>
-                        <!-- pic1 -->
-                        <!-- button start -->
-                        <div class="w-[176px] h-[46.8px] bg-[#B5B3BC] mx-auto mt-[18px] rounded-lg text-white text-[28px] text-center">Lorem</div>
-                        <!-- button start -->
-                    </div>
-                    <div class="w-[207.8px] h-[263px] bg-[#2F2F2F] rounded-lg ">
-                        <!-- pic1 -->
-                        <div class=" bg-black w-[176px] h-[158px] mx-auto mt-[19px] rounded-lg pt-[59px]">
-                            <div class="text-[#B5B3BC] text-center text-[32px]">
-                                blank
-                            </div>
-                        </div>
-                        <!-- pic1 -->
-                        <!-- button start -->
-                        <div class="w-[176px] h-[46.8px] bg-[#B5B3BC] mx-auto mt-[18px] rounded-lg text-white text-[28px] text-center">Lorem</div>
-                        <!-- button start -->
+                        <!-- B.  Lorem ipsum -->
                     </div>
                 </div>
                 <!-- end: make cards row 2 -->
@@ -126,6 +97,20 @@
 
         </div>
 
+        <!-- start: pembahasan-->
+        <div class="divide-y-[1px] mt-[55px] divide-white">
+            <h1 class="text-white"></h1>
+            <h1 class="text-white pt-[29px] text-[20px] ">Jawaban :
+                <br><span class="text-[#B5B3BC] font-bold text-[24px]">A. Lorem Ipsum</span>
+                <br><span class="text-white text-[20px] ">Pembahasan :</span>
+                <br><span class="text-[#B5B3BC] text-[20px]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a,  mattis tellus. Sed
+                    dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas
+                    eget condimentum velit, sit amet feugiat lectus. Class aptent taciti  sociosqu ad litora torquent per conubia nostra
+                </span>
+            </h1>
+        </div>
+        <!-- end: pembahasan-->
     </div>
 </div>
 
