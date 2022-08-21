@@ -89,33 +89,36 @@
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_name">Nama Lengkap</label>
                         <input id="member_{{ $x }}_name" name="member_{{ $x }}_name"
-                            wire:model.defer="member_{{ $x }}_name" type="text"
-                            required
+                            wire:model.defer="member_{{ $x }}_name" type="text" required
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nama lengkap anggota {{ $x }}">
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_email">Email address</label>
                         <input id="member_{{ $x }}_email" name="member_{{ $x }}_email"
-                            wire:model.defer="member_{{ $x }}_email" type="email"
-                            required
+                            wire:model.defer="member_{{ $x }}_email" type="email" required
                             class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                             placeholder="Masukkan email aktif anggota {{ $x }}">
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="member_{{ $x }}_whatsapp">Nomor WhatsApp</label>
                         <input id="member_{{ $x }}_whatsapp" name="member_{{ $x }}_whatsapp"
-                            wire:model.defer="member_{{ $x }}_whatsapp" type="tel"
-                            required
+                            wire:model.defer="member_{{ $x }}_whatsapp" type="tel" required
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nomor WhatsApp anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
+                    <div x-data="{ isUploading: false, progress: 0 }" x-on:livewire-upload-start="isUploading = true"
+                        x-on:livewire-upload-finish="isUploading = false"
+                        x-on:livewire-upload-error="isUploading = false"
+                        x-on:livewire-upload-progress="progress = $event.detail.progress"
+                        class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="ktm_{{ $x }}">Bukti Mahasiswa S1/Sederajat Aktif
                         </label>
+                        <div x-show="isUploading" class="w-full">
+                            <progress max="100" x-bind:value="progress" class="w-full"></progress>
+                        </div>
                         <input id="ktm_{{ $x }}" name="ktm_{{ $x }}"
-                            wire:model.defer="ktm_{{ $x }}" type="file"
-                            required
+                            wire:model.defer="ktm_{{ $x }}" type="file" required
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Bukti Mahasiswa S1/Sederajat Aktif Anggota {{ $x }}"
                             accept=".jpg,.png">
@@ -124,8 +127,7 @@
                         <label for="member_{{ $x }}_ig">Username Instagram
                         </label>
                         <input id="member_{{ $x }}_ig" name="member_{{ $x }}_ig"
-                            wire:model.defer="member_{{ $x }}_ig" type="text"
-                            required
+                            wire:model.defer="member_{{ $x }}_ig" type="text" required
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Username Instagram Anggota {{ $x }}">
                     </div>
@@ -133,19 +135,24 @@
                         <label for="member_{{ $x }}_twibbon">Link Twibbon
                         </label>
                         <input id="member_{{ $x }}_twibbon" name="member_{{ $x }}_twibbon"
-                            wire:model.defer="member_{{ $x }}_twibbon" type="text"
-                            required
+                            wire:model.defer="member_{{ $x }}_twibbon" type="text" required
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Link Twibbon Anggota {{ $x }}">
                         <small>Petunjuk twibbon dapat diunduh lewat link berikut: <a class="text-blue-400"
                                 href="https://ise-its.com/PetunjukTwibbonAcademy"
                                 target="_blank">ise-its.com/PetunjukTwibbonAcademy</a></small>
                     </div>
-                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
+                    <div x-data="{ isUploading: false, progress: 0 }" x-on:livewire-upload-start="isUploading = true"
+                        x-on:livewire-upload-finish="isUploading = false"
+                        x-on:livewire-upload-error="isUploading = false"
+                        x-on:livewire-upload-progress="progress = $event.detail.progress"
+                        class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="cv_{{ $x }}">Curriculum Vitae (<=2Mb, .pdf) </label>
+                                <div x-show="isUploading" class="w-full">
+                                    <progress max="100" x-bind:value="progress" class="w-full"></progress>
+                                </div>
                                 <input id="cv_{{ $x }}" name="cv_{{ $x }}"
-                                    wire:model.defer="cv_{{ $x }}" type="file"
-                                    required
+                                    wire:model.defer="cv_{{ $x }}" type="file" required
                                     class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                                     placeholder="Curriculum Vitae Anggota {{ $x }}"
                                     accept="application/pdf">
