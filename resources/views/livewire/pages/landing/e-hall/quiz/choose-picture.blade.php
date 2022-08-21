@@ -1,181 +1,116 @@
-{{-- Main --}}
-<div class="bg-black min-h-screen font-poppins">
-    {{-- Hero --}}
-    <div class="flex flex-row pt-24 md:pt-52 mx-[20px] md:mx-[130px]">
-        {{-- Col 1 --}}
-        <div class="flex flex-col flex-1">
-            <div class="flex flex-row items-center gap-5">
-                <h1 class="text-white text-[50px] md:text-[80px] font-bold px-6 md:px-0">ISE Trivia</h1>
-            </div>
-            <div class=" w-[80%] mx-auto block md:hidden">
-                <img src="{{ asset('images/trivia-logo.png') }}" alt="founder-digiflux">
-            </div>
-            <p class="text-sm md:text-lg text-liteGray mt-4 px-6 md:px-0 leading-loose md:leading-normal">
-                ISE Trivia merupakan Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Etiam eu turpis molestie,
-                dictum est a, mattis tellus. Sed dignissim, metus nec
-                fringilla accumsan,risus sem sollicitudin lacus, ut interdum
-                tellus elit sed risus  </p>
-            <div class="relative mt-16 mx-auto text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
-            <div class="absolute inset-0 ">
-                <a href="#explore"
-                    class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's
-                    Explore</a>
-            </div>
-            <a href="#explore" class="relative btn">Let's
-                Explore</a>
-            </div>
-        </div>
-
-        {{-- Col 2 --}}
-        <div class="hidden md:block">
-            <img src="{{ asset('images/trivia-logo.svg') }}" alt="founder-digiflux">
-        </div>
-    </div>
-
-    {{-- Point --}}
-    <div class="mt-24 md:mt-52 flex justify-center items-center">
-        <h1 class="bg-liteBlack px-4 py-2 rounded-3xl text-white text-lg">point anda: <span class="text-pink-300">40</span></h1>
-    </div>
-
-    {{-- Tabs --}}
-    <div class="mt-8 md:mt-12 font-poppins pb-52">
-        {{-- Question 1 --}}
-        <div x-data="{ open: false }" class="md:mt-24">
-            <div class="cursor-pointer" x-on:click="open = !open">
-                <div
-                    class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
-                    <div class="flex flex-row justify-between mx-auto">
-                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Rules</h1>
-                        <div x-show="!open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
+<!-- pembahasan quiz -->
+<div class="pt-6 md:pt-52 flex flex-col bg-black">
+    {{-- Start Quiz Block --}}
+    <div class=" mb-[145px] bg-liteBlack mx-6 md:mx-28 rounded-2xl flex flex-col p-11 h-max">
+        <h1 class="text-white text-lg md:text-2xl mx-auto">Quiz (nama startup)</h1>
+        <div class="flex flex-col md:flex-row mt-4 gap-14">
+            {{-- Left Part --}}
+            <div class="flex flex-col">
+                <h2 class="text-white">
+                    <span class="underline text-2xl underline-offset-4 decoration-purple-300 ">Quiz 2</span>
+                    <span class="text-lg ">
+                        <span class="text-[#B221E5]">+10</span>
+                        <span>Point</span></span>
+                </h2>
+                <p class="text-sm md:text-lg text-white mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum
+                    est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.
+                </p>
+                <!-- start: make cards row 1 -->
+                <div class="flex flex-row mt-[46px] mx-auto gap-4 md:gap-[74px] pl-0">
+                    <div class="relative group">
+                        <div
+                            class="absolute w-[177px] h-[159px] blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] animate-tilt">
                         </div>
-                        <div x-show="open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                            </svg>
-                        </div>
+                        <div class ="relative w-[177px] h-[159px] bg-[#B5B3BC] text-white text-[20px] text-center pt-[56px] rounded-lg">pic1</div>
                     </div>
-                    <div x-show="open" x-cloak class="pt-4" x-transition>
-                        <ul class="w-[80%] md:w-[95%] text-liteGray text-sm md:text-lg list-disc ml-8">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum enim, velit, eu molestie ut dictumst urna.</li>
-                            <li>Felis id et fusce tristique. Ac auctor volutpat nec velit aliquam ac. Donec ipsum sed tortor aenean egestas maecenas eget.</li>
-                            <li>Turpis id pulvinar elementum commodo. Phasellus ac facilisis eu, eu congue adipiscing consequat tincidunt. Morbi et pellentesque urna etiam.</li>
-                        </ul>
+
+                    <div class="w-[177px] h-[159px] bg-[#B5B3BC] rounded-lg ">
+                        <!-- pic2 -->
+                        <div class="text-white text-[20px] text-center pt-[56px]">
+                            pic2
+                        </div>
+                        <!-- pic2 -->
                     </div>
                 </div>
-            </div>
-        </div>
-        {{-- Question 2 --}}
-        <div x-data="{ open: false }" class="mt-3 md:mt-4">
-            <div class="cursor-pointer" x-on:click="open = !open">
-                <div
-                    class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
-                    <div class="flex flex-row justify-between mx-auto">
-                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Startup</h1>
-                        <div x-show="!open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
+                <!-- end: make cards row 1 -->
+
+                <!-- start: make cards row 2 -->
+                <div class="flex flex-row mt-[19px] mx-auto gap-4 md:gap-[74px] pl-0">
+                    <div class="w-[177px] h-[46.8px] bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-lg ">
+                        <!-- pic1 -->
+                        <div class="text-white text-[28px] text-center pt-[2px]">
+                            A
                         </div>
-                        <div x-show="open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                            </svg>
-                        </div>
+                        <!-- pic1 -->
                     </div>
-                    <div x-show="open" x-cloak class="pt-4" x-transition>
-                        <div class="w-[95%] text-liteGray flex flex-col gap-5">
-                            <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
-                                <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 px-10 py-1 rounded-3xl">Start</button>
-                            </div>
-                            <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
-                                <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base px-4 py-1 rounded-3xl">Completed</button>
-                            </div>
+                    <div class="w-[177px] h-[46.8px] bg-[#2F2F2F] rounded-lg ">
+                        <!-- pic1 -->
+                        <div class="text-white text-[28px] text-center pt-[2px]">
+                            B
                         </div>
+                        <!-- pic1 -->
                     </div>
                 </div>
-            </div>
-        </div>
-        {{-- Question 3 --}}
-        <div x-data="{ open: false }" class="mt-3 md:mt-4">
-            <div class="cursor-pointer" x-on:click="open = !open">
-                <div
-                    class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
-                    <div class="flex flex-row justify-between mx-auto">
-                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Prestasi</h1>
-                        <div x-show="!open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </div>
-                        <div x-show="open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div x-show="open" x-cloak class="pt-4" x-transition>
-                        <div class="w-[95%] text-liteGray flex flex-col gap-5">
-                            <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
-                                <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 px-10 py-1 rounded-3xl">Start</button>
-                            </div>
-                            <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
-                                <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base px-4 py-1 rounded-3xl">Completed</button>
-                            </div>
-                        </div>
-                    </div>
+                <!-- end: make cards row 2 -->
+                <div class="md:flex flex-row gap-7 mt-[36px] hidden">
+                    <button class="bg-[#2F2F2F] w-[58px] h-[58px] text-white items-center rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button class="bg-[#2F2F2F] w-[58px] h-[58px] text-white items-center rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </div>
-        {{-- Question 4 --}}
-        <div x-data="{ open: false }" class="mt-3 md:mt-4">
-            <div class="cursor-pointer" x-on:click="open = !open">
-                <div
-                    class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
-                    <div class="flex flex-row justify-between mx-auto">
-                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Campuran</h1>
-                        <div x-show="!open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
+            {{-- Right Part --}}
+            <div class="flex flex-col ml-auto">
+                <div class="grid grid-cols-2 gap-4 md:px-0 px-12">
+                    <button class="w-[56px] md:w-[75px] h-[56px] md:h-[75px] bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] mx-auto text-white text-2xl font-bold rounded-lg">1</button>
+                    <div class="relative group">
+                        <div
+                            class="absolute w-[56px] md:w-[75px] h-[56px] md:h-[75px] blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] animate-tilt">
                         </div>
-                        <div x-show="open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-                            </svg>
-                        </div>
+                        <button class ="relative w-[56px] md:w-[75px] h-[56px] md:h-[75px] bg-[#2F2F2F] text-white text-2xl font-bold rounded-lg">2</button>
                     </div>
-                    <div x-show="open" x-cloak class="pt-4" x-transition>
-                        <div class="w-[95%] text-liteGray flex flex-col gap-5">
-                            <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
-                                <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 px-10 py-1 rounded-3xl">Start</button>
-                            </div>
-                            <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
-                                <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base px-4 py-1 rounded-3xl">Completed</button>
-                            </div>
-                        </div>
-                    </div>
+                    {{-- <button class="w-[56px] md:w-[75px] h-[56px] md:h-[75px] bg-[#2F2F2F] mx-auto text-white text-2xl font-bold rounded-lg">2</button> --}}
+                    <button class="w-[56px] md:w-[75px] h-[56px] md:h-[75px] bg-[#2F2F2F] mx-auto text-white text-2xl font-bold rounded-lg">3</button>
+                    <button class="w-[56px] md:w-[75px] h-[56px] md:h-[75px] bg-[#2F2F2F] mx-auto text-white text-2xl font-bold rounded-lg">4</button>
+                </div>
+                <button class="mx-auto text-white md:text-xl rounded-lg col-span-2 btn px-8 md:px-10 py-2 mt-8 md:mt-100 font-semibold">Submit</button>
+                <div class="flex flex-row gap-7 mx-auto mt-12 md:hidden">
+                    <button class="bg-[#2F2F2F] w-[35px] h-[35px] text-white items-center rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button class="bg-[#2F2F2F] w-[35px] h-[35px] text-white items-center rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </div>
 
 
+        </div>
+
+        <!-- start: pembahasan-->
+        <div class="divide-y-[1px] mt-[55px] divide-white">
+            <h1 class="text-white"></h1>
+            <h1 class="text-white pt-[29px] text-[20px] ">Jawaban :
+                <br><span class="text-[#B5B3BC] font-bold text-[24px]">A. Lorem Ipsum</span>
+                <br><span class="text-white text-[20px] ">Pembahasan :</span>
+                <br><span class="text-[#B5B3BC] text-[20px]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a,  mattis tellus. Sed
+                    dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas
+                    eget condimentum velit, sit amet feugiat lectus. Class aptent taciti  sociosqu ad litora torquent per conubia nostra
+                </span>
+            </h1>
+        </div>
+        <!-- end: pembahasan-->
     </div>
 </div>
+
