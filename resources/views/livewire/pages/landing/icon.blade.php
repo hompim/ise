@@ -2,7 +2,7 @@
 @section('desc',
     'Serangkaian acara yang dihadirkan sebagai bentuk kontribusi peningkatan kesadaran masyarakat akan teknologi dengan
     memamerkan dunia IT serta melakukan edukasi terkait isu-isu seputar IT terkini. Pada zona ini terdapat beberapa acara,
-    yaitu Academy, E-Hall of IS, dan Grand Talkshow.',)
+    yaitu Academy, E-Hall of IS, dan Grand Talkshow.')
 
     <link rel="stylesheet" href="{{ asset('css/new.css') }}">
     <script src="{{ asset('js/index.js') }}"></script>
@@ -180,7 +180,7 @@
                             class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-200px] mt-[140px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
                             E-Hall of IS</p>
                     </div>
-                    <a href="{{ route('coming-soon') }}"
+                    <a href="{{ route('e-hall') }}"
                         class="absolute lg:transition ml-[-176px] mt-[155px] lg:ml-[-480px] lg:mt-[420px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
                             src="{{ asset('images/hall-is.svg') }}" alt=""></a>
                 </div>
@@ -429,32 +429,41 @@
         <!--nutup bsl -->
 
         {{-- Start Event Partner --}}
-        <div class="pb-24 mt-32 md:mt-60 font-poppins">
+        <div class="container w-full max-w-full pb-24 mt-32 md:mt-60 font-poppins ">
             <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Our Event Partner
             </h1>
-            <div class="px-20 py-10 mx-auto w-80 md:w-fit h-max bg-liteBlack">
+            <div class="px-20 py-10 mx-auto w-80 xl:w-fit h-max bg-liteBlack">
                 <div class="flex flex-col items-center justify-center space-y-8 lg:space-y-16">
-                    <div class="flex flex-col items-center space-y-12 lg:flex-row md:space-y-0 md:space-x-12">
-                        <div class="w-full lg:w-[24rem]">
-                            <img src="{{ asset('images/academy-tokopedia.png') }}" alt="academy-tokopedia"
-                                class="md:w-full">
-                        </div>
-                        <div class="w-full lg:w-[24rem] transition duration-300 hover:scale-105">
-                            <a href="https://indigo.id/" target="_blank">
-                                <img src="{{ asset('images/indigospace-sub-logo-red.png') }}" alt="indigo-space-sby"
-                                    class="md:w-full">
+                    <div class="flex flex-col items-center space-y-12 xl:flex-row xl:space-y-0 xl:space-x-12">
+                        <div class="w-full xl:w-[24rem] transition duration-300 hover:scale-105">
+                            <a href="https://academy.tokopedia.com/" target="_blank">
+                                <img src="{{ asset('images/academy-tokopedia.png') }}" alt="academy-tokopedia"
+                                    class="lg:w-full">
                             </a>
                         </div>
-                        <div class="w-full lg:w-[24rem]">
-                            <img src="{{ asset('images/binar-academy.png') }}" alt="binar-academy" class="md:w-full">
+                        <div class="w-full xl:w-[24rem] transition duration-300 hover:scale-105">
+                            <a href="https://indigo.id/" target="_blank">
+                                <img src="{{ asset('images/indigospace-sub-logo-red.png') }}" alt="indigo-space-sby"
+                                    class="lg:w-full">
+                            </a>
+                        </div>
+                        <div class="w-full xl:w-[24rem] transition duration-300 hover:scale-105">
+                            <a href="https://www.binaracademy.com/" target="_blank">
+                                <img src="{{ asset('images/binar-academy.png') }}" alt="binar-academy"
+                                    class="xl:w-full">
+                            </a>
                         </div>
                     </div>
                     <div class="flex flex-col items-center space-y-12 lg:flex-row md:space-y-0 md:space-x-12">
-                        <div class="w-full lg:w-[12rem]">
-                            <img src="{{ asset('images/dsi.png') }}" alt="academy-tokopedia" class="md:w-full">
+                        <div class="w-full lg:w-[12rem] transition duration-300 hover:scale-105">
+                            <a href="https://datascience.or.id/" target="_blank">
+                                <img src="{{ asset('images/dsi.png') }}" alt="academy-tokopedia" class="xl:w-full">
+                            </a>
                         </div>
-                        <div class="w-full lg:w-[20rem]">
-                            <img src="{{ asset('images/logo-myskill.png') }}" alt="binar-academy" class="md:w-full">
+                        <div class="w-full xl:w-[20rem] transition duration-300 hover:scale-105">
+                            <a href="https://myskill.id/" target="_blank">
+                                <img src="{{ asset('images/logo-myskill.png') }}" alt="binar-academy" class="xl:w-full">
+                            </a>
                         </div>
                     </div>
                 </div>

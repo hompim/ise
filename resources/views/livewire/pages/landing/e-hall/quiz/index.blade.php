@@ -1,5 +1,5 @@
 {{-- Main --}}
-<div class="bg-black min-h-screen font-poppins">
+<div class="min-h-screen bg-black font-poppins">
     {{-- Hero --}}
     <div class="flex flex-row pt-24 md:pt-52 mx-[20px] md:mx-[130px]">
         {{-- Col 1 --}}
@@ -10,20 +10,20 @@
             <div class=" w-[80%] mx-auto block md:hidden">
                 <img src="{{ asset('images/trivia-logo.png') }}" alt="founder-digiflux">
             </div>
-            <p class="text-sm md:text-lg text-liteGray mt-4 px-6 md:px-0 leading-loose md:leading-normal">
-                ISE Trivia merupakan Lorem ipsum dolor sit amet, 
+            <p class="px-6 mt-4 text-sm leading-loose md:text-lg text-liteGray md:px-0 md:leading-normal">
+                ISE Trivia merupakan Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit. Etiam eu turpis molestie,
-                dictum est a, mattis tellus. Sed dignissim, metus nec 
+                dictum est a, mattis tellus. Sed dignissim, metus nec
                 fringilla accumsan,risus sem sollicitudin lacus, ut interdum
-                tellus elit sed risus  </p>
-            <div class="relative mt-16 mx-auto text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
-            <div class="absolute inset-0 ">
-                <a href="#explore"
-                    class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's
+                tellus elit sed risus </p>
+            <div class="relative mx-auto mt-16 text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
+                <div class="absolute inset-0 ">
+                    <a href="#explore"
+                        class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's
+                        Explore</a>
+                </div>
+                <a href="#explore" class="relative btn">Let's
                     Explore</a>
-            </div>
-            <a href="#explore" class="relative btn">Let's
-                Explore</a>
             </div>
         </div>
 
@@ -34,8 +34,9 @@
     </div>
 
     {{-- Point --}}
-    <div class="mt-24 md:mt-52 flex justify-center items-center">
-        <h1 class="bg-liteBlack px-4 py-2 rounded-3xl text-white text-lg">point anda: <span class="text-pink-300">40</span></h1>
+    <div class="flex items-center justify-center mt-24 md:mt-52 scroll-mt-36" id="explore">
+        <h1 class="px-4 py-2 text-lg text-white bg-liteBlack rounded-3xl">point anda: <span
+                class="text-pink-300">40</span></h1>
     </div>
 
     {{-- Tabs --}}
@@ -48,23 +49,26 @@
                     <div class="flex flex-row justify-between mx-auto">
                         <h1 class="w-[80%] text-base md:text-lg font-semibold">Rules</h1>
                         <div x-show="!open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
                         <div x-show="open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
                             </svg>
                         </div>
                     </div>
                     <div x-show="open" x-cloak class="pt-4" x-transition>
                         <ul class="w-[80%] md:w-[95%] text-liteGray text-sm md:text-lg list-disc ml-8">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum enim, velit, eu molestie ut dictumst urna.</li>
-                            <li>Felis id et fusce tristique. Ac auctor volutpat nec velit aliquam ac. Donec ipsum sed tortor aenean egestas maecenas eget.</li>
-                            <li>Turpis id pulvinar elementum commodo. Phasellus ac facilisis eu, eu congue adipiscing consequat tincidunt. Morbi et pellentesque urna etiam.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum enim, velit, eu molestie
+                                ut dictumst urna.</li>
+                            <li>Felis id et fusce tristique. Ac auctor volutpat nec velit aliquam ac. Donec ipsum sed
+                                tortor aenean egestas maecenas eget.</li>
+                            <li>Turpis id pulvinar elementum commodo. Phasellus ac facilisis eu, eu congue adipiscing
+                                consequat tincidunt. Morbi et pellentesque urna etiam.</li>
                         </ul>
                     </div>
                 </div>
@@ -78,14 +82,14 @@
                     <div class="flex flex-row justify-between mx-auto">
                         <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Startup</h1>
                         <div x-show="!open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
                         <div x-show="open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
                             </svg>
                         </div>
@@ -94,12 +98,13 @@
                         <div class="w-[95%] text-liteGray flex flex-col gap-5">
                             <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
                                 <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 px-10 py-1 rounded-3xl">Start</button>
-                            </div>        
+                                <button
+                                    class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl">Start</button>
+                            </div>
                             <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
                                 <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base px-4 py-1 rounded-3xl">Completed</button>
-                            </div>  
+                                <button class="px-4 py-1 ml-auto text-sm md:text-base rounded-3xl">Completed</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,8 +118,8 @@
                     <div class="flex flex-row justify-between mx-auto">
                         <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Prestasi</h1>
                         <div x-show="!open">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
@@ -129,12 +134,13 @@
                         <div class="w-[95%] text-liteGray flex flex-col gap-5">
                             <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
                                 <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 px-10 py-1 rounded-3xl">Start</button>
-                            </div>        
+                                <button
+                                    class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl">Start</button>
+                            </div>
                             <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
                                 <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base px-4 py-1 rounded-3xl">Completed</button>
-                            </div>  
+                                <button class="px-4 py-1 ml-auto text-sm md:text-base rounded-3xl">Completed</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -164,12 +170,13 @@
                         <div class="w-[95%] text-liteGray flex flex-col gap-5">
                             <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
                                 <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 px-10 py-1 rounded-3xl">Start</button>
-                            </div>        
+                                <button
+                                    class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl">Start</button>
+                            </div>
                             <div class="bg-[#1E1F24] flex flex-row py-2 rounded-[20px] px-4 items-center">
                                 <h1 class="mr-auto text-base md:text-lg">Quiz Reblood</h1>
-                                <button class="ml-auto text-sm md:text-base px-4 py-1 rounded-3xl">Completed</button>
-                            </div>  
+                                <button class="px-4 py-1 ml-auto text-sm md:text-base rounded-3xl">Completed</button>
+                            </div>
                         </div>
                     </div>
                 </div>

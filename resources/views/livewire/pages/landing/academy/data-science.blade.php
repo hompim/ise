@@ -536,16 +536,20 @@
         <div class="mt-32 mb-24 md:mt-60 font-poppins">
             <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Our Event Partner
             </h1>
-            <div class="px-20 py-10 mx-auto w-80 md:w-fit h-max bg-liteBlack">
+            <div class="px-20 py-10 mx-auto w-80 xl:w-fit h-max bg-liteBlack">
                 <div
-                    class="flex flex-col items-center justify-center space-y-12 lg:space-y-0 lg:space-x-12 lg:flex-row">
-                    <div class="flex flex-col gap-12 md:flex-row w-[20rem]">
-                        <img src="{{ asset('images/logo-myskill.png') }}" alt="logo-myskill"
-                            class="w-auto md:w-full">
+                    class="flex flex-col items-center justify-center space-y-12 xl:space-y-0 xl:space-x-12 xl:flex-row">
+                    <div class="flex flex-col gap-12 xl:flex-row w-[20rem] transition duration-300 hover:scale-105">
+                        <a href="https://myskill.id/" target="_blank">
+                            <img src="{{ asset('images/logo-myskill.png') }}" alt="binar-academy"
+                                class="w-auto xl:w-full">
+                        </a>
                     </div>
-                    <div class="flex flex-col gap-12 md:flex-row w-[20rem]">
-                        <img src="{{ asset('images/dsi.png') }}" alt="logo-data-science-indonesia"
-                            class="w-auto md:w-full">
+                    <div class="flex flex-col gap-12 xl:flex-row w-[20rem] transition duration-300 hover:scale-105">
+                        <a href="https://datascience.or.id/" target="_blank">
+                            <img src="{{ asset('images/dsi.png') }}" alt="academy-tokopedia"
+                                class="w-auto xl:w-full">
+                        </a>
                     </div>
                 </div>
             </div>
