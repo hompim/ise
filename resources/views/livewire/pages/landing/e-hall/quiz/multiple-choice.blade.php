@@ -1,8 +1,8 @@
 <!-- pembahasan quiz -->
 <div class="pt-6 md:pt-52 flex flex-col bg-black">
     {{-- Start Quiz Block --}}
-    <div class=" mb-[145px] bg-liteBlack mx-6 md:mx-28 rounded-2xl flex flex-col p-11 h-max">
-        <h1 class="text-white text-lg md:text-2xl mx-auto">Quiz (nama startup)</h1>
+    <div class="mt-32 md:mt-0 mb-[145px] bg-liteBlack mx-6 md:mx-28 h-max rounded-2xl flex flex-col p-[24px] md:p-11">
+        <h1 class="text-white text-lg  md:text-2xl mx-auto">Quiz (nama startup)</h1>
         <div class="flex flex-col md:flex-row mt-4 gap-14">
             {{-- Left Part --}}
             <div class="flex flex-col">
@@ -16,17 +16,17 @@
                     est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.
                 </p>
                 <!-- start: make cards row 1 -->
-                <div class="flex flex-row mt-[46px] mx-auto gap-4 md:gap-[74px] pl-0">
-                    <div class="w-[315px] h-[63px] bg-gradient-to-b from-[#B221E5] to-[#5B1BE1] rounded-lg ">
+                <div class="flex flex-col md:flex-row mt-[24px] md:mt-[46px] mx-auto gap-[24px] md:gap-[74px] pl-0">
+                    <div class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] bg-gradient-to-b from-[#B221E5] to-[#5B1BE1] rounded-lg ">
                         <!-- A.  Lorem ipsum -->
-                        <div class="text-white text-[20px] pl-[16px] pt-[13px]">
+                        <div class="text-white text-[14px] md:text-[20px] pl-[16px] pt-[13px]">
                             A.  Lorem ipsum
                         </div>
                         <!-- A.  Lorem ipsum -->
                     </div>
-                    <div class="w-[315px] h-[63px] bg-[#2F2F2F] rounded-lg ">
+                    <div class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] bg-[#2F2F2F] rounded-lg ">
                         <!-- B.  Lorem ipsum -->
-                        <div class="text-white text-[20px] pl-[16px] pt-[13px]">
+                        <div class="text-white text-[14px] md:text-[20px] pl-[16px] pt-[13px]">
                             B.  Lorem ipsum
                         </div>
                         <!-- B.  Lorem ipsum -->
@@ -35,18 +35,18 @@
                 <!-- end: make cards row 1 -->
 
                 <!-- start: make cards row 2 -->
-                <div class="flex flex-row mt-[46px] mx-auto gap-4 md:gap-[74px] pl-0">
-                    <div class="w-[315px] h-[63px] bg-[#2F2F2F] rounded-lg ">
+                <div class="flex flex-col md:flex-row mt-[24px] md:mt-[46px] mx-auto gap-[24px] md:gap-[74px] pl-0">
+                    <div class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] bg-[#2F2F2F] rounded-lg ">
                         <!-- B.  Lorem ipsum -->
-                        <div class="text-white text-[20px] pl-[16px] pt-[13px]">
-                            B.  Lorem ipsum
+                        <div class="text-white text-[14px] md:text-[20px] pl-[16px] pt-[13px]">
+                            C.  Lorem ipsum
                         </div>
                         <!-- B.  Lorem ipsum -->
                     </div>
-                    <div class="w-[315px] h-[63px] bg-[#2F2F2F] rounded-lg ">
+                    <div class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] bg-[#2F2F2F] rounded-lg ">
                         <!-- B.  Lorem ipsum -->
-                        <div class="text-white text-[20px] pl-[16px] pt-[13px]">
-                            B.  Lorem ipsum
+                        <div class="text-white text-[14px] md:text-[20px] pl-[16px] pt-[13px]">
+                            D.  Lorem ipsum
                         </div>
                         <!-- B.  Lorem ipsum -->
                     </div>
@@ -66,12 +66,12 @@
                 </div>
             </div>
             {{-- Right Part --}}
-            <div class="flex flex-col ml-auto">
-                <div class="grid grid-cols-2 gap-4 md:px-0 px-12">
+            <div class="flex flex-col mx-auto">
+                <div class="grid grid-cols-2 gap-4 px-12 md:px-0  ">
                     <button class="w-[56px] md:w-[75px] h-[56px] md:h-[75px] bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] mx-auto text-white text-2xl font-bold rounded-lg">1</button>
                     <div class="relative group">
                         <div
-                            class="absolute w-[56px] md:w-[75px] h-[56px] md:h-[75px] blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] animate-tilt">
+                            class="absolute items-center mx-auto w-[56px] md:w-[75px] h-[56px] md:h-[75px] blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] animate-tilt">
                         </div>
                         <button class ="relative w-[56px] md:w-[75px] h-[56px] md:h-[75px] bg-[#2F2F2F] text-white text-2xl font-bold rounded-lg">2</button>
                     </div>
@@ -100,10 +100,10 @@
         <!-- start: pembahasan-->
         <div class="divide-y-[1px] mt-[55px] divide-white">
             <h1 class="text-white"></h1>
-            <h1 class="text-white pt-[29px] text-[20px] ">Jawaban :
-                <br><span class="text-[#B5B3BC] font-bold text-[24px]">A. Lorem Ipsum</span>
-                <br><span class="text-white text-[20px] ">Pembahasan :</span>
-                <br><span class="text-[#B5B3BC] text-[20px]">
+            <h1 class="text-white pt-[29px] text-[14px] md:text-[20px] ">Jawaban :
+                <br><span class="text-[#B5B3BC] font-bold text-[18px] md:text-[24px]">A. Lorem Ipsum</span>
+                <br><span class="text-white text-[14px] md:text-[20px] ">Pembahasan :</span>
+                <br><span class="text-[#B5B3BC] text-[14px] md:text-[20px]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a,  mattis tellus. Sed
                     dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas
                     eget condimentum velit, sit amet feugiat lectus. Class aptent taciti  sociosqu ad litora torquent per conubia nostra
