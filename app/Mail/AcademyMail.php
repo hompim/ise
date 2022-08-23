@@ -28,6 +28,6 @@ class AcademyMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.academy-mail')->subject("Academy Mail");
+        return $this->view('mails.academy-mail')->subject("ISE! Academy Registration is Now Open!");
     }
 }

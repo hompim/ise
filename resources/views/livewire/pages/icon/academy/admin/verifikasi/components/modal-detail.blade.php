@@ -68,7 +68,7 @@
                         <p class="text-blue-500 truncate"><a href="{{ ${'member'.$x.'_twibbon'} }}"
                                                              target="_blank">{{ ${'member'.$x.'_twibbon'} }}</a></p>
                     </div>
-                    @if($type == 'Data Science')
+                    @if($type != 'Data Science')
                     <div>
                         <p class="font-bold mb-0 mt-2">CV</p>
                         <p class="text-blue-500 truncate"><a href="{{asset('/storage/'.${'cv'.$x})}}"

@@ -28,6 +28,10 @@ use App\Http\Livewire\Pages\Landing\EHall\Quiz\MultipleChoice;
 use App\Http\Livewire\Pages\Landing\EHall\Quiz\TrueOrFalse;
 use App\Http\Livewire\Pages\Landing\EHall\Startup\Content;
 use App\Http\Livewire\Pages\Landing\EHall\Startup\Index;
+use App\Mail\AcademyMail;
+use App\Models\User;
+use Illuminate\Contracts\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,14 +109,16 @@ Route::get('/coming-soon', function () {
 //     ]);
 // }); -->
 
-// Route::get('/sendCertif', function() {
-//     $rows = SimpleExcelReader::create(public_path().'/'.'csv/peserta.csv')->getRows();
+Route::get('/send', function() {
+    $users = User::whereHas('userable', function(EloquentBuilder $q){
+        $q->where("jenjang", "Mahasiswa");
+    });
 
-//     $rows->each(function(array $rowProperties) {
-//         Mail::to($rowProperties['Email'])->send(new SertifikatMail($rowProperties['Nama Lengkap'], $rowProperties['Merged Doc URL - Sertifikat Webinar KickOff ISE 2022']));
-//         sleep(3);
-//      });
-// });
+    foreach ($users as $user) {
+        Mail::to($user->email)->send(new AcademyMail());
+        sleep(1);
+    }
+});
 
 // Route::get('/Registerbcl', RegisterCollege::class);
 // Route::get('/Registerst', RegisterStudent::class);

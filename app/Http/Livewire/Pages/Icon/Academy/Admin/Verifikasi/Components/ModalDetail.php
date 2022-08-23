@@ -67,7 +67,7 @@ class ModalDetail extends ModalComponent
         $this->photo3 = ($this->icon_data->member_2 ? $this->icon_data->member_2->identity_card_path : null);
         $this->institute_name = $this->icon_data->university_name;
 
-        if ($type == 'Data Science') {
+        if ($type != 'Startup') {
             $this->cv1 = $this->icon_data->leader->cv_path;
             $this->cv2 = $this->icon_data->member_1->cv_path;
             $this->cv3 = $this->icon_data->member_2->cv_path;
