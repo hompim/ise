@@ -97,13 +97,13 @@ class RegisterStartup extends Component
             if($x < 3 || $member3)
             {
                 $arr_validation = array_merge($arr_validation, [
-                    'member_'.$x.'_name' => $required . 'string',
-                    'member_'.$x.'_universitas' => $required . 'string',
-                    'ktm_'.$x => $required . 'image|max:2048',
-                    'member_'.$x.'_whatsapp' => $required . 'regex:/^(^\+628)\d{8,11}$/|max:14|string',
-                    'member_'.$x.'_email' => $required . 'email',
-                    'member_'.$x.'_ig' => $required . 'string',
-                    'member_'.$x.'_twibbon' => $required . 'string',
+                    'member_'.$x.'_name' => 'required',
+                    'member_'.$x.'_universitas' => 'required',
+                    'ktm_'.$x => 'required|image|max:2048',
+                    'member_'.$x.'_whatsapp' => 'required|regex:/^(^\+628)\d{8,11}$/|max:14|string',
+                    'member_'.$x.'_email' => 'required|email',
+                    'member_'.$x.'_ig' => 'required',
+                    'member_'.$x.'_twibbon' => 'required',
                 ]);
 
                 if(!empty($this->{'member_'.$x.'_linkedin'}))

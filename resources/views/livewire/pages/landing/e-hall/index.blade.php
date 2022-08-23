@@ -11,11 +11,14 @@
             <div class=" w-[80%] mx-auto block md:hidden">
                 <img src="{{ asset('images/index-ehoi.svg') }}" alt="">
             </div>
-            <p class="text-sm md:text-lg text-liteGray mt-4 md:pr-48 md:mx-0 mx-12 md:leading-normal text-center md:text-left">
-                Pameran e–Hall of IS diselenggarakan secara digital, menggunakan platform website ISE 2022, dan disajikan dalam bentuk video profil, artikel, dan permainan berupa quiz dan challenge </p>
-            <div class="relative mt-16 mx-auto text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
+            <p
+                class="mx-12 mt-4 text-sm text-center md:text-lg text-liteGray md:pr-48 md:mx-0 md:leading-normal md:text-left">
+                Pameran e–Hall of IS diselenggarakan secara digital, menggunakan platform website ISE 2022, dan
+                disajikan dalam bentuk video profil, artikel, dan permainan berupa quiz dan challenge </p>
+            <div class="relative mx-auto mt-16 text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
                 <div class="absolute inset-0 ">
-                    <a href="#explore" class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's
+                    <a href="#explore"
+                        class="relative transition duration-1000 opacity-75 btn blur-lg group-hover:duration-300 group-hover:opacity-100 font-poppins ">Let's
                         Explore</a>
                 </div>
                 <a href="#explore" class="relative btn">Let's
@@ -28,137 +31,180 @@
             <img src="{{ asset('images/index-ehoi.svg') }}" alt="">
         </div>
     </div>
-    <div class="md:text-5xl text-3xl mt-12  text-white flex flex-col justify-center">
+    <div class="flex flex-col justify-center mt-24 text-3xl text-white md:text-5xl">
         <span class="mx-auto font-bold">Let's See The Inside</span>
 
     </div>
-    <div class="flex  text-white justify-center mt-[28px] mb-[71px] lg:mt-[146px]">
-        <img class="relative mt-10 justify-center w-[312px] h-[247px] lg:w-[826px] lg:h-[818px] " src="{{ asset('images/ehoi-buildings.svg') }}" alt="">
+    <div class="flex  text-white justify-center mt-[28px] mb-[71px] lg:mt-12" id="explore">
+        <img class="relative mt-10 justify-center w-[312px] h-[247px] lg:w-[826px] lg:h-[818px] "
+            src="{{ asset('images/ehoi-buildings.svg') }}" alt="">
         <!--Icon kecil city-->
         <div>
             <div class="group">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
-                    <a href="" class=" absolute border-l-4 border-[#E11BAA] font-poppins pl-[3px] lg:pl-[12px] text-[10px] font-semibold lg:text-[20px] ml-[-144px] mt-[24px] lg:mt-[70px] lg:ml-[-380px]">
-                    ISE Trivia</a>
+                    <a href="{{ route('quiz-ehall') }}"
+                        class=" absolute border-l-4 border-[#E11BAA] font-poppins pl-[3px] lg:pl-[12px] text-[10px] font-semibold lg:text-[20px] ml-[-144px] mt-[24px] lg:mt-[70px] lg:ml-[-380px]">
+                        ISE Trivia</a>
                 </div>
-                <a href="" class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 absolute mt-[45px] lg:mt-[120px] ml-[-136px] lg:ml-[-362px]"><img src="{{ asset('images/icon-brain.png') }}" alt=""></a>
+                <a href="{{ route('quiz-ehall') }}"
+                    class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 absolute mt-[45px] lg:mt-[120px] ml-[-136px] lg:ml-[-362px]"><img
+                        src="{{ asset('images/icon-brain.png') }}" alt=""></a>
             </div>
-            <!-- Games! -->
+            <!-- Challenge! -->
             <div class="group ml-[-120px] lg:ml-[-168px]">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
-                    <a href="" class=" absolute border-l-4 border-[#E11BAA] font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[39px] mt-[116px] lg:ml-[-20px] lg:mt-80 font-semibold lg:text-[20px] -translate-x-4 lg:-translate-x-12">
-                        Games</a>
+                    <a href="{{ route('challenge-quiz-ehall') }}"
+                        class=" absolute border-l-4 border-[#E11BAA] font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[39px] mt-[116px] lg:ml-[-20px] lg:mt-80 font-semibold lg:text-[20px] -translate-x-4 lg:-translate-x-12">
+                        Challenge</a>
                 </div>
-                <a href="" class="absolute lg:transition mt-[134px] ml-[39px] lg:ml-[-48px] lg:mt-[360px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img src="{{ asset('images/icon-joystick.png') }}" alt=""></a>
+                <a href="{{ route('challenge-quiz-ehall') }}"
+                    class="absolute lg:transition mt-[134px] ml-[39px] lg:ml-[-48px] lg:mt-[360px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
+                        src="{{ asset('images/icon-joystick.png') }}" alt=""></a>
             </div>
             <!-- 3 -->
             <div class="group ">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
-                    <p class=" absolute border-l-4 border-[#E11BAA] font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-208px] mt-[108px] lg:ml-[-540px] lg:mt-[300px] font-semibold lg:text-[20px] ">
+                    <p
+                        class=" absolute border-l-4 border-[#E11BAA] font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-208px] mt-[108px] lg:ml-[-540px] lg:mt-[300px] font-semibold lg:text-[20px] ">
                         Prestasi</p>
                 </div>
-                <button class="absolute lg:transition ml-[-201px] mt-[124px] lg:ml-[-530px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img src="{{ asset('images/icon-trophy.png') }}" alt=""></button>
+                <a href="{{ route('home-prestasi-ehall') }}"
+                    class="absolute lg:transition ml-[-201px] mt-[124px] lg:ml-[-530px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
+                        src="{{ asset('images/icon-trophy.png') }}" alt=""></a>
             </div>
             <!-- 4 -->
             <div class="group ">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
-                    <p class=" absolute border-l-4 border-[#E11BAA]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-160px] mt-[124px] lg:ml-[-400px] lg:mt-[358px] font-semibold lg:text-[20px] ">
+                    <p
+                        class=" absolute border-l-4 border-[#E11BAA]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-160px] mt-[124px] lg:ml-[-400px] lg:mt-[358px] font-semibold lg:text-[20px] ">
                         Startup</p>
                 </div>
-                <a href="" class="absolute lg:transition ml-[-144px] mt-[144px] lg:ml-[-380px] lg:mt-[400px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img src="{{ asset('images/icon-startup.png') }}" alt=""></a>
+                <a href="{{ route('home-startup-ehall') }}"
+                    class="absolute lg:transition ml-[-144px] mt-[144px] lg:ml-[-380px] lg:mt-[400px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
+                        src="{{ asset('images/icon-startup.png') }}" alt=""></a>
             </div>
         </div>
     </div>
-    <div class="text-5xl text-white flex md:mb-20 flex-col justify-center">
-        <span class="mx-auto  font-bold">About E-Hall of IS</span>
+    <div class="flex flex-col justify-center text-5xl text-white md:mb-20">
+        <span class="mx-auto font-bold">About E-Hall of IS</span>
         <div id="default-carousel" class="relative " data-carousel="static">
             <!-- Carousel wrapper p1 -->
             <div class="relative h-[500px] overflow-hidden md:w-3/4 md:mt-24 mx-auto rounded-md">
                 <!-- Item 1 -->
-                <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="">
-                    <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="absolute inset-0 z-20 transition-all duration-700 ease-in-out transform translate-x-0"
+                    data-carousel-item="">
+                    <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 2 -->
-                <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
-                    <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="absolute inset-0 z-10 transition-all duration-700 ease-in-out transform translate-x-full"
+                    data-carousel-item="">
+                    <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 3 -->
-                <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-                    <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="absolute inset-0 z-10 transition-all duration-700 ease-in-out transform -translate-x-full"
+                    data-carousel-item="">
+                    <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
             </div>
             <!-- Slider indicators -->
             <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-                <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800" aria-current="true"
+                    aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                    aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button"
+                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                    aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
             </div>
             <!-- Slider controls -->
-            <button type="button" class="absolute md:top-12 bottom-2 left-0 z-30 flex items-center justify-center h-full md:px-24 cursor-pointer group focus:outline-none" data-carousel-prev="">
-                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-liteBlack dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            <button type="button"
+                class="absolute left-0 z-30 flex items-center justify-center h-full cursor-pointer md:top-12 bottom-2 md:px-24 group focus:outline-none"
+                data-carousel-prev="">
+                <span
+                    class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-liteBlack dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
                     </svg>
                     <span class="sr-only">Previous</span>
                 </span>
             </button>
-            <button type="button" class="absolute md:top-12 bottom-2 right-0 z-30 flex items-center justify-center h-full md:px-24 cursor-pointer group focus:outline-none" data-carousel-next="">
-                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-liteBlack dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            <button type="button"
+                class="absolute right-0 z-30 flex items-center justify-center h-full cursor-pointer md:top-12 bottom-2 md:px-24 group focus:outline-none"
+                data-carousel-next="">
+                <span
+                    class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-liteBlack dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                        </path>
                     </svg>
                     <span class="sr-only">Next</span>
                 </span>
             </button>
         </div>
-        <div class="text-liteGray md:mt-24 text-center md:mx-16 mx-4 text-lg">
-            E-Hall of IS merupakan zona berisikan pameran virtual karya-karya autentik mahasiswa dan alumni Sistem Informasi Institut Teknologi Sepuluh Nopember (ITS) dengan reputasi gemilang, baik ranah nasional maupun internasional. Zona ini memiliki dua tujuan utama. Pertama, memperkenalkan karya Sistem Informasi ITS ke khalayak umum. Kedua, mengedukasi dan menyebarkan awareness seputar teknologi.
+        <div class="mx-4 text-lg text-center text-liteGray md:mt-24 md:mx-16">
+            E-Hall of IS merupakan zona berisikan pameran virtual karya-karya autentik mahasiswa dan alumni Sistem
+            Informasi Institut Teknologi Sepuluh Nopember (ITS) dengan reputasi gemilang, baik ranah nasional maupun
+            internasional. Zona ini memiliki dua tujuan utama. Pertama, memperkenalkan karya Sistem Informasi ITS ke
+            khalayak umum. Kedua, mengedukasi dan menyebarkan awareness seputar teknologi.
         </div>
     </div>
-    <div class="md:text-5xl text-xl md:pb-24 pb-12 md:w-full mx-auto text-white flex md:mt-24 flex-col justify-center">
+    <div class="flex flex-col justify-center pb-12 mx-auto text-xl text-white md:text-5xl md:pb-24 md:w-full md:mt-24">
         <span class="mx-auto font-bold">Leaderboard ISE Trivia</span>
         <div class="flex flex-row mx-auto mt-4">
-            <div class="flex flex-col w-24 md:w-full relative justify-between text-center font">
-                <div class="flex justify-center md:w-36 h-full rounded-full pt-8 md:pt-80 mx-auto">
-                    <img class="md:w-[120px] w-[40px] md:h-[120px] h-[40px] rounded-full" src="https://htmlcolorcodes.com/assets/images/colors/grass-green-color-solid-background-1920x1080.png" alt="">
+            <div class="relative flex flex-col justify-between w-24 text-center md:w-full font">
+                <div class="flex justify-center h-full pt-8 mx-auto rounded-full md:w-36 md:pt-80">
+                    <img class="md:w-[120px] w-[40px] md:h-[120px] h-[40px] rounded-full"
+                        src="https://htmlcolorcodes.com/assets/images/colors/grass-green-color-solid-background-1920x1080.png"
+                        alt="">
                 </div>
-                <div class="md:mb-8 mb-4 font-bold">
+                <div class="mb-4 font-bold md:mb-8">
                     Player 2
                 </div>
                 <div>
-                <img class="w-full" src="{{ asset('images/2nd-ehoi.svg') }}" alt="">
+                    <img class="w-full" src="{{ asset('images/2nd-ehoi.svg') }}" alt="">
                 </div>
-                <div class="absolute md:bottom-16 bottom-4 text-base md:text-3xl left-1/2 -translate-x-1/2">
+                <div class="absolute text-base -translate-x-1/2 md:bottom-16 bottom-4 md:text-3xl left-1/2">
                     <p> <span class="font-bold">3003</span> <br> Points</p>
                 </div>
             </div>
-            <div class="flex flex-col w-24 md:w-full relative justify-between text-center">
-                <div class="flex justify-center md:w-36 h-full rounded-full md:pt-48 mx-auto">
-                    <img class="md:w-[120px] w-[40px] md:h-[120px] h-[40px] rounded-full" src="https://htmlcolorcodes.com/assets/images/colors/grass-green-color-solid-background-1920x1080.png" alt="">
+            <div class="relative flex flex-col justify-between w-24 text-center md:w-full">
+                <div class="flex justify-center h-full mx-auto rounded-full md:w-36 md:pt-48">
+                    <img class="md:w-[120px] w-[40px] md:h-[120px] h-[40px] rounded-full"
+                        src="https://htmlcolorcodes.com/assets/images/colors/grass-green-color-solid-background-1920x1080.png"
+                        alt="">
                 </div>
-                <div class="md:mb-10 mb-2">
+                <div class="mb-2 md:mb-10">
                     <div class="font-bold ">
                         Player 1
                     </div>
                 </div>
                 <div>
-                <img src="{{ asset('images/1st-ehoi.svg') }}" alt="">
+                    <img src="{{ asset('images/1st-ehoi.svg') }}" alt="">
                 </div>
-                <div class="absolute md:bottom-16 bottom-4 text-base md:text-3xl left-1/2 -translate-x-1/2">
+                <div class="absolute text-base -translate-x-1/2 md:bottom-16 bottom-4 md:text-3xl left-1/2">
                     <p> <span class="font-bold">1361</span> <br> Points</p>
                 </div>
             </div>
-            <div class="flex flex-col w-24 md:w-full justify-between relative text-center">
-                <div class="flex justify-center md:w-36 h-full rounded-full pt-16 md:pt-96 mx-auto">
-                    <img class="md:w-[120px] w-[40px] md:h-[120px] h-[40px] rounded-full" src="https://htmlcolorcodes.com/assets/images/colors/grass-green-color-solid-background-1920x1080.png" alt="">
+            <div class="relative flex flex-col justify-between w-24 text-center md:w-full">
+                <div class="flex justify-center h-full pt-16 mx-auto rounded-full md:w-36 md:pt-96">
+                    <img class="md:w-[120px] w-[40px] md:h-[120px] h-[40px] rounded-full"
+                        src="https://htmlcolorcodes.com/assets/images/colors/grass-green-color-solid-background-1920x1080.png"
+                        alt="">
                 </div>
-                <div class="md:mb-8 mb-0 md:ml-0 ml-1 font-bold">
+                <div class="mb-0 ml-1 font-bold md:mb-8 md:ml-0">
                     Player 3
                 </div>
                 <div>
-                <img class="mt-3" src="{{ asset('images/3rd-ehoi.svg') }}" alt="">
+                    <img class="mt-3" src="{{ asset('images/3rd-ehoi.svg') }}" alt="">
                 </div>
-                <div class="absolute md:bottom-16 bottom-4 text-base md:text-3xl left-1/2 -translate-x-1/2">
+                <div class="absolute text-base -translate-x-1/2 md:bottom-16 bottom-4 md:text-3xl left-1/2">
                     <p> <span class="font-bold">2002</span> <br> Points</p>
                 </div>
             </div>

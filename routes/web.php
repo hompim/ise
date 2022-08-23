@@ -22,6 +22,7 @@ use App\Http\Livewire\Pages\Landing\EHall\Game\Index as GameIndex;
 use App\Http\Livewire\Pages\Landing\EHall\Index as EHallIndex;
 use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Content as PrestasiContent;
 use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Index as PrestasiIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\Challenge;
 use App\Http\Livewire\Pages\Landing\EHall\Quiz\ChoosePicture;
 use App\Http\Livewire\Pages\Landing\EHall\Quiz\Index as QuizIndex;
 use App\Http\Livewire\Pages\Landing\EHall\Quiz\MultipleChoice;
@@ -85,6 +86,8 @@ Route::group(['prefix' => 'icon'], function () {
             Route::get('multiple-choice', MultipleChoice::class)->name('choice-quiz-ehall');
             // icon/e-hall/quiz/true-or-false
             Route::get('true-or-false', TrueOrFalse::class)->name('true-false-quiz-ehall');
+            // icon/e-hall/quiz/challenge
+            Route::get('challenge', Challenge::class)->name('challenge-quiz-ehall');
         });
         // icon/e-hall/game
         Route::get('game', GameIndex::class)->name('game-ehall');
@@ -109,8 +112,8 @@ Route::get('/coming-soon', function () {
 //     ]);
 // }); -->
 
-Route::get('/send', function() {
-    $users = User::whereHas('userable', function(EloquentBuilder $q){
+Route::get('/send', function () {
+    $users = User::whereHas('userable', function (EloquentBuilder $q) {
         $q->where("jenjang", "Mahasiswa");
     });
 
