@@ -85,6 +85,8 @@ Route::group(['prefix' => 'icon'], function () {
             Route::get('multiple-choice', MultipleChoice::class)->name('choice-quiz-ehall');
             // icon/e-hall/quiz/true-or-false
             Route::get('true-or-false', TrueOrFalse::class)->name('true-false-quiz-ehall');
+            // icon/e-hall/quiz/challenge
+            Route::get('challenge', TrueOrFalse::class)->name('challenge-quiz-ehall');
         });
         // icon/e-hall/game
         Route::get('game', GameIndex::class)->name('game-ehall');
@@ -109,8 +111,8 @@ Route::get('/coming-soon', function () {
 //     ]);
 // }); -->
 
-Route::get('/send', function() {
-    $users = User::whereHas('userable', function(EloquentBuilder $q){
+Route::get('/send', function () {
+    $users = User::whereHas('userable', function (EloquentBuilder $q) {
         $q->where("jenjang", "Mahasiswa");
     });
 
