@@ -41,7 +41,7 @@ class RegisterDataScience extends Component
             $this->step = $toStep;
             $this->errorMessage = '';
         } elseif ($toStep == 2) {
-            if ($this->isIdentityDone ) {
+            if ($this->isIdentityDone) {
                 $this->step = $toStep;
                 $this->errorMessage = '';
             } else {
@@ -70,31 +70,25 @@ class RegisterDataScience extends Component
         $member3 = !empty($this->member_3_name) || !empty($this->member_3_email) || !empty($this->member_3_whatsapp) || !empty($this->ktm_3) || !empty($this->member_3_ig) || !empty($this->member_3_twibbon);
 
         $arr_validation = [];
-        for($x = 1; $x <= 3; $x++)
-        {
+        for ($x = 1; $x <= 3; $x++) {
             // Member 1 and 2 required, 3 optional
-            $required = ($x < 3) ? 'required|' : (($member3) ? 'required|' : '');
 
-            if($x < 3 || $member3)
-            {
-                $arr_validation = array_merge($arr_validation, [
-                    'member_'.$x.'_name' => $required . 'string',
-                    'member_'.$x.'_email' => $required . 'email',
-                    'member_'.$x.'_whatsapp' => $required . 'regex:/^(^08)\d{8,11}$/|max:14|string',
-                    'ktm_'.$x => $required . 'image|max:2048', // 2MB Max
-                    'member_'.$x.'_ig' => $required . 'string',
-                    'member_'.$x.'_twibbon' => $required . 'string',
-                    'cv_'.$x => $required . 'mimes:pdf|max:2048', // 3MB Max, allowed file ext: PNG, JPG, PDF
-                ]);
-            }
+            $arr_validation = array_merge($arr_validation, [
+                'member_' . $x . '_name' => 'required',
+                'member_' . $x . '_email' => 'required|email',
+                'member_' . $x . '_whatsapp' => 'required',
+                'ktm_' . $x => 'required|image|max:2048', // 2MB Max
+                'member_' . $x . '_ig' => 'required',
+                'member_' . $x . '_twibbon' => 'required',
+                'cv_' . $x => 'required|mimes:pdf|max:2048', // 3MB Max, allowed file ext: PNG, JPG, PDF
+            ]);
         }
 
         $this->validate($arr_validation);
 
         // Menghitung jumlah member yang daftar
         $this->members = 2;
-        if($member3)
-        {
+        if ($member3) {
             $this->members = 3;
         }
 
@@ -126,38 +120,38 @@ class RegisterDataScience extends Component
         $team_member_1 = null;
         $team_member_2 = null;
         $team_member_3 = null;
-        for($x = 1; $x <= $this->members; $x++)
-        {
-            ${'team_member_'.$x} = IconAcademyDataScienceMember::create([
-                'name' => $this->{'member_'.$x.'_name'},
-                'email' => $this->{'member_'.$x.'_email'},
-                'whatsapp' => $this->{'member_'.$x.'_whatsapp'},
-                'link_instagram' => $this->{'member_'.$x.'_ig'},
-                'link_twibbon' => $this->{'member_'.$x.'_twibbon'},
+        for ($x = 1; $x <= $this->members; $x++) {
+            ${'team_member_' . $x} = IconAcademyDataScienceMember::create([
+                'name' => $this->{'member_' . $x . '_name'},
+                'email' => $this->{'member_' . $x . '_email'},
+                'whatsapp' => $this->{'member_' . $x . '_whatsapp'},
+                'link_instagram' => $this->{'member_' . $x . '_ig'},
+                'link_twibbon' => $this->{'member_' . $x . '_twibbon'},
             ]);
 
-            if(!is_string($this->{'ktm_'.$x}) && !is_string($this->{'cv_'.$x}))
-            {
-                $ktm = date('YmdHis') . '_ICON DSAcademy_' . $this->team_name . '_' . $x . '_KTM' . '.' . $this->{'ktm_'.$x}->getClientOriginalExtension();
-                $cv = date('YmdHis') . '_ICON DSAcademy_' . $this->team_name . '_' . $x . '_CV' . '.' . $this->{'cv_'.$x}->getClientOriginalExtension();
+            if (!is_string($this->{'ktm_' . $x}) && !is_string($this->{'cv_' . $x})) {
+                $ktm = date('YmdHis') . '_ICON DSAcademy_' . $this->team_name . '_' . $x . '_KTM' . '.' . $this->{'ktm_' . $x}->getClientOriginalExtension();
+                $cv = date('YmdHis') . '_ICON DSAcademy_' . $this->team_name . '_' . $x . '_CV' . '.' . $this->{'cv_' . $x}->getClientOriginalExtension();
 
 
                 $resized_image_ktm = (new ImageManager())
-                    ->make($this->{'ktm_'.$x})
+                    ->make($this->{'ktm_' . $x})
                     ->resize(600, null, function ($constraint) {
                         $constraint->aspectRatio();
                         $constraint->upsize();
-                    })->encode($this->{'ktm_'.$x}->getClientOriginalExtension());
+                    })->encode($this->{'ktm_' . $x}->getClientOriginalExtension());
 
                 Storage::disk('public')
-                    ->put('icon/' . $ktm,
-                        $resized_image_ktm->__toString());
+                    ->put(
+                        'icon/' . $ktm,
+                        $resized_image_ktm->__toString()
+                    );
 
-                $this->{'cv_'.$x}->storeAs("public/icon", $cv);
+                $this->{'cv_' . $x}->storeAs("public/icon", $cv);
 
-                ${'team_member_'.$x}->update([
+                ${'team_member_' . $x}->update([
                     'identity_card_path' => 'icon/' . $ktm,
-                    'cv_path' => 'icon/'. $cv
+                    'cv_path' => 'icon/' . $cv
                 ]);
             }
         }
@@ -173,10 +167,9 @@ class RegisterDataScience extends Component
         ]);
 
         // Menyimpan ID para anggota pada database
-        for($x = 1; $x < $this->members; $x++)
-        {
+        for ($x = 1; $x < $this->members; $x++) {
             $team_data->update([
-                'member'.$x.'_id' => ${'team_member_' . ($x + 1)}->id
+                'member' . $x . '_id' => ${'team_member_' . ($x + 1)}->id
             ]);
         }
 
@@ -188,7 +181,8 @@ class RegisterDataScience extends Component
         return redirect()->to(route('register-ds-success'));
     }
 
-    public function mount(){
+    public function mount()
+    {
         $this->member_1_name = Auth::user()->name;
         $this->member_1_email = Auth::user()->email;
     }
