@@ -41,7 +41,7 @@ class Beranda extends Component
             case 'Ditolak':
                 $this->alert_color = 'red';
                 $this->alert_header = 'Identitas Ditolak';
-                $this->alert_content = 'Identitas ditolak karena alasan berikut : <b>' . \Auth::user()->userable->academy->profile_verif_comment . '</b>';
+                $this->alert_content = 'Identitas ditolak karena alasan berikut : <b>' . Auth::user()->userable->academy->profile_verif_comment . '</b>';
                 $this->readonly = false;
                 break;
             default:

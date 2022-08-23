@@ -286,6 +286,17 @@ class Sidebar extends Component
                         'tag' => 'class=my-2'
                     ]
                 );
+                if (Auth::user()->userable->academy->competition_round == "Commitement Fee" || Auth::user()->userable->academy->commitement_payment_status == "Terverifikasi") {
+                    array_push(
+                        $this->menu,
+                        [
+                            'type' => 'menu',
+                            'icon' => 'cil-money',
+                            'title' => 'Pembayaran',
+                            'route-name' => 'academy.peserta.pembayaran'
+                        ]
+                    );
+                }
             }
         }
     }
