@@ -20,7 +20,7 @@ class Index extends LivewireDatatable
                 ->leftJoin('team_junior_members as leader_group', 'leader_group.id', 'team_junior_data.leader_id');
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             return TeamSeniorData::query()
-                ->where('payment_verif_status', 'Tahap Verifikasi')
+                ->where('payment_verif_status', 'Tahap Verifikasi');
         }
         return null;
     }

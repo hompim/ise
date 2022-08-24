@@ -45,7 +45,7 @@ class Index extends LivewireDatatable
                 Column::name('leader.name')->label('Nama Ketua')->searchable(),
                 Column::name('member1.name')->label('Nama Member 1')->searchable(),
                 Column::name('member2.name')->label('Nama Member 2')->searchable(),
-                Column::name('commitement_payment_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
+                Column::name('commitement_payment_status')->label('Status Commitment Fee')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('competition_round')->label('Status Academy')->filterable(['Proses Seleksi', 'Lolos', 'Tidak Lolos']),
                 Column::raw('date_format(icon_academy_startup_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(icon_academy_startup_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
                 Column::callback(['id'], function ($id) {
