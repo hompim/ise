@@ -174,15 +174,16 @@
                             src="{{ asset('images/grand-is.svg') }}" alt=""></button>
                 </div>
                 <!-- 4 -->
-                <div class="group ">
+                <div class="group animate-pulse hover:animate-none">
                     <div class="lg:opacity-0 lg:group-hover:opacity-100">
                         <p
                             class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-200px] mt-[140px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
                             E-Hall of IS</p>
                     </div>
                     <a href="{{ route('e-hall') }}"
-                        class="absolute lg:transition ml-[-176px] mt-[155px] lg:ml-[-480px] lg:mt-[420px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
-                            src="{{ asset('images/hall-is.svg') }}" alt=""></a>
+                        class="absolute lg:transition ml-[-176px] mt-[155px] lg:ml-[-480px] lg:mt-[420px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300">
+                        <img src="{{ asset('images/hall-is.svg') }}" alt="">
+                    </a>
                 </div>
 
             </div>
