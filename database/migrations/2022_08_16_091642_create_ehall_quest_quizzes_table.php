@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('ehall_quest_quizzes', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('type_id');
-            $table->enum('question_type', ['Pilgan', 'Isian', 'ToF'])->comment('Pilgan : Pilihan Ganda, Isian : isian singkat, ToF : Benar atau salah');
+            $table->enum('question_type', ['Pilgan', 'Picture', 'ToF'])->comment('Pilgan : Pilihan Ganda, Isian : isian singkat, ToF : Benar atau salah');
             $table->string('question')->comment('Soal kuis');
             $table->string('img_path')->comment('Gambar soal apabila ada')->nullable();
             $table->string('opt_a')->comment('Opsi jawaban A apabila tipe soal Pilgan')->nullable();
