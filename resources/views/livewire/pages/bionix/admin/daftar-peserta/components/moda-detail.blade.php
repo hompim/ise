@@ -132,7 +132,7 @@
             </div>
         @endif
 
-        {{-- @if($bionix_data->payment_verif_status=="Tahap Verifikasi"||$bionix_data->payment_verif_status=="Terverifikasi"||$bionix_data->payment_verif_status=="Ditolak")
+        @if($bionix_data->payment_verif_status=="Tahap Verifikasi"||$bionix_data->payment_verif_status=="Terverifikasi"||$bionix_data->payment_verif_status=="Ditolak")
             <div id="promo" class="mt-8">
                 <h5>Promo yang Digunakan</h5>
                 <hr/>
@@ -167,17 +167,13 @@
                 </table>
             </div>
             <div id="invoice" class="mt-8">
-                <h5>Invoice</h5>
+                <h5>Invoice DP</h5>
                 <hr class="mb-2"/>
                 @if($bionix_data->invoice)
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div>
-                            <p class="font-bold mb-0">Nomor Invoice</p>
-                            <p>{{$bionix_data->invoice->invoice_no}}</p>
-                        </div>
-                        <div>
                             <p class="font-bold mb-0">Tanggal Pembayaran</p>
-                            <p>{{date('d F y H:i:s',strtotime($bionix_data->invoice->date))}}</p>
+                            <p>{{date('d F y H:i:s',strtotime($bionix_data->invoice->created_at))}}</p>
                         </div>
                         <div>
                             <p class="font-bold mb-0">Total Bayar</p>
@@ -185,7 +181,7 @@
                         </div>
                     </div>
                 @else
-                    <p class="text-center">Tidak ada invoice yang digunakan</p>
+                    <p class="text-center">Tidak membayar DP</p>
                 @endif
             </div>
             <div id="detail_pembayaran" class="mt-8">
@@ -199,11 +195,11 @@
                     <div>
                         <p class="font-bold mb-0 mt-2">Total Bayar</p>
                         <p class=" text-3xl font-bold">
-                            Rp {{number_format($bionix_data->payment_price+$bionix_data->unique_code,2,',','.')}}</p>
+                            Rp {{$bionix_data->payment_price}}</p>
                     </div>
                 </div>
             </div>
-        @endif --}}
+        @endif
     </div>
     <hr class="my-4"/>
 
