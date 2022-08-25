@@ -70,6 +70,7 @@
                             <p class="font-bold text-lg">{{ $team_name }}</p>
                         @endif
                     </div>
+                @if (!$is_junior)
                     <div>
                         <label for="school_name" class="mb-2 font-bold text-gray-400 mt-4">Judul Ide Bisnis</label><br>
                         @if ($is_edit)
@@ -85,6 +86,7 @@
                         <a href="{{asset('storage/'.$bmc)}}" target="_blank"> <p class="font-bold text-blue-400 text-lg">File BMC</p></a>
 
                     </div>
+                @else
                     <div>
                         <label for="school_city" class="mb-2 font-bold text-gray-400 mt-4">Asal
                             Provinsi/Kota/Kabupaten {{ $is_junior ? 'Sekolah' : 'Perguruan Tinggi' }}</label><br>
