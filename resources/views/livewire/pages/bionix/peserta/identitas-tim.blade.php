@@ -86,7 +86,7 @@
                         <a href="{{asset('storage/'.$bmc)}}" target="_blank"> <p class="font-bold text-blue-400 text-lg">File BMC</p></a>
 
                     </div>
-                @else
+                @endif
                     <div>
                         <label for="school_city" class="mb-2 font-bold text-gray-400 mt-4">Asal
                             Provinsi/Kota/Kabupaten {{ $is_junior ? 'Sekolah' : 'Perguruan Tinggi' }}</label><br>
