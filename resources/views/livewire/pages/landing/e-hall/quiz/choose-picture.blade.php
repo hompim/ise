@@ -16,6 +16,7 @@
                     est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan.
                 </p>
                 <!-- start: make cards row 1 -->
+                
                 <div class="md:flex md:flex-row mt-[46px] mx-auto gap-[50px] md:gap-[74px] pl-0">
                     <div class="flex flex-col">
                         <div class="relative group">

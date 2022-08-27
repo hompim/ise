@@ -201,7 +201,7 @@
                             <p class="font-normal">{{ $errorMessage }}</p>
                         @endif
                     </div>
-                    <button type="button" title="Hapus" wire:click="closeModal()" class="self-start"
+                    <button type="button" title="Hapus" wire:click="closeMessage" class="self-start"
                     ><p class="text-red-600">Tutup Pesan</p></button>
                 </div>
             </div>
