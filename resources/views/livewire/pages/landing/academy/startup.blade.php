@@ -231,7 +231,7 @@
                         </div>
                     </li>
                     <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">27
+                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">31
                             Agu</time>
                         <div class="relative flex items-center">
                             <div
@@ -310,7 +310,7 @@
                         </div>
                         <div class="mt-3">
                             <h3 class="text-lg font-semibold text-white font-poppins">Awarding Ceremony<br>
-                                at ICON Grand Talkshow</h3>
+                                at Grand Talkshow ISE! 2022</h3>
                         </div>
                     </li>
                 </ol>
