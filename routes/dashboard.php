@@ -144,6 +144,7 @@ Route::middleware('auth')->group(function () {
                         Route::get('beranda', \App\Http\Livewire\Pages\Icon\Academy\Peserta\Beranda::class)->name('academy.peserta.beranda');
                         Route::get('identitas-tim', \App\Http\Livewire\Pages\Icon\Academy\Peserta\IdentitasTim::class)->name('academy.peserta.identitas-tim');
                         Route::get('pembayaran', \App\Http\Livewire\Pages\Icon\Academy\Peserta\Pembayaran::class)->name('academy.peserta.pembayaran');
+                        Route::get('seleksi', \App\Http\Livewire\Pages\Icon\Academy\Peserta\Seleksi::class)->name('academy.peserta.seleksi');
                     });
                 });
             });
