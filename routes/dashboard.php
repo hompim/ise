@@ -132,6 +132,9 @@ Route::middleware('auth')->group(function () {
                     // Rute DS Academy
                     Route::group(['prefix' => 'data-science', 'middleware' => 'iconcheck:unregistered'], function () {
                         // Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience::class)->name('register-data-science-academy');
+                        Route::get('register', function () {
+                            return view('closed-registration');
+                        })->name('register-data-science-academy');
                     });
 
                     // Rute Startup Academy
