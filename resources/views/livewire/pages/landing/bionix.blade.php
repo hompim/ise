@@ -640,7 +640,7 @@
                     </div>
                     <div class="flex flex-col justify-center mt-12 md:flex-row md:space-x-4 font-poppins">
                         <a href="https://drive.google.com/file/d/1bJoW5iSbS96k9E31rbgjPDyDU5sbeKAV/view"
-                            class=" opacity-50 md:px-3 md:mx-0 mx-16 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center"><svg
+                            class=" md:px-3 md:mx-0 mx-16 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center"><svg
                                 class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.5034 13.8623L15.4998 18.8506L20.4961 13.8623" stroke="#B221E5"
