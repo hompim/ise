@@ -68,7 +68,25 @@
                         <p class="text-blue-500 truncate"><a href="{{ ${'member'.$x.'_twibbon'} }}"
                                                              target="_blank">{{ ${'member'.$x.'_twibbon'} }}</a></p>
                     </div>
-                    @if($type != 'Data Science')
+                    @if($type == 'Startup')
+                    <div>
+                        <p class="font-bold mb-0 mt-2">Link Linkedin</p>
+                        <p class="text-blue-500 truncate"><a href="{{ ${'member'.$x.'_twibbon'} }}"
+                                                             target="_blank">{{ ${'member'.$x.'_linkedin'} }}</a></p>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-0 mt-2">Link Twitter</p>
+                        <p class="text-blue-500 truncate"><a href="{{ ${'member'.$x.'_twibbon'} }}"
+                                                             target="_blank">{{ ${'member'.$x.'_twitter'} }}</a></p>
+                    </div>
+                    <div>
+                        <p class="font-bold mb-0 mt-2">Link Instagram</p>
+                        <p class="text-blue-500 truncate"><a href="{{ ${'member'.$x.'_twibbon'} }}"
+                                                             target="_blank">{{ ${'member'.$x.'_instagram'} }}</a></p>
+                    </div>
+
+                    @endif
+                    @if($type != 'Startup')
                     <div>
                         <p class="font-bold mb-0 mt-2">CV</p>
                         <p class="text-blue-500 truncate"><a href="{{asset('/storage/'.${'cv'.$x})}}"

@@ -26,6 +26,15 @@ class ModalDetail extends ModalComponent
         $member1_twibbon,
         $member2_twibbon,
         $member3_twibbon,
+        $member1_linkedin,
+        $member2_linkedin,
+        $member3_linkedin,
+        $member1_twitter,
+        $member2_twitter,
+        $member3_twitter,
+        $member1_instagram,
+        $member2_instagram,
+        $member3_instagram,
         $institute_name,
         $team_name,
         $commitment_proof,
@@ -74,6 +83,15 @@ class ModalDetail extends ModalComponent
             $this->expectation_joining_academy = $this->icon_data->expectation_joining_academy;
             $this->reason_joining_academy = $this->icon_data->reason_joining;
             $this->post_academy_activity = $this->icon_data->post_activity;
+            $this->member1_linkedin = $this->icon_data->leader->link_linkedlin;
+            $this->member2_linkedin = $this->icon_data->member_1->link_linkedin;
+            $this->member3_linkedin = $this->icon_data->member_2->link_linkedin;
+            $this->member1_twitter = $this->icon_data->member_2->link_twitter;
+            $this->member2_twitter = $this->icon_data->member_2->link_twitter;
+            $this->member3_twitter = $this->icon_data->member_2->link_twitter;
+            $this->member1_twitter = $this->icon_data->member_2->link_instagram;
+            $this->member2_twitter = $this->icon_data->member_2->link_instagram;
+            $this->member3_twitter = $this->icon_data->member_2->link_instagram;
         } else {
             $this->startup_title = $this->icon_data->startup_idea_title;
             $this->startup_idea = $this->icon_data->startup_idea_desc;
