@@ -23,7 +23,15 @@
                 <div x-show="open">
                     <hr class="my-2" />
                     <h2 class="font-bold text-lg mt-4  capitalize">Deskripsi & Ketentian</h2>
-                    Halo! Saat ini anda dapat mengunduh dan mulai mengerjakan soal seleksi Data Science Academy 2022 dengan batas pengumpulan paling lambat tanggal 1 September 2022 pukul 23.59 WIB. Jangan lupa untuk memperhatikan guideline pengumpulan ya!
+                    <p>Halo! Saat ini anda dapat mengunduh dan mulai mengerjakan soal seleksi Data Science Academy 2022
+                        dengan batas pengumpulan paling lambat tanggal 1 September 2022 pukul 23.59 WIB. Jangan lupa
+                        untuk
+                        memperhatikan guideline pengumpulan ya!.</p>
+                    <br>
+                    <p>
+                        Mohon diperhtikan setiap tim hanya bisa mengupload
+                        <b>maksimal 1x</b>
+                    </p>
                     <br>
                     <div class="justify-center md:flex-row flex flex-col justify-content-end">
                         <a href="//ise-its.com/SoalDSAcademy" target="_blank">
@@ -31,11 +39,14 @@
                                 <i class="fas fa-cloud-download-alt mr-2"></i>Unduh File Soal
                             </button>
                         </a>
+                        @if ($isSubmit)
+                            <button onclick="$('#fileTask').click()"
+                                class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2">
+                                <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File Jawaban
+                            </button>
+                        @endif
 
-                        <button onclick="$('#fileTask').click()"
-                            class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2">
-                            <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File Jawaban
-                        </button>
+
                         <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
                             id="fileTask" accept=".pdf,.zip,.rar" hidden>
 
@@ -103,7 +114,8 @@
                 </div>
                 <div>
                     <p class="font-bold">
-                        {{ $messageType == 'green' ? 'Sukses' : ($messageType == 'blue' ? 'Informasi' : 'Terjadi Masalah') }}</p>
+                        {{ $messageType == 'green' ? 'Sukses' : ($messageType == 'blue' ? 'Informasi' : 'Terjadi Masalah') }}
+                    </p>
                     <p class="text-sm">{{ $message }}</p>
                 </div>
                 <button type="button" title="Hapus" wire:click="closeMessage()" class="self-start"><i
