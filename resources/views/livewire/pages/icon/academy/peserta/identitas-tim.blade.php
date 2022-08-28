@@ -1,5 +1,5 @@
 <div class="px-8 text-white">
-    <div class="bg-{{ $alert_color }}-100 border-t-4 border-{{ $alert_color }}-500 rounded-b text-{{ $alert_color }}-900 px-4 py-3 shadow-md"
+    {{-- <div class="bg-{{ $alert_color }}-100 border-t-4 border-{{ $alert_color }}-500 rounded-b text-{{ $alert_color }}-900 px-4 py-3 shadow-md"
         role="alert">
         <div class="flex">
             <div class="py-1">
@@ -14,7 +14,7 @@
                 <p class="text-sm">{!! $alert_content !!}</p>
             </div>
         </div>
-    </div>
+    </div> --}}
     <h3 class="text-xl font-weight-bold my-4">Informasi Tim</h3>
     <form wire:submit.prevent="saveData" enctype="multipart/form-data">
         <div class="card p-8 rounded-xl" style="background-color: #191a1e;border:0">
