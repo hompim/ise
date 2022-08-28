@@ -131,11 +131,11 @@ Route::middleware('auth')->group(function () {
                 Route::group(['prefix' => 'academy'], function () {
                     // Rute DS Academy
                     Route::group(['prefix' => 'data-science', 'middleware' => 'iconcheck:unregistered'], function () {
-                        Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience::class)->name('register-data-science-academy');
+                        // Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience::class)->name('register-data-science-academy');
                     });
 
                     // Rute Startup Academy
-                    Route::group(['prefix' => 'startup','middleware' => 'iconcheck:unregistered'], function () {
+                    Route::group(['prefix' => 'startup', 'middleware' => 'iconcheck:unregistered'], function () {
                         Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterStartup::class)->name('register-startup-academy');
                     });
 
