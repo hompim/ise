@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('team_senior_data', function (Blueprint $table) {
             $table->id();
-            $table->string('team_name');
+            $table->string('team_name')->unique();
             $table->string('info_source');
             $table->string('judul_ide_bisnis')->nullable();
             $table->string('bmc_file_path')->nullable();
             $table->unsignedBigInteger('city_id')->nullable();
             $table->enum('competition_round', ['Penyisihan', 'Semifinal', 'Final'])->default('Penyisihan');
-            $table->enum('profile_verif_status', ['Belum Unggah','Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Tahap Verifikasi');
+            $table->enum('profile_verif_status', ['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Tahap Verifikasi');
             $table->unsignedTinyInteger('profile_verified_by')->nullable();
             $table->text('profile_verif_comment')->nullable();
             $table->boolean('want_to_pay')->default(true);

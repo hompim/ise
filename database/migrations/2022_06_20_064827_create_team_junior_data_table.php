@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('team_junior_data', function (Blueprint $table) {
             $table->id();
-            $table->string('team_name');
+            $table->string('team_name')->unique();
             $table->string('info_source');
             $table->string('school_name');
             $table->unsignedInteger('city_id');

@@ -3,7 +3,7 @@
     'Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang terbagi dalam beberapa region di
     Indonesia berdasarkan empat bidang keilmuan sistem informasi, yaitu teknologi informasi, pemrograman, logika matematika,
     dan manajemen bisnis. Peserta juga akan ditantang untuk membuat proposal bisnis dan melakukan presentasi di depan dewan
-    juri secara luring pada Final & Awarding Night.',)
+    juri secara luring pada Final & Awarding Night.')
     <div class="bg-black font-poppins">
         <div class="md:flex md:flex-col-reverse lg:flex-row items-start pt-1 md:pt-[202px] md:pl-[130px] overflow-hidden">
             <div class="flex flex-col items-start flex-1 text-white mt-36">
@@ -639,7 +639,7 @@
                             kemajuan teknologi</p>
                     </div>
                     <div class="flex flex-col justify-center mt-12 md:flex-row md:space-x-4 font-poppins">
-                        <button title="Guidebook Available soon!" disabled
+                        <a href="https://drive.google.com/file/d/1bJoW5iSbS96k9E31rbgjPDyDU5sbeKAV/view"
                             class=" opacity-50 md:px-3 md:mx-0 mx-16 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center"><svg
                                 class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -651,7 +651,7 @@
                                     d="M26.92 16.9502V25.5015C26.92 25.7535 26.8198 25.9952 26.6413 26.1734C26.4628 26.3516 26.2208 26.4517 25.9684 26.4517H5.03128C4.77887 26.4517 4.53681 26.3516 4.35833 26.1734C4.17986 25.9952 4.07959 25.7535 4.07959 25.5015V16.9502"
                                     stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            Download Guidebook</button>
+                            Download Guidebook</a>
                         <a href="#"
                             class="hidden py-2 my-6 rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
                     </div>
@@ -678,11 +678,10 @@
                         <div class="bg-liteBlack md:h-[330px] md:py-0 py-5 rounded-2xl col-span-4 ">
                             <div class="flex flex-col mx-4 text-2xl text-left md:flex-row pr-18">
                                 <div class="flex flex-col">
-                                    <a class="md:mt-[49px] text-lg md:text-2xl font-bold">Incubation</a>
+                                    <a class="md:mt-[49px] text-lg md:text-2xl font-bold">Bootcamp</a>
 
-                                    <a class="text-liteGray md:text-base md:mr-0 mr-12 text-sm md:w-[272px]">Kesempatan
-                                        inkubasi dengan perusahaan inkubator yang
-                                        bekerja sama dengan ISE!2022</a>
+                                    <a class="text-liteGray md:text-base md:mr-0 mr-12 text-sm md:w-[272px]"> Kesempatan
+                                        bootcamp dengan IndigoSpace Surabaya bagi seluruh tim finalis</a>
                                 </div>
                                 <img class="md:block hidden md:pt-[121px] ml-[80px]"
                                     src="{{ asset('images/workInDesk.png') }}" alt="purple certificate">
@@ -797,7 +796,20 @@
                                     </div>
                                 </li>
                                 <li class="relative mb-6 sm:mb-0">
-                                    <time class="block mb-2 text-lg font-medium text-white font-poppins">19 Nov</time>
+                                    <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">19 Nov
+                                    </time>
+                                    <div class="relative flex items-center">
+                                        <div
+                                            class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
+                                        </div>
+                                        <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <h3 class="text-lg font-semibold text-white font-poppins">Awarding</h3>
+                                    </div>
+                                </li>
+                                <li class="relative mb-6 sm:mb-0">
+                                    <time class="block mb-2 text-lg font-medium text-white font-poppins">6 - 22 Des</time>
                                     <div class="relative flex items-center">
                                         <div
                                             class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
@@ -805,7 +817,7 @@
                                         <div class="hidden lg:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
                                     </div>
                                     <div class="mt-3">
-                                        <h3 class="text-lg font-semibold text-white font-poppins">Awarding</h3>
+                                        <h3 class="text-lg font-semibold text-white font-poppins">Bootcamp</h3>
                                     </div>
                                 </li>
                             </ol>
