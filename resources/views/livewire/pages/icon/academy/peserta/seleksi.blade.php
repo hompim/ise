@@ -22,14 +22,14 @@
                 </button>
                 <div x-show="open">
                     <hr class="my-2" />
-                    <h2 class="font-bold text-lg mt-4  capitalize">Deskripsi & Ketentian</h2>
+                    <h2 class="font-bold text-lg mt-4  capitalize">Deskripsi & Ketentuan</h2>
                     <p>Halo! Saat ini anda dapat mengunduh dan mulai mengerjakan soal seleksi Data Science Academy 2022
                         dengan batas pengumpulan paling lambat tanggal 1 September 2022 pukul 23.59 WIB. Jangan lupa
                         untuk
-                        memperhatikan guideline pengumpulan ya!.</p>
+                        memperhatikan guideline pengumpulan ya!</p>
                     <br>
-                    <p>
-                        Mohon diperhtikan setiap tim hanya bisa mengupload
+                    <p class="font-bold text-md text-red-500">
+                        Mohon diperhatikan setiap tim hanya bisa mengupload
                         <b>maksimal 1x</b>
                     </p>
                     <br>
