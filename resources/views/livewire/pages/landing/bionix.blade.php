@@ -809,7 +809,8 @@
                                     </div>
                                 </li>
                                 <li class="relative mb-6 sm:mb-0">
-                                    <time class="block mb-2 text-lg font-medium text-white font-poppins">6 - 22 Des</time>
+                                    <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">6 - 22
+                                        Des</time>
                                     <div class="relative flex items-center">
                                         <div
                                             class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
