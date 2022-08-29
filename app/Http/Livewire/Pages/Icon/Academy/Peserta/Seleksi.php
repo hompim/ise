@@ -27,8 +27,9 @@ class Seleksi extends Component
         return view('livewire.pages.icon.academy.peserta.seleksi')->layout('layouts.dashboard');
     }
 
-    public function mount(){
-        $this->isSubmit = Auth::user()->userable->academy->jawabab_seleksi_path ? true : false;
+    public function mount()
+    {
+        $this->isSubmit = Auth::user()->userable->academy->jawaban_seleksi_path ? true : false;
     }
 
     public function alreadyDeadline()
