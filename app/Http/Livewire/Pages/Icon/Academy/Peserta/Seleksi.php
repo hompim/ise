@@ -28,7 +28,7 @@ class Seleksi extends Component
     }
 
     public function mount(){
-        $this->isSubmit = Auth::user()->userable->academy->jawabab_seleksi_path ? true : false;
+        $this->isSubmit = Auth::user()->userable->academy->jawabab_seleksi_path != Null ? true : false;
     }
 
     public function alreadyDeadline()
