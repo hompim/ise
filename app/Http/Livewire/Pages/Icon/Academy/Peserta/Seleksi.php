@@ -27,10 +27,6 @@ class Seleksi extends Component
         return view('livewire.pages.icon.academy.peserta.seleksi')->layout('layouts.dashboard');
     }
 
-    public function mount(){
-        $this->isSubmit = Auth::user()->userable->academy->jawabab_seleksi_path != Null ? true : false;
-    }
-
     public function alreadyDeadline()
     {
         $this->message = 'Tugas sudah melewati masa deadline';

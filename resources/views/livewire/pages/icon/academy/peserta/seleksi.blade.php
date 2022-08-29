@@ -39,12 +39,11 @@
                                 <i class="fas fa-cloud-download-alt mr-2"></i>Unduh File Soal
                             </button>
                         </a>
-                        @if ($isSubmit)
-                            <button onclick="$('#fileTask').click()"
-                                class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2">
-                                <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File Jawaban
-                            </button>
-                        @endif
+
+                        <button onclick="$('#fileTask').click()"
+                            class="bg-red-400 {{ empty(Auth::user()->userable->academy->jawaban_seleksi_path) ? '' : 'hidden' }} hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2">
+                            <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File Jawaban
+                        </button>
 
 
                         <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
