@@ -102,10 +102,10 @@ Route::get('/coming-soon', function () {
 })->name('coming-soon');
 
 Route::get('/sendEmail', function () {
-    $dsa = IconAcademyDataScienceData::all();
+    $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->get();
 
     foreach ($dsa as $d) {
-        Mail::to($d->leader->email)->send(new IconSeleksiEmail($d->leader->name));
+        Mail::to($d->leader->email)->send(new IconSeleksiEmail($d->leader->name, 'Rejected'));
         sleep(2);
     }
 

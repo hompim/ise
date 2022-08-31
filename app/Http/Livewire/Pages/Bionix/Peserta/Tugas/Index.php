@@ -28,9 +28,6 @@ class Index extends Component
         return view('livewire.pages.bionix.peserta.tugas.index');
     }
 
-    public function mount(){
-        $this->isEligible = !empty(Auth::user()->userable->bionix->invoice_id);
-    }
 
     public function alreadyDeadline()
     {

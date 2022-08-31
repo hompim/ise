@@ -47,7 +47,8 @@
                 </div>
                 <div>
                     <p class="font-bold mb-0 mt-2">Link Twibbon</p>
-                    <p>{{$member1_twibbon}}</p>
+                    <p class="text-blue-500 truncate"><a href="{{$member1_twibbon}}"
+                                                         target="_blank">{{$member1_twibbon}}</a></p>
                 </div>
                 @if($type=='college')
                     <div>
@@ -93,7 +94,7 @@
                         <p>{{$member2_email}}</p>
                     </div>
                     <div>
-                        <p class="font-bold mb-0 mt-2">Nomor Whatsapp</p>
+                        <p class="font-bold mb-0 mt-2">No Whatsapp</p>
                         <p>{{$member2_whatsapp}}</p>
                     </div>
                     <div>

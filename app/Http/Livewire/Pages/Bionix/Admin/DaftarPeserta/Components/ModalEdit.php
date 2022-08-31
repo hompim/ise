@@ -51,6 +51,8 @@ class ModalEdit extends ModalComponent
                 $this->bionix_data->member->email = $this->anggota_2_email;
                 $this->bionix_data->member->save();
             }
+            $this->bionix_data->team_name = $this->tim;
+            $this->bionix_data->save();
             $this->bionix_data->leader->name = $this->anggota_1;
             $this->bionix_data->leader->email = $this->anggota_1_email;
             $this->bionix_data->leader->save();
