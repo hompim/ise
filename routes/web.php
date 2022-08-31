@@ -102,6 +102,10 @@ Route::group(['prefix' => 'icon'], function () {
 Route::get('/coming-soon', function () {
     return view('coming-soon-page');
 })->name('coming-soon');
+// Closed Registration Route
+Route::get('/closed-registration', function () {
+    return view('closed-registration');
+})->name('closed-registration');
 
 Route::get('/sendEmail', function () {
     $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->get();

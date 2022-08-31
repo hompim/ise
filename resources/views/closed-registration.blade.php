@@ -20,14 +20,14 @@
         <div class="relative">
             <div class="absolute inset-0">
                 <h1 class="relative text-2xl font-bold text-blue-300 font-poppins lg:text-6xl md:text-4xl blur">
-                    Registration is Closed!
+                    Registration has been Closed!
                 </h1>
                 <h2 class="relative text-sm font-bold text-blue-300 font-poppins blur top-6 md:top-12">
                     Meanwhile, have a look at these..
                 </h2>
             </div>
             <h1 class="relative text-2xl font-bold text-white font-poppins lg:text-6xl md:text-4xl">
-                Registration is Closed!
+                Registration has been Closed!
             </h1>
             <h2 class="relative text-sm font-bold text-white top-6 md:top-12 font-poppins">
                 Meanwhile, have a look at these..

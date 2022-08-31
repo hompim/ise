@@ -59,8 +59,9 @@
                 </svg>
                 Download Guidebook</button>
         </a>
-        <a href="{{ route('register-startup-academy') }}"
-            class="py-2 my-6 text-white rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
+        <a href="{{ route('closed-registration') }}"
+            class="py-2 my-6 text-white rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300">Registration
+            Closed</a>
     </div>
     <!-- guidebook and register button end-->
 </div>
