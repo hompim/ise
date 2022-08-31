@@ -111,6 +111,7 @@ Route::middleware('auth')->group(function () {
                     Route::group(['middleware' => 'bionixcheck:profil_terverifikasi'], function () {
                         Route::get('/pembayaran', \App\Http\Livewire\Pages\Bionix\Peserta\Pembayaran::class)->name('bionix.peserta.pembayaran');
                     });
+                    Route::get('/tryout', \App\Http\Livewire\Pages\Bionix\Peserta\Tugas\Index::class)->name('bionix.peserta.tryout');
                 });
 
 
@@ -131,11 +132,14 @@ Route::middleware('auth')->group(function () {
                 Route::group(['prefix' => 'academy'], function () {
                     // Rute DS Academy
                     Route::group(['prefix' => 'data-science', 'middleware' => 'iconcheck:unregistered'], function () {
-                        Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience::class)->name('register-data-science-academy');
+                        // Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience::class)->name('register-data-science-academy');
+                        Route::get('register', function () {
+                            return view('closed-registration');
+                        })->name('register-data-science-academy');
                     });
 
                     // Rute Startup Academy
-                    Route::group(['prefix' => 'startup','middleware' => 'iconcheck:unregistered'], function () {
+                    Route::group(['prefix' => 'startup', 'middleware' => 'iconcheck:unregistered'], function () {
                         Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterStartup::class)->name('register-startup-academy');
                     });
 
@@ -144,6 +148,7 @@ Route::middleware('auth')->group(function () {
                         Route::get('beranda', \App\Http\Livewire\Pages\Icon\Academy\Peserta\Beranda::class)->name('academy.peserta.beranda');
                         Route::get('identitas-tim', \App\Http\Livewire\Pages\Icon\Academy\Peserta\IdentitasTim::class)->name('academy.peserta.identitas-tim');
                         Route::get('pembayaran', \App\Http\Livewire\Pages\Icon\Academy\Peserta\Pembayaran::class)->name('academy.peserta.pembayaran');
+                        Route::get('seleksi', \App\Http\Livewire\Pages\Icon\Academy\Peserta\Seleksi::class)->name('academy.peserta.seleksi');
                     });
                 });
             });

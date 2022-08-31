@@ -85,6 +85,7 @@
             <div class="p-0.5 md:p-6 rounded-full swiper-button-prev bg-liteBlack"></div>
         </div>
     </div>
+    
     {{-- Quiz (Cr: nathan)--}}
     <div class="mt-6 md:mt-52 flex flex-col">
         <h1 class="mx-auto text-[27px] md:text-7xl font-bold text-white">Quiz</h1>

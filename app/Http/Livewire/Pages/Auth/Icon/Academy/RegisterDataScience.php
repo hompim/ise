@@ -187,6 +187,12 @@ class RegisterDataScience extends Component
         $this->member_1_email = Auth::user()->email;
     }
 
+    public function closeMessage()
+    {
+        $this->errorMessage = '';
+        $this->resetErrorBag();
+    }
+
     public function render()
     {
         return view('livewire.pages.auth.icon.academy.register-data-science')->layout('layouts.auth-bionix');

@@ -92,7 +92,6 @@ class RegisterStudent extends Component
             'member_1_class' => 'required',
             'twibbon_1' => 'required', // 1MB Max
             'ktm_1' => 'required|image|max:2048', // 1MB Max
-            'instagram_1' => 'required|image|max:2048', // 1MB Max
 
         ];
         if ($this->member_2_email || $this->member_2_name || $this->member_2_whatsapp || $this->member_2_class || $this->twibbon_2 || $this->ktm_2 || $this-> instagram_2) {
@@ -103,7 +102,7 @@ class RegisterStudent extends Component
                 'member_2_class' => 'required',
                 'twibbon_2' => 'required', // 1MB Max
                 'ktm_2' => 'required|image|max:2048', // 1MB Max
-                'instagram_2' => 'required|image|max:2048', // 1MB Max
+
 
             ]);
             $this->with_member = true;
@@ -138,7 +137,7 @@ class RegisterStudent extends Component
 
         if (!is_string($this->ktm_1) && !is_string($this->twibbon_1) && !is_string($this->instagram_1)) {
             $ktm = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_KTM' . '.' . $this->ktm_1->getClientOriginalExtension();
-            $instagram = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_INSTAGRAM' . '.' . $this->instagram_1->getClientOriginalExtension();
+            // $instagram = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_INSTAGRAM' . '.' . $this->instagram_1->getClientOriginalExtension();
 
             $resized_image_ktm = (new ImageManager())
                 ->make($this->ktm_1)
@@ -147,25 +146,24 @@ class RegisterStudent extends Component
                     $constraint->upsize();
                 })->encode($this->ktm_1->getClientOriginalExtension());
 
-            $resized_image_instagram = (new ImageManager())
-                ->make($this->instagram_1)
-                ->resize(600, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                    $constraint->upsize();
-                })->encode($this->instagram_1->getClientOriginalExtension());
+            // $resized_image_instagram = (new ImageManager())
+            //     ->make($this->instagram_1)
+            //     ->resize(600, null, function ($constraint) {
+            //         $constraint->aspectRatio();
+            //         $constraint->upsize();
+            //     })->encode($this->instagram_1->getClientOriginalExtension());
 
 
             Storage::disk('public')
                 ->put('bionix/' . $ktm,
                     $resized_image_ktm->__toString());
-            Storage::disk('public')
-                ->put('bionix/' . $instagram,
-                    $resized_image_instagram->__toString());
+            // Storage::disk('public')
+            //     ->put('bionix/' . $instagram,
+            //         $resized_image_instagram->__toString());
 
 
             $team_member_1->update([
                 'identity_card_path' => 'bionix/' . $ktm,
-                'instagram_path' => 'bionix/'. $instagram
             ]);
         }
 
@@ -181,7 +179,7 @@ class RegisterStudent extends Component
 
             if (!is_string($this->ktm_2) && !is_string($this->twibbon_2) && !is_string($this->instagram_2)) {
                 $ktm2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_KTM' . '.' . $this->ktm_1->getClientOriginalExtension();
-                $instagram2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_INSTAGRAM' . '.' . $this->instagram_1->getClientOriginalExtension();
+                // $instagram2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_INSTAGRAM' . '.' . $this->instagram_1->getClientOriginalExtension();
 
                 $resized_image_ktm2 = (new ImageManager())
                     ->make($this->ktm_2)
@@ -190,24 +188,23 @@ class RegisterStudent extends Component
                         $constraint->upsize();
                     })->encode($this->ktm_2->getClientOriginalExtension());
 
-                $resized_image_instagram2 = (new ImageManager())
-                    ->make($this->instagram_2)
-                    ->resize(600, null, function ($constraint) {
-                        $constraint->aspectRatio();
-                        $constraint->upsize();
-                    })->encode($this->instagram_2->getClientOriginalExtension());
+                // $resized_image_instagram2 = (new ImageManager())
+                //     ->make($this->instagram_2)
+                //     ->resize(600, null, function ($constraint) {
+                //         $constraint->aspectRatio();
+                //         $constraint->upsize();
+                //     })->encode($this->instagram_2->getClientOriginalExtension());
 
 
                 Storage::disk('public')
                     ->put('bionix/' . $ktm2,
                         $resized_image_ktm2->__toString());
-                Storage::disk('public')
-                    ->put('bionix/' . $instagram2,
-                        $resized_image_instagram2->__toString());
+                // Storage::disk('public')
+                //     ->put('bionix/' . $instagram2,
+                //         $resized_image_instagram2->__toString());
 
                     $team_member_2->update([
                     'identity_card_path' => 'bionix/' . $ktm2,
-                    'instagram_path' => 'bionix/'. $instagram2
                 ]);
             }
         }

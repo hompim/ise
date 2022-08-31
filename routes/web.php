@@ -31,9 +31,20 @@ use App\Http\Livewire\Pages\Landing\EHall\Index as EHallIndex;
 use App\Http\Livewire\Pages\Landing\EHall\Quiz\MultipleChoice;
 use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience;
 use App\Http\Livewire\Pages\Landing\EHall\Game\Index as GameIndex;
-use App\Http\Livewire\Pages\Landing\EHall\Quiz\Index as QuizIndex;
-use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Index as PrestasiIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Index as EHallIndex;
 use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Content as PrestasiContent;
+use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Index as PrestasiIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\Challenge;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\ChoosePicture;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\Index as QuizIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\MultipleChoice;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\TrueOrFalse;
+use App\Http\Livewire\Pages\Landing\EHall\Startup\Content;
+use App\Http\Livewire\Pages\Landing\EHall\Startup\Index;
+use App\Mail\AcademyMail;
+use App\Models\User;
+use Illuminate\Contracts\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 
 /*
 |--------------------------------------------------------------------------
@@ -102,18 +113,18 @@ Route::get('/coming-soon', function () {
     return view('coming-soon-page');
 })->name('coming-soon');
 
-// <!-- Route::get('/sendEmail', function () {
-//     $pesertas = IconWebinarKickOff::all();
+Route::get('/sendEmail', function () {
+    $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->get();
 
-//     foreach ($pesertas as $peserta) {
-//         Mail::to($peserta->member->user->email)->send(new WebinarKickOffAcaraMail);
-//         sleep(4);
-//     }
+    foreach ($dsa as $d) {
+        Mail::to($d->leader->email)->send(new IconSeleksiEmail($d->leader->name, 'Rejected'));
+        sleep(2);
+    }
 
-//     return response()->json([
-//         'success' => true
-//     ]);
-// }); -->
+    return response()->json([
+        'success' => true
+    ]);
+});
 
 Route::get('/send', function () {
     $users = User::whereHas('userable', function (EloquentBuilder $q) {

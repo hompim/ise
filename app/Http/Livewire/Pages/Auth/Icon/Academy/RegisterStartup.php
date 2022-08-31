@@ -227,6 +227,12 @@ class RegisterStartup extends Component
         $this->member_1_email = Auth::user()->email;
     }
 
+    public function closeMessage()
+    {
+        $this->errorMessage = '';
+        $this->resetErrorBag();
+    }
+
     public function render()
     {
         return view('livewire.pages.auth.icon.academy.register-startup')->layout('layouts.auth-bionix');;

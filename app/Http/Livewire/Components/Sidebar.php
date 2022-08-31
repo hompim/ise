@@ -222,6 +222,18 @@ class Sidebar extends Component
                     );
                 }
 
+                if (Auth::user()->userable->jenjang == 'SMA' && Auth::user()->userable->dp->isNotEmpty()) {
+                    array_push(
+                        $this->menu,
+                        [
+                            'type' => 'menu',
+                            'icon' => 'cil-book',
+                            'title' => 'Soal Tryout',
+                            'route-name' => 'bionix.peserta.tryout'
+                        ]
+                    );
+                }
+
                 array_push(
                     $this->menu,
                     [
@@ -281,10 +293,6 @@ class Sidebar extends Component
                         'title' => 'Identitas Tim',
                         'route-name' => 'academy.peserta.identitas-tim'
                     ],
-                    [
-                        'type' => 'divider',
-                        'tag' => 'class=my-2'
-                    ]
                 );
                 if (Auth::user()->userable->academy->competition_round == "Commitement Fee" || Auth::user()->userable->academy->commitement_payment_status == "Terverifikasi") {
                     array_push(
@@ -297,6 +305,24 @@ class Sidebar extends Component
                         ]
                     );
                 }
+                if (Auth::user()->userable->academy->competition_round == "Seleksi") {
+                    array_push(
+                        $this->menu,
+                        [
+                            'type' => 'menu',
+                            'icon' => 'cil-book',
+                            'title' => 'Seleksi Data Science',
+                            'route-name' => 'academy.peserta.seleksi'
+                        ]
+                    );
+                }
+                array_push(
+                    $this->menu,
+                    [
+                        'type' => 'divider',
+                        'tag' => 'class=my-2'
+                    ]
+                    );
             }
         }
     }
