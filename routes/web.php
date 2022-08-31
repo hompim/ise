@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+use App\Mail\AcademyMail;
 use App\Mail\SertifikatMail;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\WebinarKickOffAcaraMail;
@@ -10,29 +12,28 @@ use Illuminate\Support\Facades\Redirect;
 use App\Http\Livewire\Pages\Landing\Icon;
 use Spatie\SimpleExcel\SimpleExcelReader;
 use App\Http\Livewire\Pages\Landing\Bionix;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use App\Http\Livewire\Pages\Landing\Academy\Startup;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
 use App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim;
 use App\Http\Livewire\Pages\Landing\Academy\DataScience;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\QuizPage;
+use App\Http\Livewire\Pages\Landing\EHall\Startup\Index;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\Challenge;
+use App\Http\Livewire\Pages\Landing\EHall\Startup\Content;
 use App\Http\Livewire\Pages\Auth\Bionix\RegistrasiRoadshow;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\TrueOrFalse;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\ChoosePicture;
 use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterStartup;
+use App\Http\Livewire\Pages\Landing\EHall\Index as EHallIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\MultipleChoice;
 use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience;
 use App\Http\Livewire\Pages\Landing\EHall\Game\Index as GameIndex;
-use App\Http\Livewire\Pages\Landing\EHall\Index as EHallIndex;
-use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Content as PrestasiContent;
-use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Index as PrestasiIndex;
-use App\Http\Livewire\Pages\Landing\EHall\Quiz\Challenge;
-use App\Http\Livewire\Pages\Landing\EHall\Quiz\ChoosePicture;
 use App\Http\Livewire\Pages\Landing\EHall\Quiz\Index as QuizIndex;
-use App\Http\Livewire\Pages\Landing\EHall\Quiz\MultipleChoice;
-use App\Http\Livewire\Pages\Landing\EHall\Quiz\TrueOrFalse;
-use App\Http\Livewire\Pages\Landing\EHall\Startup\Content;
-use App\Http\Livewire\Pages\Landing\EHall\Startup\Index;
-use App\Mail\AcademyMail;
-use App\Models\User;
-use Illuminate\Contracts\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
+use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Index as PrestasiIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Content as PrestasiContent;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +89,8 @@ Route::group(['prefix' => 'icon'], function () {
             Route::get('true-or-false', TrueOrFalse::class)->name('true-false-quiz-ehall');
             // icon/e-hall/quiz/challenge
             Route::get('challenge', Challenge::class)->name('challenge-quiz-ehall');
+
+            Route::get('/{quizType}', QuizPage::class)->name('quiz-page-ehall');
         });
         // icon/e-hall/game
         Route::get('game', GameIndex::class)->name('game-ehall');

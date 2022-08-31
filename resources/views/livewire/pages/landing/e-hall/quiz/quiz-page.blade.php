@@ -1,1 +1,1 @@
-@livewire('pages.landing.e-hall.components', ['type_id' => $type_id])
+@livewire('pages.landing.e-hall.components.quiz-card', ['type_id' => $type_id])

@@ -2,18 +2,20 @@
 
 namespace App\Http\Livewire\Pages\Landing\EHall\Components;
 
-use App\Models\Icon\EhallQuestMember;
+use Livewire\Component;
 use App\Models\Icon\EhallQuestQuiz;
 use App\Models\Icon\EhallQuestType;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
-use Livewire\Component;
+use App\Models\Icon\EhallQuestMember;
 
 class QuizCard extends Component
 {
-    public $quizzes;
+    public $quizzes; // Array dari database
     public $type_quiz;
-    public $currentQuiz;
-    public $answer;
+    public $currentQuiz = 0; // user current question no
+    public $answer; // Jawaban tiap soal
+    public $answers = []; // Jawaban tiap soal
     public $message;
     public $is_done;
     public $quizStatus;
@@ -21,16 +23,35 @@ class QuizCard extends Component
 
     public function render()
     {
-        return view('livewire.pages.landing.e-hall.components.quiz-card');
+        return view('livewire.pages.landing.e-hall.components.quiz-card')->layout('layouts.landing');
     }
 
     public function moveQuestion($n)
     {
-        $this->currentQuiz += $n;
-        $this->answer = "";
+        $out = new \Symfony\Component\Console\Output\ConsoleOutput();
+        $out->writeln("Next Question");
+        if($this->currentQuiz + $n >= 0 && $this->currentQuiz + $n <= count($this->quizzes))
+        {
+            $this->currentQuiz += $n;
+            $this->answer = "";
+        }
     }
 
-    public function mount($type_id, $no){
+    public function moveToQuestion($n)
+    {
+        if($n >= 0 && $n <= count($this->quizzes))
+        {
+            $this->currentQuiz += $n;
+            $this->answer = "";
+        }
+    }
+
+    public function setAnswer($answer)
+    {
+        $this->answers[$this->currentQuiz] = $answer;
+    }
+
+    public function mount($type_id){
         $this->type_quiz = EhallQuestType::find($type_id);
         $this->quizzes = $this->type_quiz->quizzes;
     }
