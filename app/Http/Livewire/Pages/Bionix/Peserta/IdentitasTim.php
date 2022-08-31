@@ -126,7 +126,7 @@ class IdentitasTim extends Component
                 $this->{'member_' . $i + 1 . '_university'} = $member->university;
                 $this->{'member_' . $i + 1 . '_whatsapp'} = $member->whatsapp;
                 $this->{'member_' . $i + 1 . '_instagram'} = $member->instagram;
-                $this->{'photo'.$i+1} = $member->identity_card_path;
+                $this->{'photo' . $i + 1} = $member->identity_card_path;
                 $this->senior_member++;
             }
         }
@@ -262,13 +262,16 @@ class IdentitasTim extends Component
                 'team_name' => $this->team_name,
                 'school_name' => $this->school_name,
                 'city_id' => $this->school_city,
-                'info_source' => $this->info_source
+                'info_source' => $this->info_source,
+                'twibbon_path' => $this->member_1_twibbon
             ]);
             if ($this->with_member_2) {
                 Auth::user()->userable->bionix->member->update([
                     'name' => $this->member_2_name,
                     'email' => $this->member_2_email,
-                    'whatsapp' => $this->member_2_whatsapp
+                    'whatsapp' => $this->member_2_whatsapp,
+                    'twibbon_path' => $this->member_2_twibbon
+
                 ]);
             } elseif ($this->new_member_2) {
                 $member_2 = TeamJuniorMember::create([
@@ -314,23 +317,7 @@ class IdentitasTim extends Component
                     'instagram_path' => 'bionix/' . $insta1
                 ]);
             }
-            if (!is_string($this->member_1_twibbon)) {
-                $twibbon1 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_1_TWIBBON' . '.' . $this->member_1_twibbon->getClientOriginalExtension();
-                $resized_image = (new ImageManager())
-                    ->make($this->member_1_twibbon)
-                    ->resize(600, null, function ($constraint) {
-                        $constraint->aspectRatio();
-                        $constraint->upsize();
-                    })->encode($this->member_1_twibbon->getClientOriginalExtension());
-                Storage::disk('public')
-                    ->put(
-                        'bionix/' . $twibbon1,
-                        $resized_image->__toString()
-                    );
-                Auth::user()->userable->bionix->leader->update([
-                    'twibbon_path' => 'bionix/' . $twibbon1
-                ]);
-            }
+
 
             if ($this->photo2 && !is_string($this->photo2)) {
                 $name2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_KTM' . '.' . $this->photo2->getClientOriginalExtension();
@@ -368,24 +355,6 @@ class IdentitasTim extends Component
                     'instagram_path' => 'bionix/' . $insta2
                 ]);
             }
-            if ($this->member_2_twibbon && !is_string($this->member_2_twibbon)) {
-                $twibbon2 = date('YmdHis') . '_BIONIX Student_' . $this->team_name . '_2_TWIBBON' . '.' . $this->member_2_twibbon->getClientOriginalExtension();
-                $resized_image = (new ImageManager())
-                    ->make($this->member_2_twibbon)
-                    ->resize(600, null, function ($constraint) {
-                        $constraint->aspectRatio();
-                        $constraint->upsize();
-                    })->encode($this->member_2_twibbon->getClientOriginalExtension());
-                Storage::disk('public')
-                    ->put(
-                        'bionix/' . $twibbon2,
-                        $resized_image->__toString()
-                    );
-
-                Auth::user()->userable->bionix->member->update([
-                    'twibbon_path' => 'bionix/' . $twibbon2
-                ]);
-            }
         } elseif (!$this->is_junior) {
             Auth::user()->userable->bionix->update([
                 'team_name' => $this->team_name,
@@ -405,7 +374,7 @@ class IdentitasTim extends Component
                     'whatsapp' => $this->{'member_' . $i + 1 . '_whatsapp'}
                 ]);
 
-                if ($this->{'photo'.$i+1} && !is_string($this->{'photo' . $i + 1})) {
+                if ($this->{'photo' . $i + 1} && !is_string($this->{'photo' . $i + 1})) {
                     $name = date('YmdHis') . '_BIONIX College_' . $this->team_name . '_' . $i + 1 . '.' . $this->{'photo' . $i + 1}->getClientOriginalExtension();
                     $resized_image = (new ImageManager())
                         ->make($this->{'photo' . $i + 1})

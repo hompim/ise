@@ -165,6 +165,19 @@
                                         <p class="font-bold text-lg">{{ $member_1_whatsapp }}</p>
                                     @endif
                                 </div>
+                                <div>
+                                    <label for="member_1_major" class="mb-2 font-bold text-gray-400 mt-4">Link
+                                        Twibbon</label><br>
+                                    @if ($is_edit)
+                                        <input wire:model.defer="member_1_twibbon" type="text"
+                                            id="member_1_twibbon" name="member_1_twibbon"
+                                            class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
+                                            style="color: black;margin-top:0;" required
+                                            {{ $readonly ? 'disabled' : '' }}>
+                                    @else
+                                        <p class="font-bold text-lg">{{ $member_1_twibbon }}</p>
+                                    @endif
+                                </div>
                                 @if (!$is_junior)
                                     <div>
                                         <label for="member_1_twibbon" class="mb-2 font-bold text-gray-400 mt-4">Link
@@ -371,6 +384,19 @@
                                                 Handphone diawali 08 dan terdiri dari 10-13 karakter.</small>
                                         @else
                                             <p class="font-bold text-lg">{{ $member_2_whatsapp }}</p>
+                                        @endif
+                                    </div>
+                                    <div>
+                                        <label for="member_1_major" class="mb-2 font-bold text-gray-400 mt-4">Link
+                                            Twibbon</label><br>
+                                        @if ($is_edit)
+                                            <input wire:model.defer="member_2_twibbon" type="text"
+                                                id="member_2_twibbon" name="member_2_twibbon"
+                                                class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
+                                                style="color: black;margin-top:0;" required
+                                                {{ $readonly ? 'disabled' : '' }}>
+                                        @else
+                                            <p class="font-bold text-lg">{{ $member_2_twibbon }}</p>
                                         @endif
                                     </div>
                                     @if (!$is_junior)
