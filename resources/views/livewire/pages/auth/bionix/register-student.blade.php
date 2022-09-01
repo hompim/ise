@@ -153,7 +153,8 @@
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Link Twibbon 1">
                     <small>Pastikan akun instagram kamu tidak private dan jangan menghapus postingan sebelum admin
-                        memverifikasi Tim kamu</small>
+                        memverifikasi Tim kamu, dan jangan lupa follow IG di <a
+                            href="https://www.instagram.com/is_expo/">@is_expo</a> </small>
                 </div>
                 <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="kartu-pelajar1">Kartu Pelajar Anggota 1
