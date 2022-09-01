@@ -23,6 +23,7 @@ return new class extends Migration
             $table->enum('competition_round', ['Administrasi', 'Seleksi','Pending' ,'Commitement Fee','Penyisihan', 'Semifinal', 'Final', 'Rejected'])->default('Administrasi');
             $table->enum('commitement_payment_status', ['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak'])->default('Belum Unggah');
             $table->string('commitement_payment_path')->nullable();
+            $table->string('jawaban_seleksi_path')->nullable();
             $table->text('commitement_payment_comment')->nullable();
             $table->unsignedBigInteger('leader_id');
             $table->unsignedBigInteger('member1_id')->nullable();

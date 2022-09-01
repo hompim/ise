@@ -26,10 +26,16 @@ class bionixcheck
                 if (Auth::user()->userable->bionix->payment_verif_status == 'Terverifikasi') {
                     return $next($request);
                 }
+            } elseif ($type == 'dp_terverifikasi') {
+                if (Auth::user()->userable->bionix->invoice->isNotEmpty()) {
+                    if(Auth::user()->userable->bionix->invoice->status == 'Terverifikasi'){
+                        return $next($request);
+                    }
+                }
             } elseif ($type == 'unregistered') {
                 if (!Auth::user()->userable->bionix_id) {
                     return $next($request);
-                }else{
+                } else {
                     return redirect(route('bionix.peserta.homepage'));
                 }
             }

@@ -228,17 +228,17 @@ class Sidebar extends Component
                     );
                 }
 
-                if (Auth::user()->userable->jenjang == 'SMA' && Auth::user()->userable->dp->isNotEmpty()) {
-                    array_push(
-                        $this->menu,
-                        [
-                            'type' => 'menu',
-                            'icon' => 'cil-book',
-                            'title' => 'Soal Tryout',
-                            'route-name' => 'bionix.peserta.tryout'
-                        ]
-                    );
-                }
+                // if (Auth::user()->userable->jenjang == 'SMA' && Auth::user()->userable->dp->isNotEmpty()) {
+                //     array_push(
+                //         $this->menu,
+                //         [
+                //             'type' => 'menu',
+                //             'icon' => 'cil-book',
+                //             'title' => 'Soal Tryout',
+                //             'route-name' => 'bionix.peserta.tryout'
+                //         ]
+                //     );
+                // }
 
                 array_push(
                     $this->menu,
