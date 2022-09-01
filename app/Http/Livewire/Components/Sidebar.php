@@ -145,6 +145,12 @@ class Sidebar extends Component
                         'title' => 'Verifikasi Administrasi',
                         'route-name' => 'academy.admin.verifikasi'
                     ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-book',
+                        'title' => 'Verifikasi Seleksi',
+                        'route-name' => 'academy.admin.verifikasi-seleksi'
+                    ],
                     // [
                     //     'type' => 'title',
                     //     'title' => 'Webinar Kick Off'
