@@ -1,4 +1,5 @@
 <?php
+
 use App\Models\User;
 use App\Mail\AcademyMail;
 use App\Mail\SertifikatMail;
@@ -61,7 +62,7 @@ Route::group(['prefix' => 'icon'], function () {
     Route::get('startup', Startup::class)->name('startup-academy');
 
     // Route e-hall
-    Route::group(['prefix' => 'e-hall'], function () {
+    Route::group(['prefix' => 'hall-of-is'], function () {
         // icon/e-hall/
         Route::get('/', EHallIndex::class)->name('e-hall');
         // Route startup e-hall
@@ -102,6 +103,10 @@ Route::group(['prefix' => 'icon'], function () {
 Route::get('/coming-soon', function () {
     return view('coming-soon-page');
 })->name('coming-soon');
+// Closed Registration Route
+Route::get('/closed-registration', function () {
+    return view('closed-registration');
+})->name('closed-registration');
 
 Route::get('/sendEmail', function () {
     $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->get();

@@ -49,7 +49,7 @@
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Masukkan nama tim kamu">
                 </div>
-                {{-- <div class="flex flex-col my-11 space-y-2 font-medium font-poppins">
+                {{-- <div class="flex flex-col space-y-2 font-medium my-11 font-poppins">
                 <label for="asal-sekolah" class="text-white">Asal Sekolahmu</label>
                 <select wire:model.defer ="school_name" id="asal-sekolah" name="school_name" required
                     class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white">
@@ -60,13 +60,13 @@
                     <option value="1" class="bg-liteBlack ">sma 1</option>
                 </select>
             </div> --}}
-                <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="name">Asal Sekolahmu</label>
                     <input wire:model.defer="school_name" id="name" name="school_name" type="text" required
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Masukkan sekolah kamu">
                 </div>
-                <div class="flex flex-col my-11 space-y-2 font-medium font-poppins">
+                <div class="flex flex-col space-y-2 font-medium my-11 font-poppins">
                     <label for="asal-domisili" class="text-white">Asal provinsi/kota/kabupaten
                         sekolahmu</label>
                     <select wire:model="school_city" name="school_city" id="asal-domisili" required
@@ -77,7 +77,7 @@
                             sekolah
                             kamu</option>
                         @foreach ($cities as $city)
-                            <option class="bg-liteBlack text-white" value="{{ $city->id }}">{{ $city->name }}
+                            <option class="text-white bg-liteBlack" value="{{ $city->id }}">{{ $city->name }}
                             </option>
                         @endforeach
                     </select>
@@ -98,23 +98,23 @@
             {{-- step 2 Anggota Tim --}}
             <div class="{{ $step == 2 ? null : 'hidden' }}">
                 {{-- anggota 1 --}}
-                <h3 class="text-4xl mb-5 font-semibold text-white underline underline-offset-2 decoration-purple-200">
+                <h3 class="mb-5 text-4xl font-semibold text-white underline underline-offset-2 decoration-purple-200">
                     Anggota 1
                 </h3>
-                <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="name">Nama Lengkap</label>
                     <input id="name" name="member_1_name" wire:model.defer="member_1_name" type="text" required
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Masukkan nama lengkap anggota 1">
                 </div>
-                <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="email-address">Email address</label>
                     <input id="email-address" name="member_1_email" wire:model.defer="member_1_email" type="email"
                         required
                         class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                         placeholder="Masukkan email aktif anggota 1">
                 </div>
-                <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="wa">Nomor WhatsApp</label>
                     <input id="wa" name="member_1_whatsapp" wire:model.defer="member_1_whatsapp" type="tel"
                         required
@@ -134,7 +134,8 @@
                         <input id="kelas11" name="member_1_class" wire:model.defer="member_1_class" type="radio"
                             value="11" required
                             class="p-2 bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  checked:bg-purple-200 cursor-pointer">
-                        <label for="kelas11" class="!mt-0 ml-2 font-light text-white font-poppins cursor-pointer">Kelas
+                        <label for="kelas11"
+                            class="!mt-0 ml-2 font-light text-white font-poppins cursor-pointer">Kelas
                             11</label>
                     </div>
                     <div class="flex items-center mb-2">
@@ -146,23 +147,24 @@
                             12</label>
                     </div>
                 </div>
-                <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="name">Link Twibbon</label>
                     <input wire:model.defer="twibbon_1" id="name" name="twibbon_1" type="text" required
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Link Twibbon 1">
                     <small>Pastikan akun instagram kamu tidak private dan jangan menghapus postingan sebelum admin
-                        memverifikasi Tim kamu</small>
+                        memverifikasi Tim kamu, dan jangan lupa follow IG di <a
+                            href="https://www.instagram.com/is_expo/">@is_expo</a> </small>
                 </div>
-                <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="kartu-pelajar1">Kartu Pelajar Anggota 1
                     </label>
-                    <input id="kartu-pelajar1" name="ktm_1" wire:model.defer="ktm_1" type="file" required
+                    <input id="kartu-pelajar1" name="ktm_1" wire:model.defer="ktm_1" type="file"
                         class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Kartu Pelajar Anggota 1">
                 </div>
 
-                {{-- <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                {{-- <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                 <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
                         href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
                 </label>
@@ -176,19 +178,19 @@
                 <h3 class="text-4xl font-semibold text-white underline underline-offset-2 decoration-purple-200">
                     Anggota 2
                 </h3>
-                <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="name">Nama Lengkap</label>
                     <input id="name" name="member_2_name" wire:model.defer="member_2_name" type="text"
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Masukkan nama lengkap anggota 2">
                 </div>
-                <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="email-address">Email address</label>
                     <input id="email-address" name="member_2_email" wire:model.defer="member_2_email" type="email"
                         class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                         placeholder="Masukkan email aktif anggota 2">
                 </div>
-                <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="wa">Nomor WhatsApp</label>
                     <input id="wa" name="member_2_whatsapp" wire:model.defer="member_2_whatsapp"
                         type="tel"
@@ -222,7 +224,7 @@
                             12</label>
                     </div>
                 </div>
-                <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="name">Link Twibbon</label>
                     <input wire:model.defer="twibbon_2" id="name" name="twibbon_2" type="text"
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
@@ -231,14 +233,14 @@
                         memverifikasi Tim kamu</small>
 
                 </div>
-                <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="kartu-pelajar1">Kartu Pelajar
                     </label>
                     <input id="kartu-pelajar1" name="ktm_2" wire:model.defer="ktm_2" type="file"
                         class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Kartu Pelajar Anggota 2">
                 </div>
-                {{-- <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                {{-- <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
                             href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
                     </label>
@@ -274,7 +276,7 @@
                     </select>
                 </div>
 
-                <div class="flex-row space-x-4 my-11 font-medium font-poppins">
+                <div class="flex-row space-x-4 font-medium my-11 font-poppins">
                     <input type="checkbox" id="setuju-kebijakan" name="agree" wire:model.defer="agree"
                         class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
                     <label class="text-white" for="setuju-kebijakan"> Saya setuju dengan kebijakan privasi serta <a

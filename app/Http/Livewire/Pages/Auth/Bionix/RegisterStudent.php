@@ -22,7 +22,7 @@ class RegisterStudent extends Component
     public $isAkunDone = false;
     public $errorMessage;
     public $team_name, $info_source, $member_1_name, $member_2_name, $member_1_email, $member_2_email, $member_1_whatsapp, $member_2_whatsapp, $member_1_class, $member_2_class, $school_name, $school_city, $password, $re_password, $region = '1', $agree;
-    public $twibbon_1,$twibbon_2;
+    public $twibbon_1, $twibbon_2;
     public $ktm_1, $ktm_2;
     public $instagram_1, $instagram_2;
     public $with_member;
@@ -34,7 +34,7 @@ class RegisterStudent extends Component
             $this->step = $toStep;
             $this->errorMessage = '';
         } elseif ($toStep == 2) {
-            if ($this->isIdentityDone ) {
+            if ($this->isIdentityDone) {
                 $this->step = $toStep;
                 $this->errorMessage = '';
             } else {
@@ -69,7 +69,7 @@ class RegisterStudent extends Component
             'member_1_class' => 'required',
             'twibbon_1' => 'required', // 1MB Max
             'ktm_1' => 'required|image|max:2048', // 1MB Max
-            'instagram_1' => 'required|image|max:2048', // 1MB Max
+            // 'instagram_1' => 'required|image|max:2048', // 1MB Max
         ]);
 
         if ($this->member_1_email == $this->member_2_email) {
@@ -94,7 +94,7 @@ class RegisterStudent extends Component
             'ktm_1' => 'required|image|max:2048', // 1MB Max
 
         ];
-        if ($this->member_2_email || $this->member_2_name || $this->member_2_whatsapp || $this->member_2_class || $this->twibbon_2 || $this->ktm_2 || $this-> instagram_2) {
+        if ($this->member_2_email || $this->member_2_name || $this->member_2_whatsapp || $this->member_2_class || $this->twibbon_2 || $this->ktm_2 || $this->instagram_2) {
             $arr_validation = array_merge($arr_validation, [
                 'member_2_name' => 'required',
                 'member_2_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
@@ -155,8 +155,10 @@ class RegisterStudent extends Component
 
 
             Storage::disk('public')
-                ->put('bionix/' . $ktm,
-                    $resized_image_ktm->__toString());
+                ->put(
+                    'bionix/' . $ktm,
+                    $resized_image_ktm->__toString()
+                );
             // Storage::disk('public')
             //     ->put('bionix/' . $instagram,
             //         $resized_image_instagram->__toString());
@@ -197,13 +199,15 @@ class RegisterStudent extends Component
 
 
                 Storage::disk('public')
-                    ->put('bionix/' . $ktm2,
-                        $resized_image_ktm2->__toString());
+                    ->put(
+                        'bionix/' . $ktm2,
+                        $resized_image_ktm2->__toString()
+                    );
                 // Storage::disk('public')
                 //     ->put('bionix/' . $instagram2,
                 //         $resized_image_instagram2->__toString());
 
-                    $team_member_2->update([
+                $team_member_2->update([
                     'identity_card_path' => 'bionix/' . $ktm2,
                 ]);
             }
@@ -217,7 +221,7 @@ class RegisterStudent extends Component
             'leader_id' => $team_member_1->id,
         ]);
 
-        if($this->with_member){
+        if ($this->with_member) {
             $team_data->update([
                 'member_id' => $team_member_2->id
             ]);
@@ -232,7 +236,8 @@ class RegisterStudent extends Component
     }
 
 
-    public function updatedSchoolCity(){
+    public function updatedSchoolCity()
+    {
         $this->region = City::find($this->school_city)->region;
     }
 
@@ -242,11 +247,12 @@ class RegisterStudent extends Component
         $this->resetErrorBag();
     }
 
-    public function mount(){
+    public function mount()
+    {
         $this->member_1_name = Auth::user()->name;
         $this->member_1_email = Auth::user()->email;
 
-        if(Auth::user()->userable->roadshow_school){
+        if (Auth::user()->userable->roadshow_school) {
             $this->school_name = Auth::user()->userable->roadshow_school->school_name;
         }
 

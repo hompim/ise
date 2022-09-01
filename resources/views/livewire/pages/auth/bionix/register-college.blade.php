@@ -41,18 +41,19 @@
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Masukkan nama tim kamu" wire:model.defer="team_name" name="team_name">
                 </div>
-                <div class="flex flex-col my-11 space-y-2 font-medium font-poppins">
+                <div class="flex flex-col space-y-2 font-medium my-11 font-poppins">
                     <label for="asal-domisili" class="text-white">Asal Daerah</label>
-                    <select wire:model ="city" name="city" id="asal-domisili" required
+                    <select wire:model="city" name="city" id="asal-domisili" required
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  text-white"
                         name="city">
                         <option class="bg-liteBlack" selected value="">Pilih asal daerah</option>
-                            @foreach ($cities as $city )
-                                <option class="bg-liteBlack text-white" value="{{$city->id}}">{{$city->name}}</option>
-                            @endforeach
+                        @foreach ($cities as $city)
+                            <option class="text-white bg-liteBlack" value="{{ $city->id }}">{{ $city->name }}
+                            </option>
+                        @endforeach
                     </select>
                 </div>
-                <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="name">Judul Ide</label>
                     <input id="name" type="text"
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
@@ -81,56 +82,56 @@
                     <h3 class="text-4xl font-semibold text-white underline underline-offset-2 decoration-purple-200">
                         Anggota {{ $x }} {{ $x == 4 || $x == 5 ? '(Opsional)' : null }}
                     </h3>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="name">Nama Lengkap</label>
                         <input id="name" wire:model.defer="member_{{ $x }}_name"
                             name="member_{{ $x }}_name" type="text"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nama lengkap anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="email-address">Email</label>
                         <input id="email-address" wire:model.defer="member_{{ $x }}_email"
                             name="member_{{ $x }}_email" type="email"
                             class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                             placeholder="Masukkan email aktif anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Nomor WhatsApp</label>
                         <input id="wa" type="text" wire:model.defer="member_{{ $x }}_whatsapp"
                             name="member_{{ $x }}_whatsapp"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nomor WhatsApp anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Asal Institusi</label>
                         <input id="wa" wire:model.defer="member_{{ $x }}_university"
                             name="member_{{ $x }}_university"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan Asal Institusi anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Jurusan</label>
                         <input id="wa" wire:model.defer="member_{{ $x }}_major"
                             name="member_{{ $x }}_university"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan jurusan anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col my-11 space-y-2 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Tahun Angkatan</label>
                         <input id="wa" wire:model.defer="member_{{ $x }}_year"
                             name="member_{{ $x }}_university"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan tahun angkatan anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Akun Instagram</label>
                         <input wire:model.defer="member_{{ $x }}_instagram"
                             name="member_{{ $x }}_instagram"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan akun instagram anggota {{ $x }}">
                     </div>
-                    <div class="flex flex-col space-y-2 my-11 font-medium text-white font-poppins">
+                    <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Link Twibbon</label>
                         <input wire:model.defer="member_{{ $x }}_twibbon"
                             name="member_{{ $x }}_twibbon"
@@ -140,8 +141,8 @@
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="ktm_{{ $x }}">Bukti Mahasiswa S1/Sederajat Aktif
                         </label>
-                        <input wire:model.defer="member_{{ $x }}_ktm" name="member_{{ $x }}_ktm"
-                            type="file"
+                        <input wire:model.defer="member_{{ $x }}_ktm"
+                            name="member_{{ $x }}_ktm" type="file"
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Bukti Mahasiswa S1/Sederajat Aktif Anggota {{ $x }}"
                             accept=".jpg,.png">
@@ -150,7 +151,7 @@
                         <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"
                                 href="https://www.instagram.com/is_expo/" target="_blank">@isexpo</a>
                         </label>
-                        <div class="flex flex-row justify-start items-center">
+                        <div class="flex flex-row items-center justify-start">
                             <button id="buton"
                                 class=" flex items-center py-2.5 px-5   rounded-md bg-transparent !border border-[#6B7280]  focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent">
                                 <img class="mr-4" src="{{ asset('images/upload.svg') }}" alt=""> Add File
@@ -232,7 +233,9 @@
                         <p class="font-normal">{{ $errorMessage }}</p>
                     @endif
                 </div>
-                <button type="button" title="Hapus" wire:click="closeMessage()" class="self-start"><p class="text-white text-sm">Tutup</p></i></button>
+                <button type="button" title="Hapus" wire:click="closeMessage()" class="self-start">
+                    <p class="text-sm text-white">Tutup</p></i>
+                </button>
             </div>
         </div>
     @endif
