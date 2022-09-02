@@ -30,7 +30,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Passport::loadKeysFrom(__DIR__.'/../secrets/oauth');
+        //Passport::loadKeysFrom(__DIR__.'/../secrets/oauth');
 
         Passport::tokensCan([
             'identity' => 'Mengambil data diri akun seperti nama dan email'
