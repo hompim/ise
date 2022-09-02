@@ -34,8 +34,6 @@ class AuthServiceProvider extends ServiceProvider
             'identity' => 'Mengambil data diri akun seperti nama dan email'
         ]);
 
-        Passport::enableImplicitGrant();
-
         VerifyEmail::toMailUsing(function (User $user, string $verificationUrl) {
             return (new MailMessage)
                 ->greeting('Verifikasi Email Kamu')
