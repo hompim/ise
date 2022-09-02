@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:api', 'usertypecheck:bionix_peserta', 'bionixcheck:pembayaran_terverifikasi','usertypecheck:SMA'])->get('/moodle-user', function (Request $request) {
+Route::middleware(['auth:api'])->get('/moodle-user', function (Request $request) {
     return response()->json([
         'team_name' => Auth::user()->userable->bionix->team_name,
         'region' => 'Region ' . Auth::user()->userable->bionix->city->region,
