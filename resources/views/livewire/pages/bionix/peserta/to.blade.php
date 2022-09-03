@@ -1,9 +1,9 @@
-<div class="px-8">
+<div class="px-8 text-white">
     <h3 class="text-xl font-weight-bold my-4">Try Out</h3>
     <div class="grid grid-cols-1 gap-6 mt-4 mb-4">
         <div>
 
-            <div class="p-4 bg-white rounded-xl shadow-md">
+            <div class="p-4 rounded-xl shadow-md border-0" style="background-color: #191a1e">
                 <div>
                     <h2
                         class="font-bold text-lg text-gray-600 capitalize">Jadwal Try Out</h2>
@@ -26,7 +26,7 @@
                         <a href="https://www.competition.ise-its.com" target="_blank">
                             <button
                                 type="button"
-                                class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2">
+                                class="bg-purple-400 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mx-2">
                                 Menuju Website Try Out
                             </button>
                         </a>
