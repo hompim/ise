@@ -7,9 +7,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManager;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Pembayaran extends Component
 {
+    use WithFileUploads;
+
     public $image;
     public $payment_price;
     public $alert_color, $alert_header,$alert_content;

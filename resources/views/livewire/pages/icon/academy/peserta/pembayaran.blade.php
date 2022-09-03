@@ -42,7 +42,7 @@
                                         berikut
                                         : </h5>
                                     <center><img
-                                            src="{{asset('img/global/'.\App\Models\Setting::where('name','bionix_bank_name')->first()->value.'.png')}}"
+                                            src="{{asset('images/global/'.\App\Models\Setting::where('name','bionix_bank_name')->first()->value.'.png')}}"
                                             alt="Logo Bank"
                                             class="object-scale-down md:h-1/2 h-14 max-w-xs"/></center>
                                     <h4 class="text-center text-2xl">{{\App\Models\Setting::where('name','bionix_bank_norek')->first()->value}}</h4>
@@ -67,7 +67,7 @@
                                     </label>
                                 </center>
                                 <img
-                                    src="{{$image?$image->temporaryUrl():((Auth::user()->userable->academy->commitement_payment_path&&(Auth::user()->userable->academy->commitement_payment_status=='Terverifikasi'||Auth::user()->userable->academy->commitement_payment_status=='Tahap Verifikasi'))?asset('storage/'.Auth::user()->userable->academy->commitement_payment_path):asset('/img/global/placeholder-image.png'))}}"
+                                    src="{{$image?$image->temporaryUrl():((Auth::user()->userable->academy->commitement_payment_path&&(Auth::user()->userable->academy->commitement_payment_status=='Terverifikasi'||Auth::user()->userable->academy->commitement_payment_status=='Tahap Verifikasi'))?asset('storage/'.Auth::user()->userable->academy->commitement_payment_path):null}}"
                                     class="object-fit mx-auto 2xl:max-h-80" alt="Bukti Transfer"
                                     id="bukti_transfer_preview">
                                 @if(Auth::user()->userable->academy->commitement_payment_status=='Belum Unggah'||Auth::user()->userable->academy->commitement_payment_status=='Ditolak')
