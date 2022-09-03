@@ -8,7 +8,7 @@
     <form wire:submit.prevent="submit" class="mt-4">
         <p>Apakah anda ingin {{$type=='accept'?'menerima':'menolak'}} pembayaran tim ini?</p>
         @if($type=='reject')
-            <p>Sertakan komentar apabila anda ingin menolak pembayaran tim ini :</p>
+            {{-- <p>Sertakan komentar apabila anda ingin menolak pembayaran tim ini :</p> --}}
             {{-- <div class="mt-2 bg-white" wire:ignore>
                 <div
                     name="comment"

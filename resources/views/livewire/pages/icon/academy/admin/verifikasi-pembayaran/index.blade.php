@@ -5,6 +5,7 @@
     <div class="card rounded-xl p-2" style="background-color: #191a1e; border:0">
         <div class="card-body">
             <div class="">
+                <livewire:pages.icon.academy.admin.verifikasi-pembayaran.datatables.index model="App\Models\Icon\IconAcademyDataScienceData" />
             </div>
         </div>
     </div>
@@ -12,6 +13,7 @@
     <div class="card rounded-xl p-2" style="background-color: #191a1e; border:0">
         <div class="card-body">
             <div class="">
+                <livewire:pages.icon.academy.admin.verifikasi-pembayaran.datatables.index model="App\Models\Icon\IconAcademyStartupData" />
             </div>
         </div>
     </div>

@@ -5,10 +5,12 @@ namespace App\Http\Livewire\Pages\Icon\Academy\Admin\VerifikasiPembayaran\Compon
 use App\Models\Icon\IconAcademyDataScienceData;
 use App\Models\Icon\IconAcademyStartupData;
 use Livewire\Component;
+use LivewireUI\Modal\ModalComponent;
 
-class ModalDetail extends Component
+class ModalDetail extends ModalComponent
 {
     public $icon_data;
+    public $type;
 
     public function render()
     {
@@ -16,6 +18,7 @@ class ModalDetail extends Component
     }
      public function mount($id, $type){
         $this->icon_data = $type == 'Startup' ? IconAcademyStartupData::find($id) : IconAcademyDataScienceData::find($id);
+        $this->type = $type;
      }
 
 }

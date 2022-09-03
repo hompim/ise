@@ -5,8 +5,9 @@ namespace App\Http\Livewire\Pages\Icon\Academy\Admin\VerifikasiPembayaran\Compon
 use App\Models\Icon\IconAcademyDataScienceData;
 use App\Models\Icon\IconAcademyStartupData;
 use Livewire\Component;
+use LivewireUI\Modal\ModalComponent;
 
-class ModalAcceptReject extends Component
+class ModalAcceptReject extends ModalComponent
 {
     public function render()
     {
@@ -33,7 +34,7 @@ class ModalAcceptReject extends Component
         } elseif ($this->type == 'accept') {
             $this->icon_data->update([
                 'commitement_payment_status' => 'Terverifikasi',
-                'competition_round' => 'Terverifikasi',
+                'competition_round' => 'Penyisihan',
             ]);
         }
         $this->emit('refreshLivewireDatatable');

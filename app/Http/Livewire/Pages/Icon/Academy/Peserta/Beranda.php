@@ -85,6 +85,12 @@ class Beranda extends Component
                 $this->alert_content = 'Sebelum melanjutkan, setiap Tim Academy ISE! 2022 wajib terlebih dahulu membayar commitment fee pada menu pembayaran';
                 $this->readonly = false;
                 break;
+            case 'Penyisihan':
+                $this->alert_color = 'blue';
+                $this->alert_header = 'Penyisihan';
+                $this->alert_content = 'Tim anda berapa pada tahap penyisihan Academy ISE! 2022,  tunggu info lebih lanjut dari kami melalui media sosiao resmi ISE! 2022';
+                $this->readonly = false;
+                break;
             default:
                 $this->alert_color = 'blue';
                 $this->alert_header = 'Segera Lakukan Verifikasi Identitas';
