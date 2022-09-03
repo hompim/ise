@@ -42,15 +42,15 @@
                                         berikut
                                         : </h5>
                                     <center><img
-                                            src="{{asset('img/global/'.\App\Models\Setting::where('name','icon_bank_name')->first()->value.'.png')}}"
+                                            src="{{asset('img/global/'.\App\Models\Setting::where('name','bionix_bank_name')->first()->value.'.png')}}"
                                             alt="Logo Bank"
                                             class="object-scale-down md:h-1/2 h-14 max-w-xs"/></center>
-                                    <h4 class="text-center text-2xl">{{\App\Models\Setting::where('name','icon_bank_norek')->first()->value}}</h4>
+                                    <h4 class="text-center text-2xl">{{\App\Models\Setting::where('name','bionix_bank_norek')->first()->value}}</h4>
                                     <h4 class="text-center text-2xl">
                                         a.n. {{\App\Models\Setting::where('name','bionix_bank_owner')->first()->value}}</h4>
                                 @endif
                                 <h5 class="text-center font-normal text-xl mt-4">Jumlah yang harus dibayar : </h5>
-                                <h1 class="text-center text-4xl font-bold">{{"Rp " . number_format($payment_price,2,',','.')}}</h1>
+                                <h1 class="text-center text-4xl font-bold">{{"Rp " . number_format(150000,2,',','.')}}</h1>
                             </div>
                         </div>
                     </div>
