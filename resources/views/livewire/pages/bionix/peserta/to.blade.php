@@ -8,9 +8,9 @@
                     <h2
                         class="font-bold text-lg text-gray-600 capitalize">Jadwal Try Out</h2>
                     <ol class="list-decimal ml-4">
-                        <li>Try Out 1 : 3 September 2021 09:00 - 22.00 WIB
+                        <li>Try Out 1 : 3 September 2022 09:00 - 22.00 WIB
                         </li>
-                        <li>Try Out 1 : 12 September 2021 09:00 - 22.00 WIB
+                        <li>Try Out 1 : 12 September 2022 09:00 - 22.00 WIB
                         </li>
                     </ol>
                     <h2>Berikut beberapa panduan yang bisa anda ikuti bisa mengalami kesulitan</h2>
