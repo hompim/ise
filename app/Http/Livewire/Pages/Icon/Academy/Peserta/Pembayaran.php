@@ -12,6 +12,7 @@ class Pembayaran extends Component
 {
     public $image;
     public $payment_price;
+    public $alert_color, $alert_header,$alert_content;
 
     public function save()
     {
@@ -36,13 +37,36 @@ class Pembayaran extends Component
         ]);
     }
 
+    public function statusNotification()
+    {
+
+        $this->alert_color = Auth::user()->userable->academy->commitement_payment_status == 'Tahap Verifikasi' ? 'purple'
+            : (Auth::user()->userable->academy->commitement_payment_status == 'Terverifikasi' ? 'green'
+                : (Auth::user()->userable->academy->commitement_payment_status == 'Ditolak' ? 'red'
+                    : 'blue'));
+
+        $this->alert_content = Auth::user()->userable->academy->commitement_payment_status == 'Tahap Verifikasi' ? 'Mohon tunggu beberapa saat hingga pembayaran anda diverifikasi oleh admin'
+            : (Auth::user()->userable->academy->commitement_payment_status == 'Terverifikasi' ? ($this->is_junior ? 'Selamat pembayaran anda sudah diverifiksi. Silahkan menunggu info selanjutnya dari kami.' : 'Selanjutnya anda dapat mengikuti tahap penyisihan.')
+                : (Auth::user()->userable->academy->commitement_payment_status == 'Ditolak' ? 'Pembayaran Anda ditolak karena alasan berikut : ' . Auth::user()->userable->bionix->payment_verif_comment
+                    : 'Lakukan pengajuan verifikasi Pembayaran Anda dengan mengupload bukti pembayaran sesuai dengan jumlah pembayaran.'));
+
+        $this->alert_header =  Auth::user()->userable->academy->commitement_payment_status == 'Tahap Verifikasi' ? 'Pembayaran Anda Sedang Dalam Tahap Verifikasi'
+            : (Auth::user()->userable->academy->commitement_payment_status == 'Terverifikasi' ? 'Pembayaran Anda Telah Terverifikasi'
+                : (Auth::user()->userable->academy->commitement_payment_status == 'Ditolak' ? 'Pembayaran Anda Ditolak'
+                    : 'Segera Lakukan Verifikasi Pembayaran Anda Anda'));
+    }
+
     public function closeMessage()
     {
         session()->remove('error');
     }
 
+    public function mount(){
+        $this->statusNotification();
+    }
+
     public function render()
     {
-        return view('livewire.pages.icon.academy.peserta.pembayaran');
+        return view('livewire.pages.icon.academy.peserta.pembayaran')->layout('layouts.dashboard');
     }
 }
