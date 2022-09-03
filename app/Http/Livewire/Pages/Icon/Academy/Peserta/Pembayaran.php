@@ -13,11 +13,6 @@ class Pembayaran extends Component
     public $image;
     public $payment_price;
 
-    public function mount()
-    {
-        $this->payment_price = Setting::where('name', (Auth::user()->userable->academy_type == 'App\Models\Icon\IconAcademyDataScienceData' ? 'academy_ds_price' : 'academy_startup_price'))->first()->value;
-    }
-
     public function save()
     {
         $this->validate([
