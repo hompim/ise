@@ -67,7 +67,7 @@
                                     </label>
                                 </center>
                                 <img
-                                    src="{{$image?$image->temporaryUrl():((Auth::user()->userable->academy->commitement_payment_path&&(Auth::user()->userable->academy->commitement_payment_status=='Terverifikasi'||Auth::user()->userable->academy->commitement_payment_status=='Tahap Verifikasi'))?asset('storage/'.Auth::user()->userable->academy->commitement_payment_path):null}}"
+                                    src="{{$image?$image->temporaryUrl():((Auth::user()->userable->academy->commitement_payment_path&&(Auth::user()->userable->academy->commitement_payment_status=='Terverifikasi'||Auth::user()->userable->academy->commitement_payment_status=='Tahap Verifikasi'))?asset('storage/'.Auth::user()->userable->academy->commitement_payment_path):asset('/img/global/placeholder-image.png'))}}"
                                     class="object-fit mx-auto 2xl:max-h-80" alt="Bukti Transfer"
                                     id="bukti_transfer_preview">
                                 @if(Auth::user()->userable->academy->commitement_payment_status=='Belum Unggah'||Auth::user()->userable->academy->commitement_payment_status=='Ditolak')
