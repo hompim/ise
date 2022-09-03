@@ -72,6 +72,7 @@ Route::middleware('auth')->group(function () {
                     Route::get('daftar-peserta', \App\Http\Livewire\Pages\Icon\Academy\Admin\DaftarPeserta\Index::class)->name('academy.admin.daftar-peserta');
                     Route::get('verifikasi', \App\Http\Livewire\Pages\Icon\Academy\Admin\Verifikasi\Index::class)->name('academy.admin.verifikasi');
                     Route::get('verifikasi-seleksi', \App\Http\Livewire\Pages\Icon\Academy\Admin\VerifikasiSeleksi\Index::class)->name('academy.admin.verifikasi-seleksi');
+                    Route::get('verifikasi-pembayaran', \App\Http\Livewire\Pages\Icon\Academy\Admin\VerifikasiPembayaran\Index::class)->name('academy.admin.verifikasi-pembayaran');
                 });
 
                 Route::group(['prefix' => 'webinar'], function () {
