@@ -40,7 +40,8 @@ class ModalEdit extends ModalComponent
             $this->validate([
                 'anggota_1' => 'required|string',
                 'anggota_1_email' => 'required|string|email',
-                'nama_institusi' => 'required|string'
+                'nama_institusi' => 'required|string',
+                'tim' => 'required'
             ]);
             if ($this->bionix_data->member_id) {
                 $this->validate([

@@ -12,7 +12,7 @@
                 <div class="p-4 rounded-xl shadow-md" x-data="{ open: false }" style="background-color: #191a1e;border:0">
                     <button class="w-full flex flex-col items-start" @click="open=!open">
                         <div class="flex flex-row items-center w-full justify-content-between">
-                            <h2 class="font-bold text-xl  capitalize">Soal Tryout</h2>
+                            <h2 class="font-bold text-xl  capitalize">Bonus Soal Tryout</h2>
                             <i class="fas fa-chevron-down" x-show="!open"></i>
                             <i class="fas fa-chevron-up" x-show="open"></i>
                         </div>
