@@ -32,7 +32,6 @@ class Index extends LivewireDatatable
         $column = [];
         if ($this->model == 'App\Models\Icon\IconAcademyStartupData') {
             $column = [
-                Column::checkbox(),
                 Column::raw('Concat("STR",
                                     IF(`icon_academy_startup_data`.`id`<10,concat("000",`icon_academy_startup_data`.`id`),
                                         IF(`icon_academy_startup_data`.`id`>=10 AND `icon_academy_startup_data`.`id`<100,concat("00",`icon_academy_startup_data`.`id`),
@@ -54,7 +53,6 @@ class Index extends LivewireDatatable
             ];
         } elseif ($this->model == 'App\Models\Icon\IconAcademyDataScienceData') {
             $column = [
-                Column::checkbox(),
                 Column::raw('Concat("DSC",
                                     IF(`icon_academy_data_science_data`.`id`<10,concat("000",`icon_academy_data_science_data`.`id`),
                                         IF(`icon_academy_data_science_data`.`id`>=10 AND `icon_academy_data_science_data`.`id`<100,concat("00",`icon_academy_data_science_data`.`id`),
