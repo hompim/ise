@@ -27,6 +27,7 @@ class Index extends LivewireDatatable
     public function columns()
     {
         $this->type = $this->model == 'App\Models\Icon\IconAcademyStartupData' ? 'Startup' : 'DataScience';
+
         return [
             Column::name('team_name')->searchable()->label('Nama Tim'),
             Column::name('university_name')->searchable()->label('Nama Institusi'),
