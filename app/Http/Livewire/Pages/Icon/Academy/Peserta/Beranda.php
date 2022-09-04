@@ -38,7 +38,7 @@ class Beranda extends Component
     public function Accept()
     {
         Auth::user()->userable->academy->update([
-            'competition_round' => 'Commitement Fee'
+            'competition_round' => 'Commitment Fee'
         ]);
 
         $this->alert();
