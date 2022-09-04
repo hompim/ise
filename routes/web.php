@@ -132,14 +132,13 @@ Route::get('/sendEmailLolosAcademy', function () {
 
 Route::get('/sendEmailTidakLolosAcademy', function () {
     $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->where('updated_at', '>=', '2022-09-01 00:00:00')->get();
-    dd($dsa);
     $sua = IconAcademyStartupData::where('competition_round', 'Rejected')->get();
     foreach ($dsa as $d) {
-        Mail::to($d->leader->email)->send(new TidakLolosAcademyEmail($d->leader->name, 'Rejected'));
+        Mail::to($d->leader->email)->send(new TidakLolosAcademyEmail($d->leader->name));
         sleep(1);
     }
     foreach ($sua as $d) {
-        Mail::to($d->leader->email)->send(new TidakLolosAcademyEmail($d->leader->name, 'Rejected'));
+        Mail::to($d->leader->email)->send(new TidakLolosAcademyEmail($d->leader->name));
         sleep(1);
     }
     // dd("Email Berhasil dikirim");
