@@ -11,6 +11,7 @@ class ModalAcceptReject extends ModalComponent
 {
 
     public $type;
+    public $icon_type;
     public $icon_data;
     public $comment = '';
     public $data_science = 'data-science';
@@ -28,7 +29,7 @@ class ModalAcceptReject extends ModalComponent
                 'competition_round' => 'Rejected',
             ]);
         } elseif ($this->type == 'accept') {
-            if($this->type == 'Startup'){
+            if($this->icon_type == 'Startup'){
                 $this->icon_data->update([
                     'competition_round' => 'Pending'
                 ]);
