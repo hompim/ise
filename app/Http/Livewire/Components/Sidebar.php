@@ -323,7 +323,7 @@ class Sidebar extends Component
                         'route-name' => 'academy.peserta.identitas-tim'
                     ],
                 );
-                if (Auth::user()->userable->academy->competition_round == "Commitment Fee" || Auth::user()->userable->academy->commitement_payment_status == "Terverifikasi") {
+                if (Auth::user()->userable->academy->competition_round == "Commitement Fee" || Auth::user()->userable->academy->commitement_payment_status == "Terverifikasi") {
                     array_push(
                         $this->menu,
                         [
