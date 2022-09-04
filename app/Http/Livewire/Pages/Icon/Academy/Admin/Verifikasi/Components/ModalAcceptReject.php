@@ -19,13 +19,12 @@ class ModalAcceptReject extends ModalComponent
     public function mount($modal_type, $type, $id)
     {
         $this->type = $modal_type;
-        $this->icon_type == $type;
+        $this->icon_type = $type;
         $this->icon_data = ($type == 'Startup' ? IconAcademyStartupData::find($id) : IconAcademyDataScienceData::find($id));
     }
 
     public function submit()
     {
-        dd($this->icon_type);
         if ($this->type == 'reject') {
             $this->icon_data->update([
                 'competition_round' => 'Rejected',
