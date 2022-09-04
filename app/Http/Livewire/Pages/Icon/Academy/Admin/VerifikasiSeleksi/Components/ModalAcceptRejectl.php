@@ -2,9 +2,13 @@
 
 namespace App\Http\Livewire\Pages\Icon\Academy\Admin\VerifikasiSeleksi\Components;
 
-use App\Models\Icon\IconAcademyDataScienceData;
 use Livewire\Component;
+use App\Mail\IconSeleksiEmail;
+use App\Mail\LolosAcademyEmail;
+use App\Mail\TidakLolosAcademyEmail;
+use Illuminate\Support\Facades\Mail;
 use LivewireUI\Modal\ModalComponent;
+use App\Models\Icon\IconAcademyDataScienceData;
 
 class ModalAcceptRejectl extends ModalComponent
 {
@@ -27,10 +31,12 @@ class ModalAcceptRejectl extends ModalComponent
             $this->team->update([
                 'competition_round' => 'Rejected',
             ]);
+            Mail::to($this->team->leader->email)->send(new TidakLolosAcademyEmail($this->team->leader->name));
         } elseif ($this->type == 'accept') {
             $this->team->update([
                 'competition_round' => 'Pending'
             ]);
+            Mail::to($this->team->leader->email)->send(new LolosAcademyEmail($this->team->leader->name));
         }
         $this->emit('refreshLivewireDatatable');
         $this->forceClose()->closeModal();

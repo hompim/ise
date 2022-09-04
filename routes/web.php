@@ -3,39 +3,43 @@
 use App\Models\User;
 use App\Mail\AcademyMail;
 use App\Mail\SertifikatMail;
+use App\Mail\IconSeleksiEmail;
+use App\Mail\LolosAcademyEmail;
+use App\Mail\TidakLolosAcademyEmail;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\WebinarKickOffAcaraMail;
 use Illuminate\Support\Facades\Route;
 use App\Models\Icon\IconWebinarKickOff;
 use App\Http\Livewire\Pages\Landing\Ise;
+use App\Mail\UnikTidakLolosAcademyEmail;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Livewire\Pages\Landing\Icon;
 use Spatie\SimpleExcel\SimpleExcelReader;
 use App\Http\Livewire\Pages\Landing\Bionix;
+use App\Models\Icon\IconAcademyStartupData;
+use App\Models\Icon\IconAcademyDataScienceData;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use App\Http\Livewire\Pages\Landing\Academy\Startup;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege;
 use App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent;
 use App\Http\Livewire\Pages\Bionix\Peserta\IdentitasTim;
 use App\Http\Livewire\Pages\Landing\Academy\DataScience;
 use App\Http\Livewire\Pages\Landing\EHall\Quiz\QuizPage;
+use App\Http\Livewire\Pages\Landing\EHall\Startup\Index;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\Challenge;
+use App\Http\Livewire\Pages\Landing\EHall\Startup\Content;
 use App\Http\Livewire\Pages\Auth\Bionix\RegistrasiRoadshow;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\TrueOrFalse;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\ChoosePicture;
 use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterStartup;
 use App\Http\Livewire\Pages\Landing\EHall\Index as EHallIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Quiz\MultipleChoice;
 use App\Http\Livewire\Pages\Auth\Icon\Academy\RegisterDataScience;
 use App\Http\Livewire\Pages\Landing\EHall\Game\Index as GameIndex;
-use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Content as PrestasiContent;
-use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Index as PrestasiIndex;
-use App\Http\Livewire\Pages\Landing\EHall\Quiz\Challenge;
-use App\Http\Livewire\Pages\Landing\EHall\Quiz\ChoosePicture;
 use App\Http\Livewire\Pages\Landing\EHall\Quiz\Index as QuizIndex;
-use App\Http\Livewire\Pages\Landing\EHall\Quiz\MultipleChoice;
-use App\Http\Livewire\Pages\Landing\EHall\Quiz\TrueOrFalse;
-use App\Http\Livewire\Pages\Landing\EHall\Startup\Content;
-use App\Http\Livewire\Pages\Landing\EHall\Startup\Index;
-use App\Mail\IconSeleksiEmail;
-use App\Models\Icon\IconAcademyDataScienceData;
-use Illuminate\Contracts\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
+use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Index as PrestasiIndex;
+use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Content as PrestasiContent;
 
 /*
 |--------------------------------------------------------------------------
@@ -107,6 +111,51 @@ Route::get('/coming-soon', function () {
 Route::get('/closed-registration', function () {
     return view('closed-registration');
 })->name('closed-registration');
+
+Route::get('/sendEmailLolosAcademy', function () {
+    $dsa = IconAcademyDataScienceData::where('competition_round', 'Pending')->get();
+    $sua = IconAcademyStartupData::where('competition_round', 'Pending')->get();
+    foreach ($dsa as $d) {
+        Mail::to($d->leader->email)->send(new LolosAcademyEmail($d->leader->name));
+        sleep(1);
+    }
+    foreach ($sua as $d) {
+        Mail::to($d->leader->email)->send(new LolosAcademyEmail($d->leader->name));
+        sleep(1);
+    }
+
+    dd("Email Berhasil dikirim");
+    return response()->json([
+        'success' => true
+    ]);
+});
+
+Route::get('/sendEmailTidakLolosAcademy', function () {
+    $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->where('updated_at', '>=', '2022-09-01 00:00:00')->get();
+    $sua = IconAcademyStartupData::where('competition_round', 'Rejected')->get();
+    foreach ($dsa as $d) {
+        Mail::to($d->leader->email)->send(new TidakLolosAcademyEmail($d->leader->name));
+        sleep(1);
+    }
+    foreach ($sua as $d) {
+        Mail::to($d->leader->email)->send(new TidakLolosAcademyEmail($d->leader->name));
+        sleep(1);
+    }
+    return response()->json([
+        'success' => true
+    ]);
+});
+Route::get('/sendEmailUnikTidakLolosAcademy', function () {
+    $dsa = IconAcademyStartupData::where('id', '28')->get();
+
+    foreach ($dsa as $d) {
+        Mail::to($d->leader->email)->send(new UnikTidakLolosAcademyEmail($d->leader->name));
+        sleep(1);
+    }
+    return response()->json([
+        'success' => true
+    ]);
+});
 
 Route::get('/sendEmail', function () {
     $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->get();
