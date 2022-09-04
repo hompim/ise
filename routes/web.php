@@ -141,7 +141,6 @@ Route::get('/sendEmailTidakLolosAcademy', function () {
         Mail::to($d->leader->email)->send(new TidakLolosAcademyEmail($d->leader->name));
         sleep(1);
     }
-    // dd("Email Berhasil dikirim");
     return response()->json([
         'success' => true
     ]);
@@ -153,7 +152,6 @@ Route::get('/sendEmailUnikTidakLolosAcademy', function () {
         Mail::to($d->leader->email)->send(new UnikTidakLolosAcademyEmail($d->leader->name));
         sleep(1);
     }
-    dd("Email Berhasil dikirim");
     return response()->json([
         'success' => true
     ]);
