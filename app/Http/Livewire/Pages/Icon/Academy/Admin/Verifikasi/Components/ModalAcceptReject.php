@@ -25,6 +25,7 @@ class ModalAcceptReject extends ModalComponent
 
     public function submit()
     {
+        dd($this->icon_type);
         if ($this->type == 'reject') {
             $this->icon_data->update([
                 'competition_round' => 'Rejected',
