@@ -112,45 +112,54 @@ Route::get('/closed-registration', function () {
     return view('closed-registration');
 })->name('closed-registration');
 
-// Route::get('/sendEmailLolosAcademy', function () {
-//     $dsa = IconAcademyDataScienceData::where('competition_round', 'Commitement Fee')->get();
+Route::get('/sendEmailLolosAcademy', function () {
+    $dsa = IconAcademyDataScienceData::where('competition_round', 'Pending')->get();
+    $sua = IconAcademyStartupData::where('competition_round', 'Pending')->get();
+    foreach ($dsa as $d) {
+        Mail::to($d->leader->email)->send(new LolosAcademyEmail($d->leader->name));
+        sleep(1);
+    }
+    foreach ($sua as $d) {
+        Mail::to($d->leader->email)->send(new LolosAcademyEmail($d->leader->name));
+        sleep(1);
+    }
 
-//     foreach ($dsa as $d) {
-//         Mail::to($d->leader->email)->send(new LolosAcademyEmail($d->leader->name, 'Commitement Fee'));
-//         sleep(2);
-//     }
+    dd("Email Berhasil dikirim");
+    return response()->json([
+        'success' => true
+    ]);
+});
 
-//     dd("Email Berhasil dikirim");
-//     return response()->json([
-//         'success' => true
-//     ]);
-// });
-
-// Route::get('/sendEmailTidakLolosAcademy', function () {
-//     $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->get();
-
-//     foreach ($dsa as $d) {
-//         Mail::to($d->leader->email)->send(new TidakLolosAcademyEmail($d->leader->name, 'Rejected'));
-//         sleep(2);
-//     }
-
-//     dd("Email Berhasil dikirim");
-//     return response()->json([
-//         'success' => true
-//     ]);
-// });
+Route::get('/sendEmailTidakLolosAcademy', function () {
+    $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->where('updated_at', '>=', '2022-09-01 00:00:00')->get();
+    dd($dsa);
+    $sua = IconAcademyStartupData::where('competition_round', 'Rejected')->get();
+    foreach ($dsa as $d) {
+        Mail::to($d->leader->email)->send(new TidakLolosAcademyEmail($d->leader->name, 'Rejected'));
+        sleep(1);
+    }
+    foreach ($sua as $d) {
+        Mail::to($d->leader->email)->send(new TidakLolosAcademyEmail($d->leader->name, 'Rejected'));
+        sleep(1);
+    }
+    // dd("Email Berhasil dikirim");
+    return response()->json([
+        'success' => true
+    ]);
+});
 Route::get('/sendEmailUnikTidakLolosAcademy', function () {
     $dsa = IconAcademyStartupData::where('id', '28')->get();
 
     foreach ($dsa as $d) {
         Mail::to($d->leader->email)->send(new UnikTidakLolosAcademyEmail($d->leader->name));
-        sleep(2);
+        sleep(1);
     }
     dd("Email Berhasil dikirim");
     return response()->json([
         'success' => true
     ]);
 });
+
 Route::get('/sendEmail', function () {
     $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->get();
 
