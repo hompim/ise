@@ -75,7 +75,7 @@ Route::middleware('auth')->group(function () {
                     Route::get('verifikasi-pembayaran', \App\Http\Livewire\Pages\Icon\Academy\Admin\VerifikasiPembayaran\Index::class)->name('academy.admin.verifikasi-pembayaran');
                 });
 
-                Route::group(['prefix' => 'ehall'], function() {
+                Route::group(['prefix' => 'ehall'], function () {
                     Route::get('artikel', \App\Http\Livewire\Pages\Icon\Ehall\Admin\Article\Index::class)->name('ehall.admin.artikel');
                 });
 
