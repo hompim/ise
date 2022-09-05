@@ -365,7 +365,7 @@ class Sidebar extends Component
                         'type' => 'divider',
                         'tag' => 'class=my-2'
                     ]
-                    );
+                );
             }
         }
     }
