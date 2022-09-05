@@ -75,6 +75,10 @@ Route::middleware('auth')->group(function () {
                     Route::get('verifikasi-pembayaran', \App\Http\Livewire\Pages\Icon\Academy\Admin\VerifikasiPembayaran\Index::class)->name('academy.admin.verifikasi-pembayaran');
                 });
 
+                Route::group(['prefix' => 'ehall'], function() {
+                    Route::get('artikel', \App\Http\Livewire\Pages\Icon\Ehall\Admin\Article\Index::class)->name('ehall.admin.artikel');
+                });
+
                 Route::group(['prefix' => 'webinar'], function () {
                     Route::get('beranda', \App\Http\Livewire\Pages\Icon\Webinar\Admin\Beranda\Index::class)->name('webinar.admin.beranda');
                     Route::get('daftar-peserta', \App\Http\Livewire\Pages\Icon\Webinar\Admin\Index::class)->name('webinar.admin.daftar-webinar');

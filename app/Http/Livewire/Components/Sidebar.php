@@ -195,6 +195,20 @@ class Sidebar extends Component
                         'type' => 'divider',
                         'tag' => 'mb-3'
                     ],
+                    [
+                        'type' => 'title',
+                        'title' => 'E-Hall'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-book',
+                        'title' => 'Artikel',
+                        'route-name' => 'ehall.admin.artikel'
+                    ],
+                    [
+                        'type' => 'divider',
+                        'tag' => 'mb-3'
+                    ],
                 );
             }
         } else {

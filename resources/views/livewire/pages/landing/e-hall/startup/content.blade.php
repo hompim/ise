@@ -1,3 +1,4 @@
+<div>
 {{-- Main --}}
 <div class="bg-black min-h-screen font-poppins">
     {{-- Hero --}}
@@ -12,10 +13,10 @@
                 <img src="{{ asset('images/startup/digiflux-founder.png') }}" alt="founder-digiflux">
             </div>
             <p class="text-sm md:text-lg text-liteGray mt-4 px-6 md:px-0 md:leading-normal text-center md:text-left">
-                Aplikasi Untuk menjembatani Influencer dan Pelaku Usaha Lorem ipsum  
+                Aplikasi Untuk menjembatani Influencer dan Pelaku Usaha Lorem ipsum
                 dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
                 dictum est a, mattis tellus.Sed dignissim, metus nec fringilla accumsan,
-                risus sem sollicitudin lacus, ut interdum 
+                risus sem sollicitudin lacus, ut interdum
                 tellus elit sed risus. </p>
             <div class="relative mt-16 mx-auto text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
             <div class="absolute inset-0 ">
@@ -44,14 +45,14 @@
     <div class="mt-10 md:mt-52 flex flex-col">
         <h1 class="text-white text-[27px] md:text-7xl mx-auto font-bold">About Digiflux</h1>
         <div class="mt-3 md:mt-12 text-liteGray text-sm md:text-lg mx-auto px-6 md:px-32 text-justify">
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, 
-                dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem 
-                sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, 
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
-                per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. 
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem
+                sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit,
+                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
                 Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem.
                 Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.</p>
-            <p class="indent-14"> Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut 
+            <p class="indent-14"> Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut
                 vulputate nisi. Integer in felis sed leo vestibulum venenatis. Suspendisse quis arcu sem. Aenean
                 feugiat ex eu vestibulum vestibulum. Morbi a eleifend magna. Nam metus lacus, porttitor eu mauris a,
                 blandit ultrices nibh. Mauris sit amet magna non ligula vestibulum eleifend. Nulla varius volutpat
@@ -147,53 +148,5 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 </div>

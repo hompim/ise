@@ -28,8 +28,6 @@ class QuizCard extends Component
 
     public function moveQuestion($n)
     {
-        $out = new \Symfony\Component\Console\Output\ConsoleOutput();
-        $out->writeln("Next Question");
         if($this->currentQuiz + $n >= 0 && $this->currentQuiz + $n <= count($this->quizzes))
         {
             $this->currentQuiz += $n;
