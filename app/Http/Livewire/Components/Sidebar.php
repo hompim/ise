@@ -147,12 +147,6 @@ class Sidebar extends Component
                     ],
                     [
                         'type' => 'menu',
-                        'icon' => 'cil-group',
-                        'title' => 'Verifikasi Administrasi',
-                        'route-name' => 'academy.admin.verifikasi'
-                    ],
-                    [
-                        'type' => 'menu',
                         'icon' => 'cil-book',
                         'title' => 'Verifikasi Seleksi',
                         'route-name' => 'academy.admin.verifikasi-seleksi'
@@ -337,7 +331,7 @@ class Sidebar extends Component
                         'route-name' => 'academy.peserta.identitas-tim'
                     ],
                 );
-                if (Auth::user()->userable->academy->competition_round == "Commitement Fee" || Auth::user()->userable->academy->commitement_payment_status == "Terverifikasi") {
+                if (Auth::user()->userable->academy->competition_round == "Commitment Fee" || Auth::user()->userable->academy->commitement_payment_status == "Terverifikasi") {
                     array_push(
                         $this->menu,
                         [

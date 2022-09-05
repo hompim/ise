@@ -79,7 +79,7 @@ class Beranda extends Component
                 $this->alert_content = 'Selamat Tim anda lolos seleksi berkas, selanjutnya akan diadakan seleksi tulis yang berlangsung pada tanggal 28 Agustus.';
                 $this->readonly = false;
                 break;
-            case 'Commitement Fee':
+            case 'Commitment Fee':
                 $this->alert_color = 'blue';
                 $this->alert_header = 'Pembayaran Commitment Fee';
                 $this->alert_content = 'Sebelum melanjutkan, setiap Tim Academy ISE! 2022 wajib terlebih dahulu membayar commitment fee pada menu pembayaran';
