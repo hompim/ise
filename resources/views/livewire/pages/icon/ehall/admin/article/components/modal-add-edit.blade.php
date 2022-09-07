@@ -59,9 +59,9 @@
             </div>
             <div class="w-full px-3 mb-6 md:mb-0">
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="title">
-                    Gambar Founder
+                    Gambar Founder/Prestasi
                 </label>
-                <small class="text-liteBlack">*untuk pengisian artikel tipe prestasi, tidak perlu diisi</small>
+                <small class="text-liteBlack">*wajib diisi</small>
                 <input
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
                     id="title_image" name="title_image" type="file" wire:model.defer="title_image">
@@ -72,16 +72,18 @@
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="subtitle">
                     Sub Judul
                 </label>
+                <small class="text-liteBlack">*maximum character 256 & wajib diisi</small>
                 <textarea
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
-                    id="subtitle" name="subtitle" type="text" required wire:model.defer="subtitle"></textarea>
+                    id="subtitle" name="subtitle" type="text" required wire:model.defer="subtitle" maxlength="256"></textarea>
             </div>
         </div>
         <div class="flex flex-wrap mb-6 -mx-3">
             <div class="w-full px-3">
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="content">
-                    Konten
+                    Konten Text
                 </label>
+                <small class="text-liteBlack">*wajib diisi</small>
                 <div class="mt-2 bg-white" wire:ignore>
                     <div name="content" x-data x-ref="quillEditor" x-init="quill = new Quill($refs.quillEditor, { theme: 'snow' });
                     quill.on('text-change', function() {
@@ -104,6 +106,7 @@
         @endif
         <div class="mb-3">
             <label class="form-label">Galery(can handle multiple image)</label>
+            <small class="text-liteBlack">*wajib diisi</small>
             <input type="file" class="form-control" wire:model="images" multiple>
             <div wire:loading wire:target="images">Uploading...</div>
         </div>
