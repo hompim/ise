@@ -59,7 +59,8 @@
                                 <button
                                     class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold md:text-[20px] mx-auto mb-12 transition duration-300 hover:-translate-y-2">
                                     Read more
-                                    <img src="{{ asset('images/vector-logo.svg') }}" class="my-auto">
+                                    <img src="{{ asset('storage/' . $a->title_image_path) }}" class="my-auto"
+                                        alt="gambar-{{ $a->title }}">
                                 </button>
                             </a>
                         </div>
@@ -90,7 +91,8 @@
                                 <button
                                     class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold  md:text-[20px] mx-auto md:mt-[20px]  transition duration-300 hover:-translate-y-2">
                                     Read more
-                                    <img src="{{ asset('images/vector-logo.svg') }}" class="my-auto">
+                                    <img src="{{ asset('storage/' . $a->title_image_path) }}" class="my-auto"
+                                        alt="gambar-{{ $a->title }}">
                                 </button>
                             </a>
                         </div>
@@ -147,7 +149,8 @@
                                 <button
                                     class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold md:text-[20px] mx-auto mb-12 transition duration-300 hover:-translate-y-2">
                                     Read more
-                                    <img src="{{ asset('images/vector-logo.svg') }}" class="my-auto">
+                                    <img src="{{ asset('storage/' . $a->title_image_path) }}" class="my-auto"
+                                        alt="gambar-{{ $a->title }}">
                                 </button>
                             </a>
                         </div>
@@ -178,7 +181,8 @@
                                 <button
                                     class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold  md:text-[20px] mx-auto md:mt-[20px]  transition duration-300 hover:-translate-y-2">
                                     Read more
-                                    <img src="{{ asset('images/vector-logo.svg') }}" class="my-auto">
+                                    <img src="{{ asset('storage/' . $a->title_image_path) }}" class="my-auto"
+                                        alt="gambar-{{ $a->title }}">
                                 </button>
                             </a>
                         </div>

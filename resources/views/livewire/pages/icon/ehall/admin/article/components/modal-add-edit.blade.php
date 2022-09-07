@@ -22,6 +22,7 @@
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="title">
                     Judul
                 </label>
+                <small class="text-liteBlack">*wajib diisi</small>
                 <input
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
                     id="title" name="title" type="text" required wire:model.defer="title">
@@ -30,6 +31,7 @@
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="type">
                     Tipe
                 </label>
+                <small class="text-liteBlack">*wajib diisi</small>
                 <select
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
                     id="type" name="type" type="text" required wire:model.defer="article_type">
@@ -41,6 +43,7 @@
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="title">
                     Link Youtube
                 </label>
+                <small class="text-liteBlack">*untuk pengisian artikel tipe prestasi, tidak perlu diisi</small>
                 <input
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
                     id="link_youtube" name="link_youtube" type="text" wire:model.defer="link_youtube">
@@ -49,6 +52,7 @@
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="title">
                     Logo
                 </label>
+                <small class="text-liteBlack">*untuk pengisian artikel tipe prestasi, tidak perlu diisi</small>
                 <input
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
                     id="logo" name="logo" type="file" wire:model.defer="logo">
@@ -57,6 +61,7 @@
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="title">
                     Gambar Founder
                 </label>
+                <small class="text-liteBlack">*untuk pengisian artikel tipe prestasi, tidak perlu diisi</small>
                 <input
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
                     id="title_image" name="title_image" type="file" wire:model.defer="title_image">

@@ -8,7 +8,7 @@
                 <h1 class="text-white text-[50px] md:text-[80px] font-bold">{{ $article->title }}</h1>
             </div>
             <div class=" w-[80%] mx-auto mt-8 block md:hidden">
-                <img src="{{ asset('storage/' . $article->title_image_path) }}" alt="founder-digiflux">
+                <img src="{{ asset('storage/' . $article->title_image_path) }}" alt="gambar">
             </div>
             <p class="px-6 mt-4 text-sm text-center md:text-lg text-liteGray md:px-0 md:leading-normal md:text-left">
                 {{ $article->subtitle }}</p>
@@ -25,7 +25,7 @@
 
         {{-- Col 2 --}}
         <div class="hidden md:block">
-            <img src="{{ asset('images/content-prestasi.png') }}" alt="founder-digiflux">
+            <img src="{{ asset('storage/' . $article->title_image_path) }}" alt="gambar">
         </div>
     </div>
 
