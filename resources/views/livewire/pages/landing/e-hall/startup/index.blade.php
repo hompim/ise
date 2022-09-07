@@ -34,22 +34,23 @@
     <div class="mt-44 md:mt-52 flex flex-col mx-[20px] md:mx-[130px] pb-52 scroll-mt-36" id="explore">
         {{-- Digiflux Card --}}
         @foreach ($articles as $a)
-            <a href="{{ route('content-startup-ehall', $a->slug) }}" class="transition duration-300 hover:-translate-y-2 group">
+            <a href="{{ route('content-startup-ehall', $a->slug) }}"
+                class="my-12 transition duration-300 hover:-translate-y-2 group">
                 <div class="relative">
                     <div
                         class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl transition duration-300 blur-2xl btn group-hover:opacity-100 opacity-75">
                     </div>
                     <div
-                        class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-10 pt-4 md:pt-[50px] px-7 py-10 md:py-0">
-                        <div class="flex flex-col ml-0 md:ml-9">
-                            <h1 class="text-white font-bold text-[27px] md:text-[64px] ">{{$a->title}}</h1>
+                        class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative grid grid-cols-1 md:grid-cols-3 gap-10 pt-4 md:pt-[50px] px-7 py-10 md:py-0">
+                        <div class="flex flex-col ml-0 cols-span-1 md:col-span-2 md:ml-9">
+                            <h1 class="text-white font-bold text-[27px] md:text-[64px] ">{{ $a->title }}</h1>
                             <p class="mt-2 text-base font-semibold text-liteGray md:text-xl">
-                                {{$a->subtitle}}
+                                {{ $a->subtitle }}
                             </p>
                         </div>
-                        <div class="">
-                            <iframe src="{{$a->link_youtube}}" width="332" height="263"
-                                frameborder="0" allowfullscreen class=""></iframe>
+                        <div class="cols-span-1">
+                            <iframe src="{{ $a->link_youtube }}" width="332" height="263" frameborder="0"
+                                allowfullscreen class=""></iframe>
                         </div>
                     </div>
                 </div>
