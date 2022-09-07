@@ -31,7 +31,7 @@
                     Tipe
                 </label>
                 <select
-                    class="appearance-none block w-full bg-white text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
                     id="type" name="type" type="text" required wire:model.defer="article_type">
                     <option value="Startup">Startup</option>
                     <option value="Prestasi">Prestasi</option>
@@ -43,7 +43,7 @@
                 </label>
                 <input
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
-                    id="link_youtube" name="link_youtube" type="text" required wire:model.defer="link_youtube">
+                    id="link_youtube" name="link_youtube" type="text" wire:model.defer="link_youtube">
             </div>
             <div class="w-full px-3 mb-6 md:mb-0">
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="title">

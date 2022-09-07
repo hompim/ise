@@ -14,7 +14,8 @@ class Index extends Component
         return view('livewire.pages.landing.e-hall.prestasi.index')->layout('layouts.landing');;
     }
 
-    public function mount(){
+    public function mount()
+    {
         $this->articles =  EhallArticle::where('type', 'Prestasi')->get();
     }
 }

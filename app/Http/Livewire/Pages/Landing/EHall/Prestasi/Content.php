@@ -14,7 +14,8 @@ class Content extends Component
         return view('livewire.pages.landing.e-hall.prestasi.content')->layout('layouts.landing');;
     }
 
-    public function mount($slug){
+    public function mount($slug)
+    {
         $this->article = EhallArticle::where('slug', $slug)->first();
     }
 }

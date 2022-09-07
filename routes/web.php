@@ -85,6 +85,7 @@ Route::group(['prefix' => 'icon'], function () {
             Route::get('/', PrestasiIndex::class)->name('home-prestasi-ehall');
             // icon/e-hall/prestasi/content
             Route::get('{slug}', PrestasiContent::class)->name('content-prestasi-ehall');
+            // Route::get('content', PrestasiContent::class)->name('content-prestasi-ehall');
         });
         // Route quiz
         Route::group(['prefix' => 'quiz'], function () {
