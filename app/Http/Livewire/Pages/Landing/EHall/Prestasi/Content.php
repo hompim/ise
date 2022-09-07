@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Pages\Landing\EHall\Prestasi;
 
+use App\Models\Icon\EhallArticle;
 use Livewire\Component;
 
 class Content extends Component
