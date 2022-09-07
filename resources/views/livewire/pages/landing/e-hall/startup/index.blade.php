@@ -33,77 +33,27 @@
     {{-- Showcase --}}
     <div class="mt-44 md:mt-52 flex flex-col mx-[20px] md:mx-[130px] pb-52 scroll-mt-36" id="explore">
         {{-- Digiflux Card --}}
-        <a href="{{ route('content-startup-ehall') }}" class="transition duration-300 hover:-translate-y-2 group">
-            <div class="relative">
-                <div
-                    class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl transition duration-300 blur-2xl btn group-hover:opacity-100 opacity-75">
-                </div>
-                <div
-                    class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-10 pt-4 md:pt-[50px] px-7 py-10 md:py-0">
-                    <div class="flex flex-col ml-0 md:ml-9">
-                        <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Digiflux</h1>
-                        <p class="mt-2 text-base font-semibold text-liteGray md:text-xl">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vulputate cras ultrices odio arcu diam sociis sem. Turpis
-                            eget consequat nibh ac aenean vel eget. Sociis elementum sit
-                            quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
-                        </p>
+        @foreach ($articles as $a)
+            <a href="{{ route('content-startup-ehall', $a->slug) }}" class="transition duration-300 hover:-translate-y-2 group">
+                <div class="relative">
+                    <div
+                        class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl transition duration-300 blur-2xl btn group-hover:opacity-100 opacity-75">
                     </div>
-                    <div class="">
-                        <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263"
-                            frameborder="0" allowfullscreen class=""></iframe>
-                    </div>
-                </div>
-            </div>
-        </a>
-
-        {{-- Drafta Card --}}
-        <a href="{{ route('content-startup-ehall') }}" class="transition duration-300 hover:-translate-y-2 group">
-            <div class="relative mt-14 md:mt-36">
-                <div
-                    class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl transition duration-300 blur-2xl btn group-hover:opacity-100 opacity-75">
-                </div>
-                <div
-                    class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-8 px-7 items-center md:pr-14 py-10 md:py-0">
-                    <div class="">
-                        <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263"
-                            frameborder="0" allowfullscreen class=""></iframe>
-                    </div>
-                    <div class="flex flex-col">
-                        <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Drafta</h1>
-                        <p class="mt-2 text-base font-semibold text-liteGray md:text-xl">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vulputate cras ultrices odio arcu diam sociis sem. Turpis
-                            eget consequat nibh ac aenean vel eget. Sociis elementum sit
-                            quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
-                        </p>
+                    <div
+                        class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-10 pt-4 md:pt-[50px] px-7 py-10 md:py-0">
+                        <div class="flex flex-col ml-0 md:ml-9">
+                            <h1 class="text-white font-bold text-[27px] md:text-[64px] ">{{$a->title}}</h1>
+                            <p class="mt-2 text-base font-semibold text-liteGray md:text-xl">
+                                {{$a->subtitle}}
+                            </p>
+                        </div>
+                        <div class="">
+                            <iframe src="{{$a->link_youtube}}" width="332" height="263"
+                                frameborder="0" allowfullscreen class=""></iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
-
-        {{-- Digiflux Card --}}
-        <a href="{{ route('content-startup-ehall') }}" class="transition duration-300 hover:-translate-y-2 group">
-            <div class="relative mt-14 md:mt-36">
-                <div
-                    class="absolute inset-0 w-full h-max md:h-[362px] rounded-3xl transition duration-300 blur-2xl btn group-hover:opacity-100 opacity-75">
-                </div>
-                <div
-                    class="bg-liteBlack w-full h-max md:h-[362px] rounded-3xl relative flex flex-col md:flex-row gap-10 pt-4 md:pt-[50px] px-7 py-10 md:py-0">
-                    <div class="flex flex-col ml-0 md:ml-9">
-                        <h1 class="text-white font-bold text-[27px] md:text-[64px] ">Digiflux</h1>
-                        <p class="mt-2 text-base font-semibold text-liteGray md:text-xl">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vulputate cras ultrices odio arcu diam sociis sem. Turpis
-                            eget consequat nibh ac aenean vel eget. Sociis elementum sit
-                            quis porta potenti elementum, tellus. At gravida in etiam viverra viverra.
-                        </p>
-                    </div>
-                    <div class="">
-                        <iframe src="https://www.youtube.com/embed/oHg5SJYRHA" width="332" height="263"
-                            frameborder="0" allowfullscreen class=""></iframe>
-                    </div>
-                </div>
-            </div>
-        </a>
+            </a>
+        @endforeach
     </div>
+</div>

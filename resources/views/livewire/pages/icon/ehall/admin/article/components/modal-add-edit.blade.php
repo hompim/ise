@@ -37,22 +37,70 @@
                     <option>Prestasi</option>
                 </select>
             </div>
+            <div class="w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="title">
+                    Link Youtube
+                </label>
+                <input
+                    class="appearance-none block w-full bg-white text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    id="link_youtube" name="link_youtube" type="text" required wire:model.defer="link_youtube">
+            </div>
+            <div class="w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="title">
+                    Logo
+                </label>
+                <input
+                    class="appearance-none block w-full bg-white text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    id="logo" name="logo" type="file" wire:model.defer="logo">
+            </div>
+            <div class="w-full px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="title">
+                    Gambar Judul
+                </label>
+                <input
+                    class="appearance-none block w-full bg-white text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    id="title_image" name="title_image" type="file" wire:model.defer="title_image">
+            </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="subtitle">
+                    Sub Judul
+                </label>
+                <textarea
+                    class="appearance-none block w-full bg-white text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    id="subtitle" name="subtitle" type="text" required wire:model.defer="subtitle"></textarea>
+            </div>
         </div>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="content">
-                   Konten
+                    Konten
                 </label>
                 <div class="mt-2 bg-white" wire:ignore>
                     <div name="content" x-data x-ref="quillEditor" x-init="quill = new Quill($refs.quillEditor, { theme: 'snow' });
                     quill.on('text-change', function() {
                         @this.set('content', quill.root.innerHTML);
-                    });"
-                        wire:model.lazy="content">
+                    });" wire:model.lazy="content">
                         {!! $content !!}
                     </div>
                 </div>
             </div>
+        </div>
+        @if ($images)
+            Photo Preview: (Foto pertama mungkin tidak terlihat, tetapi tetap terupload)
+            <div class="row">
+                @foreach ($images as $image)
+                    <div class="col-3 card me-1 mb-1">
+                        <img src="{{ $image->temporaryUrl() }}">
+                    </div>
+                @endforeach
+            </div>
+        @endif
+        <div class="mb-3">
+            <label class="form-label">Galery(can handle multiple image)</label>
+            <input type="file" class="form-control" wire:model="images" multiple>
+            <div wire:loading wire:target="images">Uploading...</div>
         </div>
         <div class="flex flex-wrap mb-2 justify-end">
             <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" type="submit">

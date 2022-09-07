@@ -74,14 +74,14 @@ Route::group(['prefix' => 'icon'], function () {
             // icon/e-hall/startup
             Route::get('/', Index::class)->name('home-startup-ehall');
             // icon/e-hall/startup/content
-            Route::get('content', Content::class)->name('content-startup-ehall');
+            Route::get('{slug}', Content::class)->name('content-startup-ehall');
         });
         // Route prestasi
         Route::group(['prefix' => 'prestasi'], function () {
             // icon/e-hall/prestasi
             Route::get('/', PrestasiIndex::class)->name('home-prestasi-ehall');
             // icon/e-hall/prestasi/content
-            Route::get('content', PrestasiContent::class)->name('content-prestasi-ehall');
+            Route::get('{slug}', PrestasiContent::class)->name('content-prestasi-ehall');
         });
         // Route quiz
         Route::group(['prefix' => 'quiz'], function () {

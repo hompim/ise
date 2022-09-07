@@ -16,6 +16,10 @@ return new class extends Migration
         Schema::create('ehall_articles', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('logo_image_path')->nullable();
+            $table->string('title_image_path')->nullable();
+            $table->text('subtitle');
+            $table->string('link_youtube')->nullable();
             $table->string('type');
             $table->text('content');
             $table->string('slug');
