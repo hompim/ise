@@ -38,8 +38,7 @@
 
         {{-- Youtube Video --}}
         <div class="flex justify-center mt-32 md:mt-52 " id="explore">
-            <iframe src="{{ $article->link_youtube }}" width="1080" height="720" frameborder="0" allowfullscreen
-                class="hidden rounded-2xl md:flex"></iframe>
+            {!! Cohensive\OEmbed\Facades\OEmbed::get($article->link_youtube)->html(['width' => 1080, 'height' => 720]) !!}
         </div>
 
         {{-- About Digiflux --}}

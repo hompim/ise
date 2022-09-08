@@ -49,8 +49,7 @@
                             </p>
                         </div>
                         <div class="cols-span-1">
-                            <iframe src="{{ $a->link_youtube }}" width="332" height="263" frameborder="0"
-                                allowfullscreen class=""></iframe>
+                            {!! Cohensive\OEmbed\Facades\OEmbed::get($a->link_youtube)->html(['width' => 332, 'height' => 263]) !!}
                         </div>
                     </div>
                 </div>
