@@ -29,7 +29,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/swiper.css') }}">
-    <x-embed-styles />
 
     @stack('css')
 

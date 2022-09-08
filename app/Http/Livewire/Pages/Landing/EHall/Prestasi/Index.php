@@ -7,7 +7,9 @@ use Livewire\Component;
 
 class Index extends Component
 {
-    public $articles;
+    public $articles = [];
+    public $currentThree;
+    public $nextThree;
 
     public function render()
     {
@@ -16,6 +18,16 @@ class Index extends Component
 
     public function mount()
     {
-        $this->articles =  EhallArticle::where('type', 'Prestasi')->get();
+        $count =  EhallArticle::count();
+        $this->nextThree = EhallArticle::where('type', 'Prestasi')->take(3)->get();
+
+        for ($i = 0; $i < $count / 3; $i++) {
+            if ($i != 0) $this->nextThree = EhallArticle::where('type', 'Prestasi')->skip(3*$i)->take(3)->get();
+            array_push(
+                $this->articles,
+                $this->nextThree
+            );
+            $this->currentThree = $this->nextThree;
+        }
     }
 }
