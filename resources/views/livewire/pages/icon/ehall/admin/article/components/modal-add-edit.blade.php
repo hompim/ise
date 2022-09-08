@@ -34,7 +34,8 @@
                 <small class="text-liteBlack">*wajib diisi</small>
                 <select
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
-                    id="type" name="type" type="text" required wire:model.defer="article_type">
+                    id="type" name="article_type" type="text" required wire:model.defer="article_type">
+                    <option>Tipe Artikel</option>
                     <option value="Startup">Startup</option>
                     <option value="Prestasi">Prestasi</option>
                 </select>

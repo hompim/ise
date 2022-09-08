@@ -31,7 +31,6 @@ class ModalAddEdit extends ModalComponent
     public function mount($type, $id = null)
     {
         $this->modal_type = $type;
-        $this->article_type = 'Startup';
         if ($type == 'edit') {
             $this->artikel =  EhallArticle::find($id);
             $this->title = $this->artikel->title;
