@@ -47,7 +47,7 @@
                     <!-- start : prestasi 1 -->
                     <div class="md:w-[680px] md:h-[1260px] bg-[#191A1E] flex flex-col rounded-3xl">
                         <div class="w-full rounded-t-xl">
-                            <img src="{{ asset('images/prestasi-1.svg') }}" class="w-full">
+                            <img src="{{asset('storage/' . $article[0]->title_image_path) }}" class="w-full">
                         </div>
                         <div class="flex flex-col justify-between h-full">
                             <div class="px-[27.95px]">
@@ -61,8 +61,6 @@
                                 <button
                                     class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold md:text-[20px] mx-auto mb-12 transition duration-300 hover:-translate-y-2">
                                     Read more
-                                    <img src="{{ asset('storage/' . $article[0]->title_image_path) }}"
-                                        class="my-auto object-fill" alt="gambar-{{ $article[0]->title }}">
                                 </button>
                             </a>
                         </div>
@@ -78,7 +76,7 @@
                                 {{-- card kecil --}}
                                 <!-- start : prestasi 2 -->
                                 <div class="md:w-[380px] h-[570px] bg-[#191A1E] rounded-3xl">
-                                    <img src="{{ asset('images/prestasi-2.svg') }}" class="w-full">
+                                    <img src="{{ asset('storage/'.$a->title_image_path) }}" class="w-full">
                                     <div class="px-[15px]">
                                         <h1 class="font-bold text-[26px] text-white pt-[19px] pb-[17px]">
                                             {{ $a->title }}
@@ -91,8 +89,6 @@
                                         <button
                                             class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold  md:text-[20px] mx-auto md:mt-[20px]  transition duration-300 hover:-translate-y-2">
                                             Read more
-                                            <img src="{{ asset('storage/' . $a->title_image_path) }}" class="my-auto"
-                                                alt="gambar-{{ $a->title }}">
                                         </button>
                                     </a>
                                 </div>
@@ -110,7 +106,7 @@
                     <!-- start : prestasi 1 -->
                     <div class="md:w-[680px] md:h-[1260px] bg-[#191A1E] flex flex-col rounded-3xl">
                         <div class="w-full rounded-t-xl">
-                            <img src="{{ asset('images/prestasi-1.svg') }}" class="w-full">
+                            <img src="{{ asset('storage/' . $article[0]->title_image_path)}}" class="w-full">
                         </div>
                         <div class="flex flex-col justify-between h-full">
                             <div class="px-[27.95px]">
@@ -124,8 +120,6 @@
                                 <button
                                     class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold md:text-[20px] mx-auto mb-12 transition duration-300 hover:-translate-y-2">
                                     Read more
-                                    <img src="{{ asset('storage/' . $article[0]->title_image_path) }}"
-                                        class="my-auto object-fill" alt="gambar-{{ $article[0]->title }}">
                                 </button>
                             </a>
                         </div>
@@ -141,7 +135,7 @@
                                 {{-- card kecil --}}
                                 <!-- start : prestasi 2 -->
                                 <div class="md:w-[380px] h-[570px] bg-[#191A1E] rounded-3xl">
-                                    <img src="{{ asset('images/prestasi-2.svg') }}" class="w-full">
+                                    <img src="{{ asset('storage/' . $a->title_image_path) }}" class="w-full">
                                     <div class="px-[15px]">
                                         <h1 class="font-bold text-[26px] text-white pt-[19px] pb-[17px]">
                                             {{ $a->title }}
@@ -154,8 +148,6 @@
                                         <button
                                             class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold  md:text-[20px] mx-auto md:mt-[20px]  transition duration-300 hover:-translate-y-2">
                                             Read more
-                                            <img src="{{ asset('storage/' . $a->title_image_path) }}" class="my-auto"
-                                                alt="gambar-{{ $a->title }}">
                                         </button>
                                     </a>
                                 </div>
