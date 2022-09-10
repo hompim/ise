@@ -39,7 +39,6 @@
         {{ $a->title }}
     @endforeach --}}
         @forelse ($articles as $index => $article)
-            @if ($index % 2 == 0)
                 <div class="px-[20px] md:px-[130px] pt-[210px] pb-[120px] bg-black flex flex-col md:flex-row gap-[20px] md:gap-[120px]"
                     id="explore">
                     {{-- card besar --}}
@@ -69,70 +68,7 @@
                         </div>
                         <!-- end : prestasi 1 -->
                     </div>
-                    <!-- make column flex-->
-                    <div class="flex flex-col gap-[20px] md:gap-[120px]">
-                        @foreach ($article as $key => $a)
-                            @if ($key == 0)
-                                @continue
-                            @else
-                                {{-- card kecil --}}
-                                <!-- start : prestasi 2 -->
-                                <div class="md:w-[380px] h-[570px] bg-[#191A1E] rounded-3xl">
-                                    <img src="{{ asset('storage/'.$a->title_image_path) }}" class="w-full">
-                                    <div class="px-[15px]">
-                                        <h1 class="font-bold text-[26px] text-white pt-[19px] pb-[17px]">
-                                            {{ $a->title }}
-                                        </h1>
-                                        <p class="text-[18px] text-[#B5B3BC]">
-                                            {{ substr($a->subtitle, 0, 96) . '...' }}
-                                        </p>
-                                    </div>
-                                    <a href="{{ route('content-prestasi-ehall', $a->slug) }}">
-                                        <button
-                                            class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold  md:text-[20px] mx-auto md:mt-[20px]  transition duration-300 hover:-translate-y-2">
-                                            Read more
-                                            <img src="{{ asset('storage/' . $a->title_image_path) }}" class="my-auto"
-                                                alt="gambar-{{ $a->title }}">
-                                        </button>
-                                    </a>
-                                </div>
-                                <!-- end : prestasi 2 -->
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
-            @else
-                <div class="px-[20px] md:px-[130px] pt-[120px] pb-[120px] bg-black flex flex-col md:flex-row-reverse gap-[20px] md:gap-[120px]"
-                    id="explore">
 
-                    {{-- card besar --}}
-                    <div>
-                        <!-- start : prestasi 1 -->
-                        <div class="md:w-[680px] md:h-[1260px] bg-[#191A1E] flex flex-col rounded-3xl">
-                            <div class="w-full rounded-t-xl">
-                                <img src="{{ asset('storage/'.$article[0]->title_image_path) }}" class="w-full">
-                            </div>
-                            <div class="flex flex-col justify-between h-full">
-                                <div class="px-[27.95px]">
-                                    <h1 class="text-white font-bold text-[26px] my-[27px]">{{ $article[0]->title }}
-                                    </h1>
-                                    <p
-                                        class="text-[#B5B3BC] text-justify md:text-lg leading-[28px] font-normal tracking-normal">
-                                        {{ $article[0]->subtitle }}
-                                    </p>
-                                </div>
-                                <a href="{{ route('content-prestasi-ehall', $article[0]->slug) }}">
-                                    <button
-                                        class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold md:text-[20px] mx-auto mb-12 transition duration-300 hover:-translate-y-2">
-                                        Read more
-                                        <img src="{{ asset('storage/' . $article[0]->title_image_path) }}"
-                                            class="my-auto object-fill" alt="gambar-{{ $article[0]->title }}">
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- end : prestasi 1 -->
-                    </div>
                     <!-- make column flex-->
                     <div class="flex flex-col gap-[20px] md:gap-[120px]">
                         @foreach ($article as $key => $a)
@@ -165,7 +101,6 @@
                         @endforeach
                     </div>
                 </div>
-            @endif
         @empty
         @endforelse
     </div>
