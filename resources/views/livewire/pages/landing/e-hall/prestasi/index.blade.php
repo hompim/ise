@@ -38,13 +38,13 @@
         {{-- @foreach ($articles as $a)
         {{ $a->title }}
     @endforeach --}}
-        @forelse ($articles as $index => $article)
+        @forelse ($articles as $article)
                 <div class="px-[20px] md:px-[130px] pt-[210px] pb-[120px] bg-black flex flex-col md:flex-row gap-[20px] md:gap-[120px]"
                     id="explore">
                     {{-- card besar --}}
                     <div>
                         <!-- start : prestasi 1 -->
-                        <div class="md:w-[680px] md:h-[1260px] bg-[#191A1E] flex flex-col rounded-3xl">
+                        <div class="md:w-[680px] md:h-[900px] bg-[#191A1E] flex flex-col rounded-3xl">
                             <div class="w-full rounded-t-xl">
                                 <img src="{{ asset('storage/'.$article[0]->title_image_path) }}" class="w-full">
                             </div>
@@ -60,8 +60,6 @@
                                     <button
                                         class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold md:text-[20px] mx-auto mb-12 transition duration-300 hover:-translate-y-2">
                                         Read more
-                                        <img src="{{ asset('storage/' . $article[0]->title_image_path) }}"
-                                            class="my-auto object-fill" alt="gambar-{{ $article[0]->title }}">
                                     </button>
                                 </a>
                             </div>
@@ -91,8 +89,6 @@
                                         <button
                                             class="text-white px-[23px] py-[18px] bg-[#2F2F2F] rounded-2xl flex flex-row gap-[10px] md:w-[180px] font-semibold  md:text-[20px] mx-auto md:mt-[20px]  transition duration-300 hover:-translate-y-2">
                                             Read more
-                                            <img src="{{ asset('storage/' . $a->title_image_path) }}" class="my-auto"
-                                                alt="gambar-{{ $a->title }}">
                                         </button>
                                     </a>
                                 </div>

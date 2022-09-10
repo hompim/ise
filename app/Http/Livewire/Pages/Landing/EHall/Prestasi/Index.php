@@ -21,7 +21,7 @@ class Index extends Component
         $count =  EhallArticle::count();
         $this->nextThree = EhallArticle::where('type', 'Prestasi')->take(3)->get();
 
-        for ($i = 0; $i < $count / 3; $i++) {
+        for ($i = 0; $i < floor($count / 3); $i++) {
             if ($i != 0) $this->nextThree = EhallArticle::where('type', 'Prestasi')->skip(3*$i)->take(3)->get();
             array_push(
                 $this->articles,
