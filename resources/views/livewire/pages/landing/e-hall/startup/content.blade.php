@@ -57,8 +57,8 @@
                     @foreach ($article->galery as $image)
                         <div class="flex items-center justify-center swiper-slide">
                             <div class="flex items-center h-96">
-                                <img class="w-full h-fit rounded-3xl" src="{{ asset('storage/' . $image->image_path) }}"
-                                    alt="gallery" />
+                                <img class="object-contain w-full h-fit rounded-3xl"
+                                    src="{{ asset('storage/' . $image->image_path) }}" alt="gallery" />
                             </div>
                         </div>
                     @endforeach
