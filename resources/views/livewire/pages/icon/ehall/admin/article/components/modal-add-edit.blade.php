@@ -100,15 +100,19 @@
             <div class="row">
                 @foreach ($images as $image)
                     <div class="mb-1 col-3 card me-1">
-                        <img src="{{ $image->temporaryUrl() }}">
+                        <img
+                            src="{{$image instanceOf \Livewire\TemporaryUploadedFile ? $image->temporaryUrl() : asset('storage/' . $image->image_path)}}">
                     </div>
                 @endforeach
+                <button wire:click="deleteImage" class="bg-purple-400 py-2 px-4 rounded-sm" type="button">Delete Images</button>
             </div>
         @endif
         <div class="mb-3">
             <label class="form-label">Galery(can handle multiple image)</label>
             <small class="text-liteBlack">*wajib diisi</small>
-            <input type="file" class="form-control" wire:model="images" multiple>
+            @if (!$images)
+                <input type="file" class="form-control" wire:model="images" multiple>
+            @endif
             <div wire:loading wire:target="images">Uploading...</div>
         </div>
         <div class="flex flex-wrap justify-end mb-2">

@@ -1,6 +1,5 @@
 <div class="flex justify-around space-x-1">
     <button
-    disabled
         onclick="Livewire.emit('openModal', 'pages.icon.ehall.admin.article.components.modal-add-edit',{{ json_encode(['type' => 'edit', 'id' => $id]) }})"
         class="p-1 text-blue-600 rounded hover:bg-blue-600 hover:text-white">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
