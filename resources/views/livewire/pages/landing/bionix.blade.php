@@ -51,7 +51,7 @@
             </div>
 
         </div>
-        <div x-data="{ tab: 'bsl' }" class="flex-row items-center justify-center text-white ">
+        <div x-data="{ tab: 'bcl' }" class="flex-row items-center justify-center text-white ">
 
             <div class="flex justify-center gap-4 md:pt-12 px-[37px] md:px-0">
                 <button :class="{ 'text-white bg-liteBlack': tab === 'bsl', 'text-[#6B6F75] animate-pulse': tab === 'bcl' }"
@@ -653,7 +653,7 @@
                             </svg>
                             Download Guidebook</a>
                         <a href="{{ route('register-college') }}"
-                            class="py-2 my-6 rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 transition duration-300 transform hover:-translate-y-1">Register</a>
+                            class="py-2 my-6 transition duration-300 transform rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 hover:-translate-y-1">Register</a>
                     </div>
                     <div class="text-4xl md:text-6xl text-white font-bold mt-16 md:mt-[220px] md:w-[600px] md:mx-auto">
                         Many <a class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text"> benefit

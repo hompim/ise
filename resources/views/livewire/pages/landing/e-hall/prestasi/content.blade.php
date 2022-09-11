@@ -4,8 +4,8 @@
     <div class="flex flex-row pt-24 md:pt-52 gap-48 mx-[20px] md:mx-[130px]">
         {{-- Col 1 --}}
         <div class="flex flex-col flex-1">
-            <div class="flex flex-row items-center gap-5 px-6 md:px-0">
-                <h1 class="text-white text-[50px] md:text-[80px] font-bold">{{ $article->title }}</h1>
+            <div class="flex flex-row items-center gap-5 px-6 leading-loose md:px-0">
+                <h1 class="text-base font-bold text-white md:text-6xl">{{ $article->title }}</h1>
             </div>
             <div class=" w-[80%] mx-auto mt-8 block md:hidden">
                 <img src="{{ asset('storage/' . $article->title_image_path) }}" alt="gambar">
