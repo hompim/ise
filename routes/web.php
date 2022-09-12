@@ -1,13 +1,16 @@
 <?php
 
 use App\Models\User;
+use App\Mail\Tryout2bsl;
 use App\Mail\AcademyMail;
+use App\Models\ShortenLink;
 use App\Mail\SertifikatMail;
 use App\Mail\IconSeleksiEmail;
 use App\Mail\LolosAcademyEmail;
 use App\Mail\TidakLolosAcademyEmail;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\WebinarKickOffAcaraMail;
+use App\Models\Bionix\TeamJuniorData;
 use Illuminate\Support\Facades\Route;
 use App\Models\Icon\IconWebinarKickOff;
 use App\Http\Livewire\Pages\Landing\Ise;
@@ -116,6 +119,17 @@ Route::get('/closed-registration', function () {
     return view('closed-registration');
 })->name('closed-registration');
 
+Route::get('/sendEmailTO2', function () {
+    $data = TeamJuniorData::where('payment_verif_status', 'Terverifikasi')->get();
+    foreach ($data as $d) {
+        Mail::to($d->leader->email)->send(new LolosAcademyEmail($d->leader->name));
+        sleep(1);
+    }
+    dd("Email Berhasil dikirim");
+    return response()->json([
+        'success' => true
+    ]);
+});
 Route::get('/sendEmailLolosAcademy', function () {
     $dsa = IconAcademyDataScienceData::where('competition_round', 'Pending')->get();
     $sua = IconAcademyStartupData::where('competition_round', 'Pending')->get();
