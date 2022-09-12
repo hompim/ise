@@ -125,7 +125,7 @@ Route::get('/sendEmailTO2', function () {
         Mail::to($d->leader->email)->send(new LolosAcademyEmail($d->leader->name));
         sleep(1);
     }
-    dd("Email Berhasil dikirim");
+
     return response()->json([
         'success' => true
     ]);

@@ -11,11 +11,10 @@ class Index extends Component
 
     public function render()
     {
-        $this->load();
         return view('livewire.pages.landing.e-hall.quiz.index')->layout('layouts.landing');
     }
 
-    public function load()
+    public function mount()
     {
         $this->type_quiz = EhallQuestType::all();
     }

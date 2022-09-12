@@ -54,6 +54,7 @@
             p.parentNode.insertBefore(m, p);
         })(window, document, 'script', 'https://u.heatmap.it/log.js');
     </script>
+    @livewireStyles
 </head>
 
 <body class="w-full h-full m-0" onload="checkForUpdate()">
@@ -67,6 +68,7 @@
 
     @livewire('components.footer')
 
+    @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <!-- Swiper JS -->

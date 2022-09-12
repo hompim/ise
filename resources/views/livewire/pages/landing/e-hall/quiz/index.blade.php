@@ -84,7 +84,7 @@
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz {{$type_quiz_array->name}}</h1>
 
                             <a
-                            class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl" href="/icon/e-hall/quiz/{{$type_quiz_array->name}}">Start</a>
+                            class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl" href="{{route('quiz-page-ehall', $type_quiz_array->name)}}">Start</a>
                         </div>
                     </div>
                 </div>
