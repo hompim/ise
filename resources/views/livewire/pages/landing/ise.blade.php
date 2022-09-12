@@ -353,31 +353,37 @@
         {{-- timeline end --}}
 
         {{-- sponsor --}}
-        <div class="pb-24 !hidden">
+        <div class="pb-24">
             <h1 class="mb-24 text-4xl font-bold text-white font-poppins lg:text-7xl">Meet our sponsor</h1>
             <div class="grid grid-rows-1 gap-4 mx-12 lg:mx-32 lg:!grid-rows-3">
-                <div class="grid gap-4 lg:grid-cols-2">
-                    <div class="w-full rounded-lg h-96 bg-liteBlack">
-
+                <div class="grid gap-4 xl:grid-cols-2">
+                    <div class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
+                        <a href="https://www.telkom.co.id/">
+                            <img src="{{ asset('images/sponsor/logo-telkom1.png') }}" alt="logo-telkomsel"
+                                class="h-full transition duration-300 hover:scale-105">
+                        </a>
                     </div>
-                    <div class="w-full rounded-lg h-96 bg-liteBlack">
-
-                    </div>
-
-                </div>
-                <div class="grid gap-4 lg:grid-cols-3">
-                    <div class="w-full rounded-lg h-96 bg-liteBlack">
-
-                    </div>
-                    <div class="w-full rounded-lg h-96 bg-liteBlack">
-
-                    </div>
-                    <div class="w-full rounded-lg h-96 bg-liteBlack">
-
+                    <div class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
+                        <a href="https://www.ksei.co.id/">
+                            <img src="{{ asset('images/sponsor/logo-ksei.jpg') }}" alt="logo-ksei"
+                                class="w-full px-4 transition duration-300 hover:scale-105">
+                        </a>
                     </div>
 
                 </div>
-                <div class="grid gap-4 lg:grid-cols-4">
+                <div class="grid gap-4 xl:grid-cols-3 place-content-center">
+                    <div class="w-full bg-transparent rounded-lg h-96">
+                    </div>
+                    <div class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
+                        <a href="https://www.telkomsigma.co.id/">
+                            <img src="{{ asset('images/sponsor/logo-telkomsigma.png') }}" alt="logo-telkomsigma"
+                                class="w-full transition duration-300 hover:scale-105">
+                        </a>
+                    </div>
+                    <div class="w-full bg-transparent rounded-lg h-96">
+                    </div>
+                </div>
+                <div class="hidden gap-4 lg:grid-cols-4">
                     <div class="w-full rounded-lg h-96 bg-liteBlack">
 
                     </div>
