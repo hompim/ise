@@ -360,7 +360,7 @@
                     <div class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
                         <a href="https://www.telkom.co.id/">
                             <img src="{{ asset('images/sponsor/logo-telkom1.png') }}" alt="logo-telkomsel"
-                                class="h-full transition duration-300 hover:scale-105">
+                                class="w-full h-full transition duration-300 hover:scale-105">
                         </a>
                     </div>
                     <div class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
@@ -372,9 +372,19 @@
 
                 </div>
                 <div class="grid gap-4 xl:grid-cols-3 place-content-center">
-                    <div class="w-full bg-transparent rounded-lg h-96">
+                    <div
+                        class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100 xl:hidden">
+                        <a href="https://www.telkomsigma.co.id/">
+                            <img src="{{ asset('images/sponsor/logo-telkomsigma.png') }}" alt="logo-telkomsigma"
+                                class="w-full transition duration-300 hover:scale-105">
+                        </a>
                     </div>
-                    <div class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
+                    <div class="w-full bg-transparent rounded-lg h-96 flex xl:hidden">
+                    </div>
+                    <div class="w-full bg-transparent rounded-lg h-96 hidden xl:flex ">
+                    </div>
+                    <div
+                        class="hidden xl:flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
                         <a href="https://www.telkomsigma.co.id/">
                             <img src="{{ asset('images/sponsor/logo-telkomsigma.png') }}" alt="logo-telkomsigma"
                                 class="w-full transition duration-300 hover:scale-105">
