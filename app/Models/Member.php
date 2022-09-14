@@ -21,7 +21,7 @@ class Member extends Model
     }
 
     public function quizAnswers(){
-        return $this->hasMany(EhallQuestMember::class);
+        return $this->hasMany(EhallQuestMember::class, 'member_id');
     }
 
     public function user(){

@@ -9,6 +9,10 @@
                 {{-- Left Part --}}
                 <div class="flex flex-col">
                     <h2 class="text-white">
+                        @if (Auth::check() && Auth::user()->userable_type == 'App\Models\Member')
+                            <span class="underline text-xl underline-offset-4 decoration-purple-300 ">Score :
+                                {{ Auth::user()->userable->hois_point }}</span><br>
+                        @endif
                         <span class="underline text-2xl underline-offset-4 decoration-purple-300 ">Quiz
                             {{ $quizNo + 1 }}</span>
                         <span class="text-lg ">
@@ -27,7 +31,7 @@
                         <div
                             class="flex flex-col md:flex-row mt-[24px] md:mt-[46px] mx-auto gap-[24px] md:gap-[74px] pl-0">
                             <button wire:click="setAnswer('A')"
-                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'A' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }}  rounded-lg">
+                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'A' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'A' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }}  rounded-lg">
                                 <!-- A.  Lorem ipsum -->
                                 <div class="text-white text-[20px]">
                                     A. {{ $quiz->opt_a }}
@@ -35,7 +39,7 @@
                                 <!-- A.  Lorem ipsum -->
                             </button>
                             <button wire:click="setAnswer('B')"
-                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'B' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
+                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'B' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'B' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
                                 <!-- B.  Lorem ipsum -->
                                 <div class="text-white text-[20px]">
                                     B. {{ $quiz->opt_b }}
@@ -49,7 +53,7 @@
                         <div
                             class="flex flex-col md:flex-row mt-[24px] md:mt-[46px] mx-auto gap-[24px] md:gap-[74px] pl-0">
                             <button wire:click="setAnswer('C')"
-                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'C' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
+                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'C' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'C' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
                                 <!-- B.  Lorem ipsum -->
                                 <div class="text-white text-[20px]">
                                     C. {{ $quiz->opt_c }}
@@ -57,7 +61,7 @@
                                 <!-- B.  Lorem ipsum -->
                             </button>
                             <button wire:click="setAnswer('D')"
-                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'D' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
+                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'D' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'D' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
                                 <!-- B.  Lorem ipsum -->
                                 <div class="text-white text-[20px]">
                                     D. {{ $quiz->opt_d }}
@@ -70,11 +74,11 @@
 
                     @if ($quiz->question_type == 'ToF')
                         {{-- Tof --}}
-                        <div class="flex flex-row mt-10 mx-auto gap-8 md:gap-14">
+                        <div class="flex flex-row justify-center mt-10 mx-auto gap-8 md:gap-14">
                             <button wire:click="setAnswer('True')"
-                                class="bg-[#19AC66] focus:shadow-md w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">True</button>
+                                class="bg-[#19AC66] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'True' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'True' ? 'shadow-lg shadow-indigo-500/50' : '') : '' }} w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">True</button>
                             <button wire:click="setAnswer('False')"
-                                class="bg-[#DE4343] w-[109px] focus:shadow-md md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">False</button>
+                                class="bg-[#DE4343] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'False' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'False' ? 'shadow-lg shadow-indigo-500/50' : '') : '' }} w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">False</button>
                         </div>
                         {{-- End of Tof --}}
                     @endif
@@ -195,15 +199,10 @@
     <div class="divide-y-[1px] mt-[55px] divide-white">
         <h1 class="text-white"></h1>
         <h1 class="text-white pt-[29px] text-[14px] md:text-[20px] ">Jawaban :
-            <br><span class="text-[#B5B3BC] font-bold text-[18px] md:text-[24px]">A. Lorem Ipsum</span>
+            <br><span class="text-[#B5B3BC] font-bold text-[18px] md:text-[24px]">{{ $quizzes[$currentQuiz]->answer }}</span>
             <br><span class="text-white text-[14px] md:text-[20px] ">Pembahasan :</span>
             <br><span class="text-[#B5B3BC] text-[14px] md:text-[20px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a,
-                mattis tellus. Sed
-                dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed
-                risus. Maecenas
-                eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
-                conubia nostra
+                {!! $quizzes[$currentQuiz]->explanation !!}
             </span>
         </h1>
     </div>

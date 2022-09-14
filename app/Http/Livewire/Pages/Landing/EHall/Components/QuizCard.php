@@ -42,17 +42,22 @@ class QuizCard extends Component
         $this->answers[$this->currentQuiz] = $answer;
     }
 
-    public function mount($type_id)
+    public function mount($type_id, $is_component = false)
     {
         $this->type_quiz = EhallQuestType::find($type_id);
-        $this->quizzes = $this->type_quiz->quizzes;
+        if ($is_component) {
+            $this->quizzes = EhallQuestQuiz::inRandomOrder()->limit(1)->get();
+        } else {
+            $this->quizzes = $this->type_quiz->quizzes;
+        }
         $this->quizStatus = collect();
 
         foreach ($this->quizzes as $quizNo => $quiz) {
-            if (Auth::check()) {
+            if (Auth::check() && Auth::user()->userable_type == "App\Models\Member") {
                 $quizAnswered = Auth::user()->userable->quizAnswers->where('quiz_id', $quiz->id)->first();
                 if ($quizAnswered) {
-                    $this->quizStatus->put($quizNo, ['is_done' => true, 'status' => $quizAnswered->is_right == 1 ? true : false]);
+                    $this->answers[$quizNo] = $quizAnswered->answer;
+                    $this->quizStatus->put($quizNo, ['is_done' => true, 'status' => $quizAnswered->is_right == 1 ? true : false, 'correctAnswer' => $quizAnswered->is_right == 1 ? "" : $quiz->answer]);
                 } else {
                     $this->quizStatus->put($quizNo, ['is_done' => false]);
                 }
