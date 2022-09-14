@@ -31,7 +31,7 @@
                         <div
                             class="flex flex-col md:flex-row mt-[24px] md:mt-[46px] mx-auto gap-[24px] md:gap-[74px] pl-0">
                             <button wire:click="setAnswer('A')"
-                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'A' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'A' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }}  rounded-lg">
+                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'A' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }}  rounded-lg">
                                 <!-- A.  Lorem ipsum -->
                                 <div class="text-white text-[20px]">
                                     A. {{ $quiz->opt_a }}
@@ -39,7 +39,7 @@
                                 <!-- A.  Lorem ipsum -->
                             </button>
                             <button wire:click="setAnswer('B')"
-                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'B' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'B' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
+                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px]  {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'B' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
                                 <!-- B.  Lorem ipsum -->
                                 <div class="text-white text-[20px]">
                                     B. {{ $quiz->opt_b }}
@@ -53,7 +53,7 @@
                         <div
                             class="flex flex-col md:flex-row mt-[24px] md:mt-[46px] mx-auto gap-[24px] md:gap-[74px] pl-0">
                             <button wire:click="setAnswer('C')"
-                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'C' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'C' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
+                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'C' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
                                 <!-- B.  Lorem ipsum -->
                                 <div class="text-white text-[20px]">
                                     C. {{ $quiz->opt_c }}
@@ -61,7 +61,7 @@
                                 <!-- B.  Lorem ipsum -->
                             </button>
                             <button wire:click="setAnswer('D')"
-                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'D' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'D' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
+                                class="w-[260px] md:w-[315px] h-[52px] md:h-[63px {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'D' ? 'bg-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg ">
                                 <!-- B.  Lorem ipsum -->
                                 <div class="text-white text-[20px]">
                                     D. {{ $quiz->opt_d }}
@@ -76,9 +76,9 @@
                         {{-- Tof --}}
                         <div class="flex flex-row justify-center mt-10 mx-auto gap-8 md:gap-14">
                             <button wire:click="setAnswer('True')"
-                                class="bg-[#19AC66] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'True' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'True' ? 'shadow-lg shadow-indigo-500/50' : '') : '' }} w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">True</button>
+                                class="bg-[#19AC66] {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'True' ? 'shadow-lg shadow-indigo-500/50' : '') : '' }} w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">True</button>
                             <button wire:click="setAnswer('False')"
-                                class="bg-[#DE4343] {{$quizStatus[$currentQuiz]['is_done'] && $quizStatus[$currentQuiz]['correctAnswer'] == 'False' ? "bg-green-500" : ""}} {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'False' ? 'shadow-lg shadow-indigo-500/50' : '') : '' }} w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">False</button>
+                                class="bg-[#DE4343]  {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'False' ? 'shadow-lg shadow-indigo-500/50' : '') : '' }} w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">False</button>
                         </div>
                         {{-- End of Tof --}}
                     @endif
