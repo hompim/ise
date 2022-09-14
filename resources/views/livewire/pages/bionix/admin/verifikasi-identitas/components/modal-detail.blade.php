@@ -101,11 +101,9 @@
                     @endif
                     <div>
                         <p class="font-bold mb-0 mt-2">Twibbon</p>
-                        @if (Illuminate\Support\Facades\Storage::disk('public')->exists($member2_twibbon))
-                        <img class="object-scale-down w-50" src="{{asset('/storage/'.$member2_twibbon)}}"/>
-                        @else
+
                         <a href="{{$member2_twibbon}}" target="_blank"><p>{{$member2_twibbon}}</p></a>
-                        @endif
+
                     </div>
                     <div>
                         <p class="font-bold mb-0 mt-2">Kartu Identitas</p>
