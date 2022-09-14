@@ -74,7 +74,7 @@ class QuizCard extends Component
         ]);
 
         //Check Answer
-        if (trim(strtolower($this->answers[$this->currentQuiz])) == trim(strtolower($quiz->answer))) {
+        if (trim(strtolower($this->answers[$this->currentQuiz])) == trim(strtolower($this->quizzes[$this->currentQuiz]->answer))) {
             $member->is_right = 1;
             $member->save();
             Auth::user()->userable->increment('hois_point', 300);

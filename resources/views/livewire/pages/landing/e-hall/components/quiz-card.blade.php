@@ -72,9 +72,9 @@
                         {{-- Tof --}}
                         <div class="flex flex-row mt-10 mx-auto gap-8 md:gap-14">
                             <button wire:click="setAnswer('True')"
-                                class="bg-[#19AC66] w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">True</button>
+                                class="bg-[#19AC66] focus:shadow-md w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">True</button>
                             <button wire:click="setAnswer('False')"
-                                class="bg-[#DE4343] w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">False</button>
+                                class="bg-[#DE4343] w-[109px] focus:shadow-md md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl">False</button>
                         </div>
                         {{-- End of Tof --}}
                     @endif

@@ -31,29 +31,23 @@ class SertifikatMail extends Mailable
      */
     public function build()
     {
-        $message = '<p><b>Hi ' . $this->name . '</b></p>';
-        $message .= '<p>Thank you for your enthusiasm in participating Kick Off Webinar ISE! 2022.Hopefully, Kick Off Webinar ISE! 2022 this time can add insight and be helpful for the future.</p>';
-        $message .= '<p>Through this email, here we provide link certificate for you as a participant in the Kick Off Webinar ISE! 2022.</p>';
+        $message = '<p><b>Greetings, ' . $this->name . '</b></p>';
+        $message .= '<p>Thank you for your enthusiasm partaking in IS Class ISE! 2022. Hopefully, our IS Class ISE! 2022 can give some insights and be helpful for the future.</p>';
+        $message .= '<p>Through this email, here we provide link certificate for you as a participant in the IS Class ISE! 2022.</p>';
         $message .= '<a href=' . $this->sertif . ' target=_blank>Link Google Drive for certificate</a><br>';
-        $message .= '<p>For more information, visit our social media at :<br/>
-Instagram : @is_expo<br/>
-Twitter : @is_expo<br/>
-Whatsapp Center :<a href="https://wa.me/6285162852050" target="_blank"> 0851-6285-2050</a><br/>
-</p>
-';
+        $message .= '<p>If you have any inquiries, please contact us via WhatsApp Center (0851-6285-2050)</p>';
+        $message .= '<p>For more information, visit our social media at <a href="beacons.ai/ise2022">beacons.ai/ise2022</a></p>';
         $message .= '<p><b>Best Regards,</b><br/>
 <b>ISE 2022</b><br/>
 <b>One Aim, One Goal, One ISE!</b> </p>';
-        $this->subject('Certificate of Kick Off Webinar ISE! 2022!')
+        $this->subject('Certificate of IS Class ISE! 2022')
             ->from('admin@ise-its.com', config('app.name'))
             ->markdown(
                 'vendor.mail.text.message',
                 [
                     'slot' => $message
                 ]
-            )
-            ->attach($this->sertif);
-
+                );
         return $this;
     }
 }

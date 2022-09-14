@@ -148,6 +148,13 @@ Route::get('/sendEmailLolosAcademy', function () {
     ]);
 });
 
+Route::get('sendEmailSertif', function () {
+    SimpleExcelReader::create(public_path('csv/isclass.csv'))->getRows()
+        ->each(function (array $rowProperties) {
+            Mail::to($rowProperties['Email Address'])->send(new SertifikatMail($rowProperties['Nama'], $rowProperties['Merged Doc URL - IS Class Certificate']));
+        });
+});
+
 Route::get('/sendEmailTidakLolosAcademy', function () {
     $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->where('updated_at', '>=', '2022-09-01 00:00:00')->get();
     $sua = IconAcademyStartupData::where('competition_round', 'Rejected')->get();
