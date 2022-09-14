@@ -2010,11 +2010,17 @@ select {
 .w-72 {
     width: 18rem;
 }
-.w-\[28rem\] {
-    width: 28rem;
-}
 .w-\[60\%\] {
     width: 60%;
+}
+.w-\[\] {
+    width: ;
+}
+.w-\[2\] {
+    width: 2;
+}
+.w-\[28rem\] {
+    width: 28rem;
 }
 .min-w-full {
     min-width: 100%;
@@ -2280,6 +2286,9 @@ select {
 }
 .place-content-center {
     place-content: center;
+}
+.place-content-around {
+    place-content: space-around;
 }
 .content-center {
     align-content: center;
@@ -4015,10 +4024,6 @@ select {
 }
 .blur-2xl {
     --tw-blur: blur(40px);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-.drop-shadow-xl {
-    --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter {
@@ -6426,6 +6431,10 @@ select {
 
     .xl\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .xl\:grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
     .xl\:flex-row {
