@@ -358,13 +358,15 @@
             <div class="grid grid-rows-1 gap-4 mx-12 lg:mx-32 lg:!grid-rows-3 place-content-center">
                 <div class="grid gap-4 xl:grid-cols-2">
                     <div class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
-                        <a href="https://www.telkom.co.id/" class="flex items-center justify-center h-full">
+                        <a href="https://www.telkom.co.id/" class="flex items-center justify-center h-full"
+                            target="_blank">
                             <img src="{{ asset('images/sponsor/logo-telkom1.png') }}" alt="logo-telkomsel"
-                                class="w-full h-full transition duration-300 hover:scale-105">
+                                class="w-full transition duration-300 lg:h-full hover:scale-105">
                         </a>
                     </div>
                     <div class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
-                        <a href="https://www.ksei.co.id/" class="flex items-center justify-center h-full">
+                        <a href="https://www.ksei.co.id/" class="flex items-center justify-center h-full"
+                            target="_blank">
                             <img src="{{ asset('images/sponsor/logo-ksei.jpg') }}" alt="logo-ksei"
                                 class="w-full px-4 transition duration-300 hover:scale-105">
                         </a>
@@ -372,13 +374,15 @@
                 </div>
                 <div class="grid gap-4 xl:grid-cols-2">
                     <div class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
-                        <a href="https://www.idx.co.id/" class="flex items-center justify-center h-full">
+                        <a href="https://www.idx.co.id/" class="flex items-center justify-center h-full"
+                            target="_blank">
                             <img src="{{ asset('images/sponsor/logo-bei.png') }}" alt="logo-bei"
-                                class="w-full h-full px-4 transition duration-300 hover:scale-105">
+                                class="w-full px-4 transition duration-300 lg:h-full hover:scale-105">
                         </a>
                     </div>
                     <div class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100">
-                        <a href="https://www.idclear.co.id/id" class="flex items-center justify-center h-full">
+                        <a href="https://www.idclear.co.id/id" class="flex items-center justify-center h-full"
+                            target="_blank">
                             <img src="{{ asset('images/sponsor/logo-kpei.png') }}" alt="logo-kpei"
                                 class="w-full px-4 transition duration-300 hover:scale-105">
                         </a>
@@ -387,7 +391,8 @@
                 <div class="grid gap-4 xl:grid-cols-3 place-content-center">
                     <div
                         class="flex items-center justify-center w-full overflow-hidden rounded-lg h-96 bg-slate-100 xl:hidden">
-                        <a href="https://www.telkomsigma.co.id/">
+                        <a href="https://www.telkomsigma.co.id/" class="flex items-center justify-center h-full"
+                            target="_blank">
                             <img src="{{ asset('images/sponsor/logo-telkomsigma.png') }}" alt="logo-telkomsigma"
                                 class="w-full transition duration-300 hover:scale-105">
                         </a>
@@ -403,7 +408,7 @@
                                 class="w-full transition duration-300 hover:scale-105">
                         </a>
                     </div>
-                    <div class="w-full bg-transparent rounded-lg h-96">
+                    <div class="hidden w-full bg-transparent rounded-lg h-96 xl:flex">
                     </div>
                 </div>
                 <div class="hidden gap-4 lg:grid-cols-4">
