@@ -30,8 +30,8 @@
             </div>
 
             {{-- Col 2 --}}
-            <div class="hidden my-auto ml-12 w-80 md:block">
-                <img src="{{ asset('storage/' . $article->title_image_path) }}" alt="founder-digiflux"
+            <div class="hidden my-auto ml-6 w-[28rem] md:block">
+                <img src="{{ asset('storage/' . $article->title_image_path) }}" alt="founder"
                     class="object-cover w-full">
             </div>
         </div>
