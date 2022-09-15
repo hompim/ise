@@ -28,7 +28,7 @@
                 <div class="flex flex-col justify-center p-6 space-x-4 lg:flex-row">
                     <div class="w-full">
                         <div class="flex justify-center overflow-hidden bg-[#1C1D20] rounded-t-xl">
-                            <img src="{{ asset('images/bionix/bcl.png') }}"
+                            <img src="{{ asset('images/bionix/bcl-2.png') }}"
                                 class="h-[12em] transition duration-1000 ease-linear hover:transform hover:scale-105 hover:duration-300 lg:h-full"
                                 alt="Rifyal Rachmat - Data Scientist at Telkomsel"
                                 title="Rifyal Rachmat - Data Scientist at Telkomsel">
