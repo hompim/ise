@@ -2010,17 +2010,26 @@ select {
 .w-72 {
     width: 18rem;
 }
+.w-\[28rem\] {
+    width: 28rem;
+}
 .w-\[60\%\] {
     width: 60%;
 }
-.w-\[\] {
-    width: ;
+.w-\[3\] {
+    width: 3;
 }
-.w-\[2\] {
-    width: 2;
+.w-\[36rem\] {
+    width: 36rem;
 }
-.w-\[28rem\] {
-    width: 28rem;
+.w-\[rem\] {
+    width: rem;
+}
+.w-\[80rem\] {
+    width: 80rem;
+}
+.w-2\/3 {
+    width: 66.666667%;
 }
 .min-w-full {
     min-width: 100%;
@@ -2254,6 +2263,9 @@ select {
        -moz-appearance: none;
             appearance: none;
 }
+.grid-flow-row {
+    grid-auto-flow: row;
+}
 .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -2268,6 +2280,9 @@ select {
 }
 .grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 .grid-rows-1 {
     grid-template-rows: repeat(1, minmax(0, 1fr));
@@ -2286,9 +2301,6 @@ select {
 }
 .place-content-center {
     place-content: center;
-}
-.place-content-around {
-    place-content: space-around;
 }
 .content-center {
     align-content: center;
@@ -3528,9 +3540,6 @@ select {
 .pt-\[13px\] {
     padding-top: 13px;
 }
-.pt-\[120px\] {
-    padding-top: 120px;
-}
 .text-left {
     text-align: left;
 }
@@ -3994,6 +4003,18 @@ select {
     --tw-shadow-color: rgb(104 117 245 / 0.5);
     --tw-shadow: var(--tw-shadow-colored);
 }
+.shadow-pink-300 {
+    --tw-shadow-color: #B221E5;
+    --tw-shadow: var(--tw-shadow-colored);
+}
+.shadow-\[\#19AC66\] {
+    --tw-shadow-color: #19AC66;
+    --tw-shadow: var(--tw-shadow-colored);
+}
+.shadow-\[\#DE4343\] {
+    --tw-shadow-color: #DE4343;
+    --tw-shadow: var(--tw-shadow-colored);
+}
 .outline {
     outline-style: solid;
 }
@@ -4454,12 +4475,6 @@ select {
 .focus\:shadow:focus {
     --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.focus\:shadow-md:focus {
-    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -5258,10 +5273,6 @@ select {
         height: 362px;
     }
 
-    .md\:h-\[1260px\] {
-        height: 1260px;
-    }
-
     .md\:w-4\/12 {
         width: 33.333333%;
     }
@@ -5371,6 +5382,37 @@ select {
         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
 
+    .md\:auto-cols-auto {
+        grid-auto-columns: auto;
+    }
+
+    .md\:auto-cols-max {
+        grid-auto-columns: -webkit-max-content;
+        grid-auto-columns: max-content;
+    }
+
+    .md\:auto-cols-min {
+        grid-auto-columns: -webkit-min-content;
+        grid-auto-columns: min-content;
+    }
+
+    .md\:auto-cols-fr {
+        grid-auto-columns: minmax(0, 1fr);
+    }
+
+    .md\:grid-flow-row {
+        grid-auto-flow: row;
+    }
+
+    .md\:grid-flow-col {
+        grid-auto-flow: column;
+    }
+
+    .md\:auto-rows-max {
+        grid-auto-rows: -webkit-max-content;
+        grid-auto-rows: max-content;
+    }
+
     .md\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -5391,12 +5433,12 @@ select {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
-    .md\:flex-row {
-        flex-direction: row;
+    .md\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    .md\:flex-row-reverse {
-        flex-direction: row-reverse;
+    .md\:flex-row {
+        flex-direction: row;
     }
 
     .md\:flex-col-reverse {
@@ -6069,6 +6111,10 @@ select {
         width: 380px;
     }
 
+    .lg\:w-1\/2 {
+        width: 50%;
+    }
+
     .lg\:translate-x-0 {
         --tw-translate-x: 0px;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -6093,6 +6139,10 @@ select {
 
     .lg\:grid-cols-4 {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .lg\:\!grid-rows-3 {
@@ -6433,8 +6483,8 @@ select {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .xl\:grid-cols-1 {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+    .xl\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .xl\:flex-row {
