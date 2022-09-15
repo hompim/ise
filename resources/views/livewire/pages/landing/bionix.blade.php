@@ -119,8 +119,9 @@
                                                 Download Guidebook</a>
                                         </div>
                                         <div>
-                                            <a href="{{ route('register-is-class') }}"
-                                                class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
+                                            <a href="{{ route('closed-registration') }}"
+                                                class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register
+                                                Closed</a>
                                         </div>
                                     </div>
                                 </div>
@@ -220,8 +221,9 @@
                                                 Download Guidebook</a>
                                         </div>
                                         <div>
-                                            <a href="/dashboard/peserta/bionix/is-class/register"
-                                                class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
+                                            <a href="{{ route('closed-registration') }}"
+                                                class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register
+                                                Closed</a>
                                         </div>
                                     </div>
                                 </div>
@@ -323,8 +325,9 @@
                                                 Download Guidebook</a>
                                         </div>
                                         <div>
-                                            <a href="{{ route('register-student') }}"
-                                                class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
+                                            <a href="{{ route('closed-registration') }}"
+                                                class="px-16 py-2 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register
+                                                Closed</a>
                                         </div>
                                     </div>
                                 </div>
@@ -424,8 +427,9 @@
                                                 Download Guidebook</a>
                                         </div>
                                         <div>
-                                            <a href="{{ route('register-student') }}"
-                                                class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register</a>
+                                            <a href="{{ route('closed-registration') }}"
+                                                class="px-8 py-1.5 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">Register
+                                                Closed</a>
                                         </div>
                                     </div>
                                 </div>
