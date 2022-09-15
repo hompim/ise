@@ -1,6 +1,5 @@
     <!-- Main modal -->
-    <div id="defaultModal" aria-hidden="true"
-        data-modal-show="{{ Auth::check() ? (Auth::user()->userable->webinar ? 'false' : 'true') : 'true' }}"
+    <div id="defaultModal" aria-hidden="true" data-modal-show="{{ Auth::check() ? 'false' : 'true' }}"
         class="fixed top-0 bottom-0 left-0 right-0 hidden w-full mt-12 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full lg:mt-4 z-[9999]"
         data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="2500" data-aos-one="true">
         <div class="relative w-full h-full max-w-4xl p-4 md:h-auto">
