@@ -37,7 +37,7 @@ class Blastbcl extends Mailable
         </p>";
         $message .= "<p>GUIDEBOOK 👇
         </p>";
-        $message .= "<p><a href='http://ise-its.com/guidebook-college'>
+        $message .= "<p><a href='https://drive.google.com/file/d/1KUtFKWdUwKZBS9-A5ImEYOhhvLLonXjk/view'>
         ise-its.com/guidebook-college
         </a></p>";
         $message .= "<p>SAVE THE DATE AND REGISTER YOUR TEAM❗</p>
