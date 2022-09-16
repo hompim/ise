@@ -180,7 +180,7 @@
                             class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-200px] mt-[140px] lg:ml-[-520px] lg:mt-96 font-semibold lg:text-[20px] ">
                             E-Hall of IS</p>
                     </div>
-                    <a href="{{ route('coming-soon') }}"
+                    <a href="{{ route('e-hall') }}"
                         class="absolute lg:transition ml-[-176px] mt-[155px] lg:ml-[-480px] lg:mt-[420px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300">
                         <img src="{{ asset('images/hall-is.svg') }}" alt="">
                     </a>
@@ -247,7 +247,7 @@
                             class="mx-[11px] md:mx-[107px] mt-[8px] md:mt-[25px]  text-center text-[#B5B3BC] font-medium text-[8.5px] lg:text-lg font-poppins tracking-wide">
                             Pameran karya autentik mahasiswa dan alumni Sistem Informasi ITS sebagai bentuk kontribusi untuk
                             negeri. Kunjungi dan menangkan setiap Challenge untuk menjadi bagian dari sejarah kami.</p>
-                        <a href="{{ route('coming-soon') }}">
+                        <a href="{{ route('e-hall') }}">
                             <button
                                 class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>
