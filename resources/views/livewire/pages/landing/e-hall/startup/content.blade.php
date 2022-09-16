@@ -38,7 +38,7 @@
 
         {{-- Youtube Video --}}
         <div class="flex justify-center mt-32 md:mt-52 " id="explore">
-            {!! Cohensive\OEmbed\Facades\OEmbed::get($article->link_youtube)->html(['width' => 1080, 'height' => 720]) !!}
+            {!! Cohensive\OEmbed\Facades\OEmbed::get($article->link_youtube)->html(['width' => 1080, 'height' => 608]) !!}
         </div>
 
         {{-- About Digiflux --}}
