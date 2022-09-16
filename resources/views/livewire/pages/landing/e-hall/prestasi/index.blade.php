@@ -12,11 +12,10 @@
                     <h1 class="text-white text-[50px] md:text-[80px] mx-auto md:mx-0 font-bold">Prestasi</h1>
                 </div>
                 <p class="mt-4 text-sm text-left md:text-lg text-liteGray md:leading-normal md:text-left">
-                    Prestasi merupakan Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-                    molestie,
-                    dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan,risus sem sollicitudin
-                    lacus,
-                    ut interdum tellus elit sed risus </p>
+                    Tidak hanya berbakti pada departemen dan almamater, tetapi juga membuktikan eksistensi dengan
+                    berbakti untuk negeri. Berbagai bidang, berbagai ajang bergengsi, kami berbakti lewat prestasi.
+                    Lihat prestasi mahasiswa dan alumni Sistem Informasi ITS dari skala nasional sampai internasional di
+                    sini.</p>
                 <div class="relative mx-auto mt-16 text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
                     <div class="absolute inset-0 ">
                         <a href="#explore"
