@@ -160,7 +160,7 @@
                 </span>
             </button>
         </div>
-        <div class="mx-4 text-lg text-center text-liteGray md:mt-24 md:mx-16">
+        <div class="mx-4 text-lg text-center text-liteGray md:mt-24 md:mx-16 pb-48">
             E-Hall of IS merupakan zona berisikan pameran virtual karya-karya autentik mahasiswa dan alumni Sistem
             Informasi Institut Teknologi Sepuluh Nopember (ITS) dengan reputasi gemilang, baik ranah nasional maupun
             internasional. Zona ini memiliki dua tujuan utama. Pertama, memperkenalkan karya Sistem Informasi ITS ke
