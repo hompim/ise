@@ -103,7 +103,7 @@ class RegisterCollege extends Component
         $validatedData = $this->validate([
             'team_name' => 'required',
             'judul_ide_bisnis' => 'required',
-            'bmc' => 'required|mimes:pdf|max:3072',
+            // 'bmc' => 'required|mimes:pdf|max:3072',
             'city' => 'required'
         ]);
         $this->isIdentityDone = true;
@@ -205,19 +205,17 @@ class RegisterCollege extends Component
             'whatsapp' => $this->member_1_whatsapp
         ]);
 
-
-        if (!is_string($this->bmc)) {
-            $bmc = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_BMC' . '.' . $this->bmc->getClientOriginalExtension();
-            $this->bmc->storeAs("public/bionix", $bmc);
+            // $bmc = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_BMC' . '.' . $this->bmc->getClientOriginalExtension();
+            // $this->bmc->storeAs("public/bionix", $bmc);
 
             $team_data = TeamSeniorData::create([
                 'team_name' => $this->team_name,
                 'info_source' => $this->info_source,
-                'bmc_file_path' => 'bionix/'.$bmc,
+                // 'bmc_file_path' => 'bionix/'.$bmc,
                 'judul_ide_bisnis' => $this->judul_ide_bisnis,
                 'city_id' => $this->city,
             ]);
-        }
+
 
         for ($x = 1; $x <= 3; $x++) {
             ${'team_member_' . $x} =  TeamSeniorMember::create([

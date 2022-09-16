@@ -9,6 +9,7 @@
                 {{-- Left Part --}}
                 <div class="flex flex-col w-full lg:w-1/2">
                     <h2 class="text-white">
+
                         @if (Auth::check() && Auth::user()->userable_type == 'App\Models\Member')
                             <span class="underline text-xl underline-offset-4 decoration-purple-300 ">Score :
                                 {{ Auth::user()->userable->hois_point }}</span><br>
@@ -193,9 +194,6 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     @endforeach
 </div>
