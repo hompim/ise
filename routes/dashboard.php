@@ -106,6 +106,9 @@ Route::middleware('auth')->group(function () {
                     });
                     Route::middleware('usertype:SMA')->group(function () {
                         Route::get('register/student', \App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent::class)->name('register-student');
+                        Route::get('register/student', function () {
+                            return view('closed-registration');
+                        })->name('register-student');
                     });
                 });
 
