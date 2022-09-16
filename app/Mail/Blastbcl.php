@@ -40,11 +40,11 @@ class Blastbcl extends Mailable
         $message .= "<p><a href='http://ise-its.com/guidebook-college'>
         ise-its.com/guidebook-college
         </a></p>";
-        $message .= "<p>SAVE THE DATE AND REGISTER YOUR TEAM❗❗</p>
+        $message .= "<p>SAVE THE DATE AND REGISTER YOUR TEAM❗</p>
         <p>📅<b> August 21 - September 21, 2022</b></p>";
 
         $message .= "<p><a href='https://ise-its.com/dashboard/peserta/bionix/register/college'>
-        Register Now❗❗
+        Register Now❗
         </a></p>";
         $message .= "<img src='https://ise-its.com/images/bionix/bcl-2.png' alt='poster-bcl'/>";
         $message .= "<p>If you have any questions, please contact us via WhatsApp Center <a href='https://wa.me/6285162852050'>(0851-6285-2050)</a></p>";
@@ -52,7 +52,7 @@ class Blastbcl extends Mailable
         $message .= '<p><b>Best Regards,</b><br/>
 <b>ISE 2022</b><br/>
 <b>One Aim, One Goal, One ISE!</b> </p>';
-        return $this->subject('Open Registration Bionix College Level ISE! 2022')->from('admin@ise-its.com', config('ISE 2022'))->markdown(
+        return $this->subject('Open Registration Bionix College Level ISE! 2022')->from('admin@ise-its.com', config('app.name'))->markdown(
             'vendor.mail.text.message',
             [
                 'slot' => $message
