@@ -18,6 +18,7 @@ class QuizCard extends Component
     public $message;
     public $is_done;
     public $quizStatus;
+    public $timer;
     protected $listeners = ['submitAnswer', 'refreshPage'];
 
     public function render()
@@ -44,6 +45,7 @@ class QuizCard extends Component
 
     public function mount($type_id, $is_component = false)
     {
+        $this->timer = 60;
         $this->type_quiz = EhallQuestType::find($type_id);
         if ($is_component) {
             $this->quizzes = EhallQuestQuiz::inRandomOrder()->limit(1)->get();
@@ -69,6 +71,12 @@ class QuizCard extends Component
 
     public function submitAnswer()
     {
+        if(!isset($this->answers[$this->currentQuiz])) {
+            $message = "Pilih jawaban terlebih dahulu";
+            $this->emit('alert', $message);
+            return;
+        }
+
         $check = EhallQuestMember::where('member_id', Auth::user()->userable_id)->where('quiz_id', $this->quizzes[$this->currentQuiz]->id)->first();
         if ($this->quizStatus[$this->currentQuiz]['is_done'] || $check) return $this->emit('alert', 'Anda Sudah menjawab quiz');
         $member = EhallQuestMember::create([

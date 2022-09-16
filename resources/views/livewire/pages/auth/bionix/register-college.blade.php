@@ -60,12 +60,12 @@
                         placeholder="Masukkan nama tim kamu" wire:model.defer="judul_ide_bisnis"
                         name="judul_ide_bisnis">
                 </div>
-                <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
+                {{-- <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="bmc">Upload dile BMC (<=2Mb, .pdf) </label>
                             <input id="bmc" wire:model.defer="bmc" name="bmc" type="file" required
                                 class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                                 placeholder="File BMC" accept="application/pdf">
-                </div>
+                </div> --}}
                 <div class="relative left-0 right-0 justify-center mx-auto mt-24 text-center max-w-fit group">
                     <button type="button" wire:click="identityTeamSubmit()"
                         class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Next</button>
