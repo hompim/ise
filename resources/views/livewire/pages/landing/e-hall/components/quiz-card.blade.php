@@ -186,7 +186,7 @@
 
                 {{-- Right Part --}}
                 <div class="flex flex-col w-full mx-auto overflow-scroll">
-                    <div class="grid gap-4 px-12 auto-cols-max md:px-0">
+                    <div class="grid gap-4 px-12 auto-rows-max md:px-0">
                         @foreach ($quizzes as $quizNo => $quiz)
                             <button type="button" wire:click="moveToQuestion({{ $quizNo }})"
                                 class="w-[56px] md:w-[75px] h-[56px] md:h-[75px] {{ $currentQuiz == $quizNo ? 'bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] text-white' : ($quizStatus[$quizNo]['is_done'] ? ($quizStatus[$quizNo]['status'] ? 'bg-green-500 text-white' : 'bg-red-500 text-white') : 'bg-[#2F2F2F] text-white') }} mx-auto  text-2xl font-bold rounded-lg">{{ $quizNo + 1 }}</button>
