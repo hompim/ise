@@ -1,20 +1,20 @@
-<div class="pt-6 md:pt-52 flex flex-col bg-black">
+<div class="flex flex-col pt-6 bg-black md:pt-52">
     {{-- Start Quiz Block --}}
 
     @foreach ($quizzes as $quizNo => $quiz)
         <div
             class="mt-32 md:mt-0 mb-[145px] bg-liteBlack mx-6 md:mx-28 h-max rounded-2xl flex flex-col p-[24px] md:p-11 @if ($currentQuiz == $quizNo) @else hidden @endif">
-            <h1 class="text-white text-lg  md:text-2xl mx-auto">Quiz {{ $type_quiz->name }}</h1>
-            <div class="flex flex-col md:flex-row mt-4 gap-14">
+            <h1 class="mx-auto text-lg text-white md:text-2xl">Quiz {{ $type_quiz->name }}</h1>
+            <div class="flex flex-col mt-4 md:flex-row gap-14">
                 {{-- Left Part --}}
                 <div class="flex flex-col w-full lg:w-1/2">
                     <h2 class="text-white">
 
                         @if (Auth::check() && Auth::user()->userable_type == 'App\Models\Member')
-                            <span class="underline text-xl underline-offset-4 decoration-purple-300 ">Score :
+                            <span class="text-xl underline underline-offset-4 decoration-purple-300 ">Score :
                                 {{ Auth::user()->userable->hois_point }}</span><br>
                         @endif
-                        <span class="underline text-2xl underline-offset-4 decoration-purple-300 ">Quiz
+                        <span class="text-2xl underline underline-offset-4 decoration-purple-300 ">Quiz
                             {{ $quizNo + 1 }}</span>
                         <span class="text-lg ">
                             (
@@ -23,7 +23,7 @@
                             )
                         </span>
                     </h2>
-                    <p class="text-sm md:text-lg text-white mt-2 ">
+                    <p class="mt-2 text-sm text-white md:text-lg ">
                         {{ $quiz->question }}
                     </p>
                     {{-- // Soal quiz --}}
@@ -78,11 +78,11 @@
 
                     @if ($quiz->question_type == 'ToF')
                         {{-- Tof --}}
-                        <div class="flex flex-row justify-center mt-10 mx-auto gap-8 md:gap-14">
+                        <div class="flex flex-row justify-center gap-8 mx-auto mt-10 md:gap-14">
                             <button wire:click="setAnswer('True')"
-                                class="bg-[#19AC66] {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'True' ? 'shadow-lg shadow-[#19AC66]' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl transition duration-300 hover:-translate-y-2">True</button>
+                                class="bg-[#19AC66] {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'True' ? 'shadow-xl shadow-[#19AC66]' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl transition duration-300 hover:-translate-y-2">True</button>
                             <button wire:click="setAnswer('False')"
-                                class="bg-[#DE4343]  {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'False' ? 'shadow-lg shadow-[#DE4343]' : '') : '' }} w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl transition duration-300 hover:-translate-y-2">False</button>
+                                class="bg-[#DE4343]  {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'False' ? 'shadow-xl shadow-[#DE4343]' : '') : '' }} w-[109px] md:w-[171px] h-[37px] md:h-[58px] rounded-lg text-white text-sm md:text-xl transition duration-300 hover:-translate-y-2">False</button>
                         </div>
                         {{-- End of Tof --}}
                     @endif
@@ -142,28 +142,28 @@
                     <div class="md:flex flex-row gap-7 mt-[36px] hidden">
                         <button wire:click="moveQuestion(-1)"
                             class="bg-[#2F2F2F] w-[58px] h-[58px] text-white items-center rounded-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
                             </svg>
                         </button>
                         <button wire:click="moveQuestion(1)"
                             class="bg-[#2F2F2F] w-[58px] h-[58px] text-white items-center rounded-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 mx-auto" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                             </svg>
                         </button>
                         @if (Auth::check())
                             @if ($quizStatus[$currentQuiz]['is_done'])
-                                <p class=" text-white">Anda Sudah Menjawab Quiz ini dan bisa melihat pembahasan di
+                                <p class="text-white ">Anda Sudah Menjawab Quiz ini dan bisa melihat pembahasan di
                                     bawah.</p>
                             @else
                                 <button
-                                    wire:click="submitAnswer"class="mx-auto text-white md:text-xl rounded-lg col-span-2 btn px-8 md:px-10 py-2 mt-8 md:mt-100 font-semibold">Submit</button>
+                                    wire:click="submitAnswer"class="col-span-2 px-8 py-2 mx-auto mt-8 font-semibold text-white rounded-lg md:text-xl btn md:px-10 md:mt-100">Submit</button>
                             @endif
                         @else
-                            <a class="mx-auto text-white md:text-xl rounded-lg col-span-2 btn px-8 md:px-10 py-2 mt-8 md:mt-100 font-semibold"
+                            <a class="col-span-2 px-8 py-2 mx-auto mt-8 font-semibold text-white rounded-lg md:text-xl btn md:px-10 md:mt-100"
                                 href="{{ route('login') }}">Login</a>
                         @endif
                     </div>
@@ -186,7 +186,7 @@
 
                 {{-- Right Part --}}
                 <div class="flex flex-col mx-auto">
-                    <div class="grid grid-cols-2 gap-4 px-12 md:px-0  ">
+                    <div class="grid grid-cols-2 gap-4 px-12 md:px-0 ">
                         @foreach ($quizzes as $quizNo => $quiz)
                             <button type="button" wire:click="moveToQuestion({{ $quizNo }})"
                                 class="w-[56px] md:w-[75px] h-[56px] md:h-[75px] {{ $currentQuiz == $quizNo ? 'bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] text-white' : ($quizStatus[$quizNo]['is_done'] ? ($quizStatus[$quizNo]['status'] ? 'bg-green-500 text-white' : 'bg-red-500 text-white') : 'bg-[#2F2F2F] text-white') }} mx-auto  text-2xl font-bold rounded-lg">{{ $quizNo + 1 }}</button>
