@@ -71,10 +71,7 @@ Route::group(['prefix' => 'icon'], function () {
     // Route e-hall
     Route::group(['prefix' => 'hall-of-is'], function () {
         // icon/e-hall/
-        // Route::get('/', EHallIndex::class)->name('e-hall');
-        Route::get('/', function () {
-            return view('coming-soon-page');
-        })->name('e-hall');
+        Route::get('/', EHallIndex::class)->name('e-hall');
         // Route startup e-hall
         Route::group(['prefix' => 'startup'], function () {
             // icon/e-hall/startup
