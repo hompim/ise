@@ -57,7 +57,7 @@
                     <label for="name">Judul Ide</label>
                     <input id="name" type="text"
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                        placeholder="Masukkan nama tim kamu" wire:model.defer="judul_ide_bisnis"
+                        placeholder="Judul ide kamu" wire:model.defer="judul_ide_bisnis"
                         name="judul_ide_bisnis">
                 </div>
                 {{-- <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">

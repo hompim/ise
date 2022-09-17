@@ -79,6 +79,8 @@ class IdentitasTim extends Component
         $photo4,
         $photo5;
     public $with_member_2;
+    public $with_member_4;
+    public $with_member_5;
     public $new_member_2 = false, $new_member_3 = false;
 
     //Status Notification Variable
@@ -94,7 +96,7 @@ class IdentitasTim extends Component
     {
         $this->is_junior = Auth::user()->userable->jenjang == "SMA" ? true : false;
         $this->senior_member = 0;
-        $this->with_member_2 = (($this->is_junior && Auth::user()->userable->bionix->member_id) || (!$this->is_junior && Auth::user()->userable->bionix->member1_id)) ? true : false;
+        $this->with_member_2 = $this->is_junior && Auth::user()->userable->bionix->member_id ? true : false;
         $this->cities = City::orderBy('region')->get();
         $this->info_source = Auth::user()->userable->bionix->info_source;
         $this->team_name = Auth::user()->userable->bionix->team_name;
@@ -161,8 +163,6 @@ class IdentitasTim extends Component
             'team_name' => 'required',
             'member_1_name' => 'required',
             'member_1_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
-            'school_name' => 'required',
-            'school_city' => 'required',
             'info_source' => 'required'
         ];
         if (!is_string($this->photo1)) {
@@ -171,7 +171,7 @@ class IdentitasTim extends Component
             ]);
         }
 
-        if ($this->with_member_2) {
+        if ($this->with_member_2 && $this->is_junior) {
             $validate = array_merge(
                 $validate,
                 [
@@ -192,63 +192,61 @@ class IdentitasTim extends Component
                     'photo2' => 'required|image|max:1024', // 1MB Max
                 ]);
             }
-        } else {
-            if (($this->member_2_email || $this->member_2_name || $this->member_2_whatsapp || ($this->photo2 && !is_string($this->photo2))) ||
-                (!$this->is_junior && ($this->member_2_twibbon || $this->member_2_year || $this->member_2_major))
-            ) {
-                $this->new_member_2 = true;
-                $validate = array_merge(
-                    $validate,
-                    [
-                        'member_2_name' => 'required',
-                        'member_2_email' => ['required', 'email', Rule::unique('team_senior_members', 'email')->ignore(($this->is_junior ? '' : Auth::user()->userable->bionix->member1_id)), Rule::unique('team_junior_members', 'email')->ignore(($this->is_junior ? Auth::user()->userable->bionix->member_id : ''))],
-                        'member_2_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
-                        'photo2' => 'required|image|max:1024',
-                    ]
-                );
-                if (!$this->is_junior) {
-                    $validate = array_merge($validate, [
-                        'member_2_twibbon' => 'required|url',
-                        'member_2_major' => 'required|string',
-                        'member_2_year' => 'required|integer|min:2000|max:' . date('Y'),
-                    ]);
-                }
-            }
         }
 
         if (!$this->is_junior) {
             $validate = array_merge($validate, [
-                'member_1_twibbon' => 'required|url',
+                'member_1_twibbon' => 'required',
                 'member_1_major' => 'required|string',
                 'member_1_year' => 'required|integer|min:2000|max:' . date('Y'),
+                'judul' => 'required',
+                'bmc' => 'required|mimes:pdf|max:3072',
             ]);
-            if ($this->with_member_3) {
-                $validate = array_merge($validate, [
-                    'member_3_twibbon' => 'required|url',
-                    'member_3_major' => 'required|string',
-                    'member_3_year' => 'required|integer|min:2000|max:' . date('Y'),
-                    'member_3_name' => 'required',
-                    'member_3_email' => ['required', 'email', Rule::unique('team_senior_members', 'email')->ignore(Auth::user()->userable->bionix->member2_id), Rule::unique('team_junior_members', 'email')],
-                    'member_3_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
-                ]);
-                if ($this->photo3 && !is_string($this->photo3)) {
+
+            for ($x = 2; $x <= 5; $x++) {
+                if ($this->{'member_' . $x . '_email'} || $this->{'member_' . $x . '_name'} || $this->{'member_' . $x . '_twibbon'} || $this->{'member_' . $x . '_whatsapp'} || $this->{'member_' . $x . '_year'} || $this->{'member_' . $x . '_major'}) {
                     $validate = array_merge($validate, [
-                        'photo3' => 'required|image|max:1024', // 1MB Max
+                        'member_' . $x . '_name' => 'required',
+                        'member_' . $x . '_email' => 'required|email',
+                        'member_' . $x . '_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
+                        'member_' . $x . '_twibbon' => 'required',
+                        'member_' . $x . '_year' => 'required',
+                        'member_' . $x . '_major' => 'required|string',
+                        'member_' . $x . '_university' => 'required|string',
+                        'member_' . $x . '_instagram' => 'required|string',
                     ]);
+                    if ($x == 4) $this->with_member_4 = true;
+                    if ($x == 5) $this->with_member_5 = true;
                 }
-            } elseif (($this->member_3_email || $this->member_3_name || $this->member_3_whatsapp || $this->member_3_major || $this->member_3_year || ($this->photo3 && !is_string($this->photo3))) ||
-                (!$this->is_junior && $this->member_3_twibbon)
-            ) {
-                $this->new_member_3 = true;
-                $validate = array_merge($validate, [
-                    'member_3_twibbon' => 'required|url',
-                    'member_3_major' => 'required|string',
-                    'member_3_year' => 'required|integer|min:2000|max:' . date('Y'),
-                    'member_3_name' => 'required',
-                    'member_3_email' => ['required', 'email', Rule::unique('team_senior_members', 'email')->ignore(Auth::user()->userable->bionix->member2_id), Rule::unique('team_junior_members', 'email')],
-                    'member_3_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
-                    'photo3' => 'required|image|max:1024', // 1MB Max
-                ]);
+            }
+
+            for ($x = 1; $x <= 2; $x++) {
+                for ($y = $x + 1; $y <= 3; $y++) {
+                    if (($this->{'member_' . $x . '_email'} == $this->{'member_' . $y . '_email'})) {
+                        $this->message = "Email masing-masing peserta tidak boleh sama";
+                        $this->messageType = 'red';
+                        return;
+                    }
+                }
+            }
+
+            if ($this->with_member_4) {
+                for ($i = 1; $i < 4; $i++) {
+                    if (($this->{'member_' . $x . '_email'} == $this->member_4_email)) {
+                        $this->message = "Email masing-masing peserta tidak boleh sama";
+                        $this->messageType = 'red';
+                        return;
+                    }
+                }
+            }
+            if ($this->with_member_5) {
+                for ($i = 1; $i < 5; $i++) {
+                    if (($this->{'member_' . $x . '_email'} == $this->member_5_email)) {
+                        $this->message = "Email masing-masing peserta tidak boleh sama";
+                        $this->messageType = 'red';
+                        return;
+                    }
+                }
             }
         }
 
@@ -360,8 +358,18 @@ class IdentitasTim extends Component
                 'team_name' => $this->team_name,
                 'city_id' => $this->school_city,
                 'info_source' => $this->info_source,
-                'judul_ide_bisnis' => $this->judul
+                'judul_ide_bisnis' => $this->judul,
             ]);
+
+            if($this->bmc){
+                $bmc = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_BMC' . '.' . $this->bmc->getClientOriginalExtension();
+                $this->bmc->storeAs("public/bionix", $bmc);
+                $this->bmc = 'bionix/' . $bmc;
+
+                Auth::user()->userable->bionix->update([
+                    'bmc_file_path' => 'bionix/' . $bmc
+                ]);
+            }
 
             foreach (Auth::user()->userable->bionix->members as $i => $member) {
                 $member->update([
@@ -474,33 +482,6 @@ class IdentitasTim extends Component
                         !Auth::user()->userable->bionix->member->email ||
                         !Auth::user()->userable->bionix->member->identity_card_path ||
                         !Auth::user()->userable->bionix->member->whatsapp))
-            ) {
-                $this->message = 'Pastikan bahwa semua data telah terisi';
-                $this->messageType = 'red';
-                return;
-            }
-        } else {
-            if (
-                !Auth::user()->userable->bionix->team_name ||
-                !Auth::user()->userable->bionix->university_name ||
-                !Auth::user()->userable->bionix->leader->identity_card_path ||
-                !Auth::user()->userable->bionix->leader->link_twibbon ||
-                !Auth::user()->userable->bionix->leader->year ||
-                !Auth::user()->userable->bionix->leader->major ||
-                (Auth::user()->userable->bionix->member1_id && (!Auth::user()->userable->bionix->member_1->identity_card_path ||
-                    !Auth::user()->userable->bionix->member_1->name ||
-                    !Auth::user()->userable->bionix->member_1->email ||
-                    !Auth::user()->userable->bionix->member_1->whatsapp ||
-                    !Auth::user()->userable->bionix->member_1->year ||
-                    !Auth::user()->userable->bionix->member_1->major ||
-                    !Auth::user()->userable->bionix->member_1->link_twibbon)) ||
-                (Auth::user()->userable->bionix->member2_id && (!Auth::user()->userable->bionix->member_2->link_twibbon ||
-                    !Auth::user()->userable->bionix->member_2->identity_card_path ||
-                    !Auth::user()->userable->bionix->member_2->name ||
-                    !Auth::user()->userable->bionix->member_2->email ||
-                    !Auth::user()->userable->bionix->member_2->year ||
-                    !Auth::user()->userable->bionix->member_2->major ||
-                    !Auth::user()->userable->bionix->member_2->whatsapp))
             ) {
                 $this->message = 'Pastikan bahwa semua data telah terisi';
                 $this->messageType = 'red';

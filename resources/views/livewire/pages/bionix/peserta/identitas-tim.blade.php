@@ -53,7 +53,8 @@
                         @if (Auth::user()->userable->bionix->profile_verif_status != 'Terverifikasi' &&
                             Auth::user()->userable->bionix->profile_verif_status != 'Tahap Verifikasi' &&
                             !$alreadyDeadline)
-                            <button type="button" @if(!$is_junior) disabled @endif class="text-blue-500 justify-self-end" wire:click="toEditMode()"><i
+                            <button type="button"
+                                class="text-blue-500 justify-self-end" wire:click="toEditMode()"><i
                                     class="fas fa-edit"></i>
                             </button>
                         @endif
@@ -70,23 +71,36 @@
                             <p class="font-bold text-lg">{{ $team_name }}</p>
                         @endif
                     </div>
-                @if (!$is_junior)
-                    <div>
-                        <label for="school_name" class="mb-2 font-bold text-gray-400 mt-4">Judul Ide Bisnis</label><br>
-                        @if ($is_edit)
-                            <input wire:model.defer="judul" type="text" id="judul" name="judul"
-                                class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
-                                style="color: black;margin-top:0;" required {{ $readonly ? 'disabled' : '' }}>
-                        @else
-                            <p class="font-bold text-lg">{{ $judul }}</p>
-                        @endif
-                    </div>
-                    <div>
-                        <label for="school_name" class="mb-2 font-bold text-gray-400 mt-4">BMC</label><br>
-                        <a href="{{asset('storage/'.$bmc)}}" target="_blank"> <p class="font-bold text-blue-400 text-lg">File BMC</p></a>
-
-                    </div>
-                @endif
+                    @if (!$is_junior)
+                        <div>
+                            <label for="school_name" class="mb-2 font-bold text-gray-400 mt-4">Judul Ide
+                                Bisnis</label><br>
+                            @if ($is_edit)
+                                <input wire:model.defer="judul" type="text" id="judul" name="judul"
+                                    class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
+                                    style="color: black;margin-top:0;" required {{ $readonly ? 'disabled' : '' }}>
+                            @else
+                                <p class="font-bold text-lg">{{ $judul }}</p>
+                            @endif
+                        </div>
+                        <div>
+                            <label for="school_name" class="mb-2 font-bold text-gray-400 mt-4">BMC</label><br>
+                            @if ($is_edit)
+                                <input wire:model.defer="bmc" type="file" id="bmc" name="bmc"
+                                    class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
+                                    placeholder="File BMC" accept="application/pdf" style="color: black;margin-top:0;"
+                                    required {{ $readonly ? 'disabled' : '' }}>
+                            @else
+                                @if($bmc)
+                                <a href="{{ asset('storage/' . $bmc) }}" target="_blank">
+                                    <p class="font-bold text-blue-400 text-lg">File BMC</p>
+                                </a>
+                                @else
+                                <p class="font-bold text-lg">Belum upload</p>
+                                @endif
+                            @endif
+                        </div>
+                    @endif
                     <div>
                         <label for="school_city" class="mb-2 font-bold text-gray-400 mt-4">Asal
                             Provinsi/Kota/Kabupaten {{ $is_junior ? 'Sekolah' : 'Perguruan Tinggi' }}</label><br>
@@ -516,48 +530,54 @@
 
                 @if (!$is_junior)
                     @for ($x = 1; $x <= $senior_member; $x++)
-                        <h4 class="text-lg font-bold text-gray-500 col-span-10 md:col-span-2 text-left">Anggota Tim {{$x}}</h4>
+                        <h4 class="text-lg font-bold text-gray-500 col-span-10 md:col-span-2 text-left">Anggota Tim
+                            {{ $x }}</h4>
                         <div class="col-span-10 md:col-span-6 flex items-center">
                             <div class="border-2 border-bottom-0 flex-grow" style="height: 1px;"></div>
                         </div>
                         <div class="col-span-10 md:col-span-2"></div>
                         <div class="col-span-10 md:col-span-2"></div>
-                        <div id="anggota_{{$x}}" class="col-span-10 md:col-span-6">
+                        <div id="anggota_{{ $x }}" class="col-span-10 md:col-span-6">
                             <div class="grid md:grid-cols-2 gap-4">
                                 <div>
                                     <div>
-                                        <label for="member_{{$x}}_name" class="mb-2 font-bold text-gray-400">Nama Lengkap
+                                        <label for="member_{{ $x }}_name"
+                                            class="mb-2 font-bold text-gray-400">Nama Lengkap
                                             Anggota
-                                            {{$x}}</label><br>
+                                            {{ $x }}</label><br>
                                         @if ($is_edit)
-                                            <input wire:model.defer="member_{{$x}}_name" type="text" id="member_{{$x}}_name"
-                                                name="member_{{$x}}_name" class="registration-form input-text"
+                                            <input wire:model.defer="member_{{ $x }}_name" type="text"
+                                                id="member_{{ $x }}_name"
+                                                name="member_{{ $x }}_name"
+                                                class="registration-form input-text"
                                                 style="color: black;margin-top:0;">
                                         @else
-                                            <p class="font-bold text-lg">{{ ${'member_'.$x.'_name'} }}</p>
+                                            <p class="font-bold text-lg">{{ ${'member_' . $x . '_name'} }}</p>
                                         @endif
                                     </div>
                                     <div>
                                         <label for="member_3_email" class="mb-2 font-bold text-gray-400 mt-4">Email
                                             Anggota
-                                            {{$x}}</label><br>
+                                            {{ $x }}</label><br>
                                         @if ($is_edit)
-                                            <input wire:model.defer="member_{{$x}}_email" type="email"
-                                                id="member_{{$x}}_email" name="member_{{$x}}_email"
+                                            <input wire:model.defer="member_{{ $x }}_email" type="email"
+                                                id="member_{{ $x }}_email"
+                                                name="member_{{ $x }}_email"
                                                 class="registration-form input-text"
                                                 style="color: black;margin-top:0;">
                                         @else
-                                            <p class="font-bold text-lg">{{ ${'member_'.$x.'_email'} }}</p>
+                                            <p class="font-bold text-lg">{{ ${'member_' . $x . '_email'} }}</p>
                                         @endif
                                     </div>
                                     <div>
                                         <label for="member_3_whatsapp" class="mb-2 font-bold text-gray-400 mt-4">Nomor
                                             WA
                                             Anggota
-                                            {{$x}}</label><br>
+                                            {{ $x }}</label><br>
                                         @if ($is_edit)
-                                            <input wire:model.defer="member_{{$x}}_whatsapp" type="text"
-                                                id="member_{{$x}}_whatsapp" name="member_{{$x}}_whatsapp"
+                                            <input wire:model.defer="member_{{ $x }}_whatsapp"
+                                                type="text" id="member_{{ $x }}_whatsapp"
+                                                name="member_{{ $x }}_whatsapp"
                                                 class="registration-form input-text"
                                                 style="color: black;margin-top:0;">
                                             <small class="text-red-400 font-normal" id="phone_3_error"
@@ -568,7 +588,7 @@
                                             <small class="text-gray-400 font-normal">*Nomor
                                                 Handphone diawali 08 dan terdiri dari 10-13 karakter.</small>
                                         @else
-                                            <p class="font-bold text-lg">{{ ${'member_'.$x.'_whatsapp'} }}</p>
+                                            <p class="font-bold text-lg">{{ ${'member_' . $x . '_whatsapp'} }}</p>
                                         @endif
                                     </div>
                                     <div>
@@ -576,69 +596,75 @@
                                             Post
                                             Twibbon
                                             Anggota
-                                            {{$x}}</label><br>
+                                            {{ $x }}</label><br>
                                         @if ($is_edit)
-                                            <input wire:model.defer="member_{{$x}}_twibbon" type="text"
-                                                id="member_{{$x}}_twibbon" name="member_{{$x}}_twibbon"
+                                            <input wire:model.defer="member_{{ $x }}_twibbon"
+                                                type="text" id="member_{{ $x }}_twibbon"
+                                                name="member_{{ $x }}_twibbon"
                                                 class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
                                                 style="color: black;margin-top:0;" {{ $readonly ? 'disabled' : '' }}>
                                         @else
-                                            <a href="{{ ${'member_'.$x.'_twibbon'} }}" target="_blank"
-                                                class="font-bold text-md text-blue-500">{{ ${'member_'.$x.'_twibbon'} }}</a>
+                                            <a href="{{ ${'member_' . $x . '_twibbon'} }}" target="_blank"
+                                                class="font-bold text-md text-blue-500">{{ ${'member_' . $x . '_twibbon'} }}</a>
                                         @endif
                                     </div>
                                     <div>
                                         <label for="member_3_twibbon" class="mb-2 font-bold text-gray-400 mt-4">Link
                                             Akun Instagram
-                                            {{$x}}</label><br>
+                                            {{ $x }}</label><br>
                                         @if ($is_edit)
-                                            <input wire:model.defer="member_{{$x}}_instagram" type="text"
-                                                id="member_{{$x}}_instagram" name="member_{{$x}}_instagram"
+                                            <input wire:model.defer="member_{{ $x }}_instagram"
+                                                type="text" id="member_{{ $x }}_instagram"
+                                                name="member_{{ $x }}_instagram"
                                                 class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
                                                 style="color: black;margin-top:0;" {{ $readonly ? 'disabled' : '' }}>
                                         @else
-                                            <a href="{{ ${'member_'.$x.'_instagram'} }}" target="_blank"
-                                                class="font-bold text-md text-blue-500">{{ ${'member_'.$x.'_instagram'} }}</a>
+                                            <a href="{{ ${'member_' . $x . '_instagram'} }}" target="_blank"
+                                                class="font-bold text-md text-blue-500">{{ ${'member_' . $x . '_instagram'} }}</a>
                                         @endif
                                     </div>
                                     <div>
-                                        <label for="member_3_major" class="mb-2 font-bold text-gray-400 mt-4">Universitas Anggota
-                                            {{$x}}</label><br>
+                                        <label for="member_3_major"
+                                            class="mb-2 font-bold text-gray-400 mt-4">Universitas Anggota
+                                            {{ $x }}</label><br>
                                         @if ($is_edit)
-                                            <input wire:model.defer="member_{{$x}}_major" type="text"
-                                                id="member_{{$x}}_university" name="member_3_university"
+                                            <input wire:model.defer="member_{{ $x }}_major"
+                                                type="text" id="member_{{ $x }}_university"
+                                                name="member_3_university"
                                                 class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
                                                 style="color: black;margin-top:0;" {{ $readonly ? 'disabled' : '' }}>
                                         @else
-                                            <p class="font-bold text-lg">{{ ${'member_'.$x.'_university'} }}</p>
+                                            <p class="font-bold text-lg">{{ ${'member_' . $x . '_university'} }}</p>
                                         @endif
                                     </div>
                                     <div>
                                         <label for="member_3_major" class="mb-2 font-bold text-gray-400 mt-4">Jurusan
                                             Anggota
-                                            {{$x}}</label><br>
+                                            {{ $x }}</label><br>
                                         @if ($is_edit)
-                                            <input wire:model.defer="member_{{$x}}_major" type="text"
-                                                id="member_{{$x}}_major" name="member_3_major"
+                                            <input wire:model.defer="member_{{ $x }}_major"
+                                                type="text" id="member_{{ $x }}_major"
+                                                name="member_3_major"
                                                 class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
                                                 style="color: black;margin-top:0;" {{ $readonly ? 'disabled' : '' }}>
                                         @else
-                                            <p class="font-bold text-lg">{{ ${'member_'.$x.'_major'} }}</p>
+                                            <p class="font-bold text-lg">{{ ${'member_' . $x . '_major'} }}</p>
                                         @endif
                                     </div>
                                     <div>
                                         <label for="member_3_year" class="mb-2 font-bold text-gray-400 mt-4">Tahun
                                             Angkatan
                                             Anggota
-                                            {{$x}}</label><br>
+                                            {{ $x }}</label><br>
                                         @if ($is_edit)
-                                            <input wire:model.defer="member_{{$x}}_year" type="number" id="member_{{$x}}_year"
-                                                name="member_{{$x}}_year"
+                                            <input wire:model.defer="member_{{ $x }}_year" type="number"
+                                                id="member_{{ $x }}_year"
+                                                name="member_{{ $x }}_year"
                                                 class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
                                                 style="color: black;margin-top:0;" {{ $readonly ? 'disabled' : '' }}
                                                 min="2000" max="{{ date('Y') }}">
                                         @else
-                                            <p class="font-bold text-lg">{{ ${'member_'.$x.'_year'} }}</p>
+                                            <p class="font-bold text-lg">{{ ${'member_' . $x . '_year'} }}</p>
                                         @endif
                                     </div>
                                 </div>
@@ -649,24 +675,27 @@
                                         x-on:livewire-upload-progress="progress = $event.detail.progress">
                                         <div class="flex flex-col items-center justify-center md:p-3 w-full">
                                             <label for="kartu_pelajar"
-                                                class="capitalize text-gray-400">{{ $jenisKartu . ' - Anggota'.$x }}</label>
+                                                class="capitalize text-gray-400">{{ $jenisKartu . ' - Anggota' . $x }}</label>
                                             <div x-show="isUploading" class="w-full">
                                                 <progress max="100" x-bind:value="progress"
                                                     class="w-full"></progress>
                                             </div>
-                                            <img src="{{ ${'photo'.$x} ? (is_string(${'photo'.$x}) ? asset('storage/' . ${'photo'.$x}) : ${'photo'.$x}->temporaryUrl()) : asset('/img/global/placeholder-image.png') }}"
+                                            <img src="{{ ${'photo' . $x} ? (is_string(${'photo' . $x}) ? asset('storage/' . ${'photo' . $x}) : ${'photo' . $x}->temporaryUrl()) : asset('/img/global/placeholder-image.png') }}"
                                                 class="object-fit mx-auto" alt="Kartu Pelajar"
-                                                id="member_{{$x}}_card_preview" style="max-height:50vh">
+                                                id="member_{{ $x }}_card_preview"
+                                                style="max-height:50vh">
                                             @if (Auth::user()->userable->bionix->profile_verif_status != 'Terverifikasi' &&
                                                 Auth::user()->userable->bionix->profile_verif_status != 'Tahap Verifikasi' &&
                                                 $is_edit)
-                                                <button type="button" onclick="$('#member_{{$x}}_card').click()"
+                                                <button type="button"
+                                                    onclick="$('#member_{{ $x }}_card').click()"
                                                     class="bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2">
                                                     <i class="fas fa-cloud-upload-alt mr-2"></i>Unggah File
                                                 </button>
-                                                <input type="file" wire:model.defer="photo{{$x}}"
-                                                    class="form-control-file" name="member_{{$x}}_card" id="member_{{$x}}_card"
-                                                    accept=".jpg,.jpeg,.png" hidden>
+                                                <input type="file" wire:model.defer="photo{{ $x }}"
+                                                    class="form-control-file" name="member_{{ $x }}_card"
+                                                    id="member_{{ $x }}_card" accept=".jpg,.jpeg,.png"
+                                                    hidden>
                                             @endif
                                         </div>
                                     </div>
@@ -718,7 +747,9 @@
                     <p class="font-bold">{{ $messageType == 'green' ? 'Sukses' : 'Terjadi Masalah' }}</p>
                     <p class="text-sm">{{ $message }}</p>
                 </div>
-                <button type="button" title="Hapus" wire:click="closeMessage()" class="self-start"><p>Tutup</p></i></button>
+                <button type="button" title="Hapus" wire:click="closeMessage()" class="self-start">
+                    <p>Tutup</p></i>
+                </button>
             </div>
         </div>
     @endif

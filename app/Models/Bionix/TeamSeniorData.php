@@ -11,7 +11,7 @@ class TeamSeniorData extends Model
     use HasFactory;
 
 
-    protected $fillable = ['team_name', 'info_source', 'university_name', 'city_id', 'competition_round', 'profile_verif_status', 'profile_verfied_by', 'profile_verif_comment', 'want_to_pay', 'payment_price', 'invoice_id', 'payment_proof_path', 'payment_verif_status', 'payment_verified_by', 'payment_verif_comment'];
+    protected $fillable = ['team_name', 'info_source', 'university_name', 'city_id', 'competition_round', 'profile_verif_status', 'profile_verfied_by', 'profile_verif_comment', 'want_to_pay', 'payment_price', 'invoice_id', 'payment_proof_path', 'payment_verif_status', 'payment_verified_by', 'payment_verif_comment','judul_ide_bisnis', 'bmc_file_path'];
 
     public function members(){
         return $this->hasMany(TeamSeniorMember::class, 'team_id');
