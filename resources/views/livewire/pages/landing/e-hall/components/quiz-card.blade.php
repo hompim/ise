@@ -199,7 +199,7 @@
 </div>
 
 @push('js')
-    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.all.min.js"></script>
     <script>
         Livewire.on('Answer', status => {

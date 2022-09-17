@@ -138,7 +138,7 @@ class RegisterCollege extends Component
         $arr_validation = [
             'team_name' => 'required',
             'judul_ide_bisnis' => 'required',
-            'bmc' => 'required|mimes:pdf|max:3072',
+            // 'bmc' => 'required|mimes:pdf|max:3072',
             'city' => 'required',
             'member_1_name' => 'required',
             'member_1_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
@@ -166,6 +166,8 @@ class RegisterCollege extends Component
                 if ($x == 5) $this->with_member_5 = true;
             }
         }
+
+        $this->validate($arr_validation);
 
         for ($x = 1; $x <= 2; $x++) {
             for ($y = $x + 1; $y <= 3; $y++) {
