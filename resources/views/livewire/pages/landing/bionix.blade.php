@@ -643,7 +643,7 @@
                             kemajuan teknologi</p>
                     </div>
                     <div class="flex flex-col justify-center mt-12 md:flex-row md:space-x-4 font-poppins">
-                        <a href="https://drive.google.com/file/d/1bJoW5iSbS96k9E31rbgjPDyDU5sbeKAV/view"
+                        <a href="https://drive.google.com/file/d/1KUtFKWdUwKZBS9-A5ImEYOhhvLLonXjk/view"
                             target="_blank"
                             class=" md:px-3 md:mx-0 mx-16 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center"><svg
                                 class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
