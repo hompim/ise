@@ -5,7 +5,7 @@
         <div
             class="mt-32 md:mt-0 mb-[145px] bg-liteBlack mx-6 md:mx-28 h-max rounded-2xl flex flex-col p-[24px] md:p-11 @if ($currentQuiz == $quizNo) @else hidden @endif">
             <h1 class="mx-auto text-lg text-white md:text-2xl">Quiz {{ $type_quiz->name }}</h1>
-            <div class="flex flex-col mt-4 md:flex-row gap-14">
+            <div class="flex flex-col justify-around mt-4 md:flex-row gap-14">
                 {{-- Left Part --}}
                 <div class="flex flex-col w-full lg:w-1/2">
                     <h2 class="text-white">
@@ -33,7 +33,7 @@
                     {{-- Pilgan --}}
                     @if ($quiz->question_type == 'Pilgan')
                         <div
-                            class="flex flex-col md:flex-row mt-[24px] md:mt-[46px] mx-auto gap-[24px] md:gap-[74px] pl-0">
+                            class="flex flex-col md:flex-row mt-[24px] md:mt-[46px] mx-auto gap-[24px] md:gap-[74px] pl-0 justify-start items-start">
                             <button wire:click="setAnswer('A')"
                                 class="w-fit px-4 md:w-[315px] font-sm py-4 {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'A' ? 'bg-pink-300 shadow-md shadow-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }}  rounded-lg transition duration-300 hover:-translate-y-2">
                                 <!-- A.  Lorem ipsum -->
@@ -55,7 +55,7 @@
 
                         <!-- start: make cards row 2 -->
                         <div
-                            class="flex flex-col md:flex-row mt-[24px] md:mt-[46px] mx-auto gap-[24px] md:gap-[74px] pl-0">
+                            class="flex flex-col md:flex-row mt-[24px] md:mt-[46px] mx-auto gap-[24px] md:gap-[74px] pl-0 justify-start items-start">
                             <button wire:click="setAnswer('C')"
                                 class="w-fit px-4 md:w-[315px] font-sm py-4  {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'C' ? 'bg-pink-300 shadow-md shadow-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }} rounded-lg transition duration-300 hover:-translate-y-2">
                                 <!-- B.  Lorem ipsum -->
@@ -185,13 +185,12 @@
                 </div>
 
                 {{-- Right Part --}}
-                <div class="flex flex-col w-full mx-auto overflow-scroll">
-                    <div class="grid gap-4 px-12 auto-rows-max md:px-0">
-                        @foreach ($quizzes as $quizNo => $quiz)
-                            <button type="button" wire:click="moveToQuestion({{ $quizNo }})"
-                                class="w-[56px] md:w-[75px] h-[56px] md:h-[75px] {{ $currentQuiz == $quizNo ? 'bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] text-white' : ($quizStatus[$quizNo]['is_done'] ? ($quizStatus[$quizNo]['status'] ? 'bg-green-500 text-white' : 'bg-red-500 text-white') : 'bg-[#2F2F2F] text-white') }} mx-auto  text-2xl font-bold rounded-lg">{{ $quizNo + 1 }}</button>
-                        @endforeach
-                    </div>
+                <div
+                    class="flex items-center justify-start w-full space-x-4 overflow-x-auto lg:overflow-y-auto lg:w-64 lg:space-x-0 lg:space-y-4 lg:flex-col lg:h-96">
+                    @foreach ($quizzes as $quizNo => $quiz)
+                        <button type="button" wire:click="moveToQuestion({{ $quizNo }})"
+                            class="px-6 py-4 w-24 {{ $currentQuiz == $quizNo ? 'bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] text-white' : ($quizStatus[$quizNo]['is_done'] ? ($quizStatus[$quizNo]['status'] ? 'bg-green-500 text-white' : 'bg-red-500 text-white') : 'bg-[#2F2F2F] text-white') }} mx-auto  text-2xl font-bold rounded-lg">{{ $quizNo + 1 }}</button>
+                    @endforeach
                 </div>
             </div>
         </div>
