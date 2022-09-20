@@ -27,9 +27,9 @@ class Index extends LivewireDatatable
             DateColumn::raw('end')
                 ->label('Tanggal Selesai')
                 ->format('d M Y'),
-            Column::callback(['id'], function ($id) {
-                return view('livewire.pages.bionix.admin.pengumuman.data-tables.actions', ['id' => $id]);
-            })
+            // Column::callback(['id'], function ($id) {
+            //     return view('livewire.pages.bionix.admin.pengumuman.data-tables.actions', ['id' => $id]);
+            // })
         ];
     }
 }

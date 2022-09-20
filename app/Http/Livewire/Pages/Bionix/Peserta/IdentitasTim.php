@@ -361,7 +361,7 @@ class IdentitasTim extends Component
                 'judul_ide_bisnis' => $this->judul,
             ]);
 
-            if($this->bmc){
+            if ($this->bmc) {
                 $bmc = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_BMC' . '.' . $this->bmc->getClientOriginalExtension();
                 $this->bmc->storeAs("public/bionix", $bmc);
                 $this->bmc = 'bionix/' . $bmc;
@@ -483,6 +483,12 @@ class IdentitasTim extends Component
                         !Auth::user()->userable->bionix->member->identity_card_path ||
                         !Auth::user()->userable->bionix->member->whatsapp))
             ) {
+                $this->message = 'Pastikan bahwa semua data telah terisi';
+                $this->messageType = 'red';
+                return;
+            }
+        } else {
+            if (!Auth::user()->userable->bionix->bmc_file_path || !Auth::user()->userable->bionix->judul_ide_bisnis) {
                 $this->message = 'Pastikan bahwa semua data telah terisi';
                 $this->messageType = 'red';
                 return;
