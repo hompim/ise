@@ -44,9 +44,9 @@ class Index extends LivewireDatatable
                 Column::name('team_name')->searchable()->label('Nama Tim'),
                 Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->cities->pluck('name')),
                 NumberColumn::name('payment_price')->label('Jumlah Bayar'),
-                // Column::callback(['id'], function ($id) {
-                //     return view('livewire.pages.bionix.admin.verifikasi-pembayaran.components.datatable-action', ['id' => $id, 'type' => 'college']);
-                // })
+                Column::callback(['id'], function ($id) {
+                    return view('livewire.pages.bionix.admin.verifikasi-pembayaran.components.datatable-actions', ['id' => $id, 'type' => 'college']);
+                })
             ];
         }
         return $column;

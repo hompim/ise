@@ -87,9 +87,9 @@ class Index extends LivewireDatatable
                 Column::name('profile_verif_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('payment_verif_status')->label('Status Pembayaran')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::raw('date_format(team_senior_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(team_junior_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
-                // Column::callback(['id'], function ($id) {
-                //     return view('livewire.pages.bionix.admin.daftar-peserta.components.datatable-action', ['id' => $id, 'type' => 'college']);
-                // })
+                Column::callback(['id'], function ($id) {
+                    return view('livewire.pages.bionix.admin.daftar-peserta.components.datatable-action', ['id' => $id, 'type' => 'college']);
+                })
             ];
         }
         return $column;
