@@ -125,6 +125,9 @@ class RegisterCollege extends Component
             'member_1_twibbon' => 'required',
             'member_2_twibbon' => 'required',
             'member_3_twibbon' => 'required',
+            'member_1_ktm' => 'required',
+            'member_2_ktm' => 'required',
+            'member_3_ktm' => 'required',
         ]);
         if (($this->member_1_email == $this->member_2_email) || ($this->member_1_email == $this->member_3_email) || $this->member_3_email == $this->member_2_email) {
             $this->errorMessage = "Email masing-masing peserta tidak boleh sama";
@@ -147,7 +150,8 @@ class RegisterCollege extends Component
             'member_1_year' => 'required',
             'member_1_major' => 'required|string',
             'member_1_university' => 'required|string',
-            'member_1_instagram' => 'required'
+            'member_1_instagram' => 'required',
+            'member_1_ktm' => 'required'
         ];
 
         for ($x = 2; $x <= 5; $x++) {
@@ -161,6 +165,7 @@ class RegisterCollege extends Component
                     'member_' . $x . '_major' => 'required|string',
                     'member_' . $x . '_university' => 'required|string',
                     'member_' . $x . '_instagram' => 'required|string',
+                    'member_' . $x . '_ktm' => 'required',
                 ]);
                 if ($x == 4) $this->with_member_4 = true;
                 if ($x == 5) $this->with_member_5 = true;
