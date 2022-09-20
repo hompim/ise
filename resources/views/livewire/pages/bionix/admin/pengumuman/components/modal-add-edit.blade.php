@@ -1,6 +1,6 @@
 <div class="p-4">
     <div class="flex justify-between">
-        <h5 class="text-lg font-weight-bold">Shorten Link</h5>
+        <h5 class="text-lg font-weight-bold">Pengumuman</h5>
         <button type="button" title="Hapus" wire:click="closeModal()" class="self-start"><i class="cil-x"></i></button>
     </div>
     <hr />
@@ -24,7 +24,7 @@
                 </label>
                 <input
                     class="appearance-none block w-full bg-white text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="link_pendek" type="text" required wire:model.defer="link_pendek">
+                    id="link_pendek" type="text" required wire:model.defer="nama_pengumuman">
             </div>
             <div class="w-full px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="link_tujuan">
@@ -32,10 +32,10 @@
                 </label>
                 <select
                     class="appearance-none block w-full bg-white text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                    id="link_tujuan" type="text" required wire:model.defer="link_tujuan">
-                    <option>Student</option>
-                    <option>College</option>
-                    <option>Both</option>
+                    id="link_tujuan" type="text" required name="kategori_pengumuman" wire:model.defer="kategori_pengumuman">
+                    <option value="Student">Student</option>
+                    <option value="College">College</option>
+                    <option value="Both">Both</option>
                 </select>
             </div>
             <div class="w-full px-3 mb-6 md:mb-0 md:w-1/2">
@@ -63,12 +63,12 @@
                    Konten
                 </label>
                 <div class="mt-2 bg-white" wire:ignore>
-                    <div name="deskripsi" x-data x-ref="quillEditor" x-init="quill = new Quill($refs.quillEditor, { theme: 'snow' });
+                    <div name="isi_pengumuman" x-data x-ref="quillEditor" x-init="quill = new Quill($refs.quillEditor, { theme: 'snow' });
                     quill.on('text-change', function() {
-                        @this.set('deskripsi', quill.root.innerHTML);
+                        @this.set('isi_pengumuman', quill.root.innerHTML);
                     });"
                         wire:model.lazy="deskripsi">
-                        {!! $deskripsi !!}
+                        {!! $isi_pengumuman !!}
                     </div>
                 </div>
             </div>

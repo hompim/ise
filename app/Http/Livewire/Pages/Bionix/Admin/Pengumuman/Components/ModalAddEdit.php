@@ -2,69 +2,70 @@
 
 namespace App\Http\Livewire\Pages\Bionix\Admin\Pengumuman\Components;
 
+use App\Models\Bionix\Announcement;
 use Livewire\Component;
 use LivewireUI\Modal\ModalComponent;
 
 class ModalAddEdit extends ModalComponent
 {
 
-    public $shorten_link;
+    public $pengumuman;
     public $type = 'add';
-    public $link_pendek;
-    public $link_tujuan;
-    public $deskripsi;
+    public $nama_pengumuman = '';
+    public $isi_pengumuman = '';
+    public $tipe_pengumuman = 'normal';
+    public $kategori_pengumuman = 'student';
+    public $tanggal_mulai = '';
+    public $tanggal_selesai = '';
 
     public function mount($type, $id = null)
     {
         $this->type = $type;
         if ($type == 'edit') {
-            $this->shorten_link = ShortenLink::find($id);
-            $this->link_pendek = $this->shorten_link->shorten_link;
-            $this->link_tujuan = $this->shorten_link->destination;
-            $this->deskripsi = $this->shorten_link->description;
+            $this->pengumuman = Announcement::find($id);
+            $this->nama_pengumuman = $this->pengumuman->title;
+            $this->isi_pengumuman = $this->pengumuman->content;
+            $this->tipe_pengumuman = $this->pengumuman->type;
+            $this->kategori_pengumuman = $this->pengumuman->category;
+            $this->tanggal_mulai = date('d F Y', strtotime($this->pengumuman->start));
+            $this->tanggal_selesai = date('d F Y', strtotime($this->pengumuman->end));
         }
     }
 
     public function submit()
     {
+        $this->validate([
+            'nama_pengumuman' => 'required',
+            'isi_pengumuman' => ['required', 'string'],
+             'tipe_pengumuman' => 'required',
+             'kategori_pengumuman' => 'required',
+            'tanggal_mulai' => 'required|date',
+            'tanggal_selesai' => 'required|date|after:tanggal_mulai',
+        ]);
+
         if ($this->type == 'add') {
-            $this->validate([
-                'link_pendek' => 'required|unique:shorten_links,shorten_link',
-                'link_tujuan' => 'required',
-                'deskripsi' => 'required',
-            ]);
-
-            $link = "https://ise-its.com/$this->link_pendek";
-            $qrCode = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=$link";
-
-            ShortenLink::create([
-                'shorten_link' => $this->link_pendek,
-                'destination' => $this->link_tujuan,
-                'description' => $this->deskripsi,
-                "qr_code" => $qrCode
+            Announcement::create([
+                'title' => $this->nama_pengumuman,
+                'content' => $this->isi_pengumuman,
+                'type' => $this->tipe_pengumuman,
+                'category' => $this->kategori_pengumuman,
+                'start' => date('Y-m-d', strtotime($this->tanggal_mulai)),
+                'end' => date('Y-m-d', strtotime($this->tanggal_selesai))
             ]);
         } elseif ($this->type == 'edit') {
-            $this->validate([
-                'link_pendek' => 'required|unique:shorten_links,shorten_link,' . $this->shorten_link->id,
-                'link_tujuan' => 'required',
-                'deskripsi' => 'required',
-            ]);
-
-            $link = "https://ise-its.com/$this->link_pendek";
-            $qrCode = "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=$link";
-
-            $this->shorten_link->update([
-                'shorten_link' => $this->link_pendek,
-                'destination' => $this->link_tujuan,
-                'description' => $this->deskripsi,
-                "qr_code" => $qrCode
+            $this->pengumuman->update([
+                'title' => $this->nama_pengumuman,
+                'content' => $this->isi_pengumuman,
+                'type' => $this->tipe_pengumuman,
+                'category' => $this->kategori_pengumuman,
+                'start' => date('Y-m-d', strtotime($this->tanggal_mulai)),
+                'end' => date('Y-m-d', strtotime($this->tanggal_selesai))
             ]);
         }
 
         $this->emit('refreshLivewireDatatable');
         $this->closeModal();
     }
-
 
     public function render()
     {
