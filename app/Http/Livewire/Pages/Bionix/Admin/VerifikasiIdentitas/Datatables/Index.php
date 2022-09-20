@@ -19,7 +19,11 @@ class Index extends LivewireDatatable
                 ->leftJoin('team_junior_members as member_group', 'member_group.id', 'team_junior_data.member_id');
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             return TeamSeniorData::query()
-                ->where('profile_verif_status', 'Tahap Verifikasi');
+                ->where('profile_verif_status', 'Tahap Verifikasi')
+                ->leftJoin('team_senior_members as leader_group', function ($q) {
+                    $q->on('leader_group.team_id', 'team_senior_data.id')
+                        ->where('is_leader', True);
+                });
         }
         return null;
     }
@@ -43,9 +47,13 @@ class Index extends LivewireDatatable
             $column = [
                 Column::name('team_name')->searchable()->label('Nama Tim'),
                 Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->cities->pluck('name')),
-                // Column::callback(['id'], function ($id) {
-                //     return view('livewire.pages.bionix.admin.verifikasi-identitas.components.datatable-action', ['id' => $id, 'type' => 'college']);
-                // })
+                Column::name('leader_group.name')->label('Nama Ketua'),
+                Column::name('leader_group.email')->label('Email Ketua'),
+                Column::name('leader_group.whatsapp')->label('Whatsapp Ketua'),
+                Column::raw('date_format(team_senior_data.updated_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(team_senior_data.updated_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
+                Column::callback(['id'], function ($id) {
+                    return view('livewire.pages.bionix.admin.verifikasi-identitas.components.datatable-action', ['id' => $id, 'type' => 'college']);
+                })
             ];
         }
         return $column;
