@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Pages\Auth\Bionix;
 use App\Models\Bionix\City;
 use App\Models\Bionix\TeamSeniorData;
 use App\Models\Bionix\TeamSeniorMember;
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
@@ -139,7 +140,7 @@ class RegisterCollege extends Component
     public function akunSubmit()
     {
         $arr_validation = [
-            'team_name' => 'required',
+            'team_name' => 'required|unique:team_senior_data,team_name',
             'judul_ide_bisnis' => 'required',
             // 'bmc' => 'required|mimes:pdf|max:3072',
             'city' => 'required',
@@ -154,7 +155,7 @@ class RegisterCollege extends Component
             'member_1_ktm' => 'required|image|max:2048'
         ];
 
-        for ($x = 2; $x <= 5; $x++) {
+        for ($x = 2; $x <= 3; $x++) {
             if ($this->{'member_' . $x . '_email'} || $this->{'member_' . $x . '_name'} || $this->{'member_' . $x . '_twibbon'} || $this->{'member_' . $x . '_whatsapp'} || $this->{'member_' . $x . '_year'} || $this->{'member_' . $x . '_major'}) {
                 $arr_validation = array_merge($arr_validation, [
                     'member_' . $x . '_name' => 'required',
@@ -167,9 +168,36 @@ class RegisterCollege extends Component
                     'member_' . $x . '_instagram' => 'required|string',
                     'member_' . $x . '_ktm' => 'required|image|max:2048',
                 ]);
-                if ($x == 4) $this->with_member_4 = true;
-                if ($x == 5) $this->with_member_5 = true;
             }
+        }
+        if ($this->member_4_email || $this->member_4_name || $this->member_4_major || $this->member_4_twibbon || $this->member_4_university || $this->member_4_whatsapp || $this->member_4_year) {
+            $arr_validation = array_merge($arr_validation, [
+                'member_4_name' => 'required',
+                'member_4_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
+                'member_4_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
+                'member_4_twibbon' => 'required',
+                'member_4_year' => 'required',
+                'member_4_major' => 'required|string',
+                'member_4_university' => 'required|string',
+                'member_4_instagram' => 'required',
+                'member_4_ktm' => 'required|image|max:2048'
+            ]);
+            $this->with_member_4 = true;
+        }
+
+        if($this->member_5_email || $this->member_5_name || $this->member_5_major || $this->member_5_twibbon || $this->member_5_university || $this->member_5_whatsapp || $this->member_5_year){
+            $arr_validation = array_merge($arr_validation, [
+                'member_5_name' => 'required',
+                'member_5_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
+                'member_5_whatsapp' => 'required|regex:/^(^08)\d{8,11}$/|max:13|string',
+                'member_5_twibbon' => 'required',
+                'member_5_year' => 'required',
+                'member_5_major' => 'required|string',
+                'member_5_university' => 'required|string',
+                'member_5_instagram' => 'required',
+                'member_5_ktm' => 'required|image|max:2048'
+            ]);
+            $this->with_member_4 = true;
         }
 
         $this->validate($arr_validation);
@@ -215,13 +243,18 @@ class RegisterCollege extends Component
         // $bmc = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_BMC' . '.' . $this->bmc->getClientOriginalExtension();
         // $this->bmc->storeAs("public/bionix", $bmc);
 
-        $team_data = TeamSeniorData::create([
-            'team_name' => $this->team_name,
-            'info_source' => $this->info_source,
-            // 'bmc_file_path' => 'bionix/'.$bmc,
-            'judul_ide_bisnis' => $this->judul_ide_bisnis,
-            'city_id' => $this->city,
-        ]);
+        try {
+            $team_data = TeamSeniorData::create([
+                'team_name' => $this->team_name,
+                'info_source' => $this->info_source,
+                // 'bmc_file_path' => 'bionix/'.$bmc,
+                'judul_ide_bisnis' => $this->judul_ide_bisnis,
+                'city_id' => $this->city,
+            ]);
+        } catch (QueryException $e) {
+            $this->errorMessage = "Terjadi kesalahan, silahkan coba lagi atau tunjukan pesan ini ke panitia: " . $e->getMessage();
+        }
+
 
 
         for ($x = 1; $x <= 3; $x++) {
