@@ -74,7 +74,7 @@ class RegisterCollege extends Component
         $member_3_year,
         $member_4_year,
         $member_5_year;
-    public $with_member_4 = false, $with_member_5 = false;
+    public $with_member_4, $with_member_5;
 
     public function move($toStep)
     {
@@ -371,6 +371,8 @@ class RegisterCollege extends Component
         $this->member_1_email = Auth::user()->email;
         $this->member_1_name = Auth::user()->name;
         $this->info_source = 'IG';
+        $this->with_member_4 = false;
+        $this->with_member_5 = false;
     }
 
     public function render()
