@@ -204,7 +204,7 @@
 
                 <div
                     class="relative left-0 right-0 flex flex-col justify-center mx-auto mt-24 text-center lg:flex-row max-w-fit group">
-                    <button type="button"
+                    <button type="button" wire:click="move({{ $step - 1 }})"
                         class="relative px-24 mx-auto mb-4 text-xl text-purple-200 duration-300 transform lg:mr-4 btn-secondary hover:scale-105 lg:mb-0">Back</button>
                     <button type="Submit"
                         class="relative px-24 text-xl duration-300 transform btn hover:scale-105">Submit</button>
