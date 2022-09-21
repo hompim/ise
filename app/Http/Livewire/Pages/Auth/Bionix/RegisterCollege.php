@@ -197,7 +197,7 @@ class RegisterCollege extends Component
                 'member_5_instagram' => 'required',
                 'member_5_ktm' => 'required|image|max:2048'
             ]);
-            $this->with_member_4 = true;
+            $this->with_member_5 = true;
         }
 
         $this->validate($arr_validation);
