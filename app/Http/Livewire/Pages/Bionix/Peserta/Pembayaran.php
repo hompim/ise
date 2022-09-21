@@ -33,7 +33,7 @@ class Pembayaran extends Component
 
     public function mount()
     {
-        $this->is_junior = Auth::user()->userable->jenjang = "SMA" ? true : false;
+        $this->is_junior = Auth::user()->userable->bionix_type == "App\Models\Bionix\TeamJuniorData" ? true : false;
         $this->promo = [];
         $this->statusNotification();
         if (Auth::user()->userable->bionix->payment_verif_status != 'Belum Bayar') {
@@ -78,13 +78,15 @@ class Pembayaran extends Component
 
     public function backToPayment()
     {
-        foreach (Auth::user()->userable->bionix->promo as $p) {
-            $p->delete();
+        if($this->is_junior){
+            foreach (Auth::user()->userable->bionix->promo as $p) {
+                $p->delete();
+            }
         }
 
         Auth::user()->userable->bionix->update([
             'payment_verif_status' => 'Belum Bayar',
-            'payment_price' => Setting::where('name', ($this->is_junior  ? 'bionix_junior_price' : 'bionix_senior_price'))->first()->value
+            'payment_price' => Setting::where('name', 'bionix_senior_price')->first()->value
         ]);
 
         if (sizeof($this->promo) == 0) {
