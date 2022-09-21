@@ -185,7 +185,7 @@ class RegisterCollege extends Component
             $this->with_member_4 = true;
         }
 
-        if($this->member_5_email || $this->member_5_name || $this->member_5_major || $this->member_5_twibbon || $this->member_5_university || $this->member_5_whatsapp || $this->member_5_year){
+        if ($this->member_5_email || $this->member_5_name || $this->member_5_major || $this->member_5_twibbon || $this->member_5_university || $this->member_5_whatsapp || $this->member_5_year) {
             $arr_validation = array_merge($arr_validation, [
                 'member_5_name' => 'required',
                 'member_5_email' => 'required|email|unique:team_senior_members,email|unique:team_junior_members,email',
@@ -252,7 +252,7 @@ class RegisterCollege extends Component
                 'city_id' => $this->city,
             ]);
         } catch (QueryException $e) {
-            $this->errorMessage = "Terjadi kesalahan, silahkan coba lagi atau tunjukan pesan ini ke panitia: " . $e->getMessage();
+            return $this->errorMessage = "Terjadi kesalahan, silahkan coba lagi atau tunjukan pesan ini ke panitia: " . $e->getMessage();
         }
 
 
