@@ -299,7 +299,8 @@ class RegisterCollege extends Component
                 'major' => $this->member_4_major,
                 'twibbon' => $this->member_4_twibbon,
                 'university' => $this->member_4_university,
-                'instagram' => $this->member_4_instagram
+                'instagram' => $this->member_4_instagram,
+                'team_id' => $team_data->id,
             ]);
             $ktm = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_4_KTM' . '.' . $this->member_4_ktm->getClientOriginalExtension();
 
@@ -329,6 +330,7 @@ class RegisterCollege extends Component
                 'twibbon' => $this->member_5_twibbon,
                 'university' => $this->member_5_university,
                 'instagram' => $this->member_5_instagram,
+                'team_id' => $team_data->id,
             ]);
 
             $ktm = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_5_KTM' . '.' . $this->member_5_ktm->getClientOriginalExtension();
