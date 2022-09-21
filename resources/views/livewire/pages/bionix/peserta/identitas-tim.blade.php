@@ -96,9 +96,10 @@
                                     <p class="font-bold text-blue-400 text-lg">File BMC</p>
                                 </a>
                                 @else
-                                <p class="font-bold text-lg">Belum upload</p>
+                                <p class="font-bold text-lg text-red-400">Belum upload</p>
                                 @endif
                             @endif
+                            <small>Lihat guidebook bionix college di link berikut <a class="text-blue-400" href="https://drive.google.com/file/d/1KUtFKWdUwKZBS9-A5ImEYOhhvLLonXjk/view">Guidebook BCL</a></small>
                         </div>
                     @endif
                     <div>

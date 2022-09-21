@@ -151,7 +151,7 @@ class RegisterCollege extends Component
             'member_1_major' => 'required|string',
             'member_1_university' => 'required|string',
             'member_1_instagram' => 'required',
-            'member_1_ktm' => 'required'
+            'member_1_ktm' => 'required|image|max:2048'
         ];
 
         for ($x = 2; $x <= 5; $x++) {
@@ -165,7 +165,7 @@ class RegisterCollege extends Component
                     'member_' . $x . '_major' => 'required|string',
                     'member_' . $x . '_university' => 'required|string',
                     'member_' . $x . '_instagram' => 'required|string',
-                    'member_' . $x . '_ktm' => 'required',
+                    'member_' . $x . '_ktm' => 'required|image|max:2048',
                 ]);
                 if ($x == 4) $this->with_member_4 = true;
                 if ($x == 5) $this->with_member_5 = true;
@@ -183,16 +183,16 @@ class RegisterCollege extends Component
             }
         }
 
-        if($this->with_member_4){
-            for ($i=1; $i < 4; $i++) {
+        if ($this->with_member_4) {
+            for ($i = 1; $i < 4; $i++) {
                 if (($this->{'member_' . $x . '_email'} == $this->member_4_email)) {
                     $this->errorMessage = "Email masing-masing peserta tidak boleh sama";
                     return;
                 }
             }
         }
-        if($this->with_member_5){
-            for ($i=1; $i < 5; $i++) {
+        if ($this->with_member_5) {
+            for ($i = 1; $i < 5; $i++) {
                 if (($this->{'member_' . $x . '_email'} == $this->member_5_email)) {
                     $this->errorMessage = "Email masing-masing peserta tidak boleh sama";
                     return;
@@ -212,16 +212,16 @@ class RegisterCollege extends Component
             'whatsapp' => $this->member_1_whatsapp
         ]);
 
-            // $bmc = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_BMC' . '.' . $this->bmc->getClientOriginalExtension();
-            // $this->bmc->storeAs("public/bionix", $bmc);
+        // $bmc = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_BMC' . '.' . $this->bmc->getClientOriginalExtension();
+        // $this->bmc->storeAs("public/bionix", $bmc);
 
-            $team_data = TeamSeniorData::create([
-                'team_name' => $this->team_name,
-                'info_source' => $this->info_source,
-                // 'bmc_file_path' => 'bionix/'.$bmc,
-                'judul_ide_bisnis' => $this->judul_ide_bisnis,
-                'city_id' => $this->city,
-            ]);
+        $team_data = TeamSeniorData::create([
+            'team_name' => $this->team_name,
+            'info_source' => $this->info_source,
+            // 'bmc_file_path' => 'bionix/'.$bmc,
+            'judul_ide_bisnis' => $this->judul_ide_bisnis,
+            'city_id' => $this->city,
+        ]);
 
 
         for ($x = 1; $x <= 3; $x++) {

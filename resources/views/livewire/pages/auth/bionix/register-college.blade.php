@@ -3,6 +3,7 @@
         <h1 class="text-2xl font-bold text-center text-white font-poppins">Form Pendaftaran College
             Level
         </h1>
+        <h3>Lihat guidebook bionix college di link berikut <a class="text-blue-400" href="https://drive.google.com/file/d/1KUtFKWdUwKZBS9-A5ImEYOhhvLLonXjk/view">Guidebook BCL</a></h3>
     </div>
     <div class="flex flex-col lg:flex-row lg:space-x-4 justify-evenly">
         {{-- step 1 --}}
