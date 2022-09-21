@@ -89,6 +89,9 @@
                                     class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
                                     placeholder="File BMC" accept="application/pdf" style="color: black;margin-top:0;"
                                     required {{ $readonly ? 'disabled' : '' }}>
+                                @if ($error->any() || $errors->any())
+                                    <p class="text-sm text-red-500">{{ $error->first('bmc') }}</p>
+                                @endif
                             @else
                                 @if ($bmc)
                                     <a href="{{ asset('storage/' . $bmc) }}" target="_blank">
@@ -151,7 +154,8 @@
                                     @endif
                                 </div>
                                 <div>
-                                    <label for="member_1_email" class="mt-4 mb-2 font-bold text-gray-400">Email Anggota
+                                    <label for="member_1_email" class="mt-4 mb-2 font-bold text-gray-400">Email
+                                        Anggota
                                         1</label><br>
                                     @if ($is_edit)
                                         <input wire:model.defer="member_1_email" type="email" id="member_1_email"
