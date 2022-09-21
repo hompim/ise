@@ -3,28 +3,37 @@
         <h1 class="text-2xl font-bold text-center text-white font-poppins">Form Pendaftaran College
             Level
         </h1>
-        <h3>Lihat guidebook bionix college di link berikut <a class="text-blue-400" href="https://drive.google.com/file/d/1KUtFKWdUwKZBS9-A5ImEYOhhvLLonXjk/view">Guidebook BCL</a></h3>
+        <h3 class="text-center text-white">Lihat guidebook bionix college di link berikut <a class="text-blue-400"
+                href="https://drive.google.com/file/d/1KUtFKWdUwKZBS9-A5ImEYOhhvLLonXjk/view">Guidebook BCL</a></h3>
     </div>
     <div class="flex flex-col lg:flex-row lg:space-x-4 justify-evenly">
         {{-- step 1 --}}
         <div class="flex flex-col items-center my-8 lg:space-x-4 lg:flex-row">
             <div
-                class="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-pink-300 to-purple-300">
-                <p class="text-xl font-semibold text-center text-white font-poppins">1</p>
+                class="flex items-center justify-center w-12 h-12 rounded-full {{ $step == 1 ? ' bg-gradient-to-r from-pink-300 to-purple-300' : ' rounded-full bg-white ring-purple-200' }}">
+                <p
+                    class="text-xl font-semibold text-center {{ $step == 1 ? 'text-white' : 'text-purple-200' }}  font-poppins">
+                    1</p>
             </div>
             <h2 class="font-semibold text-center text-white text-md lg:text-lg font-poppins">Informasi Tim</h2>
         </div>
         {{-- step 2 --}}
         <div class="flex flex-col items-center my-8 lg:space-x-4 lg:flex-row">
-            <div class="flex items-center justify-center w-10 h-10 bg-white rounded-full ring-4 ring-purple-200">
-                <p class="text-xl font-semibold text-center text-purple-200 font-poppins">2</p>
+            <div
+                class="flex items-center justify-center w-12 h-12 rounded-full{{ $step == 2 ? ' bg-gradient-to-r from-pink-300 to-purple-300' : ' rounded-full bg-white ring-purple-200' }}">
+                <p
+                    class="text-xl font-semibold text-center font-poppins {{ $step == 2 ? 'text-white' : 'text-purple-200' }}">
+                    2</p>
             </div>
             <h2 class="font-semibold text-center text-white text-md lg:text-lg font-poppins">Anggota Tim</h2>
         </div>
         {{-- step 3 --}}
         <div class="flex flex-col items-center my-8 lg:space-x-4 lg:flex-row">
-            <div class="flex items-center justify-center w-10 h-10 bg-white rounded-full ring-4 ring-purple-200">
-                <p class="text-xl font-semibold text-center text-purple-200 font-poppins">3</p>
+            <div
+                class="flex items-center justify-center w-12 h-12 rounded-full {{ $step == 3 ? ' bg-gradient-to-r from-pink-300 to-purple-300' : ' rounded-full bg-white ring-purple-200' }}">
+                <p
+                    class="text-xl font-semibold text-center {{ $step == 3 ? 'text-white' : 'text-purple-200' }} font-poppins">
+                    3</p>
             </div>
             <h2 class="font-semibold text-center text-white text-md lg:text-lg font-poppins">Akun</h2>
         </div>
@@ -41,6 +50,9 @@
                     <input id="name" type="text"
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                         placeholder="Masukkan nama tim kamu" wire:model.defer="team_name" name="team_name">
+                    @if ($errors->any() || $errorMessage)
+                        <p class="text-sm text-red-500">{{ $errors->first('team_name') ?? $errorMessage }}</p>
+                    @endif
                 </div>
                 <div class="flex flex-col space-y-2 font-medium my-11 font-poppins">
                     <label for="asal-domisili" class="text-white">Asal Daerah</label>
@@ -53,13 +65,18 @@
                             </option>
                         @endforeach
                     </select>
+                    @if ($errors->any() || $errorMessage)
+                        <p class="text-sm text-red-500">{{ $errors->first('city') ?? $errorMessage }}</p>
+                    @endif
                 </div>
                 <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="name">Judul Ide</label>
                     <input id="name" type="text"
                         class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
-                        placeholder="Judul ide kamu" wire:model.defer="judul_ide_bisnis"
-                        name="judul_ide_bisnis">
+                        placeholder="Judul ide kamu" wire:model.defer="judul_ide_bisnis" name="judul_ide_bisnis">
+                    @if ($errors->any() || $errorMessage)
+                        <p class="text-sm text-red-500">{{ $errors->first('judul_ide_bisnis') ?? $errorMessage }}</p>
+                    @endif
                 </div>
                 {{-- <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                     <label for="bmc">Upload dile BMC (<=2Mb, .pdf) </label>
@@ -89,6 +106,11 @@
                             name="member_{{ $x }}_name" type="text"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nama lengkap anggota {{ $x }}">
+                        @if ($errors->any() || $errorMessage)
+                            <p class="text-sm text-red-500">
+                                {{ $errors->first('member_' . $x . '_name') ?? $errorMessage }}
+                            </p>
+                        @endif
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="email-address">Email</label>
@@ -96,6 +118,11 @@
                             name="member_{{ $x }}_email" type="email"
                             class="p-2 bg-transparent rounded-md focus:border-pink-200 focus:ring-pink-200 autofill:bg-transparent"
                             placeholder="Masukkan email aktif anggota {{ $x }}">
+                        @if ($errors->any() || $errorMessage)
+                            <p class="text-sm text-red-500">
+                                {{ $errors->first('member_' . $x . '_email') ?? $errorMessage }}
+                            </p>
+                        @endif
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Nomor WhatsApp</label>
@@ -103,6 +130,11 @@
                             name="member_{{ $x }}_whatsapp"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan nomor WhatsApp anggota {{ $x }}">
+                        @if ($errors->any() || $errorMessage)
+                            <p class="text-sm text-red-500">
+                                {{ $errors->first('member_' . $x . '_whatsapp') ?? $errorMessage }}
+                            </p>
+                        @endif
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Asal Institusi</label>
@@ -110,6 +142,11 @@
                             name="member_{{ $x }}_university"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan Asal Institusi anggota {{ $x }}">
+                        @if ($errors->any() || $errorMessage)
+                            <p class="text-sm text-red-500">
+                                {{ $errors->first('member_' . $x . '_university') ?? $errorMessage }}
+                            </p>
+                        @endif
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Jurusan</label>
@@ -117,6 +154,11 @@
                             name="member_{{ $x }}_university"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan jurusan anggota {{ $x }}">
+                        @if ($errors->any() || $errorMessage)
+                            <p class="text-sm text-red-500">
+                                {{ $errors->first('member_' . $x . '_major') ?? $errorMessage }}
+                            </p>
+                        @endif
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Tahun Angkatan</label>
@@ -124,6 +166,11 @@
                             name="member_{{ $x }}_university"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan tahun angkatan anggota {{ $x }}">
+                        @if ($errors->any() || $errorMessage)
+                            <p class="text-sm text-red-500">
+                                {{ $errors->first('member_' . $x . '_year') ?? $errorMessage }}
+                            </p>
+                        @endif
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Akun Instagram</label>
@@ -131,6 +178,11 @@
                             name="member_{{ $x }}_instagram"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan akun instagram anggota {{ $x }}">
+                        @if ($errors->any() || $errorMessage)
+                            <p class="text-sm text-red-500">
+                                {{ $errors->first('member_' . $x . '_instagram') ?? $errorMessage }}
+                            </p>
+                        @endif
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="wa">Link Twibbon</label>
@@ -138,6 +190,11 @@
                             name="member_{{ $x }}_twibbon"
                             class="p-2 rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Masukkan link twibbon anggota {{ $x }}">
+                        @if ($errors->any() || $errorMessage)
+                            <p class="text-sm text-red-500">
+                                {{ $errors->first('member_' . $x . '_twibbon') ?? $errorMessage }}
+                            </p>
+                        @endif
                     </div>
                     <div class="flex flex-col space-y-2 font-medium text-white my-11 font-poppins">
                         <label for="ktm_{{ $x }}">Bukti Mahasiswa S1/Sederajat Aktif
@@ -147,6 +204,11 @@
                             class=" rounded-md bg-transparent !border border-[#6B7280] focus-visible:!border-pink-200 focus:!border-pink-200 focus:!ring-pink-200  autofill:bg-transparent"
                             placeholder="Bukti Mahasiswa S1/Sederajat Aktif Anggota {{ $x }}"
                             accept=".jpg,.png">
+                        @if ($errors->any() || $errorMessage)
+                            <p class="text-sm text-red-500">
+                                {{ $errors->first('member_' . $x . '_ktm') ?? $errorMessage }}
+                            </p>
+                        @endif
                     </div>
                     {{-- <div class="flex flex-col space-y-2 font-medium text-white font-poppins">
                         <label for="bukti-ig1">Bukti Follow Instagram ISE! <a class="text-purple-100 hover:underline"

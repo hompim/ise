@@ -76,7 +76,7 @@
                             {{-- card kecil --}}
                             <!-- start : prestasi 2 -->
                             <div class="md:w-[380px] h-[570px] bg-[#191A1E] rounded-3xl">
-                                <div class="h-96">
+                                <div class="h-56">
                                     <img src="{{ asset('storage/' . $a->title_image_path) }}" class="w-full">
                                 </div>
                                 <div class="px-[15px]">
