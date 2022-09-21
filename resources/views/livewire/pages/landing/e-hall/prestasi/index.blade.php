@@ -44,8 +44,8 @@
                 <div>
                     <!-- start : prestasi 1 -->
                     <div class="md:w-[680px] md:h-[900px] bg-[#191A1E] flex flex-col rounded-3xl">
-                        <div class="w-full rounded-t-xl">
-                            <img src="{{ asset('storage/' . $article[0]->title_image_path) }}" class="w-full">
+                        <div class="w-full rounded-t-xl h-96">
+                            <img src="{{ asset('storage/' . $article[0]->title_image_path) }}" class="w-full ">
                         </div>
                         <div class="flex flex-col justify-between h-full">
                             <div class="px-[27.95px]">
@@ -76,7 +76,9 @@
                             {{-- card kecil --}}
                             <!-- start : prestasi 2 -->
                             <div class="md:w-[380px] h-[570px] bg-[#191A1E] rounded-3xl">
-                                <img src="{{ asset('storage/' . $a->title_image_path) }}" class="w-full">
+                                <div class="h-96">
+                                    <img src="{{ asset('storage/' . $a->title_image_path) }}" class="w-full">
+                                </div>
                                 <div class="px-[15px]">
                                     <h1 class="font-bold text-[26px] text-white pt-[19px] pb-[17px]">
                                         {{ $a->title }}
