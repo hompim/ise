@@ -305,11 +305,11 @@ class RegisterCollege extends Component
             $ktm = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_4_KTM' . '.' . $this->member_4_ktm->getClientOriginalExtension();
 
             $resized_image_ktm = (new ImageManager())
-                ->make($this->$this->member_4_ktm)
+                ->make($this->member_4_ktm)
                 ->resize(600, null, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
-                })->encode($this->$this->member_4_ktm->getClientOriginalExtension());
+                })->encode($this->member_4_ktm->getClientOriginalExtension());
 
             Storage::disk('public')
                 ->put(
@@ -336,11 +336,11 @@ class RegisterCollege extends Component
             $ktm = date('YmdHis') . '_BIONIX COLLEGE_' . $this->team_name . '_5_KTM' . '.' . $this->member_5_ktm->getClientOriginalExtension();
 
             $resized_image_ktm = (new ImageManager())
-                ->make($this->$this->member_5_ktm)
+                ->make($this->member_5_ktm)
                 ->resize(600, null, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
-                })->encode($this->$this->member_5_ktm->getClientOriginalExtension());
+                })->encode($this->member_5_ktm->getClientOriginalExtension());
 
             Storage::disk('public')
                 ->put(
