@@ -89,8 +89,8 @@
                                     class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
                                     placeholder="File BMC" accept="application/pdf" style="color: black;margin-top:0;"
                                     required {{ $readonly ? 'disabled' : '' }}>
-                                @if ($error->any() || $errors->any())
-                                    <p class="text-sm text-red-500">{{ $error->first('bmc') }}</p>
+                                @if ($errors->has('bmc'))
+                                    <p class="text-red-500 text-sm">{{ $errors->first('bmc') }}</p>
                                 @endif
                             @else
                                 @if ($bmc)
