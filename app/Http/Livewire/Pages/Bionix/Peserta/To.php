@@ -8,6 +8,6 @@ class To extends Component
 {
     public function render()
     {
-        return view('livewire.pages.bionix.peserta.to');
+        return view('livewire.pages.bionix.peserta.to')->layout('layouts.dashboard');
     }
 }

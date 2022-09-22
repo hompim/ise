@@ -120,6 +120,7 @@ Route::middleware('auth')->group(function () {
 
                     Route::group(['middleware' => 'bionixcheck:profil_terverifikasi'], function () {
                         Route::get('/pembayaran', \App\Http\Livewire\Pages\Bionix\Peserta\Pembayaran::class)->name('bionix.peserta.pembayaran');
+                        Route::get('/penyisihan-nasional', \App\Http\Livewire\Pages\Bionix\Peserta\PenyisihanNasional::class)->name('bionix.peserta.penyisihan-nasional');
                     });
                     Route::get('/bonus-tryout', \App\Http\Livewire\Pages\Bionix\Peserta\Tugas\Index::class)->name('bionix.peserta.bonus-tryout');
                     Route::get('/tryout', \App\Http\Livewire\Pages\Bionix\Peserta\To::class)->name('bionix.peserta.tryout');

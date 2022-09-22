@@ -264,7 +264,6 @@ class Sidebar extends Component
                         ]
                     );
                 }
-
                 if (Auth::user()->userable->jenjang == 'SMA' && Auth::user()->userable->dp->isNotEmpty()) {
                     array_push(
                         $this->menu,
@@ -273,6 +272,17 @@ class Sidebar extends Component
                             'icon' => 'cil-book',
                             'title' => 'Bonus Tryout',
                             'route-name' => 'bionix.peserta.bonus-tryout'
+                        ]
+                    );
+                }
+                if (Auth::user()->userable->bionix->payment_verif_status == "Terverifikasi" && Auth::user()->userable->bionix->competition_round == "Penyisihan 2") {
+                    array_push(
+                        $this->menu,
+                        [
+                            'type' => 'menu',
+                            'icon' => 'cil-book',
+                            'title' => 'Penyisihan Nasional',
+                            'route-name' => 'bionix.peserta.penyisihan-nasional'
                         ]
                     );
                 }
