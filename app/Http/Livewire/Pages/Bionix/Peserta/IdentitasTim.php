@@ -200,7 +200,7 @@ class IdentitasTim extends Component
                 'member_1_major' => 'required|string',
                 'member_1_year' => 'required|integer|min:2000|max:' . date('Y'),
                 'judul' => 'required',
-                'bmc' => 'required|mimes:pdf|max:3072',
+                'bmc' => 'required|mimes:pdf|max:5072',
             ]);
 
             for ($x = 2; $x <= 5; $x++) {
