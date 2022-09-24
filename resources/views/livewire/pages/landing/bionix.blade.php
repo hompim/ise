@@ -643,8 +643,7 @@
                             kemajuan teknologi</p>
                     </div>
                     <div class="flex flex-col justify-center mt-12 md:flex-row md:space-x-4 font-poppins">
-                        <a href="https://drive.google.com/file/d/1KUtFKWdUwKZBS9-A5ImEYOhhvLLonXjk/view"
-                            target="_blank"
+                        <a href="https://drive.google.com/file/d/1KUtFKWdUwKZBS9-A5ImEYOhhvLLonXjk/view" target="_blank"
                             class=" md:px-3 md:mx-0 mx-16 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center"><svg
                                 class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -657,8 +656,9 @@
                                     stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                             Download Guidebook</a>
-                        <a href="{{ route('register-college') }}"
-                            class="py-2 my-6 transition duration-300 transform rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 hover:-translate-y-1">Register</a>
+                        <a href="{{ route('closed-registration') }}"
+                            class="py-2 my-6 transition duration-300 transform rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 hover:-translate-y-1">Register
+                            Closed</a>
                     </div>
                     <div class="text-4xl md:text-6xl text-white font-bold mt-16 md:mt-[220px] md:w-[600px] md:mx-auto">
                         Many <a class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text"> benefit

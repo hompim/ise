@@ -102,7 +102,10 @@ Route::middleware('auth')->group(function () {
 
                 Route::group(['middleware' => 'bionixcheck:unregistered'], function () {
                     Route::middleware(['usertype:Mahasiswa'])->group(function () {
-                        Route::get('register/college', \App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege::class)->name('register-college');
+                        // Route::get('register/college', \App\Http\Livewire\Pages\Auth\Bionix\RegisterCollege::class)->name('register-college');
+                        Route::get('register/college', function () {
+                            return view('closed-registration');
+                        })->name('register-college');
                     });
                     Route::middleware('usertype:SMA')->group(function () {
                         // Route::get('register/student', \App\Http\Livewire\Pages\Auth\Bionix\RegisterStudent::class)->name('register-student');
