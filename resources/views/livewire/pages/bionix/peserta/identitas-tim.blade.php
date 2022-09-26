@@ -631,11 +631,11 @@
                                         @endif
                                     </div>
                                     <div>
-                                        <label for="member_3_major"
+                                        <label for="member_3_university"
                                             class="mt-4 mb-2 font-bold text-gray-400">Universitas Anggota
                                             {{ $x }}</label><br>
                                         @if ($is_edit)
-                                            <input wire:model.defer="member_{{ $x }}_major"
+                                            <input wire:model.defer="member_{{ $x }}_university"
                                                 type="text" id="member_{{ $x }}_university"
                                                 name="member_3_university"
                                                 class="{{ $readonly ? 'bg-gray-100' : '' }} registration-form input-text"
