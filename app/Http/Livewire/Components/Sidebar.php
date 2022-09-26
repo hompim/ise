@@ -202,7 +202,7 @@ class Sidebar extends Component
                     [
                         'type' => 'menu',
                         'icon' => 'cil-book',
-                        'title' => 'Artikel',
+                        'title' => 'ISE Trivia',
                         'route-name' => 'ehall.admin.quiz'
                     ],
                     [
