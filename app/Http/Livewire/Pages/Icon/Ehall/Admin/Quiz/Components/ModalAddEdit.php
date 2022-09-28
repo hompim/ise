@@ -32,6 +32,18 @@ class ModalAddEdit extends ModalComponent
     {
         $this->modal_type = $type;
         $this->category = EhallQuestType::all();
+        if($type == 'edit'){
+            $this->quiz = EhallQuestQuiz::find($id);
+            $this->explanation = $this->quiz->explanation;
+            $this->question = $this->quiz->question;
+            $this->quiz_type = $this->quiz->question_type;
+            $this->quiz_category = $this->quiz->type_id;
+            $this->opt_a = $this->quiz->opt_a;
+            $this->opt_b = $this->quiz->opt_b;
+            $this->opt_c = $this->quiz->opt_c;
+            $this->opt_d = $this->quiz->opt_d;
+            $this->answer = $this->quiz->answer;
+        }
     }
 
     public function submit()
@@ -46,6 +58,18 @@ class ModalAddEdit extends ModalComponent
 
         if ($this->modal_type == 'add') {
             $quiz = EhallQuestQuiz::create([
+                'question' => $this->question,
+                'question_type' => $this->quiz_type,
+                'type_id' => $this->quiz_category,
+                'opt_a' => $this->opt_a,
+                'opt_b' => $this->opt_b,
+                'opt_c' => $this->opt_c,
+                'opt_d' => $this->opt_d,
+                'explanation' => $this->explanation,
+                'answer' => $this->answer,
+            ]);
+        }else{
+            $this->quiz->update([
                 'question' => $this->question,
                 'question_type' => $this->quiz_type,
                 'type_id' => $this->quiz_category,
