@@ -68,7 +68,7 @@
             </div>
         </div>
 
-        <div class="hidden">
+        <div>
             @livewire('pages.landing.e-hall.components.quiz-card', ['type_id' => 1, 'is_component' => true])
         </div>
 
