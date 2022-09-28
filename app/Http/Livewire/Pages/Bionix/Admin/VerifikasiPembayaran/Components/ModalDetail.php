@@ -20,11 +20,11 @@ class ModalDetail extends ModalComponent
 
     public function mount($type, $id)
     {
-        $this->type=$type;
+        $this->type = $type;
         $this->bionix_data = ($type == 'student' ? TeamJuniorData::find($id) : TeamSeniorData::find($id));
         $this->team_name = $this->bionix_data->team_name;
-        $this->member1_name = $this->bionix_data->leader->name;
-        $this->school_name = ($type == 'student' ? $this->bionix_data->school_name : $this->bionix_data->university_name);
+        $this->member1_name = ($type == 'student' ? $this->bionix_data->leader->name : $this->bionix_data->members()->where('is_leader', true)->first()->name);
+        $this->school_name = ($type == 'student' ? $this->bionix_data->school_name : null);
         $this->school_city = $this->bionix_data->city;
         $this->payment_proof = $this->bionix_data->payment_proof_path;
     }

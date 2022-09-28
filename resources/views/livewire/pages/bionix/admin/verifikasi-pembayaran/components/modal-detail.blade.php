@@ -19,15 +19,18 @@
                     <p>{{$member1_name}}</p>
                 </div>
                 <div>
-                    <p class="font-bold mb- mt-2">Nama Institusi</p>
-                    <p>{{$school_name}}</p>
-                </div>
-                <div>
                     <p class="font-bold mb-0 mt-2">Asal Institusi</p>
                     <p>{{$school_city->name}} @if($type=='student')(Region {{$school_city->region}})@endif</p>
                 </div>
+                @if($type == 'student')
+                <div>
+                    <p class="font-bold mb- mt-2">Nama Institusi</p>
+                    <p>{{$school_name}}</p>
+                </div>
+                @endif
             </div>
         </div>
+        @if($type == 'student')
         <div id="promo" class="mt-8">
             <h5>Promo yang Digunakan</h5>
             <hr/>
@@ -78,6 +81,7 @@
                 <p class="text-center">Tidak membayar DP</p>
             @endif
         </div>
+        @endif
         <div id="detail_pembayaran" class="mt-8">
             <h5>Pembayaran</h5>
             <hr/>
