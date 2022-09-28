@@ -179,13 +179,13 @@
                         alt="">
                 </div>
                 <div class="mb-4 font-bold md:mb-8">
-                    Player 2
+                    {{$leaderboard[1]->user->name}}
                 </div>
                 <div>
                     <img class="w-full" src="{{ asset('images/2nd-ehoi.svg') }}" alt="">
                 </div>
                 <div class="absolute text-base -translate-x-1/2 md:bottom-16 bottom-4 md:text-3xl left-1/2">
-                    <p> <span class="font-bold">3003</span> <br> Points</p>
+                    <p> <span class="font-bold">{{$leaderboard[1]->hois_point}}</span> <br> Points</p>
                 </div>
             </div>
             <div class="relative flex flex-col justify-between w-24 text-center md:w-full">
@@ -196,14 +196,14 @@
                 </div>
                 <div class="mb-2 md:mb-10">
                     <div class="font-bold ">
-                        Player 1
+                        {{$leaderboard[0]->user->name}}
                     </div>
                 </div>
                 <div>
                     <img src="{{ asset('images/1st-ehoi.svg') }}" alt="">
                 </div>
                 <div class="absolute text-base -translate-x-1/2 md:bottom-16 bottom-4 md:text-3xl left-1/2">
-                    <p> <span class="font-bold">1361</span> <br> Points</p>
+                    <p> <span class="font-bold">{{$leaderboard[0]->hois_point}}</span> <br> Points</p>
                 </div>
             </div>
             <div class="relative flex flex-col justify-between w-24 text-center md:w-full">
@@ -213,13 +213,13 @@
                         alt="">
                 </div>
                 <div class="mb-0 ml-1 font-bold md:mb-8 md:ml-0">
-                    Player 3
+                    {{$leaderboard[2]->user->name}}
                 </div>
                 <div>
                     <img class="mt-3" src="{{ asset('images/3rd-ehoi.svg') }}" alt="">
                 </div>
                 <div class="absolute text-base -translate-x-1/2 md:bottom-16 bottom-4 md:text-3xl left-1/2">
-                    <p> <span class="font-bold">2002</span> <br> Points</p>
+                    <p> <span class="font-bold">{{$leaderboard[2]->hois_point}}</span> <br> Points</p>
                 </div>
             </div>
         </div>
