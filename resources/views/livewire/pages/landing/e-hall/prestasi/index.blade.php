@@ -77,7 +77,7 @@
                             <!-- start : prestasi 2 -->
                             <div class="md:w-[380px] h-[570px] bg-[#191A1E] rounded-3xl">
                                 <div class="h-56">
-                                    <img src="{{ asset('storage/' . $a->title_image_path) }}" class="w-full">
+                                    <img src="{{ asset('storage/' . $a->title_image_path) }}" class="h-full">
                                 </div>
                                 <div class="px-[15px]">
                                     <h1 class="font-bold text-[26px] text-white pt-[19px] pb-[17px]"

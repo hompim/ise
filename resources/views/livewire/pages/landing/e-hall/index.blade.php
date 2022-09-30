@@ -42,11 +42,11 @@
         <div>
             <div class="group">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
-                    <a href="{{ route('coming-soon') }}"
+                    <a href="{{ route('quiz-ehall') }}"
                         class=" absolute border-l-4 border-[#E11BAA] font-poppins pl-[3px] lg:pl-[12px] text-[10px] font-semibold lg:text-[20px] ml-[-144px] mt-[24px] lg:mt-[70px] lg:ml-[-380px]">
                         ISE Trivia</a>
                 </div>
-                <a href="{{ route('coming-soon') }}"
+                <a href="{{ route('quiz-ehall') }}"
                     class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 absolute mt-[45px] lg:mt-[120px] ml-[-136px] lg:ml-[-362px]"><img
                         src="{{ asset('images/icon-brain.png') }}" alt=""></a>
             </div>
@@ -85,7 +85,7 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-col justify-center text-5xl text-white md:pb-48">
+    <div class="flex flex-col justify-center text-5xl text-white md:pb-12">
         <span class="mx-auto font-bold">About E-Hall of IS</span>
         <div id="default-carousel" class="relative " data-carousel="static">
             <!-- Carousel wrapper p1 -->
@@ -160,66 +160,96 @@
                 </span>
             </button>
         </div>
-        <div class="mx-4 text-lg text-center text-liteGray md:mt-24 md:mx-16 pb-48">
+        <div class="mx-4 text-lg text-center text-liteGray md:mt-24 md:mx-16 pb-12">
             E-Hall of IS merupakan zona berisikan pameran virtual karya-karya autentik mahasiswa dan alumni Sistem
             Informasi Institut Teknologi Sepuluh Nopember (ITS) dengan reputasi gemilang, baik ranah nasional maupun
             internasional. Zona ini memiliki dua tujuan utama. Pertama, memperkenalkan karya Sistem Informasi ITS ke
             khalayak umum. Kedua, mengedukasi dan menyebarkan awareness seputar teknologi.
         </div>
     </div>
-    {{-- <div class="flex flex-col justify-center pb-12 mx-auto text-xl text-white md:text-5xl md:pb-24 md:w-full md:mt-24"> --}}
-    <div
-        class="flex-col justify-center hidden pb-12 mx-auto text-xl text-white md:text-5xl md:pb-24 md:w-full md:mt-24">
+    <div class="flex flex-col justify-center mx-auto text-xl text-white md:text-5xl md:w-full md:mt-24">
+        {{-- <div
+        class="flex-col justify-center hidden pb-12 mx-auto text-xl text-white md:text-5xl md:pb-24 md:w-full md:mt-24"> --}}
         <span class="mx-auto font-bold">Leaderboard ISE Trivia</span>
         <div class="flex flex-row mx-auto mt-4">
             <div class="relative flex flex-col justify-between w-24 text-center md:w-full font">
                 <div class="flex justify-center h-full pt-8 mx-auto rounded-full md:w-36 md:pt-80">
-                    <img class="md:w-[120px] w-[40px] md:h-[120px] h-[40px] rounded-full"
-                        src="https://htmlcolorcodes.com/assets/images/colors/grass-green-color-solid-background-1920x1080.png"
-                        alt="">
+                    <svg width="96" height="104" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.25 10C13.8467 10 14.419 10.2371 14.841 10.659C15.2629 11.081 15.5 11.6533 15.5 12.25V13C15.5 15.9565 12.71 19 8 19C3.29 19 0.5 15.9565 0.5 13V12.25C0.5 11.6533 0.737053 11.081 1.15901 10.659C1.58097 10.2371 2.15326 10 2.75 10H13.25ZM8 0.25C9.09402 0.25 10.1432 0.684597 10.9168 1.45818C11.6904 2.23177 12.125 3.28098 12.125 4.375C12.125 5.46902 11.6904 6.51823 10.9168 7.29182C10.1432 8.0654 9.09402 8.5 8 8.5C6.90598 8.5 5.85677 8.0654 5.08318 7.29182C4.3096 6.51823 3.875 5.46902 3.875 4.375C3.875 3.28098 4.3096 2.23177 5.08318 1.45818C5.85677 0.684597 6.90598
+                            0.25 8 0.25Z"
+                            fill="url(#paint0_linear_1017_5048)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_1017_5048" x1="15.5" y1="9.625"
+                                x2="0.5" y2="9.625" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#5B1BE1" />
+                                <stop offset="1" stop-color="#B221E5" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
                 <div class="mb-4 font-bold md:mb-8">
-                    {{$leaderboard[1]->user->name}}
+                    {{ $leaderboard[1]->user->name }}
                 </div>
                 <div>
                     <img class="w-full" src="{{ asset('images/2nd-ehoi.svg') }}" alt="">
                 </div>
                 <div class="absolute text-base -translate-x-1/2 md:bottom-16 bottom-4 md:text-3xl left-1/2">
-                    <p> <span class="font-bold">{{$leaderboard[1]->hois_point}}</span> <br> Points</p>
+                    <p> <span class="font-bold">{{ $leaderboard[1]->hois_point }}</span> <br> Points</p>
                 </div>
             </div>
             <div class="relative flex flex-col justify-between w-24 text-center md:w-full">
                 <div class="flex justify-center h-full mx-auto rounded-full md:w-36 md:pt-48">
-                    <img class="md:w-[120px] w-[40px] md:h-[120px] h-[40px] rounded-full"
-                        src="https://htmlcolorcodes.com/assets/images/colors/grass-green-color-solid-background-1920x1080.png"
-                        alt="">
+                    <svg width="96" height="104" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.25 10C13.8467 10 14.419 10.2371 14.841 10.659C15.2629 11.081 15.5 11.6533 15.5 12.25V13C15.5 15.9565 12.71 19 8 19C3.29 19 0.5 15.9565 0.5 13V12.25C0.5 11.6533 0.737053 11.081 1.15901 10.659C1.58097 10.2371 2.15326 10 2.75 10H13.25ZM8 0.25C9.09402 0.25 10.1432 0.684597 10.9168 1.45818C11.6904 2.23177 12.125 3.28098 12.125 4.375C12.125 5.46902 11.6904 6.51823 10.9168 7.29182C10.1432 8.0654 9.09402 8.5 8 8.5C6.90598 8.5 5.85677 8.0654 5.08318 7.29182C4.3096 6.51823 3.875 5.46902 3.875 4.375C3.875 3.28098 4.3096 2.23177 5.08318 1.45818C5.85677 0.684597 6.90598
+                            0.25 8 0.25Z"
+                            fill="url(#paint0_linear_1017_5048)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_1017_5048" x1="15.5" y1="9.625"
+                                x2="0.5" y2="9.625" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#5B1BE1" />
+                                <stop offset="1" stop-color="#B221E5" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
                 <div class="mb-2 md:mb-10">
                     <div class="font-bold ">
-                        {{$leaderboard[0]->user->name}}
+                        {{ $leaderboard[0]->user->name }}
                     </div>
                 </div>
                 <div>
                     <img src="{{ asset('images/1st-ehoi.svg') }}" alt="">
                 </div>
                 <div class="absolute text-base -translate-x-1/2 md:bottom-16 bottom-4 md:text-3xl left-1/2">
-                    <p> <span class="font-bold">{{$leaderboard[0]->hois_point}}</span> <br> Points</p>
+                    <p> <span class="font-bold">{{ $leaderboard[0]->hois_point }}</span> <br> Points</p>
                 </div>
             </div>
             <div class="relative flex flex-col justify-between w-24 text-center md:w-full">
                 <div class="flex justify-center h-full pt-16 mx-auto rounded-full md:w-36 md:pt-96">
-                    <img class="md:w-[120px] w-[40px] md:h-[120px] h-[40px] rounded-full"
-                        src="https://htmlcolorcodes.com/assets/images/colors/grass-green-color-solid-background-1920x1080.png"
-                        alt="">
+                    <svg width="96" height="104" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.25 10C13.8467 10 14.419 10.2371 14.841 10.659C15.2629 11.081 15.5 11.6533 15.5 12.25V13C15.5 15.9565 12.71 19 8 19C3.29 19 0.5 15.9565 0.5 13V12.25C0.5 11.6533 0.737053 11.081 1.15901 10.659C1.58097 10.2371 2.15326 10 2.75 10H13.25ZM8 0.25C9.09402 0.25 10.1432 0.684597 10.9168 1.45818C11.6904 2.23177 12.125 3.28098 12.125 4.375C12.125 5.46902 11.6904 6.51823 10.9168 7.29182C10.1432 8.0654 9.09402 8.5 8 8.5C6.90598 8.5 5.85677 8.0654 5.08318 7.29182C4.3096 6.51823 3.875 5.46902 3.875 4.375C3.875 3.28098 4.3096 2.23177 5.08318 1.45818C5.85677 0.684597 6.90598
+                            0.25 8 0.25Z"
+                            fill="url(#paint0_linear_1017_5048)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_1017_5048" x1="15.5" y1="9.625"
+                                x2="0.5" y2="9.625" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#5B1BE1" />
+                                <stop offset="1" stop-color="#B221E5" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
                 <div class="mb-0 ml-1 font-bold md:mb-8 md:ml-0">
-                    {{$leaderboard[2]->user->name}}
+                    {{ $leaderboard[2]->user->name }}
                 </div>
                 <div>
                     <img class="mt-3" src="{{ asset('images/3rd-ehoi.svg') }}" alt="">
                 </div>
                 <div class="absolute text-base -translate-x-1/2 md:bottom-16 bottom-4 md:text-3xl left-1/2">
-                    <p> <span class="font-bold">{{$leaderboard[2]->hois_point}}</span> <br> Points</p>
+                    <p> <span class="font-bold">{{ $leaderboard[2]->hois_point }}</span> <br> Points</p>
                 </div>
             </div>
         </div>

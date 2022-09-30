@@ -265,7 +265,7 @@ class Sidebar extends Component
                     );
                 }
 
-                if (Auth::user()->userable->bionix->payment_verif_status == "Terverifikasi" && Auth::user()->userable->bionix->competition_round == "Penyisihan 2") {
+                if (Auth::user()->userable->bionix->payment_verif_status == "Terverifikasi" && Auth::user()->userable->bionix->competition_round == "Penyisihan 2" && Auth::user()->userable->jenjang == 'SMA') {
                     array_push(
                         $this->menu,
                         [

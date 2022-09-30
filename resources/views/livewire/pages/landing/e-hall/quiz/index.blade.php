@@ -11,11 +11,8 @@
                 <img src="{{ asset('images/trivia-logo.png') }}" alt="founder-digiflux">
             </div>
             <p class="px-6 mt-4 text-sm leading-loose md:text-lg text-liteGray md:px-0 md:leading-normal">
-                ISE Trivia merupakan Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Etiam eu turpis molestie,
-                dictum est a, mattis tellus. Sed dignissim, metus nec
-                fringilla accumsan,risus sem sollicitudin lacus, ut interdum
-                tellus elit sed risus </p>
+                Permainan berseri berupa quiz/challenge seputar ISE! dan pameran e-Hall of IS pada setiap serinya. Raih
+                hadiah menarik bagi kalian yang berhasil menduduki peringkat 3 teratas!</p>
             <div class="relative mx-auto mt-16 text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
                 <div class="absolute inset-0 ">
                     <a href="#explore"
