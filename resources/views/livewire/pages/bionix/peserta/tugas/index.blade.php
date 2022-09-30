@@ -1,12 +1,6 @@
 <div class="px-8 text-white">
-    {{-- TODO (Atra) (Tugas Startup/Data Science)
-     Cukup modifikasi dari bagian pengumuman
-
-     URL : /dashboard/peserta/academy/tugas --}}
-    {{-- In work, do what you enjoy. --}}
     <h3 class="text-xl font-weight-bold my-4">Tugas</h3>
     <div class="grid grid-cols-1 gap-6 mt-4 mb-4">
-
         @if (Auth::user()->userable->bionix->invoice_id)
             <div>
                 <div class="p-4 rounded-xl shadow-md" x-data="{ open: false }" style="background-color: #191a1e;border:0">
@@ -41,10 +35,9 @@
                     </div>
                 </div>
             </div>
-        @else
-            <p>Tidak ada tugas</p>
         @endif
-
+        @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'file'])
+        @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'video'])
     </div>
     <div wire:loading.delay wire:target="fileTask"
         class="fixed bottom-12 right-12 bg-blue-100 border-t-4 border-blue-500 rounded-b text-blue-900 px-4 py-3 shadow-md"

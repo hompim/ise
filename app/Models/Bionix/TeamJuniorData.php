@@ -44,4 +44,8 @@ class TeamJuniorData extends Model
     public function invoice(){
         return $this->hasOne(BionixInvoice::class, 'team_id');
     }
+
+    public function submission(){
+        return $this->morphOne(BionixSubmission::class, 'team');
+    }
 }
