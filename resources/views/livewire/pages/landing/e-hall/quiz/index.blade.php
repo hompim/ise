@@ -85,7 +85,7 @@
         <div x-data="{ open: false }" class="md:mt-4">
             <div class="cursor-pointer" x-on:click="open = !open">
                 <div
-                    class="bg-liteBlack md:w-full h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                    class="bg-liteBlack xl:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                     <div class="flex flex-row justify-between mx-auto">
                         <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Trivia</h1>
                         <div x-show="!open">
