@@ -85,7 +85,7 @@
         <div x-data="{ open: false }" class="md:mt-4">
             <div class="cursor-pointer" x-on:click="open = !open">
                 <div
-                    class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                    class="bg-liteBlack md:w-full h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                     <div class="flex flex-row justify-between mx-auto">
                         <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Trivia</h1>
                         <div x-show="!open">
@@ -102,7 +102,61 @@
                         </div>
                     </div>
                     <div x-show="open" x-cloak class="pt-4" x-transition>
-                        @foreach ($type_quiz as $type_quiz_no => $type_quiz_array)
+                        <div class="mt-3 md:mt-4">
+                            <div class="cursor-pointer">
+                                <div
+                                    class="bg-liteBlack md:w-fit h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                                    <div class="flex flex-row justify-between mx-auto">
+                                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Wawasan TI
+                                        </h1>
+                                        <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                            href="{{ route('quiz-page-ehall', 'Wawasan Teknologi Informasi') }}">Start</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 md:mt-4">
+                            <div class="cursor-pointer">
+                                <div
+                                    class="bg-liteBlack md:w-fit h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                                    <div class="flex flex-row justify-between mx-auto">
+                                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Seputar ISE
+                                        </h1>
+                                        <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                            href="#">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 md:mt-4">
+                            <div class="cursor-pointer">
+                                <div
+                                    class="bg-liteBlack md:w-fit h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                                    <div class="flex flex-row justify-between mx-auto">
+                                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Seputar Sistem
+                                            Informasi
+                                        </h1>
+                                        <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                            href="#">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 md:mt-4">
+                            <div class="cursor-pointer">
+                                <div
+                                    class="bg-liteBlack md:w-fit h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                                    <div class="flex flex-row justify-between mx-auto">
+                                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Seputar Technical
+                                            IT
+                                        </h1>
+                                        <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                            href="#">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- @foreach ($type_quiz as $type_quiz_no => $type_quiz_array)
                             <div class="mt-3 md:mt-4">
                                 <div class="cursor-pointer">
                                     <div
@@ -122,7 +176,7 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        @endforeach --}}
                     </div>
                 </div>
             </div>
