@@ -10,18 +10,18 @@
                 <div class="flex flex-col w-full lg:w-1/2">
                     <h2 class="text-white">
 
-                        @if (Auth::check() && Auth::user()->userable_type == 'App\Models\Member')
+                        {{-- @if (Auth::check() && Auth::user()->userable_type == 'App\Models\Member')
                             <span class="text-xl underline underline-offset-4 decoration-purple-300 ">Score :
                                 {{ Auth::user()->userable->hois_point }}</span><br>
-                        @endif
+                        @endif --}}
                         <span class="text-2xl underline underline-offset-4 decoration-purple-300 ">Quiz
                             {{ $quizNo + 1 }}</span>
-                        <span class="text-lg ">
+                        {{-- <span class="text-lg ">
                             (
                             <span class="text-[#B221E5]">300</span>
                             <span>Point</span>
                             )
-                        </span>
+                        </span> --}}
                     </h2>
                     <p class="mt-2 text-sm text-white md:text-lg ">
                         {{ $quiz->question }}
@@ -156,8 +156,9 @@
                         </button>
                         @if (Auth::check())
                             @if ($quizStatus[$currentQuiz]['is_done'])
-                                <p class="text-white ">Anda Sudah Menjawab Quiz ini dan bisa melihat pembahasan di
-                                    bawah.</p>
+                                <p class="text-white ">Anda Sudah Menjawab Quiz ini.</p>
+                                {{-- <p class="text-white ">Anda Sudah Menjawab Quiz ini dan bisa melihat pembahasan di
+                                    bawah.</p> --}}
                             @else
                                 <button
                                     wire:click="submitAnswer"class="col-span-2 px-8 py-2 mx-auto mt-8 font-semibold text-white rounded-lg md:text-xl btn md:px-10 md:mt-100">Submit</button>
@@ -167,7 +168,7 @@
                                 href="{{ route('login') }}">Login</a>
                         @endif
                     </div>
-                    @if (Auth::check() && $quizStatus[$currentQuiz]['is_done'])
+                    {{-- @if (Auth::check() && $quizStatus[$currentQuiz]['is_done'])
                         <!-- start: pembahasan-->
                         <div class="divide-y-[1px] mt-[55px] divide-white">
                             <h1 class="text-white"></h1>
@@ -181,7 +182,7 @@
                             </h1>
                         </div>
                         <!-- end: pembahasan-->
-                    @endif
+                    @endif --}}
                 </div>
 
                 {{-- Right Part --}}
@@ -200,7 +201,7 @@
 @push('js')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script>
+    {{-- <script>
         Livewire.on('Answer', status => {
             if (status == "Correct") {
                 Swal.fire({
@@ -243,5 +244,5 @@
                 timer: 1500
             })
         })
-    </script>
+    </script> --}}
 @endpush
