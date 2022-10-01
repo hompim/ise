@@ -115,10 +115,8 @@
                                                 <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
                                                     href="{{ route('quiz-page-ehall', $type_quiz_array->name) }}">Start</a>
                                             @else
-                                                <button type="button"
-                                                    class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-100 to-purple-100 rounded-3xl"
-                                                    disabled>Coming
-                                                    Soon</button>
+                                                <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                                    href="#">Coming Soon</a>
                                             @endif
                                         </div>
                                     </div>
