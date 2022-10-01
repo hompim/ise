@@ -15,23 +15,26 @@ class TaskCard extends Component
     public $fileTask;
     public $linkTask;
     public $type;
+    public $submission_type;
 
     public function render()
     {
         return view('livewire.pages.bionix.peserta.tugas.task-card');
     }
 
-    public function mount($type){
+    public function mount($type, $for)
+    {
         $this->type = $type;
+        $this->submission_type = $for;
     }
 
-     public function submitTask()
+    public function submitTask()
     {
-        if($this->type == 'file'){
+        if ($this->type == 'file') {
             $this->validate([
                 'fileTask' => 'required|max:10240|mimes:pdf,zip,rar'
             ]);
-        }else{
+        } else {
             $this->validate([
                 'linkTask' => 'required'
             ]);
@@ -43,43 +46,42 @@ class TaskCard extends Component
         // }
 
         $this->emit('onUpload');
-        if($this->type == 'file'){
+        if ($this->type == 'file') {
             if (!is_string($this->fileTask)) {
                 $name = date('YmdHis') . '_BIONIX SUBMISSION_' . Auth::user()->userable->bionix->team_name . '.' . $this->fileTask->getClientOriginalExtension();
                 $this->fileTask->storeAs('jawaban_tugas_bionix', $name, 'public');
                 $path = 'jawaban_tugas_bionix/' . $name;
 
 
-                if(Auth::user()->userable->bionix->submission){
+                if (Auth::user()->userable->bionix->submission) {
                     Auth::user()->userable->bionix->submission->update([
                         'file_path' => $path,
                     ]);
-                }else{
+                } else {
                     BionixSubmission::create([
                         'team_id' => Auth::user()->userable->bionix->id,
                         'team_type' => Auth::user()->userable->bionix_type,
                         'file_path' => $path,
-                        'submission_type' => "Junior Semifinal"
+                        'submission_type' => $this->submission_type,
                     ]);
                 }
             }
-        }else{
-            if(Auth::user()->userable->bionix->submission){
+        } else {
+            if (Auth::user()->userable->bionix->submission) {
                 Auth::user()->userable->bionix->submission->update([
                     'video_link' => $this->linkTask,
                 ]);
-            }else{
-            BionixSubmission::create([
-                'team_id' => Auth::user()->userable->bionix->id,
-                'team_type' => Auth::user()->userable->bionix_type,
-                'video_link' => $this->linkTask,
-                'submission_type' => "Junior Semifinal"
-            ]);
-        }
+            } else {
+                BionixSubmission::create([
+                    'team_id' => Auth::user()->userable->bionix->id,
+                    'team_type' => Auth::user()->userable->bionix_type,
+                    'video_link' => $this->linkTask,
+                    'submission_type' => $this->submission_type
+                ]);
+            }
         }
 
         $this->emit('successUpload');
         return redirect(request()->header('Referer'));
     }
-
 }

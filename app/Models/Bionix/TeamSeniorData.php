@@ -32,4 +32,8 @@ class TeamSeniorData extends Model
     public function promo(){
         return $this->morphOne(PromoTeam::class, 'teamable');
     }
+
+    public function submission(){
+        return $this->morphMany(BionixSubmission::class, 'team');
+    }
 }
