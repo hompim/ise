@@ -30,13 +30,13 @@
         </div>
     </div>
 
-    {{-- Point --}}
-    @if (Auth::check() && Auth::user()->userable_type == 'App\Models\Member')
+    {{-- Point di hidden dulu, nanti di announce di pengumuman lewat socmed --}}
+    {{-- @if (Auth::check() && Auth::user()->userable_type == 'App\Models\Member')
         <div class="flex items-center justify-center mt-24 md:mt-52 scroll-mt-36" id="explore">
             <h1 class="px-4 py-2 text-lg text-white bg-liteBlack rounded-3xl">point anda: <span
                     class="text-pink-300">{{ Auth::user()->userable->hois_point }}</span></h1>
         </div>
-    @endif
+    @endif --}}
 
     {{-- Tabs --}}
     <div class="mt-8 md:mt-12 font-poppins pb-52">
@@ -62,33 +62,125 @@
                     </div>
                     <div x-show="open" x-cloak class="pt-4" x-transition>
                         <ul class="w-[80%] md:w-[95%] text-liteGray text-sm md:text-lg list-disc ml-8">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum enim, velit, eu molestie
-                                ut dictumst urna.</li>
-                            <li>Felis id et fusce tristique. Ac auctor volutpat nec velit aliquam ac. Donec ipsum sed
-                                tortor aenean egestas maecenas eget.</li>
-                            <li>Turpis id pulvinar elementum commodo. Phasellus ac facilisis eu, eu congue adipiscing
-                                consequat tincidunt. Morbi et pellentesque urna etiam.</li>
+                            <li>Tiap pemain harus memiliki akun pada website ISE! 2022</li>
+                            <li>Poin yang didapatkan dari quiz dan challenge akan masuk ke dalam poin peserta di ISE!
+                                Trivia.</li>
+                            <li>Poin tiap quiz baru didapatkan jika pemain menyelesaikan quiz dan terdapat soal denngan
+                                jawaban yang benar.</li>
+                            <li>Sebaliknya, jika pemain menyelesaikan quiz dan terdapat soal yang jawabannya salah maka
+                                soal tersebut dihitung 0 poin.</li>
+                            <li>Pemain dihitung mengerjakan jika pemain men-submit jawaban quiz. Jika pemain membuka
+                                quiz namun tidak menekan tombol submit, maka pemain tidak dihitung mengerjakan.</li>
+                            <li>Tiap quiz hanya dapat dikerjakan satu kali.</li>
+                            <li>Tidak ada batasan waktu dalam pengerjaan setiap quiz (berlangsung selama e-Hall of IS
+                                dibuka)</li>
+                            <li>Batas terakhir ISE! Trivia adalah 19 November 2022 pukul 23.59 WIB. Pemenang akan
+                                diumumkan di media sosial resmi ISE melalui instagram @is_expo.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        {{-- Question 2 --}}
-        @foreach ($type_quiz as $type_quiz_no => $type_quiz_array)
-            <div class="mt-3 md:mt-4">
-                <div class="cursor-pointer">
-                    <div
-                        class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
-                        <div class="flex flex-row justify-between mx-auto">
-                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz {{ $type_quiz_array->name }}
-                            </h1>
-
-                            <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
-                                href="{{ route('quiz-page-ehall', $type_quiz_array->name) }}">Start</a>
+        {{-- Question Accordion --}}
+        <div x-data="{ open: false }" class="md:mt-4">
+            <div class="cursor-pointer" x-on:click="open = !open">
+                <div
+                    class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                    <div class="flex flex-row justify-between mx-auto">
+                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Trivia</h1>
+                        <div x-show="!open">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
                         </div>
+                        <div x-show="open">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div x-show="open" x-cloak class="pt-4" x-transition>
+                        <div class="mt-3 md:mt-4">
+                            <div class="cursor-pointer">
+                                <div
+                                    class="bg-liteBlack md:w-fit h-max mx-4 text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                                    <div class="flex flex-row justify-between">
+                                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Wawasan TI
+                                        </h1>
+                                        <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                            href="{{ route('quiz-page-ehall', 'Wawasan Teknologi Informasi') }}">Start</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 md:mt-4">
+                            <div class="cursor-pointer">
+                                <div
+                                    class="bg-liteBlack md:w-fit h-max mx-4 text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                                    <div class="flex flex-row justify-between">
+                                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Seputar ISE
+                                        </h1>
+                                        <a class="px-4 py-1 ml-auto text-xs md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                            href="#">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 md:mt-4">
+                            <div class="cursor-pointer">
+                                <div
+                                    class="bg-liteBlack md:w-fit h-max mx-4 text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                                    <div class="flex flex-row justify-between">
+                                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Seputar Sistem
+                                            Informasi
+                                        </h1>
+                                        <a class="px-4 py-1 ml-auto text-xs md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                            href="#">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3 md:mt-4">
+                            <div class="cursor-pointer">
+                                <div
+                                    class="bg-liteBlack md:w-fit h-max mx-4 text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                                    <div class="flex flex-row justify-around">
+                                        <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz Seputar Technical
+                                            IT
+                                        </h1>
+                                        <a class="px-4 py-1 ml-auto text-xs md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                            href="#">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- @foreach ($type_quiz as $type_quiz_no => $type_quiz_array)
+                            <div class="mt-3 md:mt-4">
+                                <div class="cursor-pointer">
+                                    <div
+                                        class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
+                                        <div class="flex flex-row justify-between mx-auto">
+                                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz
+                                                {{ $type_quiz_array->name }}
+                                            </h1>
+                                            @if ($type_quiz_array->name == 'Wawasan Teknologi Informasi')
+                                                <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                                    href="{{ route('quiz-page-ehall', $type_quiz_array->name) }}">Start</a>
+                                            @else
+                                                <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                                    href="#">Coming Soon</a>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach --}}
                     </div>
                 </div>
             </div>
-        @endforeach
+        </div>
+
     </div>
 </div>
