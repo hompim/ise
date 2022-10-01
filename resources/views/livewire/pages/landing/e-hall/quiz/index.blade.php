@@ -104,7 +104,7 @@
                     <div x-show="open" x-cloak class="pt-4" x-transition>
                         @foreach ($type_quiz as $type_quiz_no => $type_quiz_array)
                             <div class="mt-3 md:mt-4">
-                                <div class="cursor-pointer @if ($type_quiz_array->id == $question->type_id) hidden @endif">
+                                <div class="cursor-pointer">
                                     <div
                                         class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                                         <div class="flex flex-row justify-between mx-auto">
