@@ -82,7 +82,7 @@
             </div>
         </div>
         {{-- Question Accordion --}}
-        <div x-data="{ open: false }" class="md:mt-24">
+        <div x-data="{ open: false }" class="md:mt-4">
             <div class="cursor-pointer" x-on:click="open = !open">
                 <div
                     class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
