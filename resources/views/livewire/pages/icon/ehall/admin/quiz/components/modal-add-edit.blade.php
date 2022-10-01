@@ -51,7 +51,7 @@
                     id="type" name="quiz_type" type="text" required wire:model="quiz_category">
                     <option>Categori Quiz</option>
                     @foreach ($category as $c)
-                    <option value="{{$c->id}}">{{$c->name}}</option>
+                        <option value="{{ $c->id }}">{{ $c->name }}</option>
                     @endforeach
                 </select>
             </div>
@@ -69,7 +69,14 @@
                 <small class="text-liteBlack">*untuk pilih gambar</small>
                 <input
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
-                    id="logo" name="logo" type="file" wire:model.defer="logo">
+                    id="logo" name="logo" type="file" wire:model.defer="opt_a">
+                @if ($opt_a)
+                    @if (!is_string($opt_a) || $opt_a_image)
+                        Preview:
+                        <img src="{{ $opt_a_image ? asset('storage/' . $opt_a_image) : $opt_a->temporaryUrl() }}"
+                            class="object-fit mb-3">
+                    @endif
+                @endif
             </div>
 
             <div class="w-full px-3 mb-6 md:mb-0">
@@ -84,7 +91,14 @@
                 <small class="text-liteBlack">*untuk pilih gambar</small>
                 <input
                     class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
-                    id="logo" name="logo" type="file" wire:model.defer="logo">
+                    id="logo" name="logo" type="file" wire:model.defer="opt_b">
+                @if ($opt_b)
+                    @if (!is_string($opt_a) || $opt_a_image)
+                        Preview:
+                        <img src="{{ $opt_b_image ? asset('storage/' . $opt_b_image) : $opt_b->temporaryUrl() }}"
+                            class="object-fit mb-3">
+                    @endif
+                @endif
             </div>
 
             <div class="w-full px-3 mb-6 md:mb-0">
