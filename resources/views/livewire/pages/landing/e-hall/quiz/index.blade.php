@@ -111,9 +111,15 @@
                                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz
                                                 {{ $type_quiz_array->name }}
                                             </h1>
-
-                                            <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
-                                                href="{{ route('quiz-page-ehall', $type_quiz_array->name) }}">Start</a>
+                                            @if ($type_quiz_array->name == 'Wawasan Teknologi Informasi')
+                                                <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                                    href="{{ route('quiz-page-ehall', $type_quiz_array->name) }}">Start</a>
+                                            @else
+                                                <button type="button"
+                                                    class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-100 to-purple-100 rounded-3xl"
+                                                    disabled>Coming
+                                                    Soon</button>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
