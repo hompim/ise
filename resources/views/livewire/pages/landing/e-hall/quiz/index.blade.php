@@ -30,13 +30,13 @@
         </div>
     </div>
 
-    {{-- Point --}}
-    @if (Auth::check() && Auth::user()->userable_type == 'App\Models\Member')
+    {{-- Point di hidden dulu, nanti di announce di pengumuman lewat socmed --}}
+    {{-- @if (Auth::check() && Auth::user()->userable_type == 'App\Models\Member')
         <div class="flex items-center justify-center mt-24 md:mt-52 scroll-mt-36" id="explore">
             <h1 class="px-4 py-2 text-lg text-white bg-liteBlack rounded-3xl">point anda: <span
                     class="text-pink-300">{{ Auth::user()->userable->hois_point }}</span></h1>
         </div>
-    @endif
+    @endif --}}
 
     {{-- Tabs --}}
     <div class="mt-8 md:mt-12 font-poppins pb-52">
@@ -62,12 +62,20 @@
                     </div>
                     <div x-show="open" x-cloak class="pt-4" x-transition>
                         <ul class="w-[80%] md:w-[95%] text-liteGray text-sm md:text-lg list-disc ml-8">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum enim, velit, eu molestie
-                                ut dictumst urna.</li>
-                            <li>Felis id et fusce tristique. Ac auctor volutpat nec velit aliquam ac. Donec ipsum sed
-                                tortor aenean egestas maecenas eget.</li>
-                            <li>Turpis id pulvinar elementum commodo. Phasellus ac facilisis eu, eu congue adipiscing
-                                consequat tincidunt. Morbi et pellentesque urna etiam.</li>
+                            <li>Tiap pemain harus memiliki akun pada website ISE! 2022</li>
+                            <li>Poin yang didapatkan dari quiz dan challenge akan masuk ke dalam poin peserta di ISE!
+                                Trivia.</li>
+                            <li>Poin tiap quiz baru didapatkan jika pemain menyelesaikan quiz dan terdapat soal denngan
+                                jawaban yang benar.</li>
+                            <li>Sebaliknya, jika pemain menyelesaikan quiz dan terdapat soal yang jawabannya salah maka
+                                soal tersebut dihitung 0 poin.</li>
+                            <li>Pemain dihitung mengerjakan jika pemain men-submit jawaban quiz. Jika pemain membuka
+                                quiz namun tidak menekan tombol submit, maka pemain tidak dihitung mengerjakan.</li>
+                            <li>Tiap quiz hanya dapat dikerjakan satu kali.</li>
+                            <li>Tidak ada batasan waktu dalam pengerjaan setiap quiz (berlangsung selama e-Hall of IS
+                                dibuka)</li>
+                            <li>Batas terakhir ISE! Trivia adalah 19 November 2022 pukul 23.59 WIB. Pemenang akan
+                                diumumkan di media sosial resmi ISE melalui instagram @is_expo.</li>
                         </ul>
                     </div>
                 </div>
@@ -76,7 +84,7 @@
         {{-- Question 2 --}}
         @foreach ($type_quiz as $type_quiz_no => $type_quiz_array)
             <div class="mt-3 md:mt-4">
-                <div class="cursor-pointer">
+                <div class="cursor-pointer @if ($type_quiz_array->id == $question->type_id) hidden @endif">
                     <div
                         class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
