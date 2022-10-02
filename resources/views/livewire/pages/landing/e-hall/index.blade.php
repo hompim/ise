@@ -188,7 +188,7 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="mb-4 font-bold md:mb-8">
+                <div class="mb-4 font-bold text-sm md:mb-8">
                     {{ $leaderboard[1]->user->name }}
                 </div>
                 <div>
@@ -215,7 +215,7 @@
                     </svg>
                 </div>
                 <div class="mb-2 md:mb-10">
-                    <div class="font-bold ">
+                    <div class="font-bold text-sm">
                         {{ $leaderboard[0]->user->name }}
                     </div>
                 </div>
