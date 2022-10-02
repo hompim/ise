@@ -90,7 +90,7 @@ class QuizCard extends Component
         if (trim(strtolower($this->answers[$this->currentQuiz])) == trim(strtolower($this->quizzes[$this->currentQuiz]->answer))) {
             $member->is_right = 1;
             $member->save();
-            Auth::user()->userable->increment('hois_point', 300);
+            Auth::user()->userable->increment('hois_point', 100);
             $status = "Correct";
             $this->quizStatus = $this->quizStatus->replace([$this->currentQuiz => ['is_done' => true, 'status' => true]]);
             $this->emit('Answer', $status);
