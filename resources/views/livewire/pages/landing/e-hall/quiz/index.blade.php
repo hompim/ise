@@ -111,8 +111,13 @@
                                                 <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz
                                                     {{ $sub[1] }}
                                                 </h1>
-                                                <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
-                                                    href="{{ route('quiz-page-ehall', $sub[0]) }}">Start</a>
+                                                @if (App\Models\Icon\EhallQuestType::find($sub[0])->quizzes()->count() > 0)
+                                                    <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                                        href="{{ route('quiz-page-ehall', $sub[0]) }}">Start</a>
+                                                @else
+                                                    <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                                        href="#">Coming Soon</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
