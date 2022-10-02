@@ -98,7 +98,8 @@
                                     </div>
                                     <div
                                         class="relative w-[177px] h-[159px] bg-[#B5B3BC] text-white text-center pt-[56px] rounded-lg">
-                                        <img src="{{ asset('storage/' . $quiz->opt_a) }}" alt="">
+                                        <img src="{{ asset('storage/' . $quiz->opt_a) }}" alt=""
+                                            class="h-full">
                                     </div>
                                     <button wire:click="setAnswer('A')"
                                         class="w-fit px-4 md:w-[315px] font-sm py-4 {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'A' ? 'bg-pink-300 shadow-md shadow-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }}  rounded-lg transition duration-300 hover:-translate-y-2">
@@ -116,7 +117,8 @@
                                 <div class="w-[177px] h-[159px] bg-[#B5B3BC] rounded-lg ">
                                     <!-- pic2 -->
                                     <div class="text-white text-center pt-[56px]">
-                                        <img src="{{ asset('storage/' . $quiz->opt_b) }}" alt="">
+                                        <img src="{{ asset('storage/' . $quiz->opt_b) }}" alt=""
+                                            class="h-full">
                                     </div>
                                     <!-- pic2 -->
 
