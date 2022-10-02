@@ -20,11 +20,11 @@
                     </button>
                 </a> --}}
                 @if ($type == 'file')
-                    @if (!Auth::user()->userable->bionix->submission || !Auth::user()->userable->bionix->submission->file_path)
+                    @if (!Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first() || !Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first()->file_path)
                         <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
                             id="fileTask" accept=".pdf,.zip,.rar">
                     @else
-                        <a href="{{ asset('storage/' . Auth::user()->userable->bionix->submission->file_path) }}"
+                        <a href="{{ asset('storage/' . Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first()->file_path) }}"
                             target="_blank">
                             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">
                                 <i class="fas fa-cloud-download-alt mr-2"></i>Unduh Jawaban

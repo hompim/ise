@@ -265,15 +265,9 @@ class Sidebar extends Component
                     );
                 }
 
-                if (Auth::user()->userable->bionix->payment_verif_status == "Terverifikasi" && Auth::user()->userable->bionix->competition_round == "Penyisihan 2" && Auth::user()->userable->jenjang == 'SMA') {
+                if ((Auth::user()->userable->bionix->payment_verif_status == "Terverifikasi" && Auth::user()->userable->bionix->competition_round == "Penyisihan 2" && Auth::user()->userable->jenjang == 'SMA') || (Auth::user()->userable->jenjang == 'Mahasiswa' && Auth::user()->userable->bionix->payment_verif_status == "Terverifikasi")) {
                     array_push(
                         $this->menu,
-                        [
-                            'type' => 'menu',
-                            'icon' => 'cil-book',
-                            'title' => 'Penyisihan Nasional',
-                            'route-name' => 'bionix.peserta.penyisihan-nasional'
-                        ],
                         [
                             'type' => 'menu',
                             'icon' => 'cil-book',

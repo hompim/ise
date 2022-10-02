@@ -17,7 +17,8 @@
                         <h2 class="font-bold text-lg mt-4  capitalize">Deskripsi & Ketentuan</h2>
                         <br>
                         <div class="justify-center md:flex-row flex flex-col justify-content-end">
-                            <a href="https://drive.google.com/file/d/14xmmF12pqJm3Ipy-qi1g23pYtm-kAvJ1/view" target="_blank">
+                            <a href="https://drive.google.com/file/d/14xmmF12pqJm3Ipy-qi1g23pYtm-kAvJ1/view"
+                                target="_blank">
                                 <button
                                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">
                                     <i class="fas fa-cloud-download-alt mr-2"></i>Unduh File Soal
@@ -36,8 +37,12 @@
                 </div>
             </div>
         @endif
-        @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'file'])
-        @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'video'])
+        @if (Auth::user()->userable->bionix_type == 'App\Models\Bionix\TeamJuniorData')
+            @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'file', 'for' => 'Junior Semifinal'])
+            @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'video', 'for' => 'Junior Semifinal'])
+        @else
+            @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'file', 'for' => 'Senior Penyisihan'])
+        @endif
     </div>
     <div wire:loading.delay wire:target="fileTask"
         class="fixed bottom-12 right-12 bg-blue-100 border-t-4 border-blue-500 rounded-b text-blue-900 px-4 py-3 shadow-md"
