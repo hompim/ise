@@ -167,7 +167,8 @@
             khalayak umum. Kedua, mengedukasi dan menyebarkan awareness seputar teknologi.
         </div>
     </div>
-    <div class="flex flex-col justify-center mx-auto text-xl text-white md:text-5xl md:w-full md:mt-24">
+    <div class="hidden flex-col justify-center mx-auto text-xl text-white md:text-5xl md:w-full md:mt-24">
+        {{-- <div class="flex flex-col justify-center mx-auto text-xl text-white md:text-5xl md:w-full md:mt-24"> --}}
         {{-- <div
         class="flex-col justify-center hidden pb-12 mx-auto text-xl text-white md:text-5xl md:pb-24 md:w-full md:mt-24"> --}}
         <span class="mx-auto font-bold">Leaderboard ISE Trivia</span>
