@@ -83,10 +83,10 @@
         {{-- Question Accordion --}}
         @foreach ($types as $t)
             <div x-data="{ open: false }" class="md:mt-4">
-                <div class="cursor-pointer" x-on:click="open = !open">
+                <div x-on:click="open = !open">
                     <div
                         class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
-                        <div class="flex flex-row justify-between mx-auto">
+                        <div class="flex flex-row justify-between mx-auto cursor-pointer">
                             <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz {{ $t[0] }}</h1>
                             <div x-show="!open">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
@@ -106,19 +106,17 @@
                                 <div class="mt-3 md:mt-4">
                                     <div class="cursor-pointer">
                                         <div
-                                            class="bg-liteBlack md:w-fit h-max mx-4 text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
-                                            <div class="flex flex-row justify-between">
-                                                <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz
-                                                    {{ $sub[1] }}
-                                                </h1>
-                                                @if (App\Models\Icon\EhallQuestType::find($sub[0])->quizzes()->count() > 0)
-                                                    <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
-                                                        href="{{ route('quiz-page-ehall', $sub[0]) }}">Start</a>
-                                                @else
-                                                    <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
-                                                        href="#">Coming Soon</a>
-                                                @endif
-                                            </div>
+                                            class="bg-liteBlack  flex flex-row justify-between items-center rounded-2xl">
+                                            <h1 class=" text-base md:text-lg font-semibold">Quiz
+                                                {{ $sub[1] }}
+                                            </h1>
+                                            @if (App\Models\Icon\EhallQuestType::find($sub[0])->quizzes()->count() > 0)
+                                                <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                                    href="{{ route('quiz-page-ehall', $sub[0]) }}">Start</a>
+                                            @else
+                                                <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                                    href="#">Coming Soon</a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
