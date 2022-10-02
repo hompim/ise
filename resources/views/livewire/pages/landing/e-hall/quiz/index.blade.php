@@ -87,7 +87,7 @@
                     <div
                         class="bg-liteBlack md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto cursor-pointer">
-                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Quiz {{ $t[0] }}</h1>
+                            <h1 class="w-[80%] text-base md:text-lg font-bold">Quiz {{ $t[0] }}</h1>
                             <div x-show="!open">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -107,7 +107,7 @@
                                     <div class="cursor-pointer">
                                         <div
                                             class="bg-liteBlack  flex flex-row justify-between items-center rounded-2xl">
-                                            <h1 class=" text-base md:text-lg font-semibold">Quiz
+                                            <h1 class=" text-base md:text-lg font-semibold pl-4">Quiz
                                                 {{ $sub[1] }}
                                             </h1>
                                             @if (App\Models\Icon\EhallQuestType::find($sub[0])->quizzes()->count() > 0)
