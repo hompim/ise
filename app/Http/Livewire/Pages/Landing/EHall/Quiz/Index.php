@@ -16,6 +16,29 @@ class Index extends Component
 
     public function mount()
     {
-        $this->type_quiz = EhallQuestType::all();
+        $this->types = [
+            ['Trivia', [
+                [1, 'Wawasan IT'],
+                [2, 'Seputar ISE'],
+                [3, 'Seputar Sistem Informasi'],
+                [4, 'Technical IT'],
+            ]],
+            ['Startup', [
+                [5, 'Drafta'],
+                [6, 'Stratek'],
+                [7, 'Data.Ekspor'],
+                [8, 'Lokapin'],
+            ]],
+            ['Prestasi' ,[
+                [9, 'MyBaby'],
+                [10, 'Sensible'],
+                [11, '2nd Gemastik Smart City'],
+                [12, '2nd Coding Competition'],
+                [13, 'Cyber Security SpiderLabs'],
+                    [14, 'Most Outstanding Delegates MUN 2021'],
+                    [15, '3rd Runner Up KMI'],
+                    [16, '3rd Mile Zero project'],
+                ]],
+            ];
     }
 }

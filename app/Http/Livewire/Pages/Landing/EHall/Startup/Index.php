@@ -17,5 +17,7 @@ class Index extends Component
     public function mount()
     {
         $this->articles =  EhallArticle::where('type', 'Startup')->get();
+
+        
     }
 }

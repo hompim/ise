@@ -16,6 +16,6 @@ class QuizPage extends Component
 
     public function mount($quizType)
     {
-        $this->type_id = EhallQuestType::where('name', $quizType)->first()->id;
+        $this->type_id = $quizType;
     }
 }
