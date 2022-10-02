@@ -43,12 +43,16 @@ class QuizCard extends Component
         $this->answers[$this->currentQuiz] = $answer;
     }
 
-    public function mount($type_id, $is_component = false)
+    public function mount($type_id = null, $type_name = null, $is_component = false)
     {
         $this->timer = 60;
-        $this->type_quiz = EhallQuestType::find($type_id);
+        $this->type_quiz = $type_id ? EhallQuestType::find($type_id) : EhallQuestType::where('name', $type_name)->first();
         if ($is_component) {
-            $this->quizzes = EhallQuestQuiz::inRandomOrder()->limit(1)->get();
+            if (!$this->type_quiz) {
+                $this->quizzes = EhallQuestQuiz::inRandomOrder()->limit(5)->get();
+            } else {
+                $this->quizzes = $this->type_quiz->quizzes()->inRandomOrder()->limit(5)->get();
+            }
         } else {
             $this->quizzes = $this->type_quiz->quizzes;
         }
@@ -71,7 +75,7 @@ class QuizCard extends Component
 
     public function submitAnswer()
     {
-        if(!isset($this->answers[$this->currentQuiz])) {
+        if (!isset($this->answers[$this->currentQuiz])) {
             $message = "Pilih jawaban terlebih dahulu";
             $this->emit('alert', $message);
             return;

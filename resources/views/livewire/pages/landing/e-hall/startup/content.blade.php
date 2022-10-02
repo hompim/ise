@@ -69,7 +69,7 @@
         </div>
 
         <div>
-            @livewire('pages.landing.e-hall.components.quiz-card', ['type_id' => 1, 'is_component' => true])
+            @livewire('pages.landing.e-hall.components.quiz-card', ['type_name' => $article->title, 'is_component' => true])
         </div>
 
     </div>
