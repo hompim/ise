@@ -63,19 +63,18 @@
                     <div x-show="open" x-cloak class="pt-4" x-transition>
                         <ul class="w-[80%] md:w-[95%] text-liteGray text-sm md:text-lg list-disc ml-8">
                             <li>Tiap pemain harus memiliki akun pada website ISE! 2022</li>
-                            <li>Poin yang didapatkan dari quiz dan challenge akan masuk ke dalam poin peserta di ISE!
-                                Trivia.</li>
-                            <li>Poin tiap quiz baru didapatkan jika pemain menyelesaikan quiz dan terdapat soal denngan
-                                jawaban yang benar.</li>
-                            <li>Sebaliknya, jika pemain menyelesaikan quiz dan terdapat soal yang jawabannya salah maka
-                                soal tersebut dihitung 0 poin.</li>
+                            <li>Tiap quiz hanya dapat dikerjakan satu kali.</li>
                             <li>Pemain dihitung mengerjakan jika pemain men-submit jawaban quiz. Jika pemain membuka
                                 quiz namun tidak menekan tombol submit, maka pemain tidak dihitung mengerjakan.</li>
-                            <li>Tiap quiz hanya dapat dikerjakan satu kali.</li>
+                            <li>Poin yang didapatkan dari quiz dan challenge akan masuk ke dalam poin peserta di ISE!
+                                Trivia..</li>
+                            <li>Poin tiap quiz baru didapatkan jika pemain menyelesaikan quiz dan terdapat soal dengan
+                                jawaban yang benar, tetapi soal dengan jawaban salah akan dihitung 0 poin.</li>
                             <li>Tidak ada batasan waktu dalam pengerjaan setiap quiz (berlangsung selama e-Hall of IS
                                 dibuka)</li>
                             <li>Batas terakhir ISE! Trivia adalah 19 November 2022 pukul 23.59 WIB. Pemenang akan
-                                diumumkan di media sosial resmi ISE melalui instagram @is_expo.</li>
+                                diumumkan di media sosial resmi ISE melalui instagram <a
+                                    href="https://instagram.com/is_expo" target="_blank"> @is_expo</a>.</li>
                         </ul>
                     </div>
                 </div>
