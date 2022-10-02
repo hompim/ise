@@ -104,20 +104,17 @@
                         <div x-show="open" x-cloak class="pt-4" x-transition>
                             @foreach ($t[1] as $sub)
                                 <div class="mt-3 md:mt-4">
-                                    <div class="cursor-pointer">
-                                        <div
-                                            class="bg-liteBlack  flex flex-row justify-between items-center rounded-2xl">
-                                            <h1 class=" text-base md:text-lg font-semibold pl-4">Quiz
-                                                {{ $sub[1] }}
-                                            </h1>
-                                            @if (App\Models\Icon\EhallQuestType::find($sub[0])->quizzes()->count() > 0)
-                                                <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
-                                                    href="{{ route('quiz-page-ehall', $sub[0]) }}">Start</a>
-                                            @else
-                                                <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
-                                                    href="#">Coming Soon</a>
-                                            @endif
-                                        </div>
+                                    <div class="bg-liteBlack  flex flex-row justify-between items-center rounded-2xl">
+                                        <h1 class=" text-base md:text-lg font-semibold pl-4">Quiz
+                                            {{ $sub[1] }}
+                                        </h1>
+                                        @if (App\Models\Icon\EhallQuestType::find($sub[0])->quizzes()->count() > 0)
+                                            <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                                href="{{ route('quiz-page-ehall', $sub[0]) }}">Start</a>
+                                        @else
+                                            <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
+                                                href="#">Coming Soon</a>
+                                        @endif
                                     </div>
                                 </div>
                             @endforeach
