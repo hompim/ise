@@ -91,14 +91,14 @@
 
                     @if ($quiz->question_type == 'Picture')
                         <div class="md:flex md:flex-row mt-[46px] mx-auto gap-[50px] md:gap-[74px] pl-0">
-                            <div class="flex flex-col">
+                            <div class="flex flex-col ">
                                 <div class="relative group">
                                     <div
                                         class="absolute w-[177px] h-[159px] blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] animate-tilt">
                                     </div>
                                     <div
-                                        class="relative w-[177px] h-[159px] bg-[#B5B3BC] text-white text-center pt-[56px] rounded-lg">
-                                        <img src="{{ asset('storage/' . $quiz->opt_a) }}" alt=""
+                                        class="relative w-full h-[159px] bg-[#B5B3BC] text-white text-center rounded-lg">
+                                        <img src="{{ asset('storage/' . $quiz->opt_a) }}" alt="pic-ans2"
                                             class="h-full">
                                     </div>
                                     <button wire:click="setAnswer('A')"
@@ -114,10 +114,10 @@
                             </div>
 
                             <div class="flex flex-col mt-[46px] md:mt-0">
-                                <div class="w-[177px] h-[159px] bg-[#B5B3BC] rounded-lg ">
+                                <div class="w-full h-[159px] bg-[#B5B3BC] rounded-lg ">
                                     <!-- pic2 -->
-                                    <div class="text-white text-center pt-[56px]">
-                                        <img src="{{ asset('storage/' . $quiz->opt_b) }}" alt=""
+                                    <div class="text-white text-center">
+                                        <img src="{{ asset('storage/' . $quiz->opt_b) }}" alt="pic-ans2"
                                             class="h-full">
                                     </div>
                                     <!-- pic2 -->
