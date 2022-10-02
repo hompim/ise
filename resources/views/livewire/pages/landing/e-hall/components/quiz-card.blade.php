@@ -91,14 +91,12 @@
 
                     @if ($quiz->question_type == 'Picture')
                         <div class="md:flex md:flex-row mt-[46px] mx-auto gap-[50px] md:gap-[74px] pl-0">
-                            <div class="flex flex-col">
+                            <div class="flex flex-col ">
                                 <div class="relative group">
                                     <div
-                                        class="absolute w-[177px] h-[159px] blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] animate-tilt">
-                                    </div>
-                                    <div
-                                        class="relative w-[177px] h-[159px] bg-[#B5B3BC] text-white text-center pt-[56px] rounded-lg">
-                                        <img src="{{ asset('storage/' . $quiz->opt_a) }}" alt="">
+                                        class="relative w-full h-[280px] bg-[#B5B3BC] text-white text-center rounded-lg overflow-hidden">
+                                        <img src="{{ asset('storage/' . $quiz->opt_a) }}" alt=""
+                                            class="h-full">
                                     </div>
                                     <button wire:click="setAnswer('A')"
                                         class="w-fit px-4 md:w-[315px] font-sm py-4 {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'A' ? 'bg-pink-300 shadow-md shadow-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }}  rounded-lg transition duration-300 hover:-translate-y-2">
@@ -113,12 +111,9 @@
                             </div>
 
                             <div class="flex flex-col mt-[46px] md:mt-0">
-                                <div class="w-[177px] h-[159px] bg-[#B5B3BC] rounded-lg ">
+                                <div class="w-full h-[280px] bg-[#B5B3BC] rounded-lg text-center overflow-hidden">
                                     <!-- pic2 -->
-                                    <div class="text-white text-center pt-[56px]">
-                                        <img src="{{ asset('storage/' . $quiz->opt_b) }}" alt="">
-                                    </div>
-                                    <!-- pic2 -->
+                                    <img src="{{ asset('storage/' . $quiz->opt_b) }}" alt="pic-ans2" class="h-full">
 
                                 </div>
 

@@ -1759,11 +1759,8 @@ select {
 .h-\[37px\] {
     height: 37px;
 }
-.h-\[159px\] {
-    height: 159px;
-}
-.h-\[46\.8px\] {
-    height: 46.8px;
+.h-\[280px\] {
+    height: 280px;
 }
 .h-\[58px\] {
     height: 58px;
@@ -1794,6 +1791,12 @@ select {
 }
 .h-\[33px\] {
     height: 33px;
+}
+.h-\[159px\] {
+    height: 159px;
+}
+.h-\[46\.8px\] {
+    height: 46.8px;
 }
 .h-\[56px\] {
     height: 56px;
@@ -1971,9 +1974,6 @@ select {
 .w-\[109px\] {
     width: 109px;
 }
-.w-\[177px\] {
-    width: 177px;
-}
 .w-\[58px\] {
     width: 58px;
 }
@@ -1994,6 +1994,9 @@ select {
 }
 .w-\[33px\] {
     width: 33px;
+}
+.w-\[177px\] {
+    width: 177px;
 }
 .w-\[56px\] {
     width: 56px;
@@ -3500,9 +3503,6 @@ select {
 .pl-0 {
     padding-left: 0px;
 }
-.pt-\[56px\] {
-    padding-top: 56px;
-}
 .pt-\[2px\] {
     padding-top: 2px;
 }
@@ -3532,6 +3532,9 @@ select {
 }
 .pt-\[44px\] {
     padding-top: 44px;
+}
+.pt-\[56px\] {
+    padding-top: 56px;
 }
 .pb-52 {
     padding-bottom: 13rem;
