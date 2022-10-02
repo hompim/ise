@@ -98,16 +98,16 @@
                                     </div>
                                     <div
                                         class="relative w-[177px] h-[159px] bg-[#B5B3BC] text-white text-center pt-[56px] rounded-lg">
-                                        <img src="{{ $quiz->opt_a }}" alt="">
+                                        <img src="{{ asset('storage/' . $quiz->opt_a) }}" alt="">
                                     </div>
-                                    <div
-                                        class="w-[177px] h-[46.8px] mt-[12px] bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] rounded-lg ">
-                                        <!-- pic1 -->
+                                    <button wire:click="setAnswer('A')"
+                                        class="w-fit px-4 md:w-[315px] font-sm py-4 {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'A' ? 'bg-pink-300 shadow-md shadow-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }}  rounded-lg transition duration-300 hover:-translate-y-2">
+                                        <!-- A.  Lorem ipsum -->
                                         <div class="text-white text-[28px] text-center pt-[2px]">
                                             A
                                         </div>
-                                        <!-- pic1 -->
-                                    </div>
+                                        <!-- A.  Lorem ipsum -->
+                                    </button>
 
                                 </div>
                             </div>
@@ -116,19 +116,20 @@
                                 <div class="w-[177px] h-[159px] bg-[#B5B3BC] rounded-lg ">
                                     <!-- pic2 -->
                                     <div class="text-white text-center pt-[56px]">
-                                        <img src="{{ $quiz->opt_b }}" alt="">
+                                        <img src="{{ asset('storage/' . $quiz->opt_b) }}" alt="">
                                     </div>
                                     <!-- pic2 -->
 
                                 </div>
 
-                                <div class="w-[177px] h-[46.8px] mt-[12px] bg-[#2F2F2F] rounded-lg ">
-                                    <!-- pic1 -->
+                                <button wire:click="setAnswer('B')"
+                                    class="w-fit px-4 md:w-[315px] font-sm py-4 {{ isset($answers[$currentQuiz]) ? ($answers[$currentQuiz] == 'B' ? 'bg-pink-300 shadow-md shadow-pink-300' : 'bg-[#2F2F2F]') : 'bg-[#2F2F2F]' }}  rounded-lg transition duration-300 hover:-translate-y-2">
+                                    <!-- A.  Lorem ipsum -->
                                     <div class="text-white text-[28px] text-center pt-[2px]">
                                         B
                                     </div>
-                                    <!-- pic1 -->
-                                </div>
+                                    <!-- A.  Lorem ipsum -->
+                                </button>
                             </div>
 
 
