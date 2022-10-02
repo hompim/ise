@@ -167,7 +167,8 @@
             khalayak umum. Kedua, mengedukasi dan menyebarkan awareness seputar teknologi.
         </div>
     </div>
-    <div class="flex flex-col justify-center mx-auto text-xl text-white md:text-5xl md:w-full md:mt-24">
+    <div class="hidden flex-col justify-center mx-auto text-xl text-white md:text-5xl md:w-full md:mt-24">
+        {{-- <div class="flex flex-col justify-center mx-auto text-xl text-white md:text-5xl md:w-full md:mt-24"> --}}
         {{-- <div
         class="flex-col justify-center hidden pb-12 mx-auto text-xl text-white md:text-5xl md:pb-24 md:w-full md:mt-24"> --}}
         <span class="mx-auto font-bold">Leaderboard ISE Trivia</span>
@@ -188,7 +189,7 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="mb-4 font-bold md:mb-8">
+                <div class="mb-4 font-bold text-base md:mb-8">
                     {{ $leaderboard[1]->user->name }}
                 </div>
                 <div>
@@ -215,7 +216,7 @@
                     </svg>
                 </div>
                 <div class="mb-2 md:mb-10">
-                    <div class="font-bold ">
+                    <div class="font-bold text-base">
                         {{ $leaderboard[0]->user->name }}
                     </div>
                 </div>
@@ -242,7 +243,7 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="mb-0 ml-1 font-bold md:mb-8 md:ml-0">
+                <div class="mb-0 ml-1 font-bold text-base md:mb-8 md:ml-0">
                     {{ $leaderboard[2]->user->name }}
                 </div>
                 <div>
