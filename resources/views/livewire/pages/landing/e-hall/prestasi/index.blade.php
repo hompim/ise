@@ -37,7 +37,7 @@
             id="explore" style="grid-template-columns: repeat(auto-fill, minmax(300px,1fr))">
             @foreach ($articles as $a)
                 <div class="md:w-[380px] h-[570px] bg-[#191A1E] rounded-3xl">
-                    <div class="h-56">
+                    <div class="h-56 flex justify-center">
                         <img src="{{ asset('storage/' . $a->title_image_path) }}" class="h-full object-center">
                     </div>
                     <div class="px-[15px]">
