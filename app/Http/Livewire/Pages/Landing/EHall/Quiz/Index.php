@@ -31,7 +31,7 @@ class Index extends Component
             ]],
             ['Prestasi' ,[
                 [9, 'MyBaby'],
-                [10, 'Sensible'],
+                [10, 'Elang System - Juara 2 Kota Cerdas  GEMASTIK 13v'],
                 [11, '2nd Gemastik Smart City'],
                 [12, '2nd Coding Competition'],
                 [13, 'Cyber Security SpiderLabs'],
