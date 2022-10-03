@@ -161,8 +161,8 @@
                                 {{-- <p class="text-white ">Anda Sudah Menjawab Quiz ini dan bisa melihat pembahasan di
                                     bawah.</p> --}}
                             @else
-                                <button type="submit"
-                                    class="col-span-2 px-8 py-2 mx-auto mt-8 font-semibold text-white rounded-lg md:text-xl btn md:px-10 md:mt-100">Submit</button>
+                                <button
+                                    wire:click="submitAnswer" class="col-span-2 px-8 py-2 mx-auto mt-8 font-semibold text-white rounded-lg md:text-xl btn md:px-10 md:mt-100">Submit</button>
                             @endif
                         @else
                             <a class="col-span-2 px-8 py-2 mx-auto mt-8 font-semibold text-white rounded-lg md:text-xl btn md:px-10 md:mt-100"
@@ -202,7 +202,7 @@
 @push('js')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script>
+     <script>
         // Livewire.on('Answer', status => {
         //     if (status == "Correct") {
         //         Swal.fire({
