@@ -29,16 +29,16 @@ class Index extends Component
                 [7, 'Data.Ekspor'],
                 [8, 'Lokapin'],
             ]],
-            ['Prestasi' ,[
+            ['Prestasi', [
                 [9, 'MyBaby'],
                 [10, 'Elang System - Juara 2 Kota Cerdas  GEMASTIK 13v'],
                 [11, '2nd Gemastik Smart City'],
                 [12, '2nd Coding Competition'],
                 [13, 'Cyber Security SpiderLabs'],
-                    [14, 'Most Outstanding Delegates MUN 2021'],
-                    [15, '3rd Runner Up KMI'],
-                    [16, '3rd Mile Zero project'],
-                ]],
-            ];
+                [14, 'Most Outstanding Delegates MUN 2021'],
+                [15, '3rd Runner Up KMI'],
+                [16, '3rd Mile Zero project'],
+            ]],
+        ];
     }
 }

@@ -108,7 +108,7 @@
                                         <h1 class=" text-base md:text-lg font-semibold pl-4">Quiz
                                             {{ $sub[1] }}
                                         </h1>
-                                        @if (App\Models\Icon\EhallQuestType::find($sub[0])->quizzes()->count() > 0)
+                                        @if (App\Models\Icon\EhallQuestType::find($sub[0])->quizzes()->count() > 0 && $sub[0] != 'Technical IT')
                                             <a class="px-10 py-1 ml-auto text-sm md:text-base bg-gradient-to-r from-pink-300 to-purple-300 rounded-3xl"
                                                 href="{{ route('quiz-page-ehall', $sub[0]) }}">Start</a>
                                         @else
