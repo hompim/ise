@@ -4,7 +4,7 @@
     @foreach ($quizzes as $quizNo => $quiz)
         <div
             class="mt-32 md:mt-0 mb-[145px] bg-liteBlack mx-6 md:mx-28 h-max rounded-2xl flex flex-col p-[24px] md:p-11 @if ($currentQuiz == $quizNo) @else hidden @endif">
-            <h1 class="mx-auto text-lg text-white md:text-2xl">Quiz {{ $type_quiz->name }}</h1>
+            <h1 class="mx-auto text-lg text-white md:text-2xl">Quiz {{ $quiz->type->name }}</h1>
             <div class="flex flex-col justify-around mt-4 md:flex-row gap-14">
                 {{-- Left Part --}}
                 <div class="flex flex-col w-full lg:w-1/2">
@@ -26,6 +26,11 @@
                     <p class="mt-2 text-sm text-white md:text-lg ">
                         {{ $quiz->question }}
                     </p>
+                    @if ($quiz->img_path)
+                        <div class="flex flex-col align-items-center justify-content-center">
+                            <img src="{{ asset('storage/' . $quiz->img_path) }}" class="img-fluid" />
+                        </div>
+                    @endif
                     {{-- // Soal quiz --}}
 
                     {{-- Section Jawaban --}}
@@ -156,8 +161,8 @@
                                 {{-- <p class="text-white ">Anda Sudah Menjawab Quiz ini dan bisa melihat pembahasan di
                                     bawah.</p> --}}
                             @else
-                                <button
-                                    wire:click="submitAnswer"class="col-span-2 px-8 py-2 mx-auto mt-8 font-semibold text-white rounded-lg md:text-xl btn md:px-10 md:mt-100">Submit</button>
+                                <button type="submit"
+                                    class="col-span-2 px-8 py-2 mx-auto mt-8 font-semibold text-white rounded-lg md:text-xl btn md:px-10 md:mt-100">Submit</button>
                             @endif
                         @else
                             <a class="col-span-2 px-8 py-2 mx-auto mt-8 font-semibold text-white rounded-lg md:text-xl btn md:px-10 md:mt-100"
@@ -186,7 +191,7 @@
                     class="flex items-center justify-start w-full space-x-4 overflow-x-auto lg:overflow-y-auto lg:w-64 lg:space-x-0 lg:space-y-4 lg:flex-col lg:h-96">
                     @foreach ($quizzes as $quizNo => $quiz)
                         <button type="button" wire:click="moveToQuestion({{ $quizNo }})"
-                            class="px-6 py-4 w-24 {{ $currentQuiz == $quizNo ? 'bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] text-white' : ($quizStatus[$quizNo]['is_done'] ? ($quizStatus[$quizNo]['status'] ? 'bg-green-500 text-white' : 'bg-red-500 text-white') : 'bg-[#2F2F2F] text-white') }} mx-auto  text-2xl font-bold rounded-lg">{{ $quizNo + 1 }}</button>
+                            class="px-6 py-4 w-24 {{ $currentQuiz == $quizNo ? 'bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] text-white' : ($quizStatus[$quizNo]['is_done'] ? ($quizStatus[$quizNo]['status'] ? 'bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] text-white' : 'bg-gradient-to-r from-[#B221E5] to-[#5B1BE1] text-white') : 'bg-[#2F2F2F] text-white') }} mx-auto  text-2xl font-bold rounded-lg">{{ $quizNo + 1 }}</button>
                     @endforeach
                 </div>
             </div>
@@ -197,24 +202,24 @@
 @push('js')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    {{-- <script>
-        Livewire.on('Answer', status => {
-            if (status == "Correct") {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Jawaban Anda benar!! Point +300',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-            } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Jawaban Anda salah',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-            }
-        })
+    <script>
+        // Livewire.on('Answer', status => {
+        //     if (status == "Correct") {
+        //         Swal.fire({
+        //             icon: 'success',
+        //             title: 'Jawaban Anda benar!! Point +300',
+        //             showConfirmButton: false,
+        //             timer: 1500
+        //         })
+        //     } else {
+        //         Swal.fire({
+        //             icon: 'error',
+        //             title: 'Jawaban Anda salah',
+        //             showConfirmButton: false,
+        //             timer: 1500
+        //         })
+        //     }
+        // })
 
 
         Livewire.on('submit', () => {
@@ -232,13 +237,13 @@
             })
         })
 
-        Livewire.on('alert', (message) => {
-            Swal.fire({
-                icon: 'warning',
-                title: message,
-                showConfirmButton: false,
-                timer: 1500
-            })
-        })
-    </script> --}}
+        // Livewire.on('alert', (message) => {
+        //     Swal.fire({
+        //         icon: 'warning',
+        //         title: message,
+        //         showConfirmButton: false,
+        //         timer: 1500
+        //     })
+        // })
+    </script>
 @endpush

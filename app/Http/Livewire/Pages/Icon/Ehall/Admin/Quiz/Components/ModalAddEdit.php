@@ -25,6 +25,7 @@ class ModalAddEdit extends ModalComponent
     public $opt_d;
     public $answer;
     public $category;
+    public $img_path;
 
     public function render()
     {
@@ -46,6 +47,7 @@ class ModalAddEdit extends ModalComponent
             $this->opt_c = $this->quiz->opt_c;
             $this->opt_d = $this->quiz->opt_d;
             $this->answer = $this->quiz->answer;
+            $this->img_path = $this->quiz->img_path;
             $this->opt_a_image = null;
             $this->opt_b_image = null;
             if ($this->quiz->question_type == 'Picture') {
@@ -66,7 +68,6 @@ class ModalAddEdit extends ModalComponent
         ]);
 
         if ($this->modal_type == 'add') {
-
             if ($this->quiz_type == 'Picture') {
                 $quiz = EhallQuestQuiz::create([
                     'question' => $this->question,
@@ -75,6 +76,18 @@ class ModalAddEdit extends ModalComponent
                     'explanation' => $this->explanation,
                     'answer' => $this->answer,
                 ]);
+
+                if ($this->img_path && !is_string($this->img_path)) {
+                    $this->validate([
+                        'img_path' => 'required|image|max:2048',
+                    ]);
+                    $name = date('YmdHis') . '_QUIZ_' . $quiz->id . '.' . $this->img_path->getClientOriginalExtension();
+                    $this->img_path->storeAs('quiz', $name, 'public');
+                    $path = 'quiz/' . $name;
+                    $quiz->update([
+                        'img_path' => $path,
+                    ]);
+                }
 
                 if (!is_string($this->opt_a)) {
                     $this->validate([
@@ -111,6 +124,18 @@ class ModalAddEdit extends ModalComponent
                     'explanation' => $this->explanation,
                     'answer' => $this->answer,
                 ]);
+
+                if ($this->img_path && !is_string($this->img_path)) {
+                    $this->validate([
+                        'img_path' => 'required|image|max:2048',
+                    ]);
+                    $name = date('YmdHis') . '_QUIZ_' . $quiz->id . '.' . $this->img_path->getClientOriginalExtension();
+                    $this->img_path->storeAs('quiz', $name, 'public');
+                    $path = 'quiz/' . $name;
+                    $quiz->update([
+                        'img_path' => $path,
+                    ]);
+                }
             }
         } else {
             if ($this->quiz_type == 'Picture') {
@@ -124,6 +149,18 @@ class ModalAddEdit extends ModalComponent
                     'explanation' => $this->explanation,
                     'answer' => $this->answer,
                 ]);
+
+                if ($this->img_path && !is_string($this->img_path)) {
+                    $this->validate([
+                        'img_path' => 'required|image|max:2048',
+                    ]);
+                    $name = date('YmdHis') . '_QUIZ_' . $this->quiz->id . '.' . $this->img_path->getClientOriginalExtension();
+                    $this->img_path->storeAs('quiz', $name, 'public');
+                    $path = 'quiz/' . $name;
+                    $this->quiz->update([
+                        'img_path' => $path,
+                    ]);
+                }
 
                 if (!is_string($this->opt_a)) {
                     $this->validate([
@@ -148,19 +185,31 @@ class ModalAddEdit extends ModalComponent
                         'opt_b' => $path_b,
                     ]);
                 }
-            }
+            } else {
+                $this->quiz->update([
+                    'question' => $this->question,
+                    'question_type' => $this->quiz_type,
+                    'type_id' => $this->quiz_category,
+                    'opt_a' => $this->opt_a,
+                    'opt_b' => $this->opt_b,
+                    'opt_c' => $this->opt_c,
+                    'opt_d' => $this->opt_d,
+                    'explanation' => $this->explanation,
+                    'answer' => $this->answer,
+                ]);
 
-            $this->quiz->update([
-                'question' => $this->question,
-                'question_type' => $this->quiz_type,
-                'type_id' => $this->quiz_category,
-                'opt_a' => $this->opt_a,
-                'opt_b' => $this->opt_b,
-                'opt_c' => $this->opt_c,
-                'opt_d' => $this->opt_d,
-                'explanation' => $this->explanation,
-                'answer' => $this->answer,
-            ]);
+                if ($this->img_path && !is_string($this->img_path)) {
+                    $this->validate([
+                        'img_path' => 'required|image|max:2048',
+                    ]);
+                    $name = date('YmdHis') . '_QUIZ_' . $this->quiz->id . '.' . $this->img_path->getClientOriginalExtension();
+                    $this->img_path->storeAs('quiz', $name, 'public');
+                    $path = 'quiz/' . $name;
+                    $this->quiz->update([
+                        'img_path' => $path,
+                    ]);
+                }
+            }
         }
 
         $this->emit('refreshLivewireDatatable');

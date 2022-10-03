@@ -28,6 +28,20 @@
                     id="question" name="question" type="text" required wire:model.defer="question">
             </div>
             <div class="w-full px-3 mb-6 md:mb-0">
+                <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="title">
+                    Gambar pertanyaan
+                </label>
+                <small class="text-liteBlack">*tidak wajib diisi</small>
+                <input
+                    class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-white border border-red-500 rounded appearance-none focus:outline-none focus:bg-white"
+                    id="logo" name="logo" type="file" wire:model.defer="img_path">
+                @if ($img_path && $img_path != "NULL")
+                    Preview:
+                    <img src="{{ is_string($img_path) ? asset('storage/' . $img_path) : $img_path->temporaryUrl() }}"
+                        class="object-fit mb-3">
+                @endif
+            </div>
+            <div class="w-full px-3 mb-6 md:mb-0">
                 <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="type">
                     Tipe Pertanyaan
                 </label>
