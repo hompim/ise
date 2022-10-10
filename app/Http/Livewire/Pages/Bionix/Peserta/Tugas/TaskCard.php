@@ -52,33 +52,21 @@ class TaskCard extends Component
                 $this->fileTask->storeAs('jawaban_tugas_bionix', $name, 'public');
                 $path = 'jawaban_tugas_bionix/' . $name;
 
-
-                if (Auth::user()->userable->bionix->submission) {
-                    Auth::user()->userable->bionix->submission->update([
-                        'file_path' => $path,
-                    ]);
-                } else {
-                    BionixSubmission::create([
-                        'team_id' => Auth::user()->userable->bionix->id,
-                        'team_type' => Auth::user()->userable->bionix_type,
-                        'file_path' => $path,
-                        'submission_type' => $this->submission_type,
-                    ]);
-                }
-            }
-        } else {
-            if (Auth::user()->userable->bionix->submission) {
-                Auth::user()->userable->bionix->submission->update([
-                    'video_link' => $this->linkTask,
-                ]);
-            } else {
                 BionixSubmission::create([
                     'team_id' => Auth::user()->userable->bionix->id,
                     'team_type' => Auth::user()->userable->bionix_type,
-                    'video_link' => $this->linkTask,
-                    'submission_type' => $this->submission_type
+                    'file_path' => $path,
+                    'submission_type' => $this->submission_type,
                 ]);
             }
+        } else {
+
+            BionixSubmission::create([
+                'team_id' => Auth::user()->userable->bionix->id,
+                'team_type' => Auth::user()->userable->bionix_type,
+                'video_link' => $this->linkTask,
+                'submission_type' => $this->submission_type
+            ]);
         }
 
         $this->emit('successUpload');
