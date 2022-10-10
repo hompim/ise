@@ -206,6 +206,12 @@ class Sidebar extends Component
                         'route-name' => 'ehall.admin.quiz'
                     ],
                     [
+                        'type' => 'menu',
+                        'icon' => 'cil-book',
+                        'title' => 'ISE Point',
+                        'route-name' => 'ehall.admin.score'
+                    ],
+                    [
                         'type' => 'divider',
                         'tag' => 'mb-3'
                     ],

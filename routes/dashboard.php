@@ -78,6 +78,7 @@ Route::middleware('auth')->group(function () {
                 Route::group(['prefix' => 'ehall'], function () {
                     Route::get('artikel', \App\Http\Livewire\Pages\Icon\Ehall\Admin\Article\Index::class)->name('ehall.admin.artikel');
                     Route::get('quiz', \App\Http\Livewire\Pages\Icon\Ehall\Admin\Quiz\Index::class)->name('ehall.admin.quiz');
+                    Route::get('score', \App\Http\Livewire\Pages\Icon\Ehall\Admin\Score\Index::class)->name('ehall.admin.score');
                 });
 
                 Route::group(['prefix' => 'webinar'], function () {
