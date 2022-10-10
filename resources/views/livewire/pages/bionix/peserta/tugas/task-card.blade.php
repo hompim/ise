@@ -43,13 +43,16 @@
                         </a>
                     @endif
                 @endif
-                <button wire:click="submitTask"
+                <button wire:click="submitTask" wire:loading.attr="disabled"
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">
                     <i class="fas fa-cloud-upload-alt mr-2"></i>Submit</button>
             </div>
             <div class="flex flex-col items-end">
                 <span wire:loading wire:target="fileTask" class="mx-2">Sedang mengunggah file jawaban
                     anda.</span>
+            </div>
+            <div class="flex flex-col items-end">
+                <span wire:loading wire:target="submitTask" class="mx-2">Sedang menyimpan file jawaban anda.</span>
             </div>
         </div>
     </div>
