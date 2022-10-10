@@ -19,41 +19,49 @@
                         <i class="fas fa-cloud-download-alt mr-2"></i>Unduh File Soal
                     </button>
                 </a> --}}
-                @if ($type == 'file')
-                    @if (!Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first() || !Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first()->file_path)
-                        <input type="file" enctype='multipart/form-data' wire:model.defer="fileTask" class="form-control-file" name="fileTask"
-                            id="fileTask" accept=".pdf,.zip,.rar">
+                <form wire:submit.prevent="submitTask" method="post" enctype="multipart/form-data">
+                    @if ($type == 'file')
+                        @if (!Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first() ||
+                            !Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first()->file_path)
+                            <input type="file" wire:model.defer="fileTask"
+                                class="form-control-file" name="fileTask" id="fileTask" accept=".pdf,.zip,.rar">
+                        @else
+                            <a href="{{ asset('storage/' .Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first()->file_path) }}"
+                                target="_blank">
+                                <button type="button"
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">
+                                    <i class="fas fa-cloud-download-alt mr-2"></i>Unduh Jawaban
+                                </button>
+                            </a>
+                        @endif
                     @else
-                        <a href="{{ asset('storage/' . Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first()->file_path) }}"
-                            target="_blank">
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">
-                                <i class="fas fa-cloud-download-alt mr-2"></i>Unduh Jawaban
-                            </button>
-                        </a>
+                        @if (!Auth::user()->userable->bionix->submission || !Auth::user()->userable->bionix->submission->video_link)
+                            <input type="text" class="text-black w-100"
+                                wire:model.defer="linkTask" class="form-control-file" name="linkTask" id="linkTask"
+                                placeholder="Masukkan link video">
+                        @else
+                            <a target="_blank" href="//{{ Auth::user()->userable->bionix->submission->video_link }}">
+                                <button type="button"
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">
+                                    <i class="fas fa-cloud-download-alt mr-2"></i>Lihat Video
+                                </button>
+                            </a>
+                        @endif
                     @endif
-                @else
-                    @if (!Auth::user()->userable->bionix->submission || !Auth::user()->userable->bionix->submission->video_link)
-                        <input type="text" enctype='multipart/form-data' class="text-black w-100" wire:model.defer="linkTask"
-                            class="form-control-file" name="linkTask" id="linkTask" placeholder="Masukkan link video">
-                    @else
-                        <a target="_blank" href="//{{ Auth::user()->userable->bionix->submission->video_link }}">
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">
-                                <i class="fas fa-cloud-download-alt mr-2"></i>Lihat Video
-                            </button>
-                        </a>
-                    @endif
-                @endif
-                <button wire:click="submitTask" wire:loading.attr="disabled"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2">
-                    <i class="fas fa-cloud-upload-alt mr-2"></i>Submit</button>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2 mt-4">
+                        <i class="fas fa-upload mr-2"></i>Upload
+                    </button>
+                </form>
+                <div class="flex flex-col items-end">
+                    <span wire:loading wire:target="fileTask" class="mx-2">Sedang mengunggah file jawaban
+                        anda.</span>
+                </div>
+                <div class="flex flex-col items-end">
+                    <span wire:loading wire:target="submitTask" class="mx-2">Sedang menyimpan file jawaban
+                        anda.</span>
+                </div>
             </div>
-            <div class="flex flex-col items-end">
-                <span wire:loading wire:target="fileTask" class="mx-2">Sedang mengunggah file jawaban
-                    anda.</span>
-            </div>
-            <div class="flex flex-col items-end">
-                <span wire:loading wire:target="submitTask" class="mx-2">Sedang menyimpan file jawaban anda.</span>
-            </div>
+
         </div>
     </div>
 </div>
