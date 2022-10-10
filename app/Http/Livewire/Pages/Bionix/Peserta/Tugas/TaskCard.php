@@ -32,7 +32,7 @@ class TaskCard extends Component
     {
         if ($this->type == 'file') {
             $this->validate([
-                'fileTask' => 'required|max:10240|mimes:pdf,zip,rar'
+                'fileTask' => 'required|mimes:pdf|max:8192'
             ]);
         } else {
             $this->validate([
