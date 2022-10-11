@@ -75,7 +75,6 @@
                                 @visibility.window="$el.type = ($el.type == 'password') ? 'text' : 'password' ">
                             {{-- <p class="invisible m-1 text-xs text-pink-700 peer-invalid:visible">less than 5 characters</p> --}}
                         </label>
-
                     </div>
                 </div>
                 <div class="flex flex-col mb-2 space-y-2 font-medium text-white font-poppins">
@@ -148,7 +147,7 @@
                 class="relative flex items-center justify-center w-full px-4 py-2 font-semibold text-white transition duration-300 rounded-full opacity-75 group hover:shadow-lg bg-gradient-to-r from-pink-300 to-purple-300 font-poppins hover:opacity-100">
                 Sign Up
             </button>
-            <p class="text-center text-[#B5B3BC]  text-base font-poppins font-medium">Don't have an account? <a
+            <p class="text-center text-[#B5B3BC]  text-base font-poppins font-medium">Already have an account? <a
                     href="{{ route('login') }}"
                     class="font-bold text-transparent transition duration-300 opacity-75 bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text hover:opacity-100">Login
                     here</a></p>
