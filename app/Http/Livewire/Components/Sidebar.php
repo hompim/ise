@@ -76,6 +76,12 @@ class Sidebar extends Component
                         'route-name' => 'admin.shorten-link'
                     ],
                     [
+                        'type' => 'menu',
+                        'icon' => 'cil-book',
+                        'title' => 'Submission',
+                        'route-name' => 'bionix.admin.submission.index',
+                    ],
+                    [
                         'type' => 'divider',
                         'tag' => 'class=mb-3'
                     ],
