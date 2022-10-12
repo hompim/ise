@@ -30,7 +30,7 @@
                         <div class="flex justify-center overflow-hidden bg-[#1C1D20] rounded-t-xl">
                             <img src="{{ asset('images/trivia/grand-prizes.png') }}"
                                 class="h-[12em] transition duration-1000 ease-linear hover:transform hover:scale-105 hover:duration-300 lg:h-full"
-                                alt="bcl-regist-poster" title="Bionix College Level Free Registration!">
+                                alt="bcl-regist-poster" title="Grand Prize ISE! Trivia 2022">
                         </div>
                         <div class="p-2 text-center rounded-b-xl bg-gradient-to-r from-pink-300 to-purple-300">
                             <h3 class="font-bold text-white lg:text-md">
