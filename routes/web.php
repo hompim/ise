@@ -72,6 +72,7 @@ Route::group(['prefix' => 'icon'], function () {
     Route::group(['prefix' => 'hall-of-is'], function () {
         // icon/e-hall/
         Route::get('/', EHallIndex::class)->name('e-hall');
+        Route::get('challenge', Challenge::class)->name('challenge-quiz-ehall');
         // Route startup e-hall
         Route::group(['prefix' => 'startup'], function () {
             // icon/e-hall/startup
@@ -98,7 +99,6 @@ Route::group(['prefix' => 'icon'], function () {
             // icon/e-hall/quiz/true-or-false
             Route::get('true-or-false', TrueOrFalse::class)->name('true-false-quiz-ehall');
             // icon/e-hall/quiz/challenge
-            Route::get('challenge', Challenge::class)->name('challenge-quiz-ehall');
 
             Route::get('/{quizType}', QuizPage::class)->name('quiz-page-ehall');
         });
