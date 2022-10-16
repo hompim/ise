@@ -267,7 +267,7 @@
                     </div>
                     <div class="mt-12 w-[350px] h-[63px]">
                         <a class="bg-gradient-to-b ml-[60px] from-[#5B1BE1] py-4 px-8 to-[#B221E5] rounded-lg "
-                            href="https://drive.google.com/file/d/1LjHlHIlehFDSUitNS-7ryEbqZfLBJQs5/view?usp=sharing">DOWNLOAD
+                            href="https://drive.google.com/drive/folders/1ztO8OL5bA6hFQR15u15YW__S7Fp2Wcwn?usp=sharing">DOWNLOAD
                             GAMBAR</a>
                     </div>
                 </div>
