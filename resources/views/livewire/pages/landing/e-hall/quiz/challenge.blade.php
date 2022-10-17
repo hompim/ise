@@ -1,8 +1,8 @@
 <div class="flex flex-col pt-6 text-white bg-black font-poppins">
 
     <div class="block py-24 text-center">
-        <h1 class="py-24 mx-auto font-bold text-7xl">ISE Challenge</h1>
-        <p class="px-56 text-2xl font-semibold text-liteGray">
+        <h1 class=" py-12 lg:py-24 mx-auto font-bold text-4xl lg:text-7xl">ISE Challenge</h1>
+        <p class=" px-12 lg:px-56 text-base lg:text-2xl font-semibold text-liteGray">
             Permainan berupa challenge untuk menyebarkan informasi seputar e–Hall of IS 2022 pada media sosial Line,
             Instagram, dan Whatsapp pemain.
         </p>
@@ -91,10 +91,10 @@
     </div>
 
     <div class="mx-auto mt-32 mb-24">
-        <h1 class="mb-8 text-5xl font-bold text-center">Tutorial Share</h1>
-        <p class="px-56 text-liteGray">
+        <h1 class="mb-8 text-3xl lg:text-5xl font-bold text-center">Tutorial Share</h1>
+        <p class="px-12 lg:px-56 text-liteGray">
             <span class="text-2xl font-bold">Aturan:</span>
-        <ul class="px-56 list-disc text-liteGray">
+        <ul class="px-12 lg:px-56 list-disc text-liteGray">
             <li>Tiap pemain harus memiliki akun pada website ISE! 2022</li>
             <li>Poin yang didapatkan dari ISE Quest akan masuk ke dalam poin peserta di virtual play</li>
             <li>Dalam sehari pemain maksimal membagikan informasi Hall of IS sebanyak 2 kali atau 2 post. <br> Contoh:
@@ -124,9 +124,9 @@
         <h2 class="text-2xl">Share via</h2>
     </div>
     {{-- start share component --}}
-    <div class="flex flex-row mt-12" x-data="{ tab: 'ig' }">
-        <div class="flex flex-col space-y-4 ml-12 h-[625px]">
-            <div class="flex flex-row items-center">
+    <div class="flex flex-col md:flex-row mt-12" x-data="{ tab: 'ig' }">
+        <div class="flex flex-row lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4 ml-12 mb-24 lg:h-[625px]">
+            <div class="flex flex-col lg:flex-row items-center">
                 <div
                     :class="{
                         'bg-gradient-to-b from-[#5B1BE1] to-[#B221E5] w-[70px] h-[70px] rounded-lg': tab ===
@@ -136,13 +136,14 @@
                         'w-[70px] bg-liteBlack h-[70px] rounded-lg': tab == 'wa'
                     }">
                     <a @click.prevent="tab='ig'" href=""><img class="w-8/12 m-auto mt-3"
-                            src="{{ asset('images/instagram.svg') }}" alt=""></a>
+                            src="{{ asset('images/instagram.svg') }}" alt="ig"></a>
                 </div>
-                <div x-show="tab=='ig'" class="w-[17px] h-[18px] ml-8 ">
-                    <img src="{{ asset('images/polygon.svg') }}" alt="">
+                <div x-show="tab=='ig'" class="w-[17px] h-[18px] translate-y-4 md:translate-y-0 lg:ml-8">
+                    <img src="{{ asset('images/polygon.svg') }}" alt="polygon"
+                        class=" transform rotate-90 md:rotate-0">
                 </div>
             </div>
-            <div class="flex flex-row items-center">
+            <div class="flex flex-col lg:flex-row items-center">
                 <div
                     :class="{
                         'bg-gradient-to-b from-[#5B1BE1] to-[#B221E5] w-[70px] h-[70px] rounded-lg': tab ===
@@ -152,13 +153,14 @@
                         'w-[70px] bg-liteBlack h-[70px] rounded-lg': tab == 'wa'
                     }">
                     <a @click.prevent="tab='line'" href=""><img class="w-8/12 m-auto mt-3"
-                            src="{{ asset('images/line.svg') }}" alt=""></a>
+                            src="{{ asset('images/line.svg') }}" alt="line"></a>
                 </div>
-                <div x-show="tab=='line'" class="w-[17px] h-[18px] ml-8 ">
-                    <img src="{{ asset('images/polygon.svg') }}" alt="">
+                <div x-show="tab=='line'" class="w-[17px] h-[18px] lg:ml-8 translate-y-4 md:translate-y-0">
+                    <img src="{{ asset('images/polygon.svg') }}" alt="polygon"
+                        class="transform rotate-90 md:rotate-0">
                 </div>
             </div>
-            <div class="flex flex-row items-center">
+            <div class="flex flex-col lg:flex-row items-center">
                 <div
                     :class="{
                         'bg-gradient-to-b from-[#5B1BE1] to-[#B221E5] w-[70px] h-[70px] rounded-lg': tab ===
@@ -168,24 +170,25 @@
                         'w-[70px] bg-liteBlack h-[70px] rounded-lg': tab == 'line'
                     }">
                     <a @click.prevent="tab='wa'" href=""><img class="w-8/12 m-auto mt-3"
-                            src="{{ asset('images/whatsapp.svg') }}" alt=""></a>
+                            src="{{ asset('images/whatsapp.svg') }}" alt="whatsapp"></a>
                 </div>
-                <div x-show="tab=='wa'" class="w-[17px] h-[18px] ml-8 ">
-                    <img src="{{ asset('images/polygon.svg') }}" alt="">
+                <div x-show="tab=='wa'" class="w-[17px] h-[18px] lg:ml-8 translate-y-4 md:translate-y-0">
+                    <img src="{{ asset('images/polygon.svg') }}" alt="polygon"
+                        class="transform rotate-90 md:rotate-0">
                 </div>
             </div>
 
         </div>
-        <div class="bg-liteBlack ml-[100px] mr-12 w-full h-max rounded-2xl flex flex-col  mb-36">
+        <div class="bg-liteBlack lg:ml-[100px] lg:mr-12 w-full h-max rounded-2xl flex flex-col mb-36">
             {{-- start IG --}}
-            <div class="flex flex-row gap-6 p-8 space-x-4 " x-show="tab=='ig'">
-                <div class="ml-10 w-[400px]">
+            <div class="flex flex-col md:flex-row gap-6 px-12 lg:p-8 space-x-4 " x-show="tab=='ig'">
+                <div class="lg:ml-10 lg:w-[400px]">
                     <div class="">
-                        <img class="h-full rounded-lg" src="{{ asset('images/challenge/1.png') }}"
+                        <img class="h-full rounded-lg img-fluid" src="{{ asset('images/challenge/1.png') }}"
                             alt="challenge-1">
                     </div>
-                    <div class="mt-12 w-[350px] h-[63px]">
-                        <a class="bg-gradient-to-b ml-[60px] from-[#5B1BE1] py-4 px-8 to-[#B221E5] rounded-lg "
+                    <div class="mt-12 flex justify-center lg:w-[350px] h-[63px]">
+                        <a class="bg-gradient-to-b lg:ml-[60px] from-[#5B1BE1] py-4 px-8 to-[#B221E5] rounded-lg "
                             href="https://drive.google.com/file/d/1LjHlHIlehFDSUitNS-7ryEbqZfLBJQs5/view?usp=sharing">DOWNLOAD
                             GAMBAR</a>
                     </div>
@@ -259,14 +262,14 @@
                 </div>
             </div>
             {{-- start line --}}
-            <div class="flex flex-row gap-6 p-8 space-x-4 " x-show="tab=='line'">
-                <div class="ml-10 w-[400px]">
+            <div class="flex flex-col lg:flex-row gap-6 px-12 lg:p-8 space-x-4 " x-show="tab=='line'">
+                <div class="lg:ml-10 lg:w-[400px]">
                     <div class="">
-                        <img class="h-full rounded-lg" src="{{ asset('images/challenge/1.png') }}"
+                        <img class="h-full rounded-lg img-fluid" src="{{ asset('images/challenge/1.png') }}"
                             alt="challenge-1">
                     </div>
-                    <div class="mt-12 w-[350px] h-[63px]">
-                        <a class="bg-gradient-to-b ml-[60px] from-[#5B1BE1] py-4 px-8 to-[#B221E5] rounded-lg "
+                    <div class="mt-12 lg:w-[350px] flex justify-center h-[63px]">
+                        <a class="bg-gradient-to-b lg:ml-[60px] from-[#5B1BE1] py-4 px-8 to-[#B221E5] rounded-lg "
                             href="https://drive.google.com/drive/folders/1ztO8OL5bA6hFQR15u15YW__S7Fp2Wcwn?usp=sharing">DOWNLOAD
                             GAMBAR</a>
                     </div>
@@ -336,14 +339,14 @@
                 </div>
             </div>
             {{-- start wa --}}
-            <div class="flex flex-row gap-6 p-8 space-x-4 " x-show="tab=='wa'">
-                <div class="ml-10 w-[400px]">
+            <div class="flex flex-col lg:flex-row gap-6 px-12 lg:p-8 lg:space-x-4 " x-show="tab=='wa'">
+                <div class="lg:ml-10 lg:w-[400px]">
                     <div class="">
-                        <img class="h-full rounded-lg" src="{{ asset('images/challenge/1.png') }}"
+                        <img class="h-full rounded-lg img-fluid" src="{{ asset('images/challenge/1.png') }}"
                             alt="challenge-1">
                     </div>
-                    <div class="mt-12 w-[350px] h-[63px]">
-                        <a class="bg-gradient-to-b ml-[60px] from-[#5B1BE1] py-4 px-8 to-[#B221E5] rounded-lg "
+                    <div class="mt-12 lg:w-[350px] h-[63px] flex justify-center">
+                        <a class="bg-gradient-to-b lg:ml-[60px] from-[#5B1BE1] py-4 px-8 to-[#B221E5] rounded-lg "
                             href="https://drive.google.com/file/d/1LjHlHIlehFDSUitNS-7ryEbqZfLBJQs5/view?usp=sharing">DOWNLOAD
                             GAMBAR</a>
                     </div>
@@ -413,14 +416,17 @@
                 </div>
             </div>
             <div class="flex flex-col">
-                <div class="mx-auto text-3xl font-bold mt-36">Upload form</div>
-                <div class="bg-[#2F2F2F] mx-24 relative mt-8 mb-20 h-[300px] rounded-lg">
-                    <div class="flex flex-row absolute bottom-[140px] left-[280px]">
-                        <a class="bg-gradient-to-b ml-[60px] items-center flex flex-row mx-auto from-[#5B1BE1]  py-4 px-12 to-[#B221E5] rounded-lg "
-                            href="#"><img class="mr-12 w-[33px] h-[33px] fill-white"
-                                src="{{ asset('images/download.svg') }}" alt="">Upload hasil screenshot kamu
+                <div class="mx-auto text-xl lg:text-3xl font-bold mt-36">Upload form</div>
+                <div
+                    class="bg-[#2F2F2F] mx-24 relative mt-8 mb-20 lg:h-[300px] rounded-lg flex justify-center items-center">
+                    <div class="flex flex-col md:flex-row md:absolute md:bottom-[140px] md:left-[280px]">
+                        <a class="bg-gradient-to-b lg:ml-[60px] items-center flex flex-col md:flex-row mx-auto from-[#5B1BE1]  py-4 px-6 md:px-12 to-[#B221E5] rounded-lg "
+                            href="#">
+                            <img class="lg:mr-12 lg:w-[33px] lg:h-[33px] fill-white"
+                                src="{{ asset('images/download.svg') }}" alt="download">Upload hasil screenshot kamu
                             di
-                            sini </a>
+                            sini
+                        </a>
 
                     </div>
                 </div>
