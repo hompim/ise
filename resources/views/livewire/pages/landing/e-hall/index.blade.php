@@ -53,11 +53,11 @@
             <!-- Challenge! -->
             <div class="group ml-[-120px] lg:ml-[-168px]">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
-                    <a href="{{ route('coming-soon') }}"
+                    <a href="{{ route('challenge-quiz-ehall') }}"
                         class=" absolute border-l-4 border-[#E11BAA] font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[39px] mt-[116px] lg:ml-[-20px] lg:mt-80 font-semibold lg:text-[20px] -translate-x-4 lg:-translate-x-12">
                         Challenge</a>
                 </div>
-                <a href="{{ route('coming-soon') }}"
+                <a href="{{ route('challenge-quiz-ehall') }}"
                     class="absolute animate-pulse hover:animate-none lg:transition mt-[134px] ml-[39px] lg:ml-[-48px] lg:mt-[360px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/icon-joystick.png') }}" alt=""></a>
             </div>
