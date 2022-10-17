@@ -65,11 +65,11 @@
             <div class="group ">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
                     <p
-                        class="animate-pulse hover:animate-none absolute border-l-4 border-[#E11BAA] font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-208px] mt-[108px] lg:ml-[-540px] lg:mt-[300px] font-semibold lg:text-[20px] ">
+                        class=" absolute border-l-4 border-[#E11BAA] font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-208px] mt-[108px] lg:ml-[-540px] lg:mt-[300px] font-semibold lg:text-[20px] ">
                         Prestasi</p>
                 </div>
                 <a href="{{ route('home-prestasi-ehall') }}"
-                    class="absolute lg:transition ml-[-201px] mt-[124px] lg:ml-[-530px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
+                    class="animate-pulse hover:animate-none absolute lg:transition ml-[-201px] mt-[124px] lg:ml-[-530px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/icon-trophy.png') }}" alt=""></a>
             </div>
             <!-- 4 -->
