@@ -31,7 +31,6 @@ class Index extends Component
             ]],
             ['Prestasi', [
                 [9, 'MyBaby'],
-                [10, 'Sensible - Elang System - Juara 2 Kota Cerdas  GEMASTIK 13'],
                 [11, 'Sensible - Juara 3 GEMASTIK XIV Cabang Bisnis TIK'],
                 [12, 'Juara 2 CODING COMPETITION 3.0'],
                 [13, '1st Spiderlabs CTF'],
