@@ -26,7 +26,7 @@ class Index extends Component
             ['Startup', [
                 [5, 'Drafta'],
                 [6, 'Stratek'],
-                [7, 'Data.Ekspor'],
+                [7, 'Data Ekspor'],
                 [8, 'Lokapin'],
             ]],
             ['Prestasi', [
