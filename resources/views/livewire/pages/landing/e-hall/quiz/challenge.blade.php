@@ -415,23 +415,62 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col">
-                <div class="mx-auto text-xl lg:text-3xl font-bold mt-36">Upload form</div>
-                <div
-                    class="bg-[#2F2F2F] mx-24 relative mt-8 mb-20 lg:h-[300px] rounded-lg flex justify-center items-center">
-                    <div class="flex flex-col md:flex-row md:absolute md:bottom-[140px] md:left-[280px]">
-                        <a class="bg-gradient-to-b lg:ml-[60px] items-center flex flex-col md:flex-row mx-auto from-[#5B1BE1]  py-4 px-6 md:px-12 to-[#B221E5] rounded-lg "
-                            href="#">
-                            <img class="lg:mr-12 lg:w-[33px] lg:h-[33px] fill-white"
-                                src="{{ asset('images/download.svg') }}" alt="download">Upload hasil screenshot kamu
-                            di
-                            sini
-                        </a>
-
+            <form id="form" wire:submit.prevent="submit" method="POST">
+                <div class="flex flex-col">
+                    <div class="mx-auto text-xl lg:text-3xl font-bold mt-36">Upload form</div>
+                    <div x-data="{ isUploading: false, progress: 0 }" x-on:livewire-upload-start="isUploading = true"
+                        x-on:livewire-upload-finish="isUploading = false"
+                        x-on:livewire-upload-error="isUploading = false"
+                        x-on:livewire-upload-progress="progress = $event.detail.progress"
+                        class="bg-[#2F2F2F] mx-24 relative mt-8 mb-20 lg:h-[300px] rounded-lg flex flex-col lg:flex-row justify-center items-center">
+                        @if (Auth::check())
+                            <div class="flex flex-col md:flex-row md:absolute md:bottom-[140px]">
+                                <input type="file" id="fileUpload" name="ss_path" wire:model="ss_path" hidden
+                                    accept=".jpg,.png,.jpeg">
+                                <button type="button" onclick="document.getElementById('fileUpload').click()"
+                                    class="bg-gradient-to-b lg:ml-[60px] items-center flex flex-col md:flex-row mx-auto from-[#5B1BE1]  py-4 px-6 md:px-12 to-[#B221E5] rounded-lg">
+                                    <img class="lg:mr-12 lg:w-[33px] lg:h-[33px] fill-white"
+                                        src="{{ asset('images/download.svg') }}" alt="download">Upload hasil
+                                    screenshot
+                                    kamu
+                                    di
+                                    sini
+                                </button>
+                                <div wire:loading wire:target="ss_path">Uploading...</div>
+                            </div>
+                            <div class="pt-[100px]">
+                                <button
+                                    class="bg-gradient-to-b lg:ml-[60px] items-center flex flex-col md:flex-row mx-auto from-[#5B1BE1]  py-4 px-6 md:px-12 to-[#B221E5] rounded-lg ">
+                                    Submit
+                                </button>
+                                @error('ss_path')
+                                    <span class="error">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        @else
+                            <a href="{{ route('login') }}"
+                                class="bg-gradient-to-b lg:ml-[60px] items-center flex flex-col md:flex-row mx-auto from-[#5B1BE1]  py-4 px-6 md:px-12 to-[#B221E5] rounded-lg ">
+                                Login
+                            </a>
+                        @endif
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
 </div>
+@push('js')
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+     <script>
+        Livewire.on('success', () => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Upload Berhasil!! Point +250',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+        })
+    </script>
+@endpush
