@@ -424,7 +424,7 @@
                         x-on:livewire-upload-progress="progress = $event.detail.progress"
                         class="bg-[#2F2F2F] mx-24 relative mt-8 mb-20 lg:h-[300px] rounded-lg flex flex-col lg:flex-row justify-center items-center">
                         @if (Auth::check())
-                            <div class="flex flex-col md:flex-row md:absolute md:bottom-[140px]">
+                            <div class="flex flex-col">
                                 <input type="file" id="fileUpload" name="ss_path" wire:model="ss_path" hidden
                                     accept=".jpg,.png,.jpeg">
                                 <button type="button" onclick="document.getElementById('fileUpload').click()"
@@ -436,16 +436,19 @@
                                     di
                                     sini
                                 </button>
-                                <div wire:loading wire:target="ss_path">Uploading...</div>
+                                <div class="pt-2 flex justify-center items-center">
+                                    <div wire:loading wire:target="ss_path">Uploading...</div>
+                                    <button
+                                        class="bg-gradient-to-b lg:ml-[60px] items-center flex flex-col md:flex-row mx-auto from-[#5B1BE1]  py-4 px-6 md:px-12 to-[#B221E5] rounded-lg ">
+                                        Submit
+                                    </button>
+                                    @error('ss_path')
+                                        <span class="error">{{ $message }}</span>
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="pt-[100px]">
-                                <button
-                                    class="bg-gradient-to-b lg:ml-[60px] items-center flex flex-col md:flex-row mx-auto from-[#5B1BE1]  py-4 px-6 md:px-12 to-[#B221E5] rounded-lg ">
-                                    Submit
-                                </button>
-                                @error('ss_path')
-                                    <span class="error">{{ $message }}</span>
-                                @enderror
+                            <div class="w-36 lg:w-48">
+                                <img src="{{ asset('images/unknown_man.png') }}" alt="preview-img" class="w-full">
                             </div>
                         @else
                             <a href="{{ route('login') }}"
@@ -463,14 +466,14 @@
 @push('js')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-     <script>
+    <script>
         Livewire.on('success', () => {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Upload Berhasil!! Point +250',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
+            Swal.fire({
+                icon: 'success',
+                title: 'Upload Berhasil!! Point +250',
+                showConfirmButton: false,
+                timer: 1500
+            })
         })
     </script>
 @endpush
