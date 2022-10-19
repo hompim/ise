@@ -33,11 +33,20 @@
                 Competition</li>
         </a>
         <a href="/icon">
-            <li
-                class="@if (request()->is('icon*')) text-transparent from-pink-300 to-purple-300 bg-clip-text
+            <li {{-- class="@if (request()->is('icon*')) text-transparent from-pink-300 to-purple-300 bg-clip-text --}}
+                class="@if (Route::current()->getName() == 'icon' ||
+                    Route::current()->getName() == 'data-science-academy' ||
+                    Route::current()->getName() == 'startup-academy') text-transparent from-pink-300 to-purple-300 bg-clip-text
                 @else
                 text-[#6B6F75] @endif hover:text-transparent bg-gradient-to-r hover:from-pink-300 hover:to-purple-300 hover:bg-clip-text">
                 IT Convention</li>
+        </a>
+        <a href="{{ route('e-hall') }}">
+            <li
+                class="@if (request()->is('icon/hall-of-is*')) text-transparent from-pink-300 to-purple-300 bg-clip-text
+                @else
+                text-[#6B6F75] @endif hover:text-transparent bg-gradient-to-r hover:from-pink-300 hover:to-purple-300 hover:bg-clip-text">
+                Hall of IS</li>
         </a>
     </ul>
 

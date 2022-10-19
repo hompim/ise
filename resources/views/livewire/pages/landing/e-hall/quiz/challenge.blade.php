@@ -1,8 +1,8 @@
 <div class="flex flex-col pt-6 text-white bg-black font-poppins">
 
     <div class="block py-24 text-center">
-        <h1 class=" py-12 lg:py-24 mx-auto font-bold text-4xl lg:text-7xl">ISE Challenge</h1>
-        <p class=" px-12 lg:px-56 text-base lg:text-2xl font-semibold text-liteGray">
+        <h1 class="py-12 mx-auto text-4xl font-bold  lg:py-24 lg:text-7xl">ISE Challenge</h1>
+        <p class="px-12 text-base font-semibold  lg:px-56 lg:text-2xl text-liteGray">
             Permainan berupa challenge untuk menyebarkan informasi seputar e–Hall of IS 2022 pada media sosial Line,
             Instagram, dan Whatsapp pemain.
         </p>
@@ -91,10 +91,10 @@
     </div>
 
     <div class="mx-auto mt-32 mb-24">
-        <h1 class="mb-8 text-3xl lg:text-5xl font-bold text-center">Tutorial Share</h1>
+        <h1 class="mb-8 text-3xl font-bold text-center lg:text-5xl">Tutorial Share</h1>
         <p class="px-12 lg:px-56 text-liteGray">
             <span class="text-2xl font-bold">Aturan:</span>
-        <ul class="px-12 lg:px-56 list-disc text-liteGray">
+        <ul class="px-12 list-disc lg:px-56 text-liteGray">
             <li>Tiap pemain harus memiliki akun pada website ISE! 2022</li>
             <li>Poin yang didapatkan dari ISE Quest akan masuk ke dalam poin peserta di virtual play</li>
             <li>Dalam sehari pemain maksimal membagikan informasi Hall of IS sebanyak 2 kali atau 2 post. <br> Contoh:
@@ -124,9 +124,9 @@
         <h2 class="text-2xl">Share via</h2>
     </div>
     {{-- start share component --}}
-    <div class="flex flex-col md:flex-row mt-12" x-data="{ tab: 'ig' }">
+    <div class="flex flex-col mt-12 md:flex-row" x-data="{ tab: 'ig' }">
         <div class="flex flex-row lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4 ml-12 mb-24 lg:h-[625px]">
-            <div class="flex flex-col lg:flex-row items-center">
+            <div class="flex flex-col items-center lg:flex-row">
                 <div
                     :class="{
                         'bg-gradient-to-b from-[#5B1BE1] to-[#B221E5] w-[70px] h-[70px] rounded-lg': tab ===
@@ -140,10 +140,10 @@
                 </div>
                 <div x-show="tab=='ig'" class="w-[17px] h-[18px] translate-y-4 md:translate-y-0 lg:ml-8">
                     <img src="{{ asset('images/polygon.svg') }}" alt="polygon"
-                        class=" transform rotate-90 md:rotate-0">
+                        class="transform rotate-90  md:rotate-0">
                 </div>
             </div>
-            <div class="flex flex-col lg:flex-row items-center">
+            <div class="flex flex-col items-center lg:flex-row">
                 <div
                     :class="{
                         'bg-gradient-to-b from-[#5B1BE1] to-[#B221E5] w-[70px] h-[70px] rounded-lg': tab ===
@@ -160,7 +160,7 @@
                         class="transform rotate-90 md:rotate-0">
                 </div>
             </div>
-            <div class="flex flex-col lg:flex-row items-center">
+            <div class="flex flex-col items-center lg:flex-row">
                 <div
                     :class="{
                         'bg-gradient-to-b from-[#5B1BE1] to-[#B221E5] w-[70px] h-[70px] rounded-lg': tab ===
@@ -181,7 +181,7 @@
         </div>
         <div class="bg-liteBlack lg:ml-[100px] lg:mr-12 w-full h-max rounded-2xl flex flex-col mb-36">
             {{-- start IG --}}
-            <div class="flex flex-col md:flex-row gap-6 px-12 lg:p-8 space-x-4 " x-show="tab=='ig'">
+            <div class="flex flex-col gap-6 px-12 space-x-4 md:flex-row lg:p-8 " x-show="tab=='ig'">
                 <div class="lg:ml-10 lg:w-[400px]">
                     <div class="">
                         <img class="h-full rounded-lg img-fluid" src="{{ asset('images/challenge/1.png') }}"
@@ -262,7 +262,7 @@
                 </div>
             </div>
             {{-- start line --}}
-            <div class="flex flex-col lg:flex-row gap-6 px-12 lg:p-8 space-x-4 " x-show="tab=='line'">
+            <div class="flex flex-col gap-6 px-12 space-x-4 lg:flex-row lg:p-8 " x-show="tab=='line'">
                 <div class="lg:ml-10 lg:w-[400px]">
                     <div class="">
                         <img class="h-full rounded-lg img-fluid" src="{{ asset('images/challenge/1.png') }}"
@@ -275,7 +275,7 @@
                     </div>
                 </div>
                 <div class="">
-                    <span class="text-xl font-bold">Whatsapp</span>
+                    <span class="text-xl font-bold">Line</span>
                     <ul class="mt-4 list-disc text-liteGray">
                         <li>Bagikan gambar promosi E-Hall of IS yang bisa diunduh di samping ini ke 2 grup LINE yang
                             berisi minimal 100 anggota aktif</li>
@@ -339,7 +339,7 @@
                 </div>
             </div>
             {{-- start wa --}}
-            <div class="flex flex-col lg:flex-row gap-6 px-12 lg:p-8 lg:space-x-4 " x-show="tab=='wa'">
+            <div class="flex flex-col gap-6 px-12 lg:flex-row lg:p-8 lg:space-x-4 " x-show="tab=='wa'">
                 <div class="lg:ml-10 lg:w-[400px]">
                     <div class="">
                         <img class="h-full rounded-lg img-fluid" src="{{ asset('images/challenge/1.png') }}"

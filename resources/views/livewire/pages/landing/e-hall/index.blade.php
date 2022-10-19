@@ -47,18 +47,18 @@
                         ISE Trivia</a>
                 </div>
                 <a href="{{ route('quiz-ehall') }}"
-                    class="lg:transition lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 absolute mt-[45px] lg:mt-[120px] ml-[-136px] lg:ml-[-362px]"><img
+                    class="lg:transition animate-pulse hover:animate-none lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 absolute mt-[45px] lg:mt-[120px] ml-[-136px] lg:ml-[-362px]"><img
                         src="{{ asset('images/icon-brain.png') }}" alt=""></a>
             </div>
             <!-- Challenge! -->
             <div class="group ml-[-120px] lg:ml-[-168px]">
                 <div class="lg:opacity-0 lg:group-hover:opacity-100">
-                    <a href="{{ route('coming-soon') }}"
+                    <a href="{{ route('challenge-quiz-ehall') }}"
                         class=" absolute border-l-4 border-[#E11BAA] font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[39px] mt-[116px] lg:ml-[-20px] lg:mt-80 font-semibold lg:text-[20px] -translate-x-4 lg:-translate-x-12">
                         Challenge</a>
                 </div>
-                <a href="{{ route('coming-soon') }}"
-                    class="absolute lg:transition mt-[134px] ml-[39px] lg:ml-[-48px] lg:mt-[360px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
+                <a href="{{ route('challenge-quiz-ehall') }}"
+                    class="absolute animate-pulse hover:animate-none lg:transition mt-[134px] ml-[39px] lg:ml-[-48px] lg:mt-[360px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:first-letter:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/icon-joystick.png') }}" alt=""></a>
             </div>
             <!-- 3 -->
@@ -69,7 +69,7 @@
                         Prestasi</p>
                 </div>
                 <a href="{{ route('home-prestasi-ehall') }}"
-                    class="absolute lg:transition ml-[-201px] mt-[124px] lg:ml-[-530px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
+                    class="animate-pulse hover:animate-none absolute lg:transition ml-[-201px] mt-[124px] lg:ml-[-530px] lg:mt-[340px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/icon-trophy.png') }}" alt=""></a>
             </div>
             <!-- 4 -->
@@ -80,7 +80,7 @@
                         Startup</p>
                 </div>
                 <a href="{{ route('home-startup-ehall') }}"
-                    class="absolute lg:transition ml-[-144px] mt-[144px] lg:ml-[-380px] lg:mt-[400px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
+                    class="animate-pulse hover:animate-none absolute lg:transition ml-[-144px] mt-[144px] lg:ml-[-380px] lg:mt-[400px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
                         src="{{ asset('images/icon-startup.png') }}" alt=""></a>
             </div>
         </div>
@@ -160,14 +160,14 @@
                 </span>
             </button>
         </div>
-        <div class="mx-4 text-lg text-center text-liteGray md:mt-24 md:mx-16 pb-12">
+        <div class="pb-12 mx-4 text-lg text-center text-liteGray md:mt-24 md:mx-16">
             E-Hall of IS merupakan zona berisikan pameran virtual karya-karya autentik mahasiswa dan alumni Sistem
             Informasi Institut Teknologi Sepuluh Nopember (ITS) dengan reputasi gemilang, baik ranah nasional maupun
             internasional. Zona ini memiliki dua tujuan utama. Pertama, memperkenalkan karya Sistem Informasi ITS ke
             khalayak umum. Kedua, mengedukasi dan menyebarkan awareness seputar teknologi.
         </div>
     </div>
-    <div class="hidden flex-col justify-center mx-auto text-xl text-white md:text-5xl md:w-full md:mt-24">
+    <div class="flex-col justify-center hidden mx-auto text-xl text-white md:text-5xl md:w-full md:mt-24">
         {{-- <div class="flex flex-col justify-center mx-auto text-xl text-white md:text-5xl md:w-full md:mt-24"> --}}
         {{-- <div
         class="flex-col justify-center hidden pb-12 mx-auto text-xl text-white md:text-5xl md:pb-24 md:w-full md:mt-24"> --}}
@@ -189,7 +189,7 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="mb-4 font-bold text-base md:mb-8">
+                <div class="mb-4 text-base font-bold md:mb-8">
                     {{ $leaderboard[1]->user->name }}
                 </div>
                 <div>
@@ -216,7 +216,7 @@
                     </svg>
                 </div>
                 <div class="mb-2 md:mb-10">
-                    <div class="font-bold text-base">
+                    <div class="text-base font-bold">
                         {{ $leaderboard[0]->user->name }}
                     </div>
                 </div>
@@ -243,7 +243,7 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="mb-0 ml-1 font-bold text-base md:mb-8 md:ml-0">
+                <div class="mb-0 ml-1 text-base font-bold md:mb-8 md:ml-0">
                     {{ $leaderboard[2]->user->name }}
                 </div>
                 <div>

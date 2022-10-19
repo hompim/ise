@@ -1560,17 +1560,8 @@ select {
 .mt-\[120px\] {
     margin-top: 120px;
 }
-.ml-\[100px\] {
-    margin-left: 100px;
-}
 .mb-36 {
     margin-bottom: 9rem;
-}
-.ml-10 {
-    margin-left: 2.5rem;
-}
-.ml-\[60px\] {
-    margin-left: 60px;
 }
 .ml-6 {
     margin-left: 1.5rem;
@@ -1771,9 +1762,6 @@ select {
 .h-56 {
     height: 14rem;
 }
-.h-\[625px\] {
-    height: 625px;
-}
 .h-\[70px\] {
     height: 70px;
 }
@@ -1782,9 +1770,6 @@ select {
 }
 .h-\[63px\] {
     height: 63px;
-}
-.h-\[33px\] {
-    height: 33px;
 }
 .h-\[159px\] {
     height: 159px;
@@ -1800,9 +1785,6 @@ select {
 }
 .h-\[52px\] {
     height: 52px;
-}
-.h-24 {
-    height: 6rem;
 }
 .max-h-48 {
     max-height: 12rem;
@@ -1985,9 +1967,6 @@ select {
 }
 .w-\[17px\] {
     width: 17px;
-}
-.w-\[33px\] {
-    width: 33px;
 }
 .w-\[177px\] {
     width: 177px;
@@ -5420,10 +5399,6 @@ select {
         flex-direction: row;
     }
 
-    .md\:flex-col {
-        flex-direction: column;
-    }
-
     .md\:flex-col-reverse {
         flex-direction: column-reverse;
     }
@@ -5969,10 +5944,6 @@ select {
         margin-top: 400px;
     }
 
-    .lg\:ml-\[60px\] {
-        margin-left: 60px;
-    }
-
     .lg\:ml-8 {
         margin-left: 2rem;
     }
@@ -5987,6 +5958,10 @@ select {
 
     .lg\:ml-10 {
         margin-left: 2.5rem;
+    }
+
+    .lg\:ml-\[60px\] {
+        margin-left: 60px;
     }
 
     .lg\:block {
@@ -6061,12 +6036,12 @@ select {
         height: 625px;
     }
 
-    .lg\:h-\[33px\] {
-        height: 33px;
-    }
-
     .lg\:h-\[300px\] {
         height: 300px;
+    }
+
+    .lg\:h-\[33px\] {
+        height: 33px;
     }
 
     .lg\:w-\[56em\] {
