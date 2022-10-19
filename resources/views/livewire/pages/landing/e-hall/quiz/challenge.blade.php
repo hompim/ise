@@ -1,8 +1,8 @@
 <div class="flex flex-col pt-6 text-white bg-black font-poppins">
 
     <div class="block py-24 text-center">
-        <h1 class="py-12 mx-auto text-4xl font-bold  lg:py-24 lg:text-7xl">ISE Challenge</h1>
-        <p class="px-12 text-base font-semibold  lg:px-56 lg:text-2xl text-liteGray">
+        <h1 class="py-12 mx-auto text-4xl font-bold lg:py-24 lg:text-7xl">ISE Challenge</h1>
+        <p class="px-12 text-base font-semibold lg:px-56 lg:text-2xl text-liteGray">
             Permainan berupa challenge untuk menyebarkan informasi seputar e–Hall of IS 2022 pada media sosial Line,
             Instagram, dan Whatsapp pemain.
         </p>
@@ -140,7 +140,7 @@
                 </div>
                 <div x-show="tab=='ig'" class="w-[17px] h-[18px] translate-y-4 md:translate-y-0 lg:ml-8">
                     <img src="{{ asset('images/polygon.svg') }}" alt="polygon"
-                        class="transform rotate-90  md:rotate-0">
+                        class="transform rotate-90 md:rotate-0">
                 </div>
             </div>
             <div class="flex flex-col items-center lg:flex-row">
@@ -206,7 +206,7 @@
                     <br>
                     <span class="text-xl font-bold "> Caption</span>
                     <br>
-                    <div class="mt-4">
+                    {{-- <div class="mt-4">
                         <div class="text-liteGray">
                             <p>[GEN Z WAJIB BACA!]</p>
                             <br>
@@ -258,7 +258,7 @@
 
 
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             {{-- start line --}}
@@ -417,7 +417,7 @@
             </div>
             <form id="form" wire:submit.prevent="submit" method="POST">
                 <div class="flex flex-col">
-                    <div class="mx-auto text-xl lg:text-3xl font-bold mt-36">Upload form</div>
+                    <div class="mx-auto text-xl font-bold lg:text-3xl mt-36">Upload form</div>
                     <div x-data="{ isUploading: false, progress: 0 }" x-on:livewire-upload-start="isUploading = true"
                         x-on:livewire-upload-finish="isUploading = false"
                         x-on:livewire-upload-error="isUploading = false"
@@ -436,7 +436,7 @@
                                     di
                                     sini
                                 </button>
-                                <div class="pt-2 flex justify-center items-center">
+                                <div class="flex items-center justify-center pt-2">
                                     <div wire:loading wire:target="ss_path">Uploading...</div>
                                     <button
                                         class="bg-gradient-to-b lg:ml-[60px] items-center flex flex-col md:flex-row mx-auto from-[#5B1BE1]  py-4 px-6 md:px-12 to-[#B221E5] rounded-lg ">
@@ -447,7 +447,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            @if($ss_path)
+                            @if ($ss_path)
                                 <div class="w-36 lg:w-48">
                                     <img src="{{ $ss_path->temporaryUrl() }}" alt="preview-img" class="w-full">
                                 </div>
