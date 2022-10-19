@@ -30,14 +30,14 @@ class Index extends Component
                 [8, 'Lokapin'],
             ]],
             ['Prestasi', [
-                [9, 'MyBaby'],
+                [9, 'My Baby! - Juara Harapan GEMASTIK XIV Cabang Bisnis TIK'],
                 [11, 'Sensible - Juara 3 GEMASTIK XIV Cabang Bisnis TIK'],
-                [12, 'Juara 2 CODING COMPETITION 3.0'],
+                [12, 'Juara 2 CODIG COMPETITION 3.0'],
                 [13, '1st Spiderlabs CTF'],
                 [14, 'Most Outstanding Delegates MUN 2021'],
                 [15, '3rd Runner Up Kewirausahaan Mahasiswa Indonesia'],
                 [16, 'Swakarya - Juara 3 Mile Zero Competition'],
-                [18, 'Elang System - Juara 2 Kota Cerdas  GEMASTIK 13'],
+                [18, 'Sensible - Elang System - Juara 2 Kota Cerdas  GEMASTIK 13'],
             ]],
         ];
     }

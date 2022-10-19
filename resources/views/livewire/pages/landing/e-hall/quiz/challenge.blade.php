@@ -447,9 +447,11 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="w-36 lg:w-48">
-                                <img src="{{ asset('images/unknown_man.png') }}" alt="preview-img" class="w-full">
-                            </div>
+                            @if($ss_path)
+                                <div class="w-36 lg:w-48">
+                                    <img src="{{ $ss_path->temporaryUrl() }}" alt="preview-img" class="w-full">
+                                </div>
+                            @endif
                         @else
                             <a href="{{ route('login') }}"
                                 class="bg-gradient-to-b lg:ml-[60px] items-center flex flex-col md:flex-row mx-auto from-[#5B1BE1]  py-4 px-6 md:px-12 to-[#B221E5] rounded-lg ">
