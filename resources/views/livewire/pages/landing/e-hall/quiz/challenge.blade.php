@@ -139,8 +139,7 @@
                             src="{{ asset('images/instagram.svg') }}" alt="ig"></a>
                 </div>
                 <div x-show="tab=='ig'" class="w-[17px] h-[18px] translate-y-4 md:translate-y-0 lg:ml-8">
-                    <img src="{{ asset('images/polygon.svg') }}" alt="polygon"
-                        class="transform rotate-90 md:rotate-0">
+                    <img src="{{ asset('images/polygon.svg') }}" alt="polygon" class="transform rotate-90 md:rotate-0">
                 </div>
             </div>
             <div class="flex flex-col items-center lg:flex-row">
@@ -204,7 +203,7 @@
                         <li>Unggah tangkapan layar bukti promosi pada formulir di bawah ini</li>
                     </ul>
                     <br>
-                    <span class="text-xl font-bold "> Caption</span>
+                    {{-- <span class="text-xl font-bold "> Caption</span> --}}
                     <br>
                     {{-- <div class="mt-4">
                         <div class="text-liteGray">
