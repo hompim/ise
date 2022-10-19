@@ -52,6 +52,8 @@ class TaskCard extends Component
                 $this->fileTask->storeAs('jawaban_tugas_bionix', $name, 'public');
                 $path = 'jawaban_tugas_bionix/' . $name;
 
+                
+
                 BionixSubmission::create([
                     'team_id' => Auth::user()->userable->bionix->id,
                     'team_type' => Auth::user()->userable->bionix_type,
