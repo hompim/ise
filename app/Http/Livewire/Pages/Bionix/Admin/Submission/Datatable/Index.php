@@ -50,16 +50,24 @@ class Index extends LivewireDatatable
             Column::raw('team.team_name')->label('Nama Tim')->searchable()
 
         ];
-        if ($this->type == "video") {
-            $columns = array_merge($columns, [Column::raw('video_link')->label('Link Youtube')]);
-            $columns = array_merge($columns, [Column::callback(['video_link'], function ($video_link) {
-                return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['type' => 'video','video_link' => $video_link]);
-            })]);
-        } elseif ($this->type == "file") {
+
+        if (strpos($this->params, 'Senior') !== false) {
             $columns = array_merge($columns, [Column::callback(['file_path'], function ($file_path) {
-                return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['type' => 'file','file_path' => $file_path]);
+                return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['type' => 'file', 'file_path' => $file_path]);
             })]);
+        } else {
+            if ($this->type == "video") {
+                $columns = array_merge($columns, [Column::raw('video_link')->label('Link Youtube')]);
+                $columns = array_merge($columns, [Column::callback(['video_link'], function ($video_link) {
+                    return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['type' => 'video', 'video_link' => $video_link]);
+                })]);
+            } elseif ($this->type == "file") {
+                $columns = array_merge($columns, [Column::callback(['file_path'], function ($file_path) {
+                    return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['type' => 'file', 'file_path' => $file_path]);
+                })]);
+            }
         }
+
         return $columns;
     }
 
