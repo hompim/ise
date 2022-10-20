@@ -12,6 +12,7 @@ use ZanySoft\Zip\Zip;
 
 class Index extends LivewireDatatable
 {
+    public $type;
     public function builder()
     {
         if (strpos($this->params, 'Senior') !== false) {
@@ -21,11 +22,19 @@ class Index extends LivewireDatatable
                 ->join('team_senior_data as team', 'team.id', 'bionix_submissions.team_id');
         }
         if (strpos($this->params, 'Junior') !== false) {
-            return BionixSubmission::where('submission_type', $this->params)
-                ->where('team_type', 'App\Models\Bionix\TeamJuniorData')
-                ->whereRaw('bionix_submissions.id in (select max(bionix_submissions.id) from bionix_submissions group by team_id)')
-                ->join('team_junior_data as team', 'team.id', 'bionix_submissions.team_id');
-
+            if ($this->type == 'file') {
+                return BionixSubmission::where('submission_type', $this->params)
+                    ->where('team_type', 'App\Models\Bionix\TeamJuniorData')
+                    ->whereRaw('bionix_submissions.id in (select max(bionix_submissions.id) from bionix_submissions where file_path is not null group by team_id)')
+                    ->whereNotNull('file_path')
+                    ->join('team_junior_data as team', 'team.id', 'bionix_submissions.team_id');
+            } elseif ($this->type == 'video') {
+                return BionixSubmission::where('submission_type', $this->params)
+                    ->where('team_type', 'App\Models\Bionix\TeamJuniorData')
+                    ->whereNotNull('video_link')
+                    ->whereRaw('bionix_submissions.id in (select max(bionix_submissions.id) from bionix_submissions where video_link is not null group by team_id)')
+                    ->join('team_junior_data as team', 'team.id', 'bionix_submissions.team_id');
+            }
         }
         return null;
     }
@@ -41,12 +50,16 @@ class Index extends LivewireDatatable
             Column::raw('team.team_name')->label('Nama Tim')->searchable()
 
         ];
-        if ($this->params == "Senior Semifinal") {
+        if ($this->type == "video") {
             $columns = array_merge($columns, [Column::raw('video_link')->label('Link Youtube')]);
+            $columns = array_merge($columns, [Column::callback(['video_link'], function ($video_link) {
+                return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['type' => 'video','video_link' => $video_link]);
+            })]);
+        } elseif ($this->type == "file") {
+            $columns = array_merge($columns, [Column::callback(['file_path'], function ($file_path) {
+                return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['type' => 'file','file_path' => $file_path]);
+            })]);
         }
-        $columns = array_merge($columns, [Column::callback(['file_path', 'video_link'], function ($file_path, $video_link) {
-            return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['file_path' => $file_path, 'video_link' => $video_link]);
-        })]);
         return $columns;
     }
 

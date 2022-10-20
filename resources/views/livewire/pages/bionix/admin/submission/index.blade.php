@@ -15,10 +15,18 @@
     </div>
 </div>
 <div class="px-8 text-white">
-    <h3 class="text-2xl font-weight-bold">Semifinal BIONIX Student Level</h3>
+    <h3 class="text-2xl font-weight-bold">Semifinal BIONIX Student Level Proposal</h3>
     <div class="card rounded-xl mt-4" style="background-color: #191a1e; border:0">
         <div class="card-body">
-            <livewire:pages.bionix.admin.submission.datatable.index params="Junior Semifinal"/>
+            <livewire:pages.bionix.admin.submission.datatable.index type="file" params="Junior Semifinal"/>
+        </div>
+    </div>
+</div>
+<div class="px-8 text-white">
+    <h3 class="text-2xl font-weight-bold">Semifinal BIONIX Student Level Video</h3>
+    <div class="card rounded-xl mt-4" style="background-color: #191a1e; border:0">
+        <div class="card-body">
+            <livewire:pages.bionix.admin.submission.datatable.index type="video" params="Junior Semifinal"/>
         </div>
     </div>
 </div>
