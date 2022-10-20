@@ -7,7 +7,7 @@
         </button>
     </a>
     @elseif($type == 'video')
-        <a href="//{{$video_link}}" target="_blank">
+        <a href="{{$video_link}}" target="_blank">
             <button
                 class="p-1 text-red-600 hover:bg-red-600 hover:text-white rounded">
                 <i class="fab fa-youtube"></i>
