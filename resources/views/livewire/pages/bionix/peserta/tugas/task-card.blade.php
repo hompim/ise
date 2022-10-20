@@ -37,7 +37,8 @@
                             </a>
                         @endif
                     @else
-                        @if (!Auth::user()->userable->bionix->submission || !Auth::user()->userable->bionix->submission->video_link)
+                        @if (!Auth::user()->userable->bionix->submission->team_id ||
+                            !Auth::user()->userable->bionix->submission->video_link)
                             <input type="text" class="text-black w-100" wire:model.defer="linkTask"
                                 class="form-control-file" name="linkTask" id="linkTask"
                                 placeholder="Masukkan link video">
