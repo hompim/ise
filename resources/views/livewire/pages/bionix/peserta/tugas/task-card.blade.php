@@ -21,8 +21,8 @@
                 </a> --}}
                 <form wire:submit.prevent="submitTask" method="post" enctype="multipart/form-data">
                     @if ($type == 'file')
-                        @if (!Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first() ||
-                            !Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first()->file_path)
+                        @if (!Auth::user()->userable->bionix->submission()->where('submission_type', 'Junior Semifinal')->first() ||
+                            !Auth::user()->userable->bionix->submission()->where('submission_type', 'Junior Semifinal')->first()->file_path)
                             <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
                                 id="fileTask" accept=".pdf,.zip,.rar">
                         @else
