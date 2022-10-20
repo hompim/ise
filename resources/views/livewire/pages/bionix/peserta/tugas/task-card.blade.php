@@ -22,7 +22,9 @@
                 <form wire:submit.prevent="submitTask" method="post" enctype="multipart/form-data">
                     @if ($type == 'file')
                         @if (!Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first() ||
-                            !Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first()->file_path)
+                            !Auth::user()->userable->bionix->submission()->where('submission_type', 'Senior Penyisihan')->first()->file_path ||
+                            !Auth::user()->userable->bionix->submission()->where('submission_type', 'Junior Semifinal')->first() ||
+                            !Auth::user()->userable->bionix->submission()->where('submission_type', 'Junior Semifinal')->first()->file_path)
                             <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
                                 id="fileTask" accept=".pdf,.zip,.rar">
                         @else
@@ -43,7 +45,8 @@
                             <a target="_blank"
                                 href="//{{ Auth::user()->userable->bionix->submission()->whereNotNull('video_link')->first()->video_link }}">
                                 <button type="button"
-                                    class="px-4 py-2 mx-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
+                                    class="px-4 py-2 mx-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+                                    title="{{ Auth::user()->userable->bionix->submission()->whereNotNull('video_link')->first()->video_link }}">
                                     <i class="mr-2 fas fa-cloud-download-alt"></i>Lihat Video
                                 </button>
                             </a>
