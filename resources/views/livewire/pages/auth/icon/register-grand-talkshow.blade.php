@@ -38,7 +38,9 @@
                 <label for="Info Pendaftaran" class="block">
                     <span class="block mb-2 font-medium text-white">Info</span>
                     <select wire:model.defer="info_source" name="info_source" id=""
-                        class="w-full p-2 bg-transparent rounded-md text-liteGray focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200">
+                        class="w-full p-2 bg-transparent rounded-md text-liteGray focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
+                        required>
+                        <option value="" class="bg-liteBlack">Pilih sumber info</option>
                         <option value="Media Sosial ISE! 2022" class="bg-liteBlack">Media Sosial ISE! 2022</option>
                         <option value="Media Sosial selain ISE! 2022 (info lomba, dll)" class="bg-liteBlack">Media
                             Sosial selain ISE!
@@ -56,7 +58,8 @@
                 <input wire:model.defer="agree" name="agree" type="checkbox"
                     class="w-4 h-4 text-pink-200 rounded cursor-pointer focus:ring-pink-200">
                 <label for="remember_me" class="ml-2 block text-sm text-[#B5B3BC] font-poppins font-medium">
-                    Saya setuju dengan kebijakan privasi serta <a href="{{route('term-condition')}}" class="text-blue-400" target="_blank">syarat dan ketentuan</a> yang berlaku
+                    Saya setuju dengan kebijakan privasi serta <a href="{{ route('term-condition') }}"
+                        class="text-blue-400" target="_blank">syarat dan ketentuan</a> yang berlaku
                 </label>
             </div>
         </div>
