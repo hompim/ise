@@ -183,6 +183,12 @@ Route::middleware('auth')->group(function () {
                     //Route::get('feedback/success',  \App\Http\Livewire\Pages\Icon\Webinar\Peserta\PresensiSuccess::class)->name('webinar.peserta.presensi.success');
                 });
             });
+
+            Route::group(['prefix' => 'talkshow'], function () {
+                Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegisterGrandTalkshow::class)->name('register-talkshow');
+                Route::get('success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\Talkshow::class)->name('talkshow.register-success');
+            });
+
         });
     });
 });

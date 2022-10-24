@@ -40,6 +40,11 @@ class Member extends Model
         return $this->hasOne(IconWebinarKickOff::class);
     }
 
+    public function talkshow(){
+        return $this->hasOne(IconGrandTalkshow::class);
+    }
+
+
     public function isclass(){
         return $this->hasOne(IsClassData::class);
     }
