@@ -316,6 +316,25 @@ class Sidebar extends Component
                     ]
                 );
             }
+            if (Auth::user()->userable->talkshow) {
+                array_push(
+                    $this->menu,
+                    [
+                        'type' => 'title',
+                        'title' => 'Grand Talkshow ISE! 2022'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-home',
+                        'title' => 'Beranda',
+                        'route-name' => 'talkshow.peserta.beranda'
+                    ],
+                    [
+                        'type' => 'divider',
+                        'tag' => 'class=my-2'
+                    ]
+                );
+            }
             if (Auth::user()->userable->academy) {
                 if (Auth::user()->userable->academy_type == "App\Models\Icon\IconAcademyDataScienceData") {
                     array_push(

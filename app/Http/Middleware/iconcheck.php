@@ -27,13 +27,13 @@ class iconcheck
                     return $next($request);
                 }
             } elseif ($type == 'webinar_peserta') {
-                if (Auth::user()->userable->webinar) {
+                if (Auth::user()->userable->talkshow) {
                     return $next($request);
                 } else {
                     return redirect()->to(route('register-webinar'));
                 }
             } elseif ($type == '!webinar_peserta') {
-                if (!Auth::user()->userable->webinar) {
+                if (!Auth::user()->userable->talkshow) {
                     return $next($request);
                 } else {
                     return redirect()->to(route('webinar.peserta.beranda'));

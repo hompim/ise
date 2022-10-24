@@ -189,6 +189,9 @@ Route::middleware('auth')->group(function () {
                 Route::get('success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\Talkshow::class)->name('talkshow.register-success');
             });
 
+            Route::group(['middleware' => 'iconcheck:webinar_peserta'], function () {
+                Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Talkshow\Peserta\Beranda::class)->name('talkshow.peserta.beranda');
+            });
         });
     });
 });
