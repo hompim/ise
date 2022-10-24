@@ -6,6 +6,7 @@ use App\Models\Bionix\BionixInvoice;
 use App\Models\Bionix\BionixSchool;
 use App\Models\Bionix\IsClassData;
 use App\Models\Icon\EhallQuestMember;
+use App\Models\Icon\IconGrandTalkshow;
 use App\Models\Icon\IconWebinarKickOff;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -14,42 +15,51 @@ class Member extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['jenjang', 'academy_id', 'academy_type', 'bionix_id','bionix_type', 'roadshow_school_id'];
+    protected $fillable = ['jenjang', 'academy_id', 'academy_type', 'bionix_id', 'bionix_type', 'roadshow_school_id'];
 
-    public function roadshow_school(){
+    public function roadshow_school()
+    {
         return $this->belongsTo(BionixSchool::class, 'roadshow_school_id');
     }
 
-    public function quizAnswers(){
+    public function quizAnswers()
+    {
         return $this->hasMany(EhallQuestMember::class, 'member_id');
     }
 
-    public function user(){
+    public function user()
+    {
         return $this->morphOne(User::class, 'userable');
     }
 
-    public function bionix(){
+    public function bionix()
+    {
         return $this->morphTo();
     }
 
-    public function academy(){
+    public function academy()
+    {
         return $this->morphTo();
     }
 
-    public function webinar(){
+    public function webinar()
+    {
         return $this->hasOne(IconWebinarKickOff::class);
     }
 
-    public function talkshow(){
+    public function talkshow()
+    {
         return $this->hasOne(IconGrandTalkshow::class);
     }
 
 
-    public function isclass(){
+    public function isclass()
+    {
         return $this->hasOne(IsClassData::class);
     }
 
-    public function dp(){
+    public function dp()
+    {
         return $this->hasMany(BionixInvoice::class);
     }
 }

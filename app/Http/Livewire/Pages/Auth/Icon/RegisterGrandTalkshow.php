@@ -87,6 +87,6 @@ class RegisterGrandTalkshow extends Component
 
     public function render()
     {
-        return view('livewire.pages.auth.icon.register-grand-talkshow');
+        return view('livewire.pages.auth.icon.register-grand-talkshow')->layout('layouts.auth-bionix');
     }
 }
