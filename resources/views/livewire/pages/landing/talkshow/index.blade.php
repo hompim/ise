@@ -2,7 +2,7 @@
 <script src="{{ asset('js/index.js') }}"></script>
 <!-- hero section start -->
 <div
-    class="bg-black pt-[145px] lg:pt-[210px]  md:flex md:flex-col-reverse lg:pl-[130px] lg:flex-row  items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
+    class="bg-black pt-[145px] lg:pt-[210px]  md:flex md:flex-col-reverse lg:pl-[130px] lg:flex-row items-center md:pt-[202px] md:pl-[130px] overflow-hidden">
     <div class="flex flex-col items-start flex-1 text-white">
         <h1
             class="lg:!text-7xl ml-8 md:ml-0 text-5xl md:text-center lg:!text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">
@@ -20,12 +20,11 @@
         </div>
         <!-- button end -->
     </div>
-    <div
-        class="-translate-y-12 md:-translate-y-0 ml-[180px] lg:ml-0  flex  flex-1 w-[180px] h-[179px] lg:!w-[691px] lg:!h-full">
-        <div class="relative left-0 right-0 justify-center mx-auto mb-20 text-center max-w-fit scroll-mt-36"
+    <div class="-translate-y-12 md:-translate-y-0 ml-[180px] lg:ml-0  flex  flex-1 w-[180px] lg:!w-[691px] lg:!h-full">
+        <div class="relative left-0 right-0 justify-center mx-auto mb-20 text-center h-72 max-w-fit scroll-mt-36 lg:h-fit"
             id="isometric-city">
             <!-- startup icon-->
-            <img src="{{ asset('images/talkshow/mic.png') }}" alt="ISE-grand-talkshow-microphone">
+            <img src="{{ asset('images/talkshow/mic.png') }}" alt="ISE-grand-talkshow-microphone" class=h-full>
         </div>
     </div>
 </div>
@@ -46,7 +45,7 @@
     <!-- guidebook and register button start-->
     <div class="flex flex-col justify-center mt-12 bg-black md:flex-row md:space-x-4 font-poppins">
         <a href="{{ route('register-talkshow') }}"
-            class="py-2 my-6 text-white rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 transition duration-300 hover:scale-105">Register
+            class="py-2 my-6 text-white transition duration-300 rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 hover:scale-105">Register
             now!</a>
     </div>
     <!-- guidebook and register button end-->
@@ -111,9 +110,9 @@
     <div
         class="flex flex-col justify-center items-center space-y-36  mb-[10px] lg:mb-[200px] sm:gap-6 sm:justify-center font-poppins text-[#B5B3BC] gap-4 lg:gap-6">
         {{-- 1. --}}
-        <div class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:pr-32">
+        <div class="grid grid-cols-1 px-4 lg:grid-cols-3 lg:pr-32">
             <div
-                class="flex flex-col items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins mb-8">
+                class="flex flex-col items-center justify-center mb-8 space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
@@ -124,11 +123,11 @@
             </div>
             <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
                 <div class="flex flex-col space-y-8">
-                    <h4 class=" text-2xl lg:text-3xl text-white font-bold">
+                    <h4 class="text-2xl font-bold text-white lg:text-3xl">
                         Business Digital as Bridge Between <br>
                         Business and Technology
                     </h4>
-                    <p class="text-base lg:text-lg font-medium">Bisnis dan teknologi? Bukannya keduanya adalah hal yang
+                    <p class="text-base font-medium lg:text-lg">Bisnis dan teknologi? Bukannya keduanya adalah hal yang
                         berbeda, ya?
                         Memangnya
                         kedua hal tersebut
@@ -139,9 +138,9 @@
             </div>
         </div>
         {{-- 2. --}}
-        <div class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:pl-32">
+        <div class="grid grid-cols-1 px-4 lg:grid-cols-3 lg:pl-32">
             <div
-                class="lg:hidden flex flex-col items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins mb-8">
+                class="flex flex-col items-center justify-center mb-8 space-y-8 lg:hidden md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
@@ -152,17 +151,17 @@
             </div>
             <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
                 <div class="flex flex-col space-y-8">
-                    <h4 class=" text-2xl lg:text-3xl text-white font-bold">
+                    <h4 class="text-2xl font-bold text-white lg:text-3xl">
                         Spark Innovation Through Solve People’s Problem
                     </h4>
-                    <p class="text-base lg:text-lg font-medium">Bingung ataupun stuck saat memikirkan inovasi? Melalui
+                    <p class="text-base font-medium lg:text-lg">Bingung ataupun stuck saat memikirkan inovasi? Melalui
                         talkshow ini. akan dibahas lebih dalam tentang cara mencari inovasi melalui masalah yang
                         dihadapi orang lain nih, Metazen!
                     </p>
                 </div>
             </div>
             <div
-                class="hidden lg:flex flex-col items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins mb-8">
+                class="flex-col items-center justify-center hidden mb-8 space-y-8 lg:flex md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
@@ -173,9 +172,9 @@
             </div>
         </div>
         {{-- 3. --}}
-        <div class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:pr-32">
+        <div class="grid grid-cols-1 px-4 lg:grid-cols-3 lg:pr-32">
             <div
-                class="flex flex-col items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins mb-8">
+                class="flex flex-col items-center justify-center mb-8 space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/unknown_man.png') }}" alt="speaker"
                         class="w-1/2 md:w-[211px] mx-auto">
@@ -187,11 +186,11 @@
             </div>
             <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
                 <div class="flex flex-col space-y-8">
-                    <h4 class=" text-2xl lg:text-3xl text-white font-bold">
+                    <h4 class="text-2xl font-bold text-white lg:text-3xl">
                         Protect Our Data and Privacy to Secure Our <br>
                         Digital Life
                     </h4>
-                    <p class="text-base lg:text-lg font-medium">Semakin berkembangnya suatu teknologi, tentunya akan
+                    <p class="text-base font-medium lg:text-lg">Semakin berkembangnya suatu teknologi, tentunya akan
                         membawa kelebihan dan kekurangan tersendiri. Di sini juga akan dibahas bagaimana cara melindungi
                         data kita agar privasi tetap terjaga di era serba digital.
                     </p>
@@ -203,7 +202,7 @@
     <!-- make card end -->
 
     {{-- Ini Cuma Background --}}
-    <div class="bg-black min-h-screeen py-12">
+    <div class="py-12 bg-black min-h-screeen">
         {{-- Ini Cuma Background --}}
 
         {{-- Start Timeline --}}
