@@ -206,7 +206,7 @@
         {{-- Ini Cuma Background --}}
 
         {{-- Start Timeline --}}
-        <div class="hidden mt-10 md:mt-52 font-poppins">
+        <div class="mt-10 font-poppins">
             <h1 class="mb-10 md:mb-24 font-bold text-white font-poppins text-[27.75px] md:text-7xl text-center">Mark
                 your calender
                 and <br> follow the
@@ -216,8 +216,8 @@
             <div class="container mx-auto text-center">
                 <ol class="items-center justify-center lg:flex">
                     <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-6 mb-2 text-lg font-medium text-white font-poppins">1
-                            Agu</time>
+                        <time class="block px-6 mb-2 text-lg font-medium text-white font-poppins">29
+                            Oct</time>
                         <div class="flex items-center justify-center overflow-hidden">
                             <div
                                 class="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-r from-pink-300 to-purple-300 shrink-0">
@@ -231,75 +231,6 @@
                         </div>
                     </li>
                     <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">31
-                            Agu</time>
-                        <div class="relative flex items-center">
-                            <div
-                                class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
-                            </div>
-                            <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
-                        </div>
-                        <div class="mt-3">
-                            <h3 class="text-lg font-semibold text-white font-poppins">Close <br> Registration</h3>
-                        </div>
-                    </li>
-                    <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">4 Sep
-                        </time>
-                        <div class="relative flex items-center">
-                            <div
-                                class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
-                            </div>
-                            <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
-                        </div>
-                        <div class="mt-3">
-                            <h3 class="text-lg font-semibold text-white font-poppins">Pengumuman Tim <br> yang lolos
-                            </h3>
-                        </div>
-                    </li>
-                    <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">10 - 11
-                            Sep</time>
-                        <div class="relative flex items-center">
-                            <div
-                                class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
-                            </div>
-                            <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
-                        </div>
-                        <div class="mt-3">
-                            <h3 class="text-lg font-semibold text-white font-poppins">Startup Academy <br>
-                                Week 1 </h3>
-                        </div>
-                    </li>
-                    <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-6 mb-2 text-lg font-medium text-white font-poppins">17 - 18
-                            Sep</time>
-                        <div class="relative flex items-center">
-                            <div
-                                class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
-                            </div>
-                            <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
-                        </div>
-                        <div class="mt-3">
-                            <h3 class="text-lg font-semibold text-white font-poppins">Startup Academy <br>
-                                Week 2 </h3>
-                        </div>
-                    </li>
-                    <li class="relative mb-6 sm:mb-0">
-                        <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">18 Sep - 18 Nov
-                        </time>
-                        <div class="relative flex items-center">
-                            <div
-                                class="z-10 flex items-center justify-center w-6 h-6 mx-auto rounded-full bg-gradient-to-r from-pink-300 to-purple-300 dark:bg-blue-900 dark:ring-gray-900">
-                            </div>
-                            <div class="hidden lg:flex absolute w-full h-2 bg-[#333333]"></div>
-                        </div>
-                        <div class="mt-3">
-                            <h3 class="text-lg font-semibold text-white font-poppins">Award Announcement <br>
-                                & Voting Period</h3>
-                        </div>
-                    </li>
-                    <li class="relative mb-6 sm:mb-0">
                         <time class="block px-12 mb-2 text-lg font-medium text-white font-poppins">19 Nov
                         </time>
                         <div class="relative flex items-center">
@@ -309,8 +240,8 @@
                             <div class="hidden lg:flex absolute w-1/2 left-0 h-2 bg-[#333333]"></div>
                         </div>
                         <div class="mt-3">
-                            <h3 class="text-lg font-semibold text-white font-poppins">Awarding Ceremony<br>
-                                at Grand Talkshow ISE! 2022</h3>
+                            <h3 class="text-lg font-semibold text-white font-poppins">Grand Talkshow<br>
+                                ISE! 2022</h3>
                         </div>
                     </li>
                 </ol>
