@@ -43,6 +43,7 @@ use App\Http\Livewire\Pages\Landing\EHall\Game\Index as GameIndex;
 use App\Http\Livewire\Pages\Landing\EHall\Quiz\Index as QuizIndex;
 use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Index as PrestasiIndex;
 use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Content as PrestasiContent;
+use App\Http\Livewire\Pages\Landing\Talkshow\Index as TalkshowIndex;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,7 +68,8 @@ Route::group(['prefix' => 'icon'], function () {
     Route::get('data-science', DataScience::class)->name('data-science-academy');
     // icon/startup
     Route::get('startup', Startup::class)->name('startup-academy');
-
+    //icon/talkshow
+    Route::get('talkshow', TalkshowIndex::class)->name('talkshow');
     // Route e-hall
     Route::group(['prefix' => 'hall-of-is'], function () {
         // icon/e-hall/

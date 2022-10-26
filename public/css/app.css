@@ -1202,10 +1202,6 @@ select {
     margin-left: 6rem;
     margin-right: 6rem;
 }
-.my-\[27px\] {
-    margin-top: 27px;
-    margin-bottom: 27px;
-}
 .mt-4 {
     margin-top: 1rem;
 }
@@ -1568,6 +1564,12 @@ select {
 }
 .ml-0 {
     margin-left: 0px;
+}
+.mb-56 {
+    margin-bottom: 14rem;
+}
+.mr-20 {
+    margin-right: 5rem;
 }
 .block {
     display: block;
@@ -2422,6 +2424,21 @@ select {
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
     margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-y-16 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+.space-y-24 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(6rem * var(--tw-space-y-reverse));
+}
+.space-y-36 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(9rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(9rem * var(--tw-space-y-reverse));
+}
 .divide-y > :not([hidden]) ~ :not([hidden]) {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -3152,6 +3169,12 @@ select {
 .p-2\.5 {
     padding: 0.625rem;
 }
+.p-24 {
+    padding: 6rem;
+}
+.p-12 {
+    padding: 3rem;
+}
 .px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -3315,10 +3338,6 @@ select {
 .px-7 {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
-}
-.px-\[27\.95px\] {
-    padding-left: 27.95px;
-    padding-right: 27.95px;
 }
 .pt-4 {
     padding-top: 1rem;
@@ -3691,17 +3710,11 @@ select {
 .leading-9 {
     line-height: 2.25rem;
 }
-.leading-\[28px\] {
-    line-height: 28px;
-}
 .tracking-wide {
     letter-spacing: 0.025em;
 }
 .tracking-wider {
     letter-spacing: 0.05em;
-}
-.tracking-normal {
-    letter-spacing: 0em;
 }
 .text-blue-300 {
     --tw-text-opacity: 1;
@@ -4955,10 +4968,6 @@ select {
 
 @media (min-width: 768px) {
 
-    .md\:absolute {
-        position: absolute;
-    }
-
     .md\:inset-0 {
         top: 0px;
         right: 0px;
@@ -4976,14 +4985,6 @@ select {
 
     .md\:bottom-16 {
         bottom: 4rem;
-    }
-
-    .md\:bottom-\[140px\] {
-        bottom: 140px;
-    }
-
-    .md\:left-\[280px\] {
-        left: 280px;
     }
 
     .md\:col-span-2 {
@@ -5256,10 +5257,6 @@ select {
         height: 362px;
     }
 
-    .md\:h-\[900px\] {
-        height: 900px;
-    }
-
     .md\:w-4\/12 {
         width: 33.333333%;
     }
@@ -5354,10 +5351,6 @@ select {
 
     .md\:w-1\/2 {
         width: 50%;
-    }
-
-    .md\:w-\[680px\] {
-        width: 680px;
     }
 
     .md\:-translate-y-0 {
@@ -5742,6 +5735,10 @@ select {
         bottom: 20rem !important;
     }
 
+    .lg\:col-span-2 {
+        grid-column: span 2 / span 2;
+    }
+
     .lg\:mx-0 {
         margin-left: 0px;
         margin-right: 0px;
@@ -5964,6 +5961,14 @@ select {
         margin-left: 60px;
     }
 
+    .lg\:mb-36 {
+        margin-bottom: 9rem;
+    }
+
+    .lg\:mr-20 {
+        margin-right: 5rem;
+    }
+
     .lg\:block {
         display: block;
     }
@@ -6160,6 +6165,10 @@ select {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .lg\:\!grid-rows-3 {
         grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
     }
@@ -6256,6 +6265,18 @@ select {
         padding: 2rem;
     }
 
+    .lg\:p-24 {
+        padding: 6rem;
+    }
+
+    .lg\:p-16 {
+        padding: 4rem;
+    }
+
+    .lg\:p-20 {
+        padding: 5rem;
+    }
+
     .lg\:px-10 {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
@@ -6336,6 +6357,11 @@ select {
         padding-bottom: 6rem;
     }
 
+    .lg\:px-20 {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
     .lg\:pt-\[210px\] {
         padding-top: 210px;
     }
@@ -6366,6 +6392,30 @@ select {
 
     .lg\:pb-\[150px\] {
         padding-bottom: 150px;
+    }
+
+    .lg\:pr-20 {
+        padding-right: 5rem;
+    }
+
+    .lg\:pl-20 {
+        padding-left: 5rem;
+    }
+
+    .lg\:pr-28 {
+        padding-right: 7rem;
+    }
+
+    .lg\:pl-28 {
+        padding-left: 7rem;
+    }
+
+    .lg\:pr-32 {
+        padding-right: 8rem;
+    }
+
+    .lg\:pl-32 {
+        padding-left: 8rem;
     }
 
     .lg\:text-left {

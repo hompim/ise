@@ -267,7 +267,7 @@
                             Acara talkshow yang menghadirkan pembicara-pembicara terkemuka di bidangnya dengan berbagai
                             topik menarik untuk seluruh peserta. Bergabunglah secara gratis dan dapatkan manfaatnya secara
                             penuh!</p>
-                        <a href="{{ route('coming-soon') }}">
+                        <a href="{{ route('talkshow') }}">
                             <button
                                 class="mt-[30px] ml-[50px] md:mt-[30px] md:ml-[92px] content-center h-[17.5px] w-[176px] lg:w-[577px] lg:h-[50px] text-[10px] lg:text-xl font-semibold bg-gradient-to-r from-pink-300 to-purple-300 rounded-full font-poppins">Lebih
                                 Lanjut</button>

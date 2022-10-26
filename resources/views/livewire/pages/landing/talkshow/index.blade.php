@@ -6,7 +6,7 @@
     <div class="flex flex-col items-start flex-1 text-white">
         <h1
             class="lg:!text-7xl ml-8 md:ml-0 text-5xl md:text-center lg:!text-left font-bold bg-gradient-to-r bg-clip-text text-transparent from-[#CEA8FF] to-[#5B1BE1]">
-            Startup Academy
+            Grand <br> Talkshow
         </h1>
         <!-- button start -->
         <div class="relative mt-16 ml-8 text-center md:ml-0 md:mt-24 md:mb-8 max-w-fit group">
@@ -25,7 +25,7 @@
         <div class="relative left-0 right-0 justify-center mx-auto mb-20 text-center max-w-fit scroll-mt-36"
             id="isometric-city">
             <!-- startup icon-->
-            <img src="{{ asset('images/startup-icon.svg') }}">
+            <img src="{{ asset('images/talkshow/mic.png') }}" alt="ISE-grand-talkshow-microphone">
         </div>
     </div>
 </div>
@@ -33,35 +33,21 @@
 <!-- about this zone start  -->
 <div class="bg-black pt-[50px] lg:pt-[200px] pb-[85px] lg:pb-[150px] text-center px-[22px] lg:px-[183px] tracking-wide "
     id="explore">
-    <h1 class="text-xl md:!text-4xl font-bold font-poppins text-white">About This Zone</h1>
+    <h1 class="text-xl md:!text-4xl font-bold font-poppins text-white">About This Event</h1>
     <p class="mt-10 text-[14px] lg:text-lg text-[#B5B3BC] font-poppins ">
-        Startup Academy merupakan rangkaian pelatihan bagi mahasiswa Indonesia yang tertarik untuk
-        <a class="text-[#BCA2F3]">mewujudkan startup impiannya</a>
-        dengan belajar langsung dari para expert dan memiliki kurikulum yang telah didesain secara ringkas untuk
-        memberikan
-        <a class="text-[#BCA2F3]">fundamental knowledge</a>
-        kepada para peserta sebagai the next founder of startup.
+        Dengan diadakannya talkshow diharapkan peserta talkshow <span class="text-[#BCA2F3]">mendapat pengetahuan</span>
+        dan pemahaman baru <span class="text-[#BCA2F3]">mengenai teknologi</span> dalam masyarakat demi mencapai
+        transformasi digital. Pada grand talkshow tahun ini akan ada <span class="text-[#BCA2F3]">3 topik
+            yang dibahas</span>, yaitu: Business Digital as Bridge Between Business and Technology, Spark Innovation
+        Through Solve
+        People’s Problem, dan Protect Our Data and Privacy to Secure Our Digital Life
+        mewujudkan startup impiannya
     </p>
     <!-- guidebook and register button start-->
     <div class="flex flex-col justify-center mt-12 bg-black md:flex-row md:space-x-4 font-poppins">
-        <a href="https://ise-its.com/GuidebookStartup">
-            <button
-                class=" md:px-3 md:mx-0 mx-16 py-1 font-poppins bg-[#261A45] text-pink-300 rounded-full flex flex-row items-center justify-center"><svg
-                    class="pr-2" width="31" height="32" viewBox="0 0 31 32" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.5034 13.8623L15.4998 18.8506L20.4961 13.8623" stroke="#B221E5" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15.5 5.54492V18.847" stroke="#B221E5" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path
-                        d="M26.92 16.9502V25.5015C26.92 25.7535 26.8198 25.9952 26.6413 26.1734C26.4628 26.3516 26.2208 26.4517 25.9684 26.4517H5.03128C4.77887 26.4517 4.53681 26.3516 4.35833 26.1734C4.17986 25.9952 4.07959 25.7535 4.07959 25.5015V16.9502"
-                        stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                Download Guidebook</button>
-        </a>
-        <a href="{{ route('closed-registration') }}"
-            class="py-2 my-6 text-white rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300">Registration
-            Closed</a>
+        <a href="{{ route('register-talkshow') }}"
+            class="py-2 my-6 text-white rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 transition duration-300 hover:scale-105">Register
+            now!</a>
     </div>
     <!-- guidebook and register button end-->
 </div>
@@ -85,7 +71,7 @@
                         <div id="shadow">
 
                         </div>
-                        <img src="{{ asset('images/startup/1.jpg') }}"
+                        <img src="{{ asset('images/dokumentasi/ICON 2021(1).png') }}"
                             class="rounded-2xl w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
 
                     </label>
@@ -94,7 +80,7 @@
                         <div id="shadow">
 
                         </div>
-                        <img src="{{ asset('images/startup/2.JPG') }}"
+                        <img src="{{ asset('images/dokumentasi/ICON 2019(2).jpg') }}"
                             class="rounded-2xl w-[199px] h-[146px] lg:w-[645px] lg:h-[420px] relative">
                     </label>
                     <!-- slide 3 -->
@@ -110,104 +96,118 @@
         </div>
     </div>
     <!-- text :other have.. start -->
-    <div class="mt-[85px] lg:mt-[200px]">
-        <h1 class="mb-[100px] font-bold text-center text-white font-poppins text-3xl lg:!text-7xl ">Others have <span
-                class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">prove</span>
-            it
+    <div class="mt-[85px] lg:mt-[200px] mb-20 lg:mb-36">
+        <h1 class=" font-bold text-center text-white font-poppins text-3xl lg:!text-7xl ">Our
+            grand talkshow
+        </h1>
+        <h1 class="font-bold text-center text-white font-poppins text-3xl lg:!text-7xl translate-y-4">
+            <span
+                class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">topics</span>
+            & speakers
         </h1>
     </div>
     <!-- text :other have.. end -->
     <!-- make card start -->
     <div
-        class="flex flex-col sm:flex-row  mb-[10px] lg:mb-[200px] sm:gap-6 sm:justify-center font-poppins text-[#B5B3BC] gap-4 lg:gap-6 ml-12">
-        <!-- 1 -->
-        <div
-            class=" bg-[#191A1E] px-[42px] pt-[32px] font-semibold text-[14px] lg:text-[18px] rounded-2xl w-[300px] lg:w-[380px] lg:h-[607px] ">
-            <!-- profil -->
-            <div class="flex flex-row gap-[11px] mb-[21px]">
-                <div>
-                    <img src="{{ asset('images/caroline-icon.svg') }}">
-                </div>
-                <div>
-                    <p class="text-white">Caroline Putri K</p>
-                    <p class="font-normal text-[14px] text-[#B5B3BC]">Finalis Startup Academy 2021</p>
-                </div>
-            </div>
-            Dengan mengikuti ISE! Startup Academy, aku dapat banyak sekali ilmu tentang bagaimana cara membangun startup
-            yang baik oleh
-            <a class="text-[#BCA2F3]">speaker-speaker handal </a>maupun
-            <a class="text-[#BCA2F3]">mentor yang berpengalaman. </a> Dari Startup Academy ini, kami mendapat kesempatan
-            untuk
-            <a class="text-[#BCA2F3]">berkonsultasi langsung dengan para expertise-nya </a> sehingga dari arahan yang
-            diberikan, kami
-            <a class="text-[#BCA2F3]">mengetahui bagaimana merealisasikan startup kami dari yang awalnya hanya sebatas
-                ide saja.</a>
-        </div>
-        <!-- 2 -->
-        <div
-            class=" bg-[#191A1E] px-[42px] pt-[32px] font-semibold text-[14px] lg:text-[18px] rounded-2xl w-[300px] lg:w-[380px] lg:h-[607px] tracking-wide">
-            <div class="flex flex-row gap-[11px] mb-[21px]">
-                <div>
-                    <img src="{{ asset('images/naufal-icon.svg') }}">
-                </div>
-                <div>
-                    <p class="text-white">Naufal Firjatulloh F</p>
-                    <p class="font-normal text-[14px] text-[#B5B3BC]">Finalis Startup Academy 2021</p>
-                </div>
-            </div>
-            Menjadi salah satu peserta terpilih ISE! Startup Academy memberikan pengalaman yang berharga buat saya. Saya
-            banyak mendapatkan insight dan pengetahuan seputar teknologi dan dunia startup. Di sini saya
-            <a class="text-[#BCA2F3]">dibimbing oleh mentor-mentor yang berpengalaman untuk merealisasikan ide menjadi
-                startup yang terstruktur.</a>
-            Selain itu, disini aku juga bisa
-            <a class="text-[#BCA2F3]">membangun koneksi dengan sesama startup enthusiast.</a> So far, jadi peserta di
-            ISE! Startup Academy
-            <a class="text-[#BCA2F3]">sangat worth it!</a>
-        </div>
-    </div>
-    <!-- make card end -->
-    {{-- Masukin ini Penting --}}
-    <style>
-        [x-cloak] {
-            display: none !important;
-        }
-    </style>
-    {{-- Masukin ini Penting --}}
-
-    {{-- Ini Cuma Background --}}
-    <div class="bg-black min-h-screeen py-52">
-        {{-- Ini Cuma Background --}}
-
-        {{-- Start Meet Our Superb Speakers --}}
-        <div class="hidden font-poppins">
-            <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Meet Our <span
-                    class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">Superb</span>
-                <br> Speakers
-            </h1>
+        class="flex flex-col justify-center items-center space-y-36  mb-[10px] lg:mb-[200px] sm:gap-6 sm:justify-center font-poppins text-[#B5B3BC] gap-4 lg:gap-6">
+        {{-- 1. --}}
+        <div class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:pr-32">
             <div
-                class="flex flex-col items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
-                <div class="w-[280px] h-[419px] flex flex-col">
+                class="flex flex-col items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins mb-8">
+                <div class="w-[280px] h-full flex flex-col">
+                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
+                    <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
+                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
+                        <p class="text-sm md:text-base text-liteGray">Grand Talkshow</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
+                <div class="flex flex-col space-y-8">
+                    <h4 class=" text-2xl lg:text-3xl text-white font-bold">
+                        Business Digital as Bridge Between <br>
+                        Business and Technology
+                    </h4>
+                    <p class="text-base lg:text-lg font-medium">Bisnis dan teknologi? Bukannya keduanya adalah hal yang
+                        berbeda, ya?
+                        Memangnya
+                        kedua hal tersebut
+                        bisa dipadukan menjadi satu? Eits, jangan salah ya! Talkshow kali ini akan mengangkat topik
+                        terkait business digital yang yang menjadi jembatan penghubung antara bisnis dan teknologi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        {{-- 2. --}}
+        <div class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:pl-32">
+            <div
+                class="lg:hidden flex flex-col items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins mb-8">
+                <div class="w-[280px] h-full flex flex-col">
+                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
+                    <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
+                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
+                        <p class="text-sm md:text-base text-liteGray">Grand Talkshow</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
+                <div class="flex flex-col space-y-8">
+                    <h4 class=" text-2xl lg:text-3xl text-white font-bold">
+                        Spark Innovation Through Solve People’s Problem
+                    </h4>
+                    <p class="text-base lg:text-lg font-medium">Bingung ataupun stuck saat memikirkan inovasi? Melalui
+                        talkshow ini. akan dibahas lebih dalam tentang cara mencari inovasi melalui masalah yang
+                        dihadapi orang lain nih, Metazen!
+                    </p>
+                </div>
+            </div>
+            <div
+                class="hidden lg:flex flex-col items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins mb-8">
+                <div class="w-[280px] h-full flex flex-col">
+                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
+                    <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
+                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
+                        <p class="text-sm md:text-base text-liteGray">Grand Talkshow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- 3. --}}
+        <div class="grid grid-cols-1 lg:grid-cols-3 px-4 lg:pr-32">
+            <div
+                class="flex flex-col items-center justify-center space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins mb-8">
+                <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/unknown_man.png') }}" alt="speaker"
                         class="w-1/2 md:w-[211px] mx-auto">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Startup Academy</p>
-                    </div>
-                </div>
-                <div class="w-[280px] h-[419px] flex flex-col -mt-24 md:mt-0 ">
-                    <img src="{{ asset('images/unknown_woman.png') }}" alt="speaker"
-                        class="w-1/2 md:w-[211px] mx-auto">
-                    <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
-                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Startup Academy</p>
+                        <p class="text-sm md:text-base text-liteGray">Grand Talkshow</p>
                     </div>
                 </div>
             </div>
+            <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
+                <div class="flex flex-col space-y-8">
+                    <h4 class=" text-2xl lg:text-3xl text-white font-bold">
+                        Protect Our Data and Privacy to Secure Our <br>
+                        Digital Life
+                    </h4>
+                    <p class="text-base lg:text-lg font-medium">Semakin berkembangnya suatu teknologi, tentunya akan
+                        membawa kelebihan dan kekurangan tersendiri. Di sini juga akan dibahas bagaimana cara melindungi
+                        data kita agar privasi tetap terjaga di era serba digital.
+                    </p>
+                </div>
+            </div>
         </div>
-        {{-- End Meet Our Superb Speakers --}}
+
+    </div>
+    <!-- make card end -->
+
+    {{-- Ini Cuma Background --}}
+    <div class="bg-black min-h-screeen py-12">
+        {{-- Ini Cuma Background --}}
 
         {{-- Start Timeline --}}
-        <div class="mt-10 md:mt-52 font-poppins">
+        <div class="hidden mt-10 md:mt-52 font-poppins">
             <h1 class="mb-10 md:mb-24 font-bold text-white font-poppins text-[27.75px] md:text-7xl text-center">Mark
                 your calender
                 and <br> follow the
@@ -320,7 +320,7 @@
         {{-- End Timeline --}}
 
         {{-- Start FAQ --}}
-        <div class="mt-20 md:mt-52 font-poppins">
+        <div class="hidden mt-20 md:mt-52 font-poppins">
             <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">FAQ</h1>
             {{-- Question 1 --}}
             <div x-data="{ open: false }" class="mt-10 md:mt-24">
@@ -562,7 +562,7 @@
 
 
         {{-- Start Event Partner --}}
-        <div class="mt-32 mb-24 md:mt-60 font-poppins">
+        <div class="hidden mt-32 mb-24 md:mt-60 font-poppins">
             <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Our Event Partner
             </h1>
             <div class="px-20 py-10 mx-auto w-80 xl:w-fit h-max bg-liteBlack">

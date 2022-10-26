@@ -171,7 +171,7 @@
 
 
         {{-- Start Meet Our Superb Speakers --}}
-        <div class="mt-24 md:mt-52 font-poppins">
+        <div class="hidden mt-24 md:mt-52 font-poppins">
             <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Meet Our <span
                     class="text-transparent bg-gradient bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text">Superb</span>
                 <br> Speakers
