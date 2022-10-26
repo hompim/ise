@@ -163,15 +163,15 @@
                             src="{{ asset('images/data-science-icon.svg') }}" alt=""></a>
                 </div>
                 <!-- 3 -->
-                <div class="group ">
+                <div class="group animate-pulse hover:animate-none">
                     <div class="lg:opacity-0 lg:group-hover:opacity-100">
                         <p
                             class=" absolute border-l-4 border-[#5B1BE1]  font-poppins pl-[6px] lg:pl-[12px] text-[10px] ml-[-330px] mt-[90px] lg:ml-[-800px] lg:mt-64 font-semibold lg:text-[20px] ">
                             Grand Talkshow</p>
                     </div>
-                    <button
+                    <a href="{{ route('talkshow') }}"
                         class="absolute lg:transition ml-[-275px] mt-[110px] lg:ml-[-720px] lg:mt-[300px] lg:duration-1000 w-[21px] h-[27px] lg:w-[57px] lg:h[72px] lg:group-hover:scale-[1.2] lg:group-hover:duration-300 "><img
-                            src="{{ asset('images/grand-is.svg') }}" alt=""></button>
+                            src="{{ asset('images/grand-is.svg') }}" alt=""></a>
                 </div>
                 <!-- 4 -->
                 <div class="group animate-pulse hover:animate-none">

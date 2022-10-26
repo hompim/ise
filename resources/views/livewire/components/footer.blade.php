@@ -59,7 +59,7 @@
                     E-Hall of
                     Information System</dd>
             </a>
-            <a href="{{ route('coming-soon') }}">
+            <a href="{{ route('talkshow') }}">
                 <dd
                     class="text-sm font-medium text-[#6B6F75] font-poppins hover:text-pink-300  transition duration-300 ease-linear">
                     Grand Talkshow
