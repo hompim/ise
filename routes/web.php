@@ -60,6 +60,7 @@ use App\Http\Livewire\Pages\Landing\Talkshow\Index as TalkshowIndex;
 Route::get('/', Ise::class)->name('ise');
 Route::get('/bionix', Bionix::class)->name('bionix');
 Route::get('/icon', Icon::class)->name('icon');
+Route::get('/grandtalkshow', TalkshowIndex::class)->name('talkshow');
 
 // ICON Landing Route
 Route::group(['prefix' => 'icon'], function () {
@@ -69,7 +70,6 @@ Route::group(['prefix' => 'icon'], function () {
     // icon/startup
     Route::get('startup', Startup::class)->name('startup-academy');
     //icon/talkshow
-    Route::get('talkshow', TalkshowIndex::class)->name('talkshow');
     // Route e-hall
     Route::group(['prefix' => 'hall-of-is'], function () {
         // icon/e-hall/
