@@ -33,8 +33,8 @@
                 </span>
                 <small class="text-sm text-[#B5B3BC]">*Kalian dapat menyebarkan informasi mengenai ISE! Grand Talkshow
                     2022 melalui Instagram Story. Informasi yang disebarkan dapat berupa repost feeds informasi Grand
-                    Talkshow atau poster acara.</small>
-
+                    Talkshow. <a href="https://www.instagram.com/p/Cjz6a7Vpyxn/">@is_expo</a> </small>
+                {{-- atau poster acara. --}}
             </div>
             <div class="mt-12">
                 <label for="Info Pendaftaran" class="block">
