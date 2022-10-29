@@ -42,7 +42,7 @@ class BotlineController extends Controller
             "is_class" => IsClassData::count(),
             "icon_startup" => IconAcademyStartupMember::count(),
             "icon_data" => IconAcademyDataScienceMember::count(),
-            "total" => IconWebinarKickOff::count() + TeamJuniorMember::count() + TeamSeniorMember::count() + IsClassData::count() + IconAcademyStartupMember::count() + IconAcademyDataScienceMember::count()
+            "total" => IconWebinarKickOff::count() + TeamJuniorMember::count() + TeamSeniorMember::count() + IsClassData::count() + IconAcademyStartupMember::count() + IconAcademyDataScienceMember::count() + IconGrandTalkshow::count()
         ];
 
         return response()->json([
