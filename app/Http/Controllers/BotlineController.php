@@ -13,6 +13,7 @@ use App\Models\Icon\IconWebinarKickOff;
 use App\Models\Icon\IconAcademyStartupMember;
 use App\Models\Icon\IconAcademyDataScienceMember;
 use App\Models\Icon\IconAcademyStartupData;
+use App\Models\Icon\IconGrandTalkshow;
 
 class BotlineController extends Controller
 {
@@ -35,6 +36,7 @@ class BotlineController extends Controller
         //Peserta
         $peserta = [
             "webinar_kickoff" => IconWebinarKickOff::count(),
+            "grandtalkshow" => IconGrandTalkshow::count(),
             "bionix_junior" => TeamJuniorMember::count(),
             "bionix_senior" => TeamSeniorMember::count(),
             "is_class" => IsClassData::count(),
