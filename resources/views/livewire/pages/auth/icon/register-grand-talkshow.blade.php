@@ -19,7 +19,7 @@
                     placeholder="Masukkan nomor WhatsApp kamu">
             </div>
             <div class="flex flex-col mt-12 mb-2 space-y-2 font-medium text-white font-poppins">
-                <label>Upload bukti poster di IG Story</label>
+                <label>Upload bukti share informasi melalui Instagram Story</label>
                 <img src="{{ $instagram_story ? $instagram_story->temporaryUrl() : null }}" class="mx-auto object-fit"
                     style="max-height:50vh">
                 </img>
@@ -31,7 +31,9 @@
                     <input type="file" wire:model.defer="instagram_story" class="form-control-file"
                         name="instagram_story" id="story" accept=".jpg,.jpeg,.png" hidden>
                 </span>
-
+                <small class="text-sm text-[#B5B3BC]">*Kalian dapat menyebarkan informasi mengenai ISE! Grand Talkshow
+                    2022 melalui Instagram Story. Informasi yang disebarkan dapat berupa repost feeds informasi Grand
+                    Talkshow atau poster acara.</small>
 
             </div>
             <div class="mt-12">
