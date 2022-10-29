@@ -34,13 +34,12 @@
     id="explore">
     <h1 class="text-xl md:!text-4xl font-bold font-poppins text-white">About This Event</h1>
     <p class="mt-10 text-[14px] lg:text-lg text-[#B5B3BC] font-poppins ">
-        Dengan diadakannya talkshow diharapkan peserta talkshow <span class="text-[#BCA2F3]">mendapat pengetahuan</span>
-        dan pemahaman baru <span class="text-[#BCA2F3]">mengenai teknologi</span> dalam masyarakat demi mencapai
-        transformasi digital. Pada grand talkshow tahun ini akan ada <span class="text-[#BCA2F3]">3 topik
-            yang dibahas</span>, yaitu: Business Digital as Bridge Between Business and Technology, Spark Innovation
-        Through Solve
-        People’s Problem, dan Protect Our Data and Privacy to Secure Our Digital Life
-        mewujudkan startup impiannya
+        ISE! Grand Talkshow merupakan kegiatan talkshow interaktif yang menghadirkan pembicara-pembicara terkemuka di
+        bidangnya dengan berbagai topik menarik dan dikemas dengan suasana yang lebih santai dan interaktif. Pada grand
+        talkshow tahun ini akan ada 3 topik yang dibahas, yaitu <span class="text-[#BCA2F3]">Business Digital as Bridge
+            Between Business and Technology</span>, <span class="text-[#BCA2F3]">Spark Innovation Through Solve People’s
+            Problem</span>, dan <span class="text-[#BCA2F3]">Protect Our Data and Privacy to Secure Our Digital
+            Life.</span> Bergabunglah secara gratis dan dapatkan manfaatnya secara penuh!
     </p>
     <!-- guidebook and register button start-->
     <div class="flex flex-col justify-center mt-12 bg-black md:flex-row md:space-x-4 font-poppins">
@@ -127,12 +126,10 @@
                         Business Digital as Bridge Between <br>
                         Business and Technology
                     </h4>
-                    <p class="text-base font-medium lg:text-lg">Bisnis dan teknologi? Bukannya keduanya adalah hal yang
-                        berbeda, ya?
-                        Memangnya
-                        kedua hal tersebut
-                        bisa dipadukan menjadi satu? Eits, jangan salah ya! Talkshow kali ini akan mengangkat topik
-                        terkait business digital yang yang menjadi jembatan penghubung antara bisnis dan teknologi.
+                    <p class="text-base font-medium lg:text-lg">Digitalisasi bisnis menggunakan media sosial tak
+                        selamanya memberikan hasil yang baik sehingga menjadi tantangan tersendiri yang harus dihadapi
+                        para pemilik bisnis. Topik ini diusung untuk memberikan modal pengetahuan dalam memanfaatkan
+                        media sosial secara tepat dan optimal sebagai media dalam proses digitalisasi bisnis.
                     </p>
                 </div>
             </div>
@@ -154,9 +151,11 @@
                     <h4 class="text-2xl font-bold text-white lg:text-3xl">
                         Spark Innovation Through Solve People’s Problem
                     </h4>
-                    <p class="text-base font-medium lg:text-lg">Bingung ataupun stuck saat memikirkan inovasi? Melalui
-                        talkshow ini. akan dibahas lebih dalam tentang cara mencari inovasi melalui masalah yang
-                        dihadapi orang lain nih, Metazen!
+                    <p class="text-base font-medium lg:text-lg">Mencari inovasi baru memang kadang membingungkan. Akan
+                        tetapi, kita bisa loh mendapatkan dan melahirkan inovasi baru dengan membuat penyelesaian dari
+                        masalah yang dihadapi orang lain. Bagaimana caranya? Melalui talkshow ini akan dibahas lebih
+                        dalam terkait hal tersebut mulai dari product discovery, solution developments, hingga defining
+                        success.
                     </p>
                 </div>
             </div>
@@ -190,9 +189,10 @@
                         Protect Our Data and Privacy to Secure Our <br>
                         Digital Life
                     </h4>
-                    <p class="text-base font-medium lg:text-lg">Semakin berkembangnya suatu teknologi, tentunya akan
-                        membawa kelebihan dan kekurangan tersendiri. Di sini juga akan dibahas bagaimana cara melindungi
-                        data kita agar privasi tetap terjaga di era serba digital.
+                    <p class="text-base font-medium lg:text-lg">Semakin canggihnya teknologi membuat semakin mudahnya
+                        data-data pribadi seseorang ditemukan. Pada talkshow kali ini juga akan memberikan informasi dan
+                        edukasi kepada kita tentang mengapa data pribadi dapat mudah tersebar dan bagaimana seseorang
+                        harus menjaga data pribadinya tersebut agar privasi tetap terjaga di era yang serba digital ini.
                     </p>
                 </div>
             </div>
