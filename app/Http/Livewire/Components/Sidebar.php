@@ -163,34 +163,16 @@ class Sidebar extends Component
                         'title' => 'Verifikasi Pembayaran',
                         'route-name' => 'academy.admin.verifikasi-pembayaran'
                     ],
-                    // [
-                    //     'type' => 'title',
-                    //     'title' => 'Webinar Kick Off'
-                    // ],
-                    // [
-                    //     'type' => 'menu',
-                    //     'icon' => 'cil-home',
-                    //     'title' => 'Beranda',
-                    //     'route-name' => 'webinar.admin.beranda'
-                    // ],
-                    // [
-                    //     'type' => 'menu',
-                    //     'icon' => 'cil-group',
-                    //     'title' => 'Daftar Peserta',
-                    //     'route-name' => 'webinar.admin.daftar-webinar'
-                    // ],
-                    // [
-                    //     'type' => 'menu',
-                    //     'icon' => 'cil-group',
-                    //     'title' => 'Presensi Peserta',
-                    //     'route-name' => 'webinar.admin.presensi'
-                    // ],
-                    // [
-                    //     'type' => 'menu',
-                    //     'icon' => 'cil-bullhorn',
-                    //     'title' => 'Feedback Peserta',
-                    //     'route-name' => 'webinar.admin.feedback'
-                    // ],
+                    [
+                        'type' => 'title',
+                        'title' => 'Grand Talkshow'
+                    ],
+                    [
+                        'type' => 'menu',
+                        'icon' => 'cil-group',
+                        'title' => 'Daftar Peserta',
+                        'route-name' => 'talkshow.admin.daftar-webinar'
+                    ],
                     [
                         'type' => 'divider',
                         'tag' => 'mb-3'

@@ -89,6 +89,10 @@ Route::middleware('auth')->group(function () {
                     Route::get('feedback', \App\Http\Livewire\Pages\Icon\Webinar\Admin\Feedback\Index::class)->name('webinar.admin.feedback');
                     //Route::get('register/success', \App\Http\Livewire\Pages\Auth\Icon\Talkshow\Success::class)->name('register-success-talkshow');
                 });
+                Route::group(['prefix' => 'talkshow'], function () {
+                    Route::get('beranda', \App\Http\Livewire\Pages\Icon\Talkshow\Admin\Beranda::class)->name('talkshowgit.admin.beranda');
+                    Route::get('daftar-peserta', \App\Http\Livewire\Pages\Icon\Talkshow\Admin\Peserta\Index::class)->name('talkshow.admin.daftar-webinar');
+                });
             });
         });
 
