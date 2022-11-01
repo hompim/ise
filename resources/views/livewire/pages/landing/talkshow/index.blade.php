@@ -152,7 +152,7 @@
                     </div>
                 </div>
                 {{-- <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/talkshow/alamanda-shantika.jpg') }}" alt="speaker"
+                    <img src="{{ asset('images/talkshow/alamanda-shantika.png') }}" alt="speaker"
                         class="w-36 lg:w-56 mx-auto">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Alamanda Shantika Santoso</h1>
@@ -184,7 +184,8 @@
                     </div>
                 </div>
                 {{-- <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-36 lg:w-56 mx-auto">
+                    <img src="{{ asset('images/talkshow/alamanda-shantika.png') }}" alt="speaker"
+                        class="w-36 lg:w-56 mx-auto">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Alamanda Shantika Santoso</h1>
                         <p class="text-sm md:text-base text-liteGray">CEO & Founder BINAR</p>
