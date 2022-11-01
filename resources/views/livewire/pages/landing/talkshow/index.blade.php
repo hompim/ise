@@ -113,7 +113,7 @@
                 class="flex flex-col items-center justify-center mb-8 space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/talkshow/speaker-onno-w.png') }}" alt="speaker"
-                        class="w-36 lg:w-56 mx-auto md:hover:scale-105 md:duration-300">
+                        class="mx-auto w-36 lg:w-56 md:hover:scale-105 md:duration-300">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
                         <p class="text-sm md:text-base text-liteGray">Pakar Teknologi Informasi Indonesia</p>
@@ -145,21 +145,14 @@
             <div
                 class="flex flex-col items-center justify-center mb-8 space-y-8 lg:hidden md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
-                    <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
-                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Grandtalkshow</p>
-                    </div>
-                </div>
-                {{-- <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/talkshow/alamanda-shantika.png') }}" alt="speaker"
-                        class="w-36 lg:w-56 mx-auto">
+                        class="mx-auto w-36 lg:w-56">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Alamanda Shantika Santoso</h1>
                         <p class="text-sm md:text-base text-liteGray">CEO & Founder BINAR</p>
                         <p class="text-sm md:text-base text-liteGray">Speaker</p>
                     </div>
-                </div> --}}
+                </div>
             </div>
             <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
                 <div class="flex flex-col space-y-8">
@@ -177,21 +170,14 @@
             <div
                 class="flex-col items-center justify-center hidden mb-8 space-y-8 lg:flex md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
-                    <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
-                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Grandtalkshow</p>
-                    </div>
-                </div>
-                {{-- <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/talkshow/alamanda-shantika.png') }}" alt="speaker"
-                        class="w-36 lg:w-56 mx-auto">
+                        class="mx-auto w-36 lg:w-56">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Alamanda Shantika Santoso</h1>
                         <p class="text-sm md:text-base text-liteGray">CEO & Founder BINAR</p>
                         <p class="text-sm md:text-base text-liteGray">Speaker</p>
                     </div>
-                </div> --}}
+                </div>
             </div>
         </div>
         {{-- 1. --}}
