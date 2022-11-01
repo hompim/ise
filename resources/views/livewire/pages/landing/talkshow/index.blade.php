@@ -139,32 +139,7 @@
                 </div>
             </div>
         </div>
-        {{-- 1. --}}
-        <div class="grid grid-cols-1 px-4 lg:grid-cols-3 lg:pr-32">
-            <div
-                class="flex flex-col items-center justify-center mb-8 space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
-                <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
-                    <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
-                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Grandtalkshow</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
-                <div class="flex flex-col space-y-8">
-                    <h4 class="text-2xl font-bold text-white lg:text-3xl">
-                        Business Digital as Bridge Between <br>
-                        Business and Technology
-                    </h4>
-                    <p class="text-base font-medium lg:text-lg">Digitalisasi bisnis menggunakan media sosial tak
-                        selamanya memberikan hasil yang baik sehingga menjadi tantangan tersendiri yang harus dihadapi
-                        para pemilik bisnis. Topik ini diusung untuk memberikan modal pengetahuan dalam memanfaatkan
-                        media sosial secara tepat dan optimal sebagai media dalam proses digitalisasi bisnis.
-                    </p>
-                </div>
-            </div>
-        </div>
+
         {{-- 2. --}}
         <div class="grid grid-cols-1 px-4 lg:grid-cols-3 lg:pl-32">
             <div
@@ -202,8 +177,7 @@
             <div
                 class="flex-col items-center justify-center hidden mb-8 space-y-8 lg:flex md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker"
-                        class="w-1/2 md:w-[211px] mx-auto">
+                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
                         <p class="text-sm md:text-base text-liteGray">Grandtalkshow</p>
@@ -219,38 +193,34 @@
                 </div> --}}
             </div>
         </div>
-        {{-- 3. --}}
-        {{-- <div class="grid grid-cols-1 px-4 lg:grid-cols-3 lg:pr-32">
+        {{-- 1. --}}
+        <div class="grid grid-cols-1 px-4 lg:grid-cols-3 lg:pr-32">
             <div
                 class="flex flex-col items-center justify-center mb-8 space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/talkshow/speaker-onno-w.png') }}" alt="speaker"
-                        class="w-36 lg:w-56 mx-auto md:hover:scale-105 md:duration-300">
+                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker"
+                        class="w-1/2 md:w-[211px] mx-auto">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Pakar Teknologi Informasi Indonesia</p>
-                        <p class="text-sm md:text-base text-liteGray">Speaker</p>
+                        <p class="text-sm md:text-base text-liteGray">Grandtalkshow</p>
                     </div>
                 </div>
             </div>
             <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
                 <div class="flex flex-col space-y-8">
                     <h4 class="text-2xl font-bold text-white lg:text-3xl">
-                        Protect Our Data and Privacy to Secure Our <br>
-                        Digital Life
+                        Business Digital as Bridge Between <br>
+                        Business and Technology
                     </h4>
-                    <p class="text-base font-medium lg:text-lg">Semakin canggihnya teknologi membuat semakin
-                        mudahnya
-                        data-data pribadi seseorang ditemukan. Pada talkshow kali ini juga akan memberikan
-                        informasi dan
-                        edukasi kepada kita tentang mengapa data pribadi dapat mudah tersebar dan bagaimana
-                        seseorang
-                        harus menjaga data pribadinya tersebut agar privasi tetap terjaga di era yang serba
-                        digital ini.
+                    <p class="text-base font-medium lg:text-lg">Digitalisasi bisnis menggunakan media sosial tak
+                        selamanya memberikan hasil yang baik sehingga menjadi tantangan tersendiri yang harus dihadapi
+                        para pemilik bisnis. Topik ini diusung untuk memberikan modal pengetahuan dalam memanfaatkan
+                        media sosial secara tepat dan optimal sebagai media dalam proses digitalisasi bisnis.
                     </p>
                 </div>
             </div>
-        </div> --}}
+        </div>
+
 
     </div>
     <!-- make card end -->
