@@ -191,10 +191,9 @@ Route::middleware('auth')->group(function () {
             Route::group(['prefix' => 'talkshow'], function () {
                 Route::get('register', \App\Http\Livewire\Pages\Auth\Icon\RegisterGrandTalkshow::class)->name('register-talkshow');
                 Route::get('success', \App\Http\Livewire\Pages\Auth\RegisterSuccess\Talkshow::class)->name('talkshow.register-success');
-            });
-
-            Route::group(['middleware' => 'iconcheck:webinar_peserta'], function () {
-                Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Talkshow\Peserta\Beranda::class)->name('talkshow.peserta.beranda');
+                Route::group(['middleware' => 'iconcheck:webinar_peserta'], function () {
+                    Route::get('beranda',  \App\Http\Livewire\Pages\Icon\Talkshow\Peserta\Beranda::class)->name('talkshow.peserta.beranda');
+                });
             });
         });
     });
