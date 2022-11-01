@@ -30,7 +30,6 @@ class Index extends LivewireDatatable
                 "Teman/keluarga",
                 "Website/Aplikasi Sejuta Cita"
             ]),
-            Column::name('presensi_status')->label('Presensi')->filterable([1, 0]),
             Column::callback(['id'], function ($id) {
                 return view('livewire.pages.icon.talkshow.admin.componenets.datatable-action', ['id' => $id]);
             })
