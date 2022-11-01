@@ -113,7 +113,7 @@
                 class="flex flex-col items-center justify-center mb-8 space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/talkshow/speaker-onno-w.png') }}" alt="speaker"
-                        class="mx-auto w-36 lg:w-56 md:hover:scale-105 md:duration-300">
+                        class="w-56 mx-auto md:hover:scale-105 md:duration-300">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Onno W. Purbo, Ph. D</h1>
                         <p class="text-sm md:text-base text-liteGray">Pakar Teknologi Informasi Indonesia</p>
@@ -146,7 +146,7 @@
                 class="flex flex-col items-center justify-center mb-8 space-y-8 lg:hidden md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/talkshow/alamanda-shantika.png') }}" alt="speaker"
-                        class="mx-auto w-36 lg:w-56 md:hover:scale-105 md:duration-300">
+                        class="w-56 mx-auto md:hover:scale-105 md:duration-300">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Alamanda Shantika Santoso</h1>
                         <p class="text-sm md:text-base text-liteGray">CEO & Founder BINAR</p>
@@ -171,7 +171,7 @@
                 class="flex-col items-center justify-center hidden mb-8 space-y-8 lg:flex md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
                     <img src="{{ asset('images/talkshow/alamanda-shantika.png') }}" alt="speaker"
-                        class="mx-auto w-36 lg:w-56 md:hover:scale-105 md:duration-300">
+                        class="w-56 mx-auto md:hover:scale-105 md:duration-300">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Alamanda Shantika Santoso</h1>
                         <p class="text-sm md:text-base text-liteGray">CEO & Founder BINAR</p>
