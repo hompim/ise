@@ -31,7 +31,7 @@ class Index extends LivewireDatatable
                 "Website/Aplikasi Sejuta Cita"
             ]),
             Column::callback(['id'], function ($id) {
-                return view('livewire.pages.icon.talkshow.admin.components.datatable-action', ['id' => $id]);
+                return view('livewire.pages.icon.talkshow.admin.peserta.components.datatable-action', ['id' => $id]);
             })
         ];
     }
