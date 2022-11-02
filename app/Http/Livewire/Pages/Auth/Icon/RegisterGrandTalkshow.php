@@ -76,7 +76,7 @@ class RegisterGrandTalkshow extends Component
     public function mount()
     {
         $this->name = Auth::user()->name;
-        $this->info_source = 'Media Sosial ISE! 2022';
+        $this->info_source = 'Pilih sumber info';
     }
 
     public function closeModal()

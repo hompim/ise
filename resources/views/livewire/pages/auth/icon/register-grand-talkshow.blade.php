@@ -43,7 +43,7 @@
                         class="w-full p-2 bg-transparent rounded-md text-liteGray focus:outline-none autofill:bg-transparent focus:border-pink-200 focus:ring-pink-200"
                         required>
                         <option value="" class="bg-liteBlack" selected>Pilih sumber info</option>
-                        <option value="Iklan tentang ISE" class="bg-liteBlack">Iklan tentang ISE! 2022</option>
+                        <option value="Iklan tentang ISE! 2022" class="bg-liteBlack">Iklan tentang ISE! 2022</option>
                         <option value="Media Sosial ISE! 2022" class="bg-liteBlack">Media Sosial ISE! 2022</option>
                         <option value="Media Sosial selain ISE! 2022 (info lomba, dll)" class="bg-liteBlack">Media
                             Sosial selain ISE!
