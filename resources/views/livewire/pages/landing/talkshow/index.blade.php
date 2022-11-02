@@ -108,41 +108,49 @@
     <!-- make card start -->
     <div
         class="flex flex-col justify-center items-center space-y-36  mb-[10px] lg:mb-[200px] sm:gap-6 sm:justify-center font-poppins text-[#B5B3BC] gap-4 lg:gap-6">
-        {{-- 1. --}}
         <div class="grid grid-cols-1 px-4 lg:grid-cols-3 lg:pr-32">
             <div
                 class="flex flex-col items-center justify-center mb-8 space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
+                    <img src="{{ asset('images/talkshow/speaker-onno-w.png') }}" alt="speaker"
+                        class="w-56 mx-auto md:hover:scale-105 md:duration-300">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
-                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Grand Talkshow</p>
+                        <h1 class="text-base font-semibold md:text-xl">Onno W. Purbo, Ph. D</h1>
+                        <p class="text-sm md:text-base text-liteGray">Pakar Teknologi Informasi Indonesia</p>
+                        <p class="text-sm md:text-base text-liteGray">Speaker</p>
                     </div>
                 </div>
             </div>
             <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
                 <div class="flex flex-col space-y-8">
                     <h4 class="text-2xl font-bold text-white lg:text-3xl">
-                        Business Digital as Bridge Between <br>
-                        Business and Technology
+                        Protect Our Data and Privacy to Secure Our <br>
+                        Digital Life
                     </h4>
-                    <p class="text-base font-medium lg:text-lg">Digitalisasi bisnis menggunakan media sosial tak
-                        selamanya memberikan hasil yang baik sehingga menjadi tantangan tersendiri yang harus dihadapi
-                        para pemilik bisnis. Topik ini diusung untuk memberikan modal pengetahuan dalam memanfaatkan
-                        media sosial secara tepat dan optimal sebagai media dalam proses digitalisasi bisnis.
+                    <p class="text-base font-medium lg:text-lg">Semakin canggihnya teknologi membuat semakin
+                        mudahnya
+                        data-data pribadi seseorang ditemukan. Pada talkshow kali ini juga akan memberikan
+                        informasi dan
+                        edukasi kepada kita tentang mengapa data pribadi dapat mudah tersebar dan bagaimana
+                        seseorang
+                        harus menjaga data pribadinya tersebut agar privasi tetap terjaga di era yang serba
+                        digital ini.
                     </p>
                 </div>
             </div>
         </div>
+
         {{-- 2. --}}
         <div class="grid grid-cols-1 px-4 lg:grid-cols-3 lg:pl-32">
             <div
                 class="flex flex-col items-center justify-center mb-8 space-y-8 lg:hidden md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
+                    <img src="{{ asset('images/talkshow/alamanda-shantika.png') }}" alt="speaker"
+                        class="w-56 mx-auto md:hover:scale-105 md:duration-300">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
-                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Grand Talkshow</p>
+                        <h1 class="text-base font-semibold md:text-xl">Alamanda Shantika Santoso</h1>
+                        <p class="text-sm md:text-base text-liteGray">CEO & Founder BINAR</p>
+                        <p class="text-sm md:text-base text-liteGray">Speaker</p>
                     </div>
                 </div>
             </div>
@@ -162,41 +170,44 @@
             <div
                 class="flex-col items-center justify-center hidden mb-8 space-y-8 lg:flex md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker" class="w-1/2 md:w-[211px] mx-auto">
+                    <img src="{{ asset('images/talkshow/alamanda-shantika.png') }}" alt="speaker"
+                        class="w-56 mx-auto md:hover:scale-105 md:duration-300">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
-                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Grand Talkshow</p>
+                        <h1 class="text-base font-semibold md:text-xl">Alamanda Shantika Santoso</h1>
+                        <p class="text-sm md:text-base text-liteGray">CEO & Founder BINAR</p>
+                        <p class="text-sm md:text-base text-liteGray">Speaker</p>
                     </div>
                 </div>
             </div>
         </div>
-        {{-- 3. --}}
+        {{-- 1. --}}
         <div class="grid grid-cols-1 px-4 lg:grid-cols-3 lg:pr-32">
             <div
                 class="flex flex-col items-center justify-center mb-8 space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/talkshow/speaker-onno-w.png') }}" alt="speaker"
-                        class="w-36 lg:w-56 mx-auto md:hover:scale-105 md:duration-300">
+                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker"
+                        class="w-1/2 md:w-[211px] mx-auto">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
                         <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Pakar Teknologi Informasi Indonesia</p>
+                        <p class="text-sm md:text-base text-liteGray">Grandtalkshow</p>
                     </div>
                 </div>
             </div>
             <div class="bg-[#191A1E] lg:col-span-2 w-full h-full rounded-3xl p-12 lg:p-16">
                 <div class="flex flex-col space-y-8">
                     <h4 class="text-2xl font-bold text-white lg:text-3xl">
-                        Protect Our Data and Privacy to Secure Our <br>
-                        Digital Life
+                        Business Digital as Bridge Between <br>
+                        Business and Technology
                     </h4>
-                    <p class="text-base font-medium lg:text-lg">Semakin canggihnya teknologi membuat semakin mudahnya
-                        data-data pribadi seseorang ditemukan. Pada talkshow kali ini juga akan memberikan informasi dan
-                        edukasi kepada kita tentang mengapa data pribadi dapat mudah tersebar dan bagaimana seseorang
-                        harus menjaga data pribadinya tersebut agar privasi tetap terjaga di era yang serba digital ini.
+                    <p class="text-base font-medium lg:text-lg">Digitalisasi bisnis menggunakan media sosial tak
+                        selamanya memberikan hasil yang baik sehingga menjadi tantangan tersendiri yang harus dihadapi
+                        para pemilik bisnis. Topik ini diusung untuk memberikan modal pengetahuan dalam memanfaatkan
+                        media sosial secara tepat dan optimal sebagai media dalam proses digitalisasi bisnis.
                     </p>
                 </div>
             </div>
         </div>
+
 
     </div>
     <!-- make card end -->
@@ -207,7 +218,8 @@
 
         {{-- Start Timeline --}}
         <div class="mt-10 font-poppins">
-            <h1 class="mb-10 md:mb-24 font-bold text-white font-poppins text-[27.75px] md:text-7xl text-center">Mark
+            <h1 class="mb-10 md:mb-24 font-bold text-white font-poppins text-[27.75px] md:text-7xl text-center">
+                Mark
                 your calender
                 and <br> follow the
                 <span
@@ -258,7 +270,8 @@
                     <div
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
-                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa itu Startup Academy?</h1>
+                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa itu Startup Academy?
+                            </h1>
                             <div x-show="!open">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -273,9 +286,11 @@
                             </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
-                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Startup Academy adalah salah satu
+                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Startup Academy adalah salah
+                                satu
                                 sub-event ICON pada Information Systems Expo! 2022 yang merupakan acara edukasi
-                                berbentuk workshop tematik seputar dunia Startup untuk membentuk The Next Startup
+                                berbentuk workshop tematik seputar dunia Startup untuk membentuk The Next
+                                Startup
                                 Founder dari mahasiswa di seluruh Indonesia.</h1>
                         </div>
                     </div>
@@ -287,7 +302,8 @@
                     <div
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
-                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Kapan acara berlangsung?</h1>
+                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Kapan acara berlangsung?
+                            </h1>
                             <div x-show="!open">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -302,7 +318,8 @@
                             </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
-                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Startup Academy adakan berlangsung
+                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Startup Academy adakan
+                                berlangsung
                                 pada hari Sabtu-Minggu, 10-11 September 2022 dan 17-18 September 2022.</h1>
                         </div>
                     </div>
@@ -314,7 +331,8 @@
                     <div
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
-                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana alur pendaftaran Startup
+                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana alur pendaftaran
+                                Startup
                                 Academy?
                             </h1>
                             <div x-show="!open">
@@ -331,11 +349,15 @@
                             </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
-                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Pendaftaran dapat dilakukan dengan
-                                membuat akun pada https://ise-its.com/icon. Khusus untuk Startup Academy, peserta hanya
-                                perlu membuat 1 akun atas nama Ketua Tim. Langkah-langkah pendaftaran lebih lanjut dapat
+                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Pendaftaran dapat dilakukan
+                                dengan
+                                membuat akun pada https://ise-its.com/icon. Khusus untuk Startup Academy,
+                                peserta hanya
+                                perlu membuat 1 akun atas nama Ketua Tim. Langkah-langkah pendaftaran lebih
+                                lanjut dapat
                                 dilihat di dokumen Guidebook pada bagian Tata Cara Pendaftaran. Setelah berhasil
-                                mendaftar, tunggu hasil seleksi. Peserta yang lolos seleksi selanjutnya dapat mengikuti
+                                mendaftar, tunggu hasil seleksi. Peserta yang lolos seleksi selanjutnya dapat
+                                mengikuti
                                 rangkaian Startup Academy Academy.</h1>
                         </div>
                     </div>
@@ -347,7 +369,8 @@
                     <div
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
-                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Berapa banyak kuota tim peserta
+                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Berapa banyak kuota tim
+                                peserta
                                 Startup Academy?</h1>
                             <div x-show="!open">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
@@ -363,7 +386,8 @@
                             </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
-                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Kuota peserta Startup Academy adalah
+                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Kuota peserta Startup
+                                Academy adalah
                                 sebanyak: 20 tim
                             </h1>
                         </div>
@@ -376,7 +400,8 @@
                     <div
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
-                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana proses seleksi tim?</h1>
+                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Bagaimana proses seleksi
+                                tim?</h1>
                             <div x-show="!open">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -391,8 +416,10 @@
                             </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
-                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Seleksi tim peserta Startup Academy
-                                didasarkan pada inovasi dan keunikan ide startup yang diajukan. Keputusan panitia tidak
+                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Seleksi tim peserta Startup
+                                Academy
+                                didasarkan pada inovasi dan keunikan ide startup yang diajukan. Keputusan
+                                panitia tidak
                                 dapat diganggu gugat.</h1>
                         </div>
                     </div>
@@ -404,7 +431,8 @@
                     <div
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
-                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa saja syarat peserta Startup
+                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa saja syarat peserta
+                                Startup
                                 Academy?</h1>
                             <div x-show="!open">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
@@ -420,11 +448,16 @@
                             </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
-                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Peserta adalah mahasiswa aktif di
-                                tingkat D3/D4/S1/sederajat dibuktikan dengan Kartu Tanda Mahasiswa. Jika hilang atau
-                                belum memiliki, peserta diperbolehkan untuk menggantinya dengan bukti lain, yaitu Surat
-                                Keterangan Mahasiswa Aktif atau Transkrip Akademik terbaru. Peserta adalah tim dengan 3
-                                anggota yang memiliki ide startup baru, belum beroperasi, dan belum dilombakan dalam
+                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Peserta adalah mahasiswa
+                                aktif di
+                                tingkat D3/D4/S1/sederajat dibuktikan dengan Kartu Tanda Mahasiswa. Jika hilang
+                                atau
+                                belum memiliki, peserta diperbolehkan untuk menggantinya dengan bukti lain,
+                                yaitu Surat
+                                Keterangan Mahasiswa Aktif atau Transkrip Akademik terbaru. Peserta adalah tim
+                                dengan 3
+                                anggota yang memiliki ide startup baru, belum beroperasi, dan belum dilombakan
+                                dalam
                                 ajang apapun sebelumnya. </h1>
                         </div>
                     </div>
@@ -435,7 +468,8 @@
                     <div
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
-                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Berapa biaya pendaftaran Startup
+                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Berapa biaya pendaftaran
+                                Startup
                                 Academy?</h1>
                             <div x-show="!open">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
@@ -451,8 +485,10 @@
                             </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
-                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Biaya pendaftaran Startup Academy
-                                adalah gratis. Setelah lolos proses seleksi, Peserta yang lolos diharuskan membayar
+                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Biaya pendaftaran Startup
+                                Academy
+                                adalah gratis. Setelah lolos proses seleksi, Peserta yang lolos diharuskan
+                                membayar
                                 commitment fee sebesar Rp150.000. </h1>
                         </div>
                     </div>
@@ -463,7 +499,8 @@
                     <div
                         class="bg-liteBlack w-fit md:w-[1064px] h-max mx-4 md:mx-auto text-white px-4 md:px-10 py-2 md:py-4 items-center rounded-2xl">
                         <div class="flex flex-row justify-between mx-auto">
-                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa saja yang didapatkan dari ISE!
+                            <h1 class="w-[80%] text-base md:text-lg font-semibold">Apa saja yang didapatkan
+                                dari ISE!
                                 Academy?</h1>
                             <div x-show="!open">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
@@ -479,9 +516,12 @@
                             </div>
                         </div>
                         <div x-show="open" x-cloak class="pt-4" x-transition>
-                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Pada Startup Academy, peserta akan
-                                mendapatkan bimbingan dan umpan balik dari expert di dunia Startup terkait ide yang
-                                dimiliki, serta materi workshop mengenai dasar-dasar Startup (termasuk recording dan
+                            <h1 class="w-[80%] text-liteGray text-base md:text-lg">Pada Startup Academy,
+                                peserta akan
+                                mendapatkan bimbingan dan umpan balik dari expert di dunia Startup terkait ide
+                                yang
+                                dimiliki, serta materi workshop mengenai dasar-dasar Startup (termasuk recording
+                                dan
                                 file materi), dan tentunya sertifikat bagi seluruh peserta. </h1>
                         </div>
                     </div>
@@ -493,7 +533,8 @@
 
         {{-- Start Event Partner --}}
         <div class="hidden mt-32 mb-24 md:mt-60 font-poppins">
-            <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Our Event Partner
+            <h1 class="text-[27.75px] md:text-7xl font-bold text-white text-center mb-10 md:mb-24">Our Event
+                Partner
             </h1>
             <div class="px-20 py-10 mx-auto w-80 xl:w-fit h-max bg-liteBlack">
                 <div class="flex flex-col items-center justify-center">
