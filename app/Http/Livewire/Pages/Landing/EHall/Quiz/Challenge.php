@@ -26,7 +26,7 @@ class Challenge extends Component
 
         $check_post_count = Auth::user()->userable->challenge()->today()->count();
 
-        if ($check_post_count == 2) {
+        if ($check_post_count >= 2) {
             return $this->emit('failed', 'Send Challenge Failed, You can only send 2 challenge per day');
         }
 

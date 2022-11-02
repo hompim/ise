@@ -4,4 +4,4 @@
 @section('message',
     'Selamat, Anda sudah berhasil mendaftarkan diri Anda! Jangan lupa cek selalu email kamu untuk update
     informasi terbaru dari kami.')
-@section('dashboard', '/dashboard/peserta')
+@section('dashboard', '/dashboard/peserta/talkshow/beranda')
