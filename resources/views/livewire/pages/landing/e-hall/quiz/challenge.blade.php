@@ -468,12 +468,19 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        Livewire.on('success', () => {
+        Livewire.on('success', (message) => {
             Swal.fire({
                 icon: 'success',
-                title: 'Upload Berhasil!! Point +250',
+                title: message,
                 showConfirmButton: false,
                 timer: 1500
+            })
+        })
+        Livewire.on('failed', (message) => {
+            Swal.fire({
+                icon: 'error',
+                title: message,
+                showConfirmButton: true,
             })
         })
     </script>

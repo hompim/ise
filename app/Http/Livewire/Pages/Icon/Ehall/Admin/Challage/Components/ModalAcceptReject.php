@@ -30,7 +30,7 @@ class ModalAcceptReject extends ModalComponent
             ]);
         } elseif ($this->type == 'accept') {
             $this->challage->update([
-                'is_accepted' => 'accepted',
+                'is_accepted' => 'success',
             ]);
 
             $this->challage->member->increment('hois_point', 250);

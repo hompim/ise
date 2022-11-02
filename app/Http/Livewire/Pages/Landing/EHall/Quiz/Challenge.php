@@ -24,6 +24,12 @@ class Challenge extends Component
             'ss_path' => 'required|image|max:2048',
         ]);
 
+        $check_post_count = Auth::user()->userable->challenge()->today()->count();
+
+        if ($check_post_count == 2) {
+            return $this->emit('failed', 'Send Challenge Failed, You can only send 2 challenge per day');
+        }
+
         $name = date('YmdHis') . '_EHALL_CHALLAGE_' . Auth::user()->name . '.' . $this->ss_path->getClientOriginalExtension();
         $this->ss_path->storeAs('ehall_challage', $name, 'public');
         $path = 'ehall_challage/' . $name;
@@ -34,6 +40,8 @@ class Challenge extends Component
             'is_accepted' => 'pending',
         ]);
 
-        $this->emit('success', 'Challenge has been sent!');
+        $chance = 2 - $check_post_count;
+
+        $this->emit('success', 'Challenge has been sent! You can send ' . $chance . ' more challenge today');
     }
 }
