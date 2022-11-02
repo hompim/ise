@@ -24,6 +24,7 @@ class Index extends LivewireDatatable
             Column::name('users.name')->label('Name')->searchable(),
             Column::name('users.email')->label('Email')->searchable(),
             Column::name('ehall_challages.is_accepted')->label('Status'),
+            Column::name('ehall_challages.created_at')->label('Tanggal Upload')->searchable(),
             Column::callback(['id', 'is_accepted'], function ($id, $is_accepted) {
                 return view('livewire.pages.icon.ehall.admin.challage.components.datatable-action', ['id' => $id, 'status' => $is_accepted]);
             })
