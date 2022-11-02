@@ -200,6 +200,12 @@ class Sidebar extends Component
                         'route-name' => 'ehall.admin.score'
                     ],
                     [
+                        'type' => 'menu',
+                        'icon' => 'cil-book',
+                        'title' => 'Challenge',
+                        'route-name' => 'ehall.admin.challenge'
+                    ],
+                    [
                         'type' => 'divider',
                         'tag' => 'mb-3'
                     ],

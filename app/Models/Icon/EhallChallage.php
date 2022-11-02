@@ -14,4 +14,9 @@ class EhallChallage extends Model
         'ss_path',
         'is_accepted',
     ];
+
+    public function member()
+    {
+        return $this->belongsTo(Member::class, 'member_id');
+    }
 }

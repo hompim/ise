@@ -31,9 +31,9 @@ class Challenge extends Component
         $challege = EhallChallage::create([
             'member_id' => Auth::user()->userable->id,
             'ss_path' => $path,
+            'is_accepted' => 'pending',
         ]);
 
-        Auth::user()->userable->increment('hois_point', 250);
         $this->emit('success', 'Challenge has been sent!');
     }
 }

@@ -80,6 +80,7 @@ Route::middleware('auth')->group(function () {
                     Route::get('artikel', \App\Http\Livewire\Pages\Icon\Ehall\Admin\Article\Index::class)->name('ehall.admin.artikel');
                     Route::get('quiz', \App\Http\Livewire\Pages\Icon\Ehall\Admin\Quiz\Index::class)->name('ehall.admin.quiz');
                     Route::get('score', \App\Http\Livewire\Pages\Icon\Ehall\Admin\Score\Index::class)->name('ehall.admin.score');
+                    Route::get('challenge', \App\Http\Livewire\Pages\Icon\Ehall\Admin\Challage\Index::class)->name('ehall.admin.challenge');
                 });
 
                 Route::group(['prefix' => 'webinar'], function () {
