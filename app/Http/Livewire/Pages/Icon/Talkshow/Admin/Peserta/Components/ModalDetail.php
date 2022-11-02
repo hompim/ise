@@ -4,10 +4,11 @@ namespace App\Http\Livewire\Pages\Icon\Talkshow\Admin\Peserta\Components;
 
 use App\Models\Icon\IconGrandTalkshow;
 use Livewire\Component;
+use LivewireUI\Modal\ModalComponent;
 
-class ModalDetail extends Component
+class ModalDetail extends ModalComponent
 {
-    public $webinar;
+    public $talkshow;
 
     public function render()
     {
@@ -16,7 +17,7 @@ class ModalDetail extends Component
 
     public function mount($id)
     {
-        $this->webinar = IconGrandTalkshow::find($id);
+        $this->talkshow = IconGrandTalkshow::find($id);
     }
 
     public static function modalMaxWidth(): string
