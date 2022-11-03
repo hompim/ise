@@ -2,6 +2,7 @@
 
 namespace App\Models\Icon;
 
+use App\Models\Member;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,5 +19,10 @@ class EhallChallage extends Model
     public function member()
     {
         return $this->belongsTo(Member::class, 'member_id');
+    }
+
+    public function scopeToday($builder)
+    {
+        return $builder->where('created_at', '>', today());
     }
 }

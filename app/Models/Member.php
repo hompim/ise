@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Bionix\BionixInvoice;
 use App\Models\Bionix\BionixSchool;
 use App\Models\Bionix\IsClassData;
+use App\Models\Icon\EhallChallage;
 use App\Models\Icon\EhallQuestMember;
 use App\Models\Icon\IconGrandTalkshow;
 use App\Models\Icon\IconWebinarKickOff;
@@ -20,6 +21,11 @@ class Member extends Model
     public function roadshow_school()
     {
         return $this->belongsTo(BionixSchool::class, 'roadshow_school_id');
+    }
+
+    public function challenge()
+    {
+        return $this->hasMany(EhallChallage::class, 'member_id');
     }
 
     public function quizAnswers()
