@@ -2,8 +2,9 @@
     <div class="p-4 shadow-md rounded-xl" x-data="{ open: false }" style="background-color: #191a1e;border:0">
         <button class="flex flex-col items-start w-full" @click="open=!open">
             <div class="flex flex-row items-center w-full justify-content-between">
-                <h2 class="text-xl font-bold capitalize">{{ $type == 'video' ? 'Video' : 'Proposal' }}</h2>
-                <i class="fas fa-chevron-down" x-show="!open"></i>
+                <h2 class="text-xl font-bold capitalize">{{ $type == 'video' ? 'Video' : ('file' ? 'Proposal' : 'PPT') }}
+                </h2>
+                <i class="fas fa-chevron-down" x-show="!open"></i>PPT
                 <i class="fas fa-chevron-up" x-show="open"></i>
             </div>
             <div>
@@ -20,7 +21,7 @@
                     </button>
                 </a> --}}
                 <form wire:submit.prevent="submitTask" method="post" enctype="multipart/form-data">
-                    @if ($type == 'file')
+                    @if ($type == 'file' || $type == 'ppt')
                         @if (!Auth::user()->userable->bionix->submission()->whereNotNull('file_path')->first())
                             <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
                                 id="fileTask" accept=".pdf,.zip,.rar">

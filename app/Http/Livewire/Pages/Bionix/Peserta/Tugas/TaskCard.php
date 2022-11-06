@@ -30,7 +30,7 @@ class TaskCard extends Component
 
     public function submitTask()
     {
-        if ($this->type == 'file') {
+        if ($this->type == 'file' || $this->type == 'ppt') {
             $this->validate([
                 'fileTask' => 'required|mimes:pdf|max:8192'
             ]);
@@ -46,13 +46,13 @@ class TaskCard extends Component
         // }
 
         $this->emit('onUpload');
-        if ($this->type == 'file') {
+        if ($this->type == 'file' || $this->type == 'ppt') {
             if (!is_string($this->fileTask)) {
                 $name = date('YmdHis') . '_BIONIX SUBMISSION_' . Auth::user()->userable->bionix->team_name . '.' . $this->fileTask->getClientOriginalExtension();
                 $this->fileTask->storeAs('jawaban_tugas_bionix', $name, 'public');
                 $path = 'jawaban_tugas_bionix/' . $name;
 
-                
+
 
                 BionixSubmission::create([
                     'team_id' => Auth::user()->userable->bionix->id,

@@ -40,6 +40,7 @@
         @if (Auth::user()->userable->bionix_type == 'App\Models\Bionix\TeamJuniorData')
             @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'file', 'for' => 'Junior Semifinal'])
             @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'video', 'for' => 'Junior Semifinal'])
+            @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'ppt', 'for' => 'Junior Final'])
         @else
             @livewire('pages.bionix.peserta.tugas.task-card', ['type' => 'file', 'for' => 'Senior Penyisihan'])
         @endif
