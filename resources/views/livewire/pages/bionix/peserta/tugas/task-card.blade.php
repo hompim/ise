@@ -23,11 +23,11 @@
                 </a> --}}
                 <form wire:submit.prevent="submitTask" method="post" enctype="multipart/form-data">
                     @if ($type == 'file' || $type == 'ppt')
-                        @if (!Auth::user()->userable->bionix->submission()->whereNotNull('file_path')->first())
+                        @if (!Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('file_path')->first())
                             <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
                                 id="fileTask" accept=".pdf,.zip,.rar">
                         @else
-                            <a href="{{ asset('storage/' .Auth::user()->userable->bionix->submission()->whereNotNull('file_path')->first()->file_path) }}"
+                            <a href="{{ asset('storage/' .Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('file_path')->first()->file_path) }}"
                                 target="_blank">
                                 <button type="button"
                                     class="px-4 py-2 mx-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">

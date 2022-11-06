@@ -30,9 +30,13 @@ class TaskCard extends Component
 
     public function submitTask()
     {
-        if ($this->type == 'file' || $this->type == 'ppt') {
+        if ($this->type == 'file') {
             $this->validate([
                 'fileTask' => 'required|mimes:pdf|max:8192'
+            ]);
+        } elseif ($this->type == 'ppt') {
+            $this->validate([
+                'fileTask' => 'required|max:8192'
             ]);
         } else {
             $this->validate([
