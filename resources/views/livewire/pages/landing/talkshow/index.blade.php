@@ -185,11 +185,12 @@
             <div
                 class="flex flex-col items-center justify-center mb-8 space-y-8 md:space-y-0 md:space-x-12 md:flex-row mx-14 md:mx-20 font-poppins">
                 <div class="w-[280px] h-full flex flex-col">
-                    <img src="{{ asset('images/unknown_man.png') }}" alt="speaker"
-                        class="w-1/2 md:w-[211px] mx-auto">
+                    <img src="{{ asset('images/talkshow/Andhika-Sudarman.png') }}" alt="speaker"
+                        class="w-56 mx-auto md:hover:scale-105 md:duration-300">
                     <div class="flex flex-col px-3 py-2 text-center text-white bg-liteBlack rounded-2xl">
-                        <h1 class="text-base font-semibold md:text-xl">Speaker</h1>
-                        <p class="text-sm md:text-base text-liteGray">Grandtalkshow</p>
+                        <h1 class="text-base font-semibold md:text-xl">Andhika Sudarman</h1>
+                        <p class="text-sm md:text-base text-liteGray">Founder & CEO of Deall and SejutaCita</p>
+                        <p class="text-sm md:text-base text-liteGray">Speaker</p>
                     </div>
                 </div>
             </div>
