@@ -2,9 +2,10 @@
     <div class="p-4 shadow-md rounded-xl" x-data="{ open: false }" style="background-color: #191a1e;border:0">
         <button class="flex flex-col items-start w-full" @click="open=!open">
             <div class="flex flex-row items-center w-full justify-content-between">
-                <h2 class="text-xl font-bold capitalize">{{ $type == 'video' ? 'Video' : ('file' ? 'Proposal' : 'PPT') }}
+                <h2 class="text-xl font-bold capitalize">
+                    {{ $type == 'ppt' ? 'PPT' : ($type == 'file' ? 'Proposal' : 'Video') }}</h2>
                 </h2>
-                <i class="fas fa-chevron-down" x-show="!open"></i>PPT
+                <i class="fas fa-chevron-down" x-show="!open"></i>
                 <i class="fas fa-chevron-up" x-show="open"></i>
             </div>
             <div>

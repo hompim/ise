@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('team_type');
             $table->string('file_path')->nullable();
             $table->string('video_link')->nullable();
-            $table->enum('submission_type',['Junior Semifinal','Senior Penyisihan','Senior Semifinal']);
+            $table->enum('submission_type',['Junior Semifinal','Senior Penyisihan','Senior Semifinal', 'Junior Final']);
             $table->timestamps();
         });
     }
