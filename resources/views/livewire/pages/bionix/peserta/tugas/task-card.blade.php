@@ -27,7 +27,7 @@
                             <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
                                 id="fileTask" accept=".pdf,.zip,.rar">
                             @error('fileTask')
-                                <div class="text-red-500 text-sm">{{ $message }}</div>
+                                <div class="text-sm text-red-500">{{ $message }}</div>
                             @enderror
                         @else
                             <a href="{{ asset('storage/' .Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('file_path')->first()->file_path) }}"
@@ -40,9 +40,10 @@
                         @endif
                     @else
                         @if (!Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('video_link')->first())
+                            <h2 class="text-red-500">Batas pengumpulan PPT final BSL sudah lewat!</h2>
                             <input type="text" class="text-black w-100" wire:model.defer="linkTask"
                                 class="form-control-file" name="linkTask" id="linkTask"
-                                placeholder="Masukkan link jawaban submission">
+                                placeholder="Masukkan link jawaban submission" disabled>
                             <small>*Link Google Drive (atau tempat penyimpanan cloud lainnya) yang menuju ke file
                                 submission</small>
                         @else
