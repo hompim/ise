@@ -34,10 +34,6 @@ class TaskCard extends Component
             $this->validate([
                 'fileTask' => 'required|mimes:pdf|max:8192'
             ]);
-        } elseif ($this->type == 'ppt') {
-            $this->validate([
-                'fileTask' => 'required|max:8192'
-            ]);
         } else {
             $this->validate([
                 'linkTask' => 'required'

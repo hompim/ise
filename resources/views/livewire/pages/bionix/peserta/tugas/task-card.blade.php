@@ -26,6 +26,9 @@
                         @if (!Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('file_path')->first())
                             <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
                                 id="fileTask" accept=".pdf,.zip,.rar">
+                            @error('fileTask')
+                                <div class="text-red-500 text-sm">{{ $message }}</div>
+                            @enderror
                         @else
                             <a href="{{ asset('storage/' .Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('file_path')->first()->file_path) }}"
                                 target="_blank">
@@ -39,7 +42,7 @@
                         @if (!Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('video_link')->first())
                             <input type="text" class="text-black w-100" wire:model.defer="linkTask"
                                 class="form-control-file" name="linkTask" id="linkTask"
-                                placeholder="Masukkan link video">
+                                placeholder="Masukkan link jawaban submission">
                         @else
                             <a target="_blank"
                                 href="//{{ Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('video_link')->first()->video_link }}">
