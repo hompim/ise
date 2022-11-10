@@ -10,7 +10,7 @@
         <a href="{{$video_link}}" target="_blank">
             <button
                 class="p-1 text-red-600 hover:bg-red-600 hover:text-white rounded">
-                <i class="fab fa-youtube"></i>
+                <i class="fa fa-link"></i>
             </button>
         </a>
     @endif

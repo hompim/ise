@@ -43,9 +43,11 @@
                             <input type="text" class="text-black w-100" wire:model.defer="linkTask"
                                 class="form-control-file" name="linkTask" id="linkTask"
                                 placeholder="Masukkan link jawaban submission">
+                            <small>*Link Google Drive (atau tempat penyimpanan cloud lainnya) yang menuju ke file
+                                submission</small>
                         @else
                             <a target="_blank"
-                                href="//{{ Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('video_link')->first()->video_link }}">
+                                href="{{ Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('video_link')->first()->video_link }}">
                                 <button type="button"
                                     class="px-4 py-2 mx-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
                                     title="{{ Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('video_link')->first()->video_link }}">
@@ -54,7 +56,8 @@
                             </a>
                         @endif
                     @endif
-                    <button class="px-4 py-2 mx-2 mt-4 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
+                    <button wire:loading.remove
+                        class="px-4 py-2 mx-2 mt-4 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
                         <i class="mr-2 fas fa-upload"></i>Upload
                     </button>
                 </form>

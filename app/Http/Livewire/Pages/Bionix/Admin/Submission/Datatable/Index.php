@@ -37,7 +37,7 @@ class Index extends LivewireDatatable
             } elseif ($this->type == 'ppt') {
                 return BionixSubmission::where('submission_type', $this->params)
                     ->where('team_type', 'App\Models\Bionix\TeamJuniorData')
-                    ->whereNotNull('file_path')
+                    ->whereNotNull('video_link')
                     ->whereRaw('bionix_submissions.id in (select max(bionix_submissions.id) from bionix_submissions where video_link is not null group by team_id)')
                     ->join('team_junior_data as team', 'team.id', 'bionix_submissions.team_id');
             }
@@ -62,12 +62,12 @@ class Index extends LivewireDatatable
                 return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['type' => 'file', 'file_path' => $file_path]);
             })]);
         } else {
-            if ($this->type == "video") {
-                $columns = array_merge($columns, [Column::raw('video_link')->label('Link Youtube')]);
+            if ($this->type == "video" || $this->type == "ppt") {
+                $columns = array_merge($columns, [Column::raw('video_link')->label('Link Submission')]);
                 $columns = array_merge($columns, [Column::callback(['video_link'], function ($video_link) {
                     return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['type' => 'video', 'video_link' => $video_link]);
                 })]);
-            } elseif ($this->type == "file" || $this->type == "ppt") {
+            } elseif ($this->type == "file") {
                 $columns = array_merge($columns, [Column::callback(['file_path'], function ($file_path) {
                     return view('livewire.pages.bionix.admin.submission.components.datatable-action', ['type' => 'file', 'file_path' => $file_path]);
                 })]);
