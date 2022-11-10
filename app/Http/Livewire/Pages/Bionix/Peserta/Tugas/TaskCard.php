@@ -50,12 +50,11 @@ class TaskCard extends Component
         // }
 
         $this->emit('onUpload');
-        if ($this->type == 'file' || $this->type == 'ppt') {
+        if ($this->type == 'file') {
             if (!is_string($this->fileTask)) {
                 $name = date('YmdHis') . '_BIONIX SUBMISSION_' . Auth::user()->userable->bionix->team_name . '.' . $this->fileTask->getClientOriginalExtension();
                 $this->fileTask->storeAs('jawaban_tugas_bionix', $name, 'public');
                 $path = 'jawaban_tugas_bionix/' . $name;
-
 
 
                 BionixSubmission::create([
@@ -66,7 +65,6 @@ class TaskCard extends Component
                 ]);
             }
         } else {
-
             BionixSubmission::create([
                 'team_id' => Auth::user()->userable->bionix->id,
                 'team_type' => Auth::user()->userable->bionix_type,

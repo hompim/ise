@@ -22,7 +22,7 @@
                     </button>
                 </a> --}}
                 <form wire:submit.prevent="submitTask" method="post" enctype="multipart/form-data">
-                    @if ($type == 'file' || $type == 'ppt')
+                    @if ($type == 'file')
                         @if (!Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('file_path')->first())
                             <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
                                 id="fileTask" accept=".pdf,.zip,.rar">
@@ -36,17 +36,17 @@
                             </a>
                         @endif
                     @else
-                        @if (!Auth::user()->userable->bionix->submission()->whereNotNull('video_link')->first())
+                        @if (!Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('video_link')->first())
                             <input type="text" class="text-black w-100" wire:model.defer="linkTask"
                                 class="form-control-file" name="linkTask" id="linkTask"
                                 placeholder="Masukkan link video">
                         @else
                             <a target="_blank"
-                                href="//{{ Auth::user()->userable->bionix->submission()->whereNotNull('video_link')->first()->video_link }}">
+                                href="//{{ Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('video_link')->first()->video_link }}">
                                 <button type="button"
                                     class="px-4 py-2 mx-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
-                                    title="{{ Auth::user()->userable->bionix->submission()->whereNotNull('video_link')->first()->video_link }}">
-                                    <i class="mr-2 fas fa-cloud-download-alt"></i>Lihat Video
+                                    title="{{ Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('video_link')->first()->video_link }}">
+                                    <i class="mr-2 fas fa-cloud-download-alt"></i>Buka Link Submission
                                 </button>
                             </a>
                         @endif
