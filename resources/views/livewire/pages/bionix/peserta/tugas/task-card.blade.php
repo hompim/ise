@@ -26,6 +26,9 @@
                         @if (!Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('file_path')->first())
                             <input type="file" wire:model.defer="fileTask" class="form-control-file" name="fileTask"
                                 id="fileTask" accept=".pdf,.zip,.rar">
+                            @error('fileTask')
+                                <div class="text-red-500 text-sm">{{ $message }}</div>
+                            @enderror
                         @else
                             <a href="{{ asset('storage/' .Auth::user()->userable->bionix->submission()->where('submission_type', $submission_type)->whereNotNull('file_path')->first()->file_path) }}"
                                 target="_blank">
