@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Pages\Bionix\Admin\Submission\Datatable;
 
 use App\Models\Bionix\BionixSubmission;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Mediconesystems\LivewireDatatables\BooleanColumn;
 use Mediconesystems\LivewireDatatables\Column;
@@ -29,16 +30,14 @@ class Index extends LivewireDatatable
                     ->whereNotNull('file_path')
                     ->join('team_junior_data as team', 'team.id', 'bionix_submissions.team_id');
             } elseif ($this->type == 'video') {
-                return BionixSubmission::where('submission_type', $this->params)
+                return BionixSubmission::where('submission_type', 'Junior Semifinal')
                     ->where('team_type', 'App\Models\Bionix\TeamJuniorData')
                     ->whereNotNull('video_link')
-                    ->whereRaw('bionix_submissions.id in (select max(bionix_submissions.id) from bionix_submissions where video_link is not null group by team_id)')
+                    ->distinct('team_id')
                     ->join('team_junior_data as team', 'team.id', 'bionix_submissions.team_id');
             } elseif ($this->type == 'ppt') {
-                return BionixSubmission::where('submission_type', $this->params)
+                return BionixSubmission::where('submission_type', 'Junior Final')
                     ->where('team_type', 'App\Models\Bionix\TeamJuniorData')
-                    ->whereNotNull('video_link')
-                    ->whereRaw('bionix_submissions.id in (select max(bionix_submissions.id) from bionix_submissions where video_link is not null group by team_id)')
                     ->join('team_junior_data as team', 'team.id', 'bionix_submissions.team_id');
             }
         }
