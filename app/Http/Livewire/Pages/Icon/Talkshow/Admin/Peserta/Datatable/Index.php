@@ -8,6 +8,7 @@ use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 
 class Index extends LivewireDatatable
 {
+    public $exportable = true;
     public function builder()
     {
         return IconGrandTalkshow::join('members', function ($q) {
@@ -22,6 +23,8 @@ class Index extends LivewireDatatable
     {
         return [
             Column::name('users.name')->label('Nama')->searchable(),
+            Column::name('users.whatsapp')->label('Whatsapp')->searchable(),
+            Column::name('users.email')->label('Email')->searchable(),
             Column::name('info_source')->label('Informasi Asal')->filterable([
                 "Media Sosial ISE! 2022",
                 "Media Sosial selain ISE! 2022 (info lomba, dll)",

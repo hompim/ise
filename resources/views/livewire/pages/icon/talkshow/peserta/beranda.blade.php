@@ -41,7 +41,7 @@
                         <div>
                             <label for="Email" class="mb-2 text-lg font-bold text-gray-300  mt-4">Link Virtual
                                 Background</label><br>
-                            -
+                            <a href="//ise-its.com/VBGPesertaGT">ise-its.com/VBGPesertaGT</a>
                         </div>
                     </div>
 
@@ -59,20 +59,22 @@
                     <div>
                         <div>
                             <label for="team_name" class="mb-2 font-bold text-gray-300">Hari, Tanggal</label><br>
-                            <p class="font-bold text-white">-</p>
+                            <p class="font-bold text-white">Saturday, 19th November 2022 at 10.00 AM (WIB</p>
                         </div>
                         <div>
                             <label for="Email" class="mb-2 font-bold text-gray-300 mt-4">Meeting ID</label><br>
-                            <p class="font-bold text-white">-</p>
+                            <p class="font-bold text-white">826 0695 5082</p>
                         </div>
                         <div>
                             <label for="Email" class="mb-2 font-bold text-gray-300 mt-4">Password</label><br>
-                            <p class="font-bold text-white">-</p>
+                            <p class="font-bold text-white">ISE</p>
                         </div>
                         <div>
                             <label for="Email" class="mb-2 font-bold text-gray-300   mt-4">Link Zoom</label><br>
                             <a target="_blank" href="#">
-                                <p class="font-bold text-blue-600">-</p>
+                                <p class="font-bold text-blue-600"><a
+                                        href="//ise-its.com/ISE!GrandTalkshow2022">ise-its.com/ISE!GrandTalkshow2022</a>
+                                </p>
                             </a>
                         </div>
                     </div>
