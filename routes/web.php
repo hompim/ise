@@ -44,6 +44,9 @@ use App\Http\Livewire\Pages\Landing\EHall\Quiz\Index as QuizIndex;
 use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Index as PrestasiIndex;
 use App\Http\Livewire\Pages\Landing\EHall\Prestasi\Content as PrestasiContent;
 use App\Http\Livewire\Pages\Landing\Talkshow\Index as TalkshowIndex;
+use App\Jobs\ProcessEmail;
+use App\Mail\TalkShowEmail;
+use App\Models\Icon\IconGrandTalkshow;
 
 /*
 |--------------------------------------------------------------------------
@@ -182,12 +185,20 @@ Route::get('/sendEmailUnikTidakLolosAcademy', function () {
 });
 
 Route::get('/sendEmail', function () {
-    $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->get();
+    // $dsa = IconAcademyDataScienceData::where('competition_round', 'Rejected')->get();
 
-    foreach ($dsa as $d) {
-        Mail::to($d->leader->email)->send(new IconSeleksiEmail($d->leader->name, 'Rejected'));
-        sleep(2);
+    // foreach ($dsa as $d) {
+    //     Mail::to($d->leader->email)->send(new IconSeleksiEmail($d->leader->name, 'Rejected'));
+    //     sleep(2);
+    // }
+
+    $user = IconGrandTalkshow::all();
+
+    foreach ($user as $u) {
+        ProcessEmail::dispatch($u->member->user->email, new TalkShowEmail());
     }
+
+
 
     return response()->json([
         'success' => true

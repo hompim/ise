@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire\Pages\Auth\Icon;
 
+use App\Mail\TalkShowEmail;
 use App\Models\Icon\IconGrandTalkshow;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManager;
 use Livewire\Component;
@@ -69,7 +71,7 @@ class RegisterGrandTalkshow extends Component
         ]);
 
         // Mail::to(Auth::user()->email)->send(new WebinarKickOffMail);
-        // Mail::to(Auth::user()->email)->send(new WebinarKickOffAcaraMail);
+        Mail::to(Auth::user()->email)->send(new TalkShowEmail);
         return redirect(route('talkshow.register-success'));
     }
 
