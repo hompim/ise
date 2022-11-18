@@ -82,7 +82,6 @@ class Index extends LivewireDatatable
                                  ) AS nomor')->defaultSort('desc'),
                 Column::name('team_name')->label('Nama Tim')->searchable(),
                 Column::name('info_source')->label('Informasi Asal'),
-                Column::name('city.name')->label('Kab/Kota/Provinsi')->filterable($this->cities->pluck('name')),
                 Column::name('competition_round')->filterable(['Penyisihan', 'Semifinal', 'Final'])->label('Babak'),
                 Column::name('profile_verif_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::name('payment_verif_status')->label('Status Pembayaran')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
