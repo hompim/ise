@@ -32,7 +32,7 @@ class TalkShowEmail extends Mailable
         //return $this->view('mails.talkshow-mail')->subject("ISE! Grand Talkshow 2022 Registration is Now Open!");
 
         $message = '<p><b>Dear, Metazen!</b></p>';
-        $message .= "<p>We would like to remind you that tomorrow ISE! Grand Talkshow 2022 will be held! Don't forget to join us on Saturday, 19th November 2022 at 10.00 AM (WIB). You’ll be able to join the talk show at the scheduled time by clicking the link below</p>";
+        $message .= "<p>Today is the day! ✨We would like to remind you that today ISE! Grand Talkshow 2022 will be held at 10.00 AM (WIB). Join the talk show at the specified time by clicking the link below.</p>";
         $message .= '<p>Link Zoom :  ise-its.com/ISE!GrandTalkshow2022<br>
         Meeting ID : 826 0695 5082<br>
         Passcode : ISE</p>';
@@ -53,7 +53,7 @@ class TalkShowEmail extends Mailable
         $message .= '<p><b>Best Regards,</b><br/>
 <b>ISE 2022</b><br/>
 <b>One Aim, One Goal, One ISE!</b> </p>';
-        return $this->subject('[D-1] ISE! Grand Talkshow 2022')->from('admin@ise-its.com', config('app.name'))->markdown(
+        return $this->subject('[D-DAY] ISE! Grand Talkshow 2022')->from('admin@ise-its.com', config('app.name'))->markdown(
             'vendor.mail.text.message',
             [
                 'slot' => $message

@@ -31,7 +31,14 @@ class Index extends LivewireDatatable
         } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
             $this->status = ['Penyisihan', 'Semifinal', 'Final'];
             $this->statusValue = $this->status[0];
-            return TeamSeniorData::query()->with('city');;
+            return TeamSeniorData::query()->with('city')
+                ->join('members', function ($q) {
+                    $q->on('members.bionix_id', '=', 'team_senior_data.id');
+                    $q->where("members.bionix_type", '=', 'App\Models\Bionix\TeamSeniorData');
+                })->join('users', function ($q) {
+                    $q->on('users.userable_id', '=', 'members.id');
+                    $q->where('users.userable_type', '=', 'App\Models\Member');
+                });
         }
         return null;
     }
@@ -50,21 +57,23 @@ class Index extends LivewireDatatable
                                     )
                                  ) AS nomor')->defaultSort('desc'),
                 Column::name('team_name')->label('Nama Tim')->searchable(),
-                Column::name('info_source')->label('Informasi Asal')->filterable(["Media Sosial ISE! 2021",
+                Column::name('info_source')->label('Informasi Asal')->filterable([
+                    "Media Sosial ISE! 2021",
                     "Media Sosial selain ISE! 2021 (info lomba, dll)",
                     "Roadshow ISE! 2021",
                     "Grup WA/Line/dll",
                     "Sekolah (guru, dll)",
                     "Teman/keluarga",
-                    "Website/Aplikasi Sejuta Cita"]),
+                    "Website/Aplikasi Sejuta Cita"
+                ]),
                 Column::name('school_name')->label('Nama Sekolah')->searchable(),
                 Column::name('competition_round')->filterable(['Penyisihan 1', 'Penyisihan 2', 'Semifinal', 'Final'])->label('Babak'),
                 Column::name('leader_group.name')->label('Nama Ketua')->searchable(),
                 Column::name('leader_group.email')->label('Email Ketua')->searchable(),
                 Column::name('member_group.name')->label('Nama Member')->searchable(),
                 Column::name('member_group.Email')->label('Email Member')->searchable(),
-                Column::name('payment_verif_status')->label('Status Pembayaran')->filterable(['Belum Bayar' ,'Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
-                Column::name('profile_verif_status')->label('Status Biodata')->filterable(['Belum Unggah' ,'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
+                Column::name('payment_verif_status')->label('Status Pembayaran')->filterable(['Belum Bayar', 'Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
+                Column::name('profile_verif_status')->label('Status Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
                 Column::raw('date_format(team_junior_data.created_at,"%d %b %Y %H:%i:%s")')->sortBy('date_format(team_junior_data.created_at,"%d %b %Y %H:%i:%s")')->label("Waktu Pendaftaran"),
                 Column::callback(['id'], function ($id) {
                     return view('livewire.pages.bionix.admin.daftar-peserta.components.datatable-action', ['id' => $id, 'type' => 'student']);
@@ -81,6 +90,8 @@ class Index extends LivewireDatatable
                                     )
                                  ) AS nomor')->defaultSort('desc'),
                 Column::name('team_name')->label('Nama Tim')->searchable(),
+                Column::name("users.name")->label("Nama Ketua"),
+                Column::name("users.email")->label("Email Ketua"),
                 Column::name('info_source')->label('Informasi Asal'),
                 Column::name('competition_round')->filterable(['Penyisihan', 'Semifinal', 'Final'])->label('Babak'),
                 Column::name('profile_verif_status')->label('Status Verifikasi Biodata')->filterable(['Belum Unggah', 'Tahap Verifikasi', 'Terverifikasi', 'Ditolak']),
@@ -106,25 +117,25 @@ class Index extends LivewireDatatable
                 TeamJuniorData::find($selected)->update(
                     [
                         'competition_round' => $this->statusValue
-                    ]);
+                    ]
+                );
             } elseif ($this->model == 'App\Models\Bionix\TeamSeniorData') {
                 if ($this->statusValue == "Semifinal") {
                     TeamSeniorData::find($selected)->update(
                         [
                             'competition_round' => $this->statusValue,
                             'payment_batch_2' => (date('Y-m-d') >= date('Y-m-d', strtotime('2021-9-23')))
-                        ]);
+                        ]
+                    );
                 } else {
                     TeamSeniorData::find($selected)->update(
                         [
                             'competition_round' => $this->statusValue
-                        ]);
+                        ]
+                    );
                 }
-
             }
         }
         $this->emit('refreshLivewireDatatable');
     }
-
-
 }

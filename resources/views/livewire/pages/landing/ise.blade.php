@@ -1,4 +1,4 @@
-@livewire('components.modal-trivia')
+{{-- @livewire('components.modal-trivia') --}}
 
 <div class="flex flex-col justify-center gap-8 text-center bg-black">
     {{-- title header --}}
