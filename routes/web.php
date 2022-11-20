@@ -96,7 +96,10 @@ Route::group(['prefix' => 'icon'], function () {
         // Route quiz
         Route::group(['prefix' => 'quiz'], function () {
             // icon/e-hall/quiz/
-            Route::get('/', QuizIndex::class)->name('quiz-ehall');
+            // Route::get('/', QuizIndex::class)->name('quiz-ehall');
+            Route::get('/', function () {
+                return view('closed-registration');
+            })->name('quiz-ehall');
             // icon/e-hall/quiz/choose-picture
             Route::get('choose-picture', ChoosePicture::class)->name('picture-quiz-ehall');
             // icon/e-hall/quiz/multiple-choice
