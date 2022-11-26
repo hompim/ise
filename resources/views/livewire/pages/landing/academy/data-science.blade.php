@@ -66,9 +66,9 @@
                         stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 Download Guidebook</a>
-            <button disabled type="button"
+            <button type="button"
                 class="py-2 my-6 text-white rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 ">
-                Register Closed</button>
+                Register Open</button>
         </div>
         <!-- guidebook and register button end-->
     </div>

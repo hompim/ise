@@ -656,9 +656,9 @@
                                     stroke="#B221E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                             Download Guidebook</a>
-                        <a href="{{ route('closed-registration') }}"
+                        <a href="{{ route('register-colle') }}"
                             class="py-2 my-6 transition duration-300 transform rounded-full md:mx-0 mx-28 md:my-0 md:px-16 bg-gradient-to-r from-pink-300 to-purple-300 hover:-translate-y-1">Register
-                            Closed</a>
+                            Open</a>
                     </div>
                     <div class="text-4xl md:text-6xl text-white font-bold mt-16 md:mt-[220px] md:w-[600px] md:mx-auto">
                         Many <a class="text-transparent bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text"> benefit

@@ -219,9 +219,9 @@ Route::get('/send', function () {
     }
 });
 
-// Route::get('/Registerbcl', RegisterCollege::class);
-// Route::get('/Registerst', RegisterStudent::class);
-// Route::get('/Registerbclroad', RegistrasiRoadshow::class);
+Route::get('/Registerbcl', RegisterCollege::class)->name('register-colle');
+Route::get('/Registerst', RegisterStudent::class)->name('register-student');
+Route::get('/Registerbclroad', RegistrasiRoadshow::class);
 
 //Route Dashboard -> Dashboard.php
 Route::prefix('dashboard')->group(__DIR__ . '/dashboard.php');
@@ -242,5 +242,5 @@ Route::get('testing', function () {
 });
 
 ///Route Testng Register ACADEMY
-// Route::get('/Registerds', RegisterDataScience::class);
-// Route::get('/Registersa', RegisterStartup::class);
+Route::get('/Registerds', RegisterDataScience::class);
+Route::get('/Registersa', RegisterStartup::class);
